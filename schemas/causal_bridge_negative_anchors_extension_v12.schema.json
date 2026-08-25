@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/causal-bridge-negative-anchors-extension-v12.json",
+  "title": "Append-only v12 causal-bridge and negative-anchor vocabulary",
+  "description": "This overlay does not modify the sealed base genome or v1-v11 schemas.",
+  "type": "object",
+  "properties": {
+    "family": {
+      "enum": ["magnetic_mirror", "inertial_electrostatic_confinement", "dense_plasma_focus"]
+    },
+    "topology": {
+      "type": "object",
+      "properties": {
+        "field_line_class": {
+          "enum": ["open_mirror", "electrostatic_radial", "coaxial_pulsed_pinch"]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "v12_plasma_region_kind": {
+      "enum": ["gas_dynamic_target_plasma", "anisotropic_fast_ion_population", "iec_acceleration_core", "dpf_coaxial_discharge"]
+    },
+    "v12_field_source_kind": {
+      "enum": ["electrostatic_grid", "coaxial_electrode", "capacitor_bank"]
+    },
+    "v12_required_evaluator": {
+      "enum": ["two_component_fokker_planck_gdt", "beam_target_nuclear_rate", "iec_poisson_orbit_grid_model", "nonequilibrium_fokker_planck_power", "dpf_kinetic_discharge", "electrode_erosion_and_repetition"]
+    }
+  }
+}

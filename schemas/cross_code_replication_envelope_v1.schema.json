@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/cross_code_replication_envelope_v1.schema.json",
+  "title": "CrossCodeReplicationEnvelopeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_id", "physics_hash", "status", "code_runs", "observable_comparisons", "model_differences", "unresolved_reasons", "evidence_ceiling", "envelope_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"$ref": "#/$defs/hash"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "code_runs": {"type": "array", "items": {"$ref": "#/$defs/code_run"}},
+    "observable_comparisons": {"type": "array", "items": {"$ref": "#/$defs/comparison"}},
+    "model_differences": {"type": "array", "items": {"type": "object"}},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "evidence_ceiling": {"type": "string", "minLength": 1},
+    "envelope_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "code_run": {
+      "type": "object",
+      "required": ["run_id", "code_name", "code_version", "software_hash", "container_hash", "input_manifest_hash", "mesh_hash", "result_hash", "production_authority", "mesh_generation"],
+      "properties": {
+        "run_id": {"type": "string", "minLength": 1},
+        "code_name": {"type": "string", "minLength": 1},
+        "code_version": {"type": "string", "minLength": 1},
+        "software_hash": {"$ref": "#/$defs/hash"},
+        "container_hash": {"$ref": "#/$defs/hash"},
+        "input_manifest_hash": {"$ref": "#/$defs/hash"},
+        "mesh_hash": {"$ref": "#/$defs/hash"},
+        "result_hash": {"$ref": "#/$defs/hash"},
+        "production_authority": {"enum": ["independent_team", "independent_pipeline"]},
+        "mesh_generation": {"const": "independently_generated"}
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "required": ["observable_id", "run_a_id", "run_b_id", "value_a", "value_b", "unit", "absolute_tolerance", "relative_tolerance", "status"],
+      "properties": {
+        "observable_id": {"type": "string", "minLength": 1},
+        "run_a_id": {"type": "string", "minLength": 1},
+        "run_b_id": {"type": "string", "minLength": 1},
+        "value_a": {"type": "number"},
+        "value_b": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1},
+        "absolute_tolerance": {"type": "number", "minimum": 0},
+        "relative_tolerance": {"type": "number", "minimum": 0},
+        "status": {"enum": ["pass", "fail"]}
+      }
+    }
+  }
+}

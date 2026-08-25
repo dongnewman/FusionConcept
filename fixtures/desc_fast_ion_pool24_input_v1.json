@@ -1,0 +1,28 @@
+{
+  "runner_version": "desc_fast_ion_guiding_center_runner_v1",
+  "candidate_id": "stellarator_fourier_8647ca48b309418d",
+  "candidate_binding_hash": "880600761cdb8b134c8a6ad97fc912294f837bbb9e99ce5aecb22495341b0bb1",
+  "stability_problem_hash": "51b706c43fff1514cf191c810d2f63fd7d66bd4c0123fb661fae287de5ddef91",
+  "frontier_artifact": {
+    "path": "runs/c1_c2_frontier_candidates_v1_20260816.json",
+    "sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"
+  },
+  "stability_audit_artifact": {
+    "path": "runs/topology_desc_stability_pool24_medium_fine_audit_v4_20260816.json",
+    "sha256": "5909b822c0f3e7528829f49c5d25bbbb3711c4f6618811c8bc258b0d897b241f"
+  },
+  "diagnostic": {
+    "rho_grid_count": 13,
+    "theta_grid_count": 24,
+    "zeta_grid_count": 24,
+    "final_time_s": 0.00002,
+    "time_step_counts": [512, 1024, 2048],
+    "particle_mass_kg": 6.6446573357e-27,
+    "particle_charge_c": 3.204353268e-19,
+    "particle_energy_j": 5.607618219e-13,
+    "initial_rho": [0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.75, 0.75, 0.75],
+    "initial_theta_rad": [0.0, 2.0943951023931953, 4.1887902047863905, 0.0, 2.0943951023931953, 4.1887902047863905, 0.0, 2.0943951023931953, 4.1887902047863905],
+    "initial_zeta_rad": [0.0, 1.0471975511965976, 2.0943951023931953, 0.0, 1.0471975511965976, 2.0943951023931953, 0.0, 1.0471975511965976, 2.0943951023931953],
+    "pitch_cosine": [0.2, 0.5, 0.8, 0.2, 0.5, 0.8, 0.2, 0.5, 0.8]
+  }
+}

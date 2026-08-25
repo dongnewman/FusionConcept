@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusion-concept-ai.local/schemas/solver_ready_contract_v54.schema.json",
+  "title": "Search-generated solver-ready contract v54",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generation_stage",
+    "routing_basis",
+    "magnetic_constraint",
+    "mirror_or_dipole",
+    "pulsed_device",
+    "ledgers",
+    "parent_synthesized",
+    "promotion_authorized",
+    "contract_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "generation_stage": {"const": "before_common_screen"},
+    "routing_basis": {
+      "type": "object",
+      "required": ["module_ids", "family_label_used"],
+      "properties": {
+        "module_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "family_label_used": {"const": false}
+      }
+    },
+    "magnetic_constraint": {"type": "object"},
+    "mirror_or_dipole": {"type": "object"},
+    "pulsed_device": {"type": "object"},
+    "ledgers": {
+      "type": "object",
+      "required": ["power", "particle", "fuel_inventory", "end_loss"],
+      "properties": {
+        "power": {"type": "object"},
+        "particle": {"type": "object"},
+        "fuel_inventory": {"type": "object"},
+        "end_loss": {"type": "object"}
+      }
+    },
+    "parent_synthesized": {"const": false},
+    "promotion_authorized": {"const": false},
+    "contract_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

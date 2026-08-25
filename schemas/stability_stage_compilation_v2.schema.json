@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/stability_stage_compilation_v2.schema.json",
+  "title": "Stability Stage Compilation V2",
+  "type": "object",
+  "required": [
+    "candidate_binding_hash",
+    "required_operator_ids",
+    "unsupported_operator_ids",
+    "missing_evidence_operator_ids",
+    "unknown_operator_ids",
+    "passed_operator_ids",
+    "failed_operator_ids",
+    "auxiliary_failed_operator_ids",
+    "stage_status",
+    "stage_complete",
+    "c2_stability_support_authorized",
+    "authoritative_hard_failure",
+    "evidence",
+    "compilation_hash"
+  ],
+  "properties": {
+    "candidate_binding_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "required_operator_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "compatible_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "unsupported_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "missing_evidence_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "unknown_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "passed_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "failed_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "auxiliary_failed_operator_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "stage_status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "stage_complete": {"type": "boolean"},
+    "c2_stability_support_authorized": {"type": "boolean"},
+    "authoritative_hard_failure": {"type": "boolean"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["operator_id", "perturbation", "status", "convergence_history", "validity_domain_covered", "source_result_hash", "evidence_hash"]
+      }
+    },
+    "compilation_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

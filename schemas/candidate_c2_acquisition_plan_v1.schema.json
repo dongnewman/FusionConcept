@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_c2_acquisition_plan_v1.schema.json",
+  "title": "Candidate C2 Acquisition Plan V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_binding_hash", "state_package_hash", "shared_state_result_hash", "longitudinal_readiness_hash", "stage4_compilation_hash", "status", "batches", "outstanding_longitudinal_input_ids", "outstanding_stage4_operator_ids", "outstanding_stage4_input_ids", "outstanding_c2_evidence_gate_ids", "plan_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_package_hash": {"$ref": "#/$defs/hash"},
+    "shared_state_result_hash": {"oneOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+    "longitudinal_readiness_hash": {"$ref": "#/$defs/hash"},
+    "stage4_compilation_hash": {"$ref": "#/$defs/hash"},
+    "status": {"enum": ["acquisition_required", "ready_for_c2_aggregation"]},
+    "batches": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/batch"}},
+    "outstanding_longitudinal_input_ids": {"$ref": "#/$defs/stringSet"},
+    "outstanding_stage4_operator_ids": {"$ref": "#/$defs/stringSet"},
+    "outstanding_stage4_input_ids": {"$ref": "#/$defs/stringSet"},
+    "outstanding_c2_evidence_gate_ids": {"$ref": "#/$defs/stringSet"},
+    "plan_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stringSet": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "batch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["batch_id", "prerequisite_batch_ids", "longitudinal_input_ids", "stage4_operator_ids", "stage4_input_ids", "evidence_actions", "status", "batch_hash"],
+      "properties": {
+        "batch_id": {"enum": ["s3_01_state_species_scales", "s3_02_physical_closure", "s3_03_actuator_delivery", "s3_04_control_power_targets", "s3_05_v68_execution", "s4_01_operator_inputs", "s4_02_operator_execution_audit", "s5_01_engineering_evidence", "s6_01_independent_evidence", "c2_01_recompute_and_aggregate"]},
+        "prerequisite_batch_ids": {"$ref": "#/$defs/stringSet"},
+        "longitudinal_input_ids": {"$ref": "#/$defs/stringSet"},
+        "stage4_operator_ids": {"$ref": "#/$defs/stringSet"},
+        "stage4_input_ids": {"$ref": "#/$defs/stringSet"},
+        "evidence_actions": {"$ref": "#/$defs/stringSet"},
+        "status": {"enum": ["complete", "acquire"]},
+        "batch_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "evidence_capability_manifest_v1.schema.json",
+  "title": "EvidenceCapabilityManifestV1", "type": "object", "additionalProperties": true,
+  "required": ["capability_id", "type", "supported_question_kinds", "assumptions", "outputs", "VVUQ_status",
+    "validity_domain", "cost_model", "safety_envelope", "correlation_group", "provenance"],
+  "properties": {
+    "capability_id": {"type": "string"},
+    "type": {"enum": ["analytic", "numerical", "existing_experimental_data", "new_discriminating_experiment",
+      "diagnostic_development", "solver_or_model_rd"]},
+    "supported_question_kinds": {"type": "array"}, "assumptions": {"type": "array"}, "outputs": {"type": "array"},
+    "VVUQ_status": {"type": "string"}, "validity_domain": {"type": ["array", "object", "string"]},
+    "cost_model": {"type": "object"}, "safety_envelope": {"type": ["object", "string"]},
+    "correlation_group": {"type": "string"}, "provenance": {"type": "object"}
+  }
+}

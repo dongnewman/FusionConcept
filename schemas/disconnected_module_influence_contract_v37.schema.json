@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/disconnected_module_influence_contract_v37.schema.json",
+  "title": "FusionConceptAI v37 disconnected-module influence contracts",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "input_binding", "contract_scope",
+    "aggregate", "archives", "deterministic_result_hash",
+    "promotion_credit", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "disconnected_module_influence_contract_v37"},
+    "contract_scope": {
+      "type": "object",
+      "required": [
+        "contract_group_count", "contract_module_count", "family_count",
+        "fixed_background_ablation_case_count"
+      ],
+      "properties": {
+        "contract_group_count": {"const": 8},
+        "contract_module_count": {"const": 18},
+        "family_count": {"const": 10},
+        "fixed_background_ablation_case_count": {"const": 21}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "formula_implementation_authorized_count",
+        "promotion_count", "medium_fidelity_authorized_count"
+      ],
+      "properties": {
+        "formula_implementation_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0}
+      }
+    }
+  }
+}

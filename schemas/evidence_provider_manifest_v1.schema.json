@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/evidence_provider_manifest_v1.schema.json",
+  "title": "EvidenceProviderManifestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "provider_id", "resource_class", "provides_capabilities", "provides_outputs", "spatial_representations", "time_modes", "region_kinds", "validity_domain", "artifact_hashes", "access_state", "independence_group", "authority", "status", "unresolved_reasons", "provider_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "provider_id": {"type": "string", "minLength": 1},
+    "resource_class": {"enum": ["numerical_backend", "material_data", "experimental_dataset"]},
+    "provides_capabilities": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "provides_outputs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "spatial_representations": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "time_modes": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "region_kinds": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "validity_domain": {"type": "object"},
+    "artifact_hashes": {"type": "object"},
+    "access_state": {"type": "string"},
+    "independence_group": {"type": "string"},
+    "authority": {"type": "string"},
+    "status": {"enum": ["available", "declared_unacquired", "unsupported"]},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "provider_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

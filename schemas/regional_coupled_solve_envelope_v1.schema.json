@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/regional_coupled_solve_envelope_v1.schema.json",
+  "title": "RegionalCoupledSolveEnvelopeV1",
+  "type": "object",
+  "required": [
+    "schema_version", "candidate_id", "physics_hash", "manifest_hash",
+    "state_result_hash", "status", "convergence_status", "dependency_graph",
+    "region_states", "interface_fluxes", "actuator_demands", "actuator_outputs",
+    "residual_history", "conservation_slots", "evidence_ceiling",
+    "unresolved_reasons", "result_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "state_result_hash": {"type": "string", "pattern": "^$|^[0-9a-f]{64}$"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "convergence_status": {"type": "string", "minLength": 1},
+    "dependency_graph": {"type": "object"},
+    "region_states": {"type": "array", "items": {"type": "object"}},
+    "interface_fluxes": {"type": "array", "items": {"type": "object"}},
+    "actuator_demands": {"type": "array", "items": {"type": "object"}},
+    "actuator_outputs": {"type": "array", "items": {"type": "object"}},
+    "residual_history": {"type": "array", "items": {"type": "object"}},
+    "conservation_slots": {"type": "array", "items": {"type": "object"}},
+    "evidence_ceiling": {"type": "string", "minLength": 1},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

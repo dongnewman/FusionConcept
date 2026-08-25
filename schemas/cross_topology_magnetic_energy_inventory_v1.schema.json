@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_magnetic_energy_inventory_v1.schema.json",
+  "title": "Cross-topology finite-domain magnetic-energy inventory v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "routing_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_magnetic_energy_inventory_v1"},
+    "routing_principle": {"type": "string", "minLength": 100},
+    "controls": {"type": "array", "minItems": 3, "maxItems": 3},
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "numeric_inventory_control_count",
+        "inventory_pass_count", "inventory_fail_count", "inventory_unknown_count",
+        "finite_build_resolved_count", "complete_magnet_engineering_count",
+        "conservation_power_term_authorized_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "numeric_inventory_control_count": {"const": 2},
+        "inventory_pass_count": {"const": 1},
+        "inventory_fail_count": {"const": 1},
+        "inventory_unknown_count": {"const": 1},
+        "finite_build_resolved_count": {"const": 0},
+        "complete_magnet_engineering_count": {"const": 0},
+        "conservation_power_term_authorized_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 250},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

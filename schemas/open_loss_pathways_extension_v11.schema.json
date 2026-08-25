@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/open-loss-pathways-extension-v11-1.0.0.json",
+  "title": "LMC open-loss-pathways v11 structural extension",
+  "description": "Append-only overlay for v11 high-beta magnetic-cusp genomes. Magnetic-mirror GDT/GDMT genomes remain valid base-family objects. The sealed base and v10 schemas remain unchanged.",
+  "type": "object",
+  "required": [
+    "schema_version", "design_id", "mission", "family", "topology",
+    "symmetry", "plasma_regions", "field_sources", "actuators",
+    "stability_mechanisms", "exhaust", "engineering", "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "family": {"const": "high_beta_magnetic_cusp"},
+    "topology": {
+      "type": "object",
+      "required": ["field_line_class", "rotation_transform_sources"],
+      "properties": {
+        "field_line_class": {"const": "open_cusp"},
+        "rotation_transform_sources": {"const": ["not_applicable"]},
+        "expected_flux_surfaces": {"const": false},
+        "expected_separatrix": {"const": true}
+      }
+    },
+    "plasma_regions": {
+      "type": "array",
+      "minItems": 2,
+      "contains": {
+        "type": "object",
+        "required": ["id", "kind", "geometry_model", "parameters"],
+        "properties": {
+          "kind": {"const": "high_beta_cusp_core"},
+          "parameters": {
+            "type": "object",
+            "required": ["plasma_radius", "cusp_count"]
+          }
+        }
+      },
+      "minContains": 1,
+      "maxContains": 1
+    },
+    "field_sources": {
+      "type": "array",
+      "contains": {
+        "type": "object",
+        "required": ["id", "kind", "geometry_model"],
+        "properties": {"kind": {"const": "external_3d_coils"}}
+      },
+      "minContains": 1
+    }
+  },
+  "x-lmc-base-schema": "confinement_genome.schema.json",
+  "x-lmc-claim-boundary": "Structural overlay only. The high-beta experiment supports electron confinement, not ion confinement, D-T gain, or reactor performance."
+}

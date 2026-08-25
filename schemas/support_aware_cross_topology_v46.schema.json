@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/support_aware_cross_topology_v46.schema.json",
+  "title": "Support-aware full-archive cross-topology integration v46 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "integration_contract",
+    "aggregate", "family_candidate_counts", "next_actions",
+    "promotion_credit", "claim_boundary", "execution", "input_binding",
+    "archives", "run_date", "deterministic_result_hash", "source_hashes",
+    "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "support_aware_cross_topology_kernel_v46"},
+    "stage": {"const": "sealed_full_archive_support_aware_integration_audit"},
+    "integration_contract": {"type": "object"},
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "candidate_count", "family_count", "families", "assembly_count",
+        "samples_per_assembly", "non_dipole_passthrough_candidate_count",
+        "non_dipole_v20_core_preserved_count",
+        "explicit_dipole_candidate_count", "supported_dipole_candidate_count",
+        "levitated_dipole_candidate_count",
+        "supported_legacy_misroute_fixed_count",
+        "dipole_v45_graph_valid_count", "dipole_structural_graph_hash_count",
+        "dipole_physics_hash_count",
+        "mapped_candidate_specific_structural_route_count",
+        "mapped_candidate_specific_structural_route_ids",
+        "candidate_specific_independently_validated_route_count",
+        "proxy_five_gate_pass_count", "medium_fidelity_candidate_count",
+        "promotion_count", "qd_archive_cell_count",
+        "old_domain_scale_up_authorized"
+      ],
+      "properties": {
+        "candidate_count": {"const": 2000},
+        "family_count": {"const": 11},
+        "assembly_count": {"const": 1000},
+        "samples_per_assembly": {"const": 2},
+        "non_dipole_passthrough_candidate_count": {"const": 1984},
+        "non_dipole_v20_core_preserved_count": {"const": 1984},
+        "explicit_dipole_candidate_count": {"const": 16},
+        "supported_dipole_candidate_count": {"const": 8},
+        "levitated_dipole_candidate_count": {"const": 8},
+        "supported_legacy_misroute_fixed_count": {"const": 8},
+        "dipole_v45_graph_valid_count": {"const": 16},
+        "dipole_structural_graph_hash_count": {"const": 2},
+        "dipole_physics_hash_count": {"const": 16},
+        "mapped_candidate_specific_structural_route_count": {"const": 2},
+        "candidate_specific_independently_validated_route_count": {"const": 0},
+        "proxy_five_gate_pass_count": {"const": 0},
+        "medium_fidelity_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "qd_archive_cell_count": {"const": 1000},
+        "old_domain_scale_up_authorized": {"const": false}
+      }
+    },
+    "family_candidate_counts": {"type": "object"},
+    "next_actions": {"type": "array", "minItems": 4},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 200},
+    "execution": {"type": "object"},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

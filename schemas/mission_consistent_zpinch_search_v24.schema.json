@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/mission_consistent_zpinch_search_v24.schema.json",
+  "title": "Mission-consistent repetitive Z-pinch search v24",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "run_date", "result_hash",
+    "input_binding", "search_contract", "execution", "outcome", "archives",
+    "claim_boundary", "promotion_credit", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": {
+      "const": "mission_consistent_zpinch_search_v24"
+    },
+    "stage": {
+      "const": "mission_repair_and_boundary_hypothesis_rejection_search"
+    },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "claim_boundary": { "type": "string", "minLength": 100 },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "medium_fidelity_authorized_count", "physics_evidence_level_change"
+      ],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

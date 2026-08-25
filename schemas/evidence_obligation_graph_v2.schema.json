@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence_obligation_graph_v2.schema.json",
+  "title": "EvidenceObligationGraphV2",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["obligations", "dependencies"],
+  "properties": {
+    "obligations": {"type": "array", "items": {"$ref": "#/$defs/obligation"}},
+    "dependencies": {"type": "array"},
+    "shared_evidence_correlations": {"type": "array"}
+  },
+  "$defs": {
+    "obligation": {
+      "type": "object", "additionalProperties": true,
+      "required": ["obligation_id", "unknown_refs", "level", "activation_predicate", "assessment_scope",
+        "mandatory_for_missions", "required_data_products", "acceptable_evidence_classes",
+        "discrimination_requirement", "calibration_requirements", "uncertainty_requirement",
+        "promotion_scope_required", "failure_scope_options", "dependencies", "resolution_value",
+        "status", "evidence_refs", "next_action_refs", "termination_conditions"],
+      "properties": {
+        "obligation_id": {"type": "string"}, "unknown_refs": {"type": "array"},
+        "level": {"enum": ["C0", "C1", "C2", "C3"]},
+        "status": {"enum": ["pass", "fail", "unknown", "unsupported", "not_applicable"]}
+      }
+    }
+  }
+}

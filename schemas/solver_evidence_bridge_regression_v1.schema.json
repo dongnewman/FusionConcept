@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "solver_evidence_bridge_regression_v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "stage", "source_solver_bundle", "native_program", "authorized_bridge", "post_bridge_assessment", "legacy_migration_rejection_control", "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "solver_evidence_bridge_regression_v1"},
+    "source_solver_bundle": {"type": "object"},
+    "native_program": {"type": "object"},
+    "authorized_bridge": {"type": "object"},
+    "post_bridge_assessment": {"type": "object"},
+    "legacy_migration_rejection_control": {"type": "object"},
+    "summary": {
+      "type": "object",
+      "required": ["source_solver_status", "authorized_contract_count", "normalized_pass_metric_count", "field_solution_converged_passed", "equilibrium_converged_passed", "field_line_topology_still_unmapped", "highest_evidence_stage", "hard_gate_status", "legacy_migration_authorized_contract_count", "promotion_count"],
+      "properties": {
+        "source_solver_status": {"const": "pass"},
+        "authorized_contract_count": {"const": 1},
+        "normalized_pass_metric_count": {"const": 1},
+        "field_solution_converged_passed": {"const": true},
+        "equilibrium_converged_passed": {"const": false},
+        "field_line_topology_still_unmapped": {"const": true},
+        "highest_evidence_stage": {"const": "C0"},
+        "hard_gate_status": {"const": "unknown"},
+        "legacy_migration_authorized_contract_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

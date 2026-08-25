@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "open_world_genome_v2.schema.json",
+  "title": "OpenWorldGenomeV2",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {"required": ["family"]},
+  "required": ["schema_version", "identity", "provenance", "mission_contracts", "governance_policy_ref",
+    "spacetime_support", "domains", "state_variables", "interactions", "boundaries", "reservoirs",
+    "invariants", "observables", "unknowns", "evidence_obligation_graph", "promotion_scopes",
+    "classifications", "equivalence_claims", "extensions"],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "identity": {
+      "type": "object", "additionalProperties": true,
+      "required": ["design_id", "revision_id", "parent_revision_ids", "topology_skeleton_id", "model_choice_id", "parameter_instance_id"],
+      "properties": {"design_id": {"type": "string"}, "revision_id": {"type": "string"},
+        "parent_revision_ids": {"type": "array"}, "topology_skeleton_id": {"type": "string"},
+        "model_choice_id": {"type": "string"}, "parameter_instance_id": {"type": "string"}}
+    },
+    "provenance": {"type": "object"}, "mission_contracts": {"type": "array", "minItems": 1},
+    "governance_policy_ref": {"type": "string"}, "spacetime_support": {"type": "object"},
+    "domains": {"type": "array", "minItems": 1}, "state_variables": {"type": "array", "minItems": 1},
+    "interactions": {"type": "array"}, "boundaries": {"type": "array"}, "reservoirs": {"type": "array"},
+    "invariants": {"type": "array"}, "observables": {"type": "array"}, "unknowns": {"type": "array"},
+    "evidence_obligation_graph": {"$ref": "evidence_obligation_graph_v2.schema.json"},
+    "promotion_scopes": {"type": "array", "items": {"$ref": "promotion_scope_v1.schema.json"}},
+    "classifications": {"type": "array", "items": {"type": "object", "required": ["non_routing"],
+      "properties": {"non_routing": {"const": true}}}},
+    "equivalence_claims": {"type": "array"}, "extensions": {"type": "object"}
+  }
+}

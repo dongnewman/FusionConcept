@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "topology_physics_compiler_regression_v1.schema.json",
+  "title": "Topology Physics Compiler Regression V1",
+  "type": "object",
+  "required": ["schema_version", "stage", "compiler_version", "policy", "summary", "family_label_invariance_control", "additional_declassification_controls", "cases", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "topology_physics_compiler_regression_v1"},
+    "compiler_version": {"const": "1.0.0"},
+    "policy": {
+      "type": "object",
+      "required": ["routing_key", "empirical_prior_promotion_authority", "unknown_is_not_failure", "criteria_are_non_compensating", "criteria", "stage_contract"]
+    },
+    "summary": {
+      "type": "object",
+      "required": ["fixture_count", "topology_classes", "all_unmeasured_assessments_remain_C0", "all_unmeasured_hard_gates_unknown", "promotion_count"],
+      "properties": {
+        "fixture_count": {"const": 3},
+        "all_unmeasured_assessments_remain_C0": {"const": true},
+        "all_unmeasured_hard_gates_unknown": {"const": true},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "family_label_invariance_control": {
+      "type": "object",
+      "required": ["genome_physics_hash_changed", "physical_signature_hash_equal", "routing_hash_equal"],
+      "properties": {
+        "genome_physics_hash_changed": {"const": true},
+        "physical_signature_hash_equal": {"const": true},
+        "routing_hash_equal": {"const": true}
+      }
+    },
+    "additional_declassification_controls": {
+      "type": "object",
+      "required": ["component_identity_physical_signature_equal", "component_identity_routing_equal", "geometry_parameter_change_physical_signature_changed", "geometry_parameter_change_routing_unchanged", "mixed_topology_detected", "mixed_closed_operator_present", "mixed_open_operator_present", "mixed_open_equilibrium_operator_present"],
+      "additionalProperties": {"const": true}
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["fixture", "compiled_problem", "assessment"]
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/external_resource_match_envelope_v1.schema.json",
+  "title": "ExternalResourceMatchEnvelopeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_id", "physics_hash", "requirement_hash", "provider_catalog_hash", "requirement_matches", "status", "ready_requirement_count", "total_requirement_count", "unresolved_reasons", "family_label_used", "evidence_ceiling", "match_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string"},
+    "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "requirement_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "provider_catalog_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "requirement_matches": {"type": "array", "items": {"type": "object"}},
+    "status": {"enum": ["ready_for_external_execution", "unknown_acquisition_required", "unknown_candidate_input_incomplete", "unsupported_provider_capability_gap", "not_applicable"]},
+    "ready_requirement_count": {"type": "integer", "minimum": 0},
+    "total_requirement_count": {"type": "integer", "minimum": 0},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "family_label_used": {"const": false},
+    "evidence_ceiling": {"type": "string"},
+    "match_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

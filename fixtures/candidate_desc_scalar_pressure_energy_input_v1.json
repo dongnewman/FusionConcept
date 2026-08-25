@@ -1,0 +1,442 @@
+{
+    "claim_boundary": "Re-solve the two selected explicit-Fourier candidate pressure equilibria at their already-audited medium/fine resolutions and integrate scalar MHD thermal energy only.",
+    "schema_version": "1.0.0",
+    "candidates": [
+        {
+            "resolutions": [
+                {
+                    "source_result_hash": "b7cc0b16d487fbb02bba80c60872b4b73a49dea2d098f7a38dcc91a472513d07",
+                    "solver_input": {
+                        "audit": {
+                            "min_sqrt_g": 0.0001,
+                            "max_fixed_constraint_error": 1.0e-12,
+                            "max_force_normalized_magnetic": 0.01
+                        },
+                        "resolution": {
+                            "M": 6,
+                            "M_grid": 12,
+                            "N": 4,
+                            "N_grid": 8,
+                            "L": 6,
+                            "L_grid": 12
+                        },
+                        "source_binding": "DESC-0.17.3",
+                        "runner_version": "desc_explicit_fourier_fixed_boundary_runner_v1",
+                        "solver": {
+                            "max_iterations": 40,
+                            "gtol": 1.0e-6,
+                            "optimizer": "lsq-exact",
+                            "shaping_first": false,
+                            "ftol": 1.0e-8,
+                            "xtol": 1.0e-8,
+                            "pressure_step": 0.5,
+                            "boundary_step": 0.5
+                        },
+                        "model_id": "stellarator_symmetric_fourier_fixed_boundary_v1",
+                        "profiles": {
+                            "toroidal_flux_wb": 1.437370014980939,
+                            "iota_power_series": [
+                                0.6834319526627219,
+                                0.0,
+                                0.07456747404844288
+                            ],
+                            "pressure_power_series_pa": [
+                                3067.10775047259,
+                                0.0,
+                                -6134.21550094518,
+                                0.0,
+                                3067.10775047259
+                            ]
+                        },
+                        "boundary": {
+                            "R_modes": [
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 3.093075145319838,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 1,
+                                    "coefficient_m": 0.5,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 0.16530612244897958,
+                                    "n": 1
+                                }
+                            ],
+                            "Z_modes": [
+                                {
+                                    "m": -1,
+                                    "coefficient_m": -0.5920000000000001,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": -0.12153123966942149,
+                                    "n": -1
+                                }
+                            ],
+                            "field_periods": 2,
+                            "stellarator_symmetric": true
+                        }
+                    },
+                    "resolution_rank": 1,
+                    "expected_after": {
+                        "major_radius_m": 3.0930751453198386,
+                        "plasma_volume_m3": 18.072237415752095,
+                        "force_volume_average_n_m3": 5.9366419514025095,
+                        "pressure_mid_pa": 1725.248109640832,
+                        "minor_radius_m": 0.544058820349418,
+                        "iota_095": 0.7507290979914416,
+                        "iota_axis": 0.6834319526627219,
+                        "force_normalized_to_magnetic_gradient": 9.501280229765922e-6,
+                        "volume_average_beta": 0.001068122417984487,
+                        "force_normalized_to_pressure_gradient": 0.0009761286105377882,
+                        "iota_mid": 0.7020738211748326,
+                        "magnetic_pressure_gradient_scale_n_m3": 624825.4769714088,
+                        "pressure_gradient_scale_n_m3": 6081.82352951603,
+                        "pressure_axis_pa": 3067.10775047259,
+                        "pressure_095_pa": 29.15669305292993,
+                        "aspect_ratio": 5.685185185185184
+                    },
+                    "resolution_label": "medium"
+                },
+                {
+                    "source_result_hash": "ba4a988f84b16554cfc50ac55844639f470d6fc1d86585c9e94c9584792ffc3e",
+                    "solver_input": {
+                        "audit": {
+                            "min_sqrt_g": 0.0001,
+                            "max_fixed_constraint_error": 1.0e-12,
+                            "max_force_normalized_magnetic": 0.01
+                        },
+                        "resolution": {
+                            "M": 8,
+                            "M_grid": 16,
+                            "N": 5,
+                            "N_grid": 10,
+                            "L": 8,
+                            "L_grid": 16
+                        },
+                        "source_binding": "DESC-0.17.3",
+                        "runner_version": "desc_explicit_fourier_fixed_boundary_runner_v1",
+                        "solver": {
+                            "max_iterations": 50,
+                            "gtol": 1.0e-6,
+                            "optimizer": "lsq-exact",
+                            "shaping_first": false,
+                            "ftol": 1.0e-8,
+                            "xtol": 1.0e-8,
+                            "pressure_step": 0.5,
+                            "boundary_step": 0.5
+                        },
+                        "model_id": "stellarator_symmetric_fourier_fixed_boundary_v1",
+                        "profiles": {
+                            "toroidal_flux_wb": 1.437370014980939,
+                            "iota_power_series": [
+                                0.6834319526627219,
+                                0.0,
+                                0.07456747404844288
+                            ],
+                            "pressure_power_series_pa": [
+                                3067.10775047259,
+                                0.0,
+                                -6134.21550094518,
+                                0.0,
+                                3067.10775047259
+                            ]
+                        },
+                        "boundary": {
+                            "R_modes": [
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 3.093075145319838,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 1,
+                                    "coefficient_m": 0.5,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 0.16530612244897958,
+                                    "n": 1
+                                }
+                            ],
+                            "Z_modes": [
+                                {
+                                    "m": -1,
+                                    "coefficient_m": -0.5920000000000001,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": -0.12153123966942149,
+                                    "n": -1
+                                }
+                            ],
+                            "field_periods": 2,
+                            "stellarator_symmetric": true
+                        }
+                    },
+                    "resolution_rank": 2,
+                    "expected_after": {
+                        "major_radius_m": 3.0930751453198395,
+                        "plasma_volume_m3": 18.07223741575209,
+                        "force_volume_average_n_m3": 2.096703876810522,
+                        "pressure_mid_pa": 1725.248109640832,
+                        "minor_radius_m": 0.5440588203494178,
+                        "iota_095": 0.7507290979914416,
+                        "iota_axis": 0.6834319526627219,
+                        "force_normalized_to_magnetic_gradient": 3.3556630386839773e-6,
+                        "volume_average_beta": 0.0010681242250366973,
+                        "force_normalized_to_pressure_gradient": 0.0003447479596468758,
+                        "iota_mid": 0.7020738211748326,
+                        "magnetic_pressure_gradient_scale_n_m3": 624825.5121684705,
+                        "pressure_gradient_scale_n_m3": 6081.845644447523,
+                        "pressure_axis_pa": 3067.10775047259,
+                        "pressure_095_pa": 29.15669305292993,
+                        "aspect_ratio": 5.685185185185188
+                    },
+                    "resolution_label": "fine"
+                }
+            ],
+            "design_id": "stellarator_fourier_8647ca48b309418d",
+            "source_artifacts": [
+                {
+                    "artifact_id": "runs/c1_c2_frontier_candidates_v1_20260816.json",
+                    "artifact_hash": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"
+                },
+                {
+                    "artifact_id": "runs/topology_desc_stability_acquisition_round2_input_v3_20260816.json",
+                    "artifact_hash": "4e3bdaa7287653caef523cd1af3ba20ec113066ff41c8f4a8195c8403516044b"
+                },
+                {
+                    "artifact_id": "runs/topology_desc_stability_pool24_medium_fine_audit_v4_20260816.json",
+                    "artifact_hash": "5909b822c0f3e7528829f49c5d25bbbb3711c4f6618811c8bc258b0d897b241f"
+                }
+            ],
+            "candidate_binding_hash": "880600761cdb8b134c8a6ad97fc912294f837bbb9e99ce5aecb22495341b0bb1"
+        },
+        {
+            "resolutions": [
+                {
+                    "source_result_hash": "81bb18fd959bf3521c4c6e68bc25b9898af4af0a08553dbc19847e0155acb824",
+                    "solver_input": {
+                        "audit": {
+                            "min_sqrt_g": 0.0001,
+                            "max_fixed_constraint_error": 1.0e-12,
+                            "max_force_normalized_magnetic": 0.01
+                        },
+                        "resolution": {
+                            "M": 6,
+                            "M_grid": 12,
+                            "N": 4,
+                            "N_grid": 8,
+                            "L": 6,
+                            "L_grid": 12
+                        },
+                        "source_binding": "DESC-0.17.3",
+                        "runner_version": "desc_explicit_fourier_fixed_boundary_runner_v1",
+                        "solver": {
+                            "max_iterations": 40,
+                            "gtol": 1.0e-6,
+                            "optimizer": "lsq-exact",
+                            "shaping_first": false,
+                            "ftol": 1.0e-8,
+                            "xtol": 1.0e-8,
+                            "pressure_step": 0.5,
+                            "boundary_step": 0.5
+                        },
+                        "model_id": "stellarator_symmetric_fourier_fixed_boundary_v1",
+                        "profiles": {
+                            "toroidal_flux_wb": 1.7284698162131145,
+                            "iota_power_series": [
+                                0.44911242603550294,
+                                0.0,
+                                0.041349480968858154
+                            ],
+                            "pressure_power_series_pa": [
+                                7982.041587901701,
+                                0.0,
+                                -15964.083175803402,
+                                0.0,
+                                7982.041587901701
+                            ]
+                        },
+                        "boundary": {
+                            "R_modes": [
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 3.450889046035464,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 1,
+                                    "coefficient_m": 0.5,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 0.06501457725947521,
+                                    "n": 1
+                                }
+                            ],
+                            "Z_modes": [
+                                {
+                                    "m": -1,
+                                    "coefficient_m": -0.45120000000000005,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": -0.07979900826446282,
+                                    "n": -1
+                                }
+                            ],
+                            "field_periods": 2,
+                            "stellarator_symmetric": true
+                        }
+                    },
+                    "resolution_rank": 1,
+                    "expected_after": {
+                        "major_radius_m": 3.450889046035462,
+                        "plasma_volume_m3": 15.367380064049911,
+                        "force_volume_average_n_m3": 25.53651935189411,
+                        "pressure_mid_pa": 4489.898393194707,
+                        "minor_radius_m": 0.4749736834815168,
+                        "iota_095": 0.48643033260989743,
+                        "iota_axis": 0.44911242603550294,
+                        "force_normalized_to_magnetic_gradient": 1.848352617895951e-5,
+                        "volume_average_beta": 0.0011357628282801133,
+                        "force_normalized_to_pressure_gradient": 0.0014109349314095274,
+                        "iota_mid": 0.4594497962777175,
+                        "magnetic_pressure_gradient_scale_n_m3": 1.3815826647278639e6,
+                        "pressure_gradient_scale_n_m3": 18099.005690066137,
+                        "pressure_axis_pa": 7982.041587901701,
+                        "pressure_095_pa": 75.87928284499185,
+                        "aspect_ratio": 7.265432098765427
+                    },
+                    "resolution_label": "medium"
+                },
+                {
+                    "source_result_hash": "323f36ec7244ce51536f3d431b182f817304f9343b8abab539a3a3da70f65822",
+                    "solver_input": {
+                        "audit": {
+                            "min_sqrt_g": 0.0001,
+                            "max_fixed_constraint_error": 1.0e-12,
+                            "max_force_normalized_magnetic": 0.01
+                        },
+                        "resolution": {
+                            "M": 8,
+                            "M_grid": 16,
+                            "N": 5,
+                            "N_grid": 10,
+                            "L": 8,
+                            "L_grid": 16
+                        },
+                        "source_binding": "DESC-0.17.3",
+                        "runner_version": "desc_explicit_fourier_fixed_boundary_runner_v1",
+                        "solver": {
+                            "max_iterations": 50,
+                            "gtol": 1.0e-6,
+                            "optimizer": "lsq-exact",
+                            "shaping_first": false,
+                            "ftol": 1.0e-8,
+                            "xtol": 1.0e-8,
+                            "pressure_step": 0.5,
+                            "boundary_step": 0.5
+                        },
+                        "model_id": "stellarator_symmetric_fourier_fixed_boundary_v1",
+                        "profiles": {
+                            "toroidal_flux_wb": 1.7284698162131145,
+                            "iota_power_series": [
+                                0.44911242603550294,
+                                0.0,
+                                0.041349480968858154
+                            ],
+                            "pressure_power_series_pa": [
+                                7982.041587901701,
+                                0.0,
+                                -15964.083175803402,
+                                0.0,
+                                7982.041587901701
+                            ]
+                        },
+                        "boundary": {
+                            "R_modes": [
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 3.450889046035464,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 1,
+                                    "coefficient_m": 0.5,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": 0.06501457725947521,
+                                    "n": 1
+                                }
+                            ],
+                            "Z_modes": [
+                                {
+                                    "m": -1,
+                                    "coefficient_m": -0.45120000000000005,
+                                    "n": 0
+                                },
+                                {
+                                    "m": 0,
+                                    "coefficient_m": -0.07979900826446282,
+                                    "n": -1
+                                }
+                            ],
+                            "field_periods": 2,
+                            "stellarator_symmetric": true
+                        }
+                    },
+                    "resolution_rank": 2,
+                    "expected_after": {
+                        "major_radius_m": 3.4508890460354626,
+                        "plasma_volume_m3": 15.367380064049906,
+                        "force_volume_average_n_m3": 4.6780411678949125,
+                        "pressure_mid_pa": 4489.898393194707,
+                        "minor_radius_m": 0.4749736834815167,
+                        "iota_095": 0.48643033260989743,
+                        "iota_axis": 0.44911242603550294,
+                        "force_normalized_to_magnetic_gradient": 3.3860020811897846e-6,
+                        "volume_average_beta": 0.0011357767871047206,
+                        "force_normalized_to_pressure_gradient": 0.0002584635997244473,
+                        "iota_mid": 0.4594497962777175,
+                        "magnetic_pressure_gradient_scale_n_m3": 1.3815824845125691e6,
+                        "pressure_gradient_scale_n_m3": 18099.419697327812,
+                        "pressure_axis_pa": 7982.041587901701,
+                        "pressure_095_pa": 75.87928284499185,
+                        "aspect_ratio": 7.265432098765429
+                    },
+                    "resolution_label": "fine"
+                }
+            ],
+            "design_id": "stellarator_fourier_41bc23ddd23f210d",
+            "source_artifacts": [
+                {
+                    "artifact_id": "runs/c1_c2_frontier_candidates_v1_20260816.json",
+                    "artifact_hash": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"
+                },
+                {
+                    "artifact_id": "runs/topology_desc_stability_acquisition_input_v2_20260816.json",
+                    "artifact_hash": "75167849227e7b2f0c2742805b07b58a0b65a6e5aba1a769964bc7298313d163"
+                },
+                {
+                    "artifact_id": "runs/topology_desc_stability_pool56_medium_fine_audit_v2_20260816.json",
+                    "artifact_hash": "95496032b968449e0cd92d624ea04849fb50f7d940934e722328ffde357dfe41"
+                }
+            ],
+            "candidate_binding_hash": "b9af7c060e9fd38da00bbe7985f7b33c1a8a91d1f4bf5fca0edbb0f2fd7979b5"
+        }
+    ]
+}

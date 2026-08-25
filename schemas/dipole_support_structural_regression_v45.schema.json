@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/dipole_support_structural_regression_v45.schema.json",
+  "title": "Explicit dipole support topology regression v45 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "regression_contract",
+    "aggregate", "paired_trial", "source_route_correction", "next_actions",
+    "promotion_credit", "claim_boundary", "input_binding", "archives",
+    "run_date", "deterministic_result_hash", "source_hashes",
+    "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "dipole_support_structural_regression_v45"},
+    "stage": {"const": "sealed_explicit_dipole_support_topology_regression"},
+    "regression_contract": {"type": "object"},
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "endpoint_count", "mapped_v43_experimental_anchor_module_count",
+        "v43_observable_route_count",
+        "candidate_specific_structurally_executable_route_count",
+        "candidate_specific_structurally_executable_route_fraction",
+        "candidate_specific_independently_validated_route_count",
+        "independent_known_device_validation_count",
+        "paired_direction_trial_count", "paired_direction_trial_pass_count",
+        "engineering_closure_count", "medium_fidelity_authorized_count",
+        "promotion_count", "old_domain_scale_up_authorized"
+      ],
+      "properties": {
+        "endpoint_count": {"const": 2},
+        "mapped_v43_experimental_anchor_module_count": {"const": 2},
+        "v43_observable_route_count": {"const": 23},
+        "candidate_specific_structurally_executable_route_count": {"const": 2},
+        "candidate_specific_structurally_executable_route_fraction": {
+          "type": "number", "minimum": 0.0869, "maximum": 0.0870
+        },
+        "candidate_specific_independently_validated_route_count": {"const": 0},
+        "independent_known_device_validation_count": {"const": 0},
+        "paired_direction_trial_count": {"const": 1},
+        "paired_direction_trial_pass_count": {"const": 1},
+        "engineering_closure_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false}
+      }
+    },
+    "paired_trial": {"type": "object"},
+    "source_route_correction": {"type": "object"},
+    "next_actions": {"type": "array", "minItems": 4},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 200},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "mission_contract_v2.schema.json",
+  "title": "MissionContractV2", "type": "object", "additionalProperties": true,
+  "required": ["mission_id", "claim_ceiling", "mandatory_ruleset_refs", "required_promotion_scope",
+    "required_independent_confirmation", "allowed_evidence_classes", "minimum_tuning_budget_policy",
+    "engineering_preflight_policy", "prohibited_claims"],
+  "properties": {
+    "mission_id": {"type": "string"}, "claim_ceiling": {"enum": ["none", "C0", "C1", "C2", "C3"]},
+    "mandatory_ruleset_refs": {"type": "array", "minItems": 1}, "required_promotion_scope": {"type": "string"},
+    "required_independent_confirmation": {"type": "boolean"}, "allowed_evidence_classes": {"type": "array"},
+    "minimum_tuning_budget_policy": {"type": "object"}, "engineering_preflight_policy": {"type": ["object", "string"]},
+    "prohibited_claims": {"type": "array"}
+  }
+}

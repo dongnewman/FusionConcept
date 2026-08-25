@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_family_gate_observability_v31.schema.json",
+  "title": "Cross-family gate observability and transfer-readiness audit v31",
+  "type": "object",
+  "required": [
+    "schema_version", "run_date", "search_version", "stage", "result_hash",
+    "input_binding", "audit_contract", "aggregate", "archives",
+    "claim_boundary", "promotion_credit", "runtime_measurements", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "cross_family_gate_observability_v31" },
+    "stage": { "const": "eleven_family_gate_observability_and_transfer_readiness_audit" },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["diagnostic_failure_frontier_search_authorized", "five_gate_acquisition_transfer_authorized", "acquisition_transfer_authorized", "medium_fidelity_authorized_count", "physics_evidence_level_change"],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

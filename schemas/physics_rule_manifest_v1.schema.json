@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "physics_rule_manifest_v1.schema.json",
+  "title": "PhysicsRuleManifestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rule_id", "version", "rule_class", "activation_predicate", "assumptions", "check_mode",
+    "inputs", "outputs", "generated_obligations", "pass_conditions", "failure_scope_options",
+    "evidence_requirements", "applicability_proof_requirements", "regression_fixtures",
+    "promotion_scope_ceiling", "provenance"],
+  "properties": {
+    "rule_id": {"type": "string", "minLength": 1}, "version": {"type": "string", "minLength": 1},
+    "rule_class": {"type": "string", "minLength": 1}, "activation_predicate": {"type": "string"},
+    "assumptions": {"type": "array"}, "check_mode": {"enum": ["static", "symbolic", "numerical", "experimental", "expert_review"]},
+    "inputs": {"type": "array"}, "outputs": {"type": "array"}, "generated_obligations": {"type": "array"},
+    "pass_conditions": {"type": "array"}, "failure_scope_options": {"type": "array"},
+    "evidence_requirements": {"type": "array"}, "applicability_proof_requirements": {"type": "array"},
+    "regression_fixtures": {"type": "array"}, "promotion_scope_ceiling": {"enum": ["none", "C0", "C1", "C2", "C3"]},
+    "provenance": {"type": "object"}
+  }
+}

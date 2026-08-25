@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "engineering_bound_check_v1.schema.json",
+  "title": "EngineeringBoundCheckV1", "type": "object", "additionalProperties": false,
+  "required": ["bound_id", "version", "activation_predicate", "quantity_and_units", "analytic_or_empirical_bound",
+    "valid_domain", "assumptions", "evaluated_parameter_region", "result", "failure_scope_ceiling",
+    "evidence_refs", "promotion_scope"],
+  "properties": {
+    "bound_id": {"type": "string"}, "version": {"type": "string"}, "activation_predicate": {"type": "string"},
+    "quantity_and_units": {"type": "string"}, "analytic_or_empirical_bound": {"type": "string"},
+    "valid_domain": {"type": ["string", "object"]}, "assumptions": {"type": "array"},
+    "evaluated_parameter_region": {"type": "object"},
+    "result": {"enum": ["bound_satisfied", "parameter_instance_excluded", "parameter_region_excluded", "bound_inconclusive", "model_out_of_scope"]},
+    "failure_scope_ceiling": {"enum": ["parameter_instance", "parameter_region"]},
+    "evidence_refs": {"type": "array"}, "promotion_scope": {"const": "none"}
+  }
+}

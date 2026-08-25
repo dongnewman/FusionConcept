@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_fusion_reaction_radiation_v1.schema.json",
+  "title": "Cross-topology fusion reaction and radiation evidence gaps v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "operator_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_fusion_reaction_radiation_v1"},
+    "operator_principle": {"type": "string", "minLength": 200},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["design_id", "diagnostic_legacy_family_label",
+          "family_label_used_for_operator_selection", "source_genome_id",
+          "source_genome_sha256", "problem", "collocated_state_grids",
+          "observations", "convergence", "fusion_power_status",
+          "fuel_ion_bremsstrahlung_status", "complete_radiation_authorized",
+          "complete_power_balance_authorized", "complete_c2",
+          "promotion_authorized", "evidence_tasks"],
+        "properties": {
+          "family_label_used_for_operator_selection": {"const": false},
+          "source_genome_sha256": {"$ref": "#/$defs/hash"},
+          "collocated_state_grids": {"type": "array", "maxItems": 0},
+          "observations": {"type": "array", "maxItems": 0},
+          "convergence": {"type": "null"},
+          "fusion_power_status": {"const": "unknown"},
+          "fuel_ion_bremsstrahlung_status": {"const": "unknown"},
+          "complete_radiation_authorized": {"const": false},
+          "complete_power_balance_authorized": {"const": false},
+          "complete_c2": {"const": false},
+          "promotion_authorized": {"const": false},
+          "problem": {
+            "type": "object",
+            "required": ["compiler_version", "design_id",
+              "genome_physics_hash", "fuel_declaration",
+              "population_domain_ids", "channels", "radiation_component_ids",
+              "required_input_ids", "evidence_tasks", "problem_hash"],
+            "properties": {
+              "genome_physics_hash": {"$ref": "#/$defs/hash"},
+              "problem_hash": {"$ref": "#/$defs/hash"},
+              "population_domain_ids": {"type": "array", "minItems": 1},
+              "channels": {"type": "array"},
+              "radiation_component_ids": {"type": "array", "minItems": 4,
+                "maxItems": 4}
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "population_domain_count",
+        "compiled_reaction_channel_count", "compiled_radiation_component_count",
+        "provided_collocated_state_grid_count", "numeric_fusion_power_count",
+        "numeric_fuel_ion_bremsstrahlung_count", "fusion_power_pass_count",
+        "fusion_power_fail_count", "fusion_power_unknown_count",
+        "c2_fusion_power_authorized_count",
+        "c2_fuel_ion_bremsstrahlung_authorized_count",
+        "complete_radiation_authorized_count",
+        "complete_power_balance_authorized_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "population_domain_count": {"const": 3},
+        "compiled_reaction_channel_count": {"const": 4},
+        "compiled_radiation_component_count": {"const": 12},
+        "provided_collocated_state_grid_count": {"const": 0},
+        "numeric_fusion_power_count": {"const": 0},
+        "numeric_fuel_ion_bremsstrahlung_count": {"const": 0},
+        "fusion_power_pass_count": {"const": 0},
+        "fusion_power_fail_count": {"const": 0},
+        "fusion_power_unknown_count": {"const": 3},
+        "c2_fusion_power_authorized_count": {"const": 0},
+        "c2_fuel_ion_bremsstrahlung_authorized_count": {"const": 0},
+        "complete_radiation_authorized_count": {"const": 0},
+        "complete_power_balance_authorized_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 400},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

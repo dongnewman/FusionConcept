@@ -1,0 +1,95 @@
+{
+    "sealed_on": "2026-08-21",
+    "manifest_id": "open_world_v2_public_fixtures_v1",
+    "blind_fixture_policy": {
+        "count": 2,
+        "expected_outputs": "withheld_from_development"
+    },
+    "coverage_hash": "da3445fe27166547c739b602cd232fb790ed6172878a89deb14153e9acbda530",
+    "fixtures": [
+        {
+            "label_erase_obligation_consistent": true,
+            "actual_c0_status": "pass",
+            "class": "positive",
+            "input_hash": "cb502f2d46fd90692bef5d842a3f026b8555bf20f6ebd3c547d535ea5d547a15",
+            "fixture_id": "manual_electrostatic_inertial_relay_v1",
+            "label_erase_structural_consistent": true,
+            "path": "fixtures/open_world_v2/manual_electrostatic_inertial_relay_v1.json",
+            "expected_c0_status": "pass"
+        },
+        {
+            "label_erase_obligation_consistent": true,
+            "actual_c0_status": "pass",
+            "class": "positive",
+            "input_hash": "7435b6919d00e482ca542e4a3a40ec60050de2016a97196016355cdb27428d4d",
+            "fixture_id": "manual_moving_boundary_pulse_v1",
+            "label_erase_structural_consistent": true,
+            "path": "fixtures/open_world_v2/manual_moving_boundary_pulse_v1.json",
+            "expected_c0_status": "pass"
+        },
+        {
+            "label_erase_obligation_consistent": true,
+            "actual_c0_status": "pass",
+            "class": "positive",
+            "input_hash": "2dd458fbce2ad34fb284dbadd772928024292aafa6149263c5c44d6adac9e882",
+            "fixture_id": "manual_selective_particle_channels_v1",
+            "label_erase_structural_consistent": true,
+            "path": "fixtures/open_world_v2/manual_selective_particle_channels_v1.json",
+            "expected_c0_status": "pass"
+        },
+        {
+            "label_erase_obligation_consistent": true,
+            "actual_c0_status": "pass",
+            "class": "positive",
+            "input_hash": "7ab5b8ef5640c865f1b0d3abf58d9d4e880962963f458382a8effcb9e5501e88",
+            "fixture_id": "manual_self_organized_control_v1",
+            "label_erase_structural_consistent": true,
+            "path": "fixtures/open_world_v2/manual_self_organized_control_v1.json",
+            "expected_c0_status": "pass"
+        },
+        {
+            "label_erase_obligation_consistent": true,
+            "actual_c0_status": "pass",
+            "class": "positive",
+            "input_hash": "4a06c5132847d3409b1f186ba61da3ee98acc2df66ae00c682eba0303433d9bd",
+            "fixture_id": "manual_temporal_open_closed_v1",
+            "label_erase_structural_consistent": true,
+            "path": "fixtures/open_world_v2/manual_temporal_open_closed_v1.json",
+            "expected_c0_status": "pass"
+        },
+        {
+            "errors": [
+                "partial operator exchange_operator minimum effect does not exceed noise and numerical floor"
+            ],
+            "actual_c0_status": "fail",
+            "class": "negative",
+            "input_hash": "a757db73ed0e33007eb41d95af2e1082cfc312c52b16895a342c6500ee0b9533",
+            "fixture_id": "negative_effect_below_floor_v1",
+            "path": "fixtures/open_world_v2/negative_effect_below_floor_v1.json",
+            "expected_c0_status": "fail"
+        },
+        {
+            "errors": [
+                "empirical prior exchange_operator exceeds max_gate=none"
+            ],
+            "actual_c0_status": "fail",
+            "class": "negative",
+            "input_hash": "06b25d1ee67e679dac8c0d0fda4b5512cc59266e9d398cf8c6e8cdccc2da209f",
+            "fixture_id": "negative_empirical_prior_overreach_v1",
+            "path": "fixtures/open_world_v2/negative_empirical_prior_overreach_v1.json",
+            "expected_c0_status": "fail"
+        },
+        {
+            "errors": [
+                "partial operator exchange_operator missing identifiability_conditions"
+            ],
+            "actual_c0_status": "fail",
+            "class": "negative",
+            "input_hash": "35a84e12e2ffeaec514195824bcdd727b9e7a72fb4f1460117f68affde348b82",
+            "fixture_id": "negative_missing_identifiability_v1",
+            "path": "fixtures/open_world_v2/negative_missing_identifiability_v1.json",
+            "expected_c0_status": "fail"
+        }
+    ],
+    "ruleset_hash": "96ff6bb3405291bc67273c2f40c0ee02a31e79a5daba0857c594b7512fe874f4"
+}

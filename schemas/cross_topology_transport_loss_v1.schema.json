@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_transport_loss_v1.schema.json",
+  "title": "Cross-topology transport and particle-loss assessment v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "routing_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_transport_loss_v1"},
+    "routing_principle": {"type": "string", "minLength": 150},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["design_id", "diagnostic_legacy_family_label",
+          "family_label_used_for_routing", "problem", "evidence", "assessment",
+          "evidence_bundle", "source_artifacts", "notes",
+          "conservation_slot_authorized", "complete_c2", "promotion_authorized"],
+        "properties": {
+          "family_label_used_for_routing": {"const": false},
+          "problem": {
+            "type": "object",
+            "required": ["genome_physics_hash", "has_open_field_regions",
+              "has_closed_field_regions", "has_material_endpoints",
+              "is_three_dimensional", "requirement_ids", "requirements",
+              "evidence_tasks", "problem_hash"],
+            "properties": {
+              "genome_physics_hash": {"$ref": "#/$defs/hash"},
+              "requirement_ids": {"type": "array", "minItems": 14, "maxItems": 21},
+              "requirements": {"type": "array", "minItems": 14, "maxItems": 21},
+              "problem_hash": {"$ref": "#/$defs/hash"}
+            }
+          },
+          "evidence": {
+            "type": "array", "maxItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["metric_id", "value", "unit", "source_kind",
+                "source_artifact_id", "source_artifact_hash",
+                "source_result_hash", "candidate_binding_verified",
+                "resolution_verified", "applicability_verified", "fidelity",
+                "source_result_status", "status", "c2_component_authorized",
+                "evidence_tasks", "warnings", "evidence_hash"],
+              "properties": {
+                "source_artifact_hash": {"$ref": "#/$defs/hash"},
+                "source_result_hash": {"$ref": "#/$defs/hash"},
+                "candidate_binding_verified": {"const": true},
+                "resolution_verified": {"const": true},
+                "applicability_verified": {"const": true},
+                "evidence_hash": {"$ref": "#/$defs/hash"}
+              }
+            }
+          },
+          "assessment": {
+            "type": "object",
+            "required": ["status", "required_metric_ids", "observed_metric_ids",
+              "c2_authorized_metric_ids", "failed_metric_ids",
+              "unknown_metric_ids", "complete_transport_c2_authorized",
+              "evidence_tasks", "assessment_hash"],
+            "properties": {
+              "status": {"const": "unknown"},
+              "complete_transport_c2_authorized": {"const": false},
+              "assessment_hash": {"$ref": "#/$defs/hash"}
+            }
+          },
+          "conservation_slot_authorized": {"const": false},
+          "complete_c2": {"const": false},
+          "promotion_authorized": {"const": false}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "required_metric_slot_count",
+        "evidence_record_count", "observed_pass_metric_count",
+        "c2_authorized_metric_count", "failed_metric_count",
+        "unknown_metric_count", "complete_transport_c2_count",
+        "conservation_slot_authorized_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "required_metric_slot_count": {"const": 49},
+        "evidence_record_count": {"const": 2},
+        "observed_pass_metric_count": {"const": 2},
+        "c2_authorized_metric_count": {"const": 1},
+        "failed_metric_count": {"const": 0},
+        "unknown_metric_count": {"const": 48},
+        "complete_transport_c2_count": {"const": 0},
+        "conservation_slot_authorized_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 400},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

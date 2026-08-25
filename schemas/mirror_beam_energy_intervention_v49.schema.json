@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/mirror_beam_energy_intervention_v49.schema.json",
+  "title": "Mirror beam-energy intervention v49 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "experiment_contract",
+    "aggregate", "next_actions", "promotion_credit", "claim_boundary",
+    "input_binding", "archives", "run_date", "deterministic_result_hash",
+    "source_hashes", "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "mirror_beam_energy_intervention_v49"},
+    "stage": {"const": "sealed_mirror_beam_energy_gene_formula_counterfactual_qd"},
+    "experiment_contract": {
+      "type": "object",
+      "required": [
+        "sealed_v46_core_reconstruction_required",
+        "sealed_v48_formula_reproduction_required",
+        "preregistered_beam_energies_keV",
+        "non_beam_background_canonically_fixed",
+        "beam_gene_and_nbi_declaration_synchronized",
+        "source_complete_E_beam_exponent",
+        "power_and_exhaust_closure_recomputed",
+        "qd_selection_uses_performance",
+        "experiment_can_promote_candidate"
+      ],
+      "properties": {
+        "preregistered_beam_energies_keV": {"const": [25.0, 100.0, 150.0]},
+        "source_complete_E_beam_exponent": {"const": 1.5},
+        "qd_selection_uses_performance": {"const": false},
+        "experiment_can_promote_candidate": {"const": false}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "input_candidate_count", "mirror_candidate_count",
+        "mirror_assembly_count", "beam_energy_level_count", "trial_count",
+        "fixed_non_beam_background_count", "beam_energy_gene_present_count",
+        "nbi_beam_energy_synchronized_count",
+        "source_complete_formula_consumed_gene_count",
+        "unique_physics_hash_count", "current_evaluator_beam_invariant_count",
+        "preregistered_tau_ratio_reproduced_count",
+        "hundred_keV_v48_reproduction_count",
+        "nonbaseline_response_change_count", "source_domain_complete_count",
+        "performance_ranking_authorized_count",
+        "medium_fidelity_authorized_count", "promotion_count",
+        "qd_cell_count", "qd_performance_selected_cell_count",
+        "by_energy_keV"
+      ],
+      "properties": {
+        "input_candidate_count": {"const": 2000},
+        "mirror_candidate_count": {"const": 724},
+        "mirror_assembly_count": {"const": 362},
+        "beam_energy_level_count": {"const": 3},
+        "trial_count": {"const": 2172},
+        "fixed_non_beam_background_count": {"const": 2172},
+        "beam_energy_gene_present_count": {"const": 2172},
+        "nbi_beam_energy_synchronized_count": {"const": 2172},
+        "source_complete_formula_consumed_gene_count": {"const": 2172},
+        "unique_physics_hash_count": {"const": 2172},
+        "current_evaluator_beam_invariant_count": {"const": 2172},
+        "preregistered_tau_ratio_reproduced_count": {"const": 2172},
+        "hundred_keV_v48_reproduction_count": {"const": 724},
+        "nonbaseline_response_change_count": {"const": 1448},
+        "source_domain_complete_count": {"const": 0},
+        "performance_ranking_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "qd_cell_count": {"const": 1086},
+        "qd_performance_selected_cell_count": {"const": 0}
+      }
+    },
+    "next_actions": {"type": "array", "minItems": 5},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 700},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

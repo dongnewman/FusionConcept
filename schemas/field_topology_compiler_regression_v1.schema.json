@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "field_topology_compiler_regression_v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "stage",
+    "manufactured_controls",
+    "native_solver_controls",
+    "prior_solver_bridge_binding",
+    "summary",
+    "claim_boundary",
+    "deterministic_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "field_topology_compiler_regression_v1"},
+    "manufactured_controls": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["control_id", "coarse", "fine", "convergence"]
+      }
+    },
+    "native_solver_controls": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "control_id",
+          "design_id",
+          "genome_physics_hash",
+          "topology_module_statuses",
+          "candidate_bound_topology_product_count",
+          "C1_authorized"
+        ],
+        "properties": {
+          "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "candidate_bound_topology_product_count": {"type": "integer", "minimum": 0, "maximum": 1},
+          "C1_authorized": {"const": false}
+        }
+      }
+    },
+    "prior_solver_bridge_binding": {
+      "type": "object",
+      "required": ["artifact", "deterministic_hash", "source_solver_pass_count", "field_line_topology_unmapped_count"],
+      "properties": {
+        "artifact": {"const": "knowledge/cross_topology_solver_bridge_v1.json"},
+        "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "source_solver_pass_count": {"const": 3},
+        "field_line_topology_unmapped_count": {"const": 3}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "manufactured_control_count",
+        "manufactured_convergence_pass_count",
+        "manufactured_topology_classes",
+        "manufactured_C1_authorized_count",
+        "native_control_count",
+        "native_topology_module_ready_count",
+        "native_candidate_bound_topology_product_count",
+        "native_passing_topology_product_count",
+        "native_passing_closed_surface_support_count",
+        "native_passing_periodic_3d_surface_support_count",
+        "native_C1_authorized_count",
+        "promotion_count"
+      ],
+      "properties": {
+        "manufactured_control_count": {"const": 3},
+        "manufactured_convergence_pass_count": {"const": 3},
+        "manufactured_topology_classes": {
+          "const": ["closed_dominated", "mixed", "open_dominated"]
+        },
+        "manufactured_C1_authorized_count": {"const": 0},
+        "native_control_count": {"const": 3},
+        "native_topology_module_ready_count": {"const": 0},
+        "native_candidate_bound_topology_product_count": {"const": 2},
+        "native_passing_topology_product_count": {"const": 1},
+        "native_passing_closed_surface_support_count": {"const": 1},
+        "native_passing_periodic_3d_surface_support_count": {"const": 1},
+        "native_C1_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

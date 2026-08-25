@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/freegs_pointcoil_wall_total_field_grid_v1.schema.json",
+  "title": "FreeGS point-coil wall total-field grid v1",
+  "type": "object",
+  "required": [
+    "schema_version", "status", "coordinate_system", "design_id",
+    "genome_physics_hash", "field_source_id", "field_source_hash",
+    "source_solver_result_hash", "source_solver_input_hash",
+    "covered_domain_ids", "radial_grid_m", "axial_grid_m", "br_t",
+    "bphi_t", "bz_t", "normalized_poloidal_flux", "wall_geometry",
+    "wall_geometry_hash", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"const": "pass"},
+    "coordinate_system": {"const": "cylindrical_axisymmetric"},
+    "design_id": {"const": "freegs_pointcoil_wall_control_v1"},
+    "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "field_source_id": {"const": "freegs_pointcoil_wall_total_field_grid_v1"},
+    "field_source_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_solver_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_solver_input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "covered_domain_ids": {
+      "type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true,
+      "items": {"enum": ["freegs_wall_control_core", "freegs_wall_control_sol_wall"]}
+    },
+    "radial_grid_m": {"type": "array", "minItems": 65, "items": {"type": "number"}},
+    "axial_grid_m": {"type": "array", "minItems": 65, "items": {"type": "number"}},
+    "br_t": {"type": "array", "minItems": 65},
+    "bphi_t": {"type": "array", "minItems": 65},
+    "bz_t": {"type": "array", "minItems": 65},
+    "normalized_poloidal_flux": {"type": "array", "minItems": 65},
+    "wall_geometry": {
+      "type": "object",
+      "required": ["r_m", "z_m", "boundary_id", "source_id", "semantics"],
+      "properties": {
+        "r_m": {"type": "array", "minItems": 6, "items": {"type": "number"}},
+        "z_m": {"type": "array", "minItems": 6, "items": {"type": "number"}},
+        "boundary_id": {"const": "freegs_sample_material_wall"},
+        "source_id": {"const": "freegs_0_8_2_testtokamak_sample_wall_geometry"},
+        "semantics": {"const": "absorbing_field_line_boundary_only"}
+      }
+    },
+    "wall_geometry_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_boundary": {"type": "string", "minLength": 80}
+  }
+}

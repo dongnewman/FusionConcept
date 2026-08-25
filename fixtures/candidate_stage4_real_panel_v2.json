@@ -1,0 +1,107 @@
+{
+  "schema_version": "2.0.0",
+  "panel_id": "candidate_stage4_real_panel_v2",
+  "claim_boundary": "Capability-declared Stage-4 evidence only. Candidate and panel labels are provenance metadata and are not routing inputs. Partial favorable modes do not establish complete stability or C2.",
+  "entries": [
+    {
+      "panel_entry_id": "closed_positive_iter",
+      "assembly_context": {"dimension": "periodic_3d", "boundary_class": "closed_flux", "time_mode": "steady"},
+      "required_operator_ids": ["three_dimensional_equilibrium_v2", "mercier_interchange_v2", "infinite_n_ballooning_v2", "error_field_response_v2", "fast_ion_orbit_v2"]
+    },
+    {
+      "panel_entry_id": "closed_positive_w7x",
+      "assembly_context": {"dimension": "periodic_3d", "boundary_class": "closed_flux", "time_mode": "steady"},
+      "required_operator_ids": ["three_dimensional_equilibrium_v2", "mercier_interchange_v2", "infinite_n_ballooning_v2", "error_field_response_v2", "fast_ion_orbit_v2"]
+    },
+    {
+      "panel_entry_id": "closed_candidate_pool24",
+      "assembly_context": {"dimension": "periodic_3d", "boundary_class": "closed_flux", "time_mode": "steady"},
+      "required_operator_ids": ["three_dimensional_equilibrium_v2", "mercier_interchange_v2", "infinite_n_ballooning_v2", "error_field_response_v2", "fast_ion_orbit_v2"],
+      "adapter": {
+        "kind": "desc_medium_fine_v2",
+        "frontier_path": "runs/c1_c2_frontier_candidates_v1_20260816.json",
+        "frontier_sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af",
+        "audit_path": "runs/topology_desc_stability_pool24_medium_fine_audit_v4_20260816.json",
+        "audit_sha256": "5909b822c0f3e7528829f49c5d25bbbb3711c4f6618811c8bc258b0d897b241f",
+        "fast_ion_input_path": "fixtures/desc_fast_ion_pool24_input_v1.json",
+        "fast_ion_input_sha256": "d2e45405d6e701a59065dc667c573a81a09e4f22ad9aaa87b1b1f2136d555d82",
+        "fast_ion_artifact_path": "runs/desc_fast_ion_pool24_v1_20260824.json",
+        "fast_ion_artifact_sha256": "04b65fbbbe71bb40bf48a5cd7db44310db74886e333848c8f12d4408e719d9d1",
+        "fast_ion_runner_path": "scripts/desc_fast_ion_guiding_center_runner_v1.py",
+        "fast_ion_runner_sha256": "b36c5cc7a8898e1cb28bda3b195a58067331bda44f7c8d783d5162fbf1c2ea2d"
+      }
+    },
+    {
+      "panel_entry_id": "closed_candidate_pool56",
+      "assembly_context": {"dimension": "periodic_3d", "boundary_class": "closed_flux", "time_mode": "steady"},
+      "required_operator_ids": ["three_dimensional_equilibrium_v2", "mercier_interchange_v2", "infinite_n_ballooning_v2", "error_field_response_v2", "fast_ion_orbit_v2"],
+      "adapter": {
+        "kind": "desc_medium_fine_v2",
+        "frontier_path": "runs/c1_c2_frontier_candidates_v1_20260816.json",
+        "frontier_sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af",
+        "audit_path": "runs/topology_desc_stability_pool56_medium_fine_audit_v2_20260816.json",
+        "audit_sha256": "95496032b968449e0cd92d624ea04849fb50f7d940934e722328ffde357dfe41",
+        "fast_ion_input_path": "fixtures/desc_fast_ion_pool56_input_v1.json",
+        "fast_ion_input_sha256": "144a9a51bd44aa3d47f41312990c4b26371806aa660521332a8935fe288544a4",
+        "fast_ion_artifact_path": "runs/desc_fast_ion_pool56_v1_20260824.json",
+        "fast_ion_artifact_sha256": "08c94f779de57adc87934ce496f8315a9b21a861c990916070bf7a7f97f52919",
+        "fast_ion_runner_path": "scripts/desc_fast_ion_guiding_center_runner_v1.py",
+        "fast_ion_runner_sha256": "b36c5cc7a8898e1cb28bda3b195a58067331bda44f7c8d783d5162fbf1c2ea2d"
+      }
+    },
+    {
+      "panel_entry_id": "closed_negative_discrete_coil",
+      "assembly_context": {"dimension": "periodic_3d", "boundary_class": "closed_flux", "time_mode": "steady"},
+      "required_operator_ids": ["three_dimensional_equilibrium_v2", "mercier_interchange_v2", "infinite_n_ballooning_v2", "error_field_response_v2", "fast_ion_orbit_v2"],
+      "adapter": {
+        "kind": "desc_error_field_negative_v2",
+        "input_path": "fixtures/desc_error_field_closed_negative_input_v1.json",
+        "input_sha256": "86fd1ae295f6267f0e1ca0d9684e9e6f195a52bb235c6e966302d3389d77fa32",
+        "artifact_path": "runs/desc_error_field_closed_negative_v1_20260824.json",
+        "artifact_sha256": "fc8ed344c1bf6ea909ccfaf20570facb5d250b26a45515d73d2a557672b1274a",
+        "runner_path": "scripts/desc_coil_current_error_response_runner_v1.py",
+        "runner_sha256": "41335c9b150d08c8a00d72c42ca0270b20ba05a2708f8e2d72acc581e5878af2"
+      }
+    },
+    {
+      "panel_entry_id": "open_positive_c2w",
+      "assembly_context": {"dimension": "axisymmetric_2d", "boundary_class": "open_flux", "time_mode": "steady"},
+      "required_operator_ids": ["interchange_flute_v2", "m1_global_v2", "finite_larmor_radius_v2", "drift_cyclotron_loss_cone_v2", "alfven_ion_cyclotron_v2", "ambipolar_response_v2", "flow_shear_v2"]
+    },
+    {
+      "panel_entry_id": "open_positive_wham",
+      "assembly_context": {"dimension": "axisymmetric_2d", "boundary_class": "open_flux", "time_mode": "steady"},
+      "required_operator_ids": ["interchange_flute_v2", "m1_global_v2", "finite_larmor_radius_v2", "drift_cyclotron_loss_cone_v2", "alfven_ion_cyclotron_v2", "ambipolar_response_v2", "flow_shear_v2"]
+    },
+    {
+      "panel_entry_id": "open_candidate_mirror_low_force",
+      "assembly_context": {"dimension": "axisymmetric_2d", "boundary_class": "open_flux", "time_mode": "steady"},
+      "required_operator_ids": ["interchange_flute_v2", "m1_global_v2", "finite_larmor_radius_v2", "drift_cyclotron_loss_cone_v2", "alfven_ion_cyclotron_v2", "ambipolar_response_v2", "flow_shear_v2"],
+      "adapter": {
+        "kind": "mirror_finite_winding_minimum_b_failure_v2",
+        "artifact_path": "runs/candidate_specific_mirror_winding_candidates_v1_20260816.jsonl",
+        "artifact_sha256": "a92ec1dab6bad61d55a10cf10a41fd9955095d5558f561562cba31aef0ad83f3"
+      }
+    },
+    {
+      "panel_entry_id": "open_candidate_mirror_high_ratio",
+      "assembly_context": {"dimension": "axisymmetric_2d", "boundary_class": "open_flux", "time_mode": "steady"},
+      "required_operator_ids": ["interchange_flute_v2", "m1_global_v2", "finite_larmor_radius_v2", "drift_cyclotron_loss_cone_v2", "alfven_ion_cyclotron_v2", "ambipolar_response_v2", "flow_shear_v2"],
+      "adapter": {
+        "kind": "mirror_finite_winding_minimum_b_failure_v2",
+        "artifact_path": "runs/candidate_specific_mirror_winding_candidates_v1_20260816.jsonl",
+        "artifact_sha256": "a92ec1dab6bad61d55a10cf10a41fd9955095d5558f561562cba31aef0ad83f3"
+      }
+    },
+    {
+      "panel_entry_id": "open_negative_local_saddle",
+      "assembly_context": {"dimension": "axisymmetric_2d", "boundary_class": "open_flux", "time_mode": "steady"},
+      "required_operator_ids": ["interchange_flute_v2", "m1_global_v2", "finite_larmor_radius_v2", "drift_cyclotron_loss_cone_v2", "alfven_ion_cyclotron_v2", "ambipolar_response_v2", "flow_shear_v2"],
+      "adapter": {
+        "kind": "minimum_b_failure_v2",
+        "artifact_path": "runs/open_world_pleiades_candidate_stability_screen_v1_20260821.json",
+        "artifact_sha256": "e97add78558c704a7ed424a2ea11ddc20470077e693648fabab3c49f01e04598"
+      }
+    }
+  ]
+}

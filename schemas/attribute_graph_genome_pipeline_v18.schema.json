@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/attribute-graph-genome-pipeline-v18.json",
+  "title": "Attribute-graph Genome compiler and executable prescreen v18",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "stage",
+    "algorithm",
+    "input_archive",
+    "compilation_audit",
+    "evaluator_routing",
+    "prescreen_summary",
+    "missing_requirement_audit",
+    "records",
+    "evaluation_and_promotion_policy",
+    "claim_boundary",
+    "compiled_genome_archive",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "stage": { "const": "attribute_graph_genome_pipeline_v18" },
+    "algorithm": { "const": "deterministic_v17_graph_to_typed_genome_and_family_proxy_routing_v1" },
+    "input_archive": {
+      "type": "object",
+      "required": ["archive_hash", "catalog_hash", "assembly_count"]
+    },
+    "compilation_audit": {
+      "type": "object",
+      "required": [
+        "compiled_genome_count",
+        "unique_genome_physics_hash_count",
+        "family_counts",
+        "semantic_validation_pass_count",
+        "mission_contract_match_count",
+        "source_traceability_pass_count",
+        "module_geometry_solved_count"
+      ]
+    },
+    "evaluator_routing": {
+      "type": "object",
+      "required": ["route_counts", "applicable_count", "not_applicable_count", "all_eleven_families_have_executable_route"]
+    },
+    "prescreen_summary": {
+      "type": "object",
+      "required": [
+        "proxy_five_gate_pass_count",
+        "proxy_five_gate_family_counts",
+        "proxy_requirement_coverage_complete_count",
+        "positive_net_power_closure_count",
+        "medium_fidelity_candidate_eligible_count",
+        "topology_graph_error_count"
+      ]
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1000,
+      "items": {
+        "type": "object",
+        "required": [
+          "compilation", "proxy_applicable", "gates",
+          "proxy_five_gate_passed", "missing_proxy_requirements",
+          "proxy_coverage_complete", "medium_fidelity_candidate_eligible",
+          "proxy_result_hash"
+        ]
+      }
+    },
+    "evaluation_and_promotion_policy": {
+      "type": "object",
+      "required": [
+        "evidence_gap_queue", "evidence_gap_queue_count",
+        "medium_fidelity_candidate_queue", "medium_fidelity_candidate_queue_count",
+        "medium_fidelity_authorized_count", "rule"
+      ]
+    },
+    "claim_boundary": { "type": "string", "minLength": 1 },
+    "compiled_genome_archive": {
+      "type": "object",
+      "required": ["path", "format", "record_count", "file_sha256"]
+    },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/variable_mirror_topology_search_v22.schema.json",
+  "title": "Variable mirror coil-topology search v22",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "run_date", "result_hash",
+    "input_binding", "search_contract", "preview_execution",
+    "full_review_execution", "outcome", "archives", "claim_boundary",
+    "promotion_credit", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "variable_mirror_topology_search_v22" },
+    "stage": {
+      "const": "rejection_only_variable_mirror_coil_topology_search"
+    },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "claim_boundary": { "type": "string", "minLength": 80 },
+    "search_contract": {
+      "type": "object",
+      "required": [
+        "layouts", "layout_count", "paired_halton_gene_dimensions",
+        "candidate_count", "qd_descriptor",
+        "all_preview_survivors_require_full_review"
+      ]
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "medium_fidelity_authorized_count", "physics_evidence_level_change"
+      ],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

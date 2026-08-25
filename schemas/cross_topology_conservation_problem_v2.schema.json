@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_conservation_problem_v2.schema.json",
+  "title": "Cross-topology conservation problem v2",
+  "type": "object",
+  "required": ["schema_version", "stage", "routing_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "stage": {"const": "cross_topology_conservation_problem_v2"},
+    "routing_principle": {"type": "string", "minLength": 100},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"$ref": "#/$defs/control"}
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "balance_count", "required_numeric_slot_count",
+        "authoritative_numeric_slot_count", "executable_ir_term_count",
+        "invalid_quantity_ir_term_count", "compiler_issue_count", "mass_balance_count",
+        "candidate_conservation_c2_support_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "balance_count": {"const": 108},
+        "required_numeric_slot_count": {"const": 466},
+        "authoritative_numeric_slot_count": {"const": 0},
+        "executable_ir_term_count": {"const": 8},
+        "invalid_quantity_ir_term_count": {"const": 1},
+        "compiler_issue_count": {"const": 19},
+        "mass_balance_count": {"const": 14},
+        "candidate_conservation_c2_support_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 350},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "problem": {
+      "type": "object",
+      "required": ["schema_version", "design_id", "genome_physics_hash",
+        "plasma_control_volume_ids", "field_source_control_volume_ids",
+        "species_ids", "required_quantities", "balances", "ir_term_audit",
+        "compiler_issues", "evidence_tasks", "claim_ceiling", "problem_hash",
+        "promotion_authorized"],
+      "properties": {
+        "schema_version": {"const": "2.0.0"},
+        "genome_physics_hash": {"$ref": "#/$defs/hash"},
+        "required_quantities": {
+          "type": "array",
+          "contains": {"const": "mass"},
+          "minItems": 6, "maxItems": 6
+        },
+        "balances": {"type": "array", "minItems": 30},
+        "claim_ceiling": {"const": "C0_conservation_problem_compiled_no_numeric_credit"},
+        "problem_hash": {"$ref": "#/$defs/hash"},
+        "promotion_authorized": {"const": false}
+      }
+    },
+    "compiled": {
+      "type": "object",
+      "required": ["authoritative_slot_count", "required_slot_count", "ledger",
+        "status", "c2_support_authorized", "compilation_hash", "promotion_authorized"],
+      "properties": {
+        "authoritative_slot_count": {"const": 0},
+        "required_slot_count": {"minimum": 100},
+        "status": {"const": "unknown"},
+        "c2_support_authorized": {"const": false},
+        "compilation_hash": {"$ref": "#/$defs/hash"},
+        "promotion_authorized": {"const": false}
+      }
+    },
+    "control": {
+      "type": "object",
+      "required": ["control_id", "design_id", "diagnostic_legacy_family_label",
+        "family_label_used_for_routing", "source_genome_file",
+        "source_genome_file_sha256", "source_executable_file",
+        "source_executable_file_sha256", "problem",
+        "compiled_without_numeric_terms", "complete_c2", "promotion_authorized"],
+      "properties": {
+        "family_label_used_for_routing": {"const": false},
+        "source_genome_file_sha256": {"$ref": "#/$defs/hash"},
+        "source_executable_file_sha256": {"$ref": "#/$defs/hash"},
+        "problem": {"$ref": "#/$defs/problem"},
+        "compiled_without_numeric_terms": {"$ref": "#/$defs/compiled"},
+        "complete_c2": {"const": false},
+        "promotion_authorized": {"const": false}
+      }
+    }
+  }
+}

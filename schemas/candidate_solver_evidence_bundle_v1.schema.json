@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_solver_evidence_bundle_v1.schema.json",
+  "title": "CandidateSolverEvidenceBundleV1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["manifest", "region_solve_result", "time_trajectory", "stability_result", "transport_result", "engineering_result", "plant_power_ledger", "vvuq_result", "execution_order", "routing_basis"],
+  "properties": {
+    "execution_order": {
+      "const": ["regional_state", "stability", "reaction_transport", "engineering_loads", "plant_power_ledger", "vvuq"]
+    },
+    "family_or_parent_used_for_routing": {"const": false},
+    "routing_basis": {"type": "string", "minLength": 1},
+    "stability_result": {"type": "object", "required": ["tests", "result_hash"]},
+    "transport_result": {"type": "object", "required": ["state_solution_hash", "solver_output_hash", "reaction_feedback_closure_status"]},
+    "engineering_result": {"type": "object", "required": ["output_roles", "checks", "solver_output_hash"]},
+    "plant_power_ledger": {"type": "object", "required": ["plant_roles", "terms", "result_hash"]},
+    "vvuq_result": {"type": "object", "required": ["checks", "result_hash"]}
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/desc_coil_current_error_response_result_v1.schema.json",
+  "title": "DESC Coil-Current Error Response Result V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "runner_version",
+    "runner_source_sha256",
+    "status",
+    "candidate_binding_hash",
+    "stability_problem_hash",
+    "source_binding",
+    "equilibrium",
+    "diagnostic_input",
+    "resolution_history",
+    "resolution_audit",
+    "finest",
+    "gates",
+    "signed_nominal_bn_margin",
+    "minimal_failure_scope",
+    "claim_boundary",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "runner_version": {"const": "desc_coil_current_error_response_runner_v1"},
+    "runner_source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["pass", "fail", "unknown"]},
+    "candidate_binding_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stability_problem_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "resolution_history": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "angular_count",
+          "surface_point_count",
+          "nominal_total_bn_rms_normalized",
+          "maximum_pattern_normalized_delta_bn_rms",
+          "maximum_weighted_response_singular_value",
+          "response_matrix_hash"
+        ]
+      }
+    },
+    "resolution_audit": {
+      "type": "object",
+      "required": ["accepted"]
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "candidate_binding_verified",
+        "physical_symmetry_copies_expanded",
+        "response_resolution_verified",
+        "nominal_bn_reference_met",
+        "complete_error_field_evidence_authorized"
+      ]
+    },
+    "signed_nominal_bn_margin": {"type": "number"},
+    "minimal_failure_scope": {
+      "type": "object",
+      "required": ["failed_reference", "scope", "not_falsified"]
+    },
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hierarchical_energy_target_search_v2.schema.json",
+  "title": "Hierarchical energy target search v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "objective_specs", "entries", "priority_front_binding_hashes",
+    "topology_rejected_binding_hashes", "topology_unsupported_binding_hashes",
+    "c2_terminated_binding_hashes", "evidence_queue_binding_hashes",
+    "engineering_rejected_binding_hashes", "net_power_shortfall_binding_hashes",
+    "uncertainty_crosses_zero_binding_hashes", "target_shortfall_binding_hashes",
+    "scalar_score_used", "proxy_feasibility_credit_used",
+    "high_fidelity_feedback_role", "search_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "objective_specs": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_binding_hash", "state_package_hash",
+          "topology_compilation_hash", "decision_hash", "disposition", "gate_audits",
+          "objective_coordinates", "evidence_tasks", "acquisition_priority_tasks",
+          "entry_hash"],
+        "properties": {
+          "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+          "state_package_hash": {"$ref": "#/$defs/hash"},
+          "topology_compilation_hash": {"$ref": "#/$defs/hash"},
+          "decision_hash": {"$ref": "#/$defs/hash"},
+          "disposition": {"enum": ["topology_rejected", "topology_unsupported",
+            "c2_terminated", "evidence_queue", "engineering_rejected",
+            "net_power_shortfall", "uncertainty_crosses_zero", "target_shortfall",
+            "rankable"]},
+          "gate_audits": {"type": "array", "items": {"type": "object"}},
+          "objective_coordinates": {"type": "array", "items": {"type": "object"}},
+          "evidence_tasks": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "acquisition_priority_tasks": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "entry_hash": {"$ref": "#/$defs/hash"}
+        }
+      }
+    },
+    "priority_front_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "topology_rejected_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "topology_unsupported_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "c2_terminated_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "evidence_queue_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "engineering_rejected_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "net_power_shortfall_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "uncertainty_crosses_zero_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "target_shortfall_binding_hashes": {"$ref": "#/$defs/hashList"},
+    "scalar_score_used": {"const": false},
+    "proxy_feasibility_credit_used": {"const": false},
+    "high_fidelity_feedback_role": {"const": "evidence_acquisition_only"},
+    "search_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "hashList": {"type": "array", "items": {"$ref": "#/$defs/hash"}, "uniqueItems": true}
+  }
+}

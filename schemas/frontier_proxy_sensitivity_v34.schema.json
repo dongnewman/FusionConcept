@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/frontier_proxy_sensitivity_v34.schema.json",
+  "title": "FusionConceptAI v34 local frontier proxy sensitivity artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "search_version",
+    "input_binding",
+    "sensitivity_contract",
+    "aggregate",
+    "archives",
+    "deterministic_result_hash",
+    "promotion_credit",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "frontier_proxy_sensitivity_v34"},
+    "sensitivity_contract": {
+      "type": "object",
+      "required": [
+        "record_count", "family_count", "coordinates_per_record",
+        "perturbed_proxy_evaluations", "unit_delta"
+      ],
+      "properties": {
+        "record_count": {"const": 55},
+        "family_count": {"const": 11},
+        "coordinates_per_record": {"const": 24},
+        "perturbed_proxy_evaluations": {"const": 2640},
+        "unit_delta": {"const": 0.02}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["promotion_count", "medium_fidelity_authorized_count"],
+      "properties": {
+        "promotion_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0}
+      }
+    }
+  }
+}

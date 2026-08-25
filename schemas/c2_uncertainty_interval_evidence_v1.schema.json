@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/c2_uncertainty_interval_evidence_v1.schema.json",
+  "title": "C2 Uncertainty Interval Evidence V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_binding_hash", "state_result_hash", "quantity_id", "lower", "upper", "unit", "coverage_probability", "method", "source_result_hash", "interval_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_result_hash": {"$ref": "#/$defs/hash"},
+    "quantity_id": {"type": "string", "minLength": 1},
+    "lower": {"type": "number"},
+    "upper": {"type": "number"},
+    "unit": {"type": "string", "minLength": 1},
+    "coverage_probability": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1},
+    "method": {"type": "string", "minLength": 1},
+    "source_result_hash": {"$ref": "#/$defs/hash"},
+    "interval_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

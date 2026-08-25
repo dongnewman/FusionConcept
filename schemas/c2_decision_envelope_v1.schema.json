@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/c2_decision_envelope_v1.schema.json",
+  "title": "C2 Decision Envelope V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "candidate_binding_hash", "state_package_hash", "completeness",
+    "candidate_conclusion", "narrow_failures", "terminate", "termination_scope",
+    "termination_reason", "required_gate_ids", "complete_gate_ids", "incomplete_gate_ids",
+    "unsupported_gate_ids", "failed_gate_ids", "gate_decisions", "decision_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_package_hash": {"$ref": "#/$defs/hash"},
+    "completeness": {"enum": ["complete", "incomplete", "unsupported"]},
+    "candidate_conclusion": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "narrow_failures": {"type": "array", "items": {"$ref": "#/$defs/failure"}},
+    "terminate": {"type": "boolean"},
+    "termination_scope": {"enum": ["none", "candidate_evaluation"]},
+    "termination_reason": {"type": "string", "minLength": 1},
+    "required_gate_ids": {"$ref": "#/$defs/stringSet"},
+    "complete_gate_ids": {"$ref": "#/$defs/stringSet"},
+    "incomplete_gate_ids": {"$ref": "#/$defs/stringSet"},
+    "unsupported_gate_ids": {"$ref": "#/$defs/stringSet"},
+    "failed_gate_ids": {"$ref": "#/$defs/stringSet"},
+    "gate_decisions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/gate"}},
+    "decision_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stringSet": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "failure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["failure_id", "gate_id", "failure_code", "scope_kind", "affected_ids", "excluded_claims", "authoritative_for_gate", "terminates_candidate", "source_result_hash", "failure_hash"],
+      "properties": {
+        "failure_id": {"type": "string", "minLength": 1}, "gate_id": {"type": "string", "minLength": 1},
+        "failure_code": {"type": "string", "minLength": 1}, "scope_kind": {"type": "string", "minLength": 1},
+        "affected_ids": {"$ref": "#/$defs/stringSet"}, "excluded_claims": {"$ref": "#/$defs/stringSet"},
+        "authoritative_for_gate": {"type": "boolean"}, "source_result_hash": {"$ref": "#/$defs/hash"},
+        "terminates_candidate": {"type": "boolean"},
+        "failure_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "gate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["gate_id", "required", "completeness", "conclusion", "narrow_failures", "evidence_hashes", "evidence_tasks", "gate_hash"],
+      "properties": {
+        "gate_id": {"type": "string", "minLength": 1}, "required": {"type": "boolean"},
+        "completeness": {"enum": ["complete", "incomplete", "unsupported"]},
+        "conclusion": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+        "narrow_failures": {"type": "array", "items": {"$ref": "#/$defs/failure"}},
+        "evidence_hashes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/hash"}},
+        "evidence_tasks": {"$ref": "#/$defs/stringSet"}, "gate_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

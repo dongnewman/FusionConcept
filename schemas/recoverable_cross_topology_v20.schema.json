@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/recoverable_cross_topology_v20.schema.json",
+  "title": "Recoverable real cross-topology fidelity-0 search v20",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_date",
+    "search_version",
+    "stage",
+    "spec",
+    "execution_equivalence",
+    "failure_and_lease_audit",
+    "physics_search_summary",
+    "archives",
+    "sealed_inputs",
+    "claim_boundary",
+    "promotion_credit",
+    "deterministic_result_hash",
+    "runtime_measurements",
+    "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "recoverable_cross_topology_v20" },
+    "stage": { "const": "real_fidelity0_recoverable_cross_topology_search" },
+    "spec": { "type": "object" },
+    "execution_equivalence": {
+      "type": "object",
+      "required": [
+        "uninterrupted",
+        "interruption_stage",
+        "resumed",
+        "concurrent_two_worker",
+        "all_result_hashes_equal",
+        "result_hash",
+        "all_candidate_record_hashes_equal",
+        "candidate_record_hash"
+      ]
+    },
+    "failure_and_lease_audit": { "type": "object" },
+    "physics_search_summary": { "type": "object" },
+    "archives": { "type": "object" },
+    "sealed_inputs": { "type": "object" },
+    "claim_boundary": { "type": "string" },
+    "promotion_credit": { "type": "object" },
+    "deterministic_result_hash": { "$ref": "#/$defs/hash" },
+    "runtime_measurements": { "type": "object" },
+    "source_hashes": { "type": "object" }
+  },
+  "$defs": {
+    "hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}
+

@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pleiades sourced loss-cone Fokker-Planck V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "stage", "design_id", "genome_physics_hash",
+    "domain_id", "species_id", "operator_principle", "source_artifacts",
+    "geometry_candidate_binding_verified", "source_model_candidate_binding_verified",
+    "ambipolar_potential_solved", "physical_collision_frequency_bound",
+    "physical_particle_source_rate_bound", "potential_scan", "convergence_problems",
+    "convergence_observations", "convergence", "summary", "claim_ceiling",
+    "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "pleiades_sourced_loss_cone_fokker_planck_v1"},
+    "design_id": {"const": "pleiades_public_wham_isotropic_regression"},
+    "genome_physics_hash": {"$ref": "#/$defs/hash"},
+    "domain_id": {"const": "pleiades_wham_isotropic_core"},
+    "species_id": {"const": "deuterium"},
+    "operator_principle": {"type": "string", "minLength": 300},
+    "source_artifacts": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"type": "object", "additionalProperties": false,
+        "required": ["artifact_id", "artifact_hash"],
+        "properties": {
+          "artifact_id": {"type": "string", "minLength": 1},
+          "artifact_hash": {"$ref": "#/$defs/hash"}
+        }}
+    },
+    "geometry_candidate_binding_verified": {"const": true},
+    "source_model_candidate_binding_verified": {"const": false},
+    "ambipolar_potential_solved": {"const": false},
+    "physical_collision_frequency_bound": {"const": false},
+    "physical_particle_source_rate_bound": {"const": false},
+    "potential_scan": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": {"type": "object", "additionalProperties": false,
+        "required": ["normalized_confining_potential", "problem", "observation"],
+        "properties": {
+          "normalized_confining_potential": {"type": "number", "minimum": 0},
+          "problem": {"$ref": "#/$defs/problem"},
+          "observation": {"$ref": "#/$defs/observation"}
+        }}
+    },
+    "convergence_problems": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"$ref": "#/$defs/problem"}
+    },
+    "convergence_observations": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"$ref": "#/$defs/observation"}
+    },
+    "convergence": {
+      "type": "object",
+      "required": ["status", "maximum_adjacent_relative_change",
+        "convergence_limit", "c2_physical_rate_authorized", "convergence_hash"],
+      "properties": {
+        "status": {"const": "pass"},
+        "maximum_adjacent_relative_change": {"type": "number", "minimum": 0},
+        "convergence_limit": {"const": 0.08},
+        "c2_physical_rate_authorized": {"const": false},
+        "convergence_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "summary": {
+      "type": "object", "additionalProperties": false,
+      "required": ["candidate_bound_mirror_ratio", "potential_scan_count",
+        "all_numeric_solutions_pass", "maximum_source_loss_relative_residual",
+        "maximum_linear_system_relative_residual", "phi0_normalized_confinement_time",
+        "phi05_normalized_confinement_time", "phi1_normalized_confinement_time",
+        "phi2_normalized_confinement_time", "phi2_to_phi0_inventory_source_ratio",
+        "phi0_mean_lost_energy_over_temperature", "phi2_mean_lost_energy_over_temperature",
+        "maximum_adjacent_grid_relative_change", "c2_physical_rate_count",
+        "complete_c2_count", "promotion_count"],
+      "properties": {
+        "candidate_bound_mirror_ratio": {"type": "number", "exclusiveMinimum": 1},
+        "potential_scan_count": {"const": 4},
+        "all_numeric_solutions_pass": {"const": true},
+        "maximum_source_loss_relative_residual": {"type": "number", "minimum": 0},
+        "maximum_linear_system_relative_residual": {"type": "number", "minimum": 0},
+        "phi0_normalized_confinement_time": {"type": "number", "exclusiveMinimum": 0},
+        "phi05_normalized_confinement_time": {"type": "number", "exclusiveMinimum": 0},
+        "phi1_normalized_confinement_time": {"type": "number", "exclusiveMinimum": 0},
+        "phi2_normalized_confinement_time": {"type": "number", "exclusiveMinimum": 0},
+        "phi2_to_phi0_inventory_source_ratio": {"type": "number", "exclusiveMinimum": 1},
+        "phi0_mean_lost_energy_over_temperature": {"type": "number", "minimum": 0},
+        "phi2_mean_lost_energy_over_temperature": {"type": "number", "minimum": 0},
+        "maximum_adjacent_grid_relative_change": {"type": "number", "minimum": 0},
+        "c2_physical_rate_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_ceiling": {"const": "candidate_geometry_bound_dimensionless_single_species_kinetic_shape"},
+    "claim_boundary": {"type": "string", "minLength": 800},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "problem": {
+      "type": "object",
+      "required": ["compiler_version", "design_id", "genome_physics_hash",
+        "domain_id", "species_id", "mirror_ratio", "normalized_confining_potential",
+        "source_temperature_ratio", "low_speed_regularization",
+        "perpendicular_diffusion_coefficient", "maximum_normalized_speed",
+        "speed_cell_count", "pitch_cell_count", "geometry_candidate_binding_verified",
+        "source_model_candidate_binding_verified", "equation_source_ids", "model_scope",
+        "problem_hash"],
+      "properties": {
+        "compiler_version": {"const": "sourced_loss_cone_fokker_planck_compiler_v1.0.0"},
+        "design_id": {"const": "pleiades_public_wham_isotropic_regression"},
+        "genome_physics_hash": {"$ref": "#/$defs/hash"},
+        "domain_id": {"const": "pleiades_wham_isotropic_core"},
+        "species_id": {"const": "deuterium"},
+        "mirror_ratio": {"type": "number", "exclusiveMinimum": 1},
+        "normalized_confining_potential": {"type": "number", "minimum": 0},
+        "source_temperature_ratio": {"const": 1},
+        "low_speed_regularization": {"const": 0.01},
+        "perpendicular_diffusion_coefficient": {"const": 0.5},
+        "maximum_normalized_speed": {"const": 5},
+        "speed_cell_count": {"type": "integer", "minimum": 12},
+        "pitch_cell_count": {"type": "integer", "minimum": 12},
+        "geometry_candidate_binding_verified": {"const": true},
+        "source_model_candidate_binding_verified": {"const": false},
+        "equation_source_ids": {"type": "array", "contains": {"const": "kolmes_ochs_fisch_2024_loss_cone_fp"}},
+        "model_scope": {"type": "string", "minLength": 100},
+        "problem_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "required": ["solver_version", "problem_hash", "trapped_cell_count",
+        "loss_cell_count", "normalized_inventory", "normalized_source_rate",
+        "normalized_absorbing_loss_rate", "source_loss_relative_residual",
+        "linear_system_relative_residual", "normalized_confinement_time",
+        "mean_lost_energy_over_temperature", "perpendicular_to_parallel_pressure_ratio",
+        "minimum_distribution_value", "maximum_distribution_value", "speed_grid",
+        "pitch_grid", "normalized_speed_projection", "normalized_pitch_projection",
+        "status", "c2_physical_rate_authorized", "evidence_tasks", "warnings",
+        "observation_hash"],
+      "properties": {
+        "solver_version": {"const": "sourced_loss_cone_fokker_planck_solver_v1.0.0"},
+        "problem_hash": {"$ref": "#/$defs/hash"},
+        "trapped_cell_count": {"type": "integer", "minimum": 1},
+        "loss_cell_count": {"type": "integer", "minimum": 1},
+        "normalized_inventory": {"type": "number", "exclusiveMinimum": 0},
+        "normalized_source_rate": {"type": "number", "exclusiveMinimum": 0},
+        "normalized_absorbing_loss_rate": {"type": "number", "exclusiveMinimum": 0},
+        "source_loss_relative_residual": {"type": "number", "minimum": 0},
+        "linear_system_relative_residual": {"type": "number", "minimum": 0},
+        "normalized_confinement_time": {"type": "number", "exclusiveMinimum": 0},
+        "mean_lost_energy_over_temperature": {"type": "number", "minimum": 0},
+        "perpendicular_to_parallel_pressure_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "minimum_distribution_value": {"type": "number", "minimum": -1e-10},
+        "maximum_distribution_value": {"type": "number", "exclusiveMinimum": 0},
+        "speed_grid": {"type": "array", "minItems": 12, "items": {"type": "number"}},
+        "pitch_grid": {"type": "array", "minItems": 12, "items": {"type": "number"}},
+        "normalized_speed_projection": {"type": "array", "minItems": 12, "items": {"type": "number", "minimum": 0}},
+        "normalized_pitch_projection": {"type": "array", "minItems": 12, "items": {"type": "number", "minimum": 0}},
+        "status": {"const": "pass"},
+        "c2_physical_rate_authorized": {"const": false},
+        "evidence_tasks": {"type": "array", "minItems": 4, "items": {"type": "string"}},
+        "warnings": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+        "observation_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

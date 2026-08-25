@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "evidence_acquisition_plan_v1.schema.json",
+  "title": "EvidenceAcquisitionPlanV1", "type": "object", "additionalProperties": false,
+  "required": ["plan_id", "selected_routes", "route_dependencies", "expected_information_gain",
+    "expected_total_cost", "decision_thresholds", "fallback_routes", "stop_conditions", "status"],
+  "properties": {
+    "plan_id": {"type": "string"}, "selected_routes": {"type": "array"}, "route_dependencies": {"type": "array"},
+    "expected_information_gain": {"type": "number"}, "expected_total_cost": {"type": ["number", "null"]},
+    "decision_thresholds": {"type": "array"}, "fallback_routes": {"type": "array"},
+    "stop_conditions": {"type": "array"}, "status": {"enum": ["planned", "evidence_route_unknown"]}
+  }
+}

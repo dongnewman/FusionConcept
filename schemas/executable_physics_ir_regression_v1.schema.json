@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "executable_physics_ir_regression_v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "stage", "native_executable_control", "legacy_migration_controls", "declassification_controls", "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "executable_physics_ir_regression_v1"},
+    "native_executable_control": {"type": "object"},
+    "legacy_migration_controls": {"type": "array", "minItems": 3, "maxItems": 3},
+    "declassification_controls": {
+      "type": "object",
+      "required": ["family_label_program_hash_equal", "family_label_active_operator_ids_equal", "geometry_change_program_hash_changed", "geometry_change_active_operator_ids_equal"],
+      "additionalProperties": {"const": true}
+    },
+    "summary": {
+      "type": "object",
+      "required": ["native_module_count", "native_ready_module_count", "native_uncovered_operator_count", "legacy_fixture_count", "legacy_migrated_unknown_module_count", "legacy_ready_module_count", "promotion_count"],
+      "properties": {
+        "native_module_count": {"const": 3},
+        "native_ready_module_count": {"const": 1},
+        "native_uncovered_operator_count": {"const": 8},
+        "legacy_fixture_count": {"const": 3},
+        "legacy_migrated_unknown_module_count": {"const": 3},
+        "legacy_ready_module_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

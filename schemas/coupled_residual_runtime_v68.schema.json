@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/coupled_residual_runtime_v68.schema.json",
+  "title": "Coupled residual graph runtime v68 protocol bundle",
+  "type": "object",
+  "$defs": {
+    "StateBlockSpecV1": {
+      "type": "object",
+      "required": ["module_id", "block_id", "region_id", "state_ids", "units", "residual_units", "scales", "lower_bounds", "upper_bounds", "spatial_dimension", "allowed_time_modes"],
+      "properties": {
+        "module_id": {"type": "string", "minLength": 1},
+        "block_id": {"type": "string", "minLength": 1},
+        "region_id": {"type": "string", "minLength": 1},
+        "state_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "units": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "residual_units": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "scales": {"type": "array", "minItems": 1, "items": {"type": "number", "exclusiveMinimum": 0}},
+        "lower_bounds": {"type": "array", "minItems": 1, "items": {"type": "number"}},
+        "upper_bounds": {"type": "array", "minItems": 1, "items": {"type": "number"}},
+        "spatial_dimension": {"type": "integer", "minimum": 0},
+        "allowed_time_modes": {"type": "array", "minItems": 1, "items": {"enum": ["steady", "transient", "pulsed"]}}
+      },
+      "additionalProperties": false
+    },
+    "ResidualBlockContractV1": {
+      "type": "object",
+      "required": ["module_id", "block_id", "assembly_role", "row_state_ids", "row_units", "dependency_state_ids", "region_ids", "boundary_ids", "interface_fluxes", "exclusive_outputs"],
+      "properties": {
+        "module_id": {"type": "string", "minLength": 1},
+        "block_id": {"type": "string", "minLength": 1},
+        "assembly_role": {"enum": ["governing", "additive"]},
+        "row_state_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "row_units": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "dependency_state_ids": {"type": "array", "items": {"type": "string"}},
+        "region_ids": {"type": "array", "items": {"type": "string"}},
+        "boundary_ids": {"type": "array", "items": {"type": "string"}},
+        "interface_fluxes": {"type": "array", "items": {"type": "object"}},
+        "exclusive_outputs": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "JacobianBlockContractV1": {
+      "type": "object",
+      "required": ["module_id", "block_id", "mode", "row_state_ids", "column_state_ids", "audit_relative_tolerance", "audit_absolute_tolerance"],
+      "properties": {
+        "module_id": {"type": "string", "minLength": 1},
+        "block_id": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["analytic", "automatic_differentiation", "matrix_free_jvp", "finite_difference_l1_only", "unavailable"]},
+        "row_state_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "column_state_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "audit_relative_tolerance": {"type": "number", "exclusiveMinimum": 0},
+        "audit_absolute_tolerance": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "MassMatrixBlockContractV1": {
+      "type": "object",
+      "required": ["module_id", "block_id", "row_state_ids", "kinds"],
+      "properties": {
+        "module_id": {"type": "string", "minLength": 1},
+        "block_id": {"type": "string", "minLength": 1},
+        "row_state_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "kinds": {"type": "array", "minItems": 1, "items": {"enum": ["differential", "algebraic"]}}
+      },
+      "additionalProperties": false
+    },
+    "CoupledSolvePlanV1": {
+      "type": "object",
+      "required": ["schema_version", "candidate_id", "physics_hash", "manifest_hash", "status", "state_ids", "residual_row_ids", "state_scales", "residual_scales", "lower_bounds", "upper_bounds", "differential_mask", "module_order", "dependency_graph", "compiler_audits", "reasons", "evidence_ceiling", "plan_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "candidate_id": {"type": "string"},
+        "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+        "state_ids": {"type": "array", "items": {"type": "string"}},
+        "residual_row_ids": {"type": "array", "items": {"type": "string"}},
+        "state_scales": {"type": "array", "items": {"type": "number"}},
+        "residual_scales": {"type": "array", "items": {"type": "number"}},
+        "lower_bounds": {"type": "array", "items": {"type": "number"}},
+        "upper_bounds": {"type": "array", "items": {"type": "number"}},
+        "differential_mask": {"type": "array", "items": {"type": "boolean"}},
+        "module_order": {"type": "array", "items": {"type": "string"}},
+        "dependency_graph": {"type": "object"},
+        "compiler_audits": {"type": "object"},
+        "reasons": {"type": "array", "items": {"type": "string"}},
+        "evidence_ceiling": {"type": "string"},
+        "plan_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "NonlinearSolveResultEnvelopeV1": {
+      "type": "object",
+      "required": ["schema_version", "candidate_id", "physics_hash", "manifest_hash", "plan_hash", "backend_id", "status", "classification_code", "convergence_status", "final_state", "residual_history", "block_residuals", "trajectory", "observables", "audits", "unresolved_reasons", "evidence_ceiling", "result_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "candidate_id": {"type": "string"},
+        "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "plan_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "backend_id": {"type": "string"},
+        "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+        "classification_code": {"type": "string"},
+        "convergence_status": {"type": "string"},
+        "final_state": {"type": "object", "additionalProperties": {"type": "number"}},
+        "residual_history": {"type": "array", "items": {"type": "object"}},
+        "block_residuals": {"type": "array", "items": {"type": "object"}},
+        "trajectory": {"type": "array", "items": {"type": "object"}},
+        "observables": {"type": "object"},
+        "audits": {"type": "object"},
+        "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+        "evidence_ceiling": {"type": "string"},
+        "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/StateBlockSpecV1"},
+    {"$ref": "#/$defs/ResidualBlockContractV1"},
+    {"$ref": "#/$defs/JacobianBlockContractV1"},
+    {"$ref": "#/$defs/MassMatrixBlockContractV1"},
+    {"$ref": "#/$defs/CoupledSolvePlanV1"},
+    {"$ref": "#/$defs/NonlinearSolveResultEnvelopeV1"}
+  ]
+}

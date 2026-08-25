@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "stage34_topology_compilation_v2.schema.json",
+  "title": "Stage 3 and 4 topology compilation v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "candidate_binding_hash", "state_package_hash", "grammar_hash",
+    "status", "classification_code", "base_compilation",
+    "bound_capability_evidence_hashes", "port_bindings",
+    "dependency_order", "obligation_audits", "audits", "reasons", "compilation_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_package_hash": {"$ref": "#/$defs/hash"},
+    "grammar_hash": {"$ref": "#/$defs/hash"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "classification_code": {"type": "string", "minLength": 1},
+    "base_compilation": {"type": "object"},
+    "bound_capability_evidence_hashes": {"type": "array", "items": {"$ref": "#/$defs/hash"}, "uniqueItems": true},
+    "port_bindings": {"type": "array", "items": {"type": "object"}},
+    "dependency_order": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "obligation_audits": {"type": "array", "items": {"type": "object"}},
+    "audits": {
+      "type": "object",
+      "required": ["routing_inputs", "label_routing_used"],
+      "properties": {
+        "routing_inputs": {"type": "array", "items": {"type": "string"}},
+        "label_routing_used": {"const": false}
+      }
+    },
+    "reasons": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "compilation_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

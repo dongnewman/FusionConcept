@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_magnet_engineering_v1.schema.json",
+  "title": "Cross-topology magnet engineering assessment v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "routing_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_magnet_engineering_v1"},
+    "routing_principle": {"type": "string", "minLength": 120},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["design_id", "diagnostic_legacy_family_label",
+          "family_label_used_for_routing", "problem", "evidence", "assessment",
+          "evidence_bundle", "notes", "complete_c2", "promotion_authorized"],
+        "properties": {
+          "family_label_used_for_routing": {"const": false},
+          "problem": {
+            "type": "object",
+            "required": ["genome_physics_hash", "requirements", "problem_hash"],
+            "properties": {
+              "genome_physics_hash": {"$ref": "#/$defs/hash"},
+              "requirements": {"type": "array", "minItems": 14, "maxItems": 14},
+              "problem_hash": {"$ref": "#/$defs/hash"}
+            }
+          },
+          "assessment": {
+            "type": "object",
+            "required": ["status", "required_metric_ids", "observed_metric_ids",
+              "c2_authorized_metric_ids", "feasibility_pass_metric_ids",
+              "feasibility_fail_metric_ids", "feasibility_unknown_metric_ids",
+              "complete_magnet_engineering_authorized", "complete_c2_authorized",
+              "assessment_hash"],
+            "properties": {
+              "required_metric_ids": {"type": "array", "minItems": 14, "maxItems": 14},
+              "complete_magnet_engineering_authorized": {"const": false},
+              "complete_c2_authorized": {"const": false},
+              "assessment_hash": {"$ref": "#/$defs/hash"}
+            }
+          },
+          "complete_c2": {"const": false},
+          "promotion_authorized": {"const": false}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "required_metric_slot_count",
+        "evidence_record_count", "observed_pass_metric_count",
+        "c2_authorized_metric_count", "feasibility_pass_metric_count",
+        "feasibility_fail_metric_count", "feasibility_unknown_metric_count",
+        "complete_magnet_engineering_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "required_metric_slot_count": {"const": 42},
+        "evidence_record_count": {"const": 10},
+        "observed_pass_metric_count": {"const": 9},
+        "c2_authorized_metric_count": {"const": 1},
+        "feasibility_pass_metric_count": {"const": 1},
+        "feasibility_fail_metric_count": {"const": 1},
+        "feasibility_unknown_metric_count": {"const": 40},
+        "complete_magnet_engineering_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 350},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

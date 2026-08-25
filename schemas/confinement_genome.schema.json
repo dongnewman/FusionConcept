@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/confinement-genome-0.1.0.json",
+  "title": "LMC Confinement Genome",
+  "description": "Configuration-neutral attributed graph for fusion confinement concepts. Physics applicability is enforced by evaluators, not by this structural schema alone.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "design_id",
+    "mission",
+    "family",
+    "topology",
+    "symmetry",
+    "plasma_regions",
+    "field_sources",
+    "stability_mechanisms",
+    "exhaust",
+    "engineering",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "design_id": {"$ref": "#/$defs/id"},
+    "label": {"type": "string", "minLength": 1},
+    "mission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "fuel", "operating_mode", "targets"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "science_gain_demo",
+            "fusion_neutron_source",
+            "net_electric_pilot",
+            "advanced_fuel_experiment"
+          ]
+        },
+        "fuel": {"enum": ["D-T", "D-D", "D-He3", "p-B11", "other"]},
+        "operating_mode": {"enum": ["steady_state", "long_pulse", "pulsed"]},
+        "targets": {
+          "type": "object",
+          "description": "Mission-specific target quantities; absence means unspecified, not zero.",
+          "additionalProperties": {"$ref": "#/$defs/quantity"}
+        }
+      }
+    },
+    "family": {
+      "enum": [
+        "tokamak_axisymmetric",
+        "tokamak_3d_hybrid",
+        "closed_open_hybrid",
+        "stellarator",
+        "magnetic_mirror",
+        "field_reversed_configuration",
+        "reversed_field_pinch",
+        "spheromak",
+        "levitated_dipole",
+        "other"
+      ]
+    },
+    "topology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field_line_class", "rotation_transform_sources"],
+      "properties": {
+        "field_line_class": {
+          "enum": [
+            "closed_toroidal_nested",
+            "closed_toroidal_separatrix",
+            "open_mirror",
+            "compact_toroid",
+            "mixed"
+          ]
+        },
+        "rotation_transform_sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "plasma_current",
+              "three_dimensional_external_field",
+              "reversed_field_current",
+              "self_organized_current",
+              "not_applicable"
+            ]
+          }
+        },
+        "expected_flux_surfaces": {"type": "boolean"},
+        "expected_separatrix": {"type": "boolean"}
+      }
+    },
+    "symmetry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "field_periods"],
+      "properties": {
+        "class": {
+          "enum": [
+            "axisymmetric",
+            "stellarator_symmetric",
+            "quasi_axisymmetric",
+            "quasi_helical",
+            "quasi_isodynamic",
+            "minimum_b",
+            "none",
+            "mixed"
+          ]
+        },
+        "field_periods": {"type": "integer", "minimum": 1},
+        "hard_constraints": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      }
+    },
+    "plasma_regions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/plasma_region"}
+    },
+    "field_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/field_source"}
+    },
+    "actuators": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/actuator"}
+    },
+    "stability_mechanisms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/stability_mechanism"}
+    },
+    "flux_connections": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/flux_connection"}
+    },
+    "exhaust": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "region_ids", "evaluation_requirements"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "x_point_divertor",
+            "snowflake_or_advanced_divertor",
+            "island_divertor",
+            "limiter",
+            "open_end_expander",
+            "direct_converter",
+            "pulsed_chamber",
+            "other"
+          ]
+        },
+        "region_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+        "evaluation_requirements": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+      }
+    },
+    "engineering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["magnet_technology", "blanket", "maintenance", "required_evaluators"],
+      "properties": {
+        "magnet_technology": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+        "blanket": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required", "concept"],
+          "properties": {
+            "required": {"type": "boolean"},
+            "concept": {"type": ["string", "null"]},
+            "target_tbr": {"$ref": "#/$defs/quantity"}
+          }
+        },
+        "maintenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["architecture", "access_paths"],
+          "properties": {
+            "architecture": {"type": "string", "minLength": 1},
+            "access_paths": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+          }
+        },
+        "required_evaluators": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin", "source_ids", "parent_design_ids", "claim_level"],
+      "properties": {
+        "origin": {"enum": ["known_device_seed", "literature_concept_seed", "generated", "human_authored"]},
+        "source_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+        "parent_design_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+        "claim_level": {"enum": ["structural_example", "numerical_candidate", "physics_concept", "engineering_concept", "experiment_proposal"]},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,95}$"},
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1},
+        "uncertainty": {"type": "number", "minimum": 0},
+        "basis": {"type": "string"}
+      }
+    },
+    "plasma_region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "geometry_model", "parameters"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "kind": {
+          "enum": [
+            "closed_toroidal_core",
+            "mirror_central_cell",
+            "mirror_plug_or_anchor",
+            "end_expander",
+            "compact_toroid_core",
+            "formation_or_compression_region",
+            "divertor_or_exhaust_region"
+          ]
+        },
+        "geometry_model": {"type": "string", "minLength": 1},
+        "parameters": {"type": "object", "additionalProperties": {"$ref": "#/$defs/quantity"}}
+      }
+    },
+    "field_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "geometry_model", "parameters", "material"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "kind": {
+          "enum": [
+            "toroidal_field_coil",
+            "poloidal_field_coil",
+            "central_solenoid",
+            "three_dimensional_modular_coil",
+            "helical_coil",
+            "mirror_coil",
+            "minimum_b_coil",
+            "plasma_current",
+            "passive_conductor",
+            "levitated_internal_coil"
+          ]
+        },
+        "geometry_model": {"type": "string", "minLength": 1},
+        "parameters": {"type": "object", "additionalProperties": {"$ref": "#/$defs/quantity"}},
+        "material": {"type": "string", "minLength": 1}
+      }
+    },
+    "actuator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "parameters"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "kind": {"enum": ["nbi", "ech", "icrh", "lhcd", "ohmic", "helicity_injection", "biased_electrode", "feedback_coil", "fueling", "other"]},
+        "parameters": {"type": "object", "additionalProperties": {"$ref": "#/$defs/quantity"}}
+      }
+    },
+    "stability_mechanism": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "mechanism", "target_modes", "actuator_ids", "assumptions", "required_evaluators", "source_ids"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "mechanism": {
+          "enum": [
+            "axisymmetry",
+            "quasi_symmetry",
+            "omnigenity",
+            "magnetic_well",
+            "minimum_b",
+            "magnetic_shear_and_q_profile",
+            "conducting_wall",
+            "feedback_control",
+            "sheared_flow",
+            "finite_larmor_radius",
+            "sloshing_ions",
+            "line_tying",
+            "self_organized_relaxation",
+            "other"
+          ]
+        },
+        "target_modes": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+        "actuator_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+        "assumptions": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+        "required_evaluators": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+        "source_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "minItems": 1, "uniqueItems": true}
+      }
+    },
+    "flux_connection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from_region_id", "to_region_id", "kind"],
+      "properties": {
+        "from_region_id": {"$ref": "#/$defs/id"},
+        "to_region_id": {"$ref": "#/$defs/id"},
+        "kind": {"enum": ["closed_surface_adjacency", "open_field_line", "separatrix_exhaust", "formation_transfer", "other"]}
+      }
+    }
+  }
+}

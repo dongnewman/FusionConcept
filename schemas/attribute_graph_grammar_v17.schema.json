@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/attribute-graph-grammar-v17.json",
+  "title": "Five-layer fusion topology attribute-graph grammar v17",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "stage",
+    "algorithm",
+    "layer_order",
+    "catalog",
+    "generation_audit",
+    "structural_qd_archive",
+    "evaluation_and_promotion_policy",
+    "claim_boundary",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "stage": { "const": "five_layer_attribute_graph_grammar_v17" },
+    "algorithm": { "const": "deterministic_tag_constraint_composition_and_family_round_robin_qd_v1" },
+    "layer_order": {
+      "const": ["core", "field_source", "stability", "exhaust", "engineering"]
+    },
+    "catalog": {
+      "type": "object",
+      "required": ["catalog_hash", "module_count", "layer_counts", "modules"]
+    },
+    "generation_audit": {
+      "type": "object",
+      "required": [
+        "partial_extension_attempt_count",
+        "rejected_partial_extension_count",
+        "compatible_assembly_count",
+        "compatible_family_counts",
+        "unique_graph_hash_count",
+        "rejection_reason_counts",
+        "rejection_samples"
+      ]
+    },
+    "structural_qd_archive": {
+      "type": "object",
+      "required": ["selection_policy", "assembly_count", "family_counts", "assemblies"]
+    },
+    "evaluation_and_promotion_policy": {
+      "type": "object",
+      "required": [
+        "physics_credit_count",
+        "engineering_credit_count",
+        "five_gate_pass_count",
+        "medium_fidelity_authorized_count",
+        "medium_fidelity_review_queue",
+        "reason"
+      ]
+    },
+    "claim_boundary": { "type": "string", "minLength": 1 },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/spatial_pressure_grid_artifact_v1.schema.json",
+  "title": "Candidate-bound spatial scalar-pressure grid artifact v1",
+  "type": "object",
+  "required": ["schema_version", "runner_version", "status", "design_id",
+    "genome_physics_hash", "domain_id", "source_kind", "fidelity",
+    "candidate_binding_verified", "resolution_verified",
+    "applicability_verified", "source_artifact_id", "source_artifact_hash",
+    "observations", "gates", "claim_boundary", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"const": "pass"},
+    "genome_physics_hash": {"$ref": "#/$defs/hash"},
+    "source_kind": {"const": "candidate_solver"},
+    "fidelity": {"minimum": 2},
+    "candidate_binding_verified": {"const": true},
+    "resolution_verified": {"const": true},
+    "applicability_verified": {"const": true},
+    "source_artifact_hash": {"$ref": "#/$defs/hash"},
+    "result_hash": {"$ref": "#/$defs/hash"},
+    "observations": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["resolution_label", "resolution_rank", "cell_count",
+          "cell_volumes_m3", "scalar_pressure_pa", "plasma_volume_m3",
+          "pressure_volume_integral_j", "source_result_hash",
+          "observation_hash", "volume_relative_error",
+          "pressure_integral_relative_error"],
+        "properties": {
+          "resolution_rank": {"type": "integer", "minimum": 1},
+          "cell_count": {"type": "integer", "minimum": 1},
+          "cell_volumes_m3": {"type": "array", "minItems": 1,
+            "items": {"type": "number", "exclusiveMinimum": 0}},
+          "scalar_pressure_pa": {"type": "array", "minItems": 1,
+            "items": {"type": "number", "minimum": 0}},
+          "plasma_volume_m3": {"type": "number", "exclusiveMinimum": 0},
+          "pressure_volume_integral_j": {"type": "number", "minimum": 0},
+          "source_result_hash": {"$ref": "#/$defs/hash"},
+          "observation_hash": {"$ref": "#/$defs/hash"},
+          "volume_relative_error": {"type": "number", "minimum": 0},
+          "pressure_integral_relative_error": {"type": "number", "minimum": 0}
+        }
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 150}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

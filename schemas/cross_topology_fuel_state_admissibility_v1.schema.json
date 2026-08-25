@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_fuel_state_admissibility_v1.schema.json",
+  "title": "Cross-topology fuel-state admissibility v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "operator_principle",
+    "source_assumption_artifact_id", "source_assumption_artifact_hash",
+    "source_spatial_closure_artifact_id", "source_spatial_closure_artifact_hash",
+    "fuel_envelopes", "controls", "summary", "claim_ceiling",
+    "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_fuel_state_admissibility_v1"},
+    "operator_principle": {"type": "string", "minLength": 300},
+    "source_assumption_artifact_id": {"type": "string", "minLength": 1},
+    "source_assumption_artifact_hash": {"$ref": "#/$defs/hash"},
+    "source_spatial_closure_artifact_id": {"type": "string", "minLength": 1},
+    "source_spatial_closure_artifact_hash": {"$ref": "#/$defs/hash"},
+    "fuel_envelopes": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"$ref": "#/$defs/envelope"}
+    },
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"$ref": "#/$defs/control"}
+    },
+    "summary": {
+      "type": "object",
+      "required": ["fuel_envelope_count", "temperature_ratio_slice_count",
+        "total_threshold_crossing_count", "charged_threshold_crossing_count",
+        "control_count", "numeric_operating_point_count",
+        "unsupported_fuel_unknown_count", "necessary_gate_fail_count",
+        "topology_rejected_count", "candidate_specific_state_verified_count",
+        "complete_c2_count", "new_candidate_count", "promotion_count"],
+      "properties": {
+        "fuel_envelope_count": {"const": 2},
+        "temperature_ratio_slice_count": {"const": 6},
+        "total_threshold_crossing_count": {"const": 6},
+        "charged_threshold_crossing_count": {"const": 6},
+        "control_count": {"const": 3},
+        "numeric_operating_point_count": {"const": 2},
+        "unsupported_fuel_unknown_count": {"const": 1},
+        "necessary_gate_fail_count": {"const": 2},
+        "topology_rejected_count": {"const": 0},
+        "candidate_specific_state_verified_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_ceiling": {"const": "C0_local_fuel_state_necessary_condition_only"},
+    "claim_boundary": {"type": "string", "minLength": 900},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nullableNumber": {"type": ["number", "null"]},
+    "threshold": {
+      "type": "object",
+      "required": ["electron_to_ion_temperature_ratio",
+        "total_fusion_threshold_ion_temperature_kev",
+        "charged_self_heating_threshold_ion_temperature_kev",
+        "maximum_total_fusion_to_bremsstrahlung_ratio",
+        "maximum_charged_fusion_to_bremsstrahlung_ratio",
+        "total_threshold_status", "charged_threshold_status"],
+      "properties": {
+        "electron_to_ion_temperature_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "total_fusion_threshold_ion_temperature_kev": {"type": "number", "minimum": 0.2, "maximum": 100},
+        "charged_self_heating_threshold_ion_temperature_kev": {"type": "number", "minimum": 0.2, "maximum": 100},
+        "maximum_total_fusion_to_bremsstrahlung_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "maximum_charged_fusion_to_bremsstrahlung_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "total_threshold_status": {"const": "crossed"},
+        "charged_threshold_status": {"const": "crossed"}
+      },
+      "additionalProperties": false
+    },
+    "envelope": {
+      "type": "object",
+      "required": ["compiler_version", "fuel_declaration",
+        "ion_number_fractions", "minimum_ion_temperature_kev",
+        "maximum_ion_temperature_kev", "thresholds", "claim_ceiling",
+        "promotion_authorized", "warnings", "envelope_hash"],
+      "properties": {
+        "compiler_version": {"const": "fuel_state_admissibility_compiler_v1.0.0"},
+        "fuel_declaration": {"enum": ["D-D", "D-T"]},
+        "ion_number_fractions": {"type": "object", "minProperties": 1},
+        "minimum_ion_temperature_kev": {"const": 0.2},
+        "maximum_ion_temperature_kev": {"const": 100.0},
+        "thresholds": {"type": "array", "minItems": 3, "maxItems": 3,
+          "items": {"$ref": "#/$defs/threshold"}},
+        "claim_ceiling": {"const": "C0_local_fuel_state_necessary_condition_only"},
+        "promotion_authorized": {"const": false},
+        "warnings": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+        "envelope_hash": {"$ref": "#/$defs/hash"}
+      },
+      "additionalProperties": false
+    },
+    "operatingPoint": {
+      "type": "object",
+      "required": ["compiler_version", "fuel_declaration",
+        "ion_temperature_kev", "electron_temperature_kev", "scalar_pressure_pa",
+        "ion_number_fractions", "electron_density_m3", "ion_density_m3",
+        "channel_reaction_rate_density_m3_s", "total_fusion_power_density_w_m3",
+        "charged_fusion_power_density_w_m3", "neutral_fusion_power_density_w_m3",
+        "fuel_ion_bremsstrahlung_power_density_w_m3",
+        "total_fusion_to_bremsstrahlung_ratio",
+        "charged_fusion_to_bremsstrahlung_ratio",
+        "total_fusion_exceeds_fuel_bremsstrahlung",
+        "charged_self_heating_exceeds_fuel_bremsstrahlung", "status",
+        "evidence_tasks", "warnings", "operating_point_hash"],
+      "properties": {
+        "compiler_version": {"const": "fuel_state_admissibility_compiler_v1.0.0"},
+        "fuel_declaration": {"type": "string", "minLength": 1},
+        "ion_temperature_kev": {"type": "number", "exclusiveMinimum": 0},
+        "electron_temperature_kev": {"type": "number", "exclusiveMinimum": 0},
+        "scalar_pressure_pa": {"type": "number", "exclusiveMinimum": 0},
+        "ion_number_fractions": {"type": "object"},
+        "electron_density_m3": {"$ref": "#/$defs/nullableNumber"},
+        "ion_density_m3": {"type": "object"},
+        "channel_reaction_rate_density_m3_s": {"type": "object"},
+        "total_fusion_power_density_w_m3": {"$ref": "#/$defs/nullableNumber"},
+        "charged_fusion_power_density_w_m3": {"$ref": "#/$defs/nullableNumber"},
+        "neutral_fusion_power_density_w_m3": {"$ref": "#/$defs/nullableNumber"},
+        "fuel_ion_bremsstrahlung_power_density_w_m3": {"$ref": "#/$defs/nullableNumber"},
+        "total_fusion_to_bremsstrahlung_ratio": {"$ref": "#/$defs/nullableNumber"},
+        "charged_fusion_to_bremsstrahlung_ratio": {"$ref": "#/$defs/nullableNumber"},
+        "total_fusion_exceeds_fuel_bremsstrahlung": {"type": ["boolean", "null"]},
+        "charged_self_heating_exceeds_fuel_bremsstrahlung": {"type": ["boolean", "null"]},
+        "status": {"enum": ["pass", "unknown"]},
+        "evidence_tasks": {"type": "array", "items": {"type": "string"}},
+        "warnings": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+        "operating_point_hash": {"$ref": "#/$defs/hash"}
+      },
+      "additionalProperties": false
+    },
+    "control": {
+      "type": "object",
+      "required": ["design_id", "genome_physics_hash",
+        "source_genome_artifact_id", "source_genome_artifact_hash",
+        "diagnostic_legacy_family_label", "family_label_used_for_operator_selection",
+        "declared_fuel", "state_source_kind", "candidate_specific_state_verified",
+        "operating_point", "matched_envelope_threshold",
+        "current_state_necessary_gate_status", "topology_rejected",
+        "complete_c2", "promotion_authorized"],
+      "properties": {
+        "design_id": {"type": "string", "minLength": 1},
+        "genome_physics_hash": {"$ref": "#/$defs/hash"},
+        "source_genome_artifact_id": {"type": "string", "minLength": 1},
+        "source_genome_artifact_hash": {"$ref": "#/$defs/hash"},
+        "diagnostic_legacy_family_label": {"type": "string"},
+        "family_label_used_for_operator_selection": {"const": false},
+        "declared_fuel": {"type": "string", "minLength": 1},
+        "state_source_kind": {"const": "design_assumption"},
+        "candidate_specific_state_verified": {"const": false},
+        "operating_point": {"$ref": "#/$defs/operatingPoint"},
+        "matched_envelope_threshold": {"oneOf": [
+          {"$ref": "#/$defs/threshold"}, {"type": "null"}]},
+        "current_state_necessary_gate_status": {"enum": ["necessary_gate_fail", "unknown"]},
+        "topology_rejected": {"const": false},
+        "complete_c2": {"const": false},
+        "promotion_authorized": {"const": false}
+      },
+      "additionalProperties": false
+    }
+  }
+}

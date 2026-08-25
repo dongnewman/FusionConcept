@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_operating_point_v1.schema.json",
+  "title": "Candidate Operating Point V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "base_candidate_binding_hash", "state_declarations", "actuator_declarations", "model_declarations", "operating_point_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "base_candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_declarations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/declaration"}},
+    "actuator_declarations": {"type": "array", "minItems": 4, "items": {"$ref": "#/$defs/declaration"}},
+    "model_declarations": {"type": "array", "items": {"$ref": "#/$defs/declaration"}},
+    "operating_point_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "declaration": {
+      "type": "object",
+      "required": ["declaration_id", "provenance_kind", "source_hash"],
+      "properties": {
+        "declaration_id": {"type": "string", "minLength": 1},
+        "provenance_kind": {"enum": ["candidate_design_declaration", "module_derived", "compiler_derived", "solver_initial_guess"]},
+        "source_hash": {"$ref": "#/$defs/hash"}
+      },
+      "not": {"anyOf": [
+        {"required": ["family"]}, {"required": ["device_name"]},
+        {"required": ["candidate_name"]}, {"required": ["route"]}
+      ]}
+    }
+  }
+}

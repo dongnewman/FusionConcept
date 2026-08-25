@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/zpinch_candidate_specific_coverage_v26.schema.json",
+  "title": "Candidate-specific Z-pinch scale and boundary coverage v26",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "run_date", "result_hash",
+    "input_binding", "search_contract", "execution", "outcome", "archives",
+    "claim_boundary", "promotion_credit", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": {
+      "const": "zpinch_candidate_specific_coverage_v26"
+    },
+    "stage": {
+      "const": "candidate_specific_scale_coverage_and_boundary_input_bridge"
+    },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "claim_boundary": { "type": "string", "minLength": 200 },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "medium_fidelity_authorized_count", "physics_evidence_level_change"
+      ],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

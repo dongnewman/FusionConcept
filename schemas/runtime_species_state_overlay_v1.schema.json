@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/runtime_species_state_overlay_v1.schema.json",
+  "title": "Candidate-bound runtime species state overlay v1",
+  "type": "object",
+  "required": ["schema_version", "design_id", "genome_physics_hash", "states"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "design_id": {"type": "string", "minLength": 1},
+    "genome_physics_hash": {"$ref": "#/$defs/hash"},
+    "states": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/state"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nullablePositive": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "state": {
+      "type": "object",
+      "required": ["domain_id", "species_id", "density_m3",
+        "temperature_parallel_j", "temperature_perpendicular_j",
+        "bulk_velocity_m_s", "distribution_kind", "plasma_volume_m3",
+        "source_kind", "source_artifact_id", "source_artifact_hash",
+        "source_result_hash", "candidate_binding_verified",
+        "resolution_verified", "applicability_verified", "fidelity",
+        "source_solver_status"],
+      "properties": {
+        "domain_id": {"type": "string", "minLength": 1},
+        "species_id": {"type": "string", "minLength": 1},
+        "density_m3": {"$ref": "#/$defs/nullablePositive"},
+        "temperature_parallel_j": {"$ref": "#/$defs/nullablePositive"},
+        "temperature_perpendicular_j": {"$ref": "#/$defs/nullablePositive"},
+        "bulk_velocity_m_s": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "minItems": 3, "maxItems": 3,
+              "items": {"type": "number"}}
+          ]
+        },
+        "distribution_kind": {"enum": ["maxwellian", "bi_maxwellian",
+          "tabulated", "particle_ensemble", "unknown"]},
+        "plasma_volume_m3": {"$ref": "#/$defs/nullablePositive"},
+        "source_kind": {"enum": ["candidate_solver", "measured", "proxy",
+          "manufactured", "structural"]},
+        "source_artifact_id": {"type": "string"},
+        "source_artifact_hash": {"type": "string", "pattern": "^$|^[0-9a-f]{64}$"},
+        "source_result_hash": {"type": "string", "pattern": "^$|^[0-9a-f]{64}$"},
+        "candidate_binding_verified": {"type": "boolean"},
+        "resolution_verified": {"type": "boolean"},
+        "applicability_verified": {"type": "boolean"},
+        "fidelity": {"type": "integer", "minimum": 0},
+        "source_solver_status": {"enum": ["pass", "fail", "unknown", "error"]}
+      },
+      "additionalProperties": false
+    }
+  }
+}

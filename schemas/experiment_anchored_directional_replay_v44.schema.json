@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/experiment_anchored_directional_replay_v44.schema.json",
+  "title": "Experiment-anchored directional replay v44 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "replay_contract",
+    "aggregate", "next_actions", "promotion_credit", "claim_boundary",
+    "input_binding", "archives", "run_date", "deterministic_result_hash",
+    "source_hashes", "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "experiment_anchored_directional_replay_v44"},
+    "stage": {"const": "sealed_experiment_anchored_directional_replay"},
+    "replay_contract": {"type": "object"},
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "trial_count", "mapped_experimental_anchor_module_count",
+        "all_direction_checks_passed_count", "both_endpoints_graph_valid_trial_count",
+        "circular_calibration_replay_trial_count", "formula_direction_replay_module_count",
+        "supported_topology_blocked_module_count", "v43_experimental_anchor_module_count",
+        "remaining_experimental_anchor_module_count",
+        "independent_known_device_validation_count", "candidate_module_validation_count",
+        "medium_fidelity_authorized_count", "promotion_count",
+        "old_domain_scale_up_authorized"
+      ],
+      "properties": {
+        "trial_count": {"const": 4},
+        "mapped_experimental_anchor_module_count": {"const": 6},
+        "all_direction_checks_passed_count": {"const": 4},
+        "both_endpoints_graph_valid_trial_count": {"const": 3},
+        "circular_calibration_replay_trial_count": {"const": 2},
+        "formula_direction_replay_module_count": {"const": 4},
+        "supported_topology_blocked_module_count": {"const": 2},
+        "v43_experimental_anchor_module_count": {"const": 8},
+        "remaining_experimental_anchor_module_count": {"const": 2},
+        "independent_known_device_validation_count": {"const": 0},
+        "candidate_module_validation_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false}
+      }
+    },
+    "next_actions": {"type": "array", "minItems": 4},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 100},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

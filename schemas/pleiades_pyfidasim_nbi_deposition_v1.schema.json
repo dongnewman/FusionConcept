@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Field/actuator-bound Pleiades pyFIDASIM NBI deposition V1",
+  "type": "object",
+  "required": [
+    "schema_version", "runner_version", "status", "design_id",
+    "genome_physics_hash", "domain_id", "backend", "source_kind",
+    "candidate_binding_verified", "ionized_particle_deposition_rate_computed",
+    "charge_exchange_conversion_rate_computed",
+    "charge_exchange_particle_loss_rate_computed",
+    "spatial_velocity_deposition_computed", "fast_ion_slowing_down_computed",
+    "thermal_heating_deposition_computed",
+    "nonlinear_multispecies_response_computed", "ambipolar_profile_computed",
+    "c2_source_term_authorized", "c2_kinetic_response_authorized",
+    "rate_model", "gates", "resolution_audit", "incident_spectrum",
+    "fine_result", "coarse_result_summary", "fine_grid", "source_artifacts",
+    "evidence_tasks", "claim_boundary", "result_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "runner_version": {"const": "pleiades_pyfidasim_nbi_deposition_runner_v1.0.0"},
+    "status": {"const": "pass"},
+    "design_id": {"const": "pleiades_wham_nbi_kinetic_control_v1"},
+    "genome_physics_hash": {"$ref": "#/$defs/hash"},
+    "domain_id": {"const": "pleiades_wham_isotropic_core"},
+    "source_kind": {"const": "external_candidate_solver_with_design_assumption_state"},
+    "candidate_binding_verified": {"const": false},
+    "actuator_candidate_binding_verified": {"const": true},
+    "field_candidate_binding_verified": {"const": true},
+    "ionized_particle_deposition_rate_computed": {"const": true},
+    "charge_exchange_conversion_rate_computed": {"const": true},
+    "charge_exchange_particle_loss_rate_computed": {"const": false},
+    "spatial_velocity_deposition_computed": {"const": true},
+    "fast_ion_slowing_down_computed": {"const": false},
+    "thermal_heating_deposition_computed": {"const": false},
+    "nonlinear_multispecies_response_computed": {"const": false},
+    "ambipolar_profile_computed": {"const": false},
+    "c2_source_term_authorized": {"const": false},
+    "c2_kinetic_response_authorized": {"const": false},
+    "backend": {
+      "type": "object",
+      "required": ["repository", "commit", "source_tree_hash", "license_status"],
+      "properties": {
+        "repository": {"const": "https://github.com/D3DEnergetic/pyFIDASIM"},
+        "commit": {"pattern": "^[0-9a-f]{40}$"},
+        "source_tree_hash": {"$ref": "#/$defs/hash"},
+        "license_status": {"const": "no_license_file_observed_at_pinned_commit"}
+      }
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "candidate_genome_bound", "derived_physics_hash_bound",
+        "field_artifact_bound", "atomic_tables_bound_to_backend_tree",
+        "state_resolved_rate_partition_nonnegative",
+        "three_energy_group_spectrum_resolved", "nonzero_ionization_rate",
+        "nonzero_charge_exchange_conversion_rate",
+        "total_rate_resolution_converged", "component_rates_resolution_converged",
+        "per_group_destruction_below_incident_rate",
+        "total_destruction_below_incident_rate",
+        "represented_birth_power_below_injected_power",
+        "incident_spectrum_reconstructs_declared_power",
+        "source_ion_current_matches_genome",
+        "beamline_geometry_candidate_verified",
+        "spectrum_basis_candidate_verified",
+        "plasma_profile_candidate_verified",
+        "atomic_rate_table_applicability_verified",
+        "fast_ion_slowing_down_computed",
+        "charge_exchange_halo_transport_computed",
+        "external_backend_license_resolved"
+      ],
+      "properties": {
+        "candidate_genome_bound": {"const": true},
+        "total_rate_resolution_converged": {"const": true},
+        "component_rates_resolution_converged": {"const": true},
+        "total_destruction_below_incident_rate": {"const": true},
+        "incident_spectrum_reconstructs_declared_power": {"const": true},
+        "source_ion_current_matches_genome": {"const": true},
+        "beamline_geometry_candidate_verified": {"const": false},
+        "spectrum_basis_candidate_verified": {"const": false},
+        "plasma_profile_candidate_verified": {"const": false},
+        "atomic_rate_table_applicability_verified": {"const": false},
+        "fast_ion_slowing_down_computed": {"const": false},
+        "charge_exchange_halo_transport_computed": {"const": false},
+        "external_backend_license_resolved": {"const": false}
+      }
+    },
+    "fine_result": {
+      "type": "object",
+      "required": [
+        "ionization_rate_s", "main_ion_charge_exchange_conversion_rate_s",
+        "fast_ion_birth_rate_s", "electron_source_rate_s",
+        "net_same_species_ion_source_rate_s", "neutral_destruction_rate_s",
+        "neutral_destruction_fraction", "ionization_branch_fraction",
+        "energy_groups", "spatial_velocity_rate_records"
+      ],
+      "properties": {
+        "ionization_rate_s": {"type": "number", "exclusiveMinimum": 0},
+        "main_ion_charge_exchange_conversion_rate_s": {"type": "number", "exclusiveMinimum": 0},
+        "fast_ion_birth_rate_s": {"type": "number", "exclusiveMinimum": 0},
+        "neutral_destruction_fraction": {"type": "number", "exclusiveMinimum": 0, "maximum": 1.000001},
+        "ionization_branch_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+        "energy_groups": {"type": "array", "minItems": 3, "maxItems": 3},
+        "spatial_velocity_rate_records": {"type": "array", "minItems": 1,
+          "items": {"type": "array", "minItems": 6, "maxItems": 6}}
+      }
+    },
+    "source_artifacts": {"type": "array", "minItems": 6, "maxItems": 6,
+      "items": {"type": "object", "required": ["artifact_id", "artifact_hash"],
+        "properties": {"artifact_id": {"type": "string", "minLength": 1},
+          "artifact_hash": {"$ref": "#/$defs/hash"}}}},
+    "evidence_tasks": {"type": "array", "minItems": 9},
+    "claim_boundary": {"type": "string", "minLength": 300},
+    "result_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

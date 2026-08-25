@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rule_coverage_manifest_v1.schema.json",
+  "title": "RuleCoverageManifestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ruleset_id", "ruleset_hash", "covered_domains", "covered_operator_classes",
+    "covered_scale_ranges", "covered_boundary_classes", "covered_material_states",
+    "partially_covered_regions", "uncovered_regions", "obligation_only_regions",
+    "known_rule_interactions", "known_blind_spots", "fixture_coverage"],
+  "properties": {
+    "ruleset_id": {"type": "string"}, "ruleset_hash": {"type": "string"},
+    "covered_domains": {"type": "array"}, "covered_operator_classes": {"type": "array"},
+    "covered_scale_ranges": {"type": "object"}, "covered_boundary_classes": {"type": "array"},
+    "covered_material_states": {"type": "array"}, "partially_covered_regions": {"type": "array"},
+    "uncovered_regions": {"type": "array"}, "obligation_only_regions": {"type": "array"},
+    "known_rule_interactions": {"type": "array"}, "known_blind_spots": {"type": "array"},
+    "fixture_coverage": {"type": "object"}
+  }
+}

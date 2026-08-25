@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/candidate_specific_formula_reuse_v42.schema.json",
+  "title": "FusionConceptAI v42 candidate-specific formula reuse audit",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "audit_scope",
+    "aggregate", "input_binding", "archives", "promotion_credit",
+    "deterministic_result_hash", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "candidate_specific_formula_reuse_v42"},
+    "stage": {"const": "sealed_cross_family_candidate_formula_reuse_audit"},
+    "audit_scope": {
+      "type": "object",
+      "required": [
+        "source_module_count", "source_alias_module_count", "target_families",
+        "paired_halton_sample_fixed", "all_fifty_modules_classified",
+        "existing_formula_reuse_only", "constant_performance_bonus_allowed"
+      ],
+      "properties": {
+        "source_module_count": {"const": 50},
+        "source_alias_module_count": {"const": 33},
+        "target_families": {
+          "const": ["magnetic_mirror", "reversed_field_pinch"]
+        },
+        "paired_halton_sample_fixed": {"const": true},
+        "all_fifty_modules_classified": {"const": true},
+        "existing_formula_reuse_only": {"const": true},
+        "constant_performance_bonus_allowed": {"const": false}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "audited_module_count", "source_alias_module_count",
+        "source_observed_route_module_count", "formula_reuse_target_module_count",
+        "formula_observable_module_count", "remaining_alias_module_count",
+        "observed_route_module_count_after_v42", "targeted_alias_trial_count",
+        "formula_response_variation_trial_count", "remaining_formula_alias_trial_count",
+        "raw_gate_variation_trial_count", "unique_response_count",
+        "topology_graph_error_response_count", "proxy_five_gate_passed_response_count",
+        "proxy_coverage_complete_response_count",
+        "new_empirical_performance_multiplier_used", "new_physics_constant_introduced",
+        "existing_candidate_formula_composition_implemented",
+        "gate_credit_authorized_count", "medium_fidelity_authorized_count",
+        "old_domain_scale_up_authorized", "promotion_count"
+      ],
+      "properties": {
+        "audited_module_count": {"const": 50},
+        "source_alias_module_count": {"const": 33},
+        "source_observed_route_module_count": {"const": 17},
+        "formula_reuse_target_module_count": {"const": 6},
+        "formula_observable_module_count": {"const": 6},
+        "remaining_alias_module_count": {"const": 27},
+        "observed_route_module_count_after_v42": {"const": 23},
+        "targeted_alias_trial_count": {"const": 15},
+        "formula_response_variation_trial_count": {"const": 12},
+        "remaining_formula_alias_trial_count": {"const": 3},
+        "raw_gate_variation_trial_count": {"const": 5},
+        "unique_response_count": {"const": 23},
+        "topology_graph_error_response_count": {"const": 0},
+        "proxy_five_gate_passed_response_count": {"const": 0},
+        "proxy_coverage_complete_response_count": {"const": 0},
+        "new_empirical_performance_multiplier_used": {"const": false},
+        "new_physics_constant_introduced": {"const": false},
+        "existing_candidate_formula_composition_implemented": {"const": true},
+        "gate_credit_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "single_module_absolute_physical_causality_claimed",
+        "physical_infeasibility_claimed", "gate_credit_authorized_count",
+        "medium_fidelity_authorized_count", "old_domain_scale_up_authorized",
+        "promotion_count", "physics_evidence_level_change",
+        "engineering_evidence_level_change"
+      ],
+      "properties": {
+        "single_module_absolute_physical_causality_claimed": {"const": false},
+        "physical_infeasibility_claimed": {"const": false},
+        "gate_credit_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false},
+        "promotion_count": {"const": 0},
+        "physics_evidence_level_change": {"const": 0},
+        "engineering_evidence_level_change": {"const": 0}
+      }
+    },
+    "deterministic_result_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

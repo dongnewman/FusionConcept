@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "coupling_contract_v1.schema.json",
+  "title": "CouplingContractV1", "type": "object", "additionalProperties": false,
+  "required": ["coupling_id", "version", "participants", "exchanged_variables", "interface_geometry",
+    "units_basis_coordinates", "temporal_semantics", "interpolation_extrapolation", "synchronization_policy",
+    "event_rollback_semantics", "algebraic_loop_strategy", "interface_conservation_accounts",
+    "duplicate_flux_prevention", "convergence_test", "local_error_budgets", "global_error_budget",
+    "known_instability_conditions", "regression_fixtures"],
+  "properties": {
+    "coupling_id": {"type": "string"}, "version": {"type": "string"},
+    "participants": {"type": "array", "minItems": 2}, "exchanged_variables": {"type": "array", "minItems": 1},
+    "interface_geometry": {"type": ["string", "object"]}, "units_basis_coordinates": {"type": "object"},
+    "temporal_semantics": {"type": ["string", "object"]}, "interpolation_extrapolation": {"type": ["string", "object"]},
+    "synchronization_policy": {"type": ["string", "object"]}, "event_rollback_semantics": {"type": ["string", "object"]},
+    "algebraic_loop_strategy": {"type": ["string", "object"]}, "interface_conservation_accounts": {"type": "array", "minItems": 1},
+    "duplicate_flux_prevention": {"const": true}, "convergence_test": {"type": "object"},
+    "local_error_budgets": {"type": "array"}, "global_error_budget": {"type": "object"},
+    "known_instability_conditions": {"type": "array"}, "regression_fixtures": {"type": "array", "minItems": 1}
+  }
+}

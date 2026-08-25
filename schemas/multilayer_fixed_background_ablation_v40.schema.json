@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/multilayer_fixed_background_ablation_v40.schema.json",
+  "title": "FusionConceptAI v40 multilayer fixed-background ablation",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "input_binding", "ablation_scope",
+    "aggregate", "archives", "deterministic_result_hash",
+    "promotion_credit", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "multilayer_fixed_background_ablation_v40"},
+    "ablation_scope": {
+      "type": "object",
+      "required": [
+        "target_module_count", "family_layer_group_count",
+        "within_group_module_choice_pair_count",
+        "frontier_backgrounds_per_family", "planned_fixed_background_trial_count"
+      ],
+      "properties": {
+        "target_module_count": {"const": 50},
+        "family_layer_group_count": {"const": 20},
+        "within_group_module_choice_pair_count": {"const": 41},
+        "frontier_backgrounds_per_family": {"const": 5},
+        "planned_fixed_background_trial_count": {"const": 205}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "single_module_absolute_physical_causality_claimed",
+        "gate_credit_authorized_count", "medium_fidelity_authorized_count",
+        "old_domain_scale_up_authorized", "promotion_count"
+      ],
+      "properties": {
+        "single_module_absolute_physical_causality_claimed": {"const": false},
+        "gate_credit_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false},
+        "promotion_count": {"const": 0}
+      }
+    }
+  }
+}

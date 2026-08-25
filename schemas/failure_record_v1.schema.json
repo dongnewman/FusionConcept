@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "failure_record_v1.schema.json",
+  "title": "FailureRecordV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["failure_id", "failed_obligation_ids", "scope_type", "scope_refs",
+    "excluded_alternatives", "tuning_budget_consumed", "evidence_refs", "ruleset_hash",
+    "escalation_conditions"],
+  "properties": {
+    "failure_id": {"type": "string", "minLength": 1},
+    "failed_obligation_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "scope_type": {"enum": ["parameter_instance", "parameter_region", "control_policy", "closure_model",
+      "interaction_hypothesis", "topology_skeleton", "mission_contract", "numerical_method", "coupling_contract"]},
+    "scope_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "excluded_alternatives": {"type": "array"},
+    "tuning_budget_consumed": {"type": "number", "minimum": 0},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "ruleset_hash": {"type": "string", "minLength": 1},
+    "escalation_conditions": {"type": "array"}
+  }
+}

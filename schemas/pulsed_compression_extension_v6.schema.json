@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/pulsed-compression-extension-v6-1.0.0.json",
+  "title": "LMC Pulsed Compression Genome Extension v6",
+  "description": "Additive extension contract for the runtime Genome IR. The sealed confinement-genome-0.1.0 schema remains byte-identical for historical artifacts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["family", "operating_mode", "compression_systems"],
+  "properties": {
+    "family": {"const": "magnetized_target_fusion"},
+    "operating_mode": {"const": "pulsed"},
+    "compression_systems": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/compression_system"}
+    }
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,95}$"},
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1},
+        "basis": {"type": "string"}
+      }
+    },
+    "compression_system": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "geometry_model", "driver_actuator_ids", "target_region_ids", "parameters", "material", "source_ids"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "kind": {"enum": ["solid_conducting_liner", "spherical_plasma_liner", "other"]},
+        "geometry_model": {"type": "string", "minLength": 1},
+        "driver_actuator_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "target_region_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "parameters": {"type": "object", "additionalProperties": {"$ref": "#/$defs/quantity"}},
+        "material": {"type": "string", "minLength": 1},
+        "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}
+      }
+    }
+  }
+}

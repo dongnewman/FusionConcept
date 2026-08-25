@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/region_state_spec_v1.schema.json",
+  "title": "RegionStateSpecV1",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "physics_hash", "manifest_hash",
+    "region_id", "geometry_model", "mesh", "volume_m3", "state_variables",
+    "initial_conditions", "conservation_accounts", "applicability",
+    "evidence_ceiling", "spec_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "region_id": {"type": "string", "minLength": 1},
+    "geometry_model": {"type": "string", "minLength": 1},
+    "mesh": {"type": "object"},
+    "volume_m3": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "state_variables": {"type": "array", "items": {"type": "object"}},
+    "initial_conditions": {"type": "object"},
+    "conservation_accounts": {"type": "array", "items": {"type": "object"}},
+    "applicability": {"type": "object"},
+    "evidence_ceiling": {"type": "string", "minLength": 1},
+    "spec_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

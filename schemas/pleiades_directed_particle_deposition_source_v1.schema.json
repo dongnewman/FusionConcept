@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pleiades_directed_particle_deposition_source_v1.schema.json",
+  "title": "Candidate-bound directed particle deposition source tensor v1",
+  "type": "object",
+  "required": [
+    "schema_version", "stage", "design_id", "genome_physics_hash",
+    "executable_candidate_physics_hash", "source_artifacts", "observation",
+    "coupled_balance_evidence", "coupled_balance_assessment", "summary",
+    "claim_ceiling", "claim_boundary", "deterministic_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "pleiades_directed_particle_deposition_source_v1"},
+    "genome_physics_hash": {"$ref": "#/$defs/hash"},
+    "executable_candidate_physics_hash": {"$ref": "#/$defs/hash"},
+    "deterministic_hash": {"$ref": "#/$defs/hash"},
+    "source_artifacts": {
+      "type": "array", "minItems": 4,
+      "items": {
+        "type": "object", "required": ["artifact_id", "artifact_hash"],
+        "properties": {
+          "artifact_id": {"type": "string", "minLength": 1},
+          "artifact_hash": {"$ref": "#/$defs/hash"}
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "required": [
+        "bin_count", "bins", "ionization_rate_s",
+        "charge_exchange_conversion_rate_s", "fast_ion_birth_rate_s",
+        "electron_birth_rate_s", "net_same_species_ion_birth_rate_s",
+        "thermal_same_species_ion_removal_rate_s",
+        "represented_fast_ion_birth_kinetic_power_w",
+        "maximum_external_aggregate_relative_residual",
+        "external_aggregate_audit_verified",
+        "candidate_phase_space_binding_verified", "physical_source_rate_available",
+        "c2_phase_space_source_authorized", "c2_kinetic_state_authorized",
+        "observation_hash", "evidence_tasks", "warnings"
+      ],
+      "properties": {
+        "bin_count": {"type": "integer", "minimum": 1},
+        "bins": {
+          "type": "array", "minItems": 1,
+          "items": {"$ref": "#/$defs/bin"}
+        },
+        "maximum_external_aggregate_relative_residual": {
+          "type": "number", "minimum": 0
+        },
+        "external_aggregate_audit_verified": {"type": "boolean"},
+        "candidate_phase_space_binding_verified": {"type": "boolean"},
+        "physical_source_rate_available": {"type": "boolean"},
+        "c2_phase_space_source_authorized": {"type": "boolean"},
+        "c2_kinetic_state_authorized": {"type": "boolean"},
+        "observation_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "coupled_balance_evidence": {"type": "array"},
+    "coupled_balance_assessment": {"type": "object"},
+    "summary": {
+      "type": "object",
+      "required": [
+        "phase_space_source_bin_count", "signed_pitch_cosine_min",
+        "signed_pitch_cosine_max", "candidate_phase_space_binding_verified",
+        "external_aggregate_audit_verified", "physical_source_rate_available",
+        "c2_phase_space_source_authorized", "c2_kinetic_state_authorized",
+        "numeric_particle_source_term_count",
+        "c2_authorized_particle_source_term_count",
+        "unknown_coupled_equation_count", "complete_c2_count", "promotion_count"
+      ]
+    },
+    "claim_ceiling": {"const": "candidate_bound_si_phase_space_source_tensor"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "vector3": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"type": "number"}
+    },
+    "bin": {
+      "type": "object",
+      "required": [
+        "energy_group_index", "radial_index", "axial_index", "toroidal_index",
+        "position_m", "magnetic_field_t", "velocity_m_s", "speed_m_s",
+        "parallel_speed_m_s", "perpendicular_speed_m_s", "signed_pitch_cosine",
+        "pitch_angle_rad", "kinetic_energy_j", "cell_volume_m3",
+        "ionization_fast_ion_birth_rate_s",
+        "charge_exchange_fast_ion_birth_rate_s", "total_fast_ion_birth_rate_s",
+        "electron_birth_rate_s", "net_same_species_ion_birth_rate_s",
+        "thermal_same_species_ion_removal_rate_s"
+      ],
+      "properties": {
+        "position_m": {"$ref": "#/$defs/vector3"},
+        "magnetic_field_t": {"$ref": "#/$defs/vector3"},
+        "velocity_m_s": {"$ref": "#/$defs/vector3"},
+        "signed_pitch_cosine": {"type": "number", "minimum": -1, "maximum": 1},
+        "pitch_angle_rad": {"type": "number", "minimum": 0, "maximum": 3.141592653589793},
+        "cell_volume_m3": {"type": "number", "exclusiveMinimum": 0}
+      }
+    }
+  }
+}

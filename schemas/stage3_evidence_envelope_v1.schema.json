@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/stage3_evidence_envelope_v1.schema.json",
+  "title": "Stage3EvidenceEnvelopeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "completeness", "conclusion", "classification_code", "candidate_binding_hash", "topology_hash", "numerical_ir_hash", "solve_plan_hash", "solver_hash", "environment_hash", "software_hashes", "final_state", "trajectory", "residual_conservation_evidence", "interface_flux_evidence", "convergence_evidence", "actuator_control_evidence", "validity_domain_evidence", "independent_recomputation_evidence", "execution_cost_record", "sample_records", "unresolved_reasons", "evidence_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "completeness": {"enum": ["complete", "incomplete"]},
+    "conclusion": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "classification_code": {"type": "string", "minLength": 1},
+    "candidate_binding_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "topology_hash": {"type": "string"},
+    "numerical_ir_hash": {"type": "string"},
+    "solve_plan_hash": {"type": "string"},
+    "solver_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "environment_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "software_hashes": {"type": "object", "additionalProperties": {"type": "string"}},
+    "final_state": {"type": "object", "additionalProperties": {"type": "number"}},
+    "trajectory": {"type": "array", "items": {"type": "object"}},
+    "residual_conservation_evidence": {"type": "object"},
+    "interface_flux_evidence": {"type": "object"},
+    "convergence_evidence": {"type": "object"},
+    "actuator_control_evidence": {"type": "object"},
+    "validity_domain_evidence": {"type": "object"},
+    "independent_recomputation_evidence": {"type": "object"},
+    "execution_cost_record": {"type": "object"},
+    "sample_records": {"type": "array", "items": {"type": "object"}},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "evidence_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "allOf": [
+    {"if": {"properties": {"conclusion": {"enum": ["pass", "fail"]}}}, "then": {"properties": {"completeness": {"const": "complete"}}}},
+    {"if": {"properties": {"conclusion": {"enum": ["unknown", "unsupported"]}}}, "then": {"properties": {"completeness": {"const": "incomplete"}}}}
+  ]
+}

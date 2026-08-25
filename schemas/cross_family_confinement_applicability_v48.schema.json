@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/cross_family_confinement_applicability_v48.schema.json",
+  "title": "Cross-family confinement provenance and applicability v48 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "audit_contract",
+    "aggregate", "next_actions", "promotion_credit", "claim_boundary",
+    "input_binding", "archives", "run_date", "deterministic_result_hash",
+    "source_hashes", "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "cross_family_confinement_applicability_v48"},
+    "stage": {"const": "sealed_cross_family_confinement_provenance_and_applicability_audit"},
+    "audit_contract": {
+      "type": "object",
+      "required": [
+        "sealed_v46_core_reconstruction_required",
+        "formula_reproduction_separate_from_source_domain",
+        "source_domain_separate_from_candidate_validation",
+        "missing_gene_or_calibration_fails_closed",
+        "directional_contradiction_fails_closed",
+        "ranking_requires_candidate_specific_authorization",
+        "audit_can_promote_candidate"
+      ]
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "input_candidate_count", "input_family_count", "scoped_candidate_count",
+        "scoped_family_count", "scoped_families", "outside_scope_candidate_count",
+        "outside_scope_family_candidate_counts", "family_summaries",
+        "formula_numerically_reproduced_candidate_count",
+        "source_domain_complete_candidate_count",
+        "tokamak_explicit_ELMy_H_mode_count",
+        "tokamak_standard_epsilon_domain_pass_count",
+        "tokamak_high_density_degradation_warning_count",
+        "stellarator_candidate_specific_f_ren_count",
+        "mirror_beam_energy_search_gene_count",
+        "mirror_declared_beam_energy_used_count",
+        "mirror_declared_beam_energy_matches_implicit_count",
+        "mirror_declared_beam_energy_keV_range",
+        "frc_temperature_direction_conflict_count",
+        "spheromak_family_specific_scaling_available_count",
+        "hybrid_both_parent_domains_complete_count",
+        "candidate_specific_comparison_authorized_count",
+        "common_baseline_ranking_authorized_count",
+        "medium_fidelity_authorized_count", "promotion_count"
+      ],
+      "properties": {
+        "input_candidate_count": {"const": 2000},
+        "input_family_count": {"const": 11},
+        "scoped_candidate_count": {"const": 1642},
+        "scoped_family_count": {"const": 6},
+        "scoped_families": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true},
+        "outside_scope_candidate_count": {"const": 358},
+        "formula_numerically_reproduced_candidate_count": {"const": 1420},
+        "source_domain_complete_candidate_count": {"const": 0},
+        "tokamak_explicit_ELMy_H_mode_count": {"const": 0},
+        "tokamak_standard_epsilon_domain_pass_count": {"const": 360},
+        "tokamak_high_density_degradation_warning_count": {"const": 0},
+        "stellarator_candidate_specific_f_ren_count": {"const": 0},
+        "mirror_beam_energy_search_gene_count": {"const": 0},
+        "mirror_declared_beam_energy_used_count": {"const": 0},
+        "mirror_declared_beam_energy_matches_implicit_count": {"const": 724},
+        "mirror_declared_beam_energy_keV_range": {"const": [100.0, 100.0]},
+        "frc_temperature_direction_conflict_count": {"const": 150},
+        "spheromak_family_specific_scaling_available_count": {"const": 0},
+        "hybrid_both_parent_domains_complete_count": {"const": 0},
+        "candidate_specific_comparison_authorized_count": {"const": 0},
+        "common_baseline_ranking_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "next_actions": {"type": "array", "minItems": 5},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 500},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

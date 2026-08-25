@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/pulsed_rhd_manifest_v1.schema.json",
+  "title": "PulsedRHDManifestV1",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "physics_hash", "declared_solver_capability_match", "status", "target_layers", "material_microphysics", "drive_history", "numerical_convergence_plan", "required_outputs", "requirements", "blocking_missing_inputs", "declaration_conflicts", "regional_state_diagnostics", "drive_summary", "backend_acquisition", "family_label_used_for_routing", "claim_ceiling", "claim_boundary", "manifest_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"$ref": "#/$defs/hash"},
+    "declared_solver_capability_match": {"type": "boolean"},
+    "status": {"enum": ["ready_for_external_backend", "unknown", "unsupported", "not_applicable"]},
+    "target_layers": {"type": "array", "items": {"type": "object"}},
+    "material_microphysics": {"type": "object"},
+    "drive_history": {"type": "object"},
+    "numerical_convergence_plan": {"type": "object"},
+    "required_outputs": {"type": "array", "items": {"type": "string"}},
+    "requirements": {"type": "array", "items": {"type": "object"}},
+    "blocking_missing_inputs": {"type": "array", "items": {"type": "string"}},
+    "declaration_conflicts": {"type": "array", "items": {"type": "string"}},
+    "regional_state_diagnostics": {"type": "array", "items": {"type": "object"}},
+    "drive_summary": {"type": "object"},
+    "backend_acquisition": {"type": "array", "items": {"type": "object"}},
+    "family_label_used_for_routing": {"const": false},
+    "claim_ceiling": {"type": "string", "minLength": 1},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "manifest_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

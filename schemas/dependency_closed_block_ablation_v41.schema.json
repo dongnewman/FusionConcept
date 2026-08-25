@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/dependency_closed_block_ablation_v41.schema.json",
+  "title": "FusionConceptAI v41 dependency-closed block ablation",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "input_binding",
+    "ablation_scope", "aggregate", "archives", "deterministic_result_hash",
+    "promotion_credit", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "dependency_closed_block_ablation_v41"},
+    "stage": {"const": "sealed_exhaustive_minimum_dependency_closed_block_ablation"},
+    "ablation_scope": {
+      "type": "object",
+      "required": [
+        "complete_compatible_assembly_count",
+        "source_v40_structural_rejection_count",
+        "target_structurally_coupled_module_count",
+        "complete_compatible_assembly_search",
+        "minimum_dependency_closed_pair_selection",
+        "paired_halton_sample_fixed",
+        "new_numerical_formula_implemented"
+      ],
+      "properties": {
+        "complete_compatible_assembly_count": {"const": 1129},
+        "source_v40_structural_rejection_count": {"const": 141},
+        "target_structurally_coupled_module_count": {"const": 23},
+        "complete_compatible_assembly_search": {"const": true},
+        "minimum_dependency_closed_pair_selection": {"const": true},
+        "paired_halton_sample_fixed": {"const": true},
+        "new_numerical_formula_implemented": {"const": false}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "complete_compatible_assembly_count",
+        "source_v40_structural_rejection_count",
+        "target_structurally_coupled_module_count",
+        "accepted_dependency_closed_trial_count",
+        "unresolved_dependency_closed_trial_count",
+        "matched_single_layer_comparison_count",
+        "coupled_block_comparison_count",
+        "raw_gate_variation_trial_count",
+        "new_numerical_formula_implemented",
+        "gate_credit_authorized_count",
+        "medium_fidelity_authorized_count",
+        "old_domain_scale_up_authorized", "promotion_count"
+      ],
+      "properties": {
+        "complete_compatible_assembly_count": {"const": 1129},
+        "source_v40_structural_rejection_count": {"const": 141},
+        "target_structurally_coupled_module_count": {"const": 23},
+        "accepted_dependency_closed_trial_count": {"const": 141},
+        "unresolved_dependency_closed_trial_count": {"const": 0},
+        "matched_single_layer_comparison_count": {"type": "integer", "minimum": 0, "maximum": 141},
+        "coupled_block_comparison_count": {"type": "integer", "minimum": 0, "maximum": 141},
+        "raw_gate_variation_trial_count": {"type": "integer", "minimum": 0, "maximum": 141},
+        "new_numerical_formula_implemented": {"const": false},
+        "single_module_absolute_physical_causality_claimed": {"const": false},
+        "physical_infeasibility_claimed": {"const": false},
+        "gate_credit_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "single_module_absolute_physical_causality_claimed",
+        "physical_infeasibility_claimed", "gate_credit_authorized_count",
+        "medium_fidelity_authorized_count", "old_domain_scale_up_authorized",
+        "promotion_count", "physics_evidence_level_change",
+        "engineering_evidence_level_change"
+      ],
+      "properties": {
+        "single_module_absolute_physical_causality_claimed": {"const": false},
+        "physical_infeasibility_claimed": {"const": false},
+        "gate_credit_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false},
+        "promotion_count": {"const": 0},
+        "physics_evidence_level_change": {"const": 0},
+        "engineering_evidence_level_change": {"const": 0}
+      }
+    }
+  }
+}

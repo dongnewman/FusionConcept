@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/freegs_pointcoil_wall_complete_c1_control_v1.schema.json",
+  "title": "FreeGS point-coil wall complete C1 control v1",
+  "type": "object",
+  "required": [
+    "schema_version", "stage", "design_id", "genome_physics_hash",
+    "program_hash", "field_grid_artifact", "field_grid_sha256",
+    "domain_supports", "topology_domain_composition",
+    "field_grid_evidence_bundle", "topology_evidence_bundle",
+    "physics_assessment", "summary", "claim_boundary", "deterministic_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "freegs_pointcoil_wall_complete_c1_control_v1"},
+    "design_id": {"const": "freegs_pointcoil_wall_control_v1"},
+    "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "program_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "field_grid_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "domain_supports": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["support_id", "covered_domain_ids", "topology_class",
+          "status", "c1_support_authorized", "support_hash"],
+        "properties": {
+          "topology_class": {"enum": ["closed", "open"]},
+          "status": {"const": "pass"},
+          "c1_support_authorized": {"const": true},
+          "promotion_authorized": {"const": false},
+          "support_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "topology_domain_composition": {
+      "type": "object",
+      "required": ["status", "c1_evidence_authorized", "required_domain_ids",
+        "covered_domain_ids", "represented_topology_classes", "checks",
+        "composition_hash", "promotion_authorized"],
+      "properties": {
+        "status": {"const": "pass"},
+        "c1_evidence_authorized": {"const": true},
+        "required_domain_ids": {"type": "array", "minItems": 2, "maxItems": 2},
+        "covered_domain_ids": {"type": "array", "minItems": 2, "maxItems": 2},
+        "represented_topology_classes": {
+          "type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true,
+          "items": {"enum": ["closed", "open"]}
+        },
+        "composition_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "promotion_authorized": {"const": false}
+      }
+    },
+    "physics_assessment": {
+      "type": "object",
+      "required": ["highest_evidence_stage", "hard_gate_status", "promotion_authorized"],
+      "properties": {
+        "highest_evidence_stage": {"const": "C1"},
+        "hard_gate_status": {"const": "unknown"},
+        "promotion_authorized": {"const": false}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["required_domain_count", "covered_domain_count",
+        "closed_core_surface_count", "open_sol_seed_count",
+        "open_sol_material_wall_endpoint_count", "complete_C1_evidence_authorized",
+        "highest_evidence_stage", "hard_gate_status", "promotion_count"],
+      "properties": {
+        "required_domain_count": {"const": 2},
+        "covered_domain_count": {"const": 2},
+        "closed_core_surface_count": {"const": 8},
+        "open_sol_seed_count": {"const": 12},
+        "open_sol_material_wall_endpoint_count": {"const": 12},
+        "complete_C1_evidence_authorized": {"const": true},
+        "highest_evidence_stage": {"const": "C1"},
+        "hard_gate_status": {"const": "unknown"},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 120},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/fault_scenario_manifest_v1.schema.json",
+  "title": "FaultScenarioManifestV1 declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["applicable_fault_classes", "scenarios"],
+  "anyOf": [
+    {"properties": {"applicable_fault_classes": {"minItems": 1}}},
+    {"required": ["not_applicable_basis"], "properties": {"applicable_fault_classes": {"maxItems": 0}, "not_applicable_basis": {"type": "string", "minLength": 1}}}
+  ],
+  "properties": {
+    "applicable_fault_classes": {
+      "type": "array", "uniqueItems": true,
+      "items": {"enum": ["quench", "loss_of_coolant", "loss_of_flow", "loss_of_power", "loss_of_vacuum", "load_transient"]}
+    },
+    "not_applicable_basis": {"type": "string"},
+    "scenarios": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["scenario_id", "fault_class", "applicability_basis", "initial_operating_point_hash", "target_component_ids", "trigger", "protection_actions", "timeline", "required_solver_capabilities", "acceptance_metrics"],
+        "properties": {
+          "scenario_id": {"type": "string", "minLength": 1},
+          "fault_class": {"type": "string", "minLength": 1},
+          "applicability_basis": {"type": "string", "minLength": 1},
+          "initial_operating_point_hash": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+          "target_component_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "trigger": {"type": "object", "required": ["event_type", "time_s", "event_operator_id"]},
+          "protection_actions": {"type": "array", "minItems": 1},
+          "timeline": {"type": "array", "minItems": 2, "items": {"type": "number"}},
+          "required_solver_capabilities": {"type": "array", "minItems": 1},
+          "acceptance_metrics": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["metric_id", "observable_id", "statistic", "comparison", "threshold", "unit", "location"],
+              "properties": {
+                "statistic": {"enum": ["peak", "minimum", "integral", "duration"]},
+                "comparison": {"enum": ["<=", "<", ">=", ">"]},
+                "threshold": {"type": "number"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

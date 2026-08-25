@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_stability_mode_inventory_v1.schema.json",
+  "title": "Cross-topology stability mode inventory v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "routing_principle", "mode_registry_hash",
+    "controls", "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_stability_mode_inventory_v1"},
+    "routing_principle": {"type": "string", "minLength": 80},
+    "mode_registry_hash": {"$ref": "#/$defs/hash"},
+    "controls": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": {"$ref": "#/$defs/control"}
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "active_mode_count",
+        "unknown_applicability_mode_count", "authoritatively_evaluated_mode_count",
+        "favorable_evaluated_mode_count", "failed_evaluated_mode_count",
+        "complete_stability_evaluation_count", "stability_c2_support_count",
+        "complete_c2_count", "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 4},
+        "active_mode_count": {"const": 18},
+        "unknown_applicability_mode_count": {"const": 8},
+        "authoritatively_evaluated_mode_count": {"const": 2},
+        "favorable_evaluated_mode_count": {"const": 2},
+        "failed_evaluated_mode_count": {"const": 0},
+        "complete_stability_evaluation_count": {"const": 0},
+        "stability_c2_support_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 300},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "feature": {
+      "type": "object",
+      "required": ["design_id", "genome_physics_hash", "topology_signature_hash",
+        "features", "derivations", "source_kind", "source_artifact_id",
+        "source_artifact_hash", "source_result_hash", "candidate_binding_verified",
+        "fidelity", "evidence_tasks", "feature_hash"],
+      "properties": {
+        "genome_physics_hash": {"$ref": "#/$defs/hash"},
+        "topology_signature_hash": {"$ref": "#/$defs/hash"},
+        "source_artifact_hash": {"$ref": "#/$defs/hash"},
+        "feature_hash": {"$ref": "#/$defs/hash"},
+        "candidate_binding_verified": {"const": true},
+        "fidelity": {"minimum": 2}
+      }
+    },
+    "modeEvidence": {
+      "type": "object",
+      "required": ["mode_id", "status", "mode_support_authorized", "covered_input_ids", "fidelity",
+        "resolution_verified", "candidate_binding_verified", "evidence_hash"],
+      "properties": {
+        "status": {"const": "pass"},
+        "mode_support_authorized": {"const": true},
+        "fidelity": {"minimum": 2},
+        "resolution_verified": {"const": true},
+        "candidate_binding_verified": {"const": true},
+        "evidence_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "inventory": {
+      "type": "object",
+      "required": ["active_mode_ids", "inactive_mode_ids",
+        "unknown_applicability_mode_ids", "evaluated_active_mode_ids",
+        "favorable_active_mode_ids", "failed_active_mode_ids", "missing_active_mode_ids",
+        "applicability_complete", "evaluation_complete", "physical_stability_status",
+        "c2_support_authorized", "mode_evidence", "inventory_hash",
+        "promotion_authorized"],
+      "properties": {
+        "physical_stability_status": {"const": "unknown"},
+        "evaluation_complete": {"const": false},
+        "c2_support_authorized": {"const": false},
+        "promotion_authorized": {"const": false},
+        "inventory_hash": {"$ref": "#/$defs/hash"},
+        "mode_evidence": {"type": "array", "items": {"$ref": "#/$defs/modeEvidence"}}
+      }
+    },
+    "control": {
+      "type": "object",
+      "required": ["control_id", "control_kind", "design_id",
+        "genome_physics_hash", "diagnostic_legacy_family_label",
+        "family_label_used_for_routing", "feature_evidence", "inventory",
+        "evidence_bundle", "source_note", "complete_c2", "promotion_authorized"],
+      "properties": {
+        "genome_physics_hash": {"$ref": "#/$defs/hash"},
+        "family_label_used_for_routing": {"const": false},
+        "feature_evidence": {"$ref": "#/$defs/feature"},
+        "inventory": {"$ref": "#/$defs/inventory"},
+        "complete_c2": {"const": false},
+        "promotion_authorized": {"const": false}
+      }
+    }
+  }
+}

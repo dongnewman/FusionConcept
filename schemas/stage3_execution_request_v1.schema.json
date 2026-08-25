@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/stage3_execution_request_v1.schema.json",
+  "title": "Stage3ExecutionRequestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_binding_hash", "topology_hash", "parameter_binding", "capability_registry_hash", "sample_spec", "budget", "request_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "topology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "parameter_binding": {"type": "object"},
+    "capability_registry_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "sample_spec": {"type": "object"},
+    "budget": {"$ref": "stage3_execution_budget_v1.schema.json"},
+    "request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

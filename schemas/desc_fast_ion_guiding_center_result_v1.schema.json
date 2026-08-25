@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/desc_fast_ion_guiding_center_result_v1.schema.json",
+  "title": "DESC Fast-Ion Guiding-Center Diagnostic Result V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "runner_version",
+    "runner_source_sha256",
+    "status",
+    "candidate_binding_hash",
+    "stability_problem_hash",
+    "source_binding",
+    "equilibrium",
+    "field_interpolation",
+    "diagnostic_input",
+    "resolution_history",
+    "convergence",
+    "finest",
+    "gates",
+    "claim_boundary",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "runner_version": {"const": "desc_fast_ion_guiding_center_runner_v1"},
+    "runner_source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["pass", "unknown"]},
+    "candidate_binding_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stability_problem_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "resolution_history": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["step_count", "time_step_s", "particle_count", "plasma_boundary_crossing_fraction", "interpolation_domain_exit_count", "maximum_relative_energy_error", "final_state_hash"]
+      }
+    },
+    "convergence": {
+      "type": "object",
+      "required": ["accepted", "loss_fraction_absolute_changes", "maximum_allowed_fine_energy_error", "maximum_allowed_loss_fraction_change"]
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "candidate_binding_verified",
+        "source_equilibrium_recomputed",
+        "time_step_convergence_verified",
+        "candidate_fast_ion_distribution_supplied",
+        "material_wall_geometry_supplied",
+        "collisions_and_slowing_down_included",
+        "electric_field_included",
+        "long_time_confinement_established",
+        "complete_fast_ion_orbit_evidence_authorized"
+      ]
+    },
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

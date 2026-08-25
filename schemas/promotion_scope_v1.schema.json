@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "promotion_scope_v1.schema.json",
+  "title": "PromotionScopeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scope_id", "max_gate", "valid_missions", "valid_domains", "valid_parameter_ranges",
+    "valid_observables", "calibration_refs", "required_ruleset_hash",
+    "independent_confirmation_required", "expiry_or_version"],
+  "properties": {
+    "scope_id": {"type": "string", "minLength": 1},
+    "max_gate": {"enum": ["none", "C0", "C1", "C2", "C3"]},
+    "valid_missions": {"type": "array", "items": {"type": "string"}},
+    "valid_domains": {"type": "array", "items": {"type": "string"}},
+    "valid_parameter_ranges": {"type": "object"},
+    "valid_observables": {"type": "array", "items": {"type": "string"}},
+    "calibration_refs": {"type": "array", "items": {"type": "string"}},
+    "required_ruleset_hash": {"type": "string", "minLength": 1},
+    "independent_confirmation_required": {"type": "boolean"},
+    "expiry_or_version": {"type": "string", "minLength": 1}
+  }
+}

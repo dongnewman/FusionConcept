@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_id": "candidate_solver_reference_anchors_v1",
+  "anchors": [
+    {
+      "anchor_id": "iter_inductive_baseline_design_v1",
+      "anchor_kind": "published_design_baseline_not_experimental_measurement",
+      "candidate_id": "iter_inductive_baseline_candidate_solver_v1",
+      "time_mode": "pulsed",
+      "source_refs": [
+        {
+          "source_id": "iter_official_facts_figures",
+          "url": "https://www.iter.org/facts-figures",
+          "supports": ["fusion_power_design_w", "input_heating_design_w", "pulse_duration_s", "plasma_volume_m3"]
+        },
+        {
+          "source_id": "iter_official_faq",
+          "url": "https://www.iter.org/faqs",
+          "supports": ["magnetic_field_t", "plasma_current_a", "temperature_k", "plasma_volume_m3"]
+        },
+        {
+          "source_id": "iter_reference_scenarios_education",
+          "url": "https://www.iter.org/sites/default/files/education/O1-Campbell_RF-Challenges-for-ITER.pdf",
+          "supports": ["major_radius_m", "minor_radius_m", "thermal_energy_j", "fusion_power_design_w"]
+        }
+      ],
+      "regions": [
+        {"region_id": "iter_core", "kind": "closed_toroidal_plasma", "geometry_model": "published_iter_baseline_volume"}
+      ],
+      "capabilities": [
+        {"capability_id": "conserved_particle_inventory", "declared_by_module_ids": ["iter_baseline_control_volume"], "declaration_basis": ["published finite plasma volume and D-T baseline"]},
+        {"capability_id": "conserved_thermal_energy", "declared_by_module_ids": ["iter_baseline_control_volume"], "declaration_basis": ["published ITER reference thermal energy"]},
+        {"capability_id": "axisymmetric_mhd_equilibrium", "declared_by_module_ids": ["iter_axisymmetric_baseline"], "declaration_basis": ["published 15 MA 5.3 T axisymmetric baseline"]},
+        {"capability_id": "closed_field_control_volume", "declared_by_module_ids": ["iter_closed_field_transport_l1"], "declaration_basis": ["published closed tokamak plasma domain"]},
+        {"capability_id": "fusion_reaction_radiation", "declared_by_module_ids": ["iter_dt_burn_l1"], "declaration_basis": ["published D-T Q at least 10 design mission"]}
+      ],
+      "module_bindings": [
+        {"module_id": "iter_particle_balance", "capability_id": "conserved_particle_inventory", "operator_id": "control_volume_particle_inventory_v1", "state_ids": ["particle_inventory"], "evidence_ceiling": "L1_screening_only"},
+        {"module_id": "iter_thermal_balance", "capability_id": "conserved_thermal_energy", "operator_id": "control_volume_thermal_energy_v1", "state_ids": ["thermal_energy"], "evidence_ceiling": "L1_screening_only"},
+        {"module_id": "iter_closed_transport", "capability_id": "closed_field_control_volume", "operator_id": "state_derived_bohm_transport_l1_v1", "state_ids": ["particle_inventory", "thermal_energy"], "evidence_ceiling": "Bohm_L1_not_ITER_transport_validation"},
+        {"module_id": "iter_dt_reaction", "capability_id": "fusion_reaction_radiation", "operator_id": "state_derived_dt_reaction_bremsstrahlung_l1_v1", "state_ids": ["particle_inventory", "thermal_energy"], "evidence_ceiling": "reduced_DT_rate_screening_only"},
+        {"module_id": "iter_fixed_magnetic_inventory", "capability_id": "axisymmetric_mhd_equilibrium", "operator_id": "fixed_current_flux_inventory_l1_v1", "state_ids": ["plasma_current", "magnetic_flux"], "evidence_ceiling": "inventory_only_not_Grad_Shafranov_solution"}
+      ],
+      "state_variables": [
+        {"state_id": "particle_inventory", "account": "particles", "unit": "1", "positivity_required": true},
+        {"state_id": "thermal_energy", "account": "energy", "unit": "J", "positivity_required": true},
+        {"state_id": "plasma_current", "account": "current", "unit": "A", "positivity_required": false},
+        {"state_id": "magnetic_flux", "account": "magnetic_flux", "unit": "Wb", "positivity_required": false}
+      ],
+      "initial_conditions": {
+        "particle_inventory": 5.681366285474515e22,
+        "thermal_energy": 353000000.0,
+        "plasma_current": 15000000.0,
+        "magnetic_flux": 66.60176425572094
+      },
+      "parameters": {
+        "volume_m3": 830.0,
+        "major_radius_m": 6.2,
+        "minor_radius_m": 2.0,
+        "characteristic_length_m": 12.4,
+        "magnetic_field_t": 5.3,
+        "temperature_j": 2.0709735e-15,
+        "input_power_w": 50000000.0,
+        "pulse_duration_s": 400.0,
+        "fuel": "D-T",
+        "parameter_status": "published_design_baseline"
+      },
+      "anchor_observables": [
+        {"observable_id": "fusion_power_w", "minimum": 450000000.0, "maximum": 550000000.0, "evidence_state": "design_target", "source_ref": "iter_official_facts_figures"},
+        {"observable_id": "pulse_duration_s", "minimum": 400.0, "maximum": 600.0, "evidence_state": "design_target", "source_ref": "iter_official_facts_figures"}
+      ],
+      "claim_boundary": "ITER values are published design/reference-scenario targets. ITER has not supplied an experimental D-T anchor for this fixture; model agreement would be regression to a design point, not experimental validation."
+    },
+    {
+      "anchor_id": "c2w_enhanced_performance_experiment_v1",
+      "anchor_kind": "published_experimental_parameter_range",
+      "candidate_id": "c2w_enhanced_performance_candidate_solver_v1",
+      "time_mode": "pulsed",
+      "source_refs": [
+        {
+          "source_id": "c2w_nuclear_fusion_2024",
+          "url": "https://doi.org/10.1088/1741-4326/ad4536",
+          "supports": ["pulse_duration_s", "peak_electron_temperature_ev", "active_control", "beam_energy_ev"]
+        },
+        {
+          "source_id": "c2w_diagnostic_suite_2021",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33820036/",
+          "supports": ["beam_power_w", "beam_energy_ev", "active_control", "steady_state_sustainment"]
+        },
+        {
+          "source_id": "c2w_iaea_fec2020_overview",
+          "url": "https://conferences.iaea.org/event/214/contributions/17043/attachments/10473/15072/presentation-749.pdf",
+          "supports": ["magnetic_field_t", "density_m3", "separatrix_radius_m", "separatrix_length_m", "total_temperature_ev"]
+        }
+      ],
+      "regions": [
+        {"region_id": "c2w_frc_core", "kind": "closed_FRC_core_with_open_parallel_loss_boundary", "geometry_model": "published_cylindrical_separatrix_range"}
+      ],
+      "capabilities": [
+        {"capability_id": "conserved_particle_inventory", "declared_by_module_ids": ["c2w_control_volume"], "declaration_basis": ["published density and finite separatrix dimensions"]},
+        {"capability_id": "conserved_thermal_energy", "declared_by_module_ids": ["c2w_control_volume"], "declaration_basis": ["published total temperature and density ranges"]},
+        {"capability_id": "axisymmetric_mhd_equilibrium", "declared_by_module_ids": ["c2w_frc_equilibrium"], "declaration_basis": ["published axisymmetric FRC magnetic configuration"]},
+        {"capability_id": "open_field_kinetic_transport", "declared_by_module_ids": ["c2w_parallel_loss"], "declaration_basis": ["published closed FRC core surrounded by open-field loss region"]}
+      ],
+      "module_bindings": [
+        {"module_id": "c2w_particle_balance", "capability_id": "conserved_particle_inventory", "operator_id": "control_volume_particle_inventory_v1", "state_ids": ["particle_inventory"], "evidence_ceiling": "L1_screening_only"},
+        {"module_id": "c2w_thermal_balance", "capability_id": "conserved_thermal_energy", "operator_id": "control_volume_thermal_energy_v1", "state_ids": ["thermal_energy"], "evidence_ceiling": "L1_screening_only"},
+        {"module_id": "c2w_parallel_loss", "capability_id": "open_field_kinetic_transport", "operator_id": "state_derived_parallel_streaming_l1_v1", "state_ids": ["particle_inventory", "thermal_energy"], "evidence_ceiling": "untrapped_parallel_streaming_negative_control_not_fast_ion_FRC_transport"},
+        {"module_id": "c2w_fixed_magnetic_inventory", "capability_id": "axisymmetric_mhd_equilibrium", "operator_id": "fixed_current_flux_inventory_l1_v1", "state_ids": ["plasma_current", "magnetic_flux"], "evidence_ceiling": "inventory_only_not_FRC_equilibrium_reconstruction"}
+      ],
+      "state_variables": [
+        {"state_id": "particle_inventory", "account": "particles", "unit": "1", "positivity_required": true},
+        {"state_id": "thermal_energy", "account": "energy", "unit": "J", "positivity_required": true},
+        {"state_id": "plasma_current", "account": "current", "unit": "A", "positivity_required": false},
+        {"state_id": "magnetic_flux", "account": "magnetic_flux", "unit": "Wb", "positivity_required": false}
+      ],
+      "initial_conditions": {
+        "particle_inventory": 2.5132741228718347e19,
+        "thermal_energy": 18123.89543722515,
+        "plasma_current": 1000000.0,
+        "magnetic_flux": 0.15079644737231007
+      },
+      "parameters": {
+        "volume_m3": 1.2566370614359172,
+        "minor_radius_m": 0.4,
+        "characteristic_length_m": 2.5,
+        "magnetic_field_t": 0.3,
+        "temperature_j": 2.403264951e-16,
+        "input_power_w": 20000000.0,
+        "pulse_duration_s": 0.04,
+        "fuel": "D or H experimental plasma; no D-T burn claim",
+        "parameter_status": "midpoints_or_upper_bounds_within_published_experimental_ranges"
+      },
+      "anchor_observables": [
+        {"observable_id": "effective_temperature_ev", "minimum": 500.0, "maximum": 3000.0, "evidence_state": "published_experimental_range_and_peak", "source_ref": "c2w_nuclear_fusion_2024"},
+        {"observable_id": "pulse_duration_s", "minimum": 0.03, "maximum": 0.04, "evidence_state": "published_experimental_duration", "source_ref": "c2w_nuclear_fusion_2024"}
+      ],
+      "claim_boundary": "C-2W values are bounded published experimental ranges, but the L1 parallel-streaming operator omits fast-ion trapping, neutral-beam deposition, charge exchange, edge bias, active control and reconstructed FRC equilibrium. Disagreement falsifies this reduced operator for the anchor, not the C-2W experiment or FRC topology."
+    }
+  ]
+}

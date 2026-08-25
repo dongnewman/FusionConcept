@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/cross_family_heldout_quantitative_benchmark_v47.schema.json",
+  "title": "Cross-family held-out quantitative benchmark v47 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "benchmark_contract",
+    "aggregate", "next_actions", "promotion_credit", "claim_boundary",
+    "input_binding", "archives", "run_date", "deterministic_result_hash",
+    "source_hashes", "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "cross_family_heldout_quantitative_benchmark_v47"},
+    "stage": {"const": "sealed_cross_family_heldout_benchmark_readiness_audit"},
+    "benchmark_contract": {
+      "type": "object",
+      "required": [
+        "heldout_sources_disjoint_from_calibration",
+        "measurement_uncertainty_separate_from_protocol_tolerance",
+        "missing_output_fails_closed",
+        "operating_point_match_required_for_known_device_validation",
+        "known_device_result_can_promote_candidate"
+      ]
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "route_record_count", "route_ids", "family_count", "families",
+        "heldout_primary_source_count", "calibration_heldout_disjoint_route_count",
+        "numeric_comparator_executable_route_count", "numeric_protocol_pass_route_count",
+        "numeric_protocol_fail_route_count", "model_output_missing_route_count",
+        "missing_required_output_class_count", "missing_required_output_ids",
+        "operating_point_matched_route_count",
+        "independent_known_device_magnitude_validation_route_count",
+        "candidate_specific_independently_validated_route_count",
+        "v43_observable_route_count",
+        "candidate_specific_validation_fraction_of_v43_routes",
+        "medium_fidelity_authorized_count", "promotion_count",
+        "old_domain_scale_up_authorized"
+      ],
+      "properties": {
+        "route_record_count": {"const": 5},
+        "route_ids": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true},
+        "family_count": {"const": 3},
+        "families": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true},
+        "heldout_primary_source_count": {"const": 3},
+        "calibration_heldout_disjoint_route_count": {"const": 5},
+        "numeric_comparator_executable_route_count": {"const": 2},
+        "numeric_protocol_pass_route_count": {"const": 0},
+        "numeric_protocol_fail_route_count": {"const": 2},
+        "model_output_missing_route_count": {"const": 3},
+        "missing_required_output_class_count": {"const": 7},
+        "missing_required_output_ids": {"type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true},
+        "operating_point_matched_route_count": {"const": 0},
+        "independent_known_device_magnitude_validation_route_count": {"const": 0},
+        "candidate_specific_independently_validated_route_count": {"const": 0},
+        "v43_observable_route_count": {"const": 23},
+        "candidate_specific_validation_fraction_of_v43_routes": {"const": 0.0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false}
+      }
+    },
+    "next_actions": {"type": "array", "minItems": 4},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 200},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

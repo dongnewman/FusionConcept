@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "typed_value_v2.schema.json",
+  "title": "TypedValueV2", "type": "object", "additionalProperties": true,
+  "required": ["value_type", "si_dimension_vector", "unit", "domain_ref", "time_semantics",
+    "representation", "uncertainty", "epistemic_state", "provenance"],
+  "properties": {
+    "value_type": {"enum": ["scalar", "vector", "tensor", "field", "distribution", "event", "graph", "random_variable"]},
+    "si_dimension_vector": {"type": "array", "minItems": 7, "maxItems": 7}, "unit": {"type": "string"},
+    "domain_ref": {"type": "string"}, "time_semantics": {"type": ["object", "string"]},
+    "representation": {"enum": ["value", "interval", "distribution", "function", "symbol", "unknown"]},
+    "uncertainty": {"type": ["object", "number", "null"]},
+    "epistemic_state": {"enum": ["derived", "measured", "declared_known", "hypothesized", "learned", "empirical_prior", "unknown_placeholder", "not_applicable"]},
+    "provenance": {"type": "object"}
+  }
+}

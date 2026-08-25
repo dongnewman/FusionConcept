@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/recoverable_cross_topology_scale_v20.schema.json",
+  "title": "Recoverable real cross-topology 10,000-candidate scale v20",
+  "type": "object",
+  "required": [
+    "schema_version", "run_date", "search_version", "stage", "spec",
+    "execution", "physics_search_summary", "archives", "claim_boundary",
+    "promotion_credit", "deterministic_result_hash", "runtime_measurements",
+    "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "recoverable_cross_topology_scale_v20" },
+    "stage": { "const": "real_fidelity0_10000_candidate_scale_run" },
+    "spec": { "type": "object" },
+    "execution": { "type": "object" },
+    "physics_search_summary": { "type": "object" },
+    "archives": { "type": "object" },
+    "claim_boundary": { "type": "string" },
+    "promotion_credit": { "type": "object" },
+    "deterministic_result_hash": {
+      "type": "string", "pattern": "^[0-9a-f]{64}$"
+    },
+    "runtime_measurements": { "type": "object" },
+    "source_hashes": { "type": "object" }
+  }
+}
+

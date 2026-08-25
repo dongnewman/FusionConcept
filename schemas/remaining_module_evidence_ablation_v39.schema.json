@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/remaining_module_evidence_ablation_v39.schema.json",
+  "title": "FusionConceptAI v39 remaining-module evidence ablation",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "input_binding", "ablation_scope",
+    "aggregate", "archives", "deterministic_result_hash",
+    "promotion_credit", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "remaining_module_evidence_ablation_v39"},
+    "ablation_scope": {
+      "type": "object",
+      "required": [
+        "remaining_group_count", "remaining_module_count",
+        "fixed_background_case_count", "graph_response_count",
+        "module_specific_hard_unknown_requirement_count", "source_record_count"
+      ],
+      "properties": {
+        "remaining_group_count": {"const": 5},
+        "remaining_module_count": {"const": 11},
+        "fixed_background_case_count": {"const": 13},
+        "graph_response_count": {"const": 21},
+        "module_specific_hard_unknown_requirement_count": {"const": 40},
+        "source_record_count": {"const": 10}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "solver_execution_count", "formula_implementation_count",
+        "direct_gate_credit_authorized_count", "old_domain_scale_up_authorized",
+        "promotion_count", "medium_fidelity_authorized_count"
+      ],
+      "properties": {
+        "solver_execution_count": {"const": 0},
+        "formula_implementation_count": {"const": 0},
+        "direct_gate_credit_authorized_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false},
+        "promotion_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0}
+      }
+    }
+  }
+}

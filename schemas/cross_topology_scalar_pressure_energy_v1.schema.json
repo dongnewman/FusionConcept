@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_scalar_pressure_energy_v1.schema.json",
+  "title": "Cross-topology scalar-pressure thermodynamic energy v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "operator_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_scalar_pressure_energy_v1"},
+    "operator_principle": {"type": "string", "minLength": 170},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["design_id", "diagnostic_legacy_family_label",
+          "family_label_used_for_operator_selection", "source_artifact_id",
+          "source_artifact_sha256", "source_result_hash", "observations",
+          "convergence", "evidence_bundle", "species_resolved",
+          "distribution_resolved", "transport_thermal_energy_slot_authorized",
+          "conservation_slot_authorized", "complete_c2",
+          "promotion_authorized", "notes"],
+        "properties": {
+          "family_label_used_for_operator_selection": {"const": false},
+          "source_artifact_sha256": {"$ref": "#/$defs/hash"},
+          "source_result_hash": {"$ref": "#/$defs/hash"},
+          "observations": {
+            "type": "array", "minItems": 2, "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": ["pressure_model", "resolution_label",
+                "resolution_rank", "point_count", "plasma_volume_m3",
+                "pressure_volume_integral_j", "adiabatic_index",
+                "scalar_mhd_thermal_energy_j", "source_artifact_id",
+                "source_artifact_hash", "source_result_hash",
+                "candidate_binding_verified", "species_resolved",
+                "distribution_resolved", "fidelity", "status",
+                "c2_observation_authorized", "observation_hash"],
+              "properties": {
+                "pressure_model": {"const": "scalar_isotropic_mhd"},
+                "adiabatic_index": {"const": 1.6666666666666667},
+                "candidate_binding_verified": {"const": true},
+                "species_resolved": {"const": false},
+                "distribution_resolved": {"const": false},
+                "fidelity": {"const": 2},
+                "status": {"const": "pass"},
+                "c2_observation_authorized": {"const": true},
+                "source_artifact_hash": {"$ref": "#/$defs/hash"},
+                "source_result_hash": {"$ref": "#/$defs/hash"},
+                "observation_hash": {"$ref": "#/$defs/hash"}
+              }
+            }
+          },
+          "convergence": {
+            "type": "object",
+            "required": ["status", "resolution_verified",
+              "c2_scalar_mhd_energy_authorized",
+              "complete_particle_state_authorized", "convergence_hash"],
+            "properties": {
+              "status": {"const": "pass"},
+              "resolution_verified": {"const": true},
+              "c2_scalar_mhd_energy_authorized": {"const": true},
+              "complete_particle_state_authorized": {"const": false},
+              "convergence_hash": {"$ref": "#/$defs/hash"}
+            }
+          },
+          "species_resolved": {"const": false},
+          "distribution_resolved": {"const": false},
+          "transport_thermal_energy_slot_authorized": {"const": false},
+          "conservation_slot_authorized": {"const": false},
+          "complete_c2": {"const": false},
+          "promotion_authorized": {"const": false}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "numeric_scalar_pressure_inventory_count",
+        "scalar_energy_pass_count", "scalar_energy_fail_count",
+        "scalar_energy_unknown_count", "c2_scalar_mhd_energy_authorized_count",
+        "complete_particle_state_count",
+        "transport_thermal_energy_slot_authorized_count",
+        "conservation_slot_authorized_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "numeric_scalar_pressure_inventory_count": {"const": 3},
+        "scalar_energy_pass_count": {"const": 3},
+        "scalar_energy_fail_count": {"const": 0},
+        "scalar_energy_unknown_count": {"const": 0},
+        "c2_scalar_mhd_energy_authorized_count": {"const": 3},
+        "complete_particle_state_count": {"const": 0},
+        "transport_thermal_energy_slot_authorized_count": {"const": 0},
+        "conservation_slot_authorized_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 350},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

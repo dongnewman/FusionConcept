@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/interface_flux_contract_v1.schema.json",
+  "title": "InterfaceFluxContractV1",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "physics_hash", "manifest_hash",
+    "interface_id", "from_region_id", "to_region_id", "kind", "interface_area_m2",
+    "flux_slots", "sign_convention", "boundary_conditions", "flux_provider",
+    "jacobian_provider", "applicability", "evidence_ceiling", "contract_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "interface_id": {"type": "string", "minLength": 1},
+    "from_region_id": {"type": "string", "minLength": 1},
+    "to_region_id": {"type": "string", "minLength": 1},
+    "kind": {"type": "string", "minLength": 1},
+    "interface_area_m2": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "flux_slots": {"type": "array", "items": {"type": "object"}},
+    "sign_convention": {"type": "string", "minLength": 1},
+    "boundary_conditions": {"type": "array", "items": {"type": "object"}},
+    "flux_provider": {"type": "object"},
+    "jacobian_provider": {"type": "object"},
+    "applicability": {"type": "object"},
+    "evidence_ceiling": {"type": "string", "minLength": 1},
+    "contract_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

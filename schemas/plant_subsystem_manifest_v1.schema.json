@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/plant_subsystem_manifest_v1.schema.json",
+  "title": "PlantSubsystemManifestV1 declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "role_applicability", "exhaust_networks", "fuel_cycle_systems", "thermal_cycles",
+    "shielding_cooling_systems", "auxiliary_loads", "direct_recovery_systems",
+    "uncertainty_contract"
+  ],
+  "properties": {
+    "role_applicability": {
+      "type": "object",
+      "required": [
+        "heating_and_current_drive_wall_plug", "particle_injection_fuel_processing",
+        "magnet_power_and_pulse_storage", "cryogenic_system", "vacuum_exhaust_pumping",
+        "coolant_circulation_heat_rejection", "thermal_conversion_auxiliaries",
+        "shielding_cooling", "controls_diagnostics_auxiliaries", "direct_energy_recovery",
+        "gross_electric_generation"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        ".*": {
+          "type": "object", "required": ["status", "provider", "basis", "time_behavior", "relative_uncertainty"],
+          "properties": {
+            "status": {"enum": ["applicable", "not_applicable"]},
+            "provider": {"type": "string", "minLength": 1},
+            "basis": {"type": "string", "minLength": 1},
+            "time_behavior": {"enum": ["continuous", "pulse_active", "already_cycle_average", "not_applicable"]},
+            "relative_uncertainty": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        }
+      }
+    },
+    "exhaust_networks": {"type": "array", "items": {"$ref": "#/$defs/evidenceRecord"}},
+    "fuel_cycle_systems": {"type": "array", "items": {"$ref": "#/$defs/evidenceRecord"}},
+    "thermal_cycles": {"type": "array", "items": {"$ref": "#/$defs/evidenceRecord"}},
+    "shielding_cooling_systems": {"type": "array", "items": {"$ref": "#/$defs/evidenceRecord"}},
+    "auxiliary_loads": {"type": "array", "items": {"$ref": "#/$defs/evidenceRecord"}},
+    "direct_recovery_systems": {"type": "array", "items": {"$ref": "#/$defs/evidenceRecord"}},
+    "uncertainty_contract": {
+      "type": "object", "required": ["coverage_sigma", "net_sign_required"],
+      "properties": {
+        "coverage_sigma": {"type": "number", "exclusiveMinimum": 0},
+        "net_sign_required": {"type": "boolean"}
+      }
+    }
+  },
+  "$defs": {
+    "evidenceRecord": {
+      "type": "object",
+      "required": ["source_refs", "data_hash", "relative_uncertainty"],
+      "properties": {
+        "source_refs": {"type": "array", "minItems": 1},
+        "data_hash": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+        "relative_uncertainty": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

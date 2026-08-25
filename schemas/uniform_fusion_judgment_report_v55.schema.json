@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/uniform_fusion_judgment_report_v55.schema.json",
+  "title": "Uniform fusion judgment report v55",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "chain_id",
+    "candidate_id",
+    "mission_id",
+    "stage_order",
+    "stages",
+    "decision",
+    "routing_input_hash",
+    "family_or_parent_used_for_routing",
+    "all_eight_stages_executed",
+    "eligible_for_promotion_review",
+    "promotion_authorized",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "chain_id": {"const": "uniform_fusion_judgment_chain_v55"},
+    "candidate_id": {"type": "string"},
+    "mission_id": {"type": "string"},
+    "stage_order": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "physical_description_completeness"},
+        {"const": "topology_and_causality"},
+        {"const": "conservation_and_state_evolution"},
+        {"const": "perturbation_and_stability"},
+        {"const": "particle_energy_transport_and_burn"},
+        {"const": "net_energy_closure"},
+        {"const": "engineering_realizability"},
+        {"const": "uncertainty_and_evidence"}
+      ],
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "stages": {"type": "array", "minItems": 8, "maxItems": 8},
+    "decision": {"enum": ["pass", "fail", "unknown"]},
+    "routing_input_hash": {"type": "string", "minLength": 64, "maxLength": 64},
+    "family_or_parent_used_for_routing": {"const": false},
+    "all_eight_stages_executed": {"const": true},
+    "eligible_for_promotion_review": {"type": "boolean"},
+    "promotion_authorized": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

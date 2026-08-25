@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/region_solve_result_envelope_v1.schema.json",
+  "title": "RegionSolveResultEnvelopeV1",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "physics_hash", "manifest_hash",
+    "status", "convergence_status", "region_spec_hashes", "interface_contract_hashes",
+    "region_trajectories", "paired_interface_fluxes", "regional_residuals",
+    "global_residuals", "resolution", "error_estimates", "gate_statuses",
+    "unresolved_reasons", "evidence_ceiling", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "convergence_status": {"type": "string", "minLength": 1},
+    "region_spec_hashes": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "interface_contract_hashes": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "region_trajectories": {"type": "array", "items": {"type": "object"}},
+    "paired_interface_fluxes": {"type": "array", "items": {"type": "object"}},
+    "regional_residuals": {"type": "array", "items": {"type": "object"}},
+    "global_residuals": {"type": "array", "items": {"type": "object"}},
+    "resolution": {"type": "object"},
+    "error_estimates": {"type": "object"},
+    "gate_statuses": {"type": "object"},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "evidence_ceiling": {"type": "string", "minLength": 1},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

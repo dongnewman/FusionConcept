@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/c2_candidate_state_package_v1.schema.json",
+  "title": "C2 Candidate State Package V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "candidate_binding_hash", "state_result_hash", "time_mode",
+    "boundary_classes", "capability_ids", "region_ids", "particle_accounts",
+    "energy_accounts", "species_states", "actuator_states", "power_ledger",
+    "evidence_fields", "package_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_result_hash": {"$ref": "#/$defs/hash"},
+    "time_mode": {"enum": ["steady", "transient", "dae"]},
+    "boundary_classes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "capability_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "region_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "particle_accounts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/quantity"}},
+    "energy_accounts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/quantity"}},
+    "species_states": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/species"}},
+    "actuator_states": {"type": "array", "minItems": 4, "items": {"$ref": "#/$defs/actuator"}},
+    "power_ledger": {"$ref": "#/$defs/powerLedger"},
+    "evidence_fields": {"type": "array", "minItems": 12, "items": {"$ref": "#/$defs/evidence"}},
+    "package_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "quantity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["field_id", "value", "unit", "evidence_hash", "field_hash"],
+      "properties": {
+        "field_id": {"type": "string", "minLength": 1}, "value": {"type": ["number", "null"]},
+        "unit": {"type": "string", "minLength": 1}, "evidence_hash": {"$ref": "#/$defs/hash"},
+        "field_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "species": {
+      "type": "object", "additionalProperties": false,
+      "required": ["species_id", "inventory", "inventory_unit", "charge_number", "evidence_hash", "state_hash"],
+      "properties": {
+        "species_id": {"type": "string", "minLength": 1}, "inventory": {"type": ["number", "null"], "minimum": 0},
+        "inventory_unit": {"type": "string", "minLength": 1}, "charge_number": {"type": ["number", "null"]},
+        "evidence_hash": {"$ref": "#/$defs/hash"}, "state_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "actuator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["actuator_id", "role", "demand", "output", "capacity", "output_unit", "wall_plug_efficiency", "evidence_hash", "state_hash"],
+      "properties": {
+        "actuator_id": {"type": "string", "minLength": 1},
+        "role": {"enum": ["fueling", "heating", "exhaust", "radiation_control"]},
+        "demand": {"type": ["number", "null"], "minimum": 0}, "output": {"type": ["number", "null"], "minimum": 0},
+        "capacity": {"type": ["number", "null"], "minimum": 0}, "output_unit": {"type": "string", "minLength": 1},
+        "wall_plug_efficiency": {"type": ["number", "null"], "exclusiveMinimum": 0, "maximum": 1},
+        "evidence_hash": {"$ref": "#/$defs/hash"}, "state_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "powerLedger": {
+      "type": "object", "additionalProperties": false,
+      "required": ["accounts", "balance_residual_w", "evidence_hash", "ledger_hash"],
+      "properties": {
+        "accounts": {"type": "array", "minItems": 7, "items": {"$ref": "#/$defs/quantity"}},
+        "balance_residual_w": {"type": ["number", "null"]}, "evidence_hash": {"$ref": "#/$defs/hash"},
+        "ledger_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["field_id", "status", "source_result_hash", "claim_boundary", "evidence_hash"],
+      "properties": {
+        "field_id": {"type": "string", "minLength": 1},
+        "status": {"enum": ["complete", "partial", "unknown", "unsupported", "fail", "not_applicable"]},
+        "source_result_hash": {"$ref": "#/$defs/hash"}, "claim_boundary": {"type": "string", "minLength": 1},
+        "evidence_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/topology_module_influence_audit_v35.schema.json",
+  "title": "FusionConceptAI v35 topology module influence audit artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "input_binding", "audit_contract",
+    "aggregate", "archives", "deterministic_result_hash",
+    "promotion_credit", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "topology_module_influence_audit_v35"},
+    "audit_contract": {
+      "type": "object",
+      "required": ["record_count", "family_count", "graph_pair_count"],
+      "properties": {
+        "record_count": {"const": 55},
+        "family_count": {"const": 11},
+        "graph_pair_count": {"const": 110}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["promotion_count", "medium_fidelity_authorized_count"],
+      "properties": {
+        "promotion_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0}
+      }
+    }
+  }
+}

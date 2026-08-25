@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "applicability_proof_v1.schema.json",
+  "title": "ApplicabilityProofV1", "type": "object", "additionalProperties": false,
+  "required": ["obligation_id", "predicate_id", "predicate_version", "evaluated_inputs", "evidence_refs",
+    "result", "validity_domain", "uncertainty", "reproduction_trace"],
+  "properties": {
+    "obligation_id": {"type": "string"}, "predicate_id": {"type": "string"}, "predicate_version": {"type": "string"},
+    "evaluated_inputs": {"type": "object"}, "evidence_refs": {"type": "array", "minItems": 1},
+    "result": {"type": "boolean"}, "validity_domain": {"type": ["object", "string"]},
+    "uncertainty": {"type": ["object", "number", "string"]}, "reproduction_trace": {"type": "string", "minLength": 1}
+  }
+}

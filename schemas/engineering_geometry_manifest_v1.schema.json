@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/engineering_geometry_manifest_v1.schema.json",
+  "title": "EngineeringGeometryManifestV1 declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "applicable_component_roles", "components", "load_mappings", "contacts",
+    "insulation_boundaries", "boundary_conditions"
+  ],
+  "anyOf": [
+    {"properties": {"applicable_component_roles": {"minItems": 1}}},
+    {"required": ["not_applicable_basis"], "properties": {"applicable_component_roles": {"maxItems": 0}, "not_applicable_basis": {"type": "string", "minLength": 1}}}
+  ],
+  "properties": {
+    "applicable_component_roles": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "not_applicable_basis": {"type": "string"},
+    "components": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["component_id", "component_role", "material_id", "finite_geometry", "features"],
+        "properties": {
+          "component_id": {"type": "string", "minLength": 1},
+          "component_role": {"type": "string", "minLength": 1},
+          "material_id": {"type": "string", "minLength": 1},
+          "features": {"type": "array", "minItems": 1},
+          "finite_geometry": {
+            "type": "object",
+            "required": ["representation", "geometry_hash", "mesh_hash", "mesh_dimension", "measure"],
+            "properties": {
+              "representation": {"enum": ["finite_volume_mesh", "surface_mesh", "cad_brep", "network_mesh"]},
+              "geometry_hash": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+              "mesh_hash": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+              "mesh_dimension": {"type": "integer", "minimum": 1, "maximum": 3},
+              "measure": {"$ref": "#/$defs/positiveQuantity"}
+            }
+          }
+        }
+      }
+    },
+    "load_mappings": {"type": "array", "items": {"$ref": "#/$defs/loadMapping"}},
+    "contacts": {"type": "array", "items": {"type": "object"}},
+    "insulation_boundaries": {"type": "array", "items": {"type": "object"}},
+    "boundary_conditions": {"type": "array", "items": {"type": "object"}}
+  },
+  "$defs": {
+    "positiveQuantity": {
+      "type": "object", "required": ["value", "unit"],
+      "properties": {"value": {"type": "number", "exclusiveMinimum": 0}, "unit": {"type": "string", "minLength": 1}}
+    },
+    "loadMapping": {
+      "type": "object",
+      "required": ["mapping_id", "source_region_id", "source_load_slot", "target_component_id", "mapping_operator_id", "jacobian_operator_id", "sign_convention", "unit"]
+    }
+  }
+}

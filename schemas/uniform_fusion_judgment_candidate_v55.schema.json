@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/uniform_fusion_judgment_candidate_v55.schema.json",
+  "title": "Uniform fusion judgment candidate v55",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "mission",
+    "physical_description",
+    "topology_causality",
+    "state_evolution",
+    "perturbation_stability",
+    "transport_burn",
+    "net_energy",
+    "engineering",
+    "uncertainty_evidence",
+    "evidence"
+  ],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "mission": {
+      "type": "object",
+      "required": ["mission_id", "fusion_burn_required", "positive_net_energy_required"],
+      "properties": {
+        "mission_id": {"type": "string", "minLength": 1},
+        "fusion_burn_required": {"type": "boolean"},
+        "positive_net_energy_required": {"type": "boolean"}
+      }
+    },
+    "physical_description": {
+      "type": "object",
+      "required": ["regions", "species", "fields", "materials", "boundaries", "sources", "sinks", "controllers", "control_policy", "observables"],
+      "properties": {
+        "controllers": {"type": "array"},
+        "control_policy": {
+          "type": "object",
+          "required": ["mode", "actuator_refs", "applicability_basis"],
+          "properties": {
+            "mode": {"enum": ["active_closed_loop", "open_loop_actuation", "passive_stability", "explicit_no_controller"]},
+            "actuator_refs": {"type": "array", "items": {"type": "string"}},
+            "applicability_basis": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "topology_causality": {"type": "object", "required": ["nodes", "edges"]},
+    "state_evolution": {"type": "object", "required": ["mode", "solver_output_hash", "residuals"]},
+    "perturbation_stability": {"type": "object", "required": ["tests"]},
+    "transport_burn": {"type": "object", "required": ["state_solution_hash", "solver_output_hash", "particle_paths", "energy_paths"]},
+    "net_energy": {"type": "object", "required": ["terms", "reported_net_power_w", "closure_tolerance_w"]},
+    "engineering": {"type": "object", "required": ["checks"]},
+    "uncertainty_evidence": {"type": "object", "required": ["checks"]},
+    "evidence": {"type": "array", "minItems": 1}
+  }
+}

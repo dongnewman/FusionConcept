@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/stage3_execution_budget_v1.schema.json",
+  "title": "Stage3ExecutionBudgetV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["maximum_wall_seconds", "maximum_nonlinear_iterations", "maximum_time_steps", "maximum_degrees_of_freedom", "maximum_memory_bytes", "maximum_retries", "resolution_levels"],
+  "properties": {
+    "maximum_wall_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "maximum_nonlinear_iterations": {"type": "integer", "minimum": 1},
+    "maximum_time_steps": {"type": "integer", "minimum": 1},
+    "maximum_degrees_of_freedom": {"type": "integer", "minimum": 1},
+    "maximum_memory_bytes": {"type": "integer", "minimum": 1},
+    "maximum_retries": {"type": "integer", "minimum": 0},
+    "resolution_levels": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer", "minimum": 2}}
+  }
+}

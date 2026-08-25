@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "conservation_ledger_compiler_regression_v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "stage", "controls", "summary",
+    "threshold_provenance", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "conservation_ledger_compiler_regression_v1"},
+    "controls": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": {
+        "type": "object", "required": ["case_id", "ledger", "evidence_bundle"],
+        "properties": {
+          "ledger": {
+            "type": "object",
+            "required": ["genome_physics_hash", "source_kind",
+              "candidate_binding_verified", "evidence_hashes", "covered_domain_ids",
+              "required_quantities", "balances", "internal_exchanges", "checks",
+              "status", "c2_support_authorized", "evidence_tasks", "ledger_hash",
+              "promotion_authorized"],
+            "properties": {
+              "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "source_kind": {"const": "manufactured_control"},
+              "candidate_binding_verified": {"const": false},
+              "c2_support_authorized": {"const": false},
+              "promotion_authorized": {"const": false},
+              "ledger_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "ledger_pass_count", "ledger_fail_count",
+        "ledger_unknown_count", "manufactured_C2_support_authorized_count",
+        "promotion_count"],
+      "properties": {
+        "control_count": {"const": 4},
+        "ledger_pass_count": {"const": 1},
+        "ledger_fail_count": {"const": 2},
+        "ledger_unknown_count": {"const": 1},
+        "manufactured_C2_support_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "threshold_provenance": {"type": "string", "minLength": 1},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

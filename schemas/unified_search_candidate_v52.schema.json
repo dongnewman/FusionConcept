@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "unified_search_candidate_v52.schema.json",
+  "title": "Unified search candidate envelope v52",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version", "candidate_id", "candidate_index", "physics_hash", "relationships",
+    "routing_basis", "non_routing_classifications", "mechanism_cluster_id", "screens",
+    "decision", "claim_level", "promotion_authorized"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string"},
+    "candidate_index": {"type": "integer", "minimum": 1},
+    "relationships": {
+      "type": "object",
+      "required": [
+        "lineage_parent_revision_ids", "physics_reference_ids", "model_reference_ids",
+        "validation_profile_ids", "parent_synthesized_for_validation"
+      ],
+      "properties": {
+        "lineage_parent_revision_ids": {"type": "array", "items": {"type": "string"}},
+        "physics_reference_ids": {"type": "array", "items": {"type": "string"}},
+        "model_reference_ids": {"type": "array", "items": {"type": "string"}},
+        "validation_profile_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "parent_synthesized_for_validation": {"const": false}
+      }
+    },
+    "routing_basis": {
+      "type": "object",
+      "required": ["module_ids", "mission_contract_id", "evaluator_id", "family_field_used_for_routing"],
+      "properties": {"family_field_used_for_routing": {"const": false}}
+    },
+    "non_routing_classifications": {
+      "type": "array",
+      "items": {"type": "object", "required": ["non_routing"], "properties": {"non_routing": {"const": true}}}
+    },
+    "screens": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["screen_id", "status", "layer", "candidate_specific_override_allowed"],
+        "properties": {
+          "status": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+          "candidate_specific_override_allowed": {"const": false}
+        }
+      }
+    },
+    "decision": {"enum": ["common_screen_pass", "hard_reject_candidate_instance"]},
+    "promotion_authorized": {"const": false}
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/mechanism-expansion-extension-v10-1.0.0.json",
+  "title": "LMC mechanism-expansion v10 structural extension",
+  "description": "Append-only overlay for v10 generated genomes. The sealed confinement_genome.schema.json remains unchanged. This overlay declares the new sheared-flow Z-pinch family, open-linear field-line class, and linear-pinch core while retaining the base IR object layout and unit-bearing quantities.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "design_id",
+    "mission",
+    "family",
+    "topology",
+    "symmetry",
+    "plasma_regions",
+    "field_sources",
+    "stability_mechanisms",
+    "exhaust",
+    "engineering",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "family": {"const": "sheared_flow_z_pinch"},
+    "topology": {
+      "type": "object",
+      "required": ["field_line_class", "rotation_transform_sources"],
+      "properties": {
+        "field_line_class": {"const": "open_linear"},
+        "rotation_transform_sources": {
+          "type": "array",
+          "const": ["not_applicable"]
+        },
+        "expected_flux_surfaces": {"const": false},
+        "expected_separatrix": {"const": false}
+      }
+    },
+    "symmetry": {
+      "type": "object",
+      "required": ["class", "field_periods"],
+      "properties": {
+        "class": {"const": "axisymmetric"},
+        "field_periods": {"const": 1}
+      }
+    },
+    "plasma_regions": {
+      "type": "array",
+      "minItems": 3,
+      "contains": {
+        "type": "object",
+        "required": ["id", "kind", "geometry_model", "parameters"],
+        "properties": {
+          "kind": {"const": "linear_pinch_core"},
+          "parameters": {
+            "type": "object",
+            "required": ["plasma_radius", "half_length", "edge_azimuthal_field"]
+          }
+        }
+      },
+      "minContains": 1,
+      "maxContains": 1
+    },
+    "flux_connections": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["from_region_id", "to_region_id", "kind"],
+        "properties": {"kind": {"const": "open_field_line"}}
+      }
+    }
+  },
+  "x-lmc-base-schema": "confinement_genome.schema.json",
+  "x-lmc-claim-boundary": "Structural overlay only; physics applicability and all five gates remain evaluator responsibilities."
+}

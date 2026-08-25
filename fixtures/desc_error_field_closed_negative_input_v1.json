@@ -1,0 +1,26 @@
+{
+  "runner_version": "desc_coil_current_error_response_runner_v1",
+  "candidate_id": "stellarator_fourier_8647ca48b309418d__direct_cut_negative",
+  "candidate_binding_hash": "880600761cdb8b134c8a6ad97fc912294f837bbb9e99ce5aecb22495341b0bb1",
+  "stability_problem_hash": "51b706c43fff1514cf191c810d2f63fd7d66bd4c0123fb661fae287de5ddef91",
+  "optimization_input_artifact": {
+    "path": "runs/frontier_pool24_constrained_coil_v2_input_20260816.json",
+    "sha256": "66896dd31feaf3286581b95de0e17040a57d2ef8d4bdd9400324c507715bca97"
+  },
+  "optimization_result_artifact": {
+    "path": "runs/frontier_pool24_constrained_coil_v2_raw_20260816.json",
+    "sha256": "7f878a58aa2f7951b155ea296552f1ce079e9e150fd0e610dd65f53be4bb3c3e"
+  },
+  "diagnostic": {
+    "angular_resolutions": [20, 30, 40],
+    "virtual_casing_m": 12,
+    "virtual_casing_n": 8,
+    "biot_savart_source_points": 512,
+    "chunk_size": 24,
+    "fractional_current_error": 0.001,
+    "random_seed": 20260824,
+    "random_pattern_count": 8,
+    "comparison_normalized_bn_reference": 0.01,
+    "maximum_fine_relative_change": 0.05
+  }
+}

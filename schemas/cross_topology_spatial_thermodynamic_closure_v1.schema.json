@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_spatial_thermodynamic_closure_v1.schema.json",
+  "title": "Cross-topology spatial thermodynamic closure v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "operator_principle",
+    "independent_assumption_artifact_id", "independent_assumption_artifact_hash",
+    "controls", "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_spatial_thermodynamic_closure_v1"},
+    "operator_principle": {"type": "string", "minLength": 200},
+    "independent_assumption_artifact_hash": {"$ref": "#/$defs/hash"},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["design_id", "diagnostic_legacy_family_label",
+          "family_label_used_for_operator_selection",
+          "source_spatial_pressure_artifact_id",
+          "source_spatial_pressure_artifact_hash",
+          "independent_state_source_kind", "closures",
+          "reaction_convergence",
+          "fine_total_fusion_to_fuel_bremsstrahlung_ratio",
+          "common_assumed_state_fails_fusion_exceeds_fuel_bremsstrahlung",
+          "complete_c2", "promotion_authorized"],
+        "properties": {
+          "family_label_used_for_operator_selection": {"const": false},
+          "source_spatial_pressure_artifact_hash": {"$ref": "#/$defs/hash"},
+          "independent_state_source_kind": {"const": "design_assumption"},
+          "closures": {"type": "array", "minItems": 2,
+            "items": {"type": "object",
+              "required": ["resolution_label", "resolution_rank", "cell_count",
+                "pressure_grid_hash", "independent_profile_hash", "closure_hash",
+                "maximum_pressure_relative_residual",
+                "maximum_quasi_neutrality_relative_residual", "closure_status",
+                "c2_state_closure_authorized",
+                "runtime_state_assessment_status", "runtime_state_assessment_hash",
+                "reaction_observation"],
+              "properties": {
+                "pressure_grid_hash": {"$ref": "#/$defs/hash"},
+                "independent_profile_hash": {"$ref": "#/$defs/hash"},
+                "closure_hash": {"$ref": "#/$defs/hash"},
+                "closure_status": {"const": "pass"},
+                "c2_state_closure_authorized": {"const": false},
+                "runtime_state_assessment_status": {"const": "unknown"},
+                "runtime_state_assessment_hash": {"$ref": "#/$defs/hash"}
+              }
+            }},
+          "complete_c2": {"const": false},
+          "promotion_authorized": {"const": false}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "spatial_pressure_grid_count",
+        "closure_pass_count", "runtime_state_unknown_count",
+        "numeric_fusion_power_observation_count",
+        "numeric_fuel_ion_bremsstrahlung_observation_count",
+        "c2_state_closure_authorized_count", "c2_fusion_power_authorized_count",
+        "assumed_state_fusion_below_fuel_bremsstrahlung_count",
+        "dd_fusion_to_bremsstrahlung_ratio_relative_spread",
+        "complete_power_balance_authorized_count", "complete_c2_count",
+        "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "spatial_pressure_grid_count": {"const": 8},
+        "closure_pass_count": {"const": 8},
+        "runtime_state_unknown_count": {"const": 8},
+        "numeric_fusion_power_observation_count": {"const": 5},
+        "numeric_fuel_ion_bremsstrahlung_observation_count": {"const": 8},
+        "c2_state_closure_authorized_count": {"const": 0},
+        "c2_fusion_power_authorized_count": {"const": 0},
+        "assumed_state_fusion_below_fuel_bremsstrahlung_count": {"const": 2},
+        "dd_fusion_to_bremsstrahlung_ratio_relative_spread": {
+          "type": "number", "minimum": 0, "maximum": 1e-12},
+        "complete_power_balance_authorized_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 600},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

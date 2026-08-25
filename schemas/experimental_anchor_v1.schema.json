@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/experimental_anchor_v1.schema.json",
+  "title": "ExperimentalAnchorV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "anchor_id", "candidate_id", "physics_hash", "anchor_kind", "status", "device_id", "campaign_id", "shot_or_condition_id", "provenance", "operating_history", "observable_comparisons", "supported_claims", "unresolved_reasons", "evidence_ceiling", "anchor_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "anchor_id": {"type": "string"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "physics_hash": {"$ref": "#/$defs/hash"},
+    "anchor_kind": {"enum": ["measured_experiment", "published_design_reference", "missing"]},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "device_id": {"type": "string"},
+    "campaign_id": {"type": "string"},
+    "shot_or_condition_id": {"type": "string"},
+    "provenance": {"type": "object"},
+    "operating_history": {"type": "object"},
+    "observable_comparisons": {"type": "array", "items": {"$ref": "#/$defs/comparison"}},
+    "supported_claims": {"type": "array", "items": {"type": "string"}},
+    "unresolved_reasons": {"type": "array", "items": {"type": "string"}},
+    "evidence_ceiling": {"type": "string", "minLength": 1},
+    "anchor_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "comparison": {
+      "type": "object",
+      "required": ["observable_id", "measured_value", "model_value", "unit", "combined_standard_uncertainty", "acceptance_sigma", "model_output_hash", "status"],
+      "properties": {
+        "observable_id": {"type": "string", "minLength": 1},
+        "measured_value": {"type": "number"},
+        "model_value": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1},
+        "combined_standard_uncertainty": {"type": "number", "exclusiveMinimum": 0},
+        "acceptance_sigma": {"type": "number", "exclusiveMinimum": 0},
+        "model_output_hash": {"$ref": "#/$defs/hash"},
+        "status": {"enum": ["pass", "fail"]}
+      }
+    }
+  }
+}

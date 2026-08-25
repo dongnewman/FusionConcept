@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/frontier_causal_decomposition_v33.schema.json",
+  "title": "FusionConceptAI v33 frontier causal decomposition artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "search_version",
+    "input_binding",
+    "decomposition_contract",
+    "aggregate",
+    "archives",
+    "deterministic_result_hash",
+    "promotion_credit",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "frontier_causal_decomposition_v33"},
+    "decomposition_contract": {
+      "type": "object",
+      "required": ["record_count", "family_count", "records_per_family"],
+      "properties": {
+        "record_count": {"const": 55},
+        "family_count": {"const": 11},
+        "records_per_family": {"const": 5}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["promotion_count", "medium_fidelity_authorized_count"],
+      "properties": {
+        "promotion_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0}
+      }
+    }
+  }
+}

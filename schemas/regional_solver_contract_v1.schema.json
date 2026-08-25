@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/regional_solver_contract_v1.schema.json",
+  "title": "RegionalSolverContractV1",
+  "type": "object",
+  "required": ["schema_version", "generation_stage", "generator_id", "routing_basis",
+    "family_label_used", "region_records", "interface_records",
+    "actuator_sizing_records", "forbidden_methods", "contract_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "generation_stage": {"const": "before_common_screen"},
+    "generator_id": {"const": "regional_genome_grammar_v61"},
+    "routing_basis": {"type": "string", "minLength": 1},
+    "family_label_used": {"const": false},
+    "region_records": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "interface_records": {"type": "array", "items": {"type": "object"}},
+    "actuator_sizing_records": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "forbidden_methods": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "contract_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

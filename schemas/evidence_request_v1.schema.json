@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "evidence_request_v1.schema.json",
+  "title": "EvidenceRequestV1", "type": "object", "additionalProperties": false,
+  "required": ["request_id", "question", "target_obligations", "admissible_evidence_classes",
+    "required_discrimination_power", "required_uncertainty", "validity_domain", "safety_constraints",
+    "budget_limits", "deadline_or_priority"],
+  "properties": {
+    "request_id": {"type": "string"}, "question": {"type": "string"},
+    "target_obligations": {"type": "array", "minItems": 1}, "admissible_evidence_classes": {"type": "array", "minItems": 1},
+    "required_discrimination_power": {"type": "string"}, "required_uncertainty": {"type": "string"},
+    "validity_domain": {"type": ["array", "object", "string"]}, "safety_constraints": {"type": "array"},
+    "budget_limits": {"type": "object"}, "deadline_or_priority": {"type": ["string", "number"]}
+  }
+}

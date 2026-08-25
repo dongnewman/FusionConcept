@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/time_integration_contract_v2.schema.json",
+  "title": "TimeIntegrationContractV2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "mode", "active_phase_kind", "active_phase_duration_s", "shot_repetition_rate_hz", "cycle_period_s", "pulse_active_fraction", "plant_availability_factor", "average_power_basis", "energy_to_average_power_rule", "event_times_s", "source_bindings", "family_label_used", "contract_hash"],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "mode": {"const": "pulsed"},
+    "active_phase_kind": {"type": "string", "minLength": 1},
+    "active_phase_duration_s": {"type": "number", "exclusiveMinimum": 0},
+    "shot_repetition_rate_hz": {"type": "number", "exclusiveMinimum": 0},
+    "cycle_period_s": {"type": "number", "exclusiveMinimum": 0},
+    "pulse_active_fraction": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+    "plant_availability_factor": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+    "average_power_basis": {"enum": ["scheduled_operating_cycle", "calendar_average"]},
+    "energy_to_average_power_rule": {"const": "energy_per_shot_j_times_shot_repetition_rate_hz"},
+    "event_times_s": {"type": "array", "minItems": 2, "items": {"type": "number", "minimum": 0}},
+    "source_bindings": {"type": "object"},
+    "family_label_used": {"const": false},
+    "contract_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

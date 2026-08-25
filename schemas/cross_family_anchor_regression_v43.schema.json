@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/cross_family_anchor_regression_v43.schema.json",
+  "title": "Cross-family anchor regression v43 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "search_version",
+    "stage",
+    "anchor_contract",
+    "aggregate",
+    "family_summaries",
+    "highest_leverage_gaps",
+    "promotion_credit",
+    "claim_boundary",
+    "input_binding",
+    "archives",
+    "run_date",
+    "deterministic_result_hash",
+    "source_hashes",
+    "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "cross_family_anchor_regression_v43"},
+    "stage": {"const": "sealed_cross_family_known_device_anchor_regression"},
+    "anchor_contract": {
+      "type": "object",
+      "required": [
+        "route_level_experiment_is_not_candidate_validation",
+        "family_solver_control_is_not_module_validation",
+        "source_only_route_receives_no_directional_credit",
+        "source_family_mismatch_is_blocking",
+        "unknown_metrics_must_remain_unknown",
+        "known_device_anchor_cannot_promote_unseen_candidate"
+      ],
+      "additionalProperties": {"type": "boolean"}
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "observable_route_count",
+        "family_count",
+        "route_anchor_class_counts",
+        "route_level_experimental_direction_count",
+        "target_family_solver_baseline_count",
+        "global_solver_control_count",
+        "global_solver_control_pass_count",
+        "unknown_claim_guard_pass_count",
+        "candidate_specific_executable_validation_count",
+        "source_family_mismatch_count",
+        "medium_fidelity_authorized_count",
+        "promotion_count",
+        "old_domain_scale_up_authorized"
+      ],
+      "properties": {
+        "observable_route_count": {"const": 23},
+        "family_count": {"const": 6},
+        "route_level_experimental_direction_count": {"const": 8},
+        "target_family_solver_baseline_count": {"const": 2},
+        "global_solver_control_count": {"const": 3},
+        "global_solver_control_pass_count": {"const": 3},
+        "unknown_claim_guard_pass_count": {"const": 3},
+        "candidate_specific_executable_validation_count": {"const": 0},
+        "source_family_mismatch_count": {"const": 1},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "old_domain_scale_up_authorized": {"const": false}
+      }
+    },
+    "family_summaries": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {"type": "object"}
+    },
+    "highest_leverage_gaps": {
+      "type": "array",
+      "minItems": 5,
+      "items": {"type": "object"}
+    },
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 100},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

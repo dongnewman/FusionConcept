@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "executable_physics_genome_v2.schema.json",
+  "title": "Executable Physics Genome 0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "base_genome_physics_hash", "physics_modules", "directed_particle_sources"],
+  "properties": {
+    "schema_version": {"const": "0.3.0"},
+    "base_genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "physics_modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "executable_physics_genome_v1.schema.json#/$defs/module"}
+    },
+    "directed_particle_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/directed_source"}
+    }
+  },
+  "$defs": {
+    "vec2": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"type": "number"}
+    },
+    "vec3": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"type": "number"}
+    },
+    "strings": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "directed_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "actuator_id", "target_domain_ids", "injected_species_id", "source_charge_state", "particle_mass_kg", "coordinate_frame", "source_position_m", "target_position_m", "divergence_half_angles_rad", "focal_lengths_m", "emitter_size_m", "apertures", "declared_power_w", "primary_particle_energy_j", "declared_source_current_a", "spectrum_fraction_basis", "spectrum_normalization_rule", "energy_components", "actuator_parameter_bindings", "source_ids"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "actuator_id": {"type": "string", "minLength": 1},
+        "target_domain_ids": {"$ref": "#/$defs/strings"},
+        "injected_species_id": {"type": "string", "minLength": 1},
+        "source_charge_state": {"type": "integer", "minimum": 1},
+        "particle_mass_kg": {"type": "number", "exclusiveMinimum": 0},
+        "coordinate_frame": {"$ref": "#/$defs/frame"},
+        "source_position_m": {"$ref": "#/$defs/vec3"},
+        "target_position_m": {"$ref": "#/$defs/vec3"},
+        "divergence_half_angles_rad": {"$ref": "#/$defs/vec2"},
+        "focal_lengths_m": {"$ref": "#/$defs/vec2"},
+        "emitter_size_m": {"$ref": "#/$defs/vec2"},
+        "apertures": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/aperture"}},
+        "declared_power_w": {"type": "number", "exclusiveMinimum": 0},
+        "primary_particle_energy_j": {"type": "number", "exclusiveMinimum": 0},
+        "declared_source_current_a": {"type": "number", "exclusiveMinimum": 0},
+        "spectrum_fraction_basis": {"const": "neutral_particle_number_fraction"},
+        "spectrum_normalization_rule": {"const": "fractions_sum_to_one_and_total_power_sets_total_neutral_rate"},
+        "energy_components": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/component"}},
+        "actuator_parameter_bindings": {"$ref": "#/$defs/bindings"},
+        "source_ids": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "frame": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "origin_definition"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"const": "cartesian_right_handed"},
+        "origin_definition": {"type": "string", "minLength": 1}
+      }
+    },
+    "aperture": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "shape", "axial_distance_m", "size_m", "transverse_offset_m"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "shape": {"enum": ["rectangle", "ellipse"]},
+        "axial_distance_m": {"type": "number", "exclusiveMinimum": 0},
+        "size_m": {"$ref": "#/$defs/vec2"},
+        "transverse_offset_m": {"$ref": "#/$defs/vec2"}
+      }
+    },
+    "component": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "energy_ratio_to_primary", "molecular_energy_denominator", "fraction"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "energy_ratio_to_primary": {"type": "number", "exclusiveMinimum": 0},
+        "molecular_energy_denominator": {"type": "integer", "minimum": 1},
+        "fraction": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "bindings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["declared_power_parameter_id", "primary_energy_parameter_id", "source_current_parameter_id", "charge_state_parameter_id", "component_fraction_parameter_ids"],
+      "properties": {
+        "declared_power_parameter_id": {"type": "string", "minLength": 1},
+        "primary_energy_parameter_id": {"type": "string", "minLength": 1},
+        "source_current_parameter_id": {"type": "string", "minLength": 1},
+        "charge_state_parameter_id": {"type": "string", "minLength": 1},
+        "component_fraction_parameter_ids": {"$ref": "#/$defs/strings"}
+      }
+    }
+  }
+}

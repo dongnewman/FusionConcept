@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/tokamak_regime_access_intervention_v50.schema.json",
+  "title": "Tokamak regime access intervention v50 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "experiment_contract",
+    "aggregate", "next_actions", "promotion_credit", "claim_boundary",
+    "input_binding", "archives", "run_date", "deterministic_result_hash",
+    "source_hashes", "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "tokamak_regime_access_intervention_v50"},
+    "stage": {"const": "sealed_tokamak_operating_regime_access_counterfactual_qd"},
+    "experiment_contract": {
+      "type": "object",
+      "required": [
+        "sealed_v46_core_reconstruction_required",
+        "sealed_v48_formula_reproduction_required",
+        "preregistered_regime_states",
+        "non_regime_background_canonically_fixed",
+        "regime_gene_consumed_by_applicability_gate",
+        "current_performance_values_must_remain_invariant",
+        "threshold_model_count",
+        "threshold_envelope_is_conservative_maximum",
+        "qd_selection_uses_performance",
+        "experiment_can_promote_candidate"
+      ],
+      "properties": {
+        "preregistered_regime_states": {"const": [0, 1]},
+        "threshold_model_count": {"const": 3},
+        "qd_selection_uses_performance": {"const": false},
+        "experiment_can_promote_candidate": {"const": false}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "input_candidate_count", "tokamak_candidate_count",
+        "tokamak_assembly_count", "regime_state_count", "trial_count",
+        "fixed_non_regime_background_count", "regime_gene_present_count",
+        "regime_gene_consumed_count", "current_performance_invariant_count",
+        "unique_physics_hash_count", "candidate_precondition_state_change_count",
+        "candidate_declaration_state_change_count",
+        "candidate_applicability_response_state_change_count",
+        "source_domain_complete_count",
+        "candidate_specific_comparison_authorized_count",
+        "common_baseline_ranking_authorized_count",
+        "medium_fidelity_authorized_count", "promotion_count",
+        "qd_cell_count", "qd_performance_selected_cell_count",
+        "by_regime_state"
+      ],
+      "properties": {
+        "input_candidate_count": {"const": 2000},
+        "tokamak_candidate_count": {"const": 360},
+        "tokamak_assembly_count": {"const": 180},
+        "regime_state_count": {"const": 2},
+        "trial_count": {"const": 720},
+        "fixed_non_regime_background_count": {"const": 720},
+        "regime_gene_present_count": {"const": 720},
+        "regime_gene_consumed_count": {"const": 720},
+        "current_performance_invariant_count": {"const": 720},
+        "unique_physics_hash_count": {"const": 720},
+        "candidate_precondition_state_change_count": {"const": 0},
+        "candidate_declaration_state_change_count": {"const": 360},
+        "candidate_applicability_response_state_change_count": {"const": 360},
+        "source_domain_complete_count": {"const": 0},
+        "candidate_specific_comparison_authorized_count": {"const": 0},
+        "common_baseline_ranking_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "qd_cell_count": {"const": 360},
+        "qd_performance_selected_cell_count": {"const": 0}
+      }
+    },
+    "next_actions": {"type": "array", "minItems": 5},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 900},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/failure_directed_geometry_triage_v21.schema.json",
+  "title": "Failure-directed mirror geometry triage v21",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "run_date", "result_hash",
+    "input_binding", "failure_census", "task_schedule", "preview_execution",
+    "full_review_execution", "outcome", "archives", "claim_boundary",
+    "promotion_credit", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "failure_directed_geometry_triage_v21" },
+    "stage": { "const": "rejection_only_mirror_finite_coil_triage" },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "claim_boundary": { "type": "string", "minLength": 40 },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["medium_fidelity_authorized_count", "physics_evidence_level_change"],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

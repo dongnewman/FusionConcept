@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_assembly_binding_v1.schema.json",
+  "title": "Candidate Assembly Binding V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "base_candidate_binding_hash", "plasma_configuration_hash", "operating_point_hash", "field_source_component_hashes", "boundary_hash", "actuator_manifest_hash", "engineering_manifest_hash", "assembly_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "base_candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "plasma_configuration_hash": {"$ref": "#/$defs/hash"},
+    "operating_point_hash": {"$ref": "#/$defs/hash"},
+    "field_source_component_hashes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/hash"}},
+    "boundary_hash": {"$ref": "#/$defs/hash"},
+    "actuator_manifest_hash": {"$ref": "#/$defs/hash"},
+    "engineering_manifest_hash": {"$ref": "#/$defs/hash"},
+    "assembly_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

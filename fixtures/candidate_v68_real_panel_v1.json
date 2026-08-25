@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "panel_id": "candidate_v68_real_panel_v1",
+  "claim_boundary": "This fixed panel binds existing candidate and control artifacts to v68 residual obligations. Source integrity, equilibrium, stability, winding, or deposition components are not complete C2 residual closure. Missing state and operator evidence remains unknown; missing artifacts are unsupported; component hard failures retain their narrow scope.",
+  "required_residual_obligations": [
+    "particle_state",
+    "ion_energy_state",
+    "electron_energy_state",
+    "species_state",
+    "transport_operator",
+    "reaction_operator",
+    "fuel_depletion_operator",
+    "radiation_operator",
+    "self_heating_operator",
+    "fueling_actuator",
+    "heating_actuator",
+    "exhaust_actuator",
+    "radiation_control_actuator",
+    "actuator_capacity",
+    "actuator_efficiency",
+    "complete_power_ledger"
+  ],
+  "entries": [
+    {
+      "panel_entry_id": "closed_positive_iter",
+      "candidate_id": "iter_inductive_baseline_candidate_solver_v1",
+      "candidate_binding_hash": "6ac19ecf8861c400762dc4e9453add81bfeb2e2b45d94830f02188d8f9f48273",
+      "binding_hash_kind": "candidate_solver_physics_hash",
+      "route": "closed_flux",
+      "control_role": "positive_control",
+      "sources": [{"path": "fixtures/candidate_solver_reference_anchors_v1.json", "sha256": "5b213239790ff3a837c26d0d045bbb0719c998a749e1c54ad2ec61c7d0260304"}],
+      "evidence": {
+        "particle_state": "complete",
+        "ion_energy_state": "unknown",
+        "electron_energy_state": "unknown",
+        "species_state": "partial",
+        "transport_operator": "partial",
+        "reaction_operator": "partial",
+        "heating_actuator": "partial",
+        "actuator_capacity": "partial",
+        "complete_power_ledger": "partial"
+      },
+      "hard_failures": [],
+      "evidence_ceiling": "published_design_anchor_and_L1_components_not_experimental_complete_C2"
+    },
+    {
+      "panel_entry_id": "closed_positive_w7x",
+      "candidate_id": "desc_w7x_packaged_regression",
+      "candidate_binding_hash": "b9993c11a1b12a3ff17865be79b66dc40044cab21a05a541c1f0c3db1baddedd",
+      "binding_hash_kind": "genome_physics_hash",
+      "route": "closed_flux",
+      "control_role": "positive_control",
+      "sources": [
+        {"path": "examples/desc_w7x_regression_genome.json", "sha256": "8aa4beefffad6545116a03691784a98f042e7ccd70f72f43580fdc3d2ce23935"},
+        {"path": "runs/desc_w7x_equilibrium_convergence_v1.json", "sha256": "9f280ec4d55ee878ca22d9fd6b5d2694a7ce0709567106b0316e4b611e0ccd5f"},
+        {"path": "runs/fidelity1_desc_w7x_regression.json", "sha256": "207cee90e535dec56d66397826b6101a502f3d0f2663187691dbe3a7e947fecc"}
+      ],
+      "evidence": {"transport_operator": "partial"},
+      "hard_failures": [],
+      "evidence_ceiling": "candidate_bound_DESC_equilibrium_regression_without_particle_energy_actuator_closure"
+    },
+    {
+      "panel_entry_id": "closed_candidate_pool24",
+      "candidate_id": "stellarator_fourier_8647ca48b309418d",
+      "candidate_binding_hash": "880600761cdb8b134c8a6ad97fc912294f837bbb9e99ce5aecb22495341b0bb1",
+      "binding_hash_kind": "candidate_physics_hash",
+      "route": "closed_flux",
+      "control_role": "candidate",
+      "sources": [
+        {"path": "runs/c1_c2_frontier_candidates_v1_20260816.json", "sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"},
+        {"path": "runs/frontier_pool24_constrained_coil_v2_raw_20260816.json", "sha256": "7f878a58aa2f7951b155ea296552f1ce079e9e150fd0e610dd65f53be4bb3c3e"}
+      ],
+      "evidence": {},
+      "hard_failures": [],
+      "evidence_ceiling": "fixed_boundary_equilibrium_sampled_stability_and_rejected_discrete_coil_grammar"
+    },
+    {
+      "panel_entry_id": "closed_candidate_pool56",
+      "candidate_id": "stellarator_fourier_41bc23ddd23f210d",
+      "candidate_binding_hash": "b9af7c060e9fd38da00bbe7985f7b33c1a8a91d1f4bf5fca0edbb0f2fd7979b5",
+      "binding_hash_kind": "candidate_physics_hash",
+      "route": "closed_flux",
+      "control_role": "candidate",
+      "sources": [
+        {"path": "runs/c1_c2_frontier_candidates_v1_20260816.json", "sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"},
+        {"path": "runs/frontier_pool56_surface_current_v2_resolution_audit_20260816.json", "sha256": "d5ed4fdee49e80940fe16046d348e287b54ac420a50505377c053e913d1be7b6"}
+      ],
+      "evidence": {},
+      "hard_failures": [],
+      "evidence_ceiling": "fixed_boundary_equilibrium_sampled_stability_and_continuous_surface_current_only"
+    },
+    {
+      "panel_entry_id": "closed_negative_discrete_coil",
+      "candidate_id": "stellarator_fourier_8647ca48b309418d__direct_cut_negative",
+      "candidate_binding_hash": "880600761cdb8b134c8a6ad97fc912294f837bbb9e99ce5aecb22495341b0bb1",
+      "binding_hash_kind": "candidate_physics_hash_with_negative_operator",
+      "route": "closed_flux",
+      "control_role": "negative_control",
+      "sources": [{"path": "runs/frontier_pool24_constrained_coil_v2_raw_20260816.json", "sha256": "7f878a58aa2f7951b155ea296552f1ce079e9e150fd0e610dd65f53be4bb3c3e"}],
+      "evidence": {},
+      "hard_failures": [{"obligation": "field_source_realization", "code": "fail_discrete_coil_bn_and_constraint_gate", "scope": "fixed_current_32_coil_grammar"}],
+      "evidence_ceiling": "candidate_bound_field_source_grammar_failure_not_complete_C2"
+    },
+    {
+      "panel_entry_id": "open_positive_c2w",
+      "candidate_id": "c2w_enhanced_performance_candidate_solver_v1",
+      "candidate_binding_hash": "577a542bbcc9aa39e33478ff2c56580ec4258ececeb4a1fe1316f7d4192aea0d",
+      "binding_hash_kind": "candidate_solver_physics_hash",
+      "route": "open_flux",
+      "control_role": "positive_control",
+      "sources": [{"path": "fixtures/candidate_solver_reference_anchors_v1.json", "sha256": "5b213239790ff3a837c26d0d045bbb0719c998a749e1c54ad2ec61c7d0260304"}],
+      "evidence": {
+        "particle_state": "complete",
+        "ion_energy_state": "unknown",
+        "electron_energy_state": "unknown",
+        "species_state": "partial",
+        "transport_operator": "partial",
+        "heating_actuator": "partial",
+        "actuator_capacity": "partial"
+      },
+      "hard_failures": [],
+      "evidence_ceiling": "published_experimental_range_with_reduced_untrapped_parallel_loss_operator"
+    },
+    {
+      "panel_entry_id": "open_positive_wham",
+      "candidate_id": "pleiades_wham_nbi_kinetic_control_v1",
+      "candidate_binding_hash": "c9131eacdcf2f44aefcbb07cf2948b2a5d51b66bb494d4ef7869dc067d422b5b",
+      "binding_hash_kind": "derived_genome_physics_hash",
+      "route": "open_flux",
+      "control_role": "positive_control",
+      "sources": [
+        {"path": "examples/pleiades_wham_nbi_kinetic_control_executable_physics_v2.json", "sha256": "eb83278e0636a58ae2b153db1d986a1769e39776b4eba9480f28fe3120b33747"},
+        {"path": "runs/fidelity1_pleiades_wham_regression.json", "sha256": "453c1674c349d2c819a463d4c86d3143ad02d60d62d66000025fc9e062b22137"},
+        {"path": "runs/pleiades_pyfidasim_nbi_deposition_v2.json", "sha256": "e1869c970685414e513f5303f1e662e1aa314e8f3776ab2882ced5a97773ef52"},
+        {"path": "runs/pleiades_adiabatic_loss_cone_v1.json", "sha256": "d7a61a2f9f1eef3356b3fc9ec3d02db414618a8e3375c0d6d63659089f68ad49"}
+      ],
+      "evidence": {
+        "species_state": "partial",
+        "transport_operator": "partial",
+        "heating_actuator": "partial",
+        "actuator_capacity": "complete"
+      },
+      "hard_failures": [],
+      "evidence_ceiling": "candidate_bound_isotropic_equilibrium_NBI_deposition_and_reduced_loss_components"
+    },
+    {
+      "panel_entry_id": "open_candidate_mirror_low_force",
+      "candidate_id": "mirror_repair_3bcbc727c31cba40",
+      "candidate_binding_hash": "b9bd35db8e3eab02073303b45a1fd841f3e872713fd72c304ea53cef1069537c",
+      "binding_hash_kind": "candidate_physics_hash",
+      "route": "open_flux",
+      "control_role": "candidate",
+      "sources": [
+        {"path": "runs/c1_c2_frontier_candidates_v1_20260816.json", "sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"},
+        {"path": "runs/candidate_specific_mirror_winding_candidates_v1_20260816.jsonl", "sha256": "a92ec1dab6bad61d55a10cf10a41fd9955095d5558f561562cba31aef0ad83f3"}
+      ],
+      "evidence": {},
+      "hard_failures": [{
+        "obligation": "minimum_b_stability",
+        "code": "fail_repaired_finite_winding_local_field_strength_saddle",
+        "scope": "unassisted_two_coil_vacuum_minimum_b_path_only"
+      }],
+      "evidence_ceiling": "finite_winding_vacuum_component_only"
+    },
+    {
+      "panel_entry_id": "open_candidate_mirror_high_ratio",
+      "candidate_id": "mirror_repair_709865532b1b12a2",
+      "candidate_binding_hash": "b7698da5a1e05ad57130bae8e668658cf901fcbbaa8016a28ecd397191931002",
+      "binding_hash_kind": "candidate_physics_hash",
+      "route": "open_flux",
+      "control_role": "candidate",
+      "sources": [
+        {"path": "runs/c1_c2_frontier_candidates_v1_20260816.json", "sha256": "d1ccb998ece08029f72b765f684ca0dd42c73fcbe165b2240a4ad99d6a8bb6af"},
+        {"path": "runs/candidate_specific_mirror_winding_candidates_v1_20260816.jsonl", "sha256": "a92ec1dab6bad61d55a10cf10a41fd9955095d5558f561562cba31aef0ad83f3"}
+      ],
+      "evidence": {},
+      "hard_failures": [{
+        "obligation": "minimum_b_stability",
+        "code": "fail_repaired_finite_winding_local_field_strength_saddle",
+        "scope": "unassisted_two_coil_vacuum_minimum_b_path_only"
+      }],
+      "evidence_ceiling": "finite_winding_vacuum_component_only"
+    },
+    {
+      "panel_entry_id": "open_negative_local_saddle",
+      "candidate_id": "pleiades_finite_beta_8f0f1fdeee636895__minimum_b_negative",
+      "candidate_binding_hash": "8f0f1fdeee636895fccb897c7676e2aaf1047f4a96ffab20735610cd9019acc3",
+      "binding_hash_kind": "candidate_hash_with_negative_operator",
+      "route": "open_flux",
+      "control_role": "negative_control",
+      "sources": [{"path": "runs/open_world_pleiades_candidate_stability_screen_v1_20260821.json", "sha256": "e97add78558c704a7ed424a2ea11ddc20470077e693648fabab3c49f01e04598"}],
+      "evidence": {},
+      "hard_failures": [{"obligation": "minimum_b_stability", "code": "fail_local_field_strength_saddle", "scope": "vacuum_local_minimum_b_path"}],
+      "evidence_ceiling": "candidate_bound_local_minimum_B_failure_not_complete_C2"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_bound_eight_stage_search_v56.schema.json",
+  "title": "Candidate-bound eight-stage search artifact v56",
+  "type": "object",
+  "required": ["judgment_input", "artifact_summary", "input_hash"],
+  "properties": {
+    "judgment_input": {
+      "type": "object",
+      "required": [
+        "candidate_id", "candidate_index", "mission", "physical_description",
+        "topology_causality", "state_evolution", "perturbation_stability",
+        "transport_burn", "net_energy", "engineering", "uncertainty_evidence",
+        "evidence", "stage_artifacts", "generation_audit", "claim_boundary"
+      ]
+    },
+    "artifact_summary": {
+      "type": "object",
+      "required": [
+        "candidate_index", "candidate_id", "physics_hash", "input_hash",
+        "artifact_count", "artifact_statuses", "executed_native_backend_count",
+        "candidate_c1_authorized_artifact_count", "hard_falsified_artifact_count",
+        "promotion_authorized"
+      ]
+    },
+    "input_hash": {"type": "string", "minLength": 64, "maxLength": 64}
+  }
+}

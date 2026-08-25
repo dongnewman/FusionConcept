@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/tier1_module_evidence_ablation_v38.schema.json",
+  "title": "FusionConceptAI v38 tier-1 module evidence ablation",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "input_binding", "ablation_scope",
+    "aggregate", "archives", "deterministic_result_hash",
+    "promotion_credit", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "tier1_module_evidence_ablation_v38"},
+    "ablation_scope": {
+      "type": "object",
+      "required": [
+        "tier1_group_count", "tier1_module_count",
+        "fixed_background_case_count", "graph_response_count"
+      ],
+      "properties": {
+        "tier1_group_count": {"const": 3},
+        "tier1_module_count": {"const": 7},
+        "fixed_background_case_count": {"const": 8},
+        "graph_response_count": {"const": 13}
+      }
+    },
+    "promotion_credit": {
+      "type": "object",
+      "required": [
+        "solver_execution_count", "formula_implementation_count",
+        "promotion_count", "medium_fidelity_authorized_count"
+      ],
+      "properties": {
+        "solver_execution_count": {"const": 0},
+        "formula_implementation_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0}
+      }
+    }
+  }
+}

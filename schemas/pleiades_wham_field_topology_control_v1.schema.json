@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pleiades_wham_field_topology_control_v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "stage",
+    "design_id",
+    "genome_physics_hash",
+    "field_grid",
+    "coarse_topology",
+    "fine_topology",
+    "coarse_neighbor_separation",
+    "fine_neighbor_separation",
+    "two_resolution_convergence",
+    "topology_evidence_bundle",
+    "solver_field_bridge",
+    "assessment",
+    "summary",
+    "claim_boundary",
+    "deterministic_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "pleiades_wham_field_topology_control_v1"},
+    "design_id": {"type": "string", "minLength": 1},
+    "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "field_grid": {
+      "type": "object",
+      "required": ["artifact", "artifact_sha256", "declared_field_source_hash", "source_solver_result_hash", "field_minimum_t", "field_maximum_t", "radial_point_count", "axial_point_count", "covered_domain_ids"],
+      "properties": {
+        "artifact": {"const": "knowledge/pleiades_wham_vacuum_field_grid_v1.json"},
+        "artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "radial_point_count": {"const": 31},
+        "axial_point_count": {"const": 81},
+        "covered_domain_ids": {"const": ["pleiades_wham_isotropic_core"]}
+      }
+    },
+    "coarse_topology": {"type": "object"},
+    "fine_topology": {"type": "object"},
+    "coarse_neighbor_separation": {
+      "type": "object",
+      "required": ["pair_count", "directional_record_count", "valid_directional_record_count", "maximum_log_amplification_per_m", "limit_per_m", "status", "records", "result_hash"],
+      "properties": {
+        "pair_count": {"const": 9},
+        "directional_record_count": {"const": 18},
+        "valid_directional_record_count": {"const": 18},
+        "maximum_log_amplification_per_m": {"type": "number", "maximum": 1},
+        "limit_per_m": {"const": 1},
+        "status": {"const": "pass"}
+      }
+    },
+    "fine_neighbor_separation": {
+      "type": "object",
+      "required": ["pair_count", "directional_record_count", "valid_directional_record_count", "maximum_log_amplification_per_m", "limit_per_m", "status", "records", "result_hash"],
+      "properties": {
+        "pair_count": {"const": 9},
+        "directional_record_count": {"const": 18},
+        "valid_directional_record_count": {"const": 18},
+        "maximum_log_amplification_per_m": {"type": "number", "maximum": 1},
+        "limit_per_m": {"const": 1},
+        "status": {"const": "pass"}
+      }
+    },
+    "two_resolution_convergence": {"type": "object"},
+    "topology_evidence_bundle": {"type": "object"},
+    "solver_field_bridge": {"type": "object"},
+    "assessment": {"type": "object"},
+    "summary": {
+      "type": "object",
+      "required": ["source_solver_status", "coarse_topology_class", "fine_topology_class", "coarse_open_fraction", "fine_open_fraction", "fate_agreement_fraction", "connection_length_relative_difference", "neighbor_separation_status", "fine_maximum_neighbor_log_amplification_per_m", "neighbor_log_amplification_limit_per_m", "neighbor_log_amplification_absolute_difference_per_m", "covered_topology_domain_count", "declared_topology_domain_count", "two_resolution_status", "C1_evidence_authorized", "highest_evidence_stage", "promotion_count"],
+      "properties": {
+        "source_solver_status": {"const": "pass"},
+        "coarse_topology_class": {"const": "open_dominated"},
+        "fine_topology_class": {"const": "open_dominated"},
+        "coarse_open_fraction": {"const": 1},
+        "fine_open_fraction": {"const": 1},
+        "fate_agreement_fraction": {"const": 1},
+        "connection_length_relative_difference": {"type": "number", "maximum": 0.05},
+        "neighbor_separation_status": {"const": "pass"},
+        "fine_maximum_neighbor_log_amplification_per_m": {"type": "number", "maximum": 1},
+        "neighbor_log_amplification_limit_per_m": {"const": 1},
+        "neighbor_log_amplification_absolute_difference_per_m": {"type": "number", "maximum": 0.05},
+        "covered_topology_domain_count": {"const": 1},
+        "declared_topology_domain_count": {"const": 3},
+        "two_resolution_status": {"const": "pass"},
+        "C1_evidence_authorized": {"const": false},
+        "highest_evidence_stage": {"const": "C0"},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/time_semantics_conflict_v1.schema.json",
+  "title": "TimeSemanticsConflictV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "status", "conflict_code", "declared_active_phase_duration_s", "declared_shot_repetition_rate_hz", "declared_cycle_period_s", "implied_pulse_active_fraction", "source_bindings", "family_label_used", "conflict_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"const": "unsupported"},
+    "conflict_code": {"const": "active_phase_exceeds_declared_cycle"},
+    "declared_active_phase_duration_s": {"type": "number", "exclusiveMinimum": 0},
+    "declared_shot_repetition_rate_hz": {"type": "number", "exclusiveMinimum": 0},
+    "declared_cycle_period_s": {"type": "number", "exclusiveMinimum": 0},
+    "implied_pulse_active_fraction": {"type": "number", "exclusiveMinimum": 1},
+    "source_bindings": {"type": "object"},
+    "family_label_used": {"const": false},
+    "conflict_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

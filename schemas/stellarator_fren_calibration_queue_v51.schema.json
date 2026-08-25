@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/stellarator_fren_calibration_queue_v51.schema.json",
+  "title": "Stellarator f_ren calibration queue v51 sealed artifact",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "audit_contract",
+    "calibration_contract", "fixture_audit", "aggregate", "next_actions",
+    "promotion_credit", "claim_boundary", "input_binding", "archives",
+    "run_date", "deterministic_result_hash", "source_hashes",
+    "runtime_measurements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "search_version": {"const": "stellarator_fren_calibration_queue_v51"},
+    "stage": {"const": "sealed_stellarator_fren_readiness_and_structural_acquisition_queue"},
+    "audit_contract": {
+      "type": "object",
+      "required": [
+        "sealed_v46_core_reconstruction_required",
+        "sealed_v48_ISS04_reproduction_required", "candidate_f_ren_value_emitted",
+        "fixture_can_transfer_to_v46_candidate",
+        "selection_budget_per_configuration_class", "selection_uses_performance",
+        "selection_uses_current_heuristic_f_ren", "experiment_can_promote_candidate"
+      ],
+      "properties": {
+        "candidate_f_ren_value_emitted": {"const": false},
+        "fixture_can_transfer_to_v46_candidate": {"const": false},
+        "selection_budget_per_configuration_class": {"const": 6},
+        "selection_uses_performance": {"const": false},
+        "selection_uses_current_heuristic_f_ren": {"const": false},
+        "experiment_can_promote_candidate": {"const": false}
+      }
+    },
+    "calibration_contract": {"type": "object"},
+    "fixture_audit": {
+      "type": "object",
+      "required": [
+        "source_disjoint_from_v46_candidates",
+        "low_order_effective_ripple_computation_completed",
+        "all_sampled_radii_below_published_relation_domain",
+        "candidate_f_ren_calibration_authorized", "role"
+      ],
+      "properties": {
+        "source_disjoint_from_v46_candidates": {"const": true},
+        "low_order_effective_ripple_computation_completed": {"const": true},
+        "all_sampled_radii_below_published_relation_domain": {"const": true},
+        "candidate_f_ren_calibration_authorized": {"const": false},
+        "role": {"const": "solver_capability_fixture_only"}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "required": [
+        "input_candidate_count", "stellarator_candidate_count",
+        "stellarator_assembly_count", "configuration_class_count",
+        "sealed_v46_core_reproduced_count",
+        "sealed_v48_ISS04_formula_reproduced_count",
+        "explicit_candidate_boundary_count", "candidate_equilibrium_profile_count",
+        "candidate_effective_ripple_count",
+        "candidate_high_order_ripple_converged_count",
+        "candidate_specific_f_ren_count", "source_domain_complete_count",
+        "candidate_specific_comparison_authorized_count",
+        "common_baseline_ranking_authorized_count",
+        "medium_fidelity_authorized_count", "promotion_count",
+        "current_heuristic_f_ren_range", "current_iota_proxy_range",
+        "acquisition_queue_count",
+        "acquisition_selection_used_performance_count",
+        "acquisition_selection_used_current_heuristic_f_ren_count",
+        "by_configuration_class"
+      ],
+      "properties": {
+        "input_candidate_count": {"const": 2000},
+        "stellarator_candidate_count": {"const": 288},
+        "stellarator_assembly_count": {"const": 144},
+        "configuration_class_count": {"const": 3},
+        "sealed_v46_core_reproduced_count": {"const": 288},
+        "sealed_v48_ISS04_formula_reproduced_count": {"const": 288},
+        "explicit_candidate_boundary_count": {"const": 0},
+        "candidate_equilibrium_profile_count": {"const": 0},
+        "candidate_effective_ripple_count": {"const": 0},
+        "candidate_high_order_ripple_converged_count": {"const": 0},
+        "candidate_specific_f_ren_count": {"const": 0},
+        "source_domain_complete_count": {"const": 0},
+        "candidate_specific_comparison_authorized_count": {"const": 0},
+        "common_baseline_ranking_authorized_count": {"const": 0},
+        "medium_fidelity_authorized_count": {"const": 0},
+        "promotion_count": {"const": 0},
+        "acquisition_queue_count": {"const": 18},
+        "acquisition_selection_used_performance_count": {"const": 0},
+        "acquisition_selection_used_current_heuristic_f_ren_count": {"const": 0}
+      }
+    },
+    "next_actions": {"type": "array", "minItems": 5},
+    "promotion_credit": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1000},
+    "input_binding": {"type": "object"},
+    "archives": {"type": "object"},
+    "run_date": {"const": "2026-08-15"},
+    "deterministic_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_hashes": {"type": "object"},
+    "runtime_measurements": {"type": "object"}
+  },
+  "additionalProperties": false
+}

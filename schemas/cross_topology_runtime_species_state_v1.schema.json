@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_runtime_species_state_v1.schema.json",
+  "title": "Cross-topology runtime species-state gap census v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "operator_principle", "controls",
+    "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_runtime_species_state_v1"},
+    "operator_principle": {"type": "string", "minLength": 200},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["design_id", "diagnostic_legacy_family_label",
+          "family_label_used_for_requirement_routing", "source_genome_id",
+          "source_genome_sha256", "problem", "runtime_state_evidence",
+          "assessment", "scalar_pressure_used_to_infer_density_or_temperature",
+          "static_inventory_mapped_to_conservation_rate", "complete_c2",
+          "promotion_authorized"],
+        "properties": {
+          "family_label_used_for_requirement_routing": {"const": false},
+          "source_genome_sha256": {"$ref": "#/$defs/hash"},
+          "runtime_state_evidence": {"type": "array", "maxItems": 0},
+          "scalar_pressure_used_to_infer_density_or_temperature": {"const": false},
+          "static_inventory_mapped_to_conservation_rate": {"const": false},
+          "complete_c2": {"const": false},
+          "promotion_authorized": {"const": false},
+          "problem": {
+            "type": "object",
+            "required": ["compiler_version", "design_id", "genome_physics_hash",
+              "fuel_declaration", "population_domain_ids",
+              "scalar_pressure_reference_required", "species_catalog",
+              "requirements", "evidence_tasks", "problem_hash"],
+            "properties": {
+              "problem_hash": {"$ref": "#/$defs/hash"},
+              "requirements": {"type": "array", "minItems": 2},
+              "species_catalog": {"type": "array", "minItems": 2}
+            }
+          },
+          "assessment": {
+            "type": "object",
+            "required": ["status", "complete_required_state",
+              "c2_state_component_authorized", "conservation_rate_authorized",
+              "failed_check_ids", "evidence_tasks", "assessment_hash"],
+            "properties": {
+              "status": {"const": "unknown"},
+              "complete_required_state": {"const": false},
+              "c2_state_component_authorized": {"const": false},
+              "conservation_rate_authorized": {"const": false},
+              "assessment_hash": {"$ref": "#/$defs/hash"}
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "population_domain_count",
+        "required_initial_species_state_count", "reaction_product_catalog_count",
+        "anisotropy_resolved_requirement_count", "provided_runtime_species_state_count",
+        "state_pass_count", "state_fail_count", "state_unknown_count",
+        "c2_state_component_authorized_count", "conservation_rate_authorized_count",
+        "complete_c2_count", "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "population_domain_count": {"const": 3},
+        "required_initial_species_state_count": {"const": 6},
+        "reaction_product_catalog_count": {"const": 8},
+        "anisotropy_resolved_requirement_count": {"const": 4},
+        "provided_runtime_species_state_count": {"const": 0},
+        "state_pass_count": {"const": 0},
+        "state_fail_count": {"const": 0},
+        "state_unknown_count": {"const": 3},
+        "c2_state_component_authorized_count": {"const": 0},
+        "conservation_rate_authorized_count": {"const": 0},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "string", "minLength": 300},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

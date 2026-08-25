@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/c2_bound_gate_evidence_v1.schema.json",
+  "title": "C2 Bound Gate Evidence V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_binding_hash", "state_result_hash", "gate_id", "status", "obligation_ids", "failed_obligation_ids", "evidence_hashes", "evidence_tasks", "terminates_candidate", "claim_boundary", "evidence_bundle_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_result_hash": {"$ref": "#/$defs/hash"},
+    "gate_id": {"enum": ["engineering", "independent_evidence"]},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "obligation_ids": {"$ref": "#/$defs/stringSet"},
+    "failed_obligation_ids": {"$ref": "#/$defs/stringSet"},
+    "evidence_hashes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/hash"}},
+    "evidence_tasks": {"$ref": "#/$defs/stringSet"},
+    "terminates_candidate": {"type": "boolean"},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "evidence_bundle_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stringSet": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+  }
+}

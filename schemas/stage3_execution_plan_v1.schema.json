@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/stage3_execution_plan_v1.schema.json",
+  "title": "Stage3ExecutionPlanV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "completeness", "conclusion", "classification_code", "candidate_binding_hash", "topology_hash", "numerical_ir_hash", "solve_plan_hash", "capability_matches", "missing_capabilities", "state_layout", "residual_plan", "jacobian_plan", "mass_matrix_plan", "boundary_interface_plan", "initial_state_strategy", "discretization_levels", "evidence_obligations", "estimated_cost", "execution_model", "reasons", "backend_native_objects_present"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "completeness": {"enum": ["complete", "incomplete"]},
+    "conclusion": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "classification_code": {"type": "string", "minLength": 1},
+    "candidate_binding_hash": {"type": "string"},
+    "topology_hash": {"type": "string"},
+    "numerical_ir_hash": {"type": "string"},
+    "solve_plan_hash": {"type": "string"},
+    "capability_matches": {"type": "array", "items": {"type": "object"}},
+    "missing_capabilities": {"type": "array", "items": {"type": "string"}},
+    "state_layout": {"type": "array", "items": {"type": "object"}},
+    "residual_plan": {"type": "array", "items": {"type": "object"}},
+    "jacobian_plan": {"type": "array", "items": {"type": "object"}},
+    "mass_matrix_plan": {"type": "array", "items": {"type": "object"}},
+    "boundary_interface_plan": {"type": "array", "items": {"type": "object"}},
+    "initial_state_strategy": {"type": "array", "items": {"type": "string"}},
+    "discretization_levels": {"type": "array", "items": {"type": "integer"}},
+    "evidence_obligations": {"type": "array", "items": {"type": "object"}},
+    "estimated_cost": {"type": "object"},
+    "execution_model": {"type": "object"},
+    "reasons": {"type": "array", "items": {"type": "string"}},
+    "backend_native_objects_present": {"const": false}
+  },
+  "allOf": [
+    {"if": {"properties": {"conclusion": {"enum": ["pass", "fail"]}}}, "then": {"properties": {"completeness": {"const": "complete"}}}},
+    {"if": {"properties": {"conclusion": {"enum": ["unknown", "unsupported"]}}}, "then": {"properties": {"completeness": {"enum": ["complete", "incomplete"]}}}}
+  ]
+}

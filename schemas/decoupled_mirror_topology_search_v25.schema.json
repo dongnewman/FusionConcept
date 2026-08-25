@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/decoupled_mirror_topology_search_v25.schema.json",
+  "title": "Decoupled mirror topology search v25",
+  "type": "object",
+  "required": [
+    "schema_version", "search_version", "stage", "run_date", "result_hash",
+    "input_binding", "search_contract", "preview_execution",
+    "full_review_execution", "outcome", "archives", "claim_boundary",
+    "promotion_credit", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "decoupled_mirror_topology_search_v25" },
+    "stage": { "const": "decoupled_field_allocation_and_geometry_rejection_search" },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "claim_boundary": { "type": "string", "minLength": 100 },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["medium_fidelity_authorized_count", "physics_evidence_level_change"],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

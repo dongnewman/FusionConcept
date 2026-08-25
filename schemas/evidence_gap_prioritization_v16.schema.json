@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/evidence-gap-prioritization-v16.json",
+  "title": "Cross-family evidence-gap prioritization v16 artifact",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "stage",
+    "algorithm",
+    "inputs",
+    "family_extension_registry",
+    "mission_contract_registry",
+    "frontier_summary",
+    "frontier_candidates",
+    "priorities",
+    "budget",
+    "medium_fidelity_decision",
+    "claim_boundary",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "stage": { "const": "cross_family_evidence_gap_prioritization_v16" },
+    "algorithm": { "const": "deterministic_falsification_leverage_per_cost_v1" },
+    "frontier_summary": {
+      "type": "object",
+      "required": ["candidate_count", "family_counts", "disposition_counts", "five_gate_pass_count"]
+    },
+    "frontier_candidates": { "type": "array", "minItems": 1 },
+    "priorities": { "type": "array", "minItems": 1 },
+    "budget": {
+      "type": "object",
+      "required": ["budget_units", "spent_cost_units", "selected_task_ids"]
+    },
+    "medium_fidelity_decision": {
+      "type": "object",
+      "required": ["authorized_candidate_count", "review_queue", "reason"]
+    },
+    "claim_boundary": { "type": "string", "minLength": 1 },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

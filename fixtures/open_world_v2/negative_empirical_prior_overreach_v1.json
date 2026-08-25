@@ -1,0 +1,281 @@
+{
+    "hazards": [
+    ],
+    "governance_policy_ref": "open_world_governance_v2",
+    "actuators": [
+    ],
+    "applicability_claims": [
+    ],
+    "unknowns": [
+        {
+            "kind": "missing_parameter",
+            "impact_scope": "C1 numerical evidence",
+            "subject_refs": [
+                "exchange_operator"
+            ],
+            "risk_class": "evidence_gap",
+            "obligation_refs": [
+                "solver_calibration_obligation"
+            ],
+            "unknown_id": "solver_calibration_unknown"
+        }
+    ],
+    "predictions": [
+        {
+            "observable_ref": "stored_energy_observable",
+            "prediction_id": "heldout_decay_rate"
+        }
+    ],
+    "equivalence_claims": [
+    ],
+    "populations": [
+        {
+            "population_id": "bulk_ions",
+            "domain_ref": "plasma_domain"
+        }
+    ],
+    "required_ruleset_refs": [
+        "open_world_minimal_rules_v1"
+    ],
+    "provenance": {
+        "physical_novelty_claimed": false,
+        "buildability_claimed": false,
+        "claim_level": "C0_C1_method_only",
+        "origin": "manual_method_fixture"
+    },
+    "invariants": [
+        {
+            "invariant_id": "total_energy_account",
+            "kind": "energy_ledger"
+        }
+    ],
+    "controls": [
+    ],
+    "evidence_obligation_graph": {
+        "dependencies": [
+        ],
+        "obligations": [
+            {
+                "uncertainty_requirement": "bounded_error",
+                "mandatory_for_missions": [
+                    "method_vertical_slice_v1"
+                ],
+                "termination_conditions": [
+                    "pass",
+                    "fail",
+                    "unsupported"
+                ],
+                "unknown_refs": [
+                    "solver_calibration_unknown"
+                ],
+                "level": "C1",
+                "dependencies": [
+                ],
+                "promotion_scope_required": "C1",
+                "status": "unknown",
+                "applicability_proof_ref": null,
+                "resolution_value": 1,
+                "evidence_refs": [
+                ],
+                "obligation_id": "solver_calibration_obligation",
+                "acceptable_evidence_classes": [
+                    "analytic",
+                    "numerical"
+                ],
+                "assessment_scope": "exchange_operator",
+                "discrimination_requirement": "negative_control",
+                "required_data_products": [
+                    "trajectory"
+                ],
+                "calibration_requirements": [
+                ],
+                "activation_predicate": "C0_pass",
+                "next_action_refs": [
+                    "run_analytic_decay_check"
+                ],
+                "failure_scope_options": [
+                    "parameter_instance",
+                    "numerical_method"
+                ]
+            }
+        ],
+        "shared_evidence_correlations": [
+        ]
+    },
+    "rule_coverage_requirement": "explicit_gaps",
+    "engineering_objects": [
+    ],
+    "classifications": [
+        {
+            "label": "method_fixture",
+            "non_routing": true
+        }
+    ],
+    "sensors": [
+    ],
+    "state_variables": [
+        {
+            "kind": "scalar",
+            "epistemic_state": "derived",
+            "state_id": "stored_energy",
+            "unit": "J",
+            "domain_ref": "plasma_domain"
+        }
+    ],
+    "boundaries": [
+        {
+            "kind": "topology_event",
+            "event": "open_to_closed_then_open",
+            "boundary_id": "switching_boundary",
+            "domain_refs": [
+                "plasma_domain"
+            ]
+        }
+    ],
+    "mission_contracts": [
+        {
+            "required_independent_confirmation": false,
+            "allowed_evidence_classes": [
+                "analytic",
+                "numerical"
+            ],
+            "prohibited_claims": [
+                "net_energy",
+                "buildability",
+                "reactor_readiness"
+            ],
+            "mission_id": "method_vertical_slice_v1",
+            "mandatory_ruleset_refs": [
+                "open_world_minimal_rules_v1"
+            ],
+            "minimum_tuning_budget_policy": {
+                "minimum_trials": 3
+            },
+            "claim_ceiling": "C1",
+            "engineering_preflight_policy": "mandatory_non_promoting",
+            "required_promotion_scope": "method_c1_scope"
+        }
+    ],
+    "observables": [
+        {
+            "state_ref": "stored_energy",
+            "noise_floor": 0.01,
+            "unit": "J",
+            "observable_id": "stored_energy_observable"
+        }
+    ],
+    "promotion_scopes": [
+        {
+            "calibration_refs": [
+            ],
+            "expiry_or_version": "fixture_v1",
+            "valid_missions": [
+                "method_vertical_slice_v1"
+            ],
+            "valid_parameter_ranges": {
+                "normalized_decay_rate": [
+                    0.1,
+                    2.0
+                ]
+            },
+            "valid_domains": [
+                "plasma_domain"
+            ],
+            "independent_confirmation_required": false,
+            "max_gate": "C1",
+            "valid_observables": [
+                "stored_energy_observable"
+            ],
+            "scope_id": "method_c1_scope",
+            "required_ruleset_hash": "pending"
+        }
+    ],
+    "spacetime_support": {
+        "time_dimensions": 1,
+        "space_dimensions": 1,
+        "coordinate_charts": [
+            "normalized_axial_coordinate"
+        ],
+        "event_and_rollback_semantics": "deterministic_event_replay"
+    },
+    "reservoirs": [
+        {
+            "kind": "energy",
+            "reservoir_id": "driver_reservoir",
+            "unit": "J"
+        }
+    ],
+    "identity": {
+        "design_id": "negative_empirical_prior_overreach_v1",
+        "parent_revision_ids": [
+        ],
+        "parameter_instance_id": "manual_temporal_open_closed_v1_parameters",
+        "revision_id": "manual_temporal_open_closed_v1_r1",
+        "topology_skeleton_id": "manual_temporal_open_closed_v1_topology",
+        "model_choice_id": "manual_temporal_open_closed_v1_model",
+        "human_label": "manual temporal open closed v1"
+    },
+    "schema_version": "2.0.0",
+    "extensions": {
+    },
+    "domains": [
+        {
+            "kind": "plasma",
+            "geometry": "open_closed_0d_compartments",
+            "domain_id": "plasma_domain"
+        }
+    ],
+    "interactions": [
+        {
+            "affected_domains": [
+                "plasma_domain"
+            ],
+            "epistemic_state": "empirical_prior",
+            "symmetry_claims": [
+            ],
+            "unknown_refs": [
+            ],
+            "promotion_scope_ref": "method_c1_scope",
+            "provenance": {
+                "source": "analytic_fixture"
+            },
+            "outputs": [
+                "stored_energy"
+            ],
+            "timescale_claims": [
+            ],
+            "assumptions": [
+                "lumped_0d"
+            ],
+            "validity_claims": [
+            ],
+            "operator_spec": {
+                "form": "known_operator_ref",
+                "ref": "linear_reservoir_exchange_v1"
+            },
+            "interaction_id": "exchange_operator",
+            "conservation_effects": [
+                {
+                    "source_reservoir": "driver_reservoir",
+                    "sink_reservoir": "plasma_reservoir",
+                    "account": "energy"
+                }
+            ],
+            "parameter_specs": [
+            ],
+            "observable_links": [
+                "stored_energy_observable"
+            ],
+            "failure_scope_options": [
+                "parameter_instance",
+                "numerical_method"
+            ],
+            "role_annotations": [
+                "energy_exchange"
+            ],
+            "inputs": [
+                "stored_energy"
+            ]
+        }
+    ]
+}

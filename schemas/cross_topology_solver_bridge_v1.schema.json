@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cross_topology_solver_bridge_v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "stage", "controls", "summary", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_solver_bridge_v1"},
+    "controls": {"type": "array", "minItems": 3, "maxItems": 3},
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "source_solver_pass_count", "authorized_contract_counts", "normalized_pass_metric_counts", "field_line_topology_unmapped_count", "C0_count", "hard_unknown_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "source_solver_pass_count": {"const": 3},
+        "authorized_contract_counts": {
+          "type": "object",
+          "properties": {"freegs": {"const": 1}, "desc_w7x": {"const": 0}, "pleiades_wham": {"const": 1}},
+          "required": ["freegs", "desc_w7x", "pleiades_wham"],
+          "additionalProperties": false
+        },
+        "normalized_pass_metric_counts": {
+          "type": "object",
+          "properties": {"freegs": {"const": 1}, "desc_w7x": {"const": 0}, "pleiades_wham": {"const": 1}},
+          "required": ["freegs", "desc_w7x", "pleiades_wham"],
+          "additionalProperties": false
+        },
+        "field_line_topology_unmapped_count": {"const": 3},
+        "C0_count": {"const": 3},
+        "hard_unknown_count": {"const": 3},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

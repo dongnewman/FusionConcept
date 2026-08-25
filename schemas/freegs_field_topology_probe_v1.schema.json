@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "freegs_field_topology_probe_v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "stage", "design_id", "genome_physics_hash",
+    "field_grid_artifact", "field_grid_sha256", "coarse_topology", "fine_topology",
+    "two_resolution_convergence", "topology_evidence_bundle", "summary",
+    "required_next_operator", "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "freegs_field_topology_probe_v1"},
+    "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "field_grid_artifact": {"const": "knowledge/freegs_total_field_grid_v1.json"},
+    "field_grid_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "required_next_operator": {"const": "closed_flux_surface_descriptor_v1"},
+    "summary": {
+      "type": "object",
+      "required": ["seed_count", "coarse_bounded_unresolved_fraction",
+        "fine_bounded_unresolved_fraction", "coarse_topology_class",
+        "fine_topology_class", "poincare_or_endpoint_status",
+        "two_resolution_status", "C1_evidence_authorized", "promotion_count"],
+      "properties": {
+        "seed_count": {"const": 8},
+        "coarse_bounded_unresolved_fraction": {"const": 1},
+        "fine_bounded_unresolved_fraction": {"const": 1},
+        "coarse_topology_class": {"const": "unresolved"},
+        "fine_topology_class": {"const": "unresolved"},
+        "poincare_or_endpoint_status": {"const": "unknown"},
+        "two_resolution_status": {"const": "unknown"},
+        "C1_evidence_authorized": {"const": false},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "deterministic_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

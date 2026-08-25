@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/diagnostic_cross_family_qd_v32.schema.json",
+  "title": "Diagnostic cross-family failure-frontier QD v32",
+  "type": "object",
+  "required": [
+    "schema_version", "run_date", "search_version", "stage",
+    "deterministic_result_hash", "input_binding", "search_contract",
+    "execution", "search_summary", "archives", "claim_boundary",
+    "promotion_credit", "runtime_measurements", "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "diagnostic_cross_family_qd_v32" },
+    "stage": { "const": "recoverable_22000_candidate_eleven_family_diagnostic_qd" },
+    "deterministic_result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["diagnostic_search_authorized", "five_gate_comparison_authorized", "medium_fidelity_authorized_count", "physics_evidence_level_change"],
+      "properties": {
+        "diagnostic_search_authorized": { "const": true },
+        "five_gate_comparison_authorized": { "const": false },
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

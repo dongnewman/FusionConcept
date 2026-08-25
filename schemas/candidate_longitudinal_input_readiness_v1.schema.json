@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_longitudinal_input_readiness_v1.schema.json",
+  "title": "Candidate Longitudinal Input Readiness V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_binding_hash", "state_package_hash", "status", "requirements", "missing_input_ids", "partial_input_ids", "unsupported_input_ids", "evidence_tasks", "readiness_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"$ref": "#/$defs/hash"},
+    "state_package_hash": {"$ref": "#/$defs/hash"},
+    "status": {"enum": ["pass", "unknown", "unsupported"]},
+    "requirements": {"type": "array", "minItems": 56, "maxItems": 56, "items": {"$ref": "#/$defs/requirement"}},
+    "missing_input_ids": {"$ref": "#/$defs/stringSet"},
+    "partial_input_ids": {"$ref": "#/$defs/stringSet"},
+    "unsupported_input_ids": {"$ref": "#/$defs/stringSet"},
+    "evidence_tasks": {"$ref": "#/$defs/stringSet"},
+    "readiness_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stringSet": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_id", "input_role", "unit", "value", "evidence_status", "source_kind", "source_result_hash", "requirement_hash"],
+      "properties": {
+        "input_id": {"type": "string", "minLength": 1},
+        "input_role": {"enum": ["initial_condition", "parameter"]},
+        "unit": {"type": "string", "minLength": 1},
+        "value": {"type": ["number", "null"]},
+        "evidence_status": {"enum": ["complete", "partial", "unknown", "unsupported"]},
+        "source_kind": {"enum": ["missing", "candidate_solver", "measured", "experiment_calibrated", "published_candidate_design_input", "compiler_derived_numerical", "device_template", "family_default", "manufactured"]},
+        "source_result_hash": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+        "requirement_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

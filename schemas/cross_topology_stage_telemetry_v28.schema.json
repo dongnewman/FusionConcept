@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_stage_telemetry_v28.schema.json",
+  "title": "Cross-topology stage and resource telemetry v28",
+  "type": "object",
+  "required": [
+    "schema_version", "run_date", "search_version", "stage", "result_hash",
+    "input_binding", "telemetry_contract", "deterministic_outcome",
+    "archives", "claim_boundary", "promotion_credit", "runtime_measurements",
+    "source_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "search_version": { "const": "cross_topology_stage_telemetry_v28" },
+    "stage": { "const": "family_balanced_fidelity0_stage_and_resource_profile" },
+    "result_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "promotion_credit": {
+      "type": "object",
+      "required": ["medium_fidelity_authorized_count", "physics_evidence_level_change"],
+      "properties": {
+        "medium_fidelity_authorized_count": { "const": 0 },
+        "physics_evidence_level_change": { "const": 0 }
+      }
+    }
+  },
+  "additionalProperties": true
+}

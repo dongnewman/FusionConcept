@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/laser-icf-extension-v15.json",
+  "title": "Append-only v15 laser inertial-confinement vocabulary",
+  "description": "This overlay extends, but does not edit, the sealed base genome schema.",
+  "type": "object",
+  "properties": {
+    "family": {"const": "inertial_confinement_fusion"},
+    "topology": {
+      "type": "object",
+      "properties": {
+        "field_line_class": {"const": "not_applicable_inertial"}
+      }
+    }
+  },
+  "$defs": {
+    "v15_plasma_region_kind": {
+      "enum": ["inertial_fusion_capsule", "inertial_fusion_hotspot", "inertial_fusion_chamber"]
+    },
+    "v15_field_source_kind": {
+      "enum": ["laser_beam_array", "hohlraum_xray_enclosure", "fast_ignitor_beam"]
+    },
+    "v15_compression_system_kind": {
+      "enum": ["laser_indirect_drive", "laser_direct_drive", "laser_fast_ignition"]
+    },
+    "v15_required_evaluator": {
+      "enum": ["icf_radiation_hydrodynamics", "laser_plasma_interaction", "fast_ignition_transport", "repeat_rate_laser_driver", "target_factory_and_injection", "pulsed_chamber_clearing", "first_wall_lifetime"]
+    }
+  },
+  "x-lmc-base-schema": "confinement_genome.schema.json"
+}

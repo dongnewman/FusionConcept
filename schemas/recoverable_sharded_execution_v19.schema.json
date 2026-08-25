@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/recoverable_sharded_execution_v19.schema.json",
+  "title": "Recoverable sharded execution v19 formal artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_date",
+    "execution_version",
+    "stage",
+    "formal_probe",
+    "source_hashes",
+    "acceptance",
+    "claim_boundary",
+    "promotion_credit",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "run_date": { "type": "string" },
+    "execution_version": { "const": "recoverable_sharded_execution_v19" },
+    "stage": { "const": "search_infrastructure_validation_only" },
+    "formal_probe": {
+      "type": "object",
+      "required": [
+        "spec",
+        "shard_plan",
+        "uninterrupted",
+        "interruption_stage",
+        "resumed",
+        "cache_reuse",
+        "failure_injection",
+        "atomic_store_audit",
+        "equivalence_audit"
+      ],
+      "properties": {
+        "spec": {
+          "type": "object",
+          "required": ["spec_hash", "total_candidates", "shard_size", "max_retries"]
+        },
+        "shard_plan": {
+          "type": "object",
+          "required": ["total_shards", "unique_input_hash_count"]
+        },
+        "uninterrupted": { "$ref": "#/$defs/runResult" },
+        "interruption_stage": { "$ref": "#/$defs/runResult" },
+        "resumed": { "$ref": "#/$defs/runResult" },
+        "cache_reuse": { "$ref": "#/$defs/runResult" },
+        "failure_injection": { "type": "object" },
+        "atomic_store_audit": { "type": "object" },
+        "equivalence_audit": {
+          "type": "object",
+          "required": ["all_runs_complete", "all_result_hashes_equal", "result_hash"]
+        }
+      }
+    },
+    "source_hashes": { "type": "object" },
+    "acceptance": { "type": "object" },
+    "claim_boundary": { "type": "string" },
+    "promotion_credit": { "type": "object" },
+    "result_hash": { "$ref": "#/$defs/hash" }
+  },
+  "$defs": {
+    "hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "runResult": {
+      "type": "object",
+      "required": [
+        "total_shards",
+        "completed_shards",
+        "new_commits",
+        "cache_hits",
+        "retry_failures",
+        "interrupted",
+        "complete",
+        "result_hash"
+      ]
+    }
+  }
+}
+

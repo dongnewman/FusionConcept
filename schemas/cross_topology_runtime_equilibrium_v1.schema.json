@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lmc.local/schemas/cross_topology_runtime_equilibrium_v1.schema.json",
+  "title": "Cross-topology runtime equilibrium evidence v1",
+  "type": "object",
+  "required": ["schema_version", "stage", "controls", "summary",
+    "claim_boundary", "deterministic_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "stage": {"const": "cross_topology_runtime_equilibrium_v1"},
+    "controls": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "prefixItems": [
+        {"$ref": "#/$defs/freegs"},
+        {"$ref": "#/$defs/desc"},
+        {"$ref": "#/$defs/pleiades"}
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": ["control_count", "runtime_scale_pass_count",
+        "runtime_scale_unknown_count", "runtime_equilibrium_module_ready_count",
+        "equilibrium_c2_support_count", "complete_c1_control_count",
+        "complete_c2_count", "new_candidate_count", "promotion_count"],
+      "properties": {
+        "control_count": {"const": 3},
+        "runtime_scale_pass_count": {"const": 2},
+        "runtime_scale_unknown_count": {"const": 1},
+        "runtime_equilibrium_module_ready_count": {"const": 2},
+        "equilibrium_c2_support_count": {"const": 2},
+        "complete_c1_control_count": {"const": 1},
+        "complete_c2_count": {"const": 0},
+        "new_candidate_count": {"const": 0},
+        "promotion_count": {"const": 0}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 200},
+    "deterministic_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "scalePass": {
+      "type": "object",
+      "required": ["status", "value", "fidelity", "candidate_binding_verified",
+        "evidence_hash"],
+      "properties": {
+        "status": {"const": "pass"},
+        "value": {"type": "number"},
+        "fidelity": {"minimum": 2},
+        "candidate_binding_verified": {"const": true},
+        "evidence_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "runtimeReady": {
+      "type": "object",
+      "required": ["runtime_status", "unknown_scale_ids", "unknown_input_ids",
+        "resolution_hash"],
+      "properties": {
+        "runtime_status": {"const": "ready_for_execution"},
+        "unknown_scale_ids": {"type": "array", "maxItems": 0},
+        "unknown_input_ids": {"type": "array", "maxItems": 0},
+        "resolution_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "equilibriumPass": {
+      "type": "object",
+      "required": ["status", "fidelity", "minimum_c2_fidelity",
+        "solver_converged", "force_balance_passed",
+        "independent_residual_verified", "resolution_verified",
+        "candidate_binding_verified", "c2_support_authorized", "evidence_hash"],
+      "properties": {
+        "status": {"const": "pass"},
+        "fidelity": {"minimum": 2},
+        "minimum_c2_fidelity": {"minimum": 2},
+        "solver_converged": {"const": true},
+        "force_balance_passed": {"const": true},
+        "independent_residual_verified": {"const": true},
+        "resolution_verified": {"const": true},
+        "candidate_binding_verified": {"const": true},
+        "c2_support_authorized": {"const": true},
+        "evidence_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "baseControl": {
+      "type": "object",
+      "required": ["control_id", "source_family_label", "program_hash",
+        "scale_evidence", "runtime_module", "equilibrium_evidence",
+        "complete_c1_bound", "complete_c2"],
+      "properties": {
+        "program_hash": {"$ref": "#/$defs/hash"},
+        "complete_c2": {"const": false}
+      }
+    },
+    "freegs": {
+      "allOf": [
+        {"$ref": "#/$defs/baseControl"},
+        {"properties": {
+          "control_id": {"const": "freegs_pointcoil_wall_mixed_topology_control"},
+          "scale_evidence": {"$ref": "#/$defs/scalePass"},
+          "runtime_module": {"$ref": "#/$defs/runtimeReady"},
+          "equilibrium_evidence": {"$ref": "#/$defs/equilibriumPass"},
+          "complete_c1_bound": {"const": true},
+          "physics_assessment": {
+            "properties": {
+              "highest_evidence_stage": {"const": "C1"},
+              "hard_gate_status": {"const": "unknown"},
+              "promotion_authorized": {"const": false}
+            }
+          }
+        }}
+      ]
+    },
+    "desc": {
+      "allOf": [
+        {"$ref": "#/$defs/baseControl"},
+        {"required": ["runtime_input_evidence"], "properties": {
+          "control_id": {"const": "desc_w7x_fixed_boundary_control"},
+          "scale_evidence": {"$ref": "#/$defs/scalePass"},
+          "runtime_input_evidence": {"type": "array", "minItems": 1, "maxItems": 1},
+          "runtime_module": {"$ref": "#/$defs/runtimeReady"},
+          "equilibrium_evidence": {"$ref": "#/$defs/equilibriumPass"},
+          "complete_c1_bound": {"const": false}
+        }}
+      ]
+    },
+    "pleiades": {
+      "allOf": [
+        {"$ref": "#/$defs/baseControl"},
+        {"required": ["equilibrium_unknown_reason"], "properties": {
+          "control_id": {"const": "pleiades_wham_open_field_control"},
+          "scale_evidence": {
+            "properties": {"status": {"const": "unknown"}, "value": {"type": "null"}}
+          },
+          "runtime_module": {
+            "properties": {
+              "runtime_status": {"const": "blocked_unknown_inputs"},
+              "unknown_scale_ids": {"contains": {"const": "pressure_anisotropy_ratio"}},
+              "unknown_input_ids": {"contains": {"const": "particle_distribution"}}
+            }
+          },
+          "equilibrium_evidence": {"type": "null"},
+          "complete_c1_bound": {"const": false}
+        }}
+      ]
+    }
+  }
+}

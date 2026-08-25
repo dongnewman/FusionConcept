@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "freegs_total_field_grid_v1.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version", "status", "coordinate_system", "design_id",
+    "genome_physics_hash", "field_source_id", "field_source_hash",
+    "source_solver_id", "source_solver_result_hash", "source_solver_input_hash",
+    "source_solver_artifact",
+    "covered_domain_ids", "radial_grid_m", "axial_grid_m", "br_t", "bphi_t",
+    "bz_t", "normalized_poloidal_flux", "separatrix", "field_minimum_t",
+    "field_maximum_t", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"const": "pass"},
+    "coordinate_system": {"const": "cylindrical_axisymmetric"},
+    "genome_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "field_source_id": {"const": "freegs_total_field_grid_v1"},
+    "field_source_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_solver_id": {"const": "tokamak_free_boundary_freegs_v1"},
+    "source_solver_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_solver_input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_solver_artifact": {"const": "runs/freegs_candidate_bound_field_source_v1.json"},
+    "covered_domain_ids": {"const": ["freegs_regression_core"]},
+    "radial_grid_m": {"type": "array", "minItems": 65, "maxItems": 65},
+    "axial_grid_m": {"type": "array", "minItems": 65, "maxItems": 65},
+    "br_t": {"type": "array", "minItems": 65, "maxItems": 65},
+    "bphi_t": {"type": "array", "minItems": 65, "maxItems": 65},
+    "bz_t": {"type": "array", "minItems": 65, "maxItems": 65},
+    "normalized_poloidal_flux": {"type": "array", "minItems": 65, "maxItems": 65},
+    "field_minimum_t": {"type": "number", "exclusiveMinimum": 0},
+    "field_maximum_t": {"type": "number", "exclusiveMinimum": 0},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}
