@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/universal_multitopology_acceptance_v89.schema.json",
+  "title": "UniversalMultiTopologyAcceptanceV89",
+  "type": "object",
+  "required": ["schema_version", "acceptance_id", "status", "sentinel_results", "generated_unlabeled_control", "negative_controls", "summary", "unified_chain", "claim_boundary", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "acceptance_id": {"const": "universal_multitopology_device_chain_v89"},
+    "status": {"enum": ["pass", "fail"]},
+    "sentinel_results": {"type": "array", "minItems": 2},
+    "generated_unlabeled_control": {"type": "object"},
+    "negative_controls": {"type": "object"},
+    "summary": {"type": "object", "required": ["known_device_chain_pass_count", "known_device_count", "distinct_hard_survivor_capability_cells", "complete_engineering_vv_device_count"]},
+    "unified_chain": {"type": "array", "minItems": 7},
+    "claim_boundary": {"type": "string"},
+    "artifact_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

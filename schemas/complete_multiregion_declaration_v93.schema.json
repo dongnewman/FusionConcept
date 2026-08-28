@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "complete_multiregion_declaration_v93.schema.json",
+  "title": "Complete regenerated v93 multiregion declaration",
+  "type": "object",
+  "required": ["schema_version", "protocol_id", "source_provenance", "regions", "states", "equations", "interfaces", "sources_sinks", "model_validity_domains", "evidence_obligations", "discretization", "recovery_inventory", "declaration_completeness", "declaration_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v93-pvw-slice1-20260828"},
+    "source_provenance": {"type": "object"},
+    "regions": {"type": "array", "minItems": 1},
+    "states": {"type": "array", "minItems": 1},
+    "equations": {"type": "array", "minItems": 1},
+    "interfaces": {"type": "array", "minItems": 1},
+    "sources_sinks": {"type": "array"},
+    "model_validity_domains": {"type": "array"},
+    "evidence_obligations": {"type": "array", "items": {"type": "string"}},
+    "discretization": {"type": "object"},
+    "recovery_inventory": {"type": "object", "required": ["directly_recovered", "deterministically_derived", "must_recompute", "requires_external_evidence"]},
+    "declaration_completeness": {"type": "object", "required": ["schema_complete", "solver_complete", "must_recompute_count", "external_evidence_gap_count"]},
+    "declaration_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

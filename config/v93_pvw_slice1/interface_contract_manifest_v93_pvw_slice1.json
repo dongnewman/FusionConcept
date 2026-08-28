@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "interface_contract_manifest_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "interfaces": [
+    {"interface_id": "plasma_vacuum", "minus_region": "plasma", "plus_region": "vacuum", "conditions": ["poloidal_flux_continuity", "tangential_magnetic_field_jump_surface_current"], "surface_current_a_per_m": 0.0, "method": "mixed_conforming_trace_constraints"},
+    {"interface_id": "vacuum_wall", "minus_region": "vacuum", "plus_region": "wall", "conditions": ["prescribed_wall_flux"], "method": "strong_dirichlet_on_declared_perfect_conductor"}
+  ],
+  "plasma_vacuum_residuals": ["psi_plasma(a)-psi_vacuum(a)", "q_plasma(a)-q_vacuum(a)-mu0*K_surface"],
+  "penalty_only_forbidden": true,
+  "monolithic_residual_required": true,
+  "domain_decomposed_schur_solve_required": true,
+  "final_monolithic_reaudit_required": true
+}

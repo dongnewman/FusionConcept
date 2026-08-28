@@ -1,0 +1,309 @@
+{
+    "authoritative_stage_directories": [
+        "open_field",
+        "closed_field",
+        "open_end_loss",
+        "closed_p32",
+        "open_finite_pressure",
+        "closed_p64",
+        "closed_p128",
+        "closed_finite_pressure"
+    ],
+    "code_provenance": [
+        {
+            "sha256": "952a51fdb8a7e6a2408fa2786c554917094c7bbf8145eb7adb3c2d7938665c63",
+            "bytes": 9563,
+            "path": "scripts/v86_campaign_cli.jl"
+        },
+        {
+            "sha256": "6dcdbd398f40fa53655a3482a65de6e87b9f3b89f3cf40e597a48773489d2106",
+            "bytes": 70726,
+            "path": "src/FusionConceptAI.jl"
+        },
+        {
+            "sha256": "b1626a9d6e0be0011ebc9c39c85aedba6002fb1a43eebc9b36ead55cc664a583",
+            "bytes": 126926,
+            "path": "src/candidate_joint_physical_optimization_v85.jl"
+        },
+        {
+            "sha256": "14c248b6ad3569c6694352273a093f0c9f2c5789597c143d995fd735b8e5df4e",
+            "bytes": 143621,
+            "path": "src/multitopology_campaign_runtime_v86.jl"
+        },
+        {
+            "sha256": "daa32b1427de1cd49e04481880c940aa28435a18e0088684f4a420375bce5f1a",
+            "bytes": 26850,
+            "path": "test/multitopology_campaign_runtime_v86.jl"
+        }
+    ],
+    "sealed_at_utc": "2026-08-26T12:42:08Z",
+    "mutation_policy": "append_only_new_campaign_required",
+    "unique_candidate_bound_field_solver_input_count": 549,
+    "retroactive_feasibility_credit": false,
+    "explicitly_non_authoritative_directories": [
+        "closed_finite_pressure_audit",
+        "closed_finite_pressure_cache_audit",
+        "closed_finite_pressure_probe"
+    ],
+    "artifact_files": [
+        {
+            "sha256": "4b2f06debc1de748608f963037f9df0b5e03da0127b725fc7881b0b1dab6712a",
+            "bytes": 1341461,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_catalog.json"
+        },
+        {
+            "sha256": "8d8ed3281274527e6651e7e5cca4df7f79521e42644e40b2a73cc496f84871a6",
+            "bytes": 1710608,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_field/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "b21947d6a037249b741e7e6d34ef0bfc1c42467aa2bd2c34b0e746eeb43f738c",
+            "bytes": 892440,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_field/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "ebc0fa142249158b44ae64a7e04cad1b8f9f934c0e109f313a808f0581ef0c2d",
+            "bytes": 1354436,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_field_campaign.json"
+        },
+        {
+            "sha256": "4a2c3ea1da7cbe0f8ca0f702b5b9652828b9ac961acad6ce1dcc2014a7df5aa2",
+            "bytes": 5920193,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_finite_pressure/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "515d6c1cc46dca09541f1e30e2b83322964b081d7db439878f8e33550afb5ef0",
+            "bytes": 80874,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_finite_pressure/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "34d196f740792d52ae783096ce7d2eb4dd5a9fac9208b7d33f9fefbcb7505f7a",
+            "bytes": 133312,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_finite_pressure_campaign.json"
+        },
+        {
+            "sha256": "b3cec1f4a2bfa03815653795479cb23411975e754cc032f167a29430fed5042f",
+            "bytes": 11352829,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p128/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "9a3b96654b87bae0876501774d1f93364fa83be3df08f70df9a60678cd51bb8e",
+            "bytes": 156217,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p128/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "36f5893b2956e9a05fa86c73c37c2ab1700075268236c3b5c772e016d51616a7",
+            "bytes": 250260,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p128_campaign.json"
+        },
+        {
+            "sha256": "387f10595b8aaecfc28f8d004202bda5b84fc83cb4eb0b1981d6c9231de0ac87",
+            "bytes": 11678734,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p32/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "549fbb881b70c611201e44c0ad0c5423457b42e0f22b51139a0941e121b410e0",
+            "bytes": 1301943,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p32/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "31a983ec13c4e2f4cbcf38c731e6bbf66eeb374518ebcc9b8d28c07da60dffff",
+            "bytes": 1461744,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p32_campaign.json"
+        },
+        {
+            "sha256": "8a8e1dec3ff64107875bd20e8f8b2f0edcc774ffc29b38cc1f573ed94ad0b8f2",
+            "bytes": 7927674,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p64/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "b20d5ba23611cefaba274d45f351a0ebafa471ebb4ca20b59614db308246092e",
+            "bytes": 214509,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p64/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "14adc7cecc1b71d4f885391aebb45f3200458a02335bcbea751aa7eddb15e9a6",
+            "bytes": 347094,
+            "path": "runs/v86_medium_structural_campaign_20260826/closed_p64_campaign.json"
+        },
+        {
+            "sha256": "03f1e860221dc7383c0de05646ae9505a6dcc0bba5f7b5b721580c886c48d7be",
+            "bytes": 1993916,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_catalog.json"
+        },
+        {
+            "sha256": "fba84406313e0b4a7c61f85cb7dda2dcee731c18e15c8e7e6f363b2c69b5b1bd",
+            "bytes": 2716257,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_end_loss/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "576ec4249e977d50e8514079593f1bc1b3a633d0d7a71cbaefeefa32850e04b0",
+            "bytes": 1036966,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_end_loss/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "e71d9e5bf7e35d2b4ce7c7e461ce0b97b22ad3cfecce8db0e5280c2a83fb989d",
+            "bytes": 1736570,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_end_loss_campaign.json"
+        },
+        {
+            "sha256": "dde8326833178bf6a1764bb44d26af07bbfa5e22bc33eb10f5c0e1712ab7a379",
+            "bytes": 2375675,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_field/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "e5b6e0ecfe33f8882e186cd89b2d98b3424ead22ead4212b52aa3389ae3d02d6",
+            "bytes": 1306041,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_field/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "e5984a5b0148f4f7a43f3a4746c08220d30fa822ebf8ac4ff0e8969e61504629",
+            "bytes": 2015548,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_field_campaign.json"
+        },
+        {
+            "sha256": "fee5613b81983081189fe87c68b9710cb7db419f5e40afafa4321e0af88c276a",
+            "bytes": 2608447,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_finite_pressure/v86_campaign_merged.jsonl"
+        },
+        {
+            "sha256": "cf0729b1c544a4d381d5e4ee1a91864f18964582a49adb727d16069c7a3dde9b",
+            "bytes": 237889,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_finite_pressure/v86_campaign_merged.summary.json"
+        },
+        {
+            "sha256": "dde5ac8694810333217e53146fff1cc2cb2575a2204af53dc77829d36c6b89b6",
+            "bytes": 399539,
+            "path": "runs/v86_medium_structural_campaign_20260826/open_finite_pressure_campaign.json"
+        }
+    ],
+    "evidence_boundary": {
+        "open_field": "prescribed electrostatic barrier plus paraxial scalar-pressure screen; no self-consistent ambipolar, kinetic, or stability credit",
+        "stability": "not_scheduled because no closed finite-pressure pass exists",
+        "minimality": "no complete physical or engineering minimality claim",
+        "closed_field": "Poincare survival is low-order; all 19 promoted candidate-bound DESC finite-pressure executions failed the declared gate"
+    },
+    "seal_hash": "196a4c3c473ef9e4541fc76adeaa4eb3279b559df5911fcab5c6f64d25a2f235",
+    "stage_records": [
+        {
+            "status_histogram": {
+                "fail": 2,
+                "pass": 322
+            },
+            "candidate_count": 324,
+            "result_hash": "1932c70533ee990987bf96855250cae147908d2523b1313561a22ace3b741d84",
+            "gate": "finite_filament_field",
+            "actual_execution_count": 324,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 324,
+            "stage_directory": "open_field",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "pass": 225
+            },
+            "candidate_count": 225,
+            "result_hash": "497707c8ed54fee2ed208f8431bf3ca279a8c201dd305b4094116539bc658d68",
+            "gate": "finite_filament_field",
+            "actual_execution_count": 225,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 225,
+            "stage_directory": "closed_field",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "fail": 198,
+                "pass": 58
+            },
+            "candidate_count": 256,
+            "result_hash": "aa5f64d208dc0ad3ecdd6f1ce364a38c85105640df7b3f87f20897b1d63f0d64",
+            "gate": "open_field_end_loss",
+            "actual_execution_count": 256,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 256,
+            "stage_directory": "open_end_loss",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "fail": 164,
+                "pass": 59
+            },
+            "candidate_count": 223,
+            "result_hash": "803d4ffec79877d40404843e2e488169888f269f015c6cc86b21612bc21d7577",
+            "gate": "poincare_32",
+            "actual_execution_count": 223,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 223,
+            "stage_directory": "closed_p32",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "fail": 2,
+                "unknown": 3,
+                "pass": 53
+            },
+            "candidate_count": 58,
+            "result_hash": "8cbf731bfb8d379f012239690205207f53a8cb4229b10c824c0819ef56d4432a",
+            "gate": "open_field_finite_pressure_capability",
+            "actual_execution_count": 58,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 58,
+            "stage_directory": "open_finite_pressure",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "pass": 52
+            },
+            "candidate_count": 52,
+            "result_hash": "67bd15f80eaa8f8868da0477ea51213c04e50556055307709cdc4d22e0a234b8",
+            "gate": "poincare_64",
+            "actual_execution_count": 52,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 52,
+            "stage_directory": "closed_p64",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "pass": 37
+            },
+            "candidate_count": 37,
+            "result_hash": "0f4b4b651deea58a08d54c50201495ce2c7397e473f7a7fea6f3e225b6129092",
+            "gate": "poincare_128",
+            "actual_execution_count": 37,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 37,
+            "stage_directory": "closed_p128",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        },
+        {
+            "status_histogram": {
+                "fail": 19
+            },
+            "candidate_count": 19,
+            "result_hash": "cc9c74303b784697befbe6dbcdea18e7b92b8f6f63d54505a008bd7fd0b20c86",
+            "gate": "finite_pressure_equilibrium",
+            "actual_execution_count": 19,
+            "duplicate_solver_execution_key_count": 0,
+            "unique_solver_input_count": 19,
+            "stage_directory": "closed_finite_pressure",
+            "cache_hit_count": 0,
+            "evidence_firewall_passed": true
+        }
+    ],
+    "seal_kind": "v86_medium_structural_campaign_authoritative_seal_v1",
+    "source_run_directory": "runs/v86_medium_structural_campaign_20260826",
+    "schema_version": "1.0.0"
+}

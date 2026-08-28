@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+  "manifest_id": "capability_route_manifest_v92",
+  "sealed_at_utc": "2026-08-27T16:42:05Z",
+  "mutable": false,
+  "allowed_routing_axes": ["declared_operators", "state_variables", "region_dimensions", "boundary_conditions", "interface_conditions", "field_semantics", "evidence_obligations", "solver_input_compatibility"],
+  "forbidden_routing_keys": ["family", "device_type", "parent_label", "known_generated_label", "named_device_class_label"],
+  "forbidden_key_scan_required_for_requests_and_routes": true,
+  "routes": [
+    {"route_id": "axisymmetric_closed_free_boundary", "match": {"declared_operators_all": ["field_balance"], "field_semantics_any": ["axisymmetric_closed"], "region_dimensions_any": ["2d"], "boundary_conditions_any": ["closed", "free_boundary", "mixed"], "state_variables_all": ["magnetic_flux", "pressure", "current_density"], "solver_input_compatibility_all": ["oriented_axisymmetric_boundary", "profile_functions", "coil_or_boundary_field_source"]}, "primary_capability": "grad_shafranov_free_boundary", "independent_capability": "independent_grad_shafranov", "inapplicable_if": ["open_field_only", "three_dimensional_boundary_without_axisymmetric_reduction"]},
+    {"route_id": "three_dimensional_nested_closed_surfaces", "match": {"declared_operators_all": ["field_balance"], "field_semantics_any": ["three_dimensional_closed", "nested_closed_surfaces"], "region_dimensions_any": ["3d"], "boundary_conditions_any": ["closed", "fixed_boundary", "free_boundary"], "state_variables_all": ["magnetic_field", "pressure"], "solver_input_compatibility_all": ["nested_surface_coordinates", "three_dimensional_boundary", "pressure_and_current_profiles"]}, "primary_capability": "three_dimensional_finite_pressure_equilibrium", "independent_capability": "independent_three_dimensional_finite_pressure_equilibrium", "inapplicable_if": ["declared_open_field", "non_nested_island_or_current_sheet_without_multi_region_contract"]},
+    {"route_id": "open_field_extended_state", "match": {"declared_operators_any": ["parallel_transport", "terminal_balance", "open_field_equilibrium"], "field_semantics_any": ["open_guiding_field", "terminal_flux"], "boundary_conditions_any": ["open", "absorbing", "terminal"], "state_variables_any": ["distribution_function", "two_fluid_state", "extended_mhd_state"], "solver_input_compatibility_all": ["open_loss_region", "terminal_conditions"]}, "primary_capability": "open_field_extended_mhd_or_kinetic", "independent_capability": "independent_open_field_extended_mhd_or_kinetic", "inapplicable_if": ["nested_surface_solver_only_input"]},
+    {"route_id": "island_current_sheet_multi_region", "match": {"declared_operators_any": ["multi_region_relaxation", "current_sheet_balance", "reconnection_operator"], "field_semantics_any": ["island", "current_sheet", "multi_region_field"], "region_dimensions_any": ["2d", "3d"], "interface_conditions_any": ["surface_current_jump", "multi_region_flux_constraint"], "solver_input_compatibility_all": ["oriented_region_interfaces"]}, "primary_capability": "multi_region_relaxed_or_extended_mhd", "independent_capability": "independent_multi_region_or_extended_mhd", "inapplicable_if": []},
+    {"route_id": "mixed_topology_coupled", "match": {"declared_operators_any": ["coupled_inventory_root", "domain_coupling"], "field_semantics_any": ["hybrid_field", "declared_by_children"], "region_dimensions_any": ["0d", "1d", "2d", "3d"], "interface_conditions_all": ["particle_flux_balance", "energy_flux_balance", "current_continuity", "magnetic_flux_continuity", "force_balance"], "solver_input_compatibility_all": ["coupled_region_residual"]}, "primary_capability": "monolithic_or_domain_decomposed_coupled_physics", "independent_capability": "independent_coupled_physics_auditor", "inapplicable_if": []}
+  ],
+  "routing_decision_policy": {
+    "all_match_fields_are_candidate_declared": true,
+    "no_compatible_backend": "unsupported",
+    "ill_posed_or_non_embeddable": "fail_before_equilibrium",
+    "renaming_unsupported_as_not_applicable_forbidden": true,
+    "open_field_to_nested_surface_solver_forbidden": true,
+    "mixed_interface_convergence_channels": ["particle", "energy", "current", "magnetic_flux", "force_balance"]
+  },
+  "coverage_obligations": ["equilibrium_primary", "equilibrium_independent", "field_line_primary", "orbit_primary", "orbit_independent", "linear_stability_primary", "linear_stability_independent", "nonlinear_stability_primary", "validation_vvuq"]
+}

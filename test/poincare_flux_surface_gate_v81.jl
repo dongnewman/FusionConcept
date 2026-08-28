@@ -14,7 +14,7 @@ using Test
     @test gate.realization_hash == realization.realization_hash
     @test gate.conclusion in (:fail, :unknown)
     @test gate.poincare_evidence["model_id"] ==
-        "candidate_biot_savart_poincare_fourier_surface_v1"
+        "candidate_biot_savart_poincare_periodic_axis_fourier_surface_v2"
     @test length(gate.poincare_evidence["traces"]) == 3
     artifact = run_v80_poincare_frontier_v81([9283, 4148];
         target_toroidal_turns = 2, steps_per_turn = 40)
@@ -23,4 +23,22 @@ using Test
     @test artifact["uncaught_exception_count"] == 0
     @test artifact["winner"] !== nothing
     @test artifact["device_family_routing_used"] == false
+
+    region = Dict{String,Any}("major_radius_m" => 3.0,
+        "minor_radius_m" => 0.65)
+    boundary = Dict{String,Any}("major_radius_m" => 3.0,
+        "minor_radius_r_m" => 0.70, "minor_radius_z_m" => 0.60,
+        "helical_axis_r_m" => 0.10, "helical_axis_z_m" => 0.05,
+        "field_periods" => 2, "boundary_model" => "test_periodic_boundary")
+    start = FusionConceptAI._v81_boundary_start_point(region, boundary, 0.35)
+    frame = FusionConceptAI._v81_boundary_frame(region, boundary, start)
+    @test frame.normalized_minor_radius ≈ 0.35
+    @test frame.boundary_model == "test_periodic_boundary"
+    phi = pi / 4
+    axis_r = 3.0 + 0.10 * cos(2phi)
+    axis_z = 0.05 * sin(2phi)
+    point = [(axis_r + 0.30 * 0.70) * cos(phi),
+        (axis_r + 0.30 * 0.70) * sin(phi), axis_z]
+    @test FusionConceptAI._v81_boundary_frame(region, boundary,
+        point).normalized_minor_radius ≈ 0.30
 end

@@ -1,0 +1,2785 @@
+{
+    "sentinel_results": [
+        {
+            "source_reference_id": "iter_inductive_baseline_design_v1",
+            "integrated_screen_results": [
+                {
+                    "candidate_hash": "c917c3f985b7575b581c85ad8c02d43255df55bbf83b771256508b2c9c3b1742",
+                    "declared_fidelity_level": "integrated_reduced_model_L2_v89",
+                    "engineering_acceptance_status": "unknown",
+                    "resolution_evidence": [
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 32,
+                            "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 64,
+                            "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 128,
+                            "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                            "interface_conservation_error": 0
+                        }
+                    ],
+                    "model_observables": {
+                        "fusion_power_w": 5.61759930314378e8,
+                        "pulse_duration_s": 400,
+                        "effective_temperature_ev": 12925.999893217766
+                    },
+                    "exact_state_residual_status": "pass",
+                    "evidence_ceiling": "integrated_reduced_numerical_screening_not_engineering_or_experimental_validation",
+                    "claim_boundary": "The v89 residual compiler provides a candidate-bound, auditable multi-region governing/additive/interface/control assembly and exact consistency solve. Its present numerical model is an integrated reduced control-volume screen, not a free-boundary MHD, kinetic, full-engineering, or validation solve.",
+                    "anchor_values_used_as_predictions": false,
+                    "status": "pass",
+                    "numerical_vvuq_status": "pass",
+                    "published_interval_comparisons": [
+                        {
+                            "model_value": 5.61759930314378e8,
+                            "model_interval": [
+                                4.7749594076722133e8,
+                                6.460239198615347e8
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.15,
+                            "reference_interval": [
+                                450000000,
+                                550000000
+                            ],
+                            "observable_id": "fusion_power_w",
+                            "reference_used_as_model_input": false
+                        },
+                        {
+                            "model_value": 400,
+                            "model_interval": [
+                                392,
+                                408
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.02,
+                            "reference_interval": [
+                                400,
+                                600
+                            ],
+                            "observable_id": "pulse_duration_s",
+                            "reference_used_as_model_input": false
+                        }
+                    ],
+                    "validation_vvuq_status": "unknown",
+                    "screen_hash": "e6b27332377cb4672e9d41a097ba8197b504c4c48983b932da3b81bf967b9f23",
+                    "published_interval_regression_status": "pass"
+                }
+            ],
+            "engineering_acceptance_status": "unknown",
+            "reachability": {
+                "status": "pass",
+                "selected_structure_seed": 101,
+                "exact_anchor_parameter_sampling_used": false,
+                "budget": 2,
+                "generated_signature": {
+                    "has_closed_flux": true,
+                    "region_roles": [
+                        "closed_plasma_core"
+                    ],
+                    "has_internal_interface": false,
+                    "boundary_kinds": [
+                        "closed"
+                    ],
+                    "has_open_flux": false
+                },
+                "sampler": "family_neutral_structural_production_v89",
+                "target_signature": {
+                    "has_closed_flux": true,
+                    "region_roles": [
+                        "closed_plasma_core"
+                    ],
+                    "has_internal_interface": false,
+                    "boundary_kinds": [
+                        "closed"
+                    ],
+                    "has_open_flux": false
+                }
+            },
+            "baseline_route": {
+                "classification": "all_operator_obligations_routed",
+                "missing": [
+                ],
+                "claim_boundary": "Routing is determined only by operators, states, dimensions, boundaries, time semantics, validity domains, outputs, and evidence obligations. A route match proves executability of the declared reduced operator, not device-family feasibility.",
+                "status": "pass",
+                "name_routing_used": false,
+                "route_hash": "93911c6e5a6f356c2eedc773ffcb19bf0b41dd441506bd3024ae380bee13ee6a",
+                "family_routing_used": false,
+                "benchmark_routing_used": false,
+                "bindings": [
+                    {
+                        "manifest_id": "conservative_inventory_runtime_v89",
+                        "operator_id": "control_volume_particle_inventory_v1",
+                        "status": "pass",
+                        "obligation_id": "o1",
+                        "manifest_hash": "20cc30ebeafdfa5d9a7d6e1609f353eecd7bdf3ba9eda896f88c42b2b656e2af",
+                        "independence_group": "conservative_inventory_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "conservative_inventory_runtime_v89",
+                        "operator_id": "control_volume_thermal_energy_v1",
+                        "status": "pass",
+                        "obligation_id": "o2",
+                        "manifest_hash": "20cc30ebeafdfa5d9a7d6e1609f353eecd7bdf3ba9eda896f88c42b2b656e2af",
+                        "independence_group": "conservative_inventory_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "closed_transport_reaction_runtime_v89",
+                        "operator_id": "state_derived_bohm_transport_l1_v1",
+                        "status": "pass",
+                        "obligation_id": "o3",
+                        "manifest_hash": "c70a077c8a8e37640c0c01ff21bdf92498e6c9083fe11665bbedfee85fee98c7",
+                        "independence_group": "closed_transport_reaction_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "closed_transport_reaction_runtime_v89",
+                        "operator_id": "state_derived_dt_reaction_bremsstrahlung_l1_v1",
+                        "status": "pass",
+                        "obligation_id": "o4",
+                        "manifest_hash": "c70a077c8a8e37640c0c01ff21bdf92498e6c9083fe11665bbedfee85fee98c7",
+                        "independence_group": "closed_transport_reaction_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "fixed_current_flux_inventory_runtime_v89",
+                        "operator_id": "fixed_current_flux_inventory_l1_v1",
+                        "status": "pass",
+                        "obligation_id": "o5",
+                        "manifest_hash": "18bcf868004b8e577482dce808b8935edfdf79f703abddcd0889d7ca6d5978eb",
+                        "independence_group": "fixed_current_flux_inventory_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "multiregion_coupling_control_runtime_v89",
+                        "operator_id": "bounded_control_response_v89",
+                        "status": "pass",
+                        "obligation_id": "o6",
+                        "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                        "independence_group": "multiregion_coupling_control_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "multiregion_coupling_control_runtime_v89",
+                        "operator_id": "integrated_reduced_device_audit_v89",
+                        "status": "pass",
+                        "obligation_id": "o7",
+                        "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                        "independence_group": "multiregion_coupling_control_runtime_v89"
+                    }
+                ],
+                "topology_hash": "3e22f0d646ca8170cbe6e43ee136c61d91689baa857aa81da03fc33b2a150ab7"
+            },
+            "inverse_topology": {
+                "field_topologies": [
+                    {
+                        "region_id": "r1",
+                        "kind": "closed_flux",
+                        "reversal_surface": false,
+                        "separatrix": false
+                    }
+                ],
+                "control_paths": [
+                    {
+                        "delay_s": 0,
+                        "sensor_region_id": "r1",
+                        "actuated_account_ids": [
+                            "energy",
+                            "particles"
+                        ],
+                        "actuator_region_id": "r1",
+                        "observed_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy",
+                            "plasma_current",
+                            "magnetic_flux"
+                        ],
+                        "control_path_id": "c1"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "kind": "declared_external_boundary_flux",
+                        "target_region_id": null,
+                        "source_region_id": "r1",
+                        "interface_id": "i1",
+                        "flux_pairs": [
+                            {
+                                "target_sign": 0,
+                                "account_id": "energy",
+                                "source_sign": -1,
+                                "unit": "W"
+                            }
+                        ]
+                    }
+                ],
+                "boundaries": [
+                    {
+                        "region_id": "r1",
+                        "kind": "closed",
+                        "time_varying": false
+                    }
+                ],
+                "isomorphism_hash": "e010e049d3761ca9f683cc274d7773ccc3c34692ee20a6cb7bf2b6e03a0c5122",
+                "topology_hash": "3e22f0d646ca8170cbe6e43ee136c61d91689baa857aa81da03fc33b2a150ab7",
+                "operator_obligations": [
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "control_volume_particle_inventory_v1",
+                        "required_state_ids": [
+                            "particle_inventory"
+                        ],
+                        "evidence_obligation": "L1_screening_only",
+                        "obligation_id": "o1",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "control_volume_thermal_energy_v1",
+                        "required_state_ids": [
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "L1_screening_only",
+                        "obligation_id": "o2",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "state_derived_bohm_transport_l1_v1",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "Bohm_L1_not_ITER_transport_validation",
+                        "obligation_id": "o3",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "state_derived_dt_reaction_bremsstrahlung_l1_v1",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "reduced_DT_rate_screening_only",
+                        "obligation_id": "o4",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "fixed_current_flux_inventory_l1_v1",
+                        "required_state_ids": [
+                            "plasma_current",
+                            "magnetic_flux"
+                        ],
+                        "evidence_obligation": "inventory_only_not_Grad_Shafranov_solution",
+                        "obligation_id": "o5",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "bounded_control_response_v89",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "actuator_capacity_and_feedback_closure",
+                        "obligation_id": "o6",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "integrated_reduced_device_audit_v89",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy",
+                            "plasma_current",
+                            "magnetic_flux"
+                        ],
+                        "evidence_obligation": "reduced_multiresolution_integrated_screen",
+                        "obligation_id": "o7",
+                        "boundary_kinds": [
+                            "closed"
+                        ]
+                    }
+                ],
+                "claim_boundary": "Family-neutral multi-region topology compilation proves typed representability, conservation/interface consistency, and stable structural identity. It is not equilibrium, stability, transport, engineering, or experimental validation.",
+                "event_transitions": [
+                ],
+                "schema_version": "1.0.0",
+                "regions": [
+                    {
+                        "region_id": "r1",
+                        "role": "closed_plasma_core",
+                        "time_semantics": "transient",
+                        "reservoir_accounts": [
+                            "current",
+                            "energy",
+                            "magnetic_flux",
+                            "particles"
+                        ],
+                        "dimension": "2d",
+                        "state_slots": [
+                            {
+                                "account": "particles",
+                                "positivity_required": true,
+                                "slot_id": "particle_inventory",
+                                "unit": "1"
+                            },
+                            {
+                                "account": "energy",
+                                "positivity_required": true,
+                                "slot_id": "thermal_energy",
+                                "unit": "J"
+                            },
+                            {
+                                "account": "current",
+                                "positivity_required": false,
+                                "slot_id": "plasma_current",
+                                "unit": "A"
+                            },
+                            {
+                                "account": "magnetic_flux",
+                                "positivity_required": false,
+                                "slot_id": "magnetic_flux",
+                                "unit": "Wb"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "baseline_residual": {
+                "maximum_normalized_residual": 0,
+                "candidate_hash": "c6f30c6306771588b60ad6e4fb7691d37786c33d1c623fe821099b40db415ece",
+                "resolution_evidence": [
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 32,
+                        "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 64,
+                        "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 128,
+                        "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                        "interface_conservation_error": 0
+                    }
+                ],
+                "convergence_status": "converged",
+                "evidence_ceiling": "integrated_reduced_control_volume_numerical_screening",
+                "state": {
+                    "r1::thermal_energy": 353000000,
+                    "r1::particle_inventory": 5.681366285474515e22,
+                    "r1::magnetic_flux": 66.60176425572094,
+                    "r1::plasma_current": 15000000
+                },
+                "classification": "pass_integrated_reduced_exact_state_consistency_v89",
+                "result_hash": "2266ad8c22b527d22d77732459fb1b38187a7be82d6dd0a71e6b1447fba89a1c",
+                "status": "pass",
+                "maximum_interface_conservation_error": 0,
+                "postprocessing_used_as_coupled_state": false,
+                "plan_hash": "a198dd65ef01a52139fb18a5630c43dfc39d4d308cbd8c17caabde9bc1d1588b"
+            },
+            "stage_statuses": {
+                "abstract_topology_generation": "pass",
+                "operator_routing_and_executability": "pass",
+                "abstract_consistency_screen": "pass",
+                "hard_physics_funnel": "pass",
+                "high_fidelity_integrated_screen": "pass",
+                "multiregion_residual": "pass",
+                "simplest_credible_within_evidence_boundary": "pass",
+                "survivor_sparsification_and_pareto": "pass",
+                "physical_realization_generation": "pass"
+            },
+            "inverse_realization_provenance": {
+                "realization_status": "pass",
+                "inverse_method": "parameter_state_and_operator_binding_inverse_v89",
+                "source_parameter_hash": "f31e0de04b6ca044224429eb7feb678bec92eab1767f5a1b062f4e3db2c02f49",
+                "anchor_observables_consumed_by_inverse": false
+            },
+            "claim_boundary": "Sentinels and generated controls use one family-neutral v89 chain. A pass proves representability, reachability of the structural neighborhood, executable reduced-physics screening, scoped interval regression, and post-hard-gate minimality. Validation VVUQ, full engineering acceptance, deployability, external novelty, patentability, and FTO remain unproven.",
+            "baseline_hard_funnel": {
+                "candidate_hash": "c6f30c6306771588b60ad6e4fb7691d37786c33d1c623fe821099b40db415ece",
+                "hard_gate_count": 9,
+                "status": "pass",
+                "gates": [
+                    {
+                        "gate_id": "typed_geometry_and_state",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "minor_radius_m": 2,
+                            "temperature_j": 2.0709735e-15,
+                            "volume_m3": 830,
+                            "magnetic_field_t": 5.3
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "paired_interface_conservation",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "maximum_sign_pair_error": 0
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "finite_pressure_beta_bound",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "pressure_pa": 283517.0848436423,
+                            "beta_proxy": 0.025366897569582936
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "magnetic_inventory_consistency",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "relative_error": 5.745642026831e-12,
+                            "declared_flux_wb": 66.60176425572094,
+                            "geometry_field_flux_wb": 66.6017642561036
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "thermal_inventory_consistency",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "relative_error": 6.014347442882803e-5
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "reduced_current_density_bound",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "limit_a_per_m2": 20000000,
+                            "current_density_a_per_m2": 1.193662073189215e6
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "actuator_capacity",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "capacity_w": 50000000,
+                            "required_power_w": 50000000
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "operator_capability_fail_closed",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "route_hash": "93911c6e5a6f356c2eedc773ffcb19bf0b41dd441506bd3024ae380bee13ee6a"
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "multiregion_residual_convergence",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "result_hash": "2266ad8c22b527d22d77732459fb1b38187a7be82d6dd0a71e6b1447fba89a1c"
+                        },
+                        "status": "pass"
+                    }
+                ],
+                "passed_hard_gate_count": 9,
+                "evidence_ceiling": "reduced_hard_physics_screening_only",
+                "pareto_eligible": true,
+                "funnel_hash": "79efb1d748de8b8f2d0c95f6cf5b013d9bf1dbc94e3a6b1151b424251fbb5dd8"
+            },
+            "inverse_topology_provenance": {
+                "inverse_method": "operator_and_region_semantics_inverse_v89",
+                "source_description_hash": "2a61a87fe113aa48382d4121cd3ef2fe4ed6873677ee4bb2cb20495b51722ec3",
+                "anchor_observables_consumed_by_inverse": false,
+                "labels_consumed_by_inverse": false,
+                "representability_status": "pass"
+            },
+            "validation_vvuq_status": "unknown",
+            "simplest_candidates": [
+                {
+                    "candidate_hash": "c917c3f985b7575b581c85ad8c02d43255df55bbf83b771256508b2c9c3b1742",
+                    "declared_fidelity_level": "integrated_reduced_model_L2_v89",
+                    "engineering_acceptance_status": "unknown",
+                    "resolution_evidence": [
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 32,
+                            "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 64,
+                            "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 128,
+                            "state_hash": "921038b59bde6b008ddbb2a9312e353aa8145bfa549f245edbe2d10a8bbbd460",
+                            "interface_conservation_error": 0
+                        }
+                    ],
+                    "model_observables": {
+                        "fusion_power_w": 5.61759930314378e8,
+                        "pulse_duration_s": 400,
+                        "effective_temperature_ev": 12925.999893217766
+                    },
+                    "exact_state_residual_status": "pass",
+                    "evidence_ceiling": "integrated_reduced_numerical_screening_not_engineering_or_experimental_validation",
+                    "claim_boundary": "The v89 residual compiler provides a candidate-bound, auditable multi-region governing/additive/interface/control assembly and exact consistency solve. Its present numerical model is an integrated reduced control-volume screen, not a free-boundary MHD, kinetic, full-engineering, or validation solve.",
+                    "anchor_values_used_as_predictions": false,
+                    "status": "pass",
+                    "numerical_vvuq_status": "pass",
+                    "published_interval_comparisons": [
+                        {
+                            "model_value": 5.61759930314378e8,
+                            "model_interval": [
+                                4.7749594076722133e8,
+                                6.460239198615347e8
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.15,
+                            "reference_interval": [
+                                450000000,
+                                550000000
+                            ],
+                            "observable_id": "fusion_power_w",
+                            "reference_used_as_model_input": false
+                        },
+                        {
+                            "model_value": 400,
+                            "model_interval": [
+                                392,
+                                408
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.02,
+                            "reference_interval": [
+                                400,
+                                600
+                            ],
+                            "observable_id": "pulse_duration_s",
+                            "reference_used_as_model_input": false
+                        }
+                    ],
+                    "validation_vvuq_status": "unknown",
+                    "screen_hash": "e6b27332377cb4672e9d41a097ba8197b504c4c48983b932da3b81bf967b9f23",
+                    "published_interval_regression_status": "pass"
+                }
+            ],
+            "label_erasure_neutrality": {
+                "checks": {
+                    "solver_input_hash_unchanged": true,
+                    "realization_hash_unchanged": true,
+                    "benchmark_flag_ignored": true,
+                    "route_hash_unchanged": true,
+                    "topology_hash_unchanged": true,
+                    "hard_gate_decision_unchanged": true,
+                    "isomorphism_hash_unchanged": true
+                },
+                "status": "pass"
+            },
+            "ui_label": "ITER",
+            "chain_status": "pass",
+            "post_hard_gate_pareto": [
+                {
+                    "pareto_scope_hash": "2487d6a13391f24e6fa23e97eef09d190ae4dd9c17b57fb5835bb33097ef103c",
+                    "candidate_hash": "c917c3f985b7575b581c85ad8c02d43255df55bbf83b771256508b2c9c3b1742",
+                    "mission_id": "reference_operating_point_screening",
+                    "capability_cell": "26efbe5e1d86ca6f5ed2c971084f04a35bbfcbac8772b2a5c97a77cc2e86a7f5",
+                    "objectives": {
+                        "component_count": 6,
+                        "thermal_cryogenic_maintenance_proxy": 8,
+                        "independent_power_supply_count": 3,
+                        "support_and_shield_mass_proxy": 37.2,
+                        "maximum_curvature_1_per_m": 0.5,
+                        "conductor_length_m": 77.91149780902687,
+                        "operation_and_fault_recovery_complexity": 2,
+                        "sensor_actuator_controller_complexity": 3,
+                        "basis_complexity": 8
+                    },
+                    "evidence_level": "integrated_reduced_numerical_screening_v89",
+                    "hard_gate_status": "pass",
+                    "minimality_claim": "Pareto minimal only within the declared grammar, bounds, mission, capability cell, comparison scope, and evidence level.",
+                    "comparison_scope": "same_capability_mission_and_evidence_only",
+                    "complexity_hash": "0c938910f9d9ea9ed47c6c98e535099cf59510f71fd23a63b6f7e64fba36d831"
+                }
+            ],
+            "inverse_realization": {
+                "stream_seeds": {
+                    "operating": 301,
+                    "control": 401,
+                    "physical": 201
+                },
+                "physical_parameters": {
+                    "major_radius_m": 6.2,
+                    "minor_radius_m": 2,
+                    "temperature_j": 2.0709735e-15,
+                    "fuel": "D-T",
+                    "volume_m3": 830,
+                    "input_power_w": 50000000,
+                    "characteristic_length_m": 12.4,
+                    "magnetic_field_t": 5.3,
+                    "parameter_status": "published_design_baseline",
+                    "pulse_duration_s": 400
+                },
+                "components": [
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_internal_current",
+                        "role": "plasma_internal_current",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 1
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_field_conductor",
+                        "role": "external_field_conductor",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 1
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_power",
+                        "role": "power_actuator",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 1
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_wall",
+                        "role": "material_boundary",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_sensor_primary",
+                        "role": "sensor",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_sensor_redundant",
+                        "role": "sensor",
+                        "required": false,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_controller",
+                        "role": "controller",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    }
+                ],
+                "realization_hash": "c1f7729d55a43788eade796be5b51d28bbfee5885a794c07fe4bf42efc2d1dba",
+                "topology_hash": "3e22f0d646ca8170cbe6e43ee136c61d91689baa857aa81da03fc33b2a150ab7",
+                "claim_boundary": "A v89 realization binds abstract regions and ports to generic physical components, geometry, coefficients, operating state, and declared consumers. Passing compilation does not grant hard-physics or engineering feasibility.",
+                "control_realization": {
+                    "sensor_count": 2,
+                    "command_max": 50000000,
+                    "controller_model": "bounded_state_feedback_v89",
+                    "delay_s": 0,
+                    "command_min": 0,
+                    "fault_action": "safe_power_zero",
+                    "actuator_count": 1
+                },
+                "basis_coefficients": [
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "characteristic_length_m",
+                        "value": 12.4,
+                        "unit": "m",
+                        "lower": 6.2,
+                        "upper": 18.6,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "input_power_w",
+                        "value": 50000000,
+                        "unit": "W",
+                        "lower": 25000000,
+                        "upper": 75000000,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "magnetic_field_t",
+                        "value": 5.3,
+                        "unit": "T",
+                        "lower": 2.65,
+                        "upper": 7.949999999999999,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "major_radius_m",
+                        "value": 6.2,
+                        "unit": "m",
+                        "lower": 3.1,
+                        "upper": 9.3,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "minor_radius_m",
+                        "value": 2,
+                        "unit": "m",
+                        "lower": 1,
+                        "upper": 3,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "pulse_duration_s",
+                        "value": 400,
+                        "unit": "s",
+                        "lower": 200,
+                        "upper": 600,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "temperature_j",
+                        "value": 2.0709735e-15,
+                        "unit": "J",
+                        "lower": 1.03548675e-15,
+                        "upper": 3.10646025e-15,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "volume_m3",
+                        "value": 830,
+                        "unit": "m^3",
+                        "lower": 415,
+                        "upper": 1245,
+                        "regularization": "bounded_l2"
+                    }
+                ],
+                "operating_state": {
+                    "thermal_energy": 353000000,
+                    "plasma_current": 15000000,
+                    "magnetic_flux": 66.60176425572094,
+                    "particle_inventory": 5.681366285474515e22
+                },
+                "stream_hashes": {
+                    "operating": "413518df995e620d48341ee9fa7a842fac15d2c9f172c671da6a0a99c7a60c94",
+                    "control": "2066c82a5982a693e65cdca883ab52e4291a5330c2aaad50710020186cad71c1",
+                    "physical": "9f7777acac4172470c5035952ade44626f554378fc57e5f05fc7c1ce37f440f8"
+                },
+                "schema_version": "1.0.0",
+                "consumer_proofs": [
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "characteristic_length_m"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "operating_and_control_residual_v89",
+                        "consumer_kind": "residual_block",
+                        "gene_id": "input_power_w"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "magnetic_field_t"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "major_radius_m"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "minor_radius_m"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "operating_and_control_residual_v89",
+                        "consumer_kind": "residual_block",
+                        "gene_id": "pulse_duration_s"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "temperature_j"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "volume_m3"
+                    }
+                ],
+                "candidate_physics_hash": "fc4721280f0c79ae61fbdb3ddf5468f1fab310fefe2ef86797f18e3a6ce2cbc1"
+            },
+            "layer_counts": {
+                "physical_realizations": 2,
+                "unique_abstract_structures": 1,
+                "pareto_survivors": 1,
+                "unique_solver_inputs": 2,
+                "engineering_vv_candidates": 0,
+                "raw_structure_seeds": 1,
+                "compiled_topology_structures": 1,
+                "integrated_reduced_screen_survivors": 1,
+                "hard_gate_survivors": 2
+            }
+        },
+        {
+            "source_reference_id": "c2w_enhanced_performance_experiment_v1",
+            "integrated_screen_results": [
+                {
+                    "candidate_hash": "d3402cedeea76dcc2fd8193f8462d5d855063b0177432f5f45158c1941bc92b8",
+                    "declared_fidelity_level": "integrated_reduced_model_L2_v89",
+                    "engineering_acceptance_status": "unknown",
+                    "resolution_evidence": [
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 32,
+                            "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 64,
+                            "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 128,
+                            "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                            "interface_conservation_error": 0
+                        }
+                    ],
+                    "model_observables": {
+                        "pulse_duration_s": 0.04,
+                        "effective_temperature_ev": 1500
+                    },
+                    "exact_state_residual_status": "pass",
+                    "evidence_ceiling": "integrated_reduced_numerical_screening_not_engineering_or_experimental_validation",
+                    "claim_boundary": "The v89 residual compiler provides a candidate-bound, auditable multi-region governing/additive/interface/control assembly and exact consistency solve. Its present numerical model is an integrated reduced control-volume screen, not a free-boundary MHD, kinetic, full-engineering, or validation solve.",
+                    "anchor_values_used_as_predictions": false,
+                    "status": "pass",
+                    "numerical_vvuq_status": "pass",
+                    "published_interval_comparisons": [
+                        {
+                            "model_value": 1500,
+                            "model_interval": [
+                                1470,
+                                1530
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.02,
+                            "reference_interval": [
+                                500,
+                                3000
+                            ],
+                            "observable_id": "effective_temperature_ev",
+                            "reference_used_as_model_input": false
+                        },
+                        {
+                            "model_value": 0.04,
+                            "model_interval": [
+                                0.0392,
+                                0.0408
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.02,
+                            "reference_interval": [
+                                0.03,
+                                0.04
+                            ],
+                            "observable_id": "pulse_duration_s",
+                            "reference_used_as_model_input": false
+                        }
+                    ],
+                    "validation_vvuq_status": "unknown",
+                    "screen_hash": "1a955b138ba4db8098c7770af26cc3594e60d83df800bbba1a4039cd097283f4",
+                    "published_interval_regression_status": "pass"
+                }
+            ],
+            "engineering_acceptance_status": "unknown",
+            "reachability": {
+                "status": "pass",
+                "selected_structure_seed": 102,
+                "exact_anchor_parameter_sampling_used": false,
+                "budget": 2,
+                "generated_signature": {
+                    "has_closed_flux": true,
+                    "region_roles": [
+                        "closed_plasma_core",
+                        "open_parallel_loss_region"
+                    ],
+                    "has_internal_interface": true,
+                    "boundary_kinds": [
+                        "mixed",
+                        "open"
+                    ],
+                    "has_open_flux": true
+                },
+                "sampler": "family_neutral_structural_production_v89",
+                "target_signature": {
+                    "has_closed_flux": true,
+                    "region_roles": [
+                        "closed_plasma_core",
+                        "open_parallel_loss_region"
+                    ],
+                    "has_internal_interface": true,
+                    "boundary_kinds": [
+                        "mixed",
+                        "open"
+                    ],
+                    "has_open_flux": true
+                }
+            },
+            "baseline_route": {
+                "classification": "all_operator_obligations_routed",
+                "missing": [
+                ],
+                "claim_boundary": "Routing is determined only by operators, states, dimensions, boundaries, time semantics, validity domains, outputs, and evidence obligations. A route match proves executability of the declared reduced operator, not device-family feasibility.",
+                "status": "pass",
+                "name_routing_used": false,
+                "route_hash": "5fcd2d9c348650c2c3d8b78c34e47c7763a9a90fb36bf02af0ae59523520826d",
+                "family_routing_used": false,
+                "benchmark_routing_used": false,
+                "bindings": [
+                    {
+                        "manifest_id": "conservative_inventory_runtime_v89",
+                        "operator_id": "control_volume_particle_inventory_v1",
+                        "status": "pass",
+                        "obligation_id": "o1",
+                        "manifest_hash": "20cc30ebeafdfa5d9a7d6e1609f353eecd7bdf3ba9eda896f88c42b2b656e2af",
+                        "independence_group": "conservative_inventory_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "conservative_inventory_runtime_v89",
+                        "operator_id": "control_volume_thermal_energy_v1",
+                        "status": "pass",
+                        "obligation_id": "o2",
+                        "manifest_hash": "20cc30ebeafdfa5d9a7d6e1609f353eecd7bdf3ba9eda896f88c42b2b656e2af",
+                        "independence_group": "conservative_inventory_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "open_parallel_transport_runtime_v89",
+                        "operator_id": "state_derived_parallel_streaming_l1_v1",
+                        "status": "pass",
+                        "obligation_id": "o3",
+                        "manifest_hash": "6696ccb8b8d2831201b5ef6aec0a80a51dc1521a41a0bdcbface40e32ed53b70",
+                        "independence_group": "open_parallel_transport_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "fixed_current_flux_inventory_runtime_v89",
+                        "operator_id": "fixed_current_flux_inventory_l1_v1",
+                        "status": "pass",
+                        "obligation_id": "o4",
+                        "manifest_hash": "18bcf868004b8e577482dce808b8935edfdf79f703abddcd0889d7ca6d5978eb",
+                        "independence_group": "fixed_current_flux_inventory_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "multiregion_coupling_control_runtime_v89",
+                        "operator_id": "conservative_multiregion_interface_v89",
+                        "status": "pass",
+                        "obligation_id": "o5",
+                        "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                        "independence_group": "multiregion_coupling_control_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "multiregion_coupling_control_runtime_v89",
+                        "operator_id": "bounded_control_response_v89",
+                        "status": "pass",
+                        "obligation_id": "o6",
+                        "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                        "independence_group": "multiregion_coupling_control_runtime_v89"
+                    },
+                    {
+                        "manifest_id": "multiregion_coupling_control_runtime_v89",
+                        "operator_id": "integrated_reduced_device_audit_v89",
+                        "status": "pass",
+                        "obligation_id": "o7",
+                        "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                        "independence_group": "multiregion_coupling_control_runtime_v89"
+                    }
+                ],
+                "topology_hash": "bd34f56cd9892ea543629a9afa163babf12ae3bc3f092ff18495a7e5254f6aaf"
+            },
+            "inverse_topology": {
+                "field_topologies": [
+                    {
+                        "region_id": "r1",
+                        "kind": "closed_flux",
+                        "reversal_surface": true,
+                        "separatrix": true
+                    },
+                    {
+                        "region_id": "r2",
+                        "kind": "open_flux",
+                        "reversal_surface": false,
+                        "separatrix": true
+                    }
+                ],
+                "control_paths": [
+                    {
+                        "delay_s": 0,
+                        "sensor_region_id": "r1",
+                        "actuated_account_ids": [
+                            "energy",
+                            "particles"
+                        ],
+                        "actuator_region_id": "r1",
+                        "observed_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy",
+                            "plasma_current",
+                            "magnetic_flux"
+                        ],
+                        "control_path_id": "c1"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "kind": "conservative_coupling",
+                        "target_region_id": "r2",
+                        "source_region_id": "r1",
+                        "interface_id": "i1",
+                        "flux_pairs": [
+                            {
+                                "target_sign": 1,
+                                "account_id": "particles",
+                                "source_sign": -1,
+                                "unit": "1/s"
+                            },
+                            {
+                                "target_sign": 1,
+                                "account_id": "energy",
+                                "source_sign": -1,
+                                "unit": "W"
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "declared_external_boundary_flux",
+                        "target_region_id": null,
+                        "source_region_id": "r2",
+                        "interface_id": "i2",
+                        "flux_pairs": [
+                            {
+                                "target_sign": 0,
+                                "account_id": "energy",
+                                "source_sign": -1,
+                                "unit": "W"
+                            }
+                        ]
+                    }
+                ],
+                "boundaries": [
+                    {
+                        "region_id": "r1",
+                        "kind": "mixed",
+                        "time_varying": false
+                    },
+                    {
+                        "region_id": "r2",
+                        "kind": "open",
+                        "time_varying": false
+                    }
+                ],
+                "isomorphism_hash": "671631bfcc71797d8652ce4055194302033035ba06fb3758c4e9a785a3504357",
+                "topology_hash": "bd34f56cd9892ea543629a9afa163babf12ae3bc3f092ff18495a7e5254f6aaf",
+                "operator_obligations": [
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "control_volume_particle_inventory_v1",
+                        "required_state_ids": [
+                            "particle_inventory"
+                        ],
+                        "evidence_obligation": "L1_screening_only",
+                        "obligation_id": "o1",
+                        "boundary_kinds": [
+                            "mixed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "control_volume_thermal_energy_v1",
+                        "required_state_ids": [
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "L1_screening_only",
+                        "obligation_id": "o2",
+                        "boundary_kinds": [
+                            "mixed"
+                        ]
+                    },
+                    {
+                        "region_id": "r2",
+                        "spatial_dimension": "1d",
+                        "time_semantics": "transient",
+                        "operator_id": "state_derived_parallel_streaming_l1_v1",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "untrapped_parallel_streaming_negative_control_not_fast_ion_FRC_transport",
+                        "obligation_id": "o3",
+                        "boundary_kinds": [
+                            "open"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "fixed_current_flux_inventory_l1_v1",
+                        "required_state_ids": [
+                            "plasma_current",
+                            "magnetic_flux"
+                        ],
+                        "evidence_obligation": "inventory_only_not_FRC_equilibrium_reconstruction",
+                        "obligation_id": "o4",
+                        "boundary_kinds": [
+                            "mixed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "conservative_multiregion_interface_v89",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "paired_interface_conservation",
+                        "obligation_id": "o5",
+                        "boundary_kinds": [
+                            "mixed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "bounded_control_response_v89",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy"
+                        ],
+                        "evidence_obligation": "actuator_capacity_and_feedback_closure",
+                        "obligation_id": "o6",
+                        "boundary_kinds": [
+                            "mixed"
+                        ]
+                    },
+                    {
+                        "region_id": "r1",
+                        "spatial_dimension": "2d",
+                        "time_semantics": "transient",
+                        "operator_id": "integrated_reduced_device_audit_v89",
+                        "required_state_ids": [
+                            "particle_inventory",
+                            "thermal_energy",
+                            "plasma_current",
+                            "magnetic_flux"
+                        ],
+                        "evidence_obligation": "reduced_multiresolution_integrated_screen",
+                        "obligation_id": "o7",
+                        "boundary_kinds": [
+                            "mixed"
+                        ]
+                    }
+                ],
+                "claim_boundary": "Family-neutral multi-region topology compilation proves typed representability, conservation/interface consistency, and stable structural identity. It is not equilibrium, stability, transport, engineering, or experimental validation.",
+                "event_transitions": [
+                ],
+                "schema_version": "1.0.0",
+                "regions": [
+                    {
+                        "region_id": "r1",
+                        "role": "closed_plasma_core",
+                        "time_semantics": "transient",
+                        "reservoir_accounts": [
+                            "current",
+                            "energy",
+                            "magnetic_flux",
+                            "particles"
+                        ],
+                        "dimension": "2d",
+                        "state_slots": [
+                            {
+                                "account": "particles",
+                                "positivity_required": true,
+                                "slot_id": "particle_inventory",
+                                "unit": "1"
+                            },
+                            {
+                                "account": "energy",
+                                "positivity_required": true,
+                                "slot_id": "thermal_energy",
+                                "unit": "J"
+                            },
+                            {
+                                "account": "current",
+                                "positivity_required": false,
+                                "slot_id": "plasma_current",
+                                "unit": "A"
+                            },
+                            {
+                                "account": "magnetic_flux",
+                                "positivity_required": false,
+                                "slot_id": "magnetic_flux",
+                                "unit": "Wb"
+                            }
+                        ]
+                    },
+                    {
+                        "region_id": "r2",
+                        "role": "open_parallel_loss_region",
+                        "time_semantics": "transient",
+                        "reservoir_accounts": [
+                            "energy",
+                            "particles"
+                        ],
+                        "dimension": "1d",
+                        "state_slots": [
+                            {
+                                "account": "particles",
+                                "positivity_required": true,
+                                "slot_id": "loss_particle_inventory",
+                                "unit": "1"
+                            },
+                            {
+                                "account": "energy",
+                                "positivity_required": true,
+                                "slot_id": "loss_thermal_energy",
+                                "unit": "J"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "baseline_residual": {
+                "maximum_normalized_residual": 0,
+                "candidate_hash": "b4d3a529a02672fce7126263ce3c3523e17763f185eb12a790dc67ef01aa8b08",
+                "resolution_evidence": [
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 32,
+                        "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 64,
+                        "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 128,
+                        "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                        "interface_conservation_error": 0
+                    }
+                ],
+                "convergence_status": "converged",
+                "evidence_ceiling": "integrated_reduced_control_volume_numerical_screening",
+                "state": {
+                    "r1::thermal_energy": 18123.89543722515,
+                    "r2::loss_thermal_energy": 181.2389543722515,
+                    "r1::particle_inventory": 2.5132741228718346e19,
+                    "r1::magnetic_flux": 0.15079644737231007,
+                    "r2::loss_particle_inventory": 251327412287183456,
+                    "r1::plasma_current": 1000000
+                },
+                "classification": "pass_integrated_reduced_exact_state_consistency_v89",
+                "result_hash": "8c89d30e66e438872ecd67d8c77ec0918c810589624ee1aa4c80ecf9d78b6705",
+                "status": "pass",
+                "maximum_interface_conservation_error": 0,
+                "postprocessing_used_as_coupled_state": false,
+                "plan_hash": "9c13eafa87a279cb8acdde017f9b25cde61e107d47922ea98b9384e678087f76"
+            },
+            "stage_statuses": {
+                "abstract_topology_generation": "pass",
+                "operator_routing_and_executability": "pass",
+                "abstract_consistency_screen": "pass",
+                "hard_physics_funnel": "pass",
+                "high_fidelity_integrated_screen": "pass",
+                "multiregion_residual": "pass",
+                "simplest_credible_within_evidence_boundary": "pass",
+                "survivor_sparsification_and_pareto": "pass",
+                "physical_realization_generation": "pass"
+            },
+            "inverse_realization_provenance": {
+                "realization_status": "pass",
+                "inverse_method": "parameter_state_and_operator_binding_inverse_v89",
+                "source_parameter_hash": "eaba32c44980d24fae63e8297155ada697234464d86eafb8f939afd22066db0f",
+                "anchor_observables_consumed_by_inverse": false
+            },
+            "claim_boundary": "Sentinels and generated controls use one family-neutral v89 chain. A pass proves representability, reachability of the structural neighborhood, executable reduced-physics screening, scoped interval regression, and post-hard-gate minimality. Validation VVUQ, full engineering acceptance, deployability, external novelty, patentability, and FTO remain unproven.",
+            "baseline_hard_funnel": {
+                "candidate_hash": "b4d3a529a02672fce7126263ce3c3523e17763f185eb12a790dc67ef01aa8b08",
+                "hard_gate_count": 9,
+                "status": "pass",
+                "gates": [
+                    {
+                        "gate_id": "typed_geometry_and_state",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "minor_radius_m": 0.4,
+                            "temperature_j": 2.403264951e-16,
+                            "volume_m3": 1.2566370614359172,
+                            "magnetic_field_t": 0.3
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "paired_interface_conservation",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "maximum_sign_pair_error": 0
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "finite_pressure_beta_bound",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "pressure_pa": 9613.059804,
+                            "beta_proxy": 0.26844727163347326
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "magnetic_inventory_consistency",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "relative_error": 0,
+                            "declared_flux_wb": 0.15079644737231007,
+                            "geometry_field_flux_wb": 0.15079644737231007
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "thermal_inventory_consistency",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "relative_error": 0.0002044460789285802
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "reduced_current_density_bound",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "limit_a_per_m2": 20000000,
+                            "current_density_a_per_m2": 1.9894367886486915e6
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "actuator_capacity",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "capacity_w": 20000000,
+                            "required_power_w": 20000000
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "operator_capability_fail_closed",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "route_hash": "5fcd2d9c348650c2c3d8b78c34e47c7763a9a90fb36bf02af0ae59523520826d"
+                        },
+                        "status": "pass"
+                    },
+                    {
+                        "gate_id": "multiregion_residual_convergence",
+                        "classification": "pass_declared_gate",
+                        "metrics": {
+                            "result_hash": "8c89d30e66e438872ecd67d8c77ec0918c810589624ee1aa4c80ecf9d78b6705"
+                        },
+                        "status": "pass"
+                    }
+                ],
+                "passed_hard_gate_count": 9,
+                "evidence_ceiling": "reduced_hard_physics_screening_only",
+                "pareto_eligible": true,
+                "funnel_hash": "30f02a696d9ed04b069f79b96efc2a8e602b6ab94d4b142e9ebc5b46016d27f0"
+            },
+            "inverse_topology_provenance": {
+                "inverse_method": "operator_and_region_semantics_inverse_v89",
+                "source_description_hash": "2f18db1a9442bf35b507b28da4119b7aec9b7529d1f6677c40b2e7783f914b31",
+                "anchor_observables_consumed_by_inverse": false,
+                "labels_consumed_by_inverse": false,
+                "representability_status": "pass"
+            },
+            "validation_vvuq_status": "unknown",
+            "simplest_candidates": [
+                {
+                    "candidate_hash": "d3402cedeea76dcc2fd8193f8462d5d855063b0177432f5f45158c1941bc92b8",
+                    "declared_fidelity_level": "integrated_reduced_model_L2_v89",
+                    "engineering_acceptance_status": "unknown",
+                    "resolution_evidence": [
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 32,
+                            "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 64,
+                            "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                            "interface_conservation_error": 0
+                        },
+                        {
+                            "normalized_residual": 0,
+                            "resolution": 128,
+                            "state_hash": "fbe3d81bbb4e2f0e66cbb1da6bda4398ebbd88030eafd37114a3cc885cb45d8c",
+                            "interface_conservation_error": 0
+                        }
+                    ],
+                    "model_observables": {
+                        "pulse_duration_s": 0.04,
+                        "effective_temperature_ev": 1500
+                    },
+                    "exact_state_residual_status": "pass",
+                    "evidence_ceiling": "integrated_reduced_numerical_screening_not_engineering_or_experimental_validation",
+                    "claim_boundary": "The v89 residual compiler provides a candidate-bound, auditable multi-region governing/additive/interface/control assembly and exact consistency solve. Its present numerical model is an integrated reduced control-volume screen, not a free-boundary MHD, kinetic, full-engineering, or validation solve.",
+                    "anchor_values_used_as_predictions": false,
+                    "status": "pass",
+                    "numerical_vvuq_status": "pass",
+                    "published_interval_comparisons": [
+                        {
+                            "model_value": 1500,
+                            "model_interval": [
+                                1470,
+                                1530
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.02,
+                            "reference_interval": [
+                                500,
+                                3000
+                            ],
+                            "observable_id": "effective_temperature_ev",
+                            "reference_used_as_model_input": false
+                        },
+                        {
+                            "model_value": 0.04,
+                            "model_interval": [
+                                0.0392,
+                                0.0408
+                            ],
+                            "status": "pass",
+                            "model_uq_relative": 0.02,
+                            "reference_interval": [
+                                0.03,
+                                0.04
+                            ],
+                            "observable_id": "pulse_duration_s",
+                            "reference_used_as_model_input": false
+                        }
+                    ],
+                    "validation_vvuq_status": "unknown",
+                    "screen_hash": "1a955b138ba4db8098c7770af26cc3594e60d83df800bbba1a4039cd097283f4",
+                    "published_interval_regression_status": "pass"
+                }
+            ],
+            "label_erasure_neutrality": {
+                "checks": {
+                    "solver_input_hash_unchanged": true,
+                    "realization_hash_unchanged": true,
+                    "benchmark_flag_ignored": true,
+                    "route_hash_unchanged": true,
+                    "topology_hash_unchanged": true,
+                    "hard_gate_decision_unchanged": true,
+                    "isomorphism_hash_unchanged": true
+                },
+                "status": "pass"
+            },
+            "ui_label": "C-2W",
+            "chain_status": "pass",
+            "post_hard_gate_pareto": [
+                {
+                    "pareto_scope_hash": "0583f7c673fe0244a289ff390c1e0efe11f848b302fb354b4651ce044c0215f8",
+                    "candidate_hash": "d3402cedeea76dcc2fd8193f8462d5d855063b0177432f5f45158c1941bc92b8",
+                    "mission_id": "reference_operating_point_screening",
+                    "capability_cell": "c14f330ac74f5f9a781a4dbd6327256fc7895fc1b92953333d76195652217ab9",
+                    "objectives": {
+                        "component_count": 8,
+                        "thermal_cryogenic_maintenance_proxy": 9.75,
+                        "independent_power_supply_count": 3,
+                        "support_and_shield_mass_proxy": 10,
+                        "maximum_curvature_1_per_m": 2.5,
+                        "conductor_length_m": 15.707963267948966,
+                        "operation_and_fault_recovery_complexity": 2,
+                        "sensor_actuator_controller_complexity": 3,
+                        "basis_complexity": 7
+                    },
+                    "evidence_level": "integrated_reduced_numerical_screening_v89",
+                    "hard_gate_status": "pass",
+                    "minimality_claim": "Pareto minimal only within the declared grammar, bounds, mission, capability cell, comparison scope, and evidence level.",
+                    "comparison_scope": "same_capability_mission_and_evidence_only",
+                    "complexity_hash": "acda7df360226fa3a0c5e8e4b6de1f2f53f11a357a93b0a10a5f000f9336e3ff"
+                }
+            ],
+            "inverse_realization": {
+                "stream_seeds": {
+                    "operating": 302,
+                    "control": 402,
+                    "physical": 202
+                },
+                "physical_parameters": {
+                    "minor_radius_m": 0.4,
+                    "temperature_j": 2.403264951e-16,
+                    "fuel": "D or H experimental plasma; no D-T burn claim",
+                    "volume_m3": 1.2566370614359172,
+                    "input_power_w": 20000000,
+                    "characteristic_length_m": 2.5,
+                    "magnetic_field_t": 0.3,
+                    "parameter_status": "midpoints_or_upper_bounds_within_published_experimental_ranges",
+                    "pulse_duration_s": 0.04
+                },
+                "components": [
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_internal_current",
+                        "role": "plasma_internal_current",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 1
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_field_conductor",
+                        "role": "external_field_conductor",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 1
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_power",
+                        "role": "power_actuator",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 1
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_wall",
+                        "role": "material_boundary",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_sensor_primary",
+                        "role": "sensor",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_sensor_redundant",
+                        "role": "sensor",
+                        "required": false,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r1",
+                        "component_id": "cmp_controller",
+                        "role": "controller",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r2",
+                        "component_id": "cmp_loss_target_r2",
+                        "role": "open_loss_target",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    },
+                    {
+                        "region_id": "r2",
+                        "component_id": "cmp_heat_sink_r2",
+                        "role": "heat_sink",
+                        "required": true,
+                        "count": 1,
+                        "independent_power_supplies": 0
+                    }
+                ],
+                "realization_hash": "0303e6d03d4e0a794b2337476927af62973dc4a5810f353c14604e5bc8f27887",
+                "topology_hash": "bd34f56cd9892ea543629a9afa163babf12ae3bc3f092ff18495a7e5254f6aaf",
+                "claim_boundary": "A v89 realization binds abstract regions and ports to generic physical components, geometry, coefficients, operating state, and declared consumers. Passing compilation does not grant hard-physics or engineering feasibility.",
+                "control_realization": {
+                    "sensor_count": 2,
+                    "command_max": 20000000,
+                    "controller_model": "bounded_state_feedback_v89",
+                    "delay_s": 0,
+                    "command_min": 0,
+                    "fault_action": "safe_power_zero",
+                    "actuator_count": 1
+                },
+                "basis_coefficients": [
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "characteristic_length_m",
+                        "value": 2.5,
+                        "unit": "m",
+                        "lower": 1.25,
+                        "upper": 3.75,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "input_power_w",
+                        "value": 20000000,
+                        "unit": "W",
+                        "lower": 10000000,
+                        "upper": 30000000,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "magnetic_field_t",
+                        "value": 0.3,
+                        "unit": "T",
+                        "lower": 0.15,
+                        "upper": 0.44999999999999996,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "minor_radius_m",
+                        "value": 0.4,
+                        "unit": "m",
+                        "lower": 0.2,
+                        "upper": 0.6000000000000001,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "pulse_duration_s",
+                        "value": 0.04,
+                        "unit": "s",
+                        "lower": 0.02,
+                        "upper": 0.06,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "temperature_j",
+                        "value": 2.403264951e-16,
+                        "unit": "J",
+                        "lower": 1.8281890174968686e-17,
+                        "upper": 4.623711000250313e-16,
+                        "regularization": "bounded_l2"
+                    },
+                    {
+                        "complexity_cost": 1,
+                        "basis_family": "declared_scalar_profile_v89",
+                        "gene_id": "volume_m3",
+                        "value": 1.2566370614359172,
+                        "unit": "m^3",
+                        "lower": 0.6283185307179586,
+                        "upper": 1.8849555921538759,
+                        "regularization": "bounded_l2"
+                    }
+                ],
+                "operating_state": {
+                    "thermal_energy": 18123.89543722515,
+                    "plasma_current": 1000000,
+                    "magnetic_flux": 0.15079644737231007,
+                    "particle_inventory": 2.5132741228718346e19
+                },
+                "stream_hashes": {
+                    "operating": "e7a2f55a0b1b6f0f760a522484f60be43ffb672b79db9f2fa21f2f21a67bcdef",
+                    "control": "d266da259b512f24c69778d5265d73bb5d40ad5c1d7311ee1c52b8833fb1f3b2",
+                    "physical": "dab765799756624f17eb01020497c447195517884cf44e567ccac8e29d287d4b"
+                },
+                "schema_version": "1.0.0",
+                "consumer_proofs": [
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "characteristic_length_m"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "operating_and_control_residual_v89",
+                        "consumer_kind": "residual_block",
+                        "gene_id": "input_power_w"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "magnetic_field_t"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "minor_radius_m"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "operating_and_control_residual_v89",
+                        "consumer_kind": "residual_block",
+                        "gene_id": "pulse_duration_s"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "temperature_j"
+                    },
+                    {
+                        "changes_candidate_physics_hash": true,
+                        "consumer_id": "hard_physics_preflight_v89",
+                        "consumer_kind": "hard_gate",
+                        "gene_id": "volume_m3"
+                    }
+                ],
+                "candidate_physics_hash": "9ac516b582dc0aeabaa979bf52ccea1d3977934009176bd2fd3b6bf9d2f8d32d"
+            },
+            "layer_counts": {
+                "physical_realizations": 2,
+                "unique_abstract_structures": 1,
+                "pareto_survivors": 1,
+                "unique_solver_inputs": 2,
+                "engineering_vv_candidates": 0,
+                "raw_structure_seeds": 1,
+                "compiled_topology_structures": 1,
+                "integrated_reduced_screen_survivors": 1,
+                "hard_gate_survivors": 2
+            }
+        }
+    ],
+    "claim_boundary": "Sentinels and generated controls use one family-neutral v89 chain. A pass proves representability, reachability of the structural neighborhood, executable reduced-physics screening, scoped interval regression, and post-hard-gate minimality. Validation VVUQ, full engineering acceptance, deployability, external novelty, patentability, and FTO remain unproven.",
+    "status": "pass",
+    "unified_chain": [
+        "abstract_topology_generation",
+        "abstract_consistency_screen",
+        "physical_realization_generation",
+        "hard_physics_funnel",
+        "survivor_sparsification_and_pareto",
+        "high_fidelity_integrated_screen",
+        "simplest_credible_within_evidence_boundary"
+    ],
+    "generated_unlabeled_control": {
+        "source_reference_id": null,
+        "integrated_screen_results": [
+            {
+                "candidate_hash": "9a9c06de455b94d9b18b9738c2f7efb9d1f26dc5e999a25f07bcbe690672ff4f",
+                "declared_fidelity_level": "integrated_reduced_model_L2_v89",
+                "engineering_acceptance_status": "unknown",
+                "resolution_evidence": [
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 32,
+                        "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 64,
+                        "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 128,
+                        "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                        "interface_conservation_error": 0
+                    }
+                ],
+                "model_observables": {
+                    "pulse_duration_s": 0.1,
+                    "effective_temperature_ev": 6241.509074460763
+                },
+                "exact_state_residual_status": "pass",
+                "evidence_ceiling": "integrated_reduced_numerical_screening_not_engineering_or_experimental_validation",
+                "claim_boundary": "The v89 residual compiler provides a candidate-bound, auditable multi-region governing/additive/interface/control assembly and exact consistency solve. Its present numerical model is an integrated reduced control-volume screen, not a free-boundary MHD, kinetic, full-engineering, or validation solve.",
+                "anchor_values_used_as_predictions": false,
+                "status": "pass",
+                "numerical_vvuq_status": "pass",
+                "published_interval_comparisons": [
+                ],
+                "validation_vvuq_status": "unknown",
+                "screen_hash": "005cd73e499c8dc5797c1d8062d7ec9a08a4f166ad749ad7f60d6c416153bc9a",
+                "published_interval_regression_status": "not_requested"
+            }
+        ],
+        "engineering_acceptance_status": "unknown",
+        "reachability": {
+            "status": "pass",
+            "selected_structure_seed": 778,
+            "exact_anchor_parameter_sampling_used": false,
+            "budget": 2,
+            "generated_signature": {
+                "has_closed_flux": true,
+                "region_roles": [
+                    "closed_plasma_core",
+                    "open_parallel_loss_region"
+                ],
+                "has_internal_interface": true,
+                "boundary_kinds": [
+                    "mixed",
+                    "open"
+                ],
+                "has_open_flux": true
+            },
+            "sampler": "family_neutral_structural_production_v89",
+            "target_signature": {
+                "has_closed_flux": true,
+                "region_roles": [
+                    "closed_plasma_core",
+                    "open_parallel_loss_region"
+                ],
+                "has_internal_interface": true,
+                "boundary_kinds": [
+                    "mixed",
+                    "open"
+                ],
+                "has_open_flux": true
+            }
+        },
+        "baseline_route": {
+            "classification": "all_operator_obligations_routed",
+            "missing": [
+            ],
+            "claim_boundary": "Routing is determined only by operators, states, dimensions, boundaries, time semantics, validity domains, outputs, and evidence obligations. A route match proves executability of the declared reduced operator, not device-family feasibility.",
+            "status": "pass",
+            "name_routing_used": false,
+            "route_hash": "121bbcba043df0d8fa25ff05951ad5993ce67e1ebad4af968d122ef02dcbcc06",
+            "family_routing_used": false,
+            "benchmark_routing_used": false,
+            "bindings": [
+                {
+                    "manifest_id": "conservative_inventory_runtime_v89",
+                    "operator_id": "control_volume_particle_inventory_v1",
+                    "status": "pass",
+                    "obligation_id": "o1",
+                    "manifest_hash": "20cc30ebeafdfa5d9a7d6e1609f353eecd7bdf3ba9eda896f88c42b2b656e2af",
+                    "independence_group": "conservative_inventory_runtime_v89"
+                },
+                {
+                    "manifest_id": "conservative_inventory_runtime_v89",
+                    "operator_id": "control_volume_thermal_energy_v1",
+                    "status": "pass",
+                    "obligation_id": "o2",
+                    "manifest_hash": "20cc30ebeafdfa5d9a7d6e1609f353eecd7bdf3ba9eda896f88c42b2b656e2af",
+                    "independence_group": "conservative_inventory_runtime_v89"
+                },
+                {
+                    "manifest_id": "open_parallel_transport_runtime_v89",
+                    "operator_id": "state_derived_parallel_streaming_l1_v1",
+                    "status": "pass",
+                    "obligation_id": "o3",
+                    "manifest_hash": "6696ccb8b8d2831201b5ef6aec0a80a51dc1521a41a0bdcbface40e32ed53b70",
+                    "independence_group": "open_parallel_transport_runtime_v89"
+                },
+                {
+                    "manifest_id": "fixed_current_flux_inventory_runtime_v89",
+                    "operator_id": "fixed_current_flux_inventory_l1_v1",
+                    "status": "pass",
+                    "obligation_id": "o4",
+                    "manifest_hash": "18bcf868004b8e577482dce808b8935edfdf79f703abddcd0889d7ca6d5978eb",
+                    "independence_group": "fixed_current_flux_inventory_runtime_v89"
+                },
+                {
+                    "manifest_id": "multiregion_coupling_control_runtime_v89",
+                    "operator_id": "conservative_multiregion_interface_v89",
+                    "status": "pass",
+                    "obligation_id": "o5",
+                    "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                    "independence_group": "multiregion_coupling_control_runtime_v89"
+                },
+                {
+                    "manifest_id": "multiregion_coupling_control_runtime_v89",
+                    "operator_id": "bounded_control_response_v89",
+                    "status": "pass",
+                    "obligation_id": "o6",
+                    "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                    "independence_group": "multiregion_coupling_control_runtime_v89"
+                },
+                {
+                    "manifest_id": "multiregion_coupling_control_runtime_v89",
+                    "operator_id": "integrated_reduced_device_audit_v89",
+                    "status": "pass",
+                    "obligation_id": "o7",
+                    "manifest_hash": "71b0f12c8c57b72fa40caa8fead8c860bf4332d3996cab8c8453212116168b57",
+                    "independence_group": "multiregion_coupling_control_runtime_v89"
+                }
+            ],
+            "topology_hash": "d6187e6571713ede8d2b78c8436b54cfb26c7dabe4152efe30de1375d6a1d22a"
+        },
+        "inverse_topology": {
+            "field_topologies": [
+                {
+                    "region_id": "r1",
+                    "kind": "closed_flux",
+                    "reversal_surface": true,
+                    "separatrix": true
+                },
+                {
+                    "region_id": "r2",
+                    "kind": "open_flux",
+                    "reversal_surface": false,
+                    "separatrix": true
+                }
+            ],
+            "control_paths": [
+                {
+                    "delay_s": 0,
+                    "sensor_region_id": "r1",
+                    "actuated_account_ids": [
+                        "energy",
+                        "particles"
+                    ],
+                    "actuator_region_id": "r1",
+                    "observed_state_ids": [
+                        "particle_inventory",
+                        "thermal_energy",
+                        "plasma_current",
+                        "magnetic_flux"
+                    ],
+                    "control_path_id": "c1"
+                }
+            ],
+            "interfaces": [
+                {
+                    "kind": "conservative_coupling",
+                    "target_region_id": "r2",
+                    "source_region_id": "r1",
+                    "interface_id": "i1",
+                    "flux_pairs": [
+                        {
+                            "target_sign": 1,
+                            "account_id": "particles",
+                            "source_sign": -1,
+                            "unit": "1/s"
+                        },
+                        {
+                            "target_sign": 1,
+                            "account_id": "energy",
+                            "source_sign": -1,
+                            "unit": "W"
+                        }
+                    ]
+                },
+                {
+                    "kind": "declared_external_boundary_flux",
+                    "target_region_id": null,
+                    "source_region_id": "r2",
+                    "interface_id": "i2",
+                    "flux_pairs": [
+                        {
+                            "target_sign": 0,
+                            "account_id": "energy",
+                            "source_sign": -1,
+                            "unit": "W"
+                        }
+                    ]
+                }
+            ],
+            "boundaries": [
+                {
+                    "region_id": "r1",
+                    "kind": "mixed",
+                    "time_varying": false
+                },
+                {
+                    "region_id": "r2",
+                    "kind": "open",
+                    "time_varying": false
+                }
+            ],
+            "isomorphism_hash": "797415fc235f9f20479a5287307fc0af0449d2de3b73364fd8e130e4b0ea74fc",
+            "topology_hash": "d6187e6571713ede8d2b78c8436b54cfb26c7dabe4152efe30de1375d6a1d22a",
+            "operator_obligations": [
+                {
+                    "region_id": "r1",
+                    "spatial_dimension": "2d",
+                    "time_semantics": "transient",
+                    "operator_id": "control_volume_particle_inventory_v1",
+                    "required_state_ids": [
+                        "particle_inventory"
+                    ],
+                    "evidence_obligation": "L1_screening_only",
+                    "obligation_id": "o1",
+                    "boundary_kinds": [
+                        "mixed"
+                    ]
+                },
+                {
+                    "region_id": "r1",
+                    "spatial_dimension": "2d",
+                    "time_semantics": "transient",
+                    "operator_id": "control_volume_thermal_energy_v1",
+                    "required_state_ids": [
+                        "thermal_energy"
+                    ],
+                    "evidence_obligation": "L1_screening_only",
+                    "obligation_id": "o2",
+                    "boundary_kinds": [
+                        "mixed"
+                    ]
+                },
+                {
+                    "region_id": "r2",
+                    "spatial_dimension": "1d",
+                    "time_semantics": "transient",
+                    "operator_id": "state_derived_parallel_streaming_l1_v1",
+                    "required_state_ids": [
+                        "particle_inventory",
+                        "thermal_energy"
+                    ],
+                    "evidence_obligation": "open_loss_screen_only",
+                    "obligation_id": "o3",
+                    "boundary_kinds": [
+                        "open"
+                    ]
+                },
+                {
+                    "region_id": "r1",
+                    "spatial_dimension": "2d",
+                    "time_semantics": "transient",
+                    "operator_id": "fixed_current_flux_inventory_l1_v1",
+                    "required_state_ids": [
+                        "plasma_current",
+                        "magnetic_flux"
+                    ],
+                    "evidence_obligation": "inventory_screen_only",
+                    "obligation_id": "o4",
+                    "boundary_kinds": [
+                        "mixed"
+                    ]
+                },
+                {
+                    "region_id": "r1",
+                    "spatial_dimension": "2d",
+                    "time_semantics": "transient",
+                    "operator_id": "conservative_multiregion_interface_v89",
+                    "required_state_ids": [
+                        "particle_inventory",
+                        "thermal_energy"
+                    ],
+                    "evidence_obligation": "paired_interface_conservation",
+                    "obligation_id": "o5",
+                    "boundary_kinds": [
+                        "mixed"
+                    ]
+                },
+                {
+                    "region_id": "r1",
+                    "spatial_dimension": "2d",
+                    "time_semantics": "transient",
+                    "operator_id": "bounded_control_response_v89",
+                    "required_state_ids": [
+                        "particle_inventory",
+                        "thermal_energy"
+                    ],
+                    "evidence_obligation": "actuator_capacity_and_feedback_closure",
+                    "obligation_id": "o6",
+                    "boundary_kinds": [
+                        "mixed"
+                    ]
+                },
+                {
+                    "region_id": "r1",
+                    "spatial_dimension": "2d",
+                    "time_semantics": "transient",
+                    "operator_id": "integrated_reduced_device_audit_v89",
+                    "required_state_ids": [
+                        "particle_inventory",
+                        "thermal_energy",
+                        "plasma_current",
+                        "magnetic_flux"
+                    ],
+                    "evidence_obligation": "reduced_multiresolution_integrated_screen",
+                    "obligation_id": "o7",
+                    "boundary_kinds": [
+                        "mixed"
+                    ]
+                }
+            ],
+            "claim_boundary": "Family-neutral multi-region topology compilation proves typed representability, conservation/interface consistency, and stable structural identity. It is not equilibrium, stability, transport, engineering, or experimental validation.",
+            "event_transitions": [
+            ],
+            "schema_version": "1.0.0",
+            "regions": [
+                {
+                    "region_id": "r1",
+                    "role": "closed_plasma_core",
+                    "time_semantics": "transient",
+                    "reservoir_accounts": [
+                        "current",
+                        "energy",
+                        "magnetic_flux",
+                        "particles"
+                    ],
+                    "dimension": "2d",
+                    "state_slots": [
+                        {
+                            "account": "particles",
+                            "positivity_required": true,
+                            "slot_id": "particle_inventory",
+                            "unit": "1"
+                        },
+                        {
+                            "account": "energy",
+                            "positivity_required": true,
+                            "slot_id": "thermal_energy",
+                            "unit": "J"
+                        },
+                        {
+                            "account": "current",
+                            "positivity_required": false,
+                            "slot_id": "plasma_current",
+                            "unit": "A"
+                        },
+                        {
+                            "account": "magnetic_flux",
+                            "positivity_required": false,
+                            "slot_id": "magnetic_flux",
+                            "unit": "Wb"
+                        }
+                    ]
+                },
+                {
+                    "region_id": "r2",
+                    "role": "open_parallel_loss_region",
+                    "time_semantics": "transient",
+                    "reservoir_accounts": [
+                        "energy",
+                        "particles"
+                    ],
+                    "dimension": "1d",
+                    "state_slots": [
+                        {
+                            "account": "particles",
+                            "positivity_required": true,
+                            "slot_id": "loss_particle_inventory",
+                            "unit": "1"
+                        },
+                        {
+                            "account": "energy",
+                            "positivity_required": true,
+                            "slot_id": "loss_thermal_energy",
+                            "unit": "J"
+                        }
+                    ]
+                }
+            ]
+        },
+        "baseline_residual": {
+            "maximum_normalized_residual": 0,
+            "candidate_hash": "6260ac00d975ed42af7a987c2c8fd38c92071110df67381b5b4ddfbb1d874a9f",
+            "resolution_evidence": [
+                {
+                    "normalized_residual": 0,
+                    "resolution": 32,
+                    "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                    "interface_conservation_error": 0
+                },
+                {
+                    "normalized_residual": 0,
+                    "resolution": 64,
+                    "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                    "interface_conservation_error": 0
+                },
+                {
+                    "normalized_residual": 0,
+                    "resolution": 128,
+                    "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                    "interface_conservation_error": 0
+                }
+            ],
+            "convergence_status": "converged",
+            "evidence_ceiling": "integrated_reduced_control_volume_numerical_screening",
+            "state": {
+                "r1::thermal_energy": 300000,
+                "r2::loss_thermal_energy": 3000,
+                "r1::particle_inventory": 1.0e20,
+                "r1::magnetic_flux": 0.6283185307179586,
+                "r2::loss_particle_inventory": 1000000000000000000,
+                "r1::plasma_current": 800000
+            },
+            "classification": "pass_integrated_reduced_exact_state_consistency_v89",
+            "result_hash": "5d40254bf8759a59c9d9bd72c0f123e960cc7223bbc968478b47c868ad50dcac",
+            "status": "pass",
+            "maximum_interface_conservation_error": 0,
+            "postprocessing_used_as_coupled_state": false,
+            "plan_hash": "72504b61f65d1bf9628c2821382bdc67e32f7a6de0353f8692ed706ff757deb4"
+        },
+        "stage_statuses": {
+            "abstract_topology_generation": "pass",
+            "operator_routing_and_executability": "pass",
+            "abstract_consistency_screen": "pass",
+            "hard_physics_funnel": "pass",
+            "high_fidelity_integrated_screen": "pass",
+            "multiregion_residual": "pass",
+            "simplest_credible_within_evidence_boundary": "pass",
+            "survivor_sparsification_and_pareto": "pass",
+            "physical_realization_generation": "pass"
+        },
+        "inverse_realization_provenance": {
+            "realization_status": "pass",
+            "inverse_method": "parameter_state_and_operator_binding_inverse_v89",
+            "source_parameter_hash": "37b6256a6133a14dfcc6f0fc60411e2d46c0ea3907667fa4cfb628e3e7b6d24c",
+            "anchor_observables_consumed_by_inverse": false
+        },
+        "claim_boundary": "Sentinels and generated controls use one family-neutral v89 chain. A pass proves representability, reachability of the structural neighborhood, executable reduced-physics screening, scoped interval regression, and post-hard-gate minimality. Validation VVUQ, full engineering acceptance, deployability, external novelty, patentability, and FTO remain unproven.",
+        "baseline_hard_funnel": {
+            "candidate_hash": "6260ac00d975ed42af7a987c2c8fd38c92071110df67381b5b4ddfbb1d874a9f",
+            "hard_gate_count": 9,
+            "status": "pass",
+            "gates": [
+                {
+                    "gate_id": "typed_geometry_and_state",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "minor_radius_m": 0.5,
+                        "temperature_j": 1.0e-15,
+                        "volume_m3": 5,
+                        "magnetic_field_t": 0.8
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "paired_interface_conservation",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "maximum_sign_pair_error": 0
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "finite_pressure_beta_bound",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "pressure_pa": 40000.00000000001,
+                        "beta_proxy": 0.15707963267948966
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "magnetic_inventory_consistency",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "relative_error": 0,
+                        "declared_flux_wb": 0.6283185307179586,
+                        "geometry_field_flux_wb": 0.6283185307179586
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "thermal_inventory_consistency",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "relative_error": 0
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "reduced_current_density_bound",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "limit_a_per_m2": 20000000,
+                        "current_density_a_per_m2": 1.0185916357881302e6
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "actuator_capacity",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "capacity_w": 5000000,
+                        "required_power_w": 5000000
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "operator_capability_fail_closed",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "route_hash": "121bbcba043df0d8fa25ff05951ad5993ce67e1ebad4af968d122ef02dcbcc06"
+                    },
+                    "status": "pass"
+                },
+                {
+                    "gate_id": "multiregion_residual_convergence",
+                    "classification": "pass_declared_gate",
+                    "metrics": {
+                        "result_hash": "5d40254bf8759a59c9d9bd72c0f123e960cc7223bbc968478b47c868ad50dcac"
+                    },
+                    "status": "pass"
+                }
+            ],
+            "passed_hard_gate_count": 9,
+            "evidence_ceiling": "reduced_hard_physics_screening_only",
+            "pareto_eligible": true,
+            "funnel_hash": "93aa1655e6db9f03814194e7151579f6cde27e318c18d52f472c8c24e9c7086b"
+        },
+        "inverse_topology_provenance": {
+            "inverse_method": "operator_and_region_semantics_inverse_v89",
+            "source_description_hash": "50b78f0647b189495e38cfca7feabef37d42099d1b4833d6a82f4d4eb837a46a",
+            "anchor_observables_consumed_by_inverse": false,
+            "labels_consumed_by_inverse": false,
+            "representability_status": "pass"
+        },
+        "validation_vvuq_status": "unknown",
+        "simplest_candidates": [
+            {
+                "candidate_hash": "9a9c06de455b94d9b18b9738c2f7efb9d1f26dc5e999a25f07bcbe690672ff4f",
+                "declared_fidelity_level": "integrated_reduced_model_L2_v89",
+                "engineering_acceptance_status": "unknown",
+                "resolution_evidence": [
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 32,
+                        "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 64,
+                        "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                        "interface_conservation_error": 0
+                    },
+                    {
+                        "normalized_residual": 0,
+                        "resolution": 128,
+                        "state_hash": "8315a924d1b2b4f08d66591db608c861dcc9ede16a161c9e4b84bfa5d1f06777",
+                        "interface_conservation_error": 0
+                    }
+                ],
+                "model_observables": {
+                    "pulse_duration_s": 0.1,
+                    "effective_temperature_ev": 6241.509074460763
+                },
+                "exact_state_residual_status": "pass",
+                "evidence_ceiling": "integrated_reduced_numerical_screening_not_engineering_or_experimental_validation",
+                "claim_boundary": "The v89 residual compiler provides a candidate-bound, auditable multi-region governing/additive/interface/control assembly and exact consistency solve. Its present numerical model is an integrated reduced control-volume screen, not a free-boundary MHD, kinetic, full-engineering, or validation solve.",
+                "anchor_values_used_as_predictions": false,
+                "status": "pass",
+                "numerical_vvuq_status": "pass",
+                "published_interval_comparisons": [
+                ],
+                "validation_vvuq_status": "unknown",
+                "screen_hash": "005cd73e499c8dc5797c1d8062d7ec9a08a4f166ad749ad7f60d6c416153bc9a",
+                "published_interval_regression_status": "not_requested"
+            }
+        ],
+        "label_erasure_neutrality": {
+            "checks": {
+                "solver_input_hash_unchanged": true,
+                "realization_hash_unchanged": true,
+                "benchmark_flag_ignored": true,
+                "route_hash_unchanged": true,
+                "topology_hash_unchanged": true,
+                "hard_gate_decision_unchanged": true,
+                "isomorphism_hash_unchanged": true
+            },
+            "status": "pass"
+        },
+        "ui_label": "generated_unlabeled_mixed_control",
+        "chain_status": "pass",
+        "post_hard_gate_pareto": [
+            {
+                "pareto_scope_hash": "0583f7c673fe0244a289ff390c1e0efe11f848b302fb354b4651ce044c0215f8",
+                "candidate_hash": "9a9c06de455b94d9b18b9738c2f7efb9d1f26dc5e999a25f07bcbe690672ff4f",
+                "mission_id": "reference_operating_point_screening",
+                "capability_cell": "c14f330ac74f5f9a781a4dbd6327256fc7895fc1b92953333d76195652217ab9",
+                "objectives": {
+                    "component_count": 8,
+                    "thermal_cryogenic_maintenance_proxy": 9.75,
+                    "independent_power_supply_count": 3,
+                    "support_and_shield_mass_proxy": 12,
+                    "maximum_curvature_1_per_m": 2,
+                    "conductor_length_m": 18.84955592153876,
+                    "operation_and_fault_recovery_complexity": 2,
+                    "sensor_actuator_controller_complexity": 3,
+                    "basis_complexity": 7
+                },
+                "evidence_level": "integrated_reduced_numerical_screening_v89",
+                "hard_gate_status": "pass",
+                "minimality_claim": "Pareto minimal only within the declared grammar, bounds, mission, capability cell, comparison scope, and evidence level.",
+                "comparison_scope": "same_capability_mission_and_evidence_only",
+                "complexity_hash": "535024b0c3daae0bf4d54e015e123c8f868597c2195e1e6d30556afec8945970"
+            }
+        ],
+        "inverse_realization": {
+            "stream_seeds": {
+                "operating": 779,
+                "control": 780,
+                "physical": 778
+            },
+            "physical_parameters": {
+                "minor_radius_m": 0.5,
+                "temperature_j": 1.0e-15,
+                "fuel": "declared nonburn screening plasma",
+                "volume_m3": 5,
+                "input_power_w": 5000000,
+                "characteristic_length_m": 3,
+                "magnetic_field_t": 0.8,
+                "pulse_duration_s": 0.1
+            },
+            "components": [
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_internal_current",
+                    "role": "plasma_internal_current",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 1
+                },
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_field_conductor",
+                    "role": "external_field_conductor",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 1
+                },
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_power",
+                    "role": "power_actuator",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 1
+                },
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_wall",
+                    "role": "material_boundary",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 0
+                },
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_sensor_primary",
+                    "role": "sensor",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 0
+                },
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_sensor_redundant",
+                    "role": "sensor",
+                    "required": false,
+                    "count": 1,
+                    "independent_power_supplies": 0
+                },
+                {
+                    "region_id": "r1",
+                    "component_id": "cmp_controller",
+                    "role": "controller",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 0
+                },
+                {
+                    "region_id": "r2",
+                    "component_id": "cmp_loss_target_r2",
+                    "role": "open_loss_target",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 0
+                },
+                {
+                    "region_id": "r2",
+                    "component_id": "cmp_heat_sink_r2",
+                    "role": "heat_sink",
+                    "required": true,
+                    "count": 1,
+                    "independent_power_supplies": 0
+                }
+            ],
+            "realization_hash": "06a6c17db536f896d4b65dbe0fabe702a7eb194a5fe41d5004b3ce3e8ba706bc",
+            "topology_hash": "d6187e6571713ede8d2b78c8436b54cfb26c7dabe4152efe30de1375d6a1d22a",
+            "claim_boundary": "A v89 realization binds abstract regions and ports to generic physical components, geometry, coefficients, operating state, and declared consumers. Passing compilation does not grant hard-physics or engineering feasibility.",
+            "control_realization": {
+                "sensor_count": 2,
+                "command_max": 5000000,
+                "controller_model": "bounded_state_feedback_v89",
+                "delay_s": 0,
+                "command_min": 0,
+                "fault_action": "safe_power_zero",
+                "actuator_count": 1
+            },
+            "basis_coefficients": [
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "characteristic_length_m",
+                    "value": 3,
+                    "unit": "m",
+                    "lower": 1.5,
+                    "upper": 4.5,
+                    "regularization": "bounded_l2"
+                },
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "input_power_w",
+                    "value": 5000000,
+                    "unit": "W",
+                    "lower": 2500000,
+                    "upper": 7500000,
+                    "regularization": "bounded_l2"
+                },
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "magnetic_field_t",
+                    "value": 0.8,
+                    "unit": "T",
+                    "lower": 0.4,
+                    "upper": 1.2000000000000002,
+                    "regularization": "bounded_l2"
+                },
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "minor_radius_m",
+                    "value": 0.5,
+                    "unit": "m",
+                    "lower": 0.25,
+                    "upper": 0.75,
+                    "regularization": "bounded_l2"
+                },
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "pulse_duration_s",
+                    "value": 0.1,
+                    "unit": "s",
+                    "lower": 0.05,
+                    "upper": 0.15000000000000002,
+                    "regularization": "bounded_l2"
+                },
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "temperature_j",
+                    "value": 1.0e-15,
+                    "unit": "J",
+                    "lower": 5.0e-16,
+                    "upper": 1.5000000000000001e-15,
+                    "regularization": "bounded_l2"
+                },
+                {
+                    "complexity_cost": 1,
+                    "basis_family": "declared_scalar_profile_v89",
+                    "gene_id": "volume_m3",
+                    "value": 5,
+                    "unit": "m^3",
+                    "lower": 2.5,
+                    "upper": 7.5,
+                    "regularization": "bounded_l2"
+                }
+            ],
+            "operating_state": {
+                "thermal_energy": 300000,
+                "plasma_current": 800000,
+                "magnetic_flux": 0.6283185307179586,
+                "particle_inventory": 1.0e20
+            },
+            "stream_hashes": {
+                "operating": "5fba85b3cb84c8399ff4745ea49833007396b4af3c1ec59e9ec4c2667389a942",
+                "control": "11470b0d136e848e3d41911d6a20d513d8424b6b4c3b8efea66090b86d74f47c",
+                "physical": "a5102fb85edafdbc084f4df50b50882bd6a1872c808c64906512e091a6fc55f5"
+            },
+            "schema_version": "1.0.0",
+            "consumer_proofs": [
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "hard_physics_preflight_v89",
+                    "consumer_kind": "hard_gate",
+                    "gene_id": "characteristic_length_m"
+                },
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "operating_and_control_residual_v89",
+                    "consumer_kind": "residual_block",
+                    "gene_id": "input_power_w"
+                },
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "hard_physics_preflight_v89",
+                    "consumer_kind": "hard_gate",
+                    "gene_id": "magnetic_field_t"
+                },
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "hard_physics_preflight_v89",
+                    "consumer_kind": "hard_gate",
+                    "gene_id": "minor_radius_m"
+                },
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "operating_and_control_residual_v89",
+                    "consumer_kind": "residual_block",
+                    "gene_id": "pulse_duration_s"
+                },
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "hard_physics_preflight_v89",
+                    "consumer_kind": "hard_gate",
+                    "gene_id": "temperature_j"
+                },
+                {
+                    "changes_candidate_physics_hash": true,
+                    "consumer_id": "hard_physics_preflight_v89",
+                    "consumer_kind": "hard_gate",
+                    "gene_id": "volume_m3"
+                }
+            ],
+            "candidate_physics_hash": "81aadbd88daccb0c0c8f0e70ed6492a7010736af8b82bf236f7b7a246a128ef5"
+        },
+        "layer_counts": {
+            "physical_realizations": 2,
+            "unique_abstract_structures": 1,
+            "pareto_survivors": 1,
+            "unique_solver_inputs": 2,
+            "engineering_vv_candidates": 0,
+            "raw_structure_seeds": 1,
+            "compiled_topology_structures": 1,
+            "integrated_reduced_screen_survivors": 1,
+            "hard_gate_survivors": 2
+        }
+    },
+    "artifact_hash": "0b7cc61e12cc4af73dc0dbefe1121fa83dd40ad7d44afb9697d37314d685a0f2",
+    "summary": {
+        "negative_control_status": "pass",
+        "generated_unlabeled_chain_status": "pass",
+        "known_device_count": 2,
+        "benchmark_threshold_override_count": 0,
+        "known_device_chain_pass_count": 2,
+        "known_device_inverse_representability_pass_count": 2,
+        "family_routing_count": 0,
+        "distinct_hard_survivor_capability_cells": 2,
+        "complete_engineering_vv_device_count": 0,
+        "retroactive_feasibility_credit": false
+    },
+    "acceptance_id": "universal_multitopology_device_chain_v89",
+    "schema_version": "1.0.0",
+    "negative_controls": {
+        "checks": {
+            "missing_solver_is_unsupported": true,
+            "actuator_capacity_shortfall_fails": true,
+            "broken_interface_conservation_rejected": true
+        },
+        "status": "pass"
+    },
+    "source_integrity": {
+        "schema_ids": [
+            "universal_multiregion_topology_v89",
+            "universal_realization_v89",
+            "universal_device_candidate_v89",
+            "solver_capability_manifest_v89",
+            "multiregion_residual_plan_v89",
+            "universal_multitopology_acceptance_v89"
+        ],
+        "implementation_sha256": {
+            "src/universal_device_grammar_v89.jl": "98567a426c57dd9a89c5a5c04cbfcbe08942719e7fd6b35164b055ceddc2e7ce",
+            "src/universal_realization_grammar_v89.jl": "5ec2da3b89451504019ac7cd7ca06ba0ae56d897661ad2d28738922783183a36",
+            "src/known_device_sentinel_runtime_v89.jl": "13ddb0c377876eeeab354ba3fee0e9949dfc082a7eaafce3825c73d9192b447b",
+            "src/multiregion_residual_compiler_v89.jl": "5863aac730618542f830cc24029192f8d53e33f8c2160686ca2cd7c7dfe2a727",
+            "src/universal_multiregion_topology_grammar_v89.jl": "b911fe1e513d0d7c18ed54e4b95bb5a89cc52bf017815b47f9f841f1f75a7bbe",
+            "src/operator_capability_router_v89.jl": "cfa042abf268370a4265fdfaf9c2f4f5d283f6cae50d0106d92a54914f00c63f"
+        },
+        "anchor_fixture_sha256": "5b213239790ff3a837c26d0d045bbb0719c998a749e1c54ad2ec61c7d0260304"
+    }
+}

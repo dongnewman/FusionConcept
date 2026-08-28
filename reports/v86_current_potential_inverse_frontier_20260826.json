@@ -1,0 +1,731 @@
+{
+    "selection_policy": "closed_route_distinct_structure_hash_then_p32_completion_transform_ordering_v1",
+    "selection": [
+        {
+            "inverse_request_hash": "acc7f4d9300c8d784a95e9623793802625339cac672d09260d5c274a04ab7611",
+            "structure_seed": 52,
+            "p32_classification_code": "insufficient_long_horizon_rotational_transform",
+            "p32_surface_ordering_fraction": 0.3125,
+            "inverse_result_hash": "19dcb2b73ececc841b601fc0dc36927f2a43881e5ec37f9084bfad46d044847c",
+            "p32_minimum_absolute_rotational_transform": 0.0060546180541485965,
+            "request_hash": "1b0c7cb4e3faaecabf8f5712be9f868ec7826d7b13f1897978469f1d77ecb845",
+            "structure_hash": "0244f32595060c5c50b88587975ed145dcef624c94596c20a83ff1ec09e671eb",
+            "p32_completion_fraction": 1
+        },
+        {
+            "inverse_request_hash": "8b708b6ef11cd5e8ca6394111e19aa09f0bdb918be2c3b06d7789d0d2e3160db",
+            "structure_seed": 73,
+            "p32_classification_code": "poincare_field_line_escape",
+            "p32_surface_ordering_fraction": 0,
+            "inverse_result_hash": "7379f535187ca9f088742c8d1456421b1b65de91ba4de83713c6bfb67e909267",
+            "p32_minimum_absolute_rotational_transform": 0.012965504406361473,
+            "request_hash": "6c768d224bd1bb0d4d7a7c4d57f5f52ef840277564be7a5f9348bbe80323481f",
+            "structure_hash": "0497edd15ffb234afcf98c2beb407b678bf9b539bd9826398fc11db7395b6cf1",
+            "p32_completion_fraction": 0.1654557590319666
+        },
+        {
+            "inverse_request_hash": "b691166aa4ef49b4206a2108d9d2b31ca0d0a70b6f3f1102f4cc0bbbedb59c91",
+            "structure_seed": 54,
+            "p32_classification_code": "periodic_magnetic_axis_not_located",
+            "p32_surface_ordering_fraction": 0,
+            "inverse_result_hash": "167351349b66c6d3b7aaaafc515f666bf15b417be046838380051b9af494f3df",
+            "p32_minimum_absolute_rotational_transform": 0,
+            "request_hash": "25211c92f78e816cdf4b626f0ca3b1485333ecd08b6929dedf215b8f0e908598",
+            "structure_hash": "2f15c75efd57e7e27412b8fd8926503ab2e107caa5a49ab10c20aa94cfd2eb41",
+            "p32_completion_fraction": 0
+        }
+    ],
+    "selected_distinct_structure_count": 3,
+    "source_campaign_hash": "9622128276490e944b0b164eccf0630578894554ab60b1068a00733db87ac817",
+    "campaign_promotion_credit": false,
+    "retroactive_feasibility_credit": false,
+    "candidate_feasibility_credit": false,
+    "per_structure_atomic_checkpointing": true,
+    "result_hash": "40eeb0e88a78ad86c33e7a66104554d67ce162889bdaf1485c0e6a40598a6b7d",
+    "audit_kind": "v86_current_potential_inverse_frontier_v1",
+    "fresh_result_count": 0,
+    "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+    "recovered_result_count": 3,
+    "followup_campaign_hash": "364a2b0e196b9e3667462bed0d1e0b7e7a1839077c4f8122e100de83d2064186",
+    "schema_version": "1.0.0",
+    "inverse_results": [
+        {
+            "hash_normalization": "json_roundtrip_canonical_v1",
+            "final_acquisition": {
+                "minimum_absolute_rotational_transform": 0.01901202639398411,
+                "trace_escape_fraction": 0,
+                "minimum_trace_completion_fraction": 1,
+                "minimum_sampled_wall_margin_fraction": 0.31974713166346147,
+                "surface_ordering_fraction": 1
+            },
+            "inverse_request": {
+                "acquisition_toroidal_turns": 4,
+                "theta_count": 4,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "finite_difference_step": 0.015,
+                "structure_hash": "0244f32595060c5c50b88587975ed145dcef624c94596c20a83ff1ec09e671eb",
+                "source_request_hash": "1b0c7cb4e3faaecabf8f5712be9f868ec7826d7b13f1897978469f1d77ecb845",
+                "retroactive_feasibility_credit": false,
+                "source_design_hash": "4c33a2b2a2998de7a5465d0c4d4902664961367909db353e82f48450e619b279",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "target_rotational_transform": 0.02,
+                "phi_count": 6,
+                "acquisition_steps_per_turn": 60,
+                "trust_radius": 0.1,
+                "next_request_sampling_only": true,
+                "source_basis_override_hash": "7f0807690e3d57da991b1a9d938a646435f33e729f902de83417c45863a4d0da",
+                "request_hash": "acc7f4d9300c8d784a95e9623793802625339cac672d09260d5c274a04ab7611",
+                "tikhonov_regularization": 0.05,
+                "maximum_iterations": 1,
+                "schema_version": "1.0.0",
+                "active_coefficient_indices": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "candidate_feasibility_credit": false,
+            "source_design_hash": "4c33a2b2a2998de7a5465d0c4d4902664961367909db353e82f48450e619b279",
+            "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+            "final_field_metrics": {
+                "signed_boundary_normal_maximum_absolute": 0.1486685107385955,
+                "relative_field_ripple": 0.05217812468925373,
+                "minimum_contour_spacing_m": 0.45288820186663803,
+                "signed_boundary_normal_rms": 0.0917725213268204,
+                "minimum_field_t": 1.5638017221065195,
+                "required_contour_spacing_m": 0.18
+            },
+            "optimized_design": {
+                "route": "closed/mixed",
+                "temperature_scale": 0.8954600210675747,
+                "structure_hash": "0244f32595060c5c50b88587975ed145dcef624c94596c20a83ff1ec09e671eb",
+                "current_potential_coefficients": [
+                    -0.01244746676432507,
+                    0.02789240832289534,
+                    -0.012928223149972993,
+                    -0.1587777957983503,
+                    -0.002531316411024047
+                ],
+                "actuator_timing_coefficients": [
+                    -0.0063190412432033854,
+                    0.09064438302414851,
+                    -0.044221197064160445,
+                    0.08498480972150284,
+                    0.025890268593149465
+                ],
+                "grammar_hash": "9ca1d01c543a797ee0cd9d076afa304d5297089ca3c0c9691f4f303ad6fba82a",
+                "controller_modal_coefficients": [
+                    0.04599214966373344,
+                    -0.04733394979503823,
+                    0.08381455368457358,
+                    0.06891731459747673
+                ],
+                "density_scale": 0.902054779349757,
+                "field_current_a": 90798.54588563344,
+                "design_hash": "abe2b21b8848edbb4b81dc9f2fc4c38973792633d6e1c49ee0679bd34cd7ffa8",
+                "schema_version": "1.0.0",
+                "coil_bspline_control_points": [
+                    -0.10772735841875833,
+                    0.0320488284351824,
+                    0.08817336835624544,
+                    -0.04030965176073947,
+                    0.07597237566477191,
+                    0.02983952091707031
+                ],
+                "plasma_boundary_coefficients": [
+                    0.001732971387024184,
+                    -0.01941229289828509,
+                    -0.06756608377020232,
+                    0.03611242220717673,
+                    0.032477233271803234
+                ],
+                "coil_fourier_coefficients": [
+                    -0.04052512568940861,
+                    -0.06656439948040044,
+                    0.12531600131612525,
+                    0.10576066302970442,
+                    -0.030837727752712877
+                ]
+            },
+            "optimized_basis_override_hash": "af9200e021b505c34325dfddce45bb5117483bb6f893f610c6748c2bf4f13aea",
+            "trace": [
+                {
+                    "rank": [
+                        0,
+                        0,
+                        0,
+                        0.14953108761640352,
+                        0,
+                        0.09611556666426067,
+                        0.049924623689540364
+                    ],
+                    "event": "initial",
+                    "iteration": 0,
+                    "coefficient_hash": "60b964c1fba7b7173c2d8017b026ca11e54a763b894a624779ebba32b31eb339"
+                },
+                {
+                    "rank": [
+                        0,
+                        0,
+                        0,
+                        0.049398680300794494,
+                        0,
+                        0.0917725213268204,
+                        0.05236348345370783
+                    ],
+                    "event": "accepted",
+                    "iteration": 1,
+                    "line_scale": 0.5,
+                    "coefficient_hash": "a6971962e627e04df41f36a3a8843b0807ef2fe38f614a733a1f2fe516f35cbd"
+                }
+            ],
+            "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+            "legacy_in_memory_result_hash": "2b06348b1f7a6c6ad38d5c9bf43bc1efa7019694c4897df688bc35d63d5dd35d",
+            "source_request_hash": "1b0c7cb4e3faaecabf8f5712be9f868ec7826d7b13f1897978469f1d77ecb845",
+            "retroactive_feasibility_credit": false,
+            "optimized_coefficient_hash": "a6971962e627e04df41f36a3a8843b0807ef2fe38f614a733a1f2fe516f35cbd",
+            "initial_rank": [
+                0,
+                0,
+                0,
+                0.14953108761640352,
+                0,
+                0.09611556666426067,
+                0.049924623689540364
+            ],
+            "next_request_sampling_only": true,
+            "result_hash": "19dcb2b73ececc841b601fc0dc36927f2a43881e5ec37f9084bfad46d044847c",
+            "source_basis_override_hash": "7f0807690e3d57da991b1a9d938a646435f33e729f902de83417c45863a4d0da",
+            "source_coefficient_hash": "60b964c1fba7b7173c2d8017b026ca11e54a763b894a624779ebba32b31eb339",
+            "final_rank": [
+                0,
+                0,
+                0,
+                0.049398680300794494,
+                0,
+                0.0917725213268204,
+                0.05236348345370783
+            ],
+            "optimized_basis_override": {
+                "grammar_transition": "helical_level_sets_to_poloidal_modular_2d_current_potential_contours_v3",
+                "basis_level": 3,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "supply_group_count": 2,
+                "bspline_control_count": 12,
+                "contour_count": 28,
+                "current_potential_coefficients": [
+                    -0.01244746676432507,
+                    0.02789240832289534,
+                    -0.012928223149972993,
+                    -0.1587777957983503,
+                    -0.002531316411024047,
+                    0.027509617396438816,
+                    0.038240884401767886,
+                    -0.027675286197621232,
+                    0.024135677737046814,
+                    0.013523758727403627,
+                    -0.009691688305525213
+                ],
+                "dominant_poloidal_mode_m": 1,
+                "dominant_toroidal_mode_n": 1,
+                "retroactive_feasibility_credit": false,
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "inverse_request_hash": "acc7f4d9300c8d784a95e9623793802625339cac672d09260d5c274a04ab7611",
+                "current_potential_order": 5,
+                "parent_optimized_basis_override_hash": "f449f08dc38226ca783e8344269d718abb76935b89096ebe1eab549a218fc623",
+                "contour_current_scale": 0.24999999999999997,
+                "feedback_role": "next_request_sampling_only",
+                "fourier_order": 5,
+                "coil_bspline_control_points": [
+                    -0.10772735841875833,
+                    0.0320488284351824,
+                    0.08817336835624544,
+                    -0.04030965176073947,
+                    0.07597237566477191,
+                    0.02983952091707031,
+                    0.023921087224931827,
+                    -0.06063136979010741,
+                    0.033085564050430935,
+                    0.013792002264091458,
+                    -0.025665334778461668,
+                    0.012116682627306719
+                ],
+                "coil_fourier_coefficients": [
+                    -0.04052512568940861,
+                    -0.06656439948040044,
+                    0.12531600131612525,
+                    0.10576066302970442,
+                    -0.030837727752712877,
+                    0.04834940532042627,
+                    0.060249743462250524,
+                    0.0204528540167309,
+                    0.0381968109180931,
+                    -0.0025254070355631114,
+                    -0.018998929331199153
+                ]
+            },
+            "schema_version": "1.0.0",
+            "evaluation_count": 16
+        },
+        {
+            "hash_normalization": "json_roundtrip_canonical_v1",
+            "final_acquisition": {
+                "minimum_absolute_rotational_transform": 0.04561592698361104,
+                "trace_escape_fraction": 0.3333333333333333,
+                "minimum_trace_completion_fraction": 0.675,
+                "minimum_sampled_wall_margin_fraction": 0.25795112165135536,
+                "surface_ordering_fraction": 1
+            },
+            "inverse_request": {
+                "acquisition_toroidal_turns": 4,
+                "theta_count": 4,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "finite_difference_step": 0.015,
+                "structure_hash": "0497edd15ffb234afcf98c2beb407b678bf9b539bd9826398fc11db7395b6cf1",
+                "source_request_hash": "6c768d224bd1bb0d4d7a7c4d57f5f52ef840277564be7a5f9348bbe80323481f",
+                "retroactive_feasibility_credit": false,
+                "source_design_hash": "541f099c3a38b7fedd3c78408b917df1379ed4733b01a5bdf8afe20ed635a5e3",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "target_rotational_transform": 0.02,
+                "phi_count": 6,
+                "acquisition_steps_per_turn": 60,
+                "trust_radius": 0.1,
+                "next_request_sampling_only": true,
+                "source_basis_override_hash": "3a89b2e38b0f9c9a3a5b86b941d9bd7687965faf38ed79a3fc5d4003ba90fe4b",
+                "request_hash": "8b708b6ef11cd5e8ca6394111e19aa09f0bdb918be2c3b06d7789d0d2e3160db",
+                "tikhonov_regularization": 0.05,
+                "maximum_iterations": 1,
+                "schema_version": "1.0.0",
+                "active_coefficient_indices": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "candidate_feasibility_credit": false,
+            "source_design_hash": "541f099c3a38b7fedd3c78408b917df1379ed4733b01a5bdf8afe20ed635a5e3",
+            "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+            "final_field_metrics": {
+                "signed_boundary_normal_maximum_absolute": 0.15371464073458185,
+                "relative_field_ripple": 0.06401337380942057,
+                "minimum_contour_spacing_m": 0.4358762675279051,
+                "signed_boundary_normal_rms": 0.09490216730855426,
+                "minimum_field_t": 1.1971517220826595,
+                "required_contour_spacing_m": 0.18
+            },
+            "optimized_design": {
+                "route": "closed/mixed",
+                "temperature_scale": 0.9097112575160817,
+                "structure_hash": "0497edd15ffb234afcf98c2beb407b678bf9b539bd9826398fc11db7395b6cf1",
+                "current_potential_coefficients": [
+                    -0.032132451482132285,
+                    -0.05114864828535497,
+                    0.10753208472741774,
+                    0.034878886887190264,
+                    0.007293403671787206
+                ],
+                "actuator_timing_coefficients": [
+                    0.04743674293093032,
+                    -0.13758374466021905,
+                    -0.013557230036795096,
+                    0.07791225393432039,
+                    -0.08592161643796752
+                ],
+                "grammar_hash": "fc02af7fcd12aee954c15d877c4d33cac7189d30d964fc3867191804aebb0c2f",
+                "controller_modal_coefficients": [
+                    -0.05159052652869757,
+                    -0.08774408798257893,
+                    0.07882498114220662,
+                    0.026162098879099316
+                ],
+                "density_scale": 0.983036246298421,
+                "field_current_a": 94248.03167049804,
+                "design_hash": "fbfa789c7e76fb763ab8305ef0fcfe29145e14ef834656c93d65c020c191669b",
+                "schema_version": "1.0.0",
+                "coil_bspline_control_points": [
+                    0.012220949044731857,
+                    -0.08549792676148132,
+                    -0.0004163223820480011,
+                    -0.07052402351247859,
+                    -0.05100133741917213,
+                    -0.031001290002647657
+                ],
+                "plasma_boundary_coefficients": [
+                    -0.04069469859059044,
+                    -0.01108729914746038,
+                    -0.0067413747414219625,
+                    0.0401839092556622,
+                    -0.05128280667611646
+                ],
+                "coil_fourier_coefficients": [
+                    0.1512598463818953,
+                    0.010878541003821369,
+                    0.18920493024553575,
+                    -0.04675147174956223,
+                    -0.19906167010898496
+                ]
+            },
+            "optimized_basis_override_hash": "8b2d3dd07a8af219cb380164721e0155c0405fd79106f067a3f967a0fd4e9682",
+            "trace": [
+                {
+                    "rank": [
+                        0,
+                        0.3333333333333333,
+                        0.3291666666666667,
+                        0,
+                        0,
+                        0.10132196415542392,
+                        0.03206503580767164
+                    ],
+                    "event": "initial",
+                    "iteration": 0,
+                    "coefficient_hash": "7298c01029b8d7553fdbda852e1b9e1ef19bdd60724852b7532b6b15b6ef9028"
+                },
+                {
+                    "rank": [
+                        0,
+                        0.3333333333333333,
+                        0.32499999999999996,
+                        0,
+                        0,
+                        0.09490216730855426,
+                        0.05775178025481384
+                    ],
+                    "event": "accepted",
+                    "iteration": 1,
+                    "line_scale": 1,
+                    "coefficient_hash": "f217eed26f67a5820eb99aa31f7c2248013409cd8983400d9a1cddeee48bcceb"
+                }
+            ],
+            "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+            "legacy_in_memory_result_hash": "174857d48906a2a3a06f134a9f489b4edde05ade4f410175b4ccb7eb93def4d5",
+            "source_request_hash": "6c768d224bd1bb0d4d7a7c4d57f5f52ef840277564be7a5f9348bbe80323481f",
+            "retroactive_feasibility_credit": false,
+            "optimized_coefficient_hash": "f217eed26f67a5820eb99aa31f7c2248013409cd8983400d9a1cddeee48bcceb",
+            "initial_rank": [
+                0,
+                0.3333333333333333,
+                0.3291666666666667,
+                0,
+                0,
+                0.10132196415542392,
+                0.03206503580767164
+            ],
+            "next_request_sampling_only": true,
+            "result_hash": "7379f535187ca9f088742c8d1456421b1b65de91ba4de83713c6bfb67e909267",
+            "source_basis_override_hash": "3a89b2e38b0f9c9a3a5b86b941d9bd7687965faf38ed79a3fc5d4003ba90fe4b",
+            "source_coefficient_hash": "7298c01029b8d7553fdbda852e1b9e1ef19bdd60724852b7532b6b15b6ef9028",
+            "final_rank": [
+                0,
+                0.3333333333333333,
+                0.32499999999999996,
+                0,
+                0,
+                0.09490216730855426,
+                0.05775178025481384
+            ],
+            "optimized_basis_override": {
+                "grammar_transition": "helical_level_sets_to_poloidal_modular_2d_current_potential_contours_v3",
+                "basis_level": 3,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "supply_group_count": 2,
+                "bspline_control_count": 12,
+                "contour_count": 28,
+                "current_potential_coefficients": [
+                    -0.032132451482132285,
+                    -0.05114864828535497,
+                    0.10753208472741774,
+                    0.034878886887190264,
+                    0.007293403671787206,
+                    -0.0937000570836467,
+                    -0.07767386644517903,
+                    -0.06268166679088422,
+                    -0.021970160610197426,
+                    0.018486989094815567,
+                    -0.02529847139184371
+                ],
+                "dominant_poloidal_mode_m": 1,
+                "dominant_toroidal_mode_n": 1,
+                "retroactive_feasibility_credit": false,
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "inverse_request_hash": "8b708b6ef11cd5e8ca6394111e19aa09f0bdb918be2c3b06d7789d0d2e3160db",
+                "current_potential_order": 5,
+                "parent_optimized_basis_override_hash": "ec51c07440d69dcff84132cc2ae22cc28cf6c7b8188afb836559b664ba5bdccf",
+                "contour_current_scale": 0.24999999999999997,
+                "feedback_role": "next_request_sampling_only",
+                "fourier_order": 5,
+                "coil_bspline_control_points": [
+                    0.012220949044731857,
+                    -0.08549792676148132,
+                    -0.0004163223820480011,
+                    -0.07052402351247859,
+                    -0.05100133741917213,
+                    -0.031001290002647657,
+                    -0.005299780857848508,
+                    -0.0027390792006747465,
+                    -0.018408255906774067,
+                    -0.007060043528183375,
+                    0.018177378239571086,
+                    -0.005215033677577089
+                ],
+                "coil_fourier_coefficients": [
+                    0.1512598463818953,
+                    0.010878541003821369,
+                    0.18920493024553575,
+                    -0.04675147174956223,
+                    -0.19906167010898496,
+                    0.025029998009991655,
+                    -0.03881431310480843,
+                    -0.02443704984086257,
+                    0.0296296327773984,
+                    -0.026360658102222892,
+                    0.006068524868191216
+                ]
+            },
+            "schema_version": "1.0.0",
+            "evaluation_count": 16
+        },
+        {
+            "hash_normalization": "json_roundtrip_canonical_v1",
+            "final_acquisition": {
+                "minimum_absolute_rotational_transform": 0.022768149289795068,
+                "trace_escape_fraction": 0,
+                "minimum_trace_completion_fraction": 1,
+                "minimum_sampled_wall_margin_fraction": 0.499498173586161,
+                "surface_ordering_fraction": 1
+            },
+            "inverse_request": {
+                "acquisition_toroidal_turns": 4,
+                "theta_count": 4,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "finite_difference_step": 0.015,
+                "structure_hash": "2f15c75efd57e7e27412b8fd8926503ab2e107caa5a49ab10c20aa94cfd2eb41",
+                "source_request_hash": "25211c92f78e816cdf4b626f0ca3b1485333ecd08b6929dedf215b8f0e908598",
+                "retroactive_feasibility_credit": false,
+                "source_design_hash": "c5dc66ad082646a536933978b03036c2bf430d50ab5f2f3b313b2d23e3341a88",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "target_rotational_transform": 0.02,
+                "phi_count": 6,
+                "acquisition_steps_per_turn": 60,
+                "trust_radius": 0.1,
+                "next_request_sampling_only": true,
+                "source_basis_override_hash": "cd411daaeedbf7f5a6add597443c7f77b0a5db009c1ada4350cd4432e49f0122",
+                "request_hash": "b691166aa4ef49b4206a2108d9d2b31ca0d0a70b6f3f1102f4cc0bbbedb59c91",
+                "tikhonov_regularization": 0.05,
+                "maximum_iterations": 1,
+                "schema_version": "1.0.0",
+                "active_coefficient_indices": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "candidate_feasibility_credit": false,
+            "source_design_hash": "c5dc66ad082646a536933978b03036c2bf430d50ab5f2f3b313b2d23e3341a88",
+            "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+            "final_field_metrics": {
+                "signed_boundary_normal_maximum_absolute": 0.1950588809969181,
+                "relative_field_ripple": 0.06633058328743237,
+                "minimum_contour_spacing_m": 0.4534299513148172,
+                "signed_boundary_normal_rms": 0.11126318094440962,
+                "minimum_field_t": 2.012421674044467,
+                "required_contour_spacing_m": 0.18
+            },
+            "optimized_design": {
+                "route": "closed/mixed",
+                "temperature_scale": 1.1406708725767496,
+                "structure_hash": "2f15c75efd57e7e27412b8fd8926503ab2e107caa5a49ab10c20aa94cfd2eb41",
+                "current_potential_coefficients": [
+                    -0.07711881349826252,
+                    -0.044291046396689814,
+                    0.04926295413575914,
+                    -0.015020133436612397,
+                    -0.023177554709189297
+                ],
+                "actuator_timing_coefficients": [
+                    0.05454514748915585,
+                    -0.013584876554845993,
+                    -0.0012763112826194708,
+                    0.075857415488315,
+                    0.01693342029845379
+                ],
+                "grammar_hash": "ff1a3bf6852999e006c52c2a8803476d5aec3c5bf613860a568d4a407a0d3b82",
+                "controller_modal_coefficients": [
+                    0.016094034736300455,
+                    0.08445140877247358,
+                    -0.052866115505419135,
+                    -0.13909225120685853
+                ],
+                "density_scale": 0.9577843660609825,
+                "field_current_a": 170792.51667800714,
+                "design_hash": "a949a730e18a1e0a72514d9e1611a058cedc68dfc1f5fdaa23617a887938882c",
+                "schema_version": "1.0.0",
+                "coil_bspline_control_points": [
+                    0.07379728192553933,
+                    -0.0067719378390335636,
+                    0.07584465233891358,
+                    0.09047952131604806,
+                    0.05993707681963553,
+                    0.10143765289978243
+                ],
+                "plasma_boundary_coefficients": [
+                    0.035140235057731,
+                    0.023872808194919472,
+                    0.04201568527360386,
+                    0.04451933086234292,
+                    -0.006100650426872051
+                ],
+                "coil_fourier_coefficients": [
+                    -0.10716891102199264,
+                    -0.07261263572202993,
+                    -0.020735443232989637,
+                    -0.04876527709255764,
+                    0.12018935034285495
+                ]
+            },
+            "optimized_basis_override_hash": "0474dda4418c9dd5059299ebae3316d7db3bd99fe8e7ed32b40b18e7a112fdad",
+            "trace": [
+                {
+                    "rank": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.11553901519177129,
+                        0.03149173693215824
+                    ],
+                    "event": "initial",
+                    "iteration": 0,
+                    "coefficient_hash": "4e18ec59ef364991c007c5722f0ec948765daa96e533be0d1af49b7d1c310e47"
+                },
+                {
+                    "rank": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0.11126318094440962,
+                        0.03667505021028567
+                    ],
+                    "event": "accepted",
+                    "iteration": 1,
+                    "line_scale": 0.5,
+                    "coefficient_hash": "31834ed2c66005b56dd4a2319b7145ff2bdd01dfb0f3655f216f68e31f2ce811"
+                }
+            ],
+            "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+            "legacy_in_memory_result_hash": "d274eba97405349d4790ce19784211aad4c8b80ffe360f9ca6c10fb92870252b",
+            "source_request_hash": "25211c92f78e816cdf4b626f0ca3b1485333ecd08b6929dedf215b8f0e908598",
+            "retroactive_feasibility_credit": false,
+            "optimized_coefficient_hash": "31834ed2c66005b56dd4a2319b7145ff2bdd01dfb0f3655f216f68e31f2ce811",
+            "initial_rank": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0.11553901519177129,
+                0.03149173693215824
+            ],
+            "next_request_sampling_only": true,
+            "result_hash": "167351349b66c6d3b7aaaafc515f666bf15b417be046838380051b9af494f3df",
+            "source_basis_override_hash": "cd411daaeedbf7f5a6add597443c7f77b0a5db009c1ada4350cd4432e49f0122",
+            "source_coefficient_hash": "4e18ec59ef364991c007c5722f0ec948765daa96e533be0d1af49b7d1c310e47",
+            "final_rank": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0.11126318094440962,
+                0.03667505021028567
+            ],
+            "optimized_basis_override": {
+                "grammar_transition": "helical_level_sets_to_poloidal_modular_2d_current_potential_contours_v3",
+                "basis_level": 3,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "supply_group_count": 2,
+                "bspline_control_count": 12,
+                "contour_count": 28,
+                "current_potential_coefficients": [
+                    -0.07711881349826252,
+                    -0.044291046396689814,
+                    0.04926295413575914,
+                    -0.015020133436612397,
+                    -0.023177554709189297,
+                    -0.005672709348034559,
+                    0.02032832091423503,
+                    0.03524037144569402,
+                    0.04441126678175725,
+                    -0.0039021840016270977,
+                    0.004702169781848115
+                ],
+                "dominant_poloidal_mode_m": 1,
+                "dominant_toroidal_mode_n": 1,
+                "retroactive_feasibility_credit": false,
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "inverse_request_hash": "b691166aa4ef49b4206a2108d9d2b31ca0d0a70b6f3f1102f4cc0bbbedb59c91",
+                "current_potential_order": 5,
+                "parent_optimized_basis_override_hash": "2d8a1577fae24dfc2b497fb520aa5ac17a166959169530710ea3369fb7ce5670",
+                "contour_current_scale": 0.35,
+                "feedback_role": "next_request_sampling_only",
+                "fourier_order": 5,
+                "coil_bspline_control_points": [
+                    0.07379728192553933,
+                    -0.0067719378390335636,
+                    0.07584465233891358,
+                    0.09047952131604806,
+                    0.05993707681963553,
+                    0.10143765289978243,
+                    -0.07379876750618426,
+                    -0.016183492325075356,
+                    -0.034868738118543685,
+                    -0.01402628109823921,
+                    -0.01071090121863982,
+                    0.013128324146114029
+                ],
+                "coil_fourier_coefficients": [
+                    -0.10716891102199264,
+                    -0.07261263572202993,
+                    -0.020735443232989637,
+                    -0.04876527709255764,
+                    0.12018935034285495,
+                    -0.017653463901827995,
+                    -0.03329264638933677,
+                    0.06556155564731932,
+                    0.01991240441470331,
+                    0.021510048938020748,
+                    0.005560690322339657
+                ]
+            },
+            "schema_version": "1.0.0",
+            "evaluation_count": 16
+        }
+    ]
+}

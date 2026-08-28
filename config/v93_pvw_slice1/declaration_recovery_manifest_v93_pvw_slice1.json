@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "declaration_recovery_manifest_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "source_inputs": ["v91_survivor_dossier", "v92_physical_realization"],
+  "directly_recoverable": ["typed_topology_nodes", "typed_topology_interfaces", "basis_coefficients", "region_inventory", "oriented_surface_parameters", "mesh_level_shapes_and_hashes", "field_source_geometry_and_current", "density_temperature_pressure_current_rotation_profiles", "initial_condition_references", "evidence_obligations"],
+  "deterministically_derivable": ["state_ownership", "equation_inventory", "residual_metadata", "plasma_vacuum_surface_binding", "vacuum_wall_surface_binding", "boundary_condition_inventory", "operator_to_region_obligations", "canonical_label_free_declaration_hash"],
+  "must_recompute": ["materialized_mesh_coordinates_and_connectivity", "mesh_partition", "candidate_bound_magnetic_field", "candidate_bound_current_density", "free_boundary_geometry", "dp_dpsi_on_solved_flux", "F_dF_dpsi_on_solved_flux", "wall_and_coil_response", "transport_coefficients", "source_sink_rates", "terminal_sheath_state", "residual_jacobian_and_conservation_metrics", "numerical_vvuq"],
+  "requires_external_evidence": ["wall_material_properties", "coil_material_properties", "diagnostic_measurements", "shot_or_run_ids", "calibration", "experimental_uncertainty", "model_discrepancy", "candidate_domain_applicability", "new_candidate_experimental_validation"],
+  "unknown_values_may_be_serialized_but_do_not_satisfy_completeness": true
+}

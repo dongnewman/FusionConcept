@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pvw_slice_acceptance_v1.schema.json",
+  "title": "PVW slice campaign acceptance",
+  "type": "object",
+  "required": ["protocol_id", "campaign_id", "source_realization_pass_count", "complete_declaration_count", "slice_eligible_count", "candidate_solver_execution_count", "candidate_numerical_vvuq_count", "candidate_validation_vvuq_count", "status", "first_campaign_blocker", "acceptance_hash"],
+  "properties": {
+    "protocol_id": {"const": "fusionconceptai-v93-pvw-slice1-20260828"},
+    "campaign_id": {"const": "v93_pvw_slice1_formal_246_20260828"},
+    "source_realization_pass_count": {"const": 246},
+    "complete_declaration_count": {"const": 246},
+    "slice_eligible_count": {"type": "integer", "minimum": 0},
+    "candidate_solver_execution_count": {"type": "integer", "minimum": 0},
+    "candidate_numerical_vvuq_count": {"type": "integer", "minimum": 0},
+    "candidate_validation_vvuq_count": {"type": "integer", "minimum": 0},
+    "status": {"enum": ["pass", "unsupported", "fail", "unknown"]},
+    "acceptance_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

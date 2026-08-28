@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/multitopology_campaign_v91.schema.json",
+  "title": "FusionConceptAI v91 multi-topology campaign manifest",
+  "type": "object",
+  "required": [
+    "schema_version", "campaign_id", "tier", "total_requests", "shard_size",
+    "shard_count", "generator_id", "canonicalizer_id", "solver_portfolio_id",
+    "preregistered_gates", "preregistered_gate_hash", "shards", "campaign_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "campaign_id": {"type": "string", "minLength": 1},
+    "tier": {"enum": ["pilot", "qualification", "formal"]},
+    "total_requests": {"type": "integer", "minimum": 1, "maximum": 1048576},
+    "shard_size": {"type": "integer", "minimum": 1},
+    "shard_count": {"type": "integer", "minimum": 1},
+    "preregistered_gates": {"type": "object"},
+    "preregistered_gate_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "shards": {"type": "array", "minItems": 1},
+    "campaign_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

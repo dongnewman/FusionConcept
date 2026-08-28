@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/generic_capability_acceptance_v94.schema.json",
+  "title": "FusionConceptAI v94 generic capability acceptance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "status",
+    "software_acceptance",
+    "provider_registry",
+    "controls",
+    "conclusions",
+    "physical_conclusion_expanded",
+    "claim_boundary",
+    "acceptance_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v94-generic-capability-multiregion-20260828"},
+    "status": {"enum": ["pass", "fail"]},
+    "software_acceptance": {"enum": ["pass", "fail"]},
+    "provider_registry": {"type": "object"},
+    "controls": {
+      "type": "object",
+      "required": [
+        "v93_preservation",
+        "provider_anti_specialization",
+        "field_dependency_closure",
+        "invariance",
+        "unseen_topology",
+        "negative_controls",
+        "strict_stage_order",
+        "pvw_provider_chain"
+      ]
+    },
+    "conclusions": {
+      "type": "object",
+      "required": [
+        "unknown",
+        "unsupported",
+        "numerical_verification",
+        "experimental_validation",
+        "device_feasibility",
+        "promotion"
+      ]
+    },
+    "physical_conclusion_expanded": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "acceptance_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

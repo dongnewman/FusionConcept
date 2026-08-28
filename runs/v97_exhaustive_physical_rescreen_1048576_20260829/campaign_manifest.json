@@ -1,0 +1,240 @@
+{
+    "campaign_id": "v97_exhaustive_physical_rescreen_1048576_20260829",
+    "total_request_count": 1048576,
+    "index_last": 1048576,
+    "historical_gate_metric_consumed": false,
+    "closed_only_high_cost_execution": true,
+    "deduplication_key": [
+        "graph_hash",
+        "solver_input_hash"
+    ],
+    "index_first": 1,
+    "execution_order": [
+        "per_shard_manufactured_iter_c2w_sentinels",
+        "deterministic_index_reconstruction",
+        "v96_graph_compile",
+        "field_dependency_closure",
+        "provider_routing",
+        "exact_input_dedup",
+        "closed_unique_solve",
+        "numerical_vvuq",
+        "validation_vvuq"
+    ],
+    "sealed_request_count": 1000000,
+    "protocol_id": "fusionconceptai-v97-exhaustive-physical-rescreen-20260829",
+    "grammar_tail_count": 48576,
+    "grammar_cardinality": 1048576,
+    "grammar_exhaustive": true,
+    "historical_result_fields_allowed": [
+        "request_index"
+    ],
+    "sealed_artifact_snapshot": {
+        "runs/multitopology_v91_formal_1000000_20260827/campaign_v91.json": "cc830978d91897cbf917a173a947828bb09fe0254d719cde5bc3938c6c8c01ea",
+        "runs/physical_closure_v92_formal_417_20260828/physical_closure_acceptance_v92_20260828.json": "05483936b83b239e35dbc6aef3eeb2585233ca132671345f3d4004a875ec9912",
+        "runs/v95_unified_filter_acceptance/acceptance.json": "29cbf96710a96603e0d9c157e3a894a34a4f8d809a753534f0929b5e09fa9348",
+        "runs/v96_provider_closure_acceptance/acceptance.json": "8e45a102453ce4def9b6f880eddc0825ef90114b50ba8e06b9e20ba01631eb45",
+        "runs/multitopology_v91_formal_1000000_20260827/campaign_v91_merged.json": "7582f992fe6dcb8ee1b9ac3a9f52d08f96e1ab225217f433685422d30585a38b",
+        "runs/v93_pvw_slice1_formal_246_20260828/acceptance_v93_pvw_slice1.json": "5ab4bc417eda45e42c0455dfde4baba5315c6b60de9cc65a011a906fcf5db176",
+        "runs/v94_generic_capability_acceptance/acceptance.json": "5a123a9d01ef78b373f3f43be64c95ef9e53843f46dece39328820f91d95028e"
+    },
+    "claim_boundary": "The v97 campaign is an exhaustive, resume-safe execution over the complete declared 20-bit v91 grammar. Closure rows and high-cost rows remain separate funnel layers; deduplication never promotes a representative result beyond identical graph and solver inputs, and missing external validation remains unknown.",
+    "reference_controls": [
+        "manufactured_solution",
+        "ITER",
+        "C-2W"
+    ],
+    "closure_shards": [
+        {
+            "last_request_index": 50000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "1ae038c81c530cb676f8090fc13d53b6e99410f78d3928e9ad37c9d9e2e4d6eb",
+            "sealed_result_stream": "results_shard_001.jsonl",
+            "first_request_index": 1,
+            "shard_id": 1,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 100000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "ec867ac587ba0ddc52539322eddfad0ee85a9aaee2dfe236e83301c808d936bc",
+            "sealed_result_stream": "results_shard_002.jsonl",
+            "first_request_index": 50001,
+            "shard_id": 2,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 150000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "0adfca1e75b426914092cdc94b961dc0d5fef0e01d96613a4a1021ac154c83a1",
+            "sealed_result_stream": "results_shard_003.jsonl",
+            "first_request_index": 100001,
+            "shard_id": 3,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 200000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "011aad5372f496968dcd523bad45cc49c7c569aa68610aaf964f24e38aaaaf9f",
+            "sealed_result_stream": "results_shard_004.jsonl",
+            "first_request_index": 150001,
+            "shard_id": 4,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 250000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "69e3c44d1600baf53489d5d841659a9d90e43ed6645b6c276c78549eb93d38d3",
+            "sealed_result_stream": "results_shard_005.jsonl",
+            "first_request_index": 200001,
+            "shard_id": 5,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 300000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "944e54f7264050e774211292c31dea6f07d88c108f91da0418f772ef74049ccb",
+            "sealed_result_stream": "results_shard_006.jsonl",
+            "first_request_index": 250001,
+            "shard_id": 6,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 350000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "1126b5fce9363bfa54e905345358b52c821ff8e812b551c33e7dcbe9d2051459",
+            "sealed_result_stream": "results_shard_007.jsonl",
+            "first_request_index": 300001,
+            "shard_id": 7,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 400000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "f49eb878ba35b0e9e609f22e073adb74ec63140ece828bcde1a6c73e688df7b9",
+            "sealed_result_stream": "results_shard_008.jsonl",
+            "first_request_index": 350001,
+            "shard_id": 8,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 450000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "a7c9f555c2ce0293c3d07fe5684d7c8477099011bd0747a05016237eb2e0f8a7",
+            "sealed_result_stream": "results_shard_009.jsonl",
+            "first_request_index": 400001,
+            "shard_id": 9,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 500000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "a1c9f817e3f5c550a3bb9dd66c4893f5ce0c95a8c28c32461b3dcdea092f7eaa",
+            "sealed_result_stream": "results_shard_010.jsonl",
+            "first_request_index": 450001,
+            "shard_id": 10,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 550000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "e025344b6107cf7e56bfa736a6824bb68d96b5aa8858ae0f90fc16f8426f5e77",
+            "sealed_result_stream": "results_shard_011.jsonl",
+            "first_request_index": 500001,
+            "shard_id": 11,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 600000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "ae3d2694e38c8b93b2d8914bcd2cdc4e80603e22b7e41999bfc120ba87e90866",
+            "sealed_result_stream": "results_shard_012.jsonl",
+            "first_request_index": 550001,
+            "shard_id": 12,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 650000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "10df4e332c9a5054827b9aae0a11af2bd2382bdb0f9326502a69a0da3bd4a01b",
+            "sealed_result_stream": "results_shard_013.jsonl",
+            "first_request_index": 600001,
+            "shard_id": 13,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 700000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "7222d36b77467ed357efc63cd0c2702c7b9dfb8298dd0d6b9d959b807aaa89a7",
+            "sealed_result_stream": "results_shard_014.jsonl",
+            "first_request_index": 650001,
+            "shard_id": 14,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 750000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "5baaf1ac9f5f3d94a78c6a597a59473542cb982ed864fe17b31493b4340ec234",
+            "sealed_result_stream": "results_shard_015.jsonl",
+            "first_request_index": 700001,
+            "shard_id": 15,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 800000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "ae9976abf3f117474a3cb8397f78eb61f55962aaaa1a5f61688a3ee3d4327c08",
+            "sealed_result_stream": "results_shard_016.jsonl",
+            "first_request_index": 750001,
+            "shard_id": 16,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 850000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "2825f818107eefe64df9f9f41da473d324aeab032db54e21661c8e5f6b5a1d10",
+            "sealed_result_stream": "results_shard_017.jsonl",
+            "first_request_index": 800001,
+            "shard_id": 17,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 900000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "fbbfdcf255853a714b050fb9ac79cd2ecda90ce758a8a7eea041818241cdaaf0",
+            "sealed_result_stream": "results_shard_018.jsonl",
+            "first_request_index": 850001,
+            "shard_id": 18,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 950000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "254285ab3c491fe4d6fde1b2e9c5c5c7604a6f598a824d955164769facd769df",
+            "sealed_result_stream": "results_shard_019.jsonl",
+            "first_request_index": 900001,
+            "shard_id": 19,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 1000000,
+            "source_partition": "sealed_v91_request_indices",
+            "sealed_result_stream_sha256": "16f671dea8c2fb2ea15862b54e0fef009bfb2e86a73141fead8ba493986f4f88",
+            "sealed_result_stream": "results_shard_020.jsonl",
+            "first_request_index": 950001,
+            "shard_id": 20,
+            "expected_count": 50000
+        },
+        {
+            "last_request_index": 1048576,
+            "source_partition": "complete_20bit_grammar_tail",
+            "sealed_result_stream_sha256": null,
+            "sealed_result_stream": null,
+            "first_request_index": 1000001,
+            "shard_id": 21,
+            "expected_count": 48576
+        }
+    ],
+    "schema_version": "1.0.0",
+    "campaign_hash": "c5702417f7636cfa26625b1a96f3975ddc17b97a2c9ff683f0a5d2e835f72be1",
+    "reference_failure_policy": "fail_fast_before_each_shard"
+}

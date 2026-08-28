@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "campaign_id": "multiregion_equilibrium_v93_formal_20260828",
+  "manifest_id": "campaign_manifest_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "v92_immutability": {"source_protocol_id": "fusionconceptai-v92-hifi-closure-20260828", "source_campaign": "runs/physical_closure_v92_formal_417_20260828", "read_only": true, "result_namespace_mixing_forbidden": true},
+  "input_counts": {"v92_survivors": 417, "v92_realization_pass": 246, "preregistered_pilot": 229},
+  "execution_order": ["verification_and_negative_controls", "known_device_controls", "sealed_unseen_capability_holdout", "compile_and_execute_229_pilot", "conditional_246_all_realization_pass", "orbit", "stability", "independent_comparison", "numerical_vvuq", "parameter_uq", "validation_vvuq"],
+  "pilot_to_full_required_true": ["solver_coverage", "controls", "recovery", "replay", "independence", "evidence_firewall"],
+  "same_hard_gate_ranking_skip_forbidden": true,
+  "conditional_full_campaign": true,
+  "request_policy": {"immutable_before_execution": true, "canonical_physics_projection_hash": true, "candidate_identity_excluded_from_problem_route_request_hash": true, "source_provenance_retained_outside_hash_projection": true},
+  "result_statuses": ["fail_physical_model", "fail_invalid_geometry", "fail_boundary_or_interface_inconsistency", "fail_no_equilibrium_under_declared_model", "fail_numerical_convergence", "unknown_multiple_equilibrium_branches", "unknown_solver_disagreement", "unknown_validation_domain", "unsupported_operator_or_backend", "pass"],
+  "required_artifacts": ["source_schema_test_config", "immutable_requests_results", "complete_solver_logs", "mesh_partition_hashes", "residual_jacobian_conservation_audits", "checkpoint_restart_replay", "per_stage_resource_usage", "known_manufactured_negative_controls", "label_erasure_permutation_holdout_tests", "capability_coverage_matrix", "pilot_dossiers_229", "conditional_full_dossiers_246", "independent_cross_code_matrix", "numerical_validation_vvuq_dossiers", "per_candidate_first_blocker", "farthest_candidate_complete_dossier", "acceptance_json", "markdown_report", "artifact_hash_manifest"],
+  "zero_promotion_allowed": true,
+  "claim_boundary": "Solver startup, one-grid convergence, manufactured verification, known-device control, and proxy data do not establish candidate physical closure."
+}

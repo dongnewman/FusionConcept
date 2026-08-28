@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "multiregion_acceptance_v93.schema.json",
+  "title": "MultiRegionAcceptanceV93",
+  "type": "object",
+  "required": ["schema_version", "protocol_id", "campaign_id", "status", "pilot_count", "pilot_status_histogram", "pilot_to_full_transition_allowed", "full_campaign_executed", "computationally_credible_new_device_count", "experimentally_validated_new_fusion_device_count", "first_campaign_blocker", "acceptance_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v93-family-neutral-multiregion-20260828"},
+    "campaign_id": {"const": "multiregion_equilibrium_v93_formal_20260828"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "pilot_count": {"type": "integer", "const": 229},
+    "pilot_to_full_transition_allowed": {"type": "boolean"},
+    "full_campaign_executed": {"type": "boolean"},
+    "computationally_credible_new_device_count": {"type": "integer", "minimum": 0},
+    "experimentally_validated_new_fusion_device_count": {"type": "integer", "minimum": 0},
+    "acceptance_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

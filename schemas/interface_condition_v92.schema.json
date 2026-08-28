@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/interface_condition_v92.schema.json",
+  "title": "Candidate-bound interface condition V92",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["interface_id", "source_node_id", "target_node_id", "source_boundary", "target_boundary", "coupling", "paired_conservation", "conditions", "solver_residual_channels", "interface_hash"],
+  "properties": {
+    "interface_id": {"type": "string", "minLength": 1},
+    "source_node_id": {"type": "string", "minLength": 1},
+    "target_node_id": {"type": "string", "minLength": 1},
+    "source_boundary": {"type": "string", "minLength": 1},
+    "target_boundary": {"type": "string", "minLength": 1},
+    "coupling": {"enum": ["particle_flux", "energy_flux", "field_coupling", "operator_feedback"]},
+    "paired_conservation": {"const": true},
+    "conditions": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "solver_residual_channels": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "interface_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

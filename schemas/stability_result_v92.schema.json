@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/stability_result_v92.schema.json",
+  "title": "StabilityResultV92",
+  "type": "object",
+  "required": ["schema_version", "protocol_id", "stage_id", "candidate_id", "candidate_hash", "realization_hash", "equilibrium_result_hash", "status", "solver_executed", "mode_coverage", "linear_results", "nonlinear_results", "eigenvalue_convergence", "eigenfunction_convergence", "independent_comparison", "conservation_audit", "restart_replay", "feasibility_credit", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v92-hifi-closure-20260828"},
+    "stage_id": {"const": "stability"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "request_created": {"type": "boolean"},
+    "request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "solver_executed": {"type": "boolean"},
+    "mode_coverage": {"type": "array", "minItems": 7},
+    "feasibility_credit": {"const": false},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "oneOf": [
+    {"required": ["request_hash"], "properties": {"request_created": {"const": true}}},
+    {"required": ["request_created", "mode_coverage_manifest_hash"], "properties": {"request_created": {"const": false}, "solver_executed": {"const": false}}}
+  ]
+}

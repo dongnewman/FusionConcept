@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "manifest_id": "solver_independence_manifest_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "required_differences": ["codebase", "residual_or_model_lineage", "discretization", "mesh_generation", "input_transformer", "maintenance_organization"],
+  "required_execution_attestations": ["codebase", "version", "software_hash", "equation_lineage", "discretization", "mesh_hash", "mesh_generation_path", "input_transformer_hash", "nonlinear_algorithm", "linear_algorithm", "environment_hash", "development_organization", "maintenance_organization", "shared_code", "shared_assumptions"],
+  "not_independent": ["same_executable_different_parameters", "same_code_different_mesh", "same_assembler_different_linear_solver", "reparsed_result", "wrapper_name_difference", "manufactured_control"],
+  "candidate_model_outside_backend_intersection_status": "unsupported_operator_or_backend",
+  "missing_independence_attestation_status": "unknown_solver_disagreement",
+  "decision_conflict_status": "unknown_solver_disagreement",
+  "shared_decisive_assembler_forbidden": true
+}

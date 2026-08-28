@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/survivor_fidelity_vvuq_v90.schema.json",
+  "title": "SurvivorFidelityVVUQV90",
+  "type": "object",
+  "required": ["schema_version", "candidate_hash", "candidate_physics_hash", "hard_gate_result_hash", "status", "stages", "numerical_vvuq_status", "validation_vvuq_status", "engineering_acceptance_status", "high_fidelity_failure_compensated", "pareto_score_can_compensate_failure", "evidence_ceiling", "claim_boundary", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "hard_gate_result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "stages": {"type": "array", "minItems": 12, "items": {"type": "object", "required": ["stage_id", "status", "applicability_proof", "solver_input_hash", "result_payload", "evidence_ceiling", "result_hash"]}},
+    "numerical_vvuq_status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "validation_vvuq_status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "engineering_acceptance_status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+    "high_fidelity_failure_compensated": {"const": false},
+    "pareto_score_can_compensate_failure": {"const": false},
+    "evidence_ceiling": {"type": "string"},
+    "claim_boundary": {"type": "string"},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

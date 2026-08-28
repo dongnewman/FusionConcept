@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/current_potential_inverse_result_v1.schema.json",
+  "title": "CurrentPotentialInverseResultV1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "inverse_request",
+    "source_request_hash",
+    "source_design_hash",
+    "source_basis_override_hash",
+    "optimized_design",
+    "optimized_basis_override",
+    "optimized_basis_override_hash",
+    "source_coefficient_hash",
+    "optimized_coefficient_hash",
+    "initial_rank",
+    "final_rank",
+    "evaluation_count",
+    "trace",
+    "final_acquisition",
+    "final_field_metrics",
+    "inverse_solver_id",
+    "next_request_sampling_only",
+    "candidate_feasibility_credit",
+    "retroactive_feasibility_credit",
+    "claim_boundary",
+    "result_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "inverse_request": {"type": "object"},
+    "source_request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_design_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_basis_override_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "optimized_design": {"type": "object"},
+    "optimized_basis_override": {"type": "object"},
+    "optimized_basis_override_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_coefficient_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "optimized_coefficient_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "initial_rank": {"$ref": "#/$defs/rank"},
+    "final_rank": {"$ref": "#/$defs/rank"},
+    "evaluation_count": {"type": "integer", "minimum": 1},
+    "trace": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "final_acquisition": {"type": "object"},
+    "final_field_metrics": {"type": "object"},
+    "inverse_solver_id": {"const": "candidate_bound_regularized_current_potential_gauss_newton_v1"},
+    "next_request_sampling_only": {"const": true},
+    "candidate_feasibility_credit": {"const": false},
+    "retroactive_feasibility_credit": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "rank": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {"type": "number"}
+    }
+  }
+}

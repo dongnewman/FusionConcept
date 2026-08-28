@@ -1,0 +1,2512 @@
+{
+    "selection_policy": "closed_route_distinct_structure_hash_then_p32_completion_transform_ordering_v1",
+    "selection": [
+        {
+            "inverse_request_hash": "68ff9d4f34fb01e9caaa74818674f46a5f2de87b916a6fdb54d281598ef36df3",
+            "structure_seed": 52,
+            "p32_classification_code": "poincare_field_line_escape",
+            "p32_surface_ordering_fraction": 0,
+            "inverse_result_hash": "d7e754bae99b39b4c40a213ced22821a5b01433c86a1bd02e7b122f49e3b511f",
+            "p32_minimum_absolute_rotational_transform": 0.007889747180229592,
+            "request_hash": "af2c2af3d2d1a7ba13e066642721eb9147d9a3b4256933a962b8e6137a020e00",
+            "structure_hash": "0244f32595060c5c50b88587975ed145dcef624c94596c20a83ff1ec09e671eb",
+            "p32_completion_fraction": 0.42652169045218524
+        },
+        {
+            "inverse_request_hash": "9c34d90e9eb1a5eb24de657e2fa6d07497856a42b8bb60ce5a65e21a4534ab95",
+            "structure_seed": 73,
+            "p32_classification_code": "poincare_field_line_escape",
+            "p32_surface_ordering_fraction": 0,
+            "inverse_result_hash": "ed1c3f5acb1541ff0aa7ba8ebd05a78249ed8ad4e3e2d36ec7ae72b296d7daed",
+            "p32_minimum_absolute_rotational_transform": 0.02057796521609315,
+            "request_hash": "23a0aeff6067c20a661914a2fa7f75ca2576bf4ceaae2d9f72e8b855594c6216",
+            "structure_hash": "0497edd15ffb234afcf98c2beb407b678bf9b539bd9826398fc11db7395b6cf1",
+            "p32_completion_fraction": 0.2000939573565846
+        },
+        {
+            "inverse_request_hash": "a4b025ab4d012e4f829e11a04ffda47d41233df5c20dc1e0df19485639a121af",
+            "structure_seed": 54,
+            "p32_classification_code": "poincare_field_line_escape",
+            "p32_surface_ordering_fraction": 0,
+            "inverse_result_hash": "d634d9edd6523123b6b6ba85b255c80f7ff3cc58ec9d72ae0a81467f95d47d7c",
+            "p32_minimum_absolute_rotational_transform": 0.008959192010217606,
+            "request_hash": "fff362c1c9f0265af30188e2fe2415cee6eeb8c9e59054d0e7df241747b804d5",
+            "structure_hash": "2f15c75efd57e7e27412b8fd8926503ab2e107caa5a49ab10c20aa94cfd2eb41",
+            "p32_completion_fraction": 0.007829854687594675
+        }
+    ],
+    "inverse_configuration": {
+        "acquisition_toroidal_turns": 16,
+        "acquisition_steps_per_turn": 60,
+        "axis_locator_refinement_levels": 4,
+        "maximum_iterations": 1,
+        "active_coefficient_indices": [
+            6,
+            7,
+            8
+        ]
+    },
+    "selected_distinct_structure_count": 3,
+    "source_campaign_hash": "c1bc2378cd82b8e1e5cb2fb434c6e5880f611e9b1f6fb0848b2f13659601480d",
+    "campaign_promotion_credit": false,
+    "retroactive_feasibility_credit": false,
+    "candidate_feasibility_credit": false,
+    "per_structure_atomic_checkpointing": true,
+    "result_hash": "f71794c2da2b29f667672f02e53aef870eaee65026b78fbb3a1c4784928391e0",
+    "audit_kind": "v86_current_potential_inverse_frontier_v1",
+    "fresh_result_count": 3,
+    "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and periodic-axis-aligned short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+    "recovered_result_count": 0,
+    "followup_campaign_hash": "334d209d7dcd697c97eccb19240a99e7df5bfc05c820446e4a29ef55b75e485c",
+    "schema_version": "1.0.0",
+    "inverse_results": [
+        {
+            "final_acquisition": {
+                "minimum_absolute_rotational_transform": 0.00911476666430926,
+                "minimum_trace_completion_fraction": 1,
+                "completion_semantics": "minimum_toroidal_turn_fraction_v2",
+                "periodic_magnetic_axis": {
+                    "feasibility_credit": false,
+                    "steps_per_turn": 60,
+                    "closure_residual_normalized": 0.02157741675083541,
+                    "refinement_levels": 4,
+                    "candidate_bound": true,
+                    "axis_evidence_hash": "be69c700bec0a8bc11e7784b052069dd1a6f4c1fb71d3fc4583a425e8bbdba69",
+                    "status": "located",
+                    "axis_start_m": [
+                        2.764585673048365,
+                        0.0,
+                        -0.11144430739134187
+                    ],
+                    "maximum_closure_residual": 0.04,
+                    "axis_reference": {
+                        "closure_position_m": [
+                            2.7583301779859197,
+                            -0.00016064661039130734,
+                            -0.09916368458183222
+                        ],
+                        "field_singular": false,
+                        "steps_per_turn": 60,
+                        "closure_residual_normalized": 0.02157741675083541,
+                        "completed_steps": 56,
+                        "escaped": false,
+                        "start_m": [
+                            2.764585673048365,
+                            0.0,
+                            -0.11144430739134187
+                        ],
+                        "status": "complete",
+                        "radius_m": [
+                            2.764585673048365,
+                            2.760952699106161,
+                            2.7608221291670305,
+                            2.7622104539043555,
+                            2.7654276761865257,
+                            2.768139721767405,
+                            2.769898618916614,
+                            2.769143706766897,
+                            2.7659378109874053,
+                            2.7599492037369595,
+                            2.7525622678326576,
+                            2.744497022577257,
+                            2.7381303723546617,
+                            2.7341505126669046,
+                            2.7347399579084244,
+                            2.739017900303135,
+                            2.748043317257248,
+                            2.75897098828389,
+                            2.7716961441526613,
+                            2.7829586583689676,
+                            2.792204614662102,
+                            2.797548823897574,
+                            2.7989300924482823,
+                            2.796299411284543,
+                            2.79048982725588,
+                            2.782746118443643,
+                            2.7745117474211134,
+                            2.7672044343027613,
+                            2.762149338426241,
+                            2.759538974656072,
+                            2.759951414859708,
+                            2.761889484454679,
+                            2.7650902207435424,
+                            2.7675160607862086,
+                            2.7685194745331625,
+                            2.766984045780822,
+                            2.7627292212926426,
+                            2.7562423509824945,
+                            2.748296092708159,
+                            2.740769654778326,
+                            2.734797053394802,
+                            2.7324614088870574,
+                            2.734017344050213,
+                            2.7401465364995987,
+                            2.749778467616787,
+                            2.7615634045836397,
+                            2.773884695996724,
+                            2.784597828528695,
+                            2.7925299686619582,
+                            2.7965460137360023,
+                            2.79639721889034,
+                            2.792664337187099,
+                            2.785893139746767,
+                            2.7780565745319485,
+                            2.769832589953009,
+                            2.763592698997827,
+                            2.7583301826639914
+                        ],
+                        "z_m": [
+                            -0.11144430739134187,
+                            -0.11645907272181256,
+                            -0.12060656848640404,
+                            -0.12428868416822797,
+                            -0.12490749530413199,
+                            -0.12404194085099388,
+                            -0.12041917707172818,
+                            -0.11634009376798672,
+                            -0.11191742041935611,
+                            -0.10938943087339342,
+                            -0.10917151310552878,
+                            -0.11258259210172195,
+                            -0.11902269483744425,
+                            -0.1283604139216878,
+                            -0.13849249811153908,
+                            -0.14853772780097252,
+                            -0.15559110104255136,
+                            -0.1597684822279127,
+                            -0.15860724253270853,
+                            -0.15416364017046347,
+                            -0.1453130320275498,
+                            -0.13516589678531132,
+                            -0.12381457494827239,
+                            -0.11399494387099493,
+                            -0.10614139404742103,
+                            -0.10168900586766182,
+                            -0.10053697854304168,
+                            -0.10245880413793526,
+                            -0.10646378529422619,
+                            -0.11127041158726993,
+                            -0.11538964446860679,
+                            -0.11803873677240394,
+                            -0.11802782131935952,
+                            -0.11608317946790304,
+                            -0.11198886508044996,
+                            -0.10751763698911483,
+                            -0.10345320294255204,
+                            -0.10146123513669396,
+                            -0.1024666888650044,
+                            -0.10684132347214684,
+                            -0.11464379642361619,
+                            -0.1243402967723128,
+                            -0.13509102683134513,
+                            -0.1442111441645638,
+                            -0.15090661143415557,
+                            -0.15327604273716758,
+                            -0.15134184742594814,
+                            -0.14531271379794267,
+                            -0.13608725265165514,
+                            -0.1253679650390118,
+                            -0.11448782169943814,
+                            -0.10515239924830591,
+                            -0.09847365574927476,
+                            -0.09500523631276751,
+                            -0.09512716408082902,
+                            -0.0976621795041689,
+                            -0.09916368458183222
+                        ],
+                        "phase_rad": [
+                            0,
+                            0.11371497893209037,
+                            0.2275185189649398,
+                            0.34129390349843947,
+                            0.45497439248585136,
+                            0.5685288908411565,
+                            0.6819838454293938,
+                            0.7954153311444951,
+                            0.9089188876827627,
+                            1.0226082346506118,
+                            1.1365666169839606,
+                            1.2508424142759123,
+                            1.3654160742975407,
+                            1.4802050579024226,
+                            1.5950614569491237,
+                            1.7098121070674908,
+                            1.8242696302066035,
+                            1.9383075540759904,
+                            2.0518341328718157,
+                            2.1648751665212624,
+                            2.277484937271726,
+                            2.3898172903803157,
+                            2.502013140536348,
+                            2.6142535090254033,
+                            2.7266683616586223,
+                            2.8393745075471597,
+                            2.952410767396592,
+                            3.0657817206853695,
+                            3.179411521857645,
+                            3.293213296167497,
+                            3.407060581828835,
+                            3.520864589534638,
+                            3.6345553030058535,
+                            3.7481290865948274,
+                            3.8616218011777215,
+                            3.975123593629688,
+                            4.08873387503613,
+                            4.202565387970651,
+                            4.316684132249728,
+                            4.431129449655564,
+                            4.545843470912485,
+                            4.660741914510207,
+                            4.775639491901522,
+                            4.890381407508777,
+                            5.004772158444155,
+                            5.1187159537894855,
+                            5.232144827697763,
+                            5.345105133025669,
+                            5.457681902972512,
+                            5.570028315755794,
+                            5.682302416438935,
+                            5.794668653355134,
+                            5.907254663154382,
+                            6.020153376900489,
+                            6.133384469354052,
+                            6.246932330069212,
+                            6.283185307179586
+                        ]
+                    },
+                    "section_phi_rad": 0,
+                    "search_trace": [
+                        {
+                            "start_m": [
+                                2.877673228553211,
+                                0.0,
+                                -0.12736492273296213
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.029730338788314395,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.877673228553211,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02890668633872768,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.877673228553211,
+                                0.0,
+                                0.12736492273296213
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.029542943071417572,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.006916149130178,
+                                0.0,
+                                -0.12736492273296213
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.043269017717798196,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.006916149130178,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.038641972917330035,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.006916149130178,
+                                0.0,
+                                0.12736492273296213
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.036672751149752415,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.1361590697071446,
+                                0.0,
+                                -0.12736492273296213
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.06180437395018442,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.1361590697071446,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.05483933026898197,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.1361590697071446,
+                                0.0,
+                                0.12736492273296213
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.05140959527526104,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.8130517682647276,
+                                0.0,
+                                -0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.024310857671802126,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.8130517682647276,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.024416240915541208,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.8130517682647276,
+                                0.0,
+                                0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.024798609835630637,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.877673228553211,
+                                0.0,
+                                -0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.029070954397537895,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.877673228553211,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02890668633872768,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.877673228553211,
+                                0.0,
+                                0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.029091263762964465,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.9422946888416948,
+                                0.0,
+                                -0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03392312411939928,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.9422946888416948,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.032911692278662225,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.9422946888416948,
+                                0.0,
+                                0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.032401100935791904,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.780741038120486,
+                                0.0,
+                                -0.0955236920497216
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.022660624824366638,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.780741038120486,
+                                0.0,
+                                -0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02287216959295978,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.780741038120486,
+                                0.0,
+                                -0.03184123068324053
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.023155184625255565,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8130517682647276,
+                                0.0,
+                                -0.0955236920497216
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.024391262141965492,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8130517682647276,
+                                0.0,
+                                -0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.024310857671802126,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8130517682647276,
+                                0.0,
+                                -0.03184123068324053
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.024323895929123616,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8453624984089694,
+                                0.0,
+                                -0.0955236920497216
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.025999470686408784,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8453624984089694,
+                                0.0,
+                                -0.06368246136648106
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.025654562709044423,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8453624984089694,
+                                0.0,
+                                -0.03184123068324053
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02545475050044252,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.764585673048365,
+                                0.0,
+                                -0.11144430739134187
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02157741675083541,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.764585673048365,
+                                0.0,
+                                -0.0955236920497216
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.0216319851695254,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.764585673048365,
+                                0.0,
+                                -0.07960307670810132
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.021706211898321004,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.780741038120486,
+                                0.0,
+                                -0.11144430739134187
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.022589056604832902,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.780741038120486,
+                                0.0,
+                                -0.0955236920497216
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.022660624824366638,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.780741038120486,
+                                0.0,
+                                -0.07960307670810132
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02275609477145421,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7968964031926067,
+                                0.0,
+                                -0.11144430739134187
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02242541406420387,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7968964031926067,
+                                0.0,
+                                -0.0955236920497216
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.022271123851450417,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7968964031926067,
+                                0.0,
+                                -0.07960307670810132
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.02216073086545129,
+                            "level": 4
+                        }
+                    ],
+                    "evaluation_count": 36
+                },
+                "minimum_sampled_wall_margin_fraction": 0,
+                "surface_ordering_fraction": 1,
+                "axis_location_violation": 0,
+                "candidate_boundary_frame_used": true,
+                "start_minor_radius_fractions": [
+                    0.15,
+                    0.35,
+                    0.55
+                ],
+                "trace_escape_fraction": 0,
+                "status": "evaluated",
+                "model_id": "candidate_biot_savart_periodic_axis_fieldline_acquisition_v2",
+                "escape_semantics": "candidate_boundary_normalized_minor_radius_v2",
+                "axis_relative_start_points": true
+            },
+            "source_design_hash": "abe2b21b8848edbb4b81dc9f2fc4c38973792633d6e1c49ee0679bd34cd7ffa8",
+            "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and periodic-axis-aligned short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+            "final_field_metrics": {
+                "signed_boundary_normal_maximum_absolute": 0.14637752744316612,
+                "relative_field_ripple": 0.052108036856972365,
+                "minimum_contour_spacing_m": 0.45437235300209944,
+                "signed_boundary_normal_rms": 0.09142443449200952,
+                "minimum_field_t": 1.5639589643911986,
+                "required_contour_spacing_m": 0.18
+            },
+            "source_request_hash": "af2c2af3d2d1a7ba13e066642721eb9147d9a3b4256933a962b8e6137a020e00",
+            "optimized_coefficient_hash": "4cd383152b2868a516304aeff82e33a5d6d8c778ebd23528f1e126000d5251c0",
+            "next_request_sampling_only": true,
+            "final_rank": [
+                0,
+                0,
+                0,
+                0.544261666784537,
+                0,
+                0.09142443449200952,
+                0.05478641272104127
+            ],
+            "optimized_basis_override": {
+                "grammar_transition": "helical_level_sets_to_poloidal_modular_2d_current_potential_contours_v3",
+                "bspline_control_count": 12,
+                "contour_count": 28,
+                "current_potential_coefficients": [
+                    -0.01244746676432507,
+                    0.02789240832289534,
+                    -0.012928223149972993,
+                    -0.1587777957983503,
+                    -0.002531316411024047,
+                    0.03179210109014852,
+                    0.0556513469174982,
+                    -0.0416297785672593,
+                    0.024135677737046814,
+                    0.013523758727403627,
+                    -0.009691688305525213
+                ],
+                "inverse_request_hash": "68ff9d4f34fb01e9caaa74818674f46a5f2de87b916a6fdb54d281598ef36df3",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "current_potential_order": 5,
+                "contour_current_scale": 0.24999999999999997,
+                "coil_bspline_control_points": [
+                    -0.10772735841875833,
+                    0.0320488284351824,
+                    0.08817336835624544,
+                    -0.04030965176073947,
+                    0.07597237566477191,
+                    0.02983952091707031,
+                    0.023921087224931827,
+                    -0.06063136979010741,
+                    0.033085564050430935,
+                    0.013792002264091458,
+                    -0.025665334778461668,
+                    0.012116682627306719
+                ],
+                "coil_fourier_coefficients": [
+                    -0.04052512568940861,
+                    -0.06656439948040044,
+                    0.12531600131612525,
+                    0.10576066302970442,
+                    -0.030837727752712877,
+                    0.04834940532042627,
+                    0.060249743462250524,
+                    0.0204528540167309,
+                    0.0381968109180931,
+                    -0.0025254070355631114,
+                    -0.018998929331199153
+                ],
+                "basis_level": 3,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "supply_group_count": 2,
+                "dominant_poloidal_mode_m": 1,
+                "dominant_toroidal_mode_n": 1,
+                "retroactive_feasibility_credit": false,
+                "parent_optimized_basis_override_hash": "f449f08dc38226ca783e8344269d718abb76935b89096ebe1eab549a218fc623",
+                "feedback_role": "next_request_sampling_only",
+                "fourier_order": 5
+            },
+            "inverse_request": {
+                "finite_difference_step": 0.015,
+                "structure_hash": "0244f32595060c5c50b88587975ed145dcef624c94596c20a83ff1ec09e671eb",
+                "axis_locator_maximum_closure_residual": 0.04,
+                "source_design_hash": "abe2b21b8848edbb4b81dc9f2fc4c38973792633d6e1c49ee0679bd34cd7ffa8",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "target_rotational_transform": 0.02,
+                "phi_count": 6,
+                "axis_locator_refinement_levels": 4,
+                "trust_radius": 0.1,
+                "tikhonov_regularization": 0.05,
+                "maximum_iterations": 1,
+                "acquisition_model_id": "candidate_biot_savart_periodic_axis_fieldline_acquisition_v2",
+                "active_coefficient_indices": [
+                    6,
+                    7,
+                    8
+                ],
+                "acquisition_toroidal_turns": 16,
+                "theta_count": 4,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "source_request_hash": "af2c2af3d2d1a7ba13e066642721eb9147d9a3b4256933a962b8e6137a020e00",
+                "retroactive_feasibility_credit": false,
+                "acquisition_steps_per_turn": 60,
+                "next_request_sampling_only": true,
+                "source_basis_override_hash": "af9200e021b505c34325dfddce45bb5117483bb6f893f610c6748c2bf4f13aea",
+                "request_hash": "68ff9d4f34fb01e9caaa74818674f46a5f2de87b916a6fdb54d281598ef36df3",
+                "schema_version": "1.0.0"
+            },
+            "candidate_feasibility_credit": false,
+            "optimized_design": {
+                "route": "closed/mixed",
+                "temperature_scale": 0.8954600210675747,
+                "structure_hash": "0244f32595060c5c50b88587975ed145dcef624c94596c20a83ff1ec09e671eb",
+                "current_potential_coefficients": [
+                    -0.01244746676432507,
+                    0.02789240832289534,
+                    -0.012928223149972993,
+                    -0.1587777957983503,
+                    -0.002531316411024047
+                ],
+                "actuator_timing_coefficients": [
+                    -0.0063190412432033854,
+                    0.09064438302414851,
+                    -0.044221197064160445,
+                    0.08498480972150284,
+                    0.025890268593149465
+                ],
+                "grammar_hash": "9ca1d01c543a797ee0cd9d076afa304d5297089ca3c0c9691f4f303ad6fba82a",
+                "controller_modal_coefficients": [
+                    0.04599214966373344,
+                    -0.04733394979503823,
+                    0.08381455368457358,
+                    0.06891731459747673
+                ],
+                "density_scale": 0.902054779349757,
+                "field_current_a": 90798.54588563344,
+                "design_hash": "abe2b21b8848edbb4b81dc9f2fc4c38973792633d6e1c49ee0679bd34cd7ffa8",
+                "schema_version": "1.0.0",
+                "coil_bspline_control_points": [
+                    -0.10772735841875833,
+                    0.0320488284351824,
+                    0.08817336835624544,
+                    -0.04030965176073947,
+                    0.07597237566477191,
+                    0.02983952091707031
+                ],
+                "plasma_boundary_coefficients": [
+                    0.001732971387024184,
+                    -0.01941229289828509,
+                    -0.06756608377020232,
+                    0.03611242220717673,
+                    0.032477233271803234
+                ],
+                "coil_fourier_coefficients": [
+                    -0.04052512568940861,
+                    -0.06656439948040044,
+                    0.12531600131612525,
+                    0.10576066302970442,
+                    -0.030837727752712877
+                ]
+            },
+            "optimized_basis_override_hash": "71281200cbea94bc6763b0b6295b001eba8bdb43184a9f82a0260cc5bfc1f846",
+            "trace": [
+                {
+                    "rank": [
+                        0,
+                        0.3333333333333333,
+                        0.0222439677450037,
+                        0.5648631943243562,
+                        0,
+                        0.0917725213268204,
+                        0.05236348345370783
+                    ],
+                    "event": "initial",
+                    "iteration": 0,
+                    "coefficient_hash": "a6971962e627e04df41f36a3a8843b0807ef2fe38f614a733a1f2fe516f35cbd"
+                },
+                {
+                    "rank": [
+                        0,
+                        0,
+                        0,
+                        0.544261666784537,
+                        0,
+                        0.09142443449200952,
+                        0.05478641272104127
+                    ],
+                    "event": "accepted",
+                    "iteration": 1,
+                    "line_scale": 0.25,
+                    "coefficient_hash": "4cd383152b2868a516304aeff82e33a5d6d8c778ebd23528f1e126000d5251c0"
+                }
+            ],
+            "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+            "retroactive_feasibility_credit": false,
+            "initial_rank": [
+                0,
+                0.3333333333333333,
+                0.0222439677450037,
+                0.5648631943243562,
+                0,
+                0.0917725213268204,
+                0.05236348345370783
+            ],
+            "result_hash": "d7e754bae99b39b4c40a213ced22821a5b01433c86a1bd02e7b122f49e3b511f",
+            "source_basis_override_hash": "af9200e021b505c34325dfddce45bb5117483bb6f893f610c6748c2bf4f13aea",
+            "source_coefficient_hash": "a6971962e627e04df41f36a3a8843b0807ef2fe38f614a733a1f2fe516f35cbd",
+            "schema_version": "1.0.0",
+            "evaluation_count": 8
+        },
+        {
+            "final_acquisition": {
+                "minimum_absolute_rotational_transform": 0.019720585638636365,
+                "minimum_trace_completion_fraction": 0.43118368084474157,
+                "completion_semantics": "minimum_toroidal_turn_fraction_v2",
+                "periodic_magnetic_axis": {
+                    "feasibility_credit": false,
+                    "steps_per_turn": 60,
+                    "closure_residual_normalized": 0.036096276532715445,
+                    "refinement_levels": 4,
+                    "candidate_bound": true,
+                    "axis_evidence_hash": "b2258255148546882131b1eb62d99e6e72b3387012d2bc16019259794f66abf1",
+                    "status": "located",
+                    "axis_start_m": [
+                        2.7545271347544356,
+                        0.0,
+                        -0.24325703697203355
+                    ],
+                    "maximum_closure_residual": 0.04,
+                    "axis_reference": {
+                        "closure_position_m": [
+                            2.7513449249816064,
+                            0.00016870174809174854,
+                            -0.22005972426502485
+                        ],
+                        "field_singular": false,
+                        "steps_per_turn": 60,
+                        "closure_residual_normalized": 0.036096276532715445,
+                        "completed_steps": 56,
+                        "escaped": false,
+                        "start_m": [
+                            2.7545271347544356,
+                            0.0,
+                            -0.24325703697203355
+                        ],
+                        "status": "complete",
+                        "radius_m": [
+                            2.7545271347544356,
+                            2.760108397128089,
+                            2.7644241386712753,
+                            2.765829377401562,
+                            2.7645589823984826,
+                            2.760834161398947,
+                            2.7560010635220586,
+                            2.7511950086526253,
+                            2.748132500726815,
+                            2.7475171960454494,
+                            2.7506714425260888,
+                            2.756326873990127,
+                            2.765433493183054,
+                            2.7747451407005035,
+                            2.7844438258920627,
+                            2.7916162403230995,
+                            2.7957053873053126,
+                            2.7956398993722527,
+                            2.7915299337308346,
+                            2.7839659857088703,
+                            2.774206491371813,
+                            2.7637242443526486,
+                            2.754234802974275,
+                            2.7467964774892293,
+                            2.7432677442940987,
+                            2.742366588760854,
+                            2.7462214998609684,
+                            2.7506699355402153,
+                            2.757443709757424,
+                            2.7621821110568834,
+                            2.765749106153824,
+                            2.766079619092709,
+                            2.763992766354673,
+                            2.7597949426600965,
+                            2.754752640990191,
+                            2.7504699766809715,
+                            2.7479094337124654,
+                            2.748597796207746,
+                            2.7524708231443533,
+                            2.7594157301350672,
+                            2.7689028724630584,
+                            2.7786183192200777,
+                            2.7880357843182035,
+                            2.794631935377662,
+                            2.7978213852240996,
+                            2.796854507126701,
+                            2.7917950456163423,
+                            2.7837265415425203,
+                            2.773518285666517,
+                            2.7633215870548273,
+                            2.7539128138169917,
+                            2.7475057696707528,
+                            2.7441678147826365,
+                            2.744393768302375,
+                            2.7480787272908977,
+                            2.7528159055627137,
+                            2.751344930153673
+                        ],
+                        "z_m": [
+                            -0.24325703697203355,
+                            -0.2446807625169683,
+                            -0.24146893458655122,
+                            -0.23887116843824824,
+                            -0.2349964463407745,
+                            -0.2337877423304665,
+                            -0.23381299015895604,
+                            -0.2373348161581039,
+                            -0.24208698326704758,
+                            -0.24880962093333242,
+                            -0.2543375272776355,
+                            -0.2592542179965641,
+                            -0.2595613166602157,
+                            -0.2579711174027846,
+                            -0.25014587361698726,
+                            -0.2410300803775316,
+                            -0.2278464278046973,
+                            -0.21553466543552685,
+                            -0.20332286134264774,
+                            -0.19468286297725115,
+                            -0.18931301613888285,
+                            -0.18871951830003184,
+                            -0.19205857598536244,
+                            -0.1988724265778877,
+                            -0.20759336985162935,
+                            -0.21703571240977432,
+                            -0.22450756879894576,
+                            -0.23086068675990656,
+                            -0.23243135517419647,
+                            -0.23311575296643783,
+                            -0.22986482420375481,
+                            -0.22746948114180193,
+                            -0.22427664616063314,
+                            -0.22384102294725022,
+                            -0.22495956997299033,
+                            -0.22907686458451743,
+                            -0.23466179782777583,
+                            -0.24108419501343786,
+                            -0.2468139286450965,
+                            -0.25033803764562873,
+                            -0.2503178182297623,
+                            -0.2469091310423119,
+                            -0.23854578252898065,
+                            -0.22821393532066872,
+                            -0.21484700447458743,
+                            -0.20233999898072688,
+                            -0.19068720902762398,
+                            -0.18257590401538493,
+                            -0.1782381925589252,
+                            -0.17826618751951095,
+                            -0.18255736077480464,
+                            -0.1893808620720789,
+                            -0.19862809638879966,
+                            -0.2070244519443256,
+                            -0.2146021290165619,
+                            -0.21929809986011778,
+                            -0.22005972426502485
+                        ],
+                        "phase_rad": [
+                            0,
+                            0.11353657538105777,
+                            0.22687687348550556,
+                            0.3401037412595542,
+                            0.4533274996754537,
+                            0.5666562057640485,
+                            0.6801596070522997,
+                            0.7938624980217677,
+                            0.9077300867212332,
+                            1.0216748179280315,
+                            1.1355641154525817,
+                            1.2492663204018926,
+                            1.362641558740736,
+                            1.4756323597959322,
+                            1.5881940204390426,
+                            1.7004206331565874,
+                            1.8123862659869636,
+                            1.924292701869685,
+                            2.036273984926219,
+                            2.148515295652594,
+                            2.2611117512111845,
+                            2.374138699374895,
+                            2.4875778782917504,
+                            2.6013794144893696,
+                            2.715407688234746,
+                            2.8295373354102655,
+                            2.9436063118187756,
+                            3.057508891991473,
+                            3.1711801671189175,
+                            3.284622805530738,
+                            3.397893483431437,
+                            3.511092095387368,
+                            3.624322936692746,
+                            3.737685626016921,
+                            3.851235066153218,
+                            3.9649807652346647,
+                            4.078865481248799,
+                            4.192795613425947,
+                            4.30662004242949,
+                            4.4202193674592785,
+                            4.53345294353235,
+                            4.646284707481967,
+                            4.758690593695056,
+                            4.870775102250965,
+                            4.982637903183102,
+                            5.094474656495409,
+                            5.206429499159564,
+                            5.318671774594056,
+                            5.431289115839283,
+                            5.544342806987821,
+                            5.657794874217224,
+                            5.771597382390651,
+                            5.885586503792325,
+                            5.999668145489378,
+                            6.113651850617065,
+                            6.227483025873141,
+                            6.283185307179586
+                        ]
+                    },
+                    "section_phi_rad": 0,
+                    "search_trace": [
+                        {
+                            "start_m": [
+                                2.8678987806710285,
+                                0.0,
+                                -0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.07530075381231992,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.8678987806710285,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.08215075460274407,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.8678987806710285,
+                                0.0,
+                                0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.09365481429088891,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.9974663760042777,
+                                0.0,
+                                -0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.1303845921017655,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.9974663760042777,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.12771360840924498,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.9974663760042777,
+                                0.0,
+                                0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.13144614753613082,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.127033971337527,
+                                0.0,
+                                -0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.20176227414364586,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.127033971337527,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.18687895017703807,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.127033971337527,
+                                0.0,
+                                0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.1806045190883122,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.803114983004404,
+                                0.0,
+                                -0.19460562957762684
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.052912557602776945,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.803114983004404,
+                                0.0,
+                                -0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.0555835957821787,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.803114983004404,
+                                0.0,
+                                -0.06486854319254227
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.060175323860320526,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.8678987806710285,
+                                0.0,
+                                -0.19460562957762684
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.07588670008370149,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.8678987806710285,
+                                0.0,
+                                -0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.07530075381231992,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.8678987806710285,
+                                0.0,
+                                -0.06486854319254227
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.07781050376014012,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.932682578337653,
+                                0.0,
+                                -0.19460562957762684
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.10446811091098493,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.932682578337653,
+                                0.0,
+                                -0.12973708638508455
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.10230212276762286,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.932682578337653,
+                                0.0,
+                                -0.06486854319254227
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.10215920579234773,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                2.7707230841710917,
+                                0.0,
+                                -0.22703990117389797
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04116044663217277,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.7707230841710917,
+                                0.0,
+                                -0.19460562957762684
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04163102886853065,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.7707230841710917,
+                                0.0,
+                                -0.1621713579813557
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04320256134594482,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.803114983004404,
+                                0.0,
+                                -0.22703990117389797
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.05267702701567022,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.803114983004404,
+                                0.0,
+                                -0.19460562957762684
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.052912557602776945,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.803114983004404,
+                                0.0,
+                                -0.1621713579813557
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.053937182765799764,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8355068818377163,
+                                0.0,
+                                -0.22703990117389797
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.06469152157663081,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8355068818377163,
+                                0.0,
+                                -0.19460562957762684
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.06416039044436021,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.8355068818377163,
+                                0.0,
+                                -0.1621713579813557
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.0642471476803419,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                2.7545271347544356,
+                                0.0,
+                                -0.24325703697203355
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.036096276532715445,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7545271347544356,
+                                0.0,
+                                -0.22703990117389797
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.036264313544601794,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7545271347544356,
+                                0.0,
+                                -0.2108227653757624
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.036699742753542194,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7707230841710917,
+                                0.0,
+                                -0.24325703697203355
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.041423361906080175,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7707230841710917,
+                                0.0,
+                                -0.22703990117389797
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04116044663217277,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.7707230841710917,
+                                0.0,
+                                -0.2108227653757624
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04124029455098772,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.786919033587748,
+                                0.0,
+                                -0.24325703697203355
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.047017970515468084,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.786919033587748,
+                                0.0,
+                                -0.22703990117389797
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04673011789001745,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                2.786919033587748,
+                                0.0,
+                                -0.2108227653757624
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04663235533129909,
+                            "level": 4
+                        }
+                    ],
+                    "evaluation_count": 36
+                },
+                "minimum_sampled_wall_margin_fraction": 0,
+                "surface_ordering_fraction": 1,
+                "axis_location_violation": 0,
+                "candidate_boundary_frame_used": true,
+                "start_minor_radius_fractions": [
+                    0.15,
+                    0.35,
+                    0.55
+                ],
+                "trace_escape_fraction": 0.6666666666666666,
+                "status": "evaluated",
+                "model_id": "candidate_biot_savart_periodic_axis_fieldline_acquisition_v2",
+                "escape_semantics": "candidate_boundary_normalized_minor_radius_v2",
+                "axis_relative_start_points": true
+            },
+            "source_design_hash": "fbfa789c7e76fb763ab8305ef0fcfe29145e14ef834656c93d65c020c191669b",
+            "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and periodic-axis-aligned short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+            "final_field_metrics": {
+                "signed_boundary_normal_maximum_absolute": 0.15371464073458185,
+                "relative_field_ripple": 0.06401337380942057,
+                "minimum_contour_spacing_m": 0.4358762675279051,
+                "signed_boundary_normal_rms": 0.09490216730855426,
+                "minimum_field_t": 1.1971517220826595,
+                "required_contour_spacing_m": 0.18
+            },
+            "source_request_hash": "23a0aeff6067c20a661914a2fa7f75ca2576bf4ceaae2d9f72e8b855594c6216",
+            "optimized_coefficient_hash": "f217eed26f67a5820eb99aa31f7c2248013409cd8983400d9a1cddeee48bcceb",
+            "next_request_sampling_only": true,
+            "final_rank": [
+                0,
+                0.6666666666666666,
+                0.5688163191552584,
+                0.01397071806818178,
+                0,
+                0.09490216730855426,
+                0.05775178025481384
+            ],
+            "optimized_basis_override": {
+                "grammar_transition": "helical_level_sets_to_poloidal_modular_2d_current_potential_contours_v3",
+                "bspline_control_count": 12,
+                "contour_count": 28,
+                "current_potential_coefficients": [
+                    -0.032132451482132285,
+                    -0.05114864828535497,
+                    0.10753208472741774,
+                    0.034878886887190264,
+                    0.007293403671787206,
+                    -0.0937000570836467,
+                    -0.07767386644517903,
+                    -0.06268166679088422,
+                    -0.021970160610197426,
+                    0.018486989094815567,
+                    -0.02529847139184371
+                ],
+                "inverse_request_hash": "9c34d90e9eb1a5eb24de657e2fa6d07497856a42b8bb60ce5a65e21a4534ab95",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "current_potential_order": 5,
+                "contour_current_scale": 0.24999999999999997,
+                "coil_bspline_control_points": [
+                    0.012220949044731857,
+                    -0.08549792676148132,
+                    -0.0004163223820480011,
+                    -0.07052402351247859,
+                    -0.05100133741917213,
+                    -0.031001290002647657,
+                    -0.005299780857848508,
+                    -0.0027390792006747465,
+                    -0.018408255906774067,
+                    -0.007060043528183375,
+                    0.018177378239571086,
+                    -0.005215033677577089
+                ],
+                "coil_fourier_coefficients": [
+                    0.1512598463818953,
+                    0.010878541003821369,
+                    0.18920493024553575,
+                    -0.04675147174956223,
+                    -0.19906167010898496,
+                    0.025029998009991655,
+                    -0.03881431310480843,
+                    -0.02443704984086257,
+                    0.0296296327773984,
+                    -0.026360658102222892,
+                    0.006068524868191216
+                ],
+                "basis_level": 3,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "supply_group_count": 2,
+                "dominant_poloidal_mode_m": 1,
+                "dominant_toroidal_mode_n": 1,
+                "retroactive_feasibility_credit": false,
+                "parent_optimized_basis_override_hash": "ec51c07440d69dcff84132cc2ae22cc28cf6c7b8188afb836559b664ba5bdccf",
+                "feedback_role": "next_request_sampling_only",
+                "fourier_order": 5
+            },
+            "inverse_request": {
+                "finite_difference_step": 0.015,
+                "structure_hash": "0497edd15ffb234afcf98c2beb407b678bf9b539bd9826398fc11db7395b6cf1",
+                "axis_locator_maximum_closure_residual": 0.04,
+                "source_design_hash": "fbfa789c7e76fb763ab8305ef0fcfe29145e14ef834656c93d65c020c191669b",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "target_rotational_transform": 0.02,
+                "phi_count": 6,
+                "axis_locator_refinement_levels": 4,
+                "trust_radius": 0.1,
+                "tikhonov_regularization": 0.05,
+                "maximum_iterations": 1,
+                "acquisition_model_id": "candidate_biot_savart_periodic_axis_fieldline_acquisition_v2",
+                "active_coefficient_indices": [
+                    6,
+                    7,
+                    8
+                ],
+                "acquisition_toroidal_turns": 16,
+                "theta_count": 4,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "source_request_hash": "23a0aeff6067c20a661914a2fa7f75ca2576bf4ceaae2d9f72e8b855594c6216",
+                "retroactive_feasibility_credit": false,
+                "acquisition_steps_per_turn": 60,
+                "next_request_sampling_only": true,
+                "source_basis_override_hash": "8b2d3dd07a8af219cb380164721e0155c0405fd79106f067a3f967a0fd4e9682",
+                "request_hash": "9c34d90e9eb1a5eb24de657e2fa6d07497856a42b8bb60ce5a65e21a4534ab95",
+                "schema_version": "1.0.0"
+            },
+            "candidate_feasibility_credit": false,
+            "optimized_design": {
+                "route": "closed/mixed",
+                "temperature_scale": 0.9097112575160817,
+                "structure_hash": "0497edd15ffb234afcf98c2beb407b678bf9b539bd9826398fc11db7395b6cf1",
+                "current_potential_coefficients": [
+                    -0.032132451482132285,
+                    -0.05114864828535497,
+                    0.10753208472741774,
+                    0.034878886887190264,
+                    0.007293403671787206
+                ],
+                "actuator_timing_coefficients": [
+                    0.04743674293093032,
+                    -0.13758374466021905,
+                    -0.013557230036795096,
+                    0.07791225393432039,
+                    -0.08592161643796752
+                ],
+                "grammar_hash": "fc02af7fcd12aee954c15d877c4d33cac7189d30d964fc3867191804aebb0c2f",
+                "controller_modal_coefficients": [
+                    -0.05159052652869757,
+                    -0.08774408798257893,
+                    0.07882498114220662,
+                    0.026162098879099316
+                ],
+                "density_scale": 0.983036246298421,
+                "field_current_a": 94248.03167049804,
+                "design_hash": "fbfa789c7e76fb763ab8305ef0fcfe29145e14ef834656c93d65c020c191669b",
+                "schema_version": "1.0.0",
+                "coil_bspline_control_points": [
+                    0.012220949044731857,
+                    -0.08549792676148132,
+                    -0.0004163223820480011,
+                    -0.07052402351247859,
+                    -0.05100133741917213,
+                    -0.031001290002647657
+                ],
+                "plasma_boundary_coefficients": [
+                    -0.04069469859059044,
+                    -0.01108729914746038,
+                    -0.0067413747414219625,
+                    0.0401839092556622,
+                    -0.05128280667611646
+                ],
+                "coil_fourier_coefficients": [
+                    0.1512598463818953,
+                    0.010878541003821369,
+                    0.18920493024553575,
+                    -0.04675147174956223,
+                    -0.19906167010898496
+                ]
+            },
+            "optimized_basis_override_hash": "98beff692c605b5d2f8ac8c715814b46bad5b86666b152306ba453680b5ccb56",
+            "trace": [
+                {
+                    "rank": [
+                        0,
+                        0.6666666666666666,
+                        0.5688163191552584,
+                        0.01397071806818178,
+                        0,
+                        0.09490216730855426,
+                        0.05775178025481384
+                    ],
+                    "event": "initial",
+                    "iteration": 0,
+                    "coefficient_hash": "f217eed26f67a5820eb99aa31f7c2248013409cd8983400d9a1cddeee48bcceb"
+                },
+                {
+                    "rank": [
+                        0,
+                        0.6666666666666666,
+                        0.5688163191552584,
+                        0.01397071806818178,
+                        0,
+                        0.09490216730855426,
+                        0.05775178025481384
+                    ],
+                    "event": "no_improvement",
+                    "trust_radius": 0.05,
+                    "iteration": 1,
+                    "regularization": 0.2
+                }
+            ],
+            "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+            "retroactive_feasibility_credit": false,
+            "initial_rank": [
+                0,
+                0.6666666666666666,
+                0.5688163191552584,
+                0.01397071806818178,
+                0,
+                0.09490216730855426,
+                0.05775178025481384
+            ],
+            "result_hash": "ed1c3f5acb1541ff0aa7ba8ebd05a78249ed8ad4e3e2d36ec7ae72b296d7daed",
+            "source_basis_override_hash": "8b2d3dd07a8af219cb380164721e0155c0405fd79106f067a3f967a0fd4e9682",
+            "source_coefficient_hash": "f217eed26f67a5820eb99aa31f7c2248013409cd8983400d9a1cddeee48bcceb",
+            "schema_version": "1.0.0",
+            "evaluation_count": 8
+        },
+        {
+            "final_acquisition": {
+                "minimum_absolute_rotational_transform": 0.016091526699467833,
+                "minimum_trace_completion_fraction": 0.016129815503112255,
+                "completion_semantics": "minimum_toroidal_turn_fraction_v2",
+                "periodic_magnetic_axis": {
+                    "feasibility_credit": false,
+                    "steps_per_turn": 60,
+                    "closure_residual_normalized": 0.030872032650343932,
+                    "refinement_levels": 4,
+                    "candidate_bound": true,
+                    "axis_evidence_hash": "131cca8b9e36fc8396b28c209b3264d0d5d42c2f9913a14b9a25b67f907d1af4",
+                    "status": "located",
+                    "axis_start_m": [
+                        3.2619428350683313,
+                        0.0,
+                        -0.14809343819137938
+                    ],
+                    "maximum_closure_residual": 0.04,
+                    "axis_reference": {
+                        "closure_position_m": [
+                            3.2723813755621696,
+                            -9.20698885302565e-5,
+                            -0.13069376855904474
+                        ],
+                        "field_singular": false,
+                        "steps_per_turn": 60,
+                        "closure_residual_normalized": 0.030872032650343932,
+                        "completed_steps": 67,
+                        "escaped": false,
+                        "start_m": [
+                            3.2619428350683313,
+                            0.0,
+                            -0.14809343819137938
+                        ],
+                        "status": "complete",
+                        "radius_m": [
+                            3.2619428350683313,
+                            3.2514656384520126,
+                            3.2384099138478044,
+                            3.22884751453346,
+                            3.2214345711986003,
+                            3.2158386829742134,
+                            3.215160419786045,
+                            3.215834306736608,
+                            3.223277267183907,
+                            3.230234400982779,
+                            3.2462791406865374,
+                            3.2579958648182124,
+                            3.2793507679197518,
+                            3.2964679867786413,
+                            3.3133003821234013,
+                            3.3389301730201733,
+                            3.344688960875297,
+                            3.3689361389793526,
+                            3.377024700177857,
+                            3.380082002980947,
+                            3.3966220613082303,
+                            3.386433876820379,
+                            3.3924379076529037,
+                            3.387358644636511,
+                            3.376430942695383,
+                            3.3747431553219283,
+                            3.3574476200873087,
+                            3.3513371054356136,
+                            3.3363348312228887,
+                            3.3234862705619843,
+                            3.312152292986479,
+                            3.29520729806097,
+                            3.2851296171114965,
+                            3.2683056781647695,
+                            3.2578680289136144,
+                            3.2447878996055413,
+                            3.2350311849738778,
+                            3.2276132505023276,
+                            3.2216581075260025,
+                            3.2209177090861942,
+                            3.22119083381254,
+                            3.2285057759416316,
+                            3.2351628806492303,
+                            3.250977747313428,
+                            3.262688277306772,
+                            3.2836023388071447,
+                            3.3010998255523076,
+                            3.317329084478716,
+                            3.3434116465305816,
+                            3.3490943995869347,
+                            3.3729390263154393,
+                            3.3820627390666385,
+                            3.3839592484912306,
+                            3.401356236824272,
+                            3.3910873589302364,
+                            3.3963597137685513,
+                            3.3924078003932685,
+                            3.38038582447761,
+                            3.3793394762963995,
+                            3.361954330639672,
+                            3.35556354322007,
+                            3.3413314971223,
+                            3.32792695392915,
+                            3.3174584119340977,
+                            3.300314812099984,
+                            3.290624239220934,
+                            3.274075892211643,
+                            3.272381376857383
+                        ],
+                        "z_m": [
+                            -0.14809343819137938,
+                            -0.15710030298042427,
+                            -0.1673004971413112,
+                            -0.18101802502468511,
+                            -0.19567577203979475,
+                            -0.2129594455949755,
+                            -0.2305961866987893,
+                            -0.2482117749042803,
+                            -0.2670400828142098,
+                            -0.2805288553791203,
+                            -0.2976888534318741,
+                            -0.3041830286545653,
+                            -0.31399363031646016,
+                            -0.316418630375695,
+                            -0.3111643297799404,
+                            -0.3128396924115737,
+                            -0.29566821769418483,
+                            -0.2881626926910598,
+                            -0.2736103186311148,
+                            -0.25246110368284047,
+                            -0.24082801449381122,
+                            -0.2184606219233151,
+                            -0.2033203204800202,
+                            -0.18719949174753145,
+                            -0.17094366724206625,
+                            -0.16063477390937306,
+                            -0.14771322939420053,
+                            -0.14108870803710852,
+                            -0.1342651486807025,
+                            -0.13023990384451978,
+                            -0.1293539977232742,
+                            -0.1289115167503879,
+                            -0.13303754695087114,
+                            -0.13763024217069897,
+                            -0.14646381908507078,
+                            -0.15658850390601997,
+                            -0.17014968655725987,
+                            -0.1848083193448963,
+                            -0.20201104332727715,
+                            -0.21979507419562425,
+                            -0.23745799646323515,
+                            -0.2565669859257265,
+                            -0.27039442437974615,
+                            -0.28775742967584084,
+                            -0.29505225041592964,
+                            -0.30481535612669236,
+                            -0.30809300038055315,
+                            -0.30294195004976365,
+                            -0.30476001295896704,
+                            -0.2882441786308333,
+                            -0.2801462498176375,
+                            -0.26634186355839923,
+                            -0.2448519400348379,
+                            -0.2331654189680754,
+                            -0.21122915055672215,
+                            -0.19556110320213257,
+                            -0.17984838225347966,
+                            -0.1634108904275606,
+                            -0.1530876853334739,
+                            -0.14036762343794518,
+                            -0.13356900553886086,
+                            -0.12704781444904423,
+                            -0.12289040760855668,
+                            -0.12214686749429701,
+                            -0.12162949412994316,
+                            -0.12561469616905627,
+                            -0.1301134079112741,
+                            -0.13069376855904474
+                        ],
+                        "phase_rad": [
+                            0,
+                            0.09665439274690879,
+                            0.19359472981823966,
+                            0.29090164730276147,
+                            0.3884434072473213,
+                            0.48617809632816433,
+                            0.5839972072451753,
+                            0.681835710512714,
+                            0.7794846053650462,
+                            0.8770171653133225,
+                            0.9740388014182719,
+                            1.0708126516801988,
+                            1.1669466617526307,
+                            1.26255681250752,
+                            1.3577576439867265,
+                            1.4521011344848698,
+                            1.5461948417962343,
+                            1.6397535488344088,
+                            1.7328863734779771,
+                            1.8259436455482332,
+                            1.918662486195367,
+                            2.0112345675660857,
+                            2.1040775646186485,
+                            2.1967839773259223,
+                            2.289783726055515,
+                            2.383023376378117,
+                            2.4763874073032506,
+                            2.5702788004834054,
+                            2.664326207842333,
+                            2.7588716935887527,
+                            2.8537321783584138,
+                            2.948967555615239,
+                            3.0446557625251773,
+                            3.1406489524807006,
+                            3.237116796532781,
+                            3.3338658353353203,
+                            3.4309848496906454,
+                            3.5283393014239595,
+                            3.625891429819176,
+                            3.7235324522708657,
+                            3.8212008987351704,
+                            3.9186866214377236,
+                            4.016062168390799,
+                            4.1129420369858085,
+                            4.209569363158993,
+                            4.305582880465607,
+                            4.40105624514669,
+                            4.496142714409943,
+                            4.59036059441254,
+                            4.684334547814622,
+                            4.777783970113278,
+                            4.8707893867989265,
+                            4.963719619723584,
+                            5.0563143830168205,
+                            5.14875682101216,
+                            5.2414816402831885,
+                            5.334072346488962,
+                            5.426932892156623,
+                            5.5200609760312656,
+                            5.613293859032158,
+                            5.707064216577961,
+                            5.800990856004642,
+                            5.895395695905211,
+                            5.990127847403826,
+                            6.08520759092315,
+                            6.180749646980059,
+                            6.2765791619404245,
+                            6.283185307179586
+                        ]
+                    },
+                    "section_phi_rad": 0,
+                    "search_trace": [
+                        {
+                            "start_m": [
+                                2.885516096449476,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.07172876129841826,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.885516096449476,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.0707553572354925,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                2.885516096449476,
+                                0.0,
+                                0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.0805309224198513,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.0164471359690777,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.06369378454399954,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.0164471359690777,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.06988728499576254,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.0164471359690777,
+                                0.0,
+                                0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.08700820360248332,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.1473781754886794,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04984627547574748,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.1473781754886794,
+                                0.0,
+                                0.0
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.06402266882680843,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.1473781754886794,
+                                0.0,
+                                0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.09377219928214675,
+                            "level": 1
+                        },
+                        {
+                            "start_m": [
+                                3.0819126557288783,
+                                0.0,
+                                -0.19745791758850584
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.061175442362224206,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.0819126557288783,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.05693795076582248,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.0819126557288783,
+                                0.0,
+                                -0.06581930586283528
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.059570398743848646,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.1473781754886794,
+                                0.0,
+                                -0.19745791758850584
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.055619208655382335,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.1473781754886794,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04984627547574748,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.1473781754886794,
+                                0.0,
+                                -0.06581930586283528
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.05362225203353054,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.2128436952484805,
+                                0.0,
+                                -0.19745791758850584
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04297224642416733,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.2128436952484805,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04002360311562926,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.2128436952484805,
+                                0.0,
+                                -0.06581930586283528
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.046698863415590305,
+                            "level": 2
+                        },
+                        {
+                            "start_m": [
+                                3.18011093536858,
+                                0.0,
+                                -0.16454826465708822
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04414852994076011,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.18011093536858,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04378775152456732,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.18011093536858,
+                                0.0,
+                                -0.09872895879425292
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04592075147302224,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.2128436952484805,
+                                0.0,
+                                -0.16454826465708822
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04015403576368157,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.2128436952484805,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04002360311562926,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.2128436952484805,
+                                0.0,
+                                -0.09872895879425292
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.04240537187766346,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.245576455128381,
+                                0.0,
+                                -0.16454826465708822
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.033384994887783334,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.245576455128381,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03306186839470555,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.245576455128381,
+                                0.0,
+                                -0.09872895879425292
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.036552706176505065,
+                            "level": 3
+                        },
+                        {
+                            "start_m": [
+                                3.2292100751884307,
+                                0.0,
+                                -0.14809343819137938
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03522977073213004,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.2292100751884307,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.035704836954323624,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.2292100751884307,
+                                0.0,
+                                -0.11518378525996174
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03698517948829978,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.245576455128381,
+                                0.0,
+                                -0.14809343819137938
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03270842183354716,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.245576455128381,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03306186839470555,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.245576455128381,
+                                0.0,
+                                -0.11518378525996174
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03438656880351015,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.2619428350683313,
+                                0.0,
+                                -0.14809343819137938
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.030872032650343932,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.2619428350683313,
+                                0.0,
+                                -0.13163861172567057
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03140001459406512,
+                            "level": 4
+                        },
+                        {
+                            "start_m": [
+                                3.2619428350683313,
+                                0.0,
+                                -0.11518378525996174
+                            ],
+                            "status": "complete",
+                            "closure_residual_normalized": 0.03277032500283265,
+                            "level": 4
+                        }
+                    ],
+                    "evaluation_count": 36
+                },
+                "minimum_sampled_wall_margin_fraction": 0,
+                "surface_ordering_fraction": 0,
+                "axis_location_violation": 0,
+                "candidate_boundary_frame_used": true,
+                "start_minor_radius_fractions": [
+                    0.15,
+                    0.35,
+                    0.55
+                ],
+                "trace_escape_fraction": 0.3333333333333333,
+                "status": "evaluated",
+                "model_id": "candidate_biot_savart_periodic_axis_fieldline_acquisition_v2",
+                "escape_semantics": "candidate_boundary_normalized_minor_radius_v2",
+                "axis_relative_start_points": true
+            },
+            "source_design_hash": "a949a730e18a1e0a72514d9e1611a058cedc68dfc1f5fdaa23617a887938882c",
+            "claim_boundary": "v86 current-potential inversion uses candidate-bound finite-filament fields and periodic-axis-aligned short-horizon field-line acquisition to initialize later immutable requests. It grants no feasibility, Poincare, equilibrium, stability, minimality, engineering, or build-ready credit.",
+            "final_field_metrics": {
+                "signed_boundary_normal_maximum_absolute": 0.19116139665231432,
+                "relative_field_ripple": 0.06663314202992057,
+                "minimum_contour_spacing_m": 0.4442176669205223,
+                "signed_boundary_normal_rms": 0.1121086475312057,
+                "minimum_field_t": 2.0111669610112255,
+                "required_contour_spacing_m": 0.18
+            },
+            "source_request_hash": "fff362c1c9f0265af30188e2fe2415cee6eeb8c9e59054d0e7df241747b804d5",
+            "optimized_coefficient_hash": "7731c780529ebe7816e7a486c702b23474d26cd52a2dea683c2b8bedb1251028",
+            "next_request_sampling_only": true,
+            "final_rank": [
+                0,
+                0.3333333333333333,
+                0.9838701844968878,
+                0.19542366502660838,
+                1,
+                0.1121086475312057,
+                0.04938408017202624
+            ],
+            "optimized_basis_override": {
+                "grammar_transition": "helical_level_sets_to_poloidal_modular_2d_current_potential_contours_v3",
+                "bspline_control_count": 12,
+                "contour_count": 28,
+                "current_potential_coefficients": [
+                    -0.07711881349826252,
+                    -0.044291046396689814,
+                    0.04926295413575914,
+                    -0.015020133436612397,
+                    -0.023177554709189297,
+                    -0.0007300930624066808,
+                    -0.0051709942304925954,
+                    0.11700872000227105,
+                    0.04441126678175725,
+                    -0.0039021840016270977,
+                    0.004702169781848115
+                ],
+                "inverse_request_hash": "a4b025ab4d012e4f829e11a04ffda47d41233df5c20dc1e0df19485639a121af",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "current_potential_order": 5,
+                "contour_current_scale": 0.35,
+                "coil_bspline_control_points": [
+                    0.07379728192553933,
+                    -0.0067719378390335636,
+                    0.07584465233891358,
+                    0.09047952131604806,
+                    0.05993707681963553,
+                    0.10143765289978243,
+                    -0.07379876750618426,
+                    -0.016183492325075356,
+                    -0.034868738118543685,
+                    -0.01402628109823921,
+                    -0.01071090121863982,
+                    0.013128324146114029
+                ],
+                "coil_fourier_coefficients": [
+                    -0.10716891102199264,
+                    -0.07261263572202993,
+                    -0.020735443232989637,
+                    -0.04876527709255764,
+                    0.12018935034285495,
+                    -0.017653463901827995,
+                    -0.03329264638933677,
+                    0.06556155564731932,
+                    0.01991240441470331,
+                    0.021510048938020748,
+                    0.005560690322339657
+                ],
+                "basis_level": 3,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "supply_group_count": 2,
+                "dominant_poloidal_mode_m": 1,
+                "dominant_toroidal_mode_n": 1,
+                "retroactive_feasibility_credit": false,
+                "parent_optimized_basis_override_hash": "2d8a1577fae24dfc2b497fb520aa5ac17a166959169530710ea3369fb7ce5670",
+                "feedback_role": "next_request_sampling_only",
+                "fourier_order": 5
+            },
+            "inverse_request": {
+                "finite_difference_step": 0.015,
+                "structure_hash": "2f15c75efd57e7e27412b8fd8926503ab2e107caa5a49ab10c20aa94cfd2eb41",
+                "axis_locator_maximum_closure_residual": 0.04,
+                "source_design_hash": "a949a730e18a1e0a72514d9e1611a058cedc68dfc1f5fdaa23617a887938882c",
+                "winding_model": "winding_surface_current_potential_level_set_filaments_v7",
+                "target_rotational_transform": 0.02,
+                "phi_count": 6,
+                "axis_locator_refinement_levels": 4,
+                "trust_radius": 0.1,
+                "tikhonov_regularization": 0.05,
+                "maximum_iterations": 1,
+                "acquisition_model_id": "candidate_biot_savart_periodic_axis_fieldline_acquisition_v2",
+                "active_coefficient_indices": [
+                    6,
+                    7,
+                    8
+                ],
+                "acquisition_toroidal_turns": 16,
+                "theta_count": 4,
+                "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+                "source_request_hash": "fff362c1c9f0265af30188e2fe2415cee6eeb8c9e59054d0e7df241747b804d5",
+                "retroactive_feasibility_credit": false,
+                "acquisition_steps_per_turn": 60,
+                "next_request_sampling_only": true,
+                "source_basis_override_hash": "0474dda4418c9dd5059299ebae3316d7db3bd99fe8e7ed32b40b18e7a112fdad",
+                "request_hash": "a4b025ab4d012e4f829e11a04ffda47d41233df5c20dc1e0df19485639a121af",
+                "schema_version": "1.0.0"
+            },
+            "candidate_feasibility_credit": false,
+            "optimized_design": {
+                "route": "closed/mixed",
+                "temperature_scale": 1.1406708725767496,
+                "structure_hash": "2f15c75efd57e7e27412b8fd8926503ab2e107caa5a49ab10c20aa94cfd2eb41",
+                "current_potential_coefficients": [
+                    -0.07711881349826252,
+                    -0.044291046396689814,
+                    0.04926295413575914,
+                    -0.015020133436612397,
+                    -0.023177554709189297
+                ],
+                "actuator_timing_coefficients": [
+                    0.05454514748915585,
+                    -0.013584876554845993,
+                    -0.0012763112826194708,
+                    0.075857415488315,
+                    0.01693342029845379
+                ],
+                "grammar_hash": "ff1a3bf6852999e006c52c2a8803476d5aec3c5bf613860a568d4a407a0d3b82",
+                "controller_modal_coefficients": [
+                    0.016094034736300455,
+                    0.08445140877247358,
+                    -0.052866115505419135,
+                    -0.13909225120685853
+                ],
+                "density_scale": 0.9577843660609825,
+                "field_current_a": 170792.51667800714,
+                "design_hash": "a949a730e18a1e0a72514d9e1611a058cedc68dfc1f5fdaa23617a887938882c",
+                "schema_version": "1.0.0",
+                "coil_bspline_control_points": [
+                    0.07379728192553933,
+                    -0.0067719378390335636,
+                    0.07584465233891358,
+                    0.09047952131604806,
+                    0.05993707681963553,
+                    0.10143765289978243
+                ],
+                "plasma_boundary_coefficients": [
+                    0.035140235057731,
+                    0.023872808194919472,
+                    0.04201568527360386,
+                    0.04451933086234292,
+                    -0.006100650426872051
+                ],
+                "coil_fourier_coefficients": [
+                    -0.10716891102199264,
+                    -0.07261263572202993,
+                    -0.020735443232989637,
+                    -0.04876527709255764,
+                    0.12018935034285495
+                ]
+            },
+            "optimized_basis_override_hash": "648c69c89845697c6a87ee0b8a8a475e0ab0407822d1d57ed9c45a9dae4abbc2",
+            "trace": [
+                {
+                    "rank": [
+                        0,
+                        0.3333333333333333,
+                        0.9847779433708134,
+                        0.7359115864611802,
+                        1,
+                        0.11126318094440962,
+                        0.03667505021028567
+                    ],
+                    "event": "initial",
+                    "iteration": 0,
+                    "coefficient_hash": "31834ed2c66005b56dd4a2319b7145ff2bdd01dfb0f3655f216f68e31f2ce811"
+                },
+                {
+                    "rank": [
+                        0,
+                        0.3333333333333333,
+                        0.9838701844968878,
+                        0.19542366502660838,
+                        1,
+                        0.1121086475312057,
+                        0.04938408017202624
+                    ],
+                    "event": "accepted",
+                    "iteration": 1,
+                    "line_scale": 1,
+                    "coefficient_hash": "7731c780529ebe7816e7a486c702b23474d26cd52a2dea683c2b8bedb1251028"
+                }
+            ],
+            "inverse_solver_id": "candidate_bound_regularized_current_potential_gauss_newton_v1",
+            "retroactive_feasibility_credit": false,
+            "initial_rank": [
+                0,
+                0.3333333333333333,
+                0.9847779433708134,
+                0.7359115864611802,
+                1,
+                0.11126318094440962,
+                0.03667505021028567
+            ],
+            "result_hash": "d634d9edd6523123b6b6ba85b255c80f7ff3cc58ec9d72ae0a81467f95d47d7c",
+            "source_basis_override_hash": "0474dda4418c9dd5059299ebae3316d7db3bd99fe8e7ed32b40b18e7a112fdad",
+            "source_coefficient_hash": "31834ed2c66005b56dd4a2319b7145ff2bdd01dfb0f3655f216f68e31f2ce811",
+            "schema_version": "1.0.0",
+            "evaluation_count": 8
+        }
+    ]
+}

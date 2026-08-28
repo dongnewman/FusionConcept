@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/universal_device_candidate_v89.schema.json",
+  "title": "UniversalDeviceCandidateV89",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "topology_hash", "realization_hash", "candidate_physics_hash", "structure_seed", "physical_variant_seed", "operating_variant_seed", "control_variant_seed", "stream_hashes", "mission_scope", "evidence_scope", "capability_cell", "solver_input_hash", "candidate_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "topology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "realization_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "structure_seed": {"type": "integer"},
+    "physical_variant_seed": {"type": "integer"},
+    "operating_variant_seed": {"type": "integer"},
+    "control_variant_seed": {"type": "integer"},
+    "stream_hashes": {"type": "object", "required": ["structure", "physical", "operating", "control"]},
+    "mission_scope": {"type": "object", "required": ["mission_id"]},
+    "evidence_scope": {"type": "object", "required": ["evidence_level"]},
+    "capability_cell": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "solver_input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

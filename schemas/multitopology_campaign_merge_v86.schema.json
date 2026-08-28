@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/multitopology_campaign_merge_v86.schema.json",
+  "title": "MultitopologyCampaignMergeV86",
+  "type": "object",
+  "required": ["schema_version", "status", "campaign_hash", "candidate_count", "unique_request_count", "stage_status_histograms", "unique_solver_input_counts", "cache_hit_counts", "actual_execution_counts", "duplicate_solver_execution_keys", "stage_frontier_records", "exception_counts_by_capability_cell", "evidence_firewall_passed", "retroactive_feasibility_credit", "grammar_pareto_archives", "capability_cell_pareto_archives", "comparison_scope_pareto_archives", "budget_stratum_hashes", "cross_capability_disposition", "basis_promotion_requests", "basis_promotions_rejected_by_budget_count", "merged_stream_sha256", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"const": "complete"},
+    "campaign_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_count": {"type": "integer", "minimum": 0},
+    "unique_request_count": {"type": "integer", "minimum": 0},
+    "stage_status_histograms": {"type": "object"},
+    "unique_solver_input_counts": {"type": "object"},
+    "cache_hit_counts": {"type": "object"},
+    "actual_execution_counts": {"type": "object"},
+    "duplicate_solver_execution_keys": {"type": "array", "maxItems": 0},
+    "stage_frontier_records": {"type": "array"},
+    "exception_counts_by_capability_cell": {"type": "object"},
+    "evidence_firewall_passed": {"const": true},
+    "retroactive_feasibility_credit": {"const": false},
+    "grammar_pareto_archives": {"type": "array"},
+    "capability_cell_pareto_archives": {"type": "array"},
+    "comparison_scope_pareto_archives": {"type": "array"},
+    "budget_stratum_hashes": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "cross_capability_disposition": {"type": "object"},
+    "basis_promotion_requests": {"type": "array"},
+    "basis_promotions_rejected_by_budget_count": {"type": "integer", "minimum": 0},
+    "merged_stream_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

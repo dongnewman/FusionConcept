@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/universal_multiregion_topology_v89.schema.json",
+  "title": "UniversalMultiRegionTopologyV89",
+  "type": "object",
+  "required": ["schema_version", "regions", "interfaces", "boundaries", "field_topologies", "control_paths", "event_transitions", "operator_obligations", "topology_hash", "isomorphism_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "regions": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["region_id", "role", "dimension", "time_semantics", "reservoir_accounts", "state_slots"]}},
+    "interfaces": {"type": "array", "items": {"type": "object", "required": ["interface_id", "source_region_id", "target_region_id", "kind", "flux_pairs"]}},
+    "boundaries": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["region_id", "kind"]}},
+    "field_topologies": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["region_id", "kind"]}},
+    "control_paths": {"type": "array"},
+    "event_transitions": {"type": "array"},
+    "operator_obligations": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["obligation_id", "operator_id", "region_id", "spatial_dimension", "time_semantics", "boundary_kinds", "required_state_ids", "evidence_obligation"]}},
+    "topology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "isomorphism_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

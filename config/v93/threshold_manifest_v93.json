@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "manifest_id": "threshold_manifest_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "inherits_v92_as_floor_or_starting_point_only": true,
+  "equilibrium_hard_gates": {
+    "normalized_nonlinear_residual_max": 1e-8,
+    "normalized_force_balance_l2_max": 1e-4,
+    "normalized_force_balance_linf_max": 5e-4,
+    "normalized_divB_l2_max": 1e-8,
+    "normalized_divB_linf_max": 1e-7,
+    "normalized_boundary_flux_mismatch_max": 1e-4,
+    "normalized_interface_particle_residual_max": 1e-4,
+    "normalized_interface_energy_residual_max": 1e-4,
+    "normalized_interface_current_residual_max": 1e-4,
+    "normalized_interface_magnetic_flux_residual_max": 1e-4,
+    "normalized_interface_force_residual_max": 5e-4,
+    "fine_vs_medium_decision_observable_relative_difference_max": 0.02,
+    "topology_preservation_required": true,
+    "all_declared_regions_interfaces_operators_states_consumed_required": true
+  },
+  "numerical_vvuq_hard_gates": {
+    "minimum_independent_levels": 3,
+    "levels": ["coarse", "medium", "fine"],
+    "observed_order_positive_required": true,
+    "gci_fine_percent_max": 2.0,
+    "minimum_preregistered_initial_states": 3,
+    "both_recovery_paths_exercised_when_needed": true,
+    "restart_replay_observable_relative_difference_max": 1e-10,
+    "independent_solver_decision_agreement_required": true
+  },
+  "validation_vvuq_hard_gates": {
+    "holdout_operating_points_min": 3,
+    "independent_diagnostic_classes_min": 2,
+    "actual_run_or_shot_id_required": true,
+    "calibration_uncertainty_boundary_initial_conditions_and_file_hash_required": true,
+    "experimental_uncertainty_required": true,
+    "numerical_uncertainty_required": true,
+    "parameter_uncertainty_required": true,
+    "model_discrepancy_required": true,
+    "candidate_applicability_assessment_required": true,
+    "published_range_as_measurement_forbidden": true,
+    "unavailable_real_data_status": "unknown_validation_domain"
+  },
+  "fail_fast": ["nan_or_infinite_state", "nonpositive_density", "nonpositive_pressure_when_required", "irreversible_or_inverted_mesh", "outside_declared_model_validity_domain", "corrupt_checkpoint"],
+  "branch_policy": {"different_topology_or_decision_from_initialization_or_continuation": "unknown_multiple_equilibrium_branches", "favorable_branch_selection_forbidden": true},
+  "nonconvergence_policy": {"default": "fail_numerical_convergence", "physical_nonexistence_only_after_all_preregistered_initializations_recovery_paths_meshes_and_independent_audits": "fail_no_equilibrium_under_declared_model"},
+  "amendment_policy": "Any threshold change requires a new protocol_id; cross-protocol aggregation is forbidden."
+}

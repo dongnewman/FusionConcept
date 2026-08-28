@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "threshold_manifest_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "v92_thresholds_are_floor": true,
+  "mesh_levels": {"coarse": 33, "medium": 65, "fine": 129},
+  "minimum_initial_states": 3,
+  "normalized_monolithic_residual_max": 1e-8,
+  "normalized_interface_flux_residual_max": 1e-8,
+  "normalized_interface_field_jump_residual_max": 1e-7,
+  "normalized_force_balance_l2_max": 1e-4,
+  "normalized_force_balance_linf_max": 5e-4,
+  "fine_vs_medium_observable_relative_difference_max": 0.02,
+  "observed_order_positive_required": true,
+  "gci_fine_percent_max": 2.0,
+  "restart_replay_relative_difference_max": 1e-10,
+  "branch_disagreement_status": "unknown_multiple_equilibrium_branches",
+  "nonconvergence_status": "fail_numerical_convergence"
+}

@@ -1,0 +1,1443 @@
+{
+    "software_controls_status": "pass",
+    "before_after": {
+        "interpretation": "Provider closure repairs software execution only; validation and device feasibility remain independent.",
+        "after": {
+            "v96_whole_graph_solve_count": 248,
+            "v96_promotion_eligible": 0,
+            "v96_generated_status": {
+                "unsupported": 171,
+                "unknown": 246
+            },
+            "v96_reference_recall": 1,
+            "v96_provider_coverage": "pass"
+        },
+        "before": {
+            "v95_generated_unsupported": 417,
+            "v95_numerical_survivors": 0,
+            "v95_reference_recall": 0
+        }
+    },
+    "reference_control_count": 2,
+    "claim_boundary": "Acceptance establishes reduced provider closure and numerical execution in declared domains. Unsupported declarations, unknown validation, numerical failure, and physical failure remain distinct; no experimental or device-feasibility conclusion is promoted.",
+    "selector_acceptance": "pass",
+    "reference_results": [
+        {
+            "screen_status": "pass",
+            "metrics": {
+                "stability_margin": {
+                    "units": "normalized",
+                    "reason": null,
+                    "status": "available",
+                    "metric_id": "stability_margin",
+                    "value": 1.0806715575382655,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": "4ae762312e0e4885a8b33543e9e1f8e6007357fab51f0308fd74c1c6922aafaa",
+                    "origin": "whole_graph_solve_derived"
+                },
+                "net_power_w": {
+                    "units": "W",
+                    "reason": null,
+                    "status": "available",
+                    "metric_id": "net_power_w",
+                    "value": 1.7150428036805062e14,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": "4ae762312e0e4885a8b33543e9e1f8e6007357fab51f0308fd74c1c6922aafaa",
+                    "origin": "whole_graph_solve_derived"
+                },
+                "wall_load_w_m2": {
+                    "units": "W/m^2",
+                    "reason": "successful_whole_graph_solve_required",
+                    "status": "unsupported",
+                    "metric_id": "wall_load_w_m2",
+                    "value": null,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": null,
+                    "origin": null
+                },
+                "beta": {
+                    "units": "1",
+                    "reason": null,
+                    "status": "available",
+                    "metric_id": "beta",
+                    "value": 0.02536842322293825,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": "4ae762312e0e4885a8b33543e9e1f8e6007357fab51f0308fd74c1c6922aafaa",
+                    "origin": "whole_graph_solve_derived"
+                }
+            },
+            "experimental_validation": "not_applicable",
+            "stage_order": [
+                "graph_compile",
+                "provider_closure",
+                "solve",
+                "numerical_vvuq",
+                "solve_derived_observables",
+                "validation_vvuq"
+            ],
+            "validation_vvuq": "not_applicable",
+            "subject_key": "iter_inductive_baseline_design_v1",
+            "device_feasibility": "not_claimed",
+            "blockers": [
+            ],
+            "solve_hash": "4ae762312e0e4885a8b33543e9e1f8e6007357fab51f0308fd74c1c6922aafaa",
+            "graph_hash": "81ef89ddecdedef8b8f911900d699306caa4eb2a97c507b5c5fa21993c26c03a",
+            "assembly_hash": "e4fb107e7a5905ce2245546dd766050c2a33ff2e33b42092f9b7c5213be824cf",
+            "promotion_eligible": false,
+            "physical_conclusion_expanded": false,
+            "source_role": "reference_control",
+            "cohorts": [
+                "v96_reference_control"
+            ],
+            "whole_graph_closed": true,
+            "basis_direct_proxy_credit": false,
+            "execution_hash": "6d06aae7facfcb45c737c75891b21be304a0c70a7e4fbccbce1c4a4b08a8fa5c",
+            "numerical_vvuq": "pass",
+            "partial_subgraph_credit": false,
+            "source_payload_hash": "ee6002be8469ba9b77c93232cd0101deab02cf92ebf68e7f40b47f922fc58e3b",
+            "reference_false_negative": false,
+            "novelty_credit_allowed": false,
+            "trusted_applicable_chain_pass": true
+        },
+        {
+            "screen_status": "unknown",
+            "metrics": {
+                "stability_margin": {
+                    "units": "normalized",
+                    "reason": null,
+                    "status": "available",
+                    "metric_id": "stability_margin",
+                    "value": 1.0097665081499299,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": "0d30605afedc86ab4e3a71e68f82d6682f87d58957c1dfb4d77f8c0924d41761",
+                    "origin": "whole_graph_solve_derived"
+                },
+                "net_power_w": {
+                    "units": "W",
+                    "reason": "successful_whole_graph_solve_required",
+                    "status": "unsupported",
+                    "metric_id": "net_power_w",
+                    "value": null,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": null,
+                    "origin": null
+                },
+                "wall_load_w_m2": {
+                    "units": "W/m^2",
+                    "reason": "successful_whole_graph_solve_required",
+                    "status": "unsupported",
+                    "metric_id": "wall_load_w_m2",
+                    "value": null,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": null,
+                    "origin": null
+                },
+                "beta": {
+                    "units": "1",
+                    "reason": null,
+                    "status": "available",
+                    "metric_id": "beta",
+                    "value": 0.26850215462555777,
+                    "evidence_ceiling": "reduced_lumped_multiregion_solve_derived_not_device_prediction",
+                    "basis_direct_proxy_credit": false,
+                    "solve_hash": "0d30605afedc86ab4e3a71e68f82d6682f87d58957c1dfb4d77f8c0924d41761",
+                    "origin": "whole_graph_solve_derived"
+                }
+            },
+            "experimental_validation": "unknown",
+            "stage_order": [
+                "graph_compile",
+                "provider_closure",
+                "solve",
+                "numerical_vvuq",
+                "solve_derived_observables",
+                "validation_vvuq"
+            ],
+            "validation_vvuq": "unknown_validation_domain",
+            "subject_key": "c2w_enhanced_performance_experiment_v1",
+            "device_feasibility": "not_claimed",
+            "blockers": [
+            ],
+            "solve_hash": "0d30605afedc86ab4e3a71e68f82d6682f87d58957c1dfb4d77f8c0924d41761",
+            "graph_hash": "c0f54e2c6e02aedb963f2776622056b867773dd44a0a3e2926b1ba4dd00b140e",
+            "assembly_hash": "18ed78bd1e1cc03ec301158961cb8ed3ff09f2780c97736751e9e6e174ffe890",
+            "promotion_eligible": false,
+            "physical_conclusion_expanded": false,
+            "source_role": "reference_control",
+            "cohorts": [
+                "v96_reference_control"
+            ],
+            "whole_graph_closed": true,
+            "basis_direct_proxy_credit": false,
+            "execution_hash": "e91f263efc2b1dfca9c8fc2aef2f03373c441f7c38b78603c818e69d352c0fb9",
+            "numerical_vvuq": "pass",
+            "partial_subgraph_credit": false,
+            "source_payload_hash": "ac71f5224764ea7f0068c757fc5da51e9be03f92f1fdec9d13d6bda1bad66a07",
+            "reference_false_negative": false,
+            "novelty_credit_allowed": false,
+            "trusted_applicable_chain_pass": true
+        }
+    ],
+    "conclusions": {
+        "generated_physical_fail": 0,
+        "experimental_validation": "not_established",
+        "generated_unknown": 246,
+        "numerically_executed_reduced_reference_controls": 2,
+        "generated_numerical_fail": 0,
+        "device_feasibility": "not_claimed",
+        "physical_device_passed_complete_vvuq": false,
+        "generated_unsupported": 171
+    },
+    "blocker_statistics": {
+        "declaration:missing_spatial_field_balance_backbone": 164,
+        "declaration:missing_spatial_plasma_operator_backbone": 19
+    },
+    "acceptance_hash": "72f74f60f325495a6a2384e25cd485339c5623f9172ac52ca9a836c6358a4c56",
+    "closure_246_retest_count": 246,
+    "execution_order": [
+        "manufactured_and_negative_controls",
+        "reference_controls",
+        "provider_coverage",
+        "generated_417_with_246_subcohort",
+        "million_no_proxy_replay"
+    ],
+    "known_positive_recall": {
+        "false_negatives": [
+        ],
+        "passed": 2,
+        "total": 2,
+        "rate": 1,
+        "false_negative_count": 0
+    },
+    "protocol_id": "fusionconceptai-v96-physical-provider-closure-20260828",
+    "candidate_status_histogram": {
+        "unsupported": 171,
+        "unknown": 246
+    },
+    "status": "pass",
+    "controls": {
+        "sealed_v91_v95_inputs": {
+            "status": "pass",
+            "existing_candidate_or_acceptance_write_count": 0,
+            "changed": [
+            ],
+            "sealed_input_count": 9
+        },
+        "reference_first": {
+            "status": "pass"
+        },
+        "runtime_controls": {
+            "strict_stage_order": {
+                "status": "pass",
+                "observed": [
+                    "graph_compile",
+                    "provider_closure",
+                    "solve",
+                    "numerical_vvuq",
+                    "solve_derived_observables",
+                    "validation_vvuq"
+                ]
+            },
+            "status": "pass",
+            "identity_label_basis_erasure": {
+                "status": "pass",
+                "identity_or_basis_passed_to_provider": false
+            },
+            "solve_hash_metric_firewall": {
+                "status": "pass",
+                "basis_direct_proxy_credit": false
+            },
+            "partial_closure": {
+                "status": "pass",
+                "partial_subgraph_credit": false
+            },
+            "coordinate_and_mixed_dimension_interfaces": {
+                "status": "pass",
+                "closed_interface_requirement_count": 14
+            },
+            "missing_provider": {
+                "status": "pass",
+                "solver_executed": false
+            }
+        },
+        "core_anti_specialization": {
+            "hits": [
+            ],
+            "status": "pass",
+            "scan_scope": [
+                "physical_provider_runtime_v96.jl",
+                "physical_vvuq_runtime_v96.jl"
+            ],
+            "identity_or_basis_passed_to_provider": false
+        }
+    },
+    "generated_candidate_count": 417,
+    "provider_coverage": {
+        "unsupported": 0,
+        "status": "pass",
+        "routing_axes": [
+            "kind",
+            "physical_states",
+            "operator",
+            "source_space",
+            "target_space",
+            "source_dimension",
+            "target_dimension",
+            "source_coordinate",
+            "target_coordinate"
+        ],
+        "closed": 18341,
+        "ambiguous": 0,
+        "coverage_hash": "b6c12328c1afe42d3cd5d4efa2b56cac2b6371c23366ddba63f4b850ec6ffc53",
+        "by_requirement_kind": {
+            "primary": {
+                "unsupported": 0,
+                "closed": 8348,
+                "ambiguous": 0
+            },
+            "interface": {
+                "unsupported": 0,
+                "closed": 6638,
+                "ambiguous": 0
+            },
+            "additional": {
+                "unsupported": 0,
+                "closed": 851,
+                "ambiguous": 0
+            },
+            "boundary": {
+                "unsupported": 0,
+                "closed": 2504,
+                "ambiguous": 0
+            }
+        }
+    },
+    "physical_conclusion_expanded": false,
+    "million_no_proxy_replay": {
+        "frontier_row_count": 5464,
+        "frontier_status_histogram": {
+            "unsupported": 2222,
+            "unknown": 3242
+        },
+        "basis_or_historical_physical_metrics_used_for_selection": false,
+        "capability_cell_count": 5464,
+        "stored_histogram_match": true,
+        "high_cost_execution_scope": "first structurally complete representative_per_capability_cell",
+        "source_campaign": "multitopology_v91_formal_1000000_20260827",
+        "structurally_routed": 1000000,
+        "claim_boundary": "Acceptance establishes reduced provider closure and numerical execution in declared domains. Unsupported declarations, unknown validation, numerical failure, and physical failure remain distinct; no experimental or device-feasibility conclusion is promoted.",
+        "status": "pass",
+        "representatives_per_cell_limit": 8,
+        "fields_read_from_sealed_rows": [
+            "request_index",
+            "capability_cell",
+            "type_status",
+            "route_status"
+        ],
+        "replay_hash": "9eefcdfc3cb612512ffb12f04ae269101662312cf18a4a5c22bc18508d54446b",
+        "processed": 1000000,
+        "exhaustive_high_cost_solve_of_all_million": false
+    },
+    "provider_registry": {
+        "protocol_id": "fusionconceptai-v96-physical-provider-closure-20260828",
+        "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+        "registry_hash": "0c5c6c9ca11d10362c14a2d2c6de4b97412231b30d7007883b6f687ad0a2ba2b",
+        "providers": [
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "boundary"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "absorbing_terminal"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "absorbing_terminal_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "actuator_feedback"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "actuator_feedback_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "boundary"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "closed_no_flux"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "closed_no_flux_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "coil_response"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "coil_response_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "interface"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "conservative_coordinate_transfer"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "conservative_coordinate_transfer_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "interface"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "conservative_mixed_dimension_transfer"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "conservative_mixed_dimension_transfer_provider_v96",
+                "target_dimensions": [
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "interface"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "conservative_same_coordinate_flux"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "conservative_same_coordinate_flux_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "coupled_inventory_root"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "coupled_inventory_root_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "cross_field_transport"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "cross_field_transport_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "energy_balance"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "energy_balance_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "fault_transition"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "fault_transition_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "field_balance"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "field_balance_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "boundary"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "mixed_robin"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "mixed_robin_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "boundary"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "open_outflow"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "open_outflow_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "parallel_transport"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "parallel_transport_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "particle_balance"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "particle_balance_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "reaction_radiation"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "reaction_radiation_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "stability_linearization"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "stability_linearization_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "terminal_balance"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "terminal_balance_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "source_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "target_coordinates": [
+                    "cartesian",
+                    "axisymmetric",
+                    "curvilinear",
+                    "surface",
+                    "open_field",
+                    "scalar"
+                ],
+                "lifecycle_status": "available",
+                "kinds": [
+                    "primary_operator",
+                    "additional_operator"
+                ],
+                "physical_states": [
+                ],
+                "operators": [
+                    "wall_response"
+                ],
+                "implementation_revision": "v96.1",
+                "claim_boundary": "The v96 runtime closes a candidate-bound reduced finite-volume perturbation model through capability-routed region, interface, and boundary providers. Closure and numerical verification do not establish experimental validation, engineering readiness, or device feasibility.",
+                "source_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "source_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "target_spaces": [
+                    "FV0_volume",
+                    "FV0_surface",
+                    "FV0_line",
+                    "scalar_0d"
+                ],
+                "provider_key": "wall_response_provider_v96",
+                "target_dimensions": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        ],
+        "routing_unit": "single_declared_obligation",
+        "provider_count": 20
+    },
+    "schema_version": "1.0.0"
+}

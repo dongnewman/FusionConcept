@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/protocol_seal_v92.schema.json",
+  "title": "FusionConceptAI V92 protocol seal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol_id", "seal_id", "sealed_at_utc", "sealed_before_any_v92_high_fidelity_result_was_generated_or_read", "manifest_hashes_sha256", "seal_material_order", "seal_material_format", "seal_material_sha256", "amendment_policy", "v92_result_namespace", "high_fidelity_result_count_at_seal"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v92-hifi-closure-20260828"},
+    "seal_id": {"type": "string", "minLength": 1},
+    "sealed_at_utc": {"type": "string", "format": "date-time"},
+    "sealed_before_any_v92_high_fidelity_result_was_generated_or_read": {"const": true},
+    "manifest_hashes_sha256": {"type": "object", "minProperties": 5, "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "seal_material_order": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"type": "string"}},
+    "seal_material_format": {"type": "string", "minLength": 1},
+    "seal_material_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "amendment_policy": {"type": "string", "minLength": 1},
+    "v92_result_namespace": {"type": "string", "minLength": 1},
+    "high_fidelity_result_count_at_seal": {"const": 0}
+  }
+}

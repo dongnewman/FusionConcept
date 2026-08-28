@@ -1,0 +1,417 @@
+{
+    "reference_results": [
+        {
+            "graph_hash": "f4358710c5a7e5c239d1b5b094a8a6e6e27b9d6e978fcf04df2c36320bdc7d64",
+            "screen_status": "unsupported",
+            "promotion_eligible": false,
+            "experimental_validation": "unknown",
+            "physical_conclusion_expanded": false,
+            "source_role": "reference_control",
+            "gates": [
+                {
+                    "gate_id": "graph_compile",
+                    "status": "pass",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": null,
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "whole_graph_provider_closure",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "provider_unavailable:additional:balance::iter_core::particle_inventory:1",
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "physical_state_solve",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "whole_graph_solve_not_available",
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "numerical_vvuq",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "solve_precondition_not_met",
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "validation_vvuq",
+                    "status": "not_applicable",
+                    "physical_failure": false,
+                    "applicable": false,
+                    "reason": "declared_not_applicable",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "equilibrium",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "beta",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "net_power",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "stability",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "wall_load",
+                    "status": "not_applicable",
+                    "physical_failure": false,
+                    "applicable": false,
+                    "reason": "declared_not_applicable",
+                    "trusted_known_positive": false
+                }
+            ],
+            "cohorts": [
+                "v95_unified"
+            ],
+            "stage_order": [
+                "graph_compile",
+                "graph_assembly"
+            ],
+            "whole_graph_closed": false,
+            "subject_key": "iter_inductive_baseline_design_v1",
+            "basis_direct_proxy_credit": false,
+            "execution_hash": "4951d18cb6058dbc9129479b6a92323f2d7568da3261c5459283469755255344",
+            "validation_survivor": false,
+            "numerical_survivor": false,
+            "partial_subgraph_credit": false,
+            "source_payload_hash": "ee6002be8469ba9b77c93232cd0101deab02cf92ebf68e7f40b47f922fc58e3b",
+            "blockers": [
+                "provider_unavailable:additional:balance::iter_core::particle_inventory:1",
+                "provider_unavailable:additional:balance::iter_core::particle_inventory:2",
+                "provider_unavailable:additional:balance::iter_core::thermal_energy:1",
+                "provider_unavailable:additional:balance::iter_core::thermal_energy:2",
+                "provider_unavailable:equation:balance::iter_core::magnetic_flux",
+                "provider_unavailable:equation:balance::iter_core::particle_inventory",
+                "provider_unavailable:equation:balance::iter_core::plasma_current",
+                "provider_unavailable:equation:balance::iter_core::thermal_energy"
+            ],
+            "novelty_credit_allowed": false,
+            "reference_false_negative": true,
+            "device_feasibility": "not_claimed"
+        },
+        {
+            "graph_hash": "e0d410a5dfb86356a79ada2144cfe86a53e844668c6157a343c16fa9ba48c270",
+            "screen_status": "unsupported",
+            "promotion_eligible": false,
+            "experimental_validation": "unknown",
+            "physical_conclusion_expanded": false,
+            "source_role": "reference_control",
+            "gates": [
+                {
+                    "gate_id": "graph_compile",
+                    "status": "pass",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": null,
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "whole_graph_provider_closure",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "provider_unavailable:additional:balance::c2w_frc_core::particle_inventory:1",
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "physical_state_solve",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "whole_graph_solve_not_available",
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "numerical_vvuq",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "solve_precondition_not_met",
+                    "trusted_known_positive": true
+                },
+                {
+                    "gate_id": "validation_vvuq",
+                    "status": "unknown",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "candidate_bound_validation_contract_not_completed",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "equilibrium",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "beta",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "net_power",
+                    "status": "not_applicable",
+                    "physical_failure": false,
+                    "applicable": false,
+                    "reason": "declared_not_applicable",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "stability",
+                    "status": "unsupported",
+                    "physical_failure": false,
+                    "applicable": true,
+                    "reason": "no_whole_graph_solve_derived_metric",
+                    "trusted_known_positive": false
+                },
+                {
+                    "gate_id": "wall_load",
+                    "status": "not_applicable",
+                    "physical_failure": false,
+                    "applicable": false,
+                    "reason": "declared_not_applicable",
+                    "trusted_known_positive": false
+                }
+            ],
+            "cohorts": [
+                "v95_unified"
+            ],
+            "stage_order": [
+                "graph_compile",
+                "graph_assembly"
+            ],
+            "whole_graph_closed": false,
+            "subject_key": "c2w_enhanced_performance_experiment_v1",
+            "basis_direct_proxy_credit": false,
+            "execution_hash": "ce52e84aa64e533ec5362ea213df0ffc8352dce3b022dadf2da1c19ea4dcf791",
+            "validation_survivor": false,
+            "numerical_survivor": false,
+            "partial_subgraph_credit": false,
+            "source_payload_hash": "ac71f5224764ea7f0068c757fc5da51e9be03f92f1fdec9d13d6bda1bad66a07",
+            "blockers": [
+                "provider_unavailable:additional:balance::c2w_frc_core::particle_inventory:1",
+                "provider_unavailable:additional:balance::c2w_frc_core::thermal_energy:1",
+                "provider_unavailable:equation:balance::c2w_frc_core::magnetic_flux",
+                "provider_unavailable:equation:balance::c2w_frc_core::particle_inventory",
+                "provider_unavailable:equation:balance::c2w_frc_core::plasma_current",
+                "provider_unavailable:equation:balance::c2w_frc_core::thermal_energy"
+            ],
+            "novelty_credit_allowed": false,
+            "reference_false_negative": true,
+            "device_feasibility": "not_claimed"
+        }
+    ],
+    "physical_conclusion_expanded": false,
+    "software_controls_status": "pass",
+    "before_after": {
+        "interpretation": "Historical proxy survivors were withdrawn from promotion. Current unsupported results are capability/closure findings, not physical rejection.",
+        "after": {
+            "promotion_eligible": 0,
+            "classification": {
+                "unsupported": 417
+            },
+            "validation_survivors": 0,
+            "numerical_survivors": 0,
+            "generated_candidates": 417,
+            "unified_reference_controls": 2,
+            "closure_246_retested_in_same_channel": 246
+        },
+        "before": {
+            "v91_proxy_hard_gate_survivors": 417,
+            "v93_whole_system_solves": 0,
+            "v92_realization_closure_pass": 246
+        }
+    },
+    "acceptance_hash": "a5c7f57e659e7c3f5cbcda6a08244c59447267c2bc6750b528b2e191e7e01c7e",
+    "closure_246_retest_count": 246,
+    "execution_order": [
+        "reference_controls",
+        "generated_candidates"
+    ],
+    "known_positive_recall": {
+        "false_negatives": [
+            {
+                "blockers": [
+                    "provider_unavailable:additional:balance::iter_core::particle_inventory:1",
+                    "provider_unavailable:additional:balance::iter_core::particle_inventory:2",
+                    "provider_unavailable:additional:balance::iter_core::thermal_energy:1",
+                    "provider_unavailable:additional:balance::iter_core::thermal_energy:2",
+                    "provider_unavailable:equation:balance::iter_core::magnetic_flux",
+                    "provider_unavailable:equation:balance::iter_core::particle_inventory",
+                    "provider_unavailable:equation:balance::iter_core::plasma_current",
+                    "provider_unavailable:equation:balance::iter_core::thermal_energy"
+                ],
+                "subject_key": "iter_inductive_baseline_design_v1"
+            },
+            {
+                "blockers": [
+                    "provider_unavailable:additional:balance::c2w_frc_core::particle_inventory:1",
+                    "provider_unavailable:additional:balance::c2w_frc_core::thermal_energy:1",
+                    "provider_unavailable:equation:balance::c2w_frc_core::magnetic_flux",
+                    "provider_unavailable:equation:balance::c2w_frc_core::particle_inventory",
+                    "provider_unavailable:equation:balance::c2w_frc_core::plasma_current",
+                    "provider_unavailable:equation:balance::c2w_frc_core::thermal_energy"
+                ],
+                "subject_key": "c2w_enhanced_performance_experiment_v1"
+            }
+        ],
+        "passed": 0,
+        "total": 2,
+        "rate": 0,
+        "false_negative_count": 2
+    },
+    "protocol_id": "fusionconceptai-v95-unified-reference-candidate-filter-20260828",
+    "reference_control_count": 2,
+    "gate_blockers": {
+        "net_power": {
+            "no_whole_graph_solve_derived_metric": 1
+        },
+        "numerical_vvuq": {
+            "solve_precondition_not_met": 419
+        },
+        "wall_load": {
+            "no_whole_graph_solve_derived_metric": 417
+        },
+        "equilibrium": {
+            "no_whole_graph_solve_derived_metric": 419
+        },
+        "stability": {
+            "no_whole_graph_solve_derived_metric": 419
+        },
+        "validation_vvuq": {
+            "candidate_bound_validation_contract_not_completed": 418
+        },
+        "physical_state_solve": {
+            "whole_graph_solve_not_available": 419
+        },
+        "whole_graph_provider_closure": {
+            "provider_unavailable:additional:balance::iter_core::particle_inventory:1": 1,
+            "provider_unavailable:additional:balance::c2w_frc_core::particle_inventory:1": 1,
+            "assembly_contract_error:ArgumentError: coordinate-changing interface requires an explicit transfer provider": 307,
+            "assembly_contract_error:ArgumentError: mixed-dimensional interface requires an explicit transfer provider": 110
+        },
+        "beta": {
+            "no_whole_graph_solve_derived_metric": 419
+        }
+    },
+    "candidate_status_histogram": {
+        "unsupported": 417
+    },
+    "provider_registry_hash": "db9faeb1a71104d55a73f2593be9b3c5e6c983896c1f0ebec9bb3142b85ec39b",
+    "status": "fail",
+    "controls": {
+        "reference_first": {
+            "status": "pass"
+        },
+        "core_anti_specialization": {
+            "hits": [
+            ],
+            "status": "pass",
+            "routing_inputs": [
+                "state",
+                "operator",
+                "interface",
+                "function_space",
+                "dimension",
+                "coordinate"
+            ],
+            "scan_scope": [
+                "unified_filter_core_v95.jl"
+            ]
+        },
+        "runtime_negative_and_invariance_controls": {
+            "strict_stage_order": {
+                "status": "pass",
+                "observed": [
+                    "graph_compile",
+                    "graph_assembly",
+                    "solve",
+                    "numerical_vvuq",
+                    "validation_vvuq"
+                ]
+            },
+            "status": "pass",
+            "basis_metric_firewall": {
+                "status": "pass",
+                "basis_direct_proxy_credit": false
+            },
+            "partial_closure": {
+                "status": "pass",
+                "partial_subgraph_credit": false
+            },
+            "unseen_topology": {
+                "status": "pass",
+                "physical_credit": false
+            },
+            "basis_erasure_invariance": {
+                "basis_passed_to_core": false,
+                "status": "pass"
+            },
+            "missing_provider": {
+                "status": "pass",
+                "solver_executed": false
+            },
+            "label_id_role_and_order_invariance": {
+                "declaration_order_permutation": true,
+                "role_passed_to_core": false,
+                "candidate_identity_erasure": true,
+                "status": "pass",
+                "reference_identity_erasure": true
+            }
+        },
+        "sealed_v91_v94_inputs": {
+            "status": "pass",
+            "existing_candidate_data_write_count": 0,
+            "changed": [
+            ],
+            "sealed_input_count": 8
+        }
+    },
+    "claim_boundary": "This acceptance diagnoses the selector and its currently registered capabilities. Unsupported or unknown candidates are not physical failures; reference regression, numerical VVUQ, and published ranges do not establish experimental validation or device feasibility.",
+    "generated_candidate_count": 417,
+    "selector_acceptance": "blocked_reference_control_false_negative",
+    "schema_version": "1.0.0",
+    "conclusions": {
+        "generated_candidates_numerically_failed": 0,
+        "generated_candidates_unsupported": 417,
+        "generated_candidates_physically_failed": 0,
+        "experimental_validation": "not_established",
+        "device_feasibility": "not_claimed",
+        "physical_device_passed_vvuq": false,
+        "generated_candidates_unknown": 0
+    }
+}

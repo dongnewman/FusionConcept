@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "equation_manifest_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "slice_id": "axisymmetric_radial_plasma_vacuum_wall_static_equilibrium_v1",
+  "coordinates": {"kind": "axisymmetric_cylindrical_radial_reduction", "coordinate": "r", "units": "m", "validity": "declared zero axial and azimuthal variation with circular nested flux surfaces"},
+  "regions": ["plasma", "vacuum", "wall"],
+  "states": [
+    {"state_id": "poloidal_flux", "symbol": "psi", "units": "Wb rad^-1", "space": "continuous_piecewise_linear_H1"},
+    {"state_id": "radial_flux_gradient", "symbol": "q", "units": "Wb m^-2 rad^-1", "space": "piecewise_constant_mixed_flux"},
+    {"state_id": "pressure", "symbol": "p", "units": "Pa", "space": "flux_function"}
+  ],
+  "governing_residuals": [
+    {"equation_id": "mixed_flux_constitutive", "region": "plasma_or_vacuum", "residual": "dpsi_dr-r*q", "units": "Wb m^-1 rad^-1", "conserves": ["magnetic_flux"]},
+    {"equation_id": "grad_shafranov_radial_balance", "region": "plasma", "residual": "r*dq_dr+mu0*r^2*dp_dpsi+F_dF_dpsi", "units": "Wb m^-2 rad^-1", "conserves": ["force_balance", "electric_current"]},
+    {"equation_id": "vacuum_flux_balance", "region": "vacuum", "residual": "r*dq_dr", "units": "Wb m^-2 rad^-1", "conserves": ["magnetic_flux", "electric_current"]},
+    {"equation_id": "perfectly_conducting_wall_boundary", "region": "wall", "residual": "psi(r_wall)-psi_wall", "units": "Wb rad^-1", "conserves": ["magnetic_flux"]}
+  ],
+  "derived_fields": ["B_z=q", "J_phi=-(r*dq_dr)/(mu0*r)", "force_residual=J_cross_B-grad_p"],
+  "required_candidate_parameters": ["plasma_radius_m", "wall_radius_m", "psi_wall_wb_per_rad", "dp_dpsi_pa_per_wb_per_rad", "F_dF_dpsi_t2m2_per_wb_per_rad"],
+  "forbidden_projection": ["three_dimensional_geometry", "open_loss_or_terminal_region", "coil_or_wall_dynamic_state", "anisotropy", "flow", "extended_mhd", "transport_or_source_sink_equations"],
+  "claim_boundary": "This is a real but narrow axisymmetric radial equilibrium model. It is not a general mixed-topology or three-dimensional equilibrium solver."
+}

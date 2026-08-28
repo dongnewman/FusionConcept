@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/capability_budget_policy_v1.schema.json",
+  "title": "CapabilityBudgetPolicyV1",
+  "type": "object",
+  "required": ["schema_version", "minimum_initial_exploration_per_cell", "maximum_stage_requests_per_cell", "maximum_stage_requests_per_stratum", "maximum_exceptions_per_cell", "maximum_basis_upgrades_per_cell", "cache_hits_consume_solver_budget", "parallel_completion_order_affects_selection", "retroactive_feasibility_credit", "budget_policy_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "minimum_initial_exploration_per_cell": {"type": "integer", "minimum": 1},
+    "maximum_stage_requests_per_cell": {"$ref": "#/$defs/stageBudgets"},
+    "maximum_stage_requests_per_stratum": {"$ref": "#/$defs/stageBudgets"},
+    "maximum_exceptions_per_cell": {"type": "integer", "minimum": 0},
+    "maximum_basis_upgrades_per_cell": {"type": "integer", "minimum": 0},
+    "cache_hits_consume_solver_budget": {"const": false},
+    "parallel_completion_order_affects_selection": {"const": false},
+    "retroactive_feasibility_credit": {"const": false},
+    "budget_policy_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "stageBudgets": {
+      "type": "object",
+      "required": ["finite_filament_field", "poincare_32", "poincare_64", "poincare_128", "open_field_end_loss", "open_field_finite_pressure_capability", "finite_pressure_equilibrium", "sampled_ideal_mhd_stability"],
+      "additionalProperties": false,
+      "properties": {
+        "finite_filament_field": {"type": "integer", "minimum": 1},
+        "poincare_32": {"type": "integer", "minimum": 1},
+        "poincare_64": {"type": "integer", "minimum": 1},
+        "poincare_128": {"type": "integer", "minimum": 1},
+        "open_field_end_loss": {"type": "integer", "minimum": 1},
+        "open_field_finite_pressure_capability": {"type": "integer", "minimum": 1},
+        "finite_pressure_equilibrium": {"type": "integer", "minimum": 1},
+        "sampled_ideal_mhd_stability": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

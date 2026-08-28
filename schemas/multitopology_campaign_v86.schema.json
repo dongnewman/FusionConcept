@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/multitopology_campaign_v86.schema.json",
+  "title": "MultitopologyCampaignV86",
+  "type": "object",
+  "required": ["schema_version", "specification", "requests", "campaign_hash", "claim_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "specification": {
+      "type": "object",
+      "required": ["raw_topology_count", "unique_structure_count", "compile_pass_unique_structure_count", "request_count", "topologies", "request_hashes", "capability_cell_count", "budget_stratum_count", "fair_schedule_request_indices", "fairness_policy", "seed_streams_independent", "isomorphism_dedup_before_variants"]
+    },
+    "requests": {
+      "type": "array",
+      "items": {"$ref": "candidate_solve_request_v86.schema.json"}
+    },
+    "campaign_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minimality_scope_v1.schema.json",
+  "title": "MinimalityScopeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "grammar_hash", "structure_hash", "evidence_level", "hard_gate_ids", "complexity_objectives", "included_component_kinds", "excluded_component_kinds", "fidelity_ladder", "claim_boundary", "scope_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "grammar_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "structure_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "evidence_level": {"type": "string"},
+    "hard_gate_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "complexity_objectives": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["component_count", "power_supply_count", "conductor_length_m", "maximum_curvature_m_inv", "support_mass_kg", "control_complexity"]}},
+    "included_component_kinds": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "excluded_component_kinds": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "fidelity_ladder": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"type": "string"}},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "scope_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

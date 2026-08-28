@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/multiregion_residual_plan_v89.schema.json",
+  "title": "MultiRegionResidualPlanV89",
+  "type": "object",
+  "required": ["schema_version", "v68_contract_semantics", "candidate_hash", "solver_input_hash", "state_layout", "residual_blocks", "coupling_contracts", "target_state", "plan_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "v68_contract_semantics": {"const": "one_governing_plus_additive_multiregion_extension_v89"},
+    "candidate_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "solver_input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "state_layout": {"type": "array", "minItems": 1},
+    "residual_blocks": {"type": "array", "minItems": 1},
+    "coupling_contracts": {"type": "array"},
+    "target_state": {"type": "object"},
+    "plan_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

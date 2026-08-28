@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "verification_validation_split_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "order": ["analytic_manufactured_verification", "candidate_equilibrium", "candidate_numerical_vvuq", "candidate_validation_vvuq"],
+  "manufactured_verification_candidate_credit": false,
+  "numerical_vvuq_requires_candidate_equilibrium_pass": true,
+  "validation_vvuq_requires_numerical_vvuq_pass": true,
+  "validation_inputs_required": ["actual_run_or_shot_id", "diagnostic", "calibration", "experimental_uncertainty", "boundary_conditions", "initial_conditions", "file_hash", "parameter_uncertainty", "model_discrepancy", "candidate_applicability"],
+  "unavailable_validation_data_status": "unknown_validation_domain",
+  "proxy_or_published_range_substitution_forbidden": true
+}

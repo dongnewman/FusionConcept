@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "multiregion_equilibrium_result_v93.schema.json",
+  "title": "MultiRegionEquilibriumResultV93",
+  "type": "object",
+  "required": ["schema_version", "protocol_id", "request_hash", "status", "solver_executed", "mesh_results", "branch_audit", "residual_audit", "restart_replay", "resource_usage", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v93-family-neutral-multiregion-20260828"},
+    "request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["fail_physical_model", "fail_invalid_geometry", "fail_boundary_or_interface_inconsistency", "fail_no_equilibrium_under_declared_model", "fail_numerical_convergence", "unknown_multiple_equilibrium_branches", "unknown_solver_disagreement", "unknown_validation_domain", "unsupported_operator_or_backend", "pass"]},
+    "first_blocker": {"type": ["string", "null"]},
+    "solver_executed": {"type": "boolean"},
+    "mesh_results": {"type": "array"},
+    "branch_audit": {"type": "object"},
+    "residual_audit": {"type": "object"},
+    "restart_replay": {"type": "object"},
+    "resource_usage": {"type": "object"},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

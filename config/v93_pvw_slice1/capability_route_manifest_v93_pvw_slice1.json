@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "capability_route_manifest_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "allowed_routing_axes": ["region_types", "coordinate_reduction", "governing_operators", "state_variables", "boundary_conditions", "interface_conditions", "model_validity_domains", "parameter_completeness"],
+  "forbidden_identity_axes": ["candidate_id", "candidate_hash", "family", "device_type", "parent", "known_generated_label", "display_label", "device_name"],
+  "required_exact_contract": {
+    "region_types_subset_of": ["plasma", "vacuum", "wall"],
+    "coordinate_reduction": "axisymmetric_cylindrical_radial_reduction",
+    "governing_operators_subset_of": ["solenoidal_magnetic_constraint", "ampere_field_source_consistency", "declared_force_balance", "vacuum_field_equations", "perfectly_conducting_wall_boundary"],
+    "state_variables_subset_of": ["poloidal_flux", "radial_flux_gradient", "pressure"],
+    "boundary_conditions_subset_of": ["axis_regular", "plasma_vacuum_trace", "perfectly_conducting_wall"],
+    "interface_conditions_exact": ["poloidal_flux_continuity", "tangential_magnetic_field_jump_surface_current"],
+    "all_required_parameters_attested": true,
+    "all_model_validity_conditions_attested": true
+  },
+  "extra_region_operator_state_or_unknown_parameter_status": "unsupported_operator_or_backend",
+  "subproblem_projection_for_candidate_credit_forbidden": true
+}

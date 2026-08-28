@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/candidate_solve_request_v86.schema.json",
+  "title": "CandidateSolveRequestV86",
+  "type": "object",
+  "required": ["schema_version", "request_index", "structure_seed", "topology_hash", "structure_hash", "compilation_hash", "grammar_hash", "physical_variant", "operating_variant", "control_variant", "route", "basis_level", "base_coil_count", "initial_design", "capability_signature", "request_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "request_index": {"type": "integer", "minimum": 1},
+    "structure_seed": {"type": "integer", "minimum": 1},
+    "topology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "structure_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "compilation_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "grammar_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "physical_variant": {"type": "integer", "minimum": 1},
+    "operating_variant": {"type": "integer", "minimum": 1},
+    "control_variant": {"type": "integer", "minimum": 1},
+    "route": {"enum": ["closed/mixed", "open/mixed"]},
+    "basis_level": {"type": "integer", "minimum": 0, "maximum": 3},
+    "base_coil_count": {"type": "integer", "minimum": 4},
+    "basis_override": {"type": ["object", "null"]},
+    "initial_design": {"type": "object"},
+    "capability_signature": {
+      "type": "object",
+      "required": ["capability_cell_hash", "budget_stratum_hash", "comparison_scope_hash", "capability_signature_hash", "required_hard_gate_chain", "minimality_eligible", "exclusion_reasons"],
+      "properties": {
+        "capability_cell_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "budget_stratum_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "comparison_scope_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "capability_signature_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

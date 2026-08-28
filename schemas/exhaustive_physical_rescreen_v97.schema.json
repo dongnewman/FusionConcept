@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/exhaustive_physical_rescreen_v97.schema.json",
+  "title": "FusionConceptAI v97 exhaustive physical rescreen acceptance",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "campaign_id",
+    "status",
+    "processed",
+    "grammar_cardinality",
+    "grammar_exhaustive",
+    "unique_nonisomorphic_topologies",
+    "closure_funnel",
+    "unique_closed_input_count",
+    "high_cost_unique_status",
+    "final_expanded_status_histogram",
+    "all_statuses_explicit",
+    "count_conserved",
+    "closed_only_high_cost_execution",
+    "exact_high_cost_input_match",
+    "sentinels_per_shard",
+    "historical_result_fields_read",
+    "historical_gate_metric_consumed",
+    "deduplication_key",
+    "sealed_v91_v96_preservation",
+    "physical_device_passed_complete_vvuq",
+    "physical_conclusion_expanded",
+    "acceptance_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v97-exhaustive-physical-rescreen-20260829"},
+    "campaign_id": {"const": "v97_exhaustive_physical_rescreen_1048576_20260829"},
+    "status": {"enum": ["pass", "fail"]},
+    "processed": {"const": 1048576},
+    "grammar_cardinality": {"const": 1048576},
+    "grammar_exhaustive": {"const": true},
+    "unique_nonisomorphic_topologies": {"const": 1048576},
+    "closure_funnel": {"$ref": "#/$defs/statusHistogram"},
+    "unique_closed_input_count": {"type": "integer", "minimum": 0},
+    "closed_deduplication_count": {"type": "integer", "minimum": 0},
+    "high_cost_unique_status": {"$ref": "#/$defs/statusHistogram"},
+    "final_expanded_status_histogram": {
+      "type": "object",
+      "required": ["closed", "unsupported", "physical_fail", "numerical_fail", "unknown"],
+      "additionalProperties": false,
+      "properties": {
+        "closed": {"type": "integer", "minimum": 0},
+        "unsupported": {"type": "integer", "minimum": 0},
+        "physical_fail": {"type": "integer", "minimum": 0},
+        "numerical_fail": {"type": "integer", "minimum": 0},
+        "unknown": {"type": "integer", "minimum": 0}
+      }
+    },
+    "all_statuses_explicit": {"const": true},
+    "count_conserved": {"const": true},
+    "closed_only_high_cost_execution": {"const": true},
+    "exact_high_cost_input_match": {"const": true},
+    "sentinels_per_shard": {"const": true},
+    "historical_result_fields_read": {
+      "type": "array", "prefixItems": [{"const": "request_index"}], "items": false
+    },
+    "historical_gate_metric_consumed": {"const": false},
+    "deduplication_key": {
+      "type": "array",
+      "prefixItems": [{"const": "graph_hash"}, {"const": "solver_input_hash"}],
+      "items": false
+    },
+    "sealed_v91_v96_preservation": {
+      "type": "object", "required": ["status", "changed", "sealed_artifact_count"],
+      "properties": {"status": {"const": "pass"}, "changed": {"maxItems": 0}}
+    },
+    "physical_device_passed_complete_vvuq": {"const": false},
+    "physical_conclusion_expanded": {"const": false},
+    "acceptance_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "statusHistogram": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    }
+  }
+}

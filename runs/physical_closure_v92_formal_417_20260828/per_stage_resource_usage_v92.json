@@ -1,0 +1,36 @@
+{
+    "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+    "resource_manifest_hash": "2431d5216abd6e9f7276094e52f32b2084cbaaba379e49dc7cd2ed9a1bbf0ac7",
+    "stages": {
+        "vmex_3d_control": {
+            "solver_executions": 1,
+            "wall_seconds": 16.1255701
+        },
+        "freegs_verification_control": {
+            "solver_executions": 1,
+            "wall_seconds": 2.8357588
+        },
+        "pilot_route_and_blocked_downstream_replay": {
+            "candidate_count": 229,
+            "threads": 24,
+            "gc_seconds": 0.0410248,
+            "solver_executions": 0,
+            "reason": "all compatible mixed-topology equilibrium backends unsupported",
+            "wall_seconds": 0.9134236,
+            "allocated_bytes": 257159792
+        },
+        "materialized_farthest_candidate_meshes": {
+            "mesh_count": 6,
+            "artifact_bytes": 44677241,
+            "solver_executions": 0
+        },
+        "physical_realization_417_plus_replay": {
+            "threads": 24,
+            "wall_seconds": 6.6318609,
+            "allocated_bytes": 608885568,
+            "processes": 1
+        }
+    },
+    "claim_boundary": "Resource use for unsupported solver stages records routing and fail-closed evidence processing, not high-fidelity physics execution.",
+    "schema_version": "1.0.0"
+}

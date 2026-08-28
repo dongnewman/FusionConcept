@@ -1,0 +1,59 @@
+{
+    "closure_funnel": {
+        "unsupported": 455444,
+        "closed": 593132
+    },
+    "acceptance_hash": "da62c2468a1c49394619b6fc9204c79cb4bbced7f202e6f78455c9424def97da",
+    "deduplication_key": [
+        "graph_hash",
+        "solver_input_hash"
+    ],
+    "protocol_id": "fusionconceptai-v97-exhaustive-physical-rescreen-20260829",
+    "grammar_cardinality": 1048576,
+    "unique_nonisomorphic_topologies": 1048576,
+    "closed_deduplication_count": 0,
+    "status": "pass",
+    "high_cost_unique_status": {
+        "unknown": 593132
+    },
+    "sealed_v91_v96_preservation": {
+        "status": "pass",
+        "changed": [
+        ],
+        "sealed_artifact_count": 7
+    },
+    "claim_boundary": "The v97 campaign is an exhaustive, resume-safe execution over the complete declared 20-bit v91 grammar. Closure rows and high-cost rows remain separate funnel layers; deduplication never promotes a representative result beyond identical graph and solver inputs, and missing external validation remains unknown.",
+    "exact_high_cost_input_match": true,
+    "physical_device_passed_complete_vvuq": false,
+    "external_validation": "not_established",
+    "historical_result_fields_read": [
+        "request_index"
+    ],
+    "final_expanded_status_histogram": {
+        "numerical_fail": 0,
+        "unsupported": 455444,
+        "unknown": 593132,
+        "closed": 0,
+        "physical_fail": 0
+    },
+    "physical_device_feasibility": "not_claimed",
+    "artifacts": {
+        "blocker_statistics": "blocker_statistics.json",
+        "new_survivors": "new_survivors.jsonl",
+        "closure_rows": "closure_shard_*.jsonl",
+        "unique_closed_inputs": "unique_closed_inputs.jsonl",
+        "funnel": "full_funnel.json"
+    },
+    "campaign_id": "v97_exhaustive_physical_rescreen_1048576_20260829",
+    "physical_conclusion_expanded": false,
+    "unique_closed_input_count": 593132,
+    "closed_only_high_cost_execution": true,
+    "sentinel_shard_count": 58,
+    "historical_gate_metric_consumed": false,
+    "count_conserved": true,
+    "grammar_exhaustive": true,
+    "all_statuses_explicit": true,
+    "schema_version": "1.0.0",
+    "processed": 1048576,
+    "sentinels_per_shard": true
+}

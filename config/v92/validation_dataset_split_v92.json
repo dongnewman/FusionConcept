@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+  "manifest_id": "validation_dataset_split_v92",
+  "sealed_at_utc": "2026-08-27T16:42:05Z",
+  "mutable": false,
+  "split_seed": 920006,
+  "leakage_policy": "Calibration and holdout membership is immutable before candidate high-fidelity results. A shot, run, diagnostic time window, or derived observable may appear in only one split for a decision-driving module.",
+  "allocation_rule": {
+    "unit": "experiment_facility_plus_shot_or_run_id_plus_operating_point",
+    "canonical_key": "sha256(facility_id|shot_or_run_id|operating_point_id|raw_data_hash)",
+    "calibration_buckets": [0, 1, 2, 3, 4, 5],
+    "holdout_buckets": [6, 7, 8, 9],
+    "bucket_expression": "first_64_bits(canonical_key) mod 10",
+    "stratification": ["decision_driving_module", "declared_operator", "boundary_regime", "dimensionless_parameter_cell", "diagnostic_class"],
+    "minimum_holdout_operating_points_per_module": 3,
+    "minimum_independent_diagnostic_classes_per_module": 2
+  },
+  "pre_registered_dataset_roles": [
+    {"dataset_role": "axisymmetric_equilibrium_experimental_control", "required_content": ["actual_experimental_shot_or_run_id", "magnetic_diagnostics", "pressure_or_kinetic_profile_diagnostic", "calibration_records", "measurement_uncertainty", "boundary_and_initial_conditions", "raw_or_processed_data_hash"], "inventory_at_seal": "not_attested", "design_point_only_allowed": false},
+    {"dataset_role": "three_dimensional_equilibrium_experimental_control", "required_content": ["actual_experimental_shot_or_run_id", "magnetic_surface_or_field_diagnostic", "pressure_or_kinetic_profile_diagnostic", "calibration_records", "measurement_uncertainty", "boundary_and_initial_conditions", "data_hash"], "inventory_at_seal": "not_attested", "design_point_only_allowed": false},
+    {"dataset_role": "open_field_experimental_control", "control_id": "C-2W", "required_content": ["actual_C-2W_shot_or_run_ids", "at_least_three_holdout_operating_points", "at_least_two_independent_diagnostic_classes", "diagnostic_calibration", "experimental_uncertainty", "boundary_and_initial_conditions", "raw_or_processed_measurement_hash"], "inventory_at_seal": "not_attested_machine_readable_measurements", "published_ranges_only_allowed": false},
+    {"dataset_role": "orbit_and_fast_particle_validation", "required_content": ["actual_particle_or_neutron_or_loss_diagnostic_measurements", "shot_or_run_ids", "birth_distribution_or_source_characterization", "wall_and_field_configuration", "uncertainties", "data_hash"], "inventory_at_seal": "not_attested", "published_ranges_only_allowed": false},
+    {"dataset_role": "stability_validation", "required_content": ["actual_mode_onset_or_growth_measurements", "shot_or_run_ids", "at_least_two_diagnostic_classes", "profile_and_equilibrium_reconstruction_inputs", "uncertainties", "data_hash"], "inventory_at_seal": "not_attested", "published_ranges_only_allowed": false}
+  ],
+  "module_validation_requirements": {
+    "decision_driving_modules": ["equilibrium", "field_line_orbit", "ideal_stability", "resistive_stability", "kinetic_fast_particle", "microinstability", "nonlinear_stability", "controller_fault_coupling"],
+    "uncertainty_components": ["experimental", "numerical", "parameter", "model_discrepancy"],
+    "candidate_applicability_coordinates": ["declared_operators", "state_variables", "boundary_conditions", "field_semantics", "beta", "collisionality", "normalized_gyroradius", "mach_number", "temperature_ratio", "fast_particle_fraction", "scale_separation"],
+    "out_of_domain_without_validated_discrepancy_bound": "unknown"
+  },
+  "verification_controls": {
+    "manufactured_analytic_and_benchmark_split": "verification_only",
+    "validation_credit": false,
+    "ITER_design_point_role": "design_regression_or_verification_only",
+    "ITER_experimental_validation_credit": false
+  },
+  "missing_data_policy": "A missing exact shot/run inventory, diagnostic provenance, calibration, uncertainty, or data hash forces candidate_bound_validation_vvuq=unknown; it must not be substituted with a published interval."
+}

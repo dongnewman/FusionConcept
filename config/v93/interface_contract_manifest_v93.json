@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "manifest_id": "interface_contract_manifest_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "explicit_interface_objects_required": true,
+  "adjacency_inference_forbidden": true,
+  "coupling_methods": ["mixed_conforming_fem", "mortar", "lagrange_multiplier", "verified_nitsche"],
+  "penalty_only_conservation_forbidden": true,
+  "conditions": [
+    {"condition_id": "normal_magnetic_flux_continuity", "residual": "n dot (B_plus-B_minus)", "units": "T", "conserves": ["magnetic_flux"], "multiplier_space": "mortar_dual_scalar"},
+    {"condition_id": "tangential_field_jump_surface_current", "residual": "n cross (H_plus-H_minus)-K_surface", "units": "A m^-1", "conserves": ["electric_current"], "multiplier_space": "mortar_dual_tangential"},
+    {"condition_id": "particle_flux_balance", "residual": "n dot (Gamma_plus-Gamma_minus)-S_interface", "units": "m^-2 s^-1", "conserves": ["particles_by_species"], "multiplier_space": "mortar_dual_scalar"},
+    {"condition_id": "energy_flux_balance", "residual": "n dot (q_plus+hGamma_plus-q_minus-hGamma_minus)-Q_interface", "units": "W m^-2", "conserves": ["energy"], "multiplier_space": "mortar_dual_scalar"},
+    {"condition_id": "current_continuity", "residual": "n dot (J_plus-J_minus)-S_charge_interface", "units": "A m^-2", "conserves": ["electric_charge"], "multiplier_space": "mortar_dual_scalar"},
+    {"condition_id": "total_traction_balance", "residual": "n dot (T_total_plus-T_total_minus)-t_external", "units": "Pa", "conserves": ["momentum"], "multiplier_space": "mortar_dual_vector"},
+    {"condition_id": "moving_boundary_geometry_compatibility", "residual": "X_plus-X_minus and declared normal_velocity_compatibility", "units": "m_and_m_s^-1", "conserves": ["geometry_compatibility"], "multiplier_space": "mortar_dual_vector"},
+    {"condition_id": "source_sink_terminal_condition", "residual": "declared_terminal_flux-target_flux", "units": "declared", "conserves": ["declared_inventory"], "multiplier_space": "declared_dual"}
+  ],
+  "solver_contract": {
+    "monolithic_coupled_residual_required": true,
+    "domain_decomposed_nonlinear_solve_required": true,
+    "domain_decomposition_is_algorithm_only": true,
+    "final_monolithic_residual_reaudit_required": true,
+    "interface_iteration_convergence_grants_global_pass": false,
+    "interface_geometry_and_quadrature_hashes_required": true
+  }
+}

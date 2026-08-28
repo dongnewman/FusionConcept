@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "candidate_realization_grammar_v2.schema.json",
+  "title": "CandidateRealizationGrammarV2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "structure_hash", "topology_contract_id", "component_rules", "allowed_routes", "grammar_hash"],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "structure_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "topology_contract_id": {"type": "string", "minLength": 1},
+    "allowed_routes": {"type": "array", "uniqueItems": true, "items": {"enum": ["closed/mixed", "open/mixed"]}},
+    "component_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component_kind", "required", "minimum_count", "maximum_count", "allowed_basis_families"],
+        "properties": {
+          "component_kind": {"type": "string", "minLength": 1},
+          "required": {"type": "boolean"},
+          "minimum_count": {"type": "integer", "minimum": 0},
+          "maximum_count": {"type": "integer", "minimum": 0},
+          "allowed_basis_families": {"type": "array", "uniqueItems": true, "items": {"enum": ["periodic_fourier_coil", "periodic_bspline_coil", "current_potential", "plasma_boundary", "actuator_timing", "controller_modal"]}}
+        }
+      }
+    },
+    "grammar_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

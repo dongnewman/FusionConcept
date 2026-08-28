@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pass",
+  "command": "julia --project=. test/runtests.jl",
+  "working_directory": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai",
+  "started_at_local": "2026-08-27T22:16:55+08:00",
+  "finished_at_local": "2026-08-27T23:00:25+08:00",
+  "exit_code": 0,
+  "all_reported_testsets_passed": true,
+  "focused_v91_testset": {
+    "name": "family-neutral million-scale topology campaign v91",
+    "passed_assertions": 28,
+    "total_assertions": 28
+  },
+  "input_integrity": {
+    "test/runtests.jl_sha256": "01f4dc21cad4b158bcc732672795f29abc7a1fb4a1964bd1d1315baba0389f7a",
+    "src/FusionConceptAI.jl_sha256": "6b5656a8e4564807197173b6c074fa755515139338bfb48195dc942f43577f4d",
+    "test/multitopology_search_campaign_v91.jl_sha256": "694bca318e5d7acede6d16a88608a7c2369435b9e0683278b392b7828f6f50b8"
+  },
+  "evidence_note": "The complete command ran in the supervised Codex task terminal and exited successfully after all historical and v91 testset summaries reported pass. This is software regression evidence only."
+}

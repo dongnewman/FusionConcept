@@ -32,22 +32,254 @@ function _v81_result(realization, screen, completeness, conclusion, code,
         POINCARE_FLUX_SURFACE_V81_CLAIM_BOUNDARY, canonical_hash(body))
 end
 
+function _v81_boundary_frame(region, candidate_boundary, position)
+    radial = hypot(position[1], position[2])
+    phi = atan(position[2], position[1])
+    if candidate_boundary === nothing
+        major = Float64(region["major_radius_m"])
+        minor = Float64(region["minor_radius_m"])
+        axis_r = major; axis_z = 0.0; minor_r = minor; minor_z = minor
+        model = "legacy_circular_region_boundary_v1"
+    else
+        boundary = _v71_plain(candidate_boundary)
+        major = Float64(boundary["major_radius_m"])
+        minor_r = Float64(boundary["minor_radius_r_m"])
+        minor_z = Float64(boundary["minor_radius_z_m"])
+        nfp = Int(boundary["field_periods"])
+        axis_r = major + Float64(boundary["helical_axis_r_m"]) *
+            cos(nfp * phi)
+        axis_z = Float64(boundary["helical_axis_z_m"]) * sin(nfp * phi)
+        model = String(get(boundary, "boundary_model",
+            "candidate_periodic_elliptic_boundary_v1"))
+    end
+    delta_r = radial - axis_r; delta_z = Float64(position[3]) - axis_z
+    normalized_r = delta_r / minor_r; normalized_z = delta_z / minor_z
+    return (phi = phi, radial = radial, axis_r = axis_r, axis_z = axis_z,
+        delta_r = delta_r, delta_z = delta_z,
+        minor_radius_m = hypot(delta_r, delta_z),
+        normalized_minor_radius = hypot(normalized_r, normalized_z),
+        theta = atan(normalized_z, normalized_r), boundary_model = model)
+end
+
+function _v81_boundary_start_point(region, candidate_boundary, fraction)
+    if candidate_boundary === nothing
+        return [Float64(region["major_radius_m"]) +
+            Float64(fraction) * Float64(region["minor_radius_m"]), 0.0, 0.0]
+    end
+    boundary = _v71_plain(candidate_boundary)
+    axis_r = Float64(boundary["major_radius_m"]) +
+        Float64(boundary["helical_axis_r_m"])
+    return [axis_r + Float64(fraction) *
+        Float64(boundary["minor_radius_r_m"]), 0.0, 0.0]
+end
+
+function _v81_axis_reference_at(axis_reference, phi)
+    phases = Float64.(axis_reference["phase_rad"])
+    radii = Float64.(axis_reference["radius_m"])
+    heights = Float64.(axis_reference["z_m"])
+    length(phases) >= 2 || throw(ArgumentError(
+        "v81 magnetic-axis reference requires at least two samples"))
+    phase = mod(Float64(phi), 2pi)
+    phase == 0.0 && Float64(phi) > 0.0 && (phase = 2pi)
+    upper = searchsortedfirst(phases, phase)
+    upper <= 1 && return (radius_m = radii[1], z_m = heights[1])
+    upper > length(phases) && return (radius_m = radii[end], z_m = heights[end])
+    lower = upper - 1
+    span = phases[upper] - phases[lower]
+    alpha = span > 0 ? (phase - phases[lower]) / span : 0.0
+    return (radius_m = (1.0 - alpha) * radii[lower] + alpha * radii[upper],
+        z_m = (1.0 - alpha) * heights[lower] + alpha * heights[upper])
+end
+
+function _v81_analysis_frame(region, candidate_boundary, position,
+        axis_reference)
+    boundary_frame = _v81_boundary_frame(region, candidate_boundary, position)
+    axis_reference === nothing && return merge(boundary_frame,
+        (boundary_normalized_minor_radius =
+            boundary_frame.normalized_minor_radius,))
+    axis = _v81_axis_reference_at(axis_reference, boundary_frame.phi)
+    if candidate_boundary === nothing
+        minor_r = Float64(region["minor_radius_m"])
+        minor_z = minor_r
+    else
+        boundary = _v71_plain(candidate_boundary)
+        minor_r = Float64(boundary["minor_radius_r_m"])
+        minor_z = Float64(boundary["minor_radius_z_m"])
+    end
+    delta_r = boundary_frame.radial - axis.radius_m
+    delta_z = Float64(position[3]) - axis.z_m
+    normalized_r = delta_r / minor_r; normalized_z = delta_z / minor_z
+    return merge(boundary_frame, (axis_r = axis.radius_m, axis_z = axis.z_m,
+        delta_r = delta_r, delta_z = delta_z,
+        minor_radius_m = hypot(delta_r, delta_z),
+        normalized_minor_radius = hypot(normalized_r, normalized_z),
+        theta = atan(normalized_z, normalized_r),
+        boundary_normalized_minor_radius =
+            boundary_frame.normalized_minor_radius))
+end
+
+function _v81_trace_axis_reference(realization, cache, start_m;
+        steps_per_turn::Integer = 80, candidate_boundary = nothing)
+    region = _v71_primary_region(realization)
+    major = Float64(region["major_radius_m"])
+    position = Float64.(start_m)
+    first_frame = _v81_boundary_frame(region, candidate_boundary, position)
+    first_field = finite_filament_field_v71(cache, position)
+    toroidal_unit = [-sin(first_frame.phi), cos(first_frame.phi), 0.0]
+    direction_sign = dot(first_field, toroidal_unit) >= 0 ? 1.0 : -1.0
+    step_length = 2pi * major / Int(steps_per_turn)
+    previous_phi = first_frame.phi; accumulated_phi = 0.0
+    phases = Float64[0.0]; radii = Float64[first_frame.radial]
+    heights = Float64[Float64(position[3])]
+    escaped = false; singular = false; completed_steps = 0
+    closure_position = nothing
+    for step_index in 1:4Int(steps_per_turn)
+        next_position = _v73_rk4_field_step(cache, position, step_length,
+            direction_sign)
+        if next_position === nothing
+            singular = true; break
+        end
+        next_boundary = _v81_boundary_frame(region, candidate_boundary,
+            next_position)
+        if next_boundary.normalized_minor_radius > 1.0
+            escaped = true; completed_steps = step_index; break
+        end
+        phi_delta = _v73_angle_delta(next_boundary.phi, previous_phi)
+        prior_phi = accumulated_phi
+        accumulated_phi += phi_delta
+        if phi_delta > 1.0e-12 && accumulated_phi >= 2pi
+            alpha = clamp((2pi - prior_phi) / phi_delta, 0.0, 1.0)
+            crossing = position .+ alpha .* (next_position .- position)
+            crossing_frame = _v81_boundary_frame(region, candidate_boundary,
+                crossing)
+            push!(phases, 2pi); push!(radii, crossing_frame.radial)
+            push!(heights, Float64(crossing[3]))
+            closure_position = crossing; completed_steps = step_index
+            break
+        elseif phi_delta > 1.0e-12
+            push!(phases, accumulated_phi); push!(radii, next_boundary.radial)
+            push!(heights, Float64(next_position[3]))
+        end
+        position = next_position; previous_phi = next_boundary.phi
+        completed_steps = step_index
+    end
+    complete = closure_position !== nothing && !escaped && !singular
+    closure_residual = if complete
+        start_frame = _v81_boundary_frame(region, candidate_boundary, start_m)
+        end_frame = _v81_boundary_frame(region, candidate_boundary,
+            closure_position)
+        if candidate_boundary === nothing
+            minor_r = Float64(region["minor_radius_m"]); minor_z = minor_r
+        else
+            boundary = _v71_plain(candidate_boundary)
+            minor_r = Float64(boundary["minor_radius_r_m"])
+            minor_z = Float64(boundary["minor_radius_z_m"])
+        end
+        hypot((end_frame.radial - start_frame.radial) / minor_r,
+            (Float64(closure_position[3]) - Float64(start_m[3])) / minor_z)
+    else
+        Inf
+    end
+    return Dict{String,Any}(
+        "status" => complete ? "complete" : "incomplete",
+        "start_m" => Float64.(start_m), "phase_rad" => phases,
+        "radius_m" => radii, "z_m" => heights,
+        "closure_position_m" => closure_position,
+        "closure_residual_normalized" => closure_residual,
+        "escaped" => escaped, "field_singular" => singular,
+        "completed_steps" => completed_steps,
+        "steps_per_turn" => Int(steps_per_turn))
+end
+
+function _v81_locate_periodic_magnetic_axis(realization, cache,
+        candidate_boundary; steps_per_turn::Integer = 80,
+        refinement_levels::Integer = 4,
+        maximum_closure_residual::Real = 0.04)
+    region = _v71_primary_region(realization)
+    candidate_boundary === nothing && return Dict{String,Any}(
+        "status" => "not_applicable_legacy_boundary",
+        "axis_reference" => nothing, "candidate_bound" => false)
+    boundary = _v71_plain(candidate_boundary)
+    center = _v81_boundary_start_point(region, boundary, 0.0)
+    minor_r = Float64(boundary["minor_radius_r_m"])
+    minor_z = Float64(boundary["minor_radius_z_m"])
+    best_start = copy(center); best_reference = nothing; best_score = Inf
+    radial_step = 0.20 * minor_r; vertical_step = 0.20 * minor_z
+    evaluation_count = 0; trace_rows = Dict{String,Any}[]
+    for level in 1:Int(refinement_levels)
+        level_best_start = best_start; level_best_reference = best_reference
+        level_best_score = best_score
+        for radial_direction in (-1.0, 0.0, 1.0),
+                vertical_direction in (-1.0, 0.0, 1.0)
+            start = [best_start[1] + radial_direction * radial_step,
+                0.0, best_start[3] + vertical_direction * vertical_step]
+            boundary_frame = _v81_boundary_frame(region, boundary, start)
+            boundary_frame.normalized_minor_radius <= 0.65 || continue
+            reference = _v81_trace_axis_reference(realization, cache, start;
+                steps_per_turn = steps_per_turn,
+                candidate_boundary = boundary)
+            evaluation_count += 1
+            score = Float64(reference["closure_residual_normalized"])
+            push!(trace_rows, Dict{String,Any}(
+                "level" => level, "start_m" => start,
+                "status" => reference["status"],
+                "closure_residual_normalized" =>
+                    isfinite(score) ? score : nothing))
+            if score < level_best_score
+                level_best_score = score; level_best_start = start
+                level_best_reference = reference
+            end
+        end
+        best_start = level_best_start; best_reference = level_best_reference
+        best_score = level_best_score
+        radial_step *= 0.5; vertical_step *= 0.5
+    end
+    located = best_reference !== nothing && isfinite(best_score) &&
+        best_score <= Float64(maximum_closure_residual)
+    body = Dict{String,Any}(
+        "status" => located ? "located" : "not_located",
+        "candidate_bound" => true, "section_phi_rad" => 0.0,
+        "axis_start_m" => located ? best_start : nothing,
+        "closure_residual_normalized" =>
+            isfinite(best_score) ? best_score : nothing,
+        "maximum_closure_residual" => Float64(maximum_closure_residual),
+        "evaluation_count" => evaluation_count,
+        "refinement_levels" => Int(refinement_levels),
+        "steps_per_turn" => Int(steps_per_turn),
+        "axis_reference" => located ? best_reference : nothing,
+        "search_trace" => trace_rows,
+        "feasibility_credit" => false)
+    body["axis_evidence_hash"] = canonical_hash(body)
+    return body
+end
+
+function _v81_axis_start_point(region, candidate_boundary, axis_reference,
+        fraction)
+    axis_reference === nothing && return _v81_boundary_start_point(region,
+        candidate_boundary, fraction)
+    axis = _v81_axis_reference_at(axis_reference, 0.0)
+    outer = _v81_boundary_start_point(region, candidate_boundary, 1.0)
+    return [axis.radius_m + Float64(fraction) * (outer[1] - axis.radius_m),
+        0.0, axis.z_m + Float64(fraction) * (outer[3] - axis.z_m)]
+end
+
 function _v81_trace_to_section(realization::PhysicalDeviceRealizationV71,
         cache::FiniteFilamentFieldCacheV71, start_m;
-        target_toroidal_turns::Integer = 128, steps_per_turn::Integer = 180)
+        target_toroidal_turns::Integer = 128, steps_per_turn::Integer = 180,
+        candidate_boundary = nothing, axis_reference = nothing)
     region = _v71_primary_region(realization)
     region["geometry_class"] == "toroidal_volume_v1" || throw(ArgumentError(
         "v81 Poincare trace requires toroidal geometry"))
     major = Float64(region["major_radius_m"])
-    minor = Float64(region["minor_radius_m"])
     position = Float64.(start_m)
-    first_phi = atan(position[2], position[1])
+    first_frame = _v81_analysis_frame(region, candidate_boundary, position,
+        axis_reference)
+    first_phi = first_frame.phi
     first_field = finite_filament_field_v71(cache, position)
     toroidal_unit = [-sin(first_phi), cos(first_phi), 0.0]
     direction_sign = dot(first_field, toroidal_unit) >= 0 ? 1.0 : -1.0
     previous_phi = first_phi
-    previous_radial = hypot(position[1], position[2])
-    previous_theta = atan(position[3], previous_radial - major)
+    previous_theta = first_frame.theta
     accumulated_phi = 0.0
     accumulated_theta = 0.0
     next_crossing = 2pi
@@ -70,16 +302,17 @@ function _v81_trace_to_section(realization::PhysicalDeviceRealizationV71,
             singular = true
             break
         end
-        next_radial = hypot(next_position[1], next_position[2])
-        next_rho = hypot(next_radial - major, next_position[3])
-        if next_rho > minor
+        next_boundary_frame = _v81_boundary_frame(region, candidate_boundary,
+            next_position)
+        if next_boundary_frame.normalized_minor_radius > 1.0
             escaped = true
             position = next_position
             completed_steps = step_index
             break
         end
-        next_phi = atan(next_position[2], next_position[1])
-        next_theta = atan(next_position[3], next_radial - major)
+        next_frame = _v81_analysis_frame(region, candidate_boundary,
+            next_position, axis_reference)
+        next_phi = next_frame.phi; next_theta = next_frame.theta
         phi_delta = _v73_angle_delta(next_phi, previous_phi)
         theta_delta = _v73_angle_delta(next_theta, previous_theta)
         prior_accumulated_phi = accumulated_phi
@@ -91,17 +324,19 @@ function _v81_trace_to_section(realization::PhysicalDeviceRealizationV71,
                 alpha = clamp((next_crossing - prior_accumulated_phi) /
                     phi_delta, 0.0, 1.0)
                 crossing = position .+ alpha .* (next_position .- position)
-                radial = hypot(crossing[1], crossing[2])
-                rho = hypot(radial - major, crossing[3])
-                theta = atan(crossing[3], radial - major)
+                frame = _v81_analysis_frame(region, candidate_boundary,
+                    crossing, axis_reference)
                 push!(crossings, Dict{String,Any}(
                     "turn_index" => crossing_index,
                     "position_m" => crossing,
-                    "section_x_m" => radial - major,
-                    "section_z_m" => crossing[3],
-                    "minor_radius_m" => rho,
-                    "normalized_minor_radius" => rho / minor,
-                    "poloidal_angle_rad" => theta))
+                    "section_x_m" => frame.delta_r,
+                    "section_z_m" => frame.delta_z,
+                    "minor_radius_m" => frame.minor_radius_m,
+                    "normalized_minor_radius" =>
+                        frame.normalized_minor_radius,
+                    "boundary_normalized_minor_radius" =>
+                        frame.boundary_normalized_minor_radius,
+                    "poloidal_angle_rad" => frame.theta))
                 crossing_index += 1
                 next_crossing = 2pi * crossing_index
             end
@@ -125,6 +360,8 @@ function _v81_trace_to_section(realization::PhysicalDeviceRealizationV71,
         "toroidal_turns" => toroidal_turns,
         "poloidal_turns" => poloidal_turns,
         "rotational_transform" => transform,
+        "boundary_frame_model" => first_frame.boundary_model,
+        "periodic_magnetic_axis_used" => axis_reference !== nothing,
         "minimum_field_t" => minimum_field,
         "maximum_field_t" => maximum_field,
         "crossing_count" => length(crossings),
@@ -209,13 +446,38 @@ function evaluate_poincare_flux_surface_gate_v81(
             ["use_open_field_transport_gate_v72"])
     end
     cache = compile_finite_filament_field_cache_v71(realization)
-    major = Float64(region["major_radius_m"])
-    minor = Float64(region["minor_radius_m"])
+    candidate_boundary = get(binding, "v85_boundary", nothing)
+    axis_evidence = candidate_boundary === nothing ? Dict{String,Any}(
+        "status" => "not_applicable_legacy_boundary",
+        "axis_reference" => nothing, "candidate_bound" => false) :
+        _v81_locate_periodic_magnetic_axis(realization, cache,
+            candidate_boundary; steps_per_turn = min(80, steps_per_turn))
+    if candidate_boundary !== nothing && axis_evidence["status"] != "located"
+        evidence = Dict{String,Any}(
+            "status" => "evaluated",
+            "model_id" =>
+                "candidate_biot_savart_poincare_periodic_axis_v2",
+            "target_toroidal_turns" => target_toroidal_turns,
+            "steps_per_turn" => steps_per_turn,
+            "candidate_boundary_frame_used" => true,
+            "periodic_magnetic_axis" => axis_evidence,
+            "all_traces_completed" => false,
+            "any_trace_escaped" => false,
+            "any_field_singular" => false,
+            "field_cache_hash" => cache.cache_hash)
+        return _v81_result(realization, screen, :complete, :fail,
+            "periodic_magnetic_axis_not_located", evidence,
+            String[])
+    end
+    axis_reference = get(axis_evidence, "axis_reference", nothing)
     start_fractions = (0.15, 0.35, 0.55)
     traces = [_v81_trace_to_section(realization, cache,
-        [major + fraction * minor, 0.0, 0.0];
+        _v81_axis_start_point(region, candidate_boundary, axis_reference,
+            fraction);
         target_toroidal_turns = target_toroidal_turns,
-        steps_per_turn = steps_per_turn) for fraction in start_fractions]
+        steps_per_turn = steps_per_turn,
+        candidate_boundary = candidate_boundary,
+        axis_reference = axis_reference) for fraction in start_fractions]
     fits = [Bool(trace["completed"]) ? _v81_surface_fit(trace["crossings"];
         fourier_order = fourier_order, bin_count = bin_count) :
         Dict{String,Any}("status" => "not_applicable_incomplete_trace",
@@ -257,10 +519,13 @@ function evaluate_poincare_flux_surface_gate_v81(
         "minimum_fitted_surface_gap" => 0.02)
     evidence = Dict{String,Any}(
         "status" => "evaluated",
-        "model_id" => "candidate_biot_savart_poincare_fourier_surface_v1",
+        "model_id" =>
+            "candidate_biot_savart_poincare_periodic_axis_fourier_surface_v2",
         "target_toroidal_turns" => target_toroidal_turns,
         "steps_per_turn" => steps_per_turn,
         "start_minor_radius_fractions" => collect(start_fractions),
+        "candidate_boundary_frame_used" => candidate_boundary !== nothing,
+        "periodic_magnetic_axis" => axis_evidence,
         "all_traces_completed" => all_completed,
         "any_trace_escaped" => any_escape,
         "any_field_singular" => any_singular,

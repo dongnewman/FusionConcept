@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "manifest_id": "equation_manifest_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "equation_contract": {
+    "exactly_one_governing_residual_per_equation": true,
+    "additive_residuals_require_registry_entries": true,
+    "postprocessing_ledger_as_physical_residual_forbidden": true,
+    "generic_graph_laplacian_as_physical_residual_forbidden": true,
+    "penalty_only_interface_conservation_forbidden": true,
+    "required_residual_metadata": ["equation_id", "operator_id", "role", "units", "state_owner", "region_id", "jacobian_blocks", "conserved_quantities", "validity_domain", "source_citation"]
+  },
+  "state_registry": [
+    {"state_id": "magnetic_field", "symbol": "B", "units": "T", "spaces": ["H_div", "H_curl_derived"]},
+    {"state_id": "vector_potential", "symbol": "A", "units": "T m", "spaces": ["H_curl"]},
+    {"state_id": "magnetic_flux", "symbol": "psi", "units": "Wb", "spaces": ["H1"]},
+    {"state_id": "current_density", "symbol": "J", "units": "A m^-2", "spaces": ["H_div", "L2"]},
+    {"state_id": "pressure", "symbol": "p", "units": "Pa", "spaces": ["H1", "L2"]},
+    {"state_id": "density", "symbol": "rho", "units": "kg m^-3", "spaces": ["H1", "L2"]},
+    {"state_id": "species_temperature", "symbol": "T_s", "units": "K", "spaces": ["H1", "L2"]},
+    {"state_id": "flow_velocity", "symbol": "u", "units": "m s^-1", "spaces": ["H1_vector", "H_div"]},
+    {"state_id": "rotation", "symbol": "Omega", "units": "s^-1", "spaces": ["H1"]},
+    {"state_id": "electric_potential", "symbol": "phi", "units": "V", "spaces": ["H1"]},
+    {"state_id": "species_moment", "symbol": "M_s", "units": "declared", "spaces": ["declared"]},
+    {"state_id": "distribution_parameter", "symbol": "f_s_parameter", "units": "declared", "spaces": ["declared"]},
+    {"state_id": "vacuum_field", "symbol": "B_v", "units": "T", "spaces": ["H_curl", "H_div"]},
+    {"state_id": "coil_current", "symbol": "I_c", "units": "A", "spaces": ["R"]},
+    {"state_id": "wall_current", "symbol": "K_w", "units": "A m^-1", "spaces": ["surface_H_div"]},
+    {"state_id": "free_boundary_geometry", "symbol": "X_Gamma", "units": "m", "spaces": ["surface_H1"]},
+    {"state_id": "interface_multiplier", "symbol": "lambda_Gamma", "units": "declared_by_condition", "spaces": ["mortar_dual"]}
+  ],
+  "operator_registry": [
+    {"operator_id": "solenoidal_magnetic_constraint", "role": "governing", "residual": "div(B)", "conserves": ["magnetic_flux"], "applicable_regions": ["plasma", "vacuum", "coil", "wall", "open_loss"]},
+    {"operator_id": "ampere_field_source_consistency", "role": "governing", "residual": "curl(B)/mu0-J-J_external", "conserves": ["electric_current", "magnetic_flux"], "applicable_regions": ["plasma", "vacuum", "coil", "wall", "open_loss"]},
+    {"operator_id": "declared_force_balance", "role": "governing", "residual": "rho*(u dot grad)u+grad(p)-J cross B-div(P_anisotropic)-F_declared", "conserves": ["momentum"], "applicable_regions": ["plasma", "open_loss"]},
+    {"operator_id": "particle_conservation", "role": "governing", "residual": "div(Gamma_s)-S_s+L_s", "conserves": ["particles_by_species"], "applicable_regions": ["plasma", "open_loss", "terminal"]},
+    {"operator_id": "energy_conservation", "role": "governing", "residual": "div(q_s+h_s*Gamma_s)-Q_s+L_E_s", "conserves": ["energy_by_species"], "applicable_regions": ["plasma", "open_loss", "terminal", "wall"]},
+    {"operator_id": "current_continuity", "role": "governing", "residual": "div(J)-S_charge", "conserves": ["electric_charge"], "applicable_regions": ["plasma", "vacuum", "coil", "wall", "open_loss", "terminal"]},
+    {"operator_id": "induction_or_flux_balance", "role": "governing", "residual": "declared_steady_or_evolutionary_faraday_residual", "conserves": ["magnetic_flux"], "applicable_regions": ["plasma", "vacuum", "coil", "wall", "open_loss"]},
+    {"operator_id": "vacuum_field_equations", "role": "governing", "residual": "curl(B_v)-mu0*J_external and div(B_v)", "conserves": ["magnetic_flux"], "applicable_regions": ["vacuum"]},
+    {"operator_id": "coil_circuit_coupling", "role": "governing", "residual": "V-RI-d(Phi_linked)/dt", "conserves": ["magnetic_flux", "energy"], "applicable_regions": ["coil"]},
+    {"operator_id": "wall_electromagnetic_coupling", "role": "governing", "residual": "declared_thin_or_volume_wall_ohm_faraday_residual", "conserves": ["electric_charge", "magnetic_flux", "energy"], "applicable_regions": ["wall"]},
+    {"operator_id": "anisotropic_pressure_addition", "role": "additive", "residual": "-div(P_anisotropic-pI)", "conserves": ["momentum"], "applicable_regions": ["plasma", "open_loss"]},
+    {"operator_id": "flow_rotation_addition", "role": "additive", "residual": "rho*(u dot grad)u plus declared rotating-frame terms", "conserves": ["momentum", "angular_momentum"], "applicable_regions": ["plasma", "open_loss"]},
+    {"operator_id": "extended_mhd_addition", "role": "additive", "residual": "declared_Hall_electron_pressure_resistive_or_two_fluid_terms", "conserves": ["declared"], "applicable_regions": ["plasma", "open_loss"]},
+    {"operator_id": "material_transport_closure", "role": "additive", "residual": "declared_constitutive_flux", "conserves": ["particles_by_species", "energy", "momentum"], "applicable_regions": ["plasma", "wall", "open_loss"]},
+    {"operator_id": "source_sink_terminal_addition", "role": "additive", "residual": "declared_source_minus_sink_or_terminal_flux", "conserves": ["declared_inventory"], "applicable_regions": ["plasma", "open_loss", "terminal"]}
+  ],
+  "discretization_contract": {
+    "accepted_primary_forms": ["mixed_conforming_fem", "mortar_fem", "lagrange_multiplier_fem", "verified_nitsche_with_independent_conservation_constraint"],
+    "compatible_magnetic_spaces_required": true,
+    "exact_automatic_or_symbolic_jacobian_required": true,
+    "finite_difference_jacobian_credit": "audit_only",
+    "mesh_levels": ["coarse", "medium", "fine"],
+    "initialization_paths": ["direct_initial_state_1", "direct_initial_state_2", "direct_initial_state_3", "continuation_initialization_only"],
+    "recovery_paths": ["newton_line_search", "trust_region"],
+    "continuation_equilibrium_credit": false
+  },
+  "amendment_policy": "Any equation, validity-domain, residual, discretization, initialization, or recovery change requires a new protocol_id and isolated result namespace."
+}

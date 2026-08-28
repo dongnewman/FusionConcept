@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "manifest_id": "verification_validation_split_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "evidence_layers": [
+    {"layer": "manufactured_analytic_verification", "candidate_credit": false, "purpose": "code_and_discretization_correctness"},
+    {"layer": "numerical_vvuq", "candidate_credit": "numerical_only", "purpose": "discretization_iteration_recovery_and_parameter_uncertainty"},
+    {"layer": "known_device_model_validation", "candidate_credit": false, "purpose": "model_discrepancy_on_sealed_calibration_and_holdout_measurements"},
+    {"layer": "candidate_domain_applicability", "candidate_credit": "applicability_only", "purpose": "determine_whether_validated_model_domain_covers_candidate"},
+    {"layer": "new_candidate_experimental_validation", "candidate_credit": "experimental_only_if_candidate_itself_is_built_and_measured", "purpose": "candidate_specific_real_world_validation"}
+  ],
+  "dataset_firewall": {
+    "calibration_and_holdout_split_sealed_before_candidate_results": true,
+    "minimum_holdout_operating_points_per_decision_module": 3,
+    "all_available_preregistered_holdouts_must_be_used": true,
+    "minimum_independent_diagnostic_classes": 2,
+    "actual_run_or_shot_ids_required": true,
+    "diagnostic_calibration_uncertainty_boundary_initial_conditions_and_file_hashes_required": true,
+    "published_ranges_proxy_or_synthetic_candidate_gate_data_forbidden": true,
+    "unavailable_measurements": "unknown_validation_domain"
+  },
+  "c2w_dataset_status_at_seal": {"attested_candidate_usable_dataset_present": false, "reason": "No actual shot/run files with diagnostics, calibration, uncertainty, boundary and initial conditions, and hashes were available in the repository at seal time.", "decision": "unknown_validation_domain"},
+  "cross_layer_credit_transfer_forbidden": true
+}

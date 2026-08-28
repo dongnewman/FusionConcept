@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v98-end-to-end-device-acceptance-20260829",
+  "status": "complete",
+  "source_topology_count": 1048576,
+  "reference_controls": {
+    "passed": 2,
+    "total": 2,
+    "experimental_validation_pass_count": 0,
+    "acceptance_hash": "ec992b1d69713380d948569045f95ba5cdc44abc5a04b6f3a29ece7828f9e6eb"
+  },
+  "reduced_screen": {
+    "topology_screen_fail": 455444,
+    "provider_system_fail": 0,
+    "physics_screen_fail": 592897,
+    "numerical_vvuq_fail": 168,
+    "computational_candidate": 67,
+    "validation_pass": 0,
+    "unsupported_candidate_count": 0,
+    "acceptance_hash": "3286606eb98e6388b9c00e53473f978eba0c10b6ff77a92438eb8d7c30d68591"
+  },
+  "freegs_v1_negative_control": {
+    "runner_grammar": "normalized_four_coil_affine_transform",
+    "pass": 0,
+    "fail": 67,
+    "system_error": 0,
+    "acceptance_hash": "56e03390ea59ae284be4fe22dfd70a23cb73aa930c8065a343129f92f437f7ae"
+  },
+  "freegs_v3_candidate_bound_verification": {
+    "runner_grammar": "candidate_bound_eight_coil_shape_constraint_transform",
+    "pass": 31,
+    "fail": 36,
+    "system_error": 0,
+    "numerical_vvuq_pass": 31,
+    "validation_unknown": 31,
+    "validation_pass": 0,
+    "acceptance_hash": "b559c7c8cc4d3fc7195dbff7b8f860662ed15df657521ca239e0bf0e5fdb076d"
+  },
+  "final_classification": {
+    "candidate_bound_high_fidelity_equilibrium_survivor": 31,
+    "credible_whole_device": 0,
+    "experimentally_validated_device": 0,
+    "whole_device_status": "unknown_validation_domain"
+  },
+  "claim_boundary": "The 31 survivors passed candidate-bound FreeGS free-boundary equilibrium and three-grid numerical VVUQ only. They have not passed complete MHD stability, transport, materials, engineering qualification, independent experimental validation, or whole-device VVUQ and must not be called credible fusion devices."
+}

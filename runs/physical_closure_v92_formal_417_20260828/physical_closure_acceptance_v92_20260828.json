@@ -1,0 +1,470 @@
+{
+    "full_regression": {
+        "log_sha256": "9713d3a5127d35960eac737a6506232d19630a0bc0c1b2cdb82d2ae20eb63171",
+        "command": "julia --project=. test/runtests.jl",
+        "log_bytes": 86126,
+        "exit_code": 0,
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "status": "pass",
+        "started_at_utc": "2026-08-27T18:03:25.330Z",
+        "schema_version": "1.0.0",
+        "wall_seconds": 1769.9562114,
+        "ended_at_utc": "2026-08-27T18:32:55.300Z",
+        "log_path": "runs/physical_closure_v92_formal_417_20260828/logs/full_regression_v92.log"
+    },
+    "unresolved_solver_disagreement_count": 229,
+    "threshold_changed_after_results": false,
+    "all_candidate_first_blocker_histogram": {
+        "missing_spatial_plasma_operator_backbone": 19,
+        "missing_spatial_field_balance_backbone": 152,
+        "unsupported_mixed_topology_equilibrium_backend": 229,
+        "full_qualification_not_scheduled_pilot_transition_failed": 17
+    },
+    "stage_status_histogram": {
+        "all_applicable_stability_pilot": {
+            "unsupported": 229
+        },
+        "engineering_obligations_pilot": {
+            "unsupported": 229
+        },
+        "numerical_vvuq_pilot": {
+            "unsupported": 229
+        },
+        "full_qualification": {
+            "not_scheduled_transition_failed": 246
+        },
+        "physical_realization": {
+            "fail": 171,
+            "pass": 246
+        },
+        "candidate_bound_validation_vvuq_pilot": {
+            "unknown": 229
+        },
+        "field_line_orbit_pilot": {
+            "unsupported": 229
+        },
+        "independent_solver_comparison_pilot": {
+            "unknown_independent_model_missing": 229
+        },
+        "parameter_uq_pilot": {
+            "unsupported": 229
+        },
+        "applicable_equilibrium_pilot": {
+            "unsupported": 229
+        }
+    },
+    "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+    "high_fidelity_pilot": {
+        "deterministic_replay_pass_count": 229,
+        "solver_execution_count": 0,
+        "pilot_request_count": 229,
+        "computationally_credible_new_device_count": 0,
+        "first_campaign_blocker": "solver_coverage_for_mixed_and_open_routes",
+        "deterministic_replay_count": 229,
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "solver_coverage_status": "fail",
+        "pilot_to_full_transition_allowed": false,
+        "claim_boundary": "All selected pilot requests were executed through the capability router. Unsupported routes are evidence outcomes, not solver runs or readiness claims.",
+        "pilot_dossier_count": 229,
+        "route_histogram": {
+            "mixed_topology_coupled": 229
+        },
+        "equilibrium_status_histogram": {
+            "unsupported": 229
+        },
+        "full_qualification_scheduled_count": 0,
+        "experimentally_validated_new_fusion_device_count": 0,
+        "known_control_qualification_status": "fail",
+        "summary_hash": "6b6b31df28b2820d849a771c22e4dcecb4c635137c197958db41f25c0f66ee3f",
+        "schema_version": "1.0.0",
+        "pilot_result_count": 229
+    },
+    "all_candidate_first_blocker_count": 417,
+    "per_stage_resource_usage": {
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "resource_manifest_hash": "2431d5216abd6e9f7276094e52f32b2084cbaaba379e49dc7cd2ed9a1bbf0ac7",
+        "stages": {
+            "vmex_3d_control": {
+                "solver_executions": 1,
+                "wall_seconds": 16.1255701
+            },
+            "freegs_verification_control": {
+                "solver_executions": 1,
+                "wall_seconds": 2.8357588
+            },
+            "pilot_route_and_blocked_downstream_replay": {
+                "candidate_count": 229,
+                "threads": 24,
+                "gc_seconds": 0.0410248,
+                "solver_executions": 0,
+                "reason": "all compatible mixed-topology equilibrium backends unsupported",
+                "wall_seconds": 0.9134236,
+                "allocated_bytes": 257159792
+            },
+            "materialized_farthest_candidate_meshes": {
+                "mesh_count": 6,
+                "artifact_bytes": 44677241,
+                "solver_executions": 0
+            },
+            "physical_realization_417_plus_replay": {
+                "threads": 24,
+                "wall_seconds": 6.6318609,
+                "allocated_bytes": 608885568,
+                "processes": 1
+            }
+        },
+        "claim_boundary": "Resource use for unsupported solver stages records routing and fail-closed evidence processing, not high-fidelity physics execution.",
+        "schema_version": "1.0.0"
+    },
+    "realization_dossier_count": 417,
+    "claim_boundary": "V92 executed 417/417 physical-realization qualification and every preregistered pilot request. No compatible mixed-topology equilibrium backend or complete control/validation chain was available, so all downstream applicable hard gates remain unsupported or unknown and no candidate is promoted.",
+    "artifact_validation": {
+        "mode_coverage_records_validated": 229,
+        "orbit_results_validated": 229,
+        "negative_control_pass_count": 8,
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "report_hash": "37a3939488c57f2b18b2a81305d08a2cd3d32088a92772b6788417535537b4e9",
+        "stability_results_validated": 229,
+        "family_or_device_label_routes": 0,
+        "experimentally_validated_new_fusion_device_count": 0,
+        "status": "pass",
+        "equilibrium_requests_validated": 229,
+        "v92_schema_count": 16,
+        "negative_control_count": 8,
+        "validation_vvuq_records_validated": 229,
+        "computationally_credible_new_device_count": 0,
+        "protocol_records_validated": 1,
+        "realization_records_validated": 417,
+        "materialized_meshes_validated": 6,
+        "promotion_decisions_validated": 229,
+        "nonfinite_json_values": 0,
+        "open_to_nested_surface_misroutes": 0,
+        "cross_code_records_validated": 229,
+        "schema_version": "1.0.0",
+        "equilibrium_results_validated": 229
+    },
+    "full_qualification_scheduled_count": 0,
+    "interactive_visualization": "interactive_v92_closure_explorer/index.html",
+    "experimentally_validated_new_fusion_device_count": 0,
+    "engineering_qualified_new_device_count": 0,
+    "artifact_manifest_path": "runs/physical_closure_v92_formal_417_20260828/artifact_hash_manifest_v92.json",
+    "high_fidelity_pilot_dossier_count": 229,
+    "known_and_negative_controls": {
+        "freegs_control": {
+            "code_verification_status": "pass",
+            "solver_executed": true,
+            "exit_code": 0,
+            "qualification_status": "verification_pass_no_validation_or_candidate_credit",
+            "validation_credit": false,
+            "candidate_feasibility_credit": false,
+            "backend_id": "freegs_0_8_2",
+            "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+            "control_id": "freegs_equilibrium_verification_v92",
+            "result_hash": "dbe43b5fb890368703e795d5cea61e54520af31398e80829d42c125931a4a497",
+            "claim_boundary": "FreeGS package tests are code verification only; they do not validate a model or qualify a candidate.",
+            "request_hash": "44a2192f534a1225f62e64cc850d991b79ce85119b2d3020e3de22ebb974be8f",
+            "schema_version": "1.0.0",
+            "wall_seconds": 2.8357588
+        },
+        "first_blocker": "c2w_actual_measurement_dataset_not_attested",
+        "vmex_control": {
+            "metrics": {
+                "ier_flag": 0,
+                "aspect": 7.000345969477064,
+                "fsqz": 8.987682784226687e-15,
+                "niter": 450,
+                "betatotal": 0,
+                "fsqr": 9.832072626835753e-14,
+                "fsql": 3.626773415289926e-15,
+                "ftolv": 1.0e-13
+            },
+            "output_files": [
+                {
+                    "sha256": "d8828a188eccc554772488c3418a15a890c3cbdac0356eb7d41b04270d6f3f86",
+                    "bytes": 156280,
+                    "path": "runs/physical_closure_v92_formal_417_20260828/controls/vmex_3d_equilibrium_output/wout_nfp4_QH_warm_start.nc"
+                }
+            ],
+            "solver_executed": true,
+            "exit_code": 0,
+            "qualification_status": "unknown_incomplete_divB_boundary_and_cross_code_observables",
+            "validation_credit": false,
+            "candidate_feasibility_credit": false,
+            "backend_id": "vmex_0_7_0",
+            "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+            "control_id": "vmex_bundled_nfp4_qh_fixed_boundary_v92",
+            "result_hash": "e827c7aacb83ed81c122c51391198307d970a75fe5f848bcefbcfef463af885f",
+            "claim_boundary": "This is a bundled fixed-boundary verification control. It is not a candidate-bound solve, independent cross-code comparison, or experimental validation.",
+            "solver_convergence_control_status": "pass",
+            "request_hash": "502763de598274000bdb2b6446f30c593808204bf646038521bb9fd70fe2381e",
+            "schema_version": "1.0.0",
+            "wall_seconds": 16.1255701
+        },
+        "missing_controls": [
+            {
+                "control_id": "iter_design_engineering_control_v92",
+                "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+                "result_hash": "f09199de0f065cdd22c227aa3b68cd5efad6b3f22f7dbbd04c65857791df882e",
+                "status": "unknown_candidate_bound_design_control_not_compiled",
+                "validation_credit": false,
+                "reason": "no immutable ITER design regression input and engineering-obligation transformer is attested",
+                "schema_version": "1.0.0",
+                "candidate_feasibility_credit": false
+            },
+            {
+                "control_id": "c2w_experimental_control_v92",
+                "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+                "result_hash": "fa775c0c85c46afbfef1f13815ce33e073aac3759cea083326edaf7c9091dba1",
+                "status": "unknown_actual_measurement_dataset_not_attested",
+                "validation_credit": false,
+                "reason": "no exact C-2W shot/run inventory with two diagnostics, calibration, uncertainties, boundaries, and data hashes is present",
+                "schema_version": "1.0.0",
+                "candidate_feasibility_credit": false
+            },
+            {
+                "control_id": "independent_3d_equilibrium_cross_code_control_v92",
+                "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+                "result_hash": "e514613f85092a7322fdb9116a185797dbf64570a17ac90323a8abf765e238b4",
+                "status": "unknown_matched_desc_vmex_execution_not_completed",
+                "validation_credit": false,
+                "reason": "VMEX control executed but no matched candidate-independent DESC solve on the identical profiles and boundary has been executed",
+                "schema_version": "1.0.0",
+                "candidate_feasibility_credit": false
+            }
+        ],
+        "qualification_status": "fail",
+        "negative_controls": {
+            "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+            "result_hash": "5a6b2211f015a70d8e207c929c5ed719993c9a43d9cdae3c29a38170f206812b",
+            "control_pass_count": 8,
+            "claim_boundary": "Negative controls prove fail-closed gates and artifact firewalls only; they grant no candidate or validation credit.",
+            "status": "pass",
+            "controls": [
+                {
+                    "control_id": "invalid_geometry_missing_spatial_field_backbone",
+                    "expected": "fail",
+                    "control_pass": true,
+                    "reason": "missing_spatial_field_balance_backbone",
+                    "observed": "fail"
+                },
+                {
+                    "control_id": "invalid_equilibrium_residual",
+                    "expected": "fail",
+                    "normalized_residual": 0.01,
+                    "threshold": 1.0e-8,
+                    "control_pass": true,
+                    "observed": "fail"
+                },
+                {
+                    "control_id": "invalid_orbit_energy_invariant",
+                    "expected": "fail",
+                    "threshold": 0.0001,
+                    "relative_energy_drift": 0.1,
+                    "control_pass": true,
+                    "observed": "fail"
+                },
+                {
+                    "control_id": "invalid_stability_positive_growth",
+                    "expected": "fail",
+                    "normalized_growth_rate": 0.05,
+                    "threshold": 0,
+                    "control_pass": true,
+                    "observed": "fail"
+                },
+                {
+                    "control_id": "corrupt_shard_injection",
+                    "expected": "rejected",
+                    "control_pass": true,
+                    "observed": "rejected"
+                },
+                {
+                    "control_id": "cross_protocol_result_injection",
+                    "expected": "rejected",
+                    "control_pass": true,
+                    "observed": "rejected"
+                },
+                {
+                    "control_id": "manufactured_validation_credit_injection",
+                    "expected": "rejected",
+                    "control_pass": true,
+                    "observed": "rejected"
+                },
+                {
+                    "control_id": "open_or_mixed_to_nested_surface_injection",
+                    "expected": "rejected",
+                    "route_id": "mixed_topology_coupled",
+                    "control_pass": true,
+                    "observed": "rejected"
+                }
+            ],
+            "control_count": 8,
+            "validation_credit": false,
+            "schema_version": "1.0.0",
+            "candidate_feasibility_credit": false
+        }
+    },
+    "farthest_candidate": {
+        "materialized_mesh_count": 6,
+        "candidate_hash": "00729a9753c6981350cc91609aee41831c728363f273c981fd0477268c5ce666",
+        "dossier_path": "runs/physical_closure_v92_formal_417_20260828/farthest_candidate_v92/farthest_candidate_complete_dossier_v92.json",
+        "candidate_id": "v91-candidate-978457",
+        "bundle_hash": "22bd81398757fe0ad9245a4b6bde3f50c368baa2e4121374cfed8c15b7dfd06a"
+    },
+    "artifact_hash": "bd332ca7a125848c4c3bc2a9b8795748f4d522ce32a2aef1c7de58fcca1a44ba",
+    "acceptance_id": "physical_closure_acceptance_v92_20260828",
+    "validation_dataset_provenance": {
+        "actual_holdout_measurement_inventory_status": "not_attested",
+        "published_range_substitution_used": false,
+        "manifest_path": "config/v92/validation_dataset_split_v92.json",
+        "ITER_design_point_validation_credit": false,
+        "manifest_sha256": "6db144d1faf4f7ad4f6437e5b86000c559508877460186a2aefc0d2bec367c60"
+    },
+    "solver_installation_audit": {
+        "audit_hash": "9358e6f08bf3bf96af964505605a47951f3d974afd43b3b6d1f90ed9e63f27c9",
+        "available_capabilities": [
+            "fixed_or_free_boundary_nested_surface_equilibrium",
+            "grad_shafranov_free_boundary",
+            "independent_three_dimensional_finite_pressure_equilibrium",
+            "three_dimensional_finite_pressure_equilibrium"
+        ]
+    },
+    "computationally_credible_new_device_count": 0,
+    "realization_campaign": {
+        "deterministic_replay_pass_count": 417,
+        "pilot_selected_count": 229,
+        "campaign_id": "physical_closure_v92_formal_417_20260828",
+        "empty_or_corrupt_shards": 0,
+        "output_count": 417,
+        "stage_id": "physical_realization",
+        "shard_count": 16,
+        "computationally_credible_new_device_count": 0,
+        "deterministic_replay_count": 417,
+        "unique_candidate_id_count": 417,
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "status_histogram": {
+            "fail": 171,
+            "pass": 246
+        },
+        "input_count": 417,
+        "unique_candidate_hash_count": 417,
+        "claim_boundary": "The v92 realization campaign qualifies candidate-bound embedding, well-posedness, mesh specification, and complete gene/basis consumption for all 417 v91 survivors. It grants no equilibrium, confinement, stability, engineering, validation, or promotion credit.",
+        "experimentally_validated_new_fusion_device_count": 0,
+        "unique_realization_hash_count": 417,
+        "first_blocker_histogram": {
+            "missing_spatial_plasma_operator_backbone": 19,
+            "missing_spatial_field_balance_backbone": 152
+        },
+        "schema_version": "1.0.0",
+        "resource_usage": {
+            "threads": 24,
+            "wall_seconds": 6.6318609,
+            "allocated_bytes": 608885568,
+            "processes": 1
+        }
+    },
+    "open_field_to_nested_surface_misrouting_count": 0,
+    "manufactured_sentinel_or_published_interval_credit_count": 0,
+    "pilot_to_full_transition_allowed": false,
+    "capability_route_coverage": {
+        "routing_axes": [
+            "declared_operators",
+            "state_variables",
+            "region_dimensions",
+            "boundary_conditions",
+            "interface_conditions",
+            "field_semantics",
+            "evidence_obligations",
+            "solver_input_compatibility"
+        ],
+        "mixed_primary_available": false,
+        "nested_surface_solver_misrouting_count": 0,
+        "open_primary_available": false,
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "solver_coverage_status": "fail",
+        "route_histogram": {
+            "mixed_topology_coupled": 229
+        },
+        "family_or_device_label_routing_count": 0,
+        "coverage_hash": "15b33bd8a4565ac3f73bda86f2735de04c43b7cb9f76ad3653b10a7edfcc9233",
+        "schema_version": "1.0.0",
+        "pilot_count": 229,
+        "available_capabilities": [
+            "fixed_or_free_boundary_nested_surface_equilibrium",
+            "grad_shafranov_free_boundary",
+            "independent_three_dimensional_finite_pressure_equilibrium",
+            "three_dimensional_finite_pressure_equilibrium"
+        ]
+    },
+    "family_or_device_label_routing_count": 0,
+    "protocol_seal": {
+        "sealed_before_any_v92_high_fidelity_result": true,
+        "seal_material_sha256": "84e26b5011f0e50d4989160633846490bd3ca79264e6495f735100e5c5a73328",
+        "status": "pass"
+    },
+    "schema_version": "1.0.0",
+    "input_baseline": [
+        {
+            "role": "v91_acceptance",
+            "sha256": "eef675266b7476855ada114332021782d82a531332b3939985173308c8ef1183",
+            "status": "pass",
+            "count": 1,
+            "path": "runs/multitopology_acceptance_v91_20260827.json"
+        },
+        {
+            "role": "v91_survivor_dossiers",
+            "sha256": "d49c7c82dba5de1d58740a513a3ce0064f16d0e2985d6eb1bc4f648746ef74a9",
+            "status": "pass",
+            "count": 417,
+            "path": "runs/multitopology_v91_formal_1000000_20260827/survivor_dossiers_v91.jsonl"
+        }
+    ],
+    "qualification_gates": {
+        "unresolved_solver_disagreement_count": 229,
+        "candidate_count": 229,
+        "orbit_result_count": 229,
+        "mode_coverage_count": 229,
+        "computationally_credible_new_device_count": 0,
+        "stage_status_histogram": {
+            "all_applicable_stability": {
+                "unsupported": 229
+            },
+            "applicable_equilibrium": {
+                "unsupported": 229
+            },
+            "numerical_vvuq": {
+                "unsupported": 229
+            },
+            "physical_realization": {
+                "pass": 229
+            },
+            "parameter_uq": {
+                "unsupported": 229
+            },
+            "field_line_orbit_confinement": {
+                "unsupported": 229
+            },
+            "independent_solver_comparison": {
+                "unknown_independent_model_missing": 229
+            },
+            "candidate_bound_validation_vvuq": {
+                "unknown": 229
+            },
+            "engineering_obligations": {
+                "unsupported": 229
+            }
+        },
+        "validation_vvuq_count": 229,
+        "manufactured_sentinel_or_published_interval_credit_count": 0,
+        "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+        "stability_result_count": 229,
+        "cross_code_comparison_count": 229,
+        "claim_boundary": "V92 qualification preserves fail, unknown, unsupported, and not_scheduled states. No downstream gate can pass when its candidate-bound upstream state is unavailable, and verification or published intervals cannot substitute for validation.",
+        "experimentally_validated_new_fusion_device_count": 0,
+        "summary_hash": "d9f6b1da6b1b17fbe17a90e4acd115d9d7ce3ea0ce0ff60575870703d34357ee",
+        "promotion_decision_count": 229,
+        "schema_version": "1.0.0",
+        "first_blocker_histogram": {
+            "applicable_equilibrium": 229
+        }
+    }
+}

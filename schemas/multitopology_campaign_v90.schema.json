@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/multitopology_campaign_v90.schema.json",
+  "title": "MultitopologyCampaignV90",
+  "oneOf": [
+    {"$ref": "#/$defs/specification"},
+    {"$ref": "#/$defs/request"},
+    {"$ref": "#/$defs/result"},
+    {"$ref": "#/$defs/merge"}
+  ],
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "specification": {
+      "type": "object",
+      "required": ["schema_version", "campaign_id", "batch_count", "batch_size", "raw_structure_seeds", "expected_result_count", "balanced_capability_sampling", "topology_templates", "batch_records", "request_set_hash", "actual_solver_input_uniqueness_required", "retroactive_feasibility_credit", "family_or_name_routing_allowed", "claim_boundary", "campaign_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "campaign_id": {"const": "v90_10x10000"},
+        "batch_count": {"type": "integer", "minimum": 1},
+        "batch_size": {"type": "integer", "minimum": 1},
+        "raw_structure_seeds": {"type": "integer", "minimum": 1},
+        "expected_result_count": {"type": "integer", "minimum": 1},
+        "actual_solver_input_uniqueness_required": {"const": true},
+        "retroactive_feasibility_credit": {"const": false},
+        "family_or_name_routing_allowed": {"const": false},
+        "campaign_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "request": {
+      "type": "object",
+      "required": ["schema_version", "request_index", "batch_id", "batch_position", "structure_seed", "pattern", "topology_hash", "physical_variant_seed", "operating_variant_seed", "control_variant_seed", "sentinel", "benchmark_flag", "routing_identity_fields_present", "request_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "pattern": {"enum": ["closed_multiregion", "closed_core_open_loss"]},
+        "sentinel": {"const": false},
+        "benchmark_flag": {"const": false},
+        "routing_identity_fields_present": {"const": false},
+        "request_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["schema_version", "request_hash", "request_index", "batch_id", "batch_position", "topology_hash", "realization_hash", "candidate_hash", "candidate_physics_hash", "capability_cell", "route_hash", "route_status", "actual_solver_input_hash", "nonlinear_result_hash", "nonlinear_status", "independent_balance_status", "cache_hit", "cache_object_hash", "hard_gate_scheduled", "hard_gate_status", "family_routing_count", "name_routing_count", "benchmark_threshold_override_count", "evidence_firewall_violation_count", "retroactive_feasibility_credit", "sentinel", "record_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "actual_solver_input_hash": {"$ref": "#/$defs/hash"},
+        "retroactive_feasibility_credit": {"const": false},
+        "sentinel": {"const": false},
+        "record_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "merge": {
+      "type": "object",
+      "required": ["schema_version", "status", "campaign_hash", "batch_count", "request_count", "result_count", "raw_structure_seeds", "unique_abstract_structures", "physical_realizations", "unique_solver_inputs", "nonlinear_closure_pass_count", "hard_gate_survivor_count", "hard_survivor_capability_cell_count", "pareto_survivor_count", "cache_replay_audit", "family_routing_count", "name_routing_count", "benchmark_threshold_override_count", "evidence_firewall_violation_count", "retroactive_feasibility_credit", "streaming_uniqueness_used", "all_records_loaded_simultaneously", "batch_ranges_no_gap_or_overlap", "request_result_counts_match", "actual_solver_inputs_unique_fraction", "merge_hash"],
+      "properties": {
+        "status": {"const": "complete"},
+        "retroactive_feasibility_credit": {"const": false},
+        "streaming_uniqueness_used": {"const": true},
+        "all_records_loaded_simultaneously": {"const": false},
+        "batch_ranges_no_gap_or_overlap": {"const": true},
+        "request_result_counts_match": {"const": true},
+        "actual_solver_inputs_unique_fraction": {"const": 1.0},
+        "cache_replay_audit": {
+          "type": "object",
+          "required": ["status", "sample_count", "checks", "audit_hash"],
+          "properties": {"status": {"const": "pass"}}
+        },
+        "merge_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

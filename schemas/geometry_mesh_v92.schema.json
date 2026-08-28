@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/geometry_mesh_v92.schema.json",
+  "title": "Candidate-bound implicit materializable geometry mesh V92",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["level", "mesh_type", "materialization", "backend_consumable", "mesh_hash"],
+  "properties": {
+    "level": {"enum": ["coarse", "medium", "fine"]},
+    "mesh_type": {"enum": ["implicit_tensor_product_curvilinear_hexahedral_v92", "implicit_periodic_quadrilateral_wall_mesh_v92"]},
+    "cell_shape": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "integer", "minimum": 1}},
+    "cell_count": {"type": "integer", "minimum": 1},
+    "face_shape": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1}},
+    "face_count": {"type": "integer", "minimum": 1},
+    "coordinate_map": {"type": "string", "minLength": 1},
+    "coordinate_map_parameters": {"type": "object"},
+    "surface_hashes": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "surface_id": {"type": "string"},
+    "materialization": {"const": "deterministic_index_to_coordinate_and_connectivity"},
+    "backend_consumable": {"const": true},
+    "minimum_jacobian_lower_bound": {"type": "number"},
+    "mesh_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "oneOf": [
+    {"required": ["cell_shape", "cell_count", "coordinate_map", "coordinate_map_parameters", "surface_hashes", "minimum_jacobian_lower_bound"]},
+    {"required": ["face_shape", "face_count", "surface_id"]}
+  ]
+}

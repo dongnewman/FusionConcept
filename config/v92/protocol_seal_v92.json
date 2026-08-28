@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+  "seal_id": "v92-stage0-seal-20260828",
+  "sealed_at_utc": "2026-08-27T16:42:05Z",
+  "sealed_before_any_v92_high_fidelity_result_was_generated_or_read": true,
+  "manifest_hashes_sha256": {
+    "campaign_manifest_v92.json": "924589beb821b137e20b05f98ff7bbcc5d81da3e21a2da6715ec6f51c88f333a",
+    "capability_route_manifest_v92.json": "5e202d5a09ed4436889a94860d0a53c01a65a918693e73045f913c84c9484312",
+    "solver_independence_manifest_v92.json": "466131703754454c9f75a406402e6114ab53044c87da60c518dfb39d6caa5a19",
+    "threshold_manifest_v92.json": "5c6ca832d0693a341429fab44b1876196bd6fcde3153b3e78659656686679bd1",
+    "validation_dataset_split_v92.json": "6db144d1faf4f7ad4f6437e5b86000c559508877460186a2aefc0d2bec367c60"
+  },
+  "seal_material_order": [
+    "campaign_manifest_v92.json",
+    "capability_route_manifest_v92.json",
+    "solver_independence_manifest_v92.json",
+    "threshold_manifest_v92.json",
+    "validation_dataset_split_v92.json"
+  ],
+  "seal_material_format": "filename=lowercase_sha256 followed by LF for each item",
+  "seal_material_sha256": "84e26b5011f0e50d4989160633846490bd3ca79264e6495f735100e5c5a73328",
+  "amendment_policy": "Never edit a sealed manifest. Create a new protocol version and campaign namespace; do not merge results across protocol IDs.",
+  "v92_result_namespace": "runs/physical_closure_v92_formal_417_20260828",
+  "high_fidelity_result_count_at_seal": 0
+}

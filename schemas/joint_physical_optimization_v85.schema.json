@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/joint_physical_optimization_v85.schema.json",
+  "title": "JointPhysicalOptimizationV85",
+  "type": "object",
+  "required": ["summary", "rows", "pareto_design_hashes", "representative_design_hash", "artifact_hash"],
+  "properties": {
+    "summary": {
+      "type": "object",
+      "required": ["schema_version", "status", "structure_hash", "grammar_hash", "candidate_count", "all_hard_gates_pass_count", "unique_solver_input_counts", "actual_solver_execution_counts", "pareto_archive", "claim_boundary", "result_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "status": {"const": "complete"},
+        "structure_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "grammar_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "candidate_count": {"type": "integer", "minimum": 0},
+        "all_hard_gates_pass_count": {"type": "integer", "minimum": 0},
+        "unique_solver_input_counts": {"type": "object"},
+        "actual_solver_execution_counts": {"type": "object"},
+        "pareto_archive": {"type": "object"},
+        "claim_boundary": {"type": "string", "minLength": 1},
+        "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "rows": {"type": "array"},
+    "pareto_design_hashes": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "representative_design_hash": {"type": ["string", "null"]},
+    "artifact_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

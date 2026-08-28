@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "seal_id": "v93-stage0-seal-20260828",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "sealed_before_any_v93_candidate_solve_result_was_generated_or_read": true,
+  "manifest_hashes_sha256": {
+    "equation_manifest_v93.json": "1eac98baf26116b6b3aff5c49239aca4270f7f54917ba2c7ef7e6502cefca4fc",
+    "interface_contract_manifest_v93.json": "aeb3672ffe8a7f35fc46e509ab5218ae76f8cefe6a825c5c032352aeac6bd154",
+    "threshold_manifest_v93.json": "e5ac7ad9598dbbaf742692de9ab20eea9cea71f6a9a8e8b894360044fcb4b853",
+    "capability_route_manifest_v93.json": "f513767480056713bbcc3a596c3b7a77cb279acc05bc3ca0293253d03997c8a6",
+    "solver_independence_manifest_v93.json": "a394af71dbc22ab8ea585f504cbdb81a3ccc6183a733a50acc6ee39f7f79d6fa",
+    "verification_validation_split_v93.json": "5c2308f65788458cabcedfd57359709d16712ca567eab5c9a612a9913469e220",
+    "holdout_capability_fixtures_v93.json": "42c00bd18c9d93cddf4c018a6d015e8a87059ef471ff6c8e0c634582b1cd2c82",
+    "campaign_manifest_v93.json": "7550353ca55e8cb6b085be5dbe9b1925e9178918f1bc0c1fdf6e7a7c0f494383"
+  },
+  "seal_material_order": ["equation_manifest_v93.json", "interface_contract_manifest_v93.json", "threshold_manifest_v93.json", "capability_route_manifest_v93.json", "solver_independence_manifest_v93.json", "verification_validation_split_v93.json", "holdout_capability_fixtures_v93.json", "campaign_manifest_v93.json"],
+  "seal_material_format": "filename=lowercase_sha256 followed by LF for each item",
+  "seal_material_sha256": "7c1e7d1511eb62af33704f10876d905de870c4d9d1eeb2aab830c2249e00f3d8",
+  "amendment_policy": "Never edit a sealed manifest. Create a new protocol_id and campaign namespace; do not merge results across protocol IDs.",
+  "v93_result_namespace": "runs/multiregion_equilibrium_v93_formal_20260828",
+  "v93_candidate_result_count_at_seal": 0
+}

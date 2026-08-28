@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "device_complexity_manifest_v1.schema.json",
+  "title": "DeviceComplexityManifestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_binding_hash", "grammar_hash", "structure_hash", "evidence_level", "component_count", "power_supply_count", "conductor_length_m", "maximum_curvature_m_inv", "support_mass_kg", "control_complexity", "source_hash", "manifest_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_binding_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "grammar_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "structure_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "evidence_level": {"enum": ["analytic_lower_bound", "fast_biot_savart", "poincare", "finite_pressure_equilibrium", "stability", "kinetic_transport", "complete_engineering", "vvuq_dual_code"]},
+    "component_count": {"type": "integer", "minimum": 0},
+    "power_supply_count": {"type": "integer", "minimum": 0},
+    "conductor_length_m": {"type": "number", "minimum": 0},
+    "maximum_curvature_m_inv": {"type": "number", "minimum": 0},
+    "support_mass_kg": {"type": "number", "minimum": 0},
+    "control_complexity": {"type": "integer", "minimum": 0},
+    "source_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

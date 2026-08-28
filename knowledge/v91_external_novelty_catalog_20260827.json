@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_id": "v91-external-novelty-catalog-20260827-r1",
+  "search_date": "2026-08-27",
+  "search_scope": "Repository historical topology grammars plus representative public device classes and designs across tokamak, spherical tokamak, stellarator, field-reversed configuration, mirror, laser inertial confinement, pulsed-power Z-pinch, and representative FRC/stellarator patents. The mapping is a plasma/control-region abstraction and is not an exhaustive prior-art search, patentability opinion, or freedom-to-operate analysis.",
+  "mapping_rule": "Count physically distinct plasma, loss, driver-target, or formation/confinement regions explicitly described by the source. Hardware component renaming and scalar parameter changes do not create a new mapped region. Candidate and reference are declared non-isomorphic only when mapped vertex counts differ; equal counts remain unknown unless a full typed mapping is available.",
+  "replay_record": {
+    "engine": "OpenAI web search",
+    "queries": [
+      "site:iter.org machine tokamak official ITER magnetic confinement design",
+      "site:tae.com C-2W Norman field reversed configuration official",
+      "site:ipp.mpg.de Wendelstein 7-X stellarator official magnetic coils",
+      "site:llnl.gov National Ignition Facility inertial confinement fusion official how it works",
+      "site:sandia.gov Z machine pulsed power fusion official z pinch",
+      "site:iaea.org fusion device world survey mirror spherical tokamak stellarator PDF",
+      "site:pppl.gov NSTX-U spherical tokamak official",
+      "site:patents.google.com fusion reactor magnetic confinement field reversed configuration patent",
+      "site:patents.google.com stellarator fusion reactor coil patent"
+    ],
+    "accessed_at_utc": "2026-08-27",
+    "result_urls_sha256": "49aee41b48afc144c21ceb8f2d6d3d6b2de39f899bb11a8b0e749007bb6b32db"
+  },
+  "references": [
+    {
+      "reference_id": "repository_v69_graph_grammar",
+      "source_url": "repository://src/search/graph_native_topology_search_v69.jl",
+      "source_title": "FusionConceptAI historical v69 graph-native topology grammar",
+      "mapped_region_count": 4,
+      "mapping_scope": "Historical grammar supports at most four regions; vertex-count upper bound used for exact non-isomorphism against the seven-node v91 grammar."
+    },
+    {
+      "reference_id": "repository_v90_closed_template",
+      "source_url": "repository://src/universal_multiregion_topology_grammar_v89.jl",
+      "source_title": "FusionConceptAI v90 closed template",
+      "mapped_region_count": 1,
+      "mapping_scope": "One closed plasma control region."
+    },
+    {
+      "reference_id": "repository_v90_closed_open_template",
+      "source_url": "repository://src/universal_multiregion_topology_grammar_v89.jl",
+      "source_title": "FusionConceptAI v90 closed-core/open-loss template",
+      "mapped_region_count": 2,
+      "mapping_scope": "Closed core and open parallel loss region."
+    },
+    {
+      "reference_id": "iter_tokamak",
+      "source_url": "https://www.iter.org/machine/what-tokamak",
+      "source_title": "ITER: What is a tokamak?",
+      "mapped_region_count": 1,
+      "mapping_scope": "Single toroidal confined plasma region; magnets, vessel, blanket and divertor are obligations/components rather than extra plasma regions."
+    },
+    {
+      "reference_id": "iter_magnet_system",
+      "source_url": "https://www.iter.org/machine/magnets",
+      "source_title": "ITER superconducting magnet systems",
+      "mapped_region_count": 1,
+      "mapping_scope": "Toroidal plasma region coupled to toroidal, poloidal, correction, and control coils."
+    },
+    {
+      "reference_id": "c2w_norman",
+      "source_url": "https://doi.org/10.1088/1741-4326/ac2521",
+      "source_title": "Overview of C-2W: high temperature, steady-state beam-driven field-reversed configuration plasmas",
+      "mapped_region_count": 2,
+      "mapping_scope": "Closed FRC core plus connected open-field/divertor loss region; formation sections are initialization hardware in this abstraction."
+    },
+    {
+      "reference_id": "w7x_stellarator",
+      "source_url": "https://www.ipp.mpg.de/14824/magnetspulen",
+      "source_title": "Max Planck IPP: Wendelstein 7-X magnet coils",
+      "mapped_region_count": 1,
+      "mapping_scope": "Single three-dimensional closed plasma region confined by shaped external coils."
+    },
+    {
+      "reference_id": "nif_indirect_drive",
+      "source_url": "https://lasers.llnl.gov/about/how-nif-works",
+      "source_title": "National Ignition Facility: How NIF Works",
+      "mapped_region_count": 3,
+      "mapping_scope": "Laser driver, hohlraum radiation region, and fuel capsule/implosion region."
+    },
+    {
+      "reference_id": "sandia_z",
+      "source_url": "https://www.sandia.gov/z-machine/about-z/",
+      "source_title": "Sandia: About the Z Pulsed Power Facility",
+      "mapped_region_count": 2,
+      "mapping_scope": "Pulsed-power driver and central Z-pinch/target region."
+    },
+    {
+      "reference_id": "nstx_u",
+      "source_url": "https://www.pppl.gov/nstx-u",
+      "source_title": "PPPL National Spherical Torus Experiment-Upgrade",
+      "mapped_region_count": 1,
+      "mapping_scope": "Single spherical-tokamak plasma region with external heating, magnets, diagnostics and control obligations."
+    },
+    {
+      "reference_id": "iaea_compact_mirror",
+      "source_url": "https://www-pub.iaea.org/MTCD/Publications/PDF/CRCP-FUS-001webRev.pdf",
+      "source_title": "IAEA World Survey of Fusion Devices 2022: compact mirror entry",
+      "mapped_region_count": 2,
+      "mapping_scope": "Central confined region and open end-loss region in the magnetic-mirror abstraction."
+    },
+    {
+      "reference_id": "patent_us10790064b2_frc",
+      "source_url": "https://patents.google.com/patent/US10790064B2/en",
+      "source_title": "US10790064B2 Systems and methods for forming and maintaining a high performance FRC",
+      "mapped_region_count": 3,
+      "mapping_scope": "Formation, central FRC confinement, and open scrape-off/divertor regions mapped from the public patent record."
+    },
+    {
+      "reference_id": "patent_us10811159b2_frc_fueling",
+      "source_url": "https://patents.google.com/patent/US10811159B2/en",
+      "source_title": "US10811159B2 Fueling method for small steady-state aneutronic FRC fusion reactors",
+      "mapped_region_count": 4,
+      "mapping_scope": "Plasma formation box, reactor chamber, charge-exchange/beam path, and scrape-off/loss region."
+    },
+    {
+      "reference_id": "patent_wo2026037964a1_stellarator_support",
+      "source_url": "https://patents.google.com/patent/WO2026037964A1/en",
+      "source_title": "WO2026037964A1 Stellarator device with superconducting plasma confinement coils and improved coil support structure",
+      "mapped_region_count": 1,
+      "mapping_scope": "One stellarator plasma region; coil and support topology are engineering components outside the region-count abstraction."
+    }
+  ],
+  "legal_boundary": {
+    "patentability_claimed": false,
+    "freedom_to_operate_claimed": false,
+    "independent_professional_legal_review_obtained": false
+  }
+}

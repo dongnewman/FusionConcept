@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/universal_realization_v89.schema.json",
+  "title": "UniversalRealizationV89",
+  "type": "object",
+  "required": ["schema_version", "topology_hash", "stream_seeds", "stream_hashes", "components", "basis_coefficients", "physical_parameters", "operating_state", "control_realization", "consumer_proofs", "realization_hash", "candidate_physics_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "topology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stream_seeds": {"type": "object", "required": ["physical", "operating", "control"]},
+    "stream_hashes": {"type": "object", "required": ["physical", "operating", "control"]},
+    "components": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["component_id", "role", "region_id", "count", "required", "independent_power_supplies"]}},
+    "basis_coefficients": {"type": "array", "items": {"type": "object", "required": ["gene_id", "basis_family", "value", "unit", "lower", "upper", "regularization", "complexity_cost"]}},
+    "physical_parameters": {"type": "object"},
+    "operating_state": {"type": "object"},
+    "control_realization": {"type": "object"},
+    "consumer_proofs": {"type": "array"},
+    "realization_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_physics_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

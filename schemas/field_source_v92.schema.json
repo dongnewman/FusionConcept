@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/field_source_v92.schema.json",
+  "title": "Candidate-bound field source V92",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "source_node_id", "source_type", "centerline", "turns", "current_a", "conductor_envelope", "current_potential_basis", "source_hash"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "source_node_id": {"type": "string", "minLength": 1},
+    "source_type": {"const": "finite_conductor_centerline_plus_current_potential"},
+    "centerline": {"type": "object", "required": ["coordinate_map", "major_radius_m", "minor_radius_m", "field_periods", "phase_rad", "fourier_coefficients"]},
+    "turns": {"type": "integer", "minimum": 1},
+    "current_a": {"type": "number"},
+    "conductor_envelope": {"type": "object", "required": ["shape", "width_m", "height_m"]},
+    "current_potential_basis": {"type": "object", "required": ["basis", "mode_numbers", "coefficients_a"]},
+    "source_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

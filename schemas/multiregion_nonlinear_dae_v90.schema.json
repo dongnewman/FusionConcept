@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/multiregion_nonlinear_dae_v90.schema.json",
+  "title": "MultiRegionNonlinearDAEV90",
+  "oneOf": [
+    {"$ref": "#/$defs/contract"},
+    {"$ref": "#/$defs/result"}
+  ],
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "contract": {
+      "type": "object",
+      "required": ["schema_version", "candidate_hash", "candidate_physics_hash", "solver_input_hash", "route_hash", "state_ids", "state_scales", "lower_bounds", "upper_bounds", "mass_diagonal", "initial_guess", "residual_blocks", "interface_pairs", "model_parameters", "jacobian_contract", "stopping_contract", "contract_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "candidate_hash": {"$ref": "#/$defs/hash"},
+        "candidate_physics_hash": {"$ref": "#/$defs/hash"},
+        "solver_input_hash": {"$ref": "#/$defs/hash"},
+        "route_hash": {"$ref": "#/$defs/hash"},
+        "state_ids": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string"}},
+        "state_scales": {"type": "array", "minItems": 6, "items": {"type": "number", "exclusiveMinimum": 0}},
+        "lower_bounds": {"type": "array", "minItems": 6, "items": {"type": "number"}},
+        "upper_bounds": {"type": "array", "minItems": 6, "items": {"type": "number"}},
+        "mass_diagonal": {"type": "array", "minItems": 6, "items": {"type": "number"}},
+        "initial_guess": {"type": "array", "minItems": 6, "items": {"type": "number"}},
+        "residual_blocks": {"type": "array", "minItems": 6, "items": {"type": "object", "required": ["block_id", "block_kind", "equation_id", "region_id", "operator_id", "dependency_state_ids"]}},
+        "interface_pairs": {"type": "array", "items": {"type": "object", "required": ["interface_id", "account_id", "source_state_id", "target_state_id", "source_sign", "target_sign", "same_nonlinear_iteration", "pair_hash"]}},
+        "model_parameters": {"type": "object"},
+        "jacobian_contract": {"type": "object", "required": ["mode", "relative_step", "directional_audit", "audit_relative_tolerance"]},
+        "stopping_contract": {"type": "object", "required": ["normalized_residual_tolerance", "independent_balance_tolerance", "maximum_newton_iterations", "homotopy_required_to_lambda", "failure_classification"]},
+        "contract_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["schema_version", "candidate_hash", "candidate_physics_hash", "contract_hash", "backend_id", "status", "classification", "convergence_status", "initial_guess_role", "full_model_lambda", "residual_history", "trajectory", "final_normalized_state", "final_physical_state", "audits", "evidence_ceiling", "result_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "candidate_hash": {"$ref": "#/$defs/hash"},
+        "candidate_physics_hash": {"$ref": "#/$defs/hash"},
+        "contract_hash": {"$ref": "#/$defs/hash"},
+        "status": {"enum": ["pass", "fail", "unknown", "unsupported"]},
+        "classification": {"type": "string"},
+        "audits": {"type": "object"},
+        "result_hash": {"$ref": "#/$defs/hash"}
+      }
+    }
+  }
+}

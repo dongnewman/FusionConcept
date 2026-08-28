@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-family-neutral-multiregion-20260828",
+  "manifest_id": "capability_route_manifest_v93",
+  "sealed_at_utc": "2026-08-28T02:53:59Z",
+  "mutable": false,
+  "allowed_axes": ["state_variables", "governing_operators", "additive_operators", "region_types", "region_dimensions", "geometry_fields", "material_fields", "boundary_conditions", "interface_conditions", "source_sink_terms", "model_validity_domains", "evidence_obligations", "discretization_contract", "backend_capabilities"],
+  "forbidden_keys_or_values": ["candidate_id", "candidate_hash", "family", "device_type", "parent", "known", "generated", "display_label", "device_name", "tokamak", "frc", "mirror", "stellarator"],
+  "route_request_hash_projection": "canonical_physics_declaration_only",
+  "primary_route": {
+    "route_id": "declared_multiregion_operator_system",
+    "required": ["explicit_regions", "explicit_interfaces", "state_ownership", "one_governing_residual_per_equation", "operator_registry_coverage", "validity_domains", "coarse_medium_fine_meshes", "monolithic_residual", "domain_decomposition_contract"],
+    "backend_capability": "candidate_bound_multiregion_fem_snes_fieldsplit",
+    "missing_capability_status": "unsupported_operator_or_backend"
+  },
+  "independent_routes": [
+    {"capability_id": "multi_region_relaxed_mhd", "match_only": ["declared_operator_intersection", "declared_boundary_intersection", "declared_state_intersection", "declared_validity_domain_intersection"], "examples_nonbinding": ["SPEC_class", "SPECTRE_class"]},
+    {"capability_id": "compatible_extended_mhd", "match_only": ["declared_operator_intersection", "declared_boundary_intersection", "declared_state_intersection", "declared_validity_domain_intersection"], "examples_nonbinding": ["OpenFUSIONToolkit_MUG_class", "independently_maintained_equivalent"]},
+    {"capability_id": "nested_finite_pressure_equilibrium", "match_only": ["declared_operator_intersection", "declared_boundary_intersection", "declared_state_intersection", "declared_validity_domain_intersection"], "examples_nonbinding": ["DESC_class", "VMEC_or_VMECpp_class"]},
+    {"capability_id": "axisymmetric_free_boundary_equilibrium", "match_only": ["declared_operator_intersection", "declared_boundary_intersection", "declared_state_intersection", "declared_validity_domain_intersection"], "examples_nonbinding": ["FreeGS_class", "independent_Grad_Shafranov_class"]}
+  ],
+  "invariance_requirements": {"label_erasure": true, "candidate_permutation": true, "holdout_operator_compilation": true, "static_forbidden_field_scan": true, "runtime_access_audit": true, "mutation_tests": true},
+  "projection_to_easier_model_forbidden": true,
+  "result_dependent_routing_or_threshold_change_forbidden": true
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v93-pvw-slice1-20260828",
+  "manifest_id": "solver_independence_manifest_v93_pvw_slice1",
+  "sealed_at_utc": "2026-08-28T04:26:51Z",
+  "mutable": false,
+  "native_solver": {"codebase": "FusionConceptAI", "model_lineage": "mixed_radial_grad_shafranov_v1", "discretization": "mixed_conforming_radial_trace_system", "candidate_credit": "primary_only_if_exact_slice_match"},
+  "independent_solver_required_for_candidate_pass": true,
+  "required_differences": ["codebase", "model_lineage", "discretization", "mesh_generation", "input_transformer", "maintenance_organization"],
+  "available_independent_candidate_backend_at_seal": false,
+  "missing_independent_backend_status": "unknown_solver_disagreement",
+  "manufactured_control_is_independent_backend": false
+}

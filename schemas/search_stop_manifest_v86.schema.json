@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/search_stop_manifest_v86.schema.json",
+  "title": "SearchStopManifestV86",
+  "type": "object",
+  "required": ["schema_version", "batch_count", "batches", "minimum_unique_biot_pass_inputs", "required_consecutive_zero_survival_batches", "minimum_unique_inputs_per_basis_basin", "unique_biot_pass_field_input_count", "formal_poincare_128_pass_count", "consecutive_zero_survival_condition_met", "stop_topology_expansion", "recommended_action", "basis_basin_dispositions", "retired_basis_basin_keys", "retroactive_feasibility_credit", "claim_boundary", "stop_manifest_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "batch_count": {"type": "integer", "minimum": 0},
+    "batches": {"type": "array"},
+    "minimum_unique_biot_pass_inputs": {"type": "integer", "minimum": 1},
+    "required_consecutive_zero_survival_batches": {"type": "integer", "minimum": 1},
+    "minimum_unique_inputs_per_basis_basin": {"type": "integer", "minimum": 1},
+    "unique_biot_pass_field_input_count": {"type": "integer", "minimum": 0},
+    "formal_poincare_128_pass_count": {"type": "integer", "minimum": 0},
+    "consecutive_zero_survival_condition_met": {"type": "boolean"},
+    "stop_topology_expansion": {"type": "boolean"},
+    "recommended_action": {"enum": ["stop_seed_expansion_and_modify_coil_current_potential_grammar", "continue_only_within_declared_budget"]},
+    "basis_basin_dispositions": {"type": "array"},
+    "retired_basis_basin_keys": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "retroactive_feasibility_credit": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "stop_manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

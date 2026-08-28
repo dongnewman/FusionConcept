@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/multitopology_result_v91.schema.json",
+  "title": "FusionConceptAI v91 streamed candidate result",
+  "type": "object",
+  "required": [
+    "schema_version", "request_index", "request_hash", "topology_hash",
+    "isomorphism_hash", "solver_input_hash", "capability_cell", "type_status",
+    "solver_status", "structural_gene_count", "consumed_structural_gene_count",
+    "basis_coefficient_count", "consumed_basis_coefficient_count",
+    "hard_gate_survivor", "evidence_firewall_violation_count", "record_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "request_index": {"type": "integer", "minimum": 1, "maximum": 1048576},
+    "request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "topology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "isomorphism_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "solver_input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "hard_gate_survivor": {"type": "boolean"},
+    "record_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

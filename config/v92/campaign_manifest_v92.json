@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "fusionconceptai-v92-hifi-closure-20260828",
+  "campaign_id": "physical_closure_v92_formal_417_20260828",
+  "manifest_id": "campaign_manifest_v92",
+  "sealed_at_utc": "2026-08-27T16:42:05Z",
+  "mutable": false,
+  "inputs": [
+    {"role": "v91_acceptance", "path": "runs/multitopology_acceptance_v91_20260827.json", "sha256": "eef675266b7476855ada114332021782d82a531332b3939985173308c8ef1183", "expected_count": 1},
+    {"role": "v91_survivor_dossiers", "path": "runs/multitopology_v91_formal_1000000_20260827/survivor_dossiers_v91.jsonl", "sha256": "d49c7c82dba5de1d58740a513a3ce0064f16d0e2985d6eb1bc4f648746ef74a9", "expected_count": 417}
+  ],
+  "realization_campaign": {
+    "required_input_count": 417,
+    "required_output_count": 417,
+    "duplicate_candidate_hashes_allowed": false,
+    "missing_candidate_hashes_allowed": false,
+    "shard_count": 16,
+    "assignment": "request_index_sorted_round_robin_mod_16",
+    "resume": "exact_protocol_and_input_hash_only",
+    "empty_or_corrupt_shard": "reject",
+    "deterministic_replay": "required_for_all_417",
+    "qualification_order": ["candidate_binding", "spatial_embedding", "well_posedness", "mesh_quality", "gene_and_basis_consumption", "solver_applicability"]
+  },
+  "known_and_negative_controls": {
+    "known_controls": ["ITER_design_engineering_regression_no_validation_credit", "C-2W_actual_experimental_control_if_measurements_attested", "applicable_three_dimensional_equilibrium_control_if_measurements_attested", "analytic_and_manufactured_verification_controls_no_validation_credit"],
+    "negative_controls": ["invalid_nonmanifold_geometry", "inverted_or_unoriented_surface", "ill_posed_equilibrium_boundary", "divergent_equilibrium", "field_line_wall_escape", "orbit_invariant_violation", "unstable_mode_positive_growth", "corrupt_checkpoint", "cross_protocol_result_injection", "manufactured_validation_credit_injection"],
+    "known_device_retroactive_candidate_credit": false
+  },
+  "pilot_selection": {
+    "eligible_pool": "physical_realization_status_equals_pass",
+    "stratify_by": "canonical_capability_signature",
+    "per_observed_signature": 1,
+    "primary_sort": "ascending_declared_complexity",
+    "tie_break": "ascending_canonical_candidate_hash",
+    "selection_rule_must_execute_before_pilot_results": true,
+    "ranking_may_skip_same_gate_candidates": false
+  },
+  "pilot_to_full_transition": {
+    "automatic_when_all_true": ["solver_coverage_pass", "known_controls_pass", "negative_controls_pass", "checkpoint_recovery_pass", "deterministic_replay_pass", "evidence_firewall_pass", "validation_vvuq_infrastructure_pass"],
+    "if_transition_passes": "schedule_every_realization_pass_candidate_through_equal hard-gate qualification",
+    "if_transition_fails": "do_not_claim_ready_to_continue; record exact first blocking infrastructure or evidence gate",
+    "expensive_stage_scheduling": "only_upstream_hard_gate_pass",
+    "ranking_skip_within_same_gate": false
+  },
+  "qualification_pipeline": ["realization", "equilibrium", "field_line_orbit", "linear_stability", "independent_comparison", "numerical_vvuq", "parameter_uq", "candidate_bound_validation_vvuq", "nonlinear_stability_for_prior_gate_finalists", "engineering_obligations", "promotion_decision"],
+  "status_semantics": {
+    "pass": "all preregistered applicable hard gates passed with candidate-bound evidence",
+    "fail": "an executed applicable hard gate failed",
+    "unknown": "evidence absent, disagreement unresolved, or applicability domain unbounded",
+    "unsupported": "required compatible backend or evidence capability unavailable",
+    "not_applicable": "the candidate declaration and equations prove the obligation is not applicable; renaming unsupported is forbidden"
+  },
+  "promotion_rule": {
+    "computationally_credible_fusion_device_concept_requires_all_applicable_hard_gates_pass": true,
+    "zero_survivor_output": {"computationally_credible_new_device_count": 0},
+    "experimentally_validated_new_fusion_device_count_default": 0,
+    "manufactured_sentinel_published_interval_credit": false
+  },
+  "checkpoint_and_artifact_policy": {
+    "request_written_before_execution": true,
+    "request_result_log_checkpoint_software_environment_and_container_hashes_required": true,
+    "per_stage_resource_usage_required": true,
+    "immutable_results": true,
+    "complete_logs_required": true,
+    "restart_and_replay_required": true,
+    "final_artifact_hash_required": true
+  },
+  "random_seeds": {"realization": 920001, "mesh": 920002, "orbit_markers": 920003, "parameter_uq": 920004, "nonlinear_perturbations": 920005, "validation_split": 920006}
+}

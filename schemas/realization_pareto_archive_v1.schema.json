@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "realization_pareto_archive_v1.schema.json",
+  "title": "RealizationParetoArchiveV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scope", "entries", "rejected", "selection_rule", "archive_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "scope": {"type": "object"},
+    "entries": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "rejected": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "selection_rule": {"const": "hard_gates_then_six_coordinate_nondominance_no_scalar_score"},
+    "archive_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_id", "complexity", "hard_gates", "payload", "reasons"],
+      "properties": {
+        "candidate_id": {"type": "string"},
+        "complexity": {"type": "object"},
+        "hard_gates": {"type": "object", "additionalProperties": {"type": "boolean"}},
+        "payload": {"type": "object"},
+        "reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

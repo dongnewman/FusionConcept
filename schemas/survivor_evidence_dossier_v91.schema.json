@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconcept.ai/schemas/survivor_evidence_dossier_v91.schema.json",
+  "title": "FusionConceptAI v91 hard-gate survivor evidence dossier",
+  "type": "object",
+  "required": [
+    "schema_version", "candidate_id", "request_index", "classification", "genome",
+    "basis", "realization", "solver_input", "screen_result", "stages",
+    "numerical_vvuq_status", "validation_vvuq_status",
+    "engineering_obligations_status", "dossier_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string"},
+    "request_index": {"type": "integer", "minimum": 1},
+    "classification": {
+      "type": "object",
+      "required": [
+        "novel_topology_candidate",
+        "computationally_credible_fusion_device_concept",
+        "engineering_qualified_fusion_device_design",
+        "experimentally_validated_new_fusion_device"
+      ]
+    },
+    "basis": {"type": "array", "minItems": 8, "maxItems": 8},
+    "stages": {"type": "array", "minItems": 19},
+    "dossier_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

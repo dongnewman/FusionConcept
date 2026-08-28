@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "multiregion_equilibrium_request_v93.schema.json",
+  "title": "MultiRegionEquilibriumRequestV93",
+  "type": "object",
+  "required": ["schema_version", "protocol_id", "source_provenance", "problem_hash", "route", "route_hash", "request_hash", "compilation_status", "translation_gaps"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol_id": {"const": "fusionconceptai-v93-family-neutral-multiregion-20260828"},
+    "source_provenance": {"type": "object"},
+    "problem": {"type": ["object", "null"]},
+    "problem_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "route": {"type": "object"},
+    "route_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "request_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "compilation_status": {"enum": ["fail_physical_model", "fail_invalid_geometry", "fail_boundary_or_interface_inconsistency", "fail_no_equilibrium_under_declared_model", "fail_numerical_convergence", "unknown_multiple_equilibrium_branches", "unknown_solver_disagreement", "unknown_validation_domain", "unsupported_operator_or_backend", "pass"]},
+    "first_blocker": {"type": ["string", "null"]},
+    "translation_gaps": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

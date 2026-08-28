@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "v84_sharded_fidelity_funnel_v1.schema.json",
+  "title": "V84ShardedFidelityFunnelV1",
+  "oneOf": [
+    {"$ref": "#/$defs/analyticMerge"},
+    {"$ref": "#/$defs/biotMerge"},
+    {"$ref": "#/$defs/poincareMerge"},
+    {"$ref": "#/$defs/physicalMerge"}
+  ],
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "base": {
+      "type": "object",
+      "required": ["schema_version", "status", "stage", "grammar_hash", "structure_hash", "candidate_count", "claim_boundary", "result_hash"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "status": {"const": "complete"},
+        "stage": {"type": "string"},
+        "grammar_hash": {"$ref": "#/$defs/hash"},
+        "structure_hash": {"$ref": "#/$defs/hash"},
+        "candidate_count": {"type": "integer", "minimum": 0},
+        "claim_boundary": {"type": "string", "minLength": 1},
+        "result_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "analyticMerge": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["grid_hash", "hard_gate_pass_count", "pareto_queue_count", "archive", "merged_stream_sha256", "queue_sha256", "source_shard_hashes"],
+          "properties": {
+            "stage": {"const": "analytic_lower_bound_merge"},
+            "grid_hash": {"$ref": "#/$defs/hash"},
+            "hard_gate_pass_count": {"type": "integer", "minimum": 0},
+            "pareto_queue_count": {"type": "integer", "minimum": 0},
+            "archive": {"type": "object"},
+            "merged_stream_sha256": {"$ref": "#/$defs/hash"},
+            "queue_sha256": {"$ref": "#/$defs/hash"},
+            "source_shard_hashes": {"type": "array", "items": {"$ref": "#/$defs/hash"}}
+          }
+        }
+      ]
+    },
+    "physicalMerge": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["queue_sha256", "fast_biot_savart_pass_count", "fast_biot_savart_fail_count", "poincare_admitted_count", "poincare_gate_pass_count", "poincare_gate_fail_count", "poincare_gate_unknown_count", "uncaught_exception_count", "merged_stream_sha256", "source_shard_hashes", "evidence_firewall"],
+          "properties": {
+            "stage": {"const": "physical_fidelity_merge"},
+            "queue_sha256": {"$ref": "#/$defs/hash"},
+            "fast_biot_savart_pass_count": {"type": "integer", "minimum": 0},
+            "fast_biot_savart_fail_count": {"type": "integer", "minimum": 0},
+            "poincare_admitted_count": {"type": "integer", "minimum": 0},
+            "poincare_gate_pass_count": {"type": "integer", "minimum": 0},
+            "poincare_gate_fail_count": {"type": "integer", "minimum": 0},
+            "poincare_gate_unknown_count": {"type": "integer", "minimum": 0},
+            "uncaught_exception_count": {"type": "integer", "minimum": 0},
+            "merged_stream_sha256": {"$ref": "#/$defs/hash"},
+            "source_shard_hashes": {"type": "array", "items": {"$ref": "#/$defs/hash"}},
+            "evidence_firewall": {
+              "type": "object",
+              "required": ["retroactive_analytic_credit", "fast_biot_savart_admission_requires_analytic_pareto", "poincare_admission_requires_fast_biot_savart_pass"],
+              "properties": {
+                "retroactive_analytic_credit": {"const": false},
+                "fast_biot_savart_admission_requires_analytic_pareto": {"const": true},
+                "poincare_admission_requires_fast_biot_savart_pass": {"const": true}
+              }
+            }
+          }
+        }
+      ]
+    },
+    "biotMerge": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["source_queue_sha256", "fast_biot_savart_pass_count", "fast_biot_savart_fail_count", "uncaught_exception_count", "poincare_queue_limit", "poincare_queue_count", "poincare_duplicate_rate", "merged_stream_sha256", "poincare_queue_sha256", "source_shard_hashes"],
+          "properties": {
+            "stage": {"const": "fast_biot_savart_merge"},
+            "source_queue_sha256": {"$ref": "#/$defs/hash"},
+            "fast_biot_savart_pass_count": {"type": "integer", "minimum": 0},
+            "fast_biot_savart_fail_count": {"type": "integer", "minimum": 0},
+            "uncaught_exception_count": {"type": "integer", "minimum": 0},
+            "poincare_queue_limit": {"type": "integer", "minimum": 1, "maximum": 20},
+            "poincare_queue_count": {"type": "integer", "minimum": 0, "maximum": 20},
+            "poincare_duplicate_rate": {"type": "number", "minimum": 0, "maximum": 1},
+            "merged_stream_sha256": {"$ref": "#/$defs/hash"},
+            "poincare_queue_sha256": {"$ref": "#/$defs/hash"},
+            "source_shard_hashes": {"type": "array", "items": {"$ref": "#/$defs/hash"}}
+          }
+        }
+      ]
+    },
+    "poincareMerge": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["queue_sha256", "poincare_gate_pass_count", "poincare_gate_fail_count", "poincare_gate_unknown_count", "uncaught_exception_count", "merged_stream_sha256", "source_shard_hashes", "evidence_firewall"],
+          "properties": {
+            "stage": {"const": "poincare_merge"},
+            "queue_sha256": {"$ref": "#/$defs/hash"},
+            "poincare_gate_pass_count": {"type": "integer", "minimum": 0},
+            "poincare_gate_fail_count": {"type": "integer", "minimum": 0},
+            "poincare_gate_unknown_count": {"type": "integer", "minimum": 0},
+            "uncaught_exception_count": {"type": "integer", "minimum": 0},
+            "merged_stream_sha256": {"$ref": "#/$defs/hash"},
+            "source_shard_hashes": {"type": "array", "items": {"$ref": "#/$defs/hash"}},
+            "evidence_firewall": {"type": "object"}
+          }
+        }
+      ]
+    }
+  }
+}

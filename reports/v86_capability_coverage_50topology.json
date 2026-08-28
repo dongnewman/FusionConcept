@@ -1,0 +1,2878 @@
+{
+    "budget_stratum_count": 2,
+    "request_count": 94,
+    "cells": [
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "0398faa6c43d36de9ce10f709dfc7583384bd094c9eaddcefdd3a98cc2d9563e",
+            "boundary_kinds": [
+                "neumann",
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "08dc2f2f0be4149656ed09b29f8ad73a450c5e4e5812e64b22532d31b7ae540b",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "0d17b0770799c3c8ff90d59ac030fcbf6a4c5033ce0595a58593cbf9a1f023da",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "1fc887ccb1d2413019d80ec89fc786bed5b507f77b1bb8508bfa5c43d3a1552c",
+            "boundary_kinds": [
+                "neumann",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "38e37e8dad75c4bd8a8a345ce9ca5603682343fb76a54e8fc6820c5a8e5feb0f",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "3aaf1bff78a168d61e46a53055ec1593b3375e186d394bd4cdfc726d2bee0d5c",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "40e79c62206f2393eb460bf2c9ff71bc9bb3367bb525afbdd9c4d893efa942d6",
+            "boundary_kinds": [
+                "neumann",
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0,
+                1,
+                2
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "4568ed3b1b99467eb64e17a19faf6593880041aa371ee862673839df9dee3c84",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode"
+            ],
+            "request_count": 4,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 2,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "4fe47c7782d29c7c6f2700d34babc5a8e1698e39dab645407e8eeca640d3bbd8",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "5211d11a4a44c930c6605167f81e8a319a9ca89dec445524213b9ebf948e44b9",
+            "boundary_kinds": [
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "52a18ddb6a369c0909c7b4d243a79a5eafd90d42d37ba4fe92c74bdd3498cfd1",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "5616b4257803197b8f1e6399f031f5a4b4f6b1f54d363d34e4e42fd3ed4943af",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "56464f000a790baa6aab6eff814666644be5d4102894ae1999cf048cb1de5f44",
+            "boundary_kinds": [
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                1,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "5bf75b1fa91469cb177f6dcd8f6fa94f9f32a3de86dbff8f8d1c00141207998d",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "6a738fed321f0546b4552b99752ca553c227cb4f78afbea684f72410dc4683ce",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                2,
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "70384f03b5c1f8de7a8885a0930eb4d458be5721e7577f8c823876d34ec4c00a",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "723df2128888f59a8c2f034785975a6d7937931c3f1388c0d16d141789f2c64a",
+            "boundary_kinds": [
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "8145e67e61e4e1a6526f76b8237460f87b365d520573baf2d78be97fba38fa55",
+            "boundary_kinds": [
+                "neumann",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "8334bcc7efaa6e4d531e8b1d9d61e602ca85090b31f1f6b1b8af57c3214132fb",
+            "boundary_kinds": [
+                "neumann"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "83524fe37d921763cd6470cf75be60622ad34b034dc67f8a3f295382204a25f7",
+            "boundary_kinds": [
+                "neumann",
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "86615ea85afc2cb19cc9e4fe7aaeaa1c225b3869e30f56ee02e8c110aff53a4e",
+            "boundary_kinds": [
+                "neumann",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "869fba8c3e29fe909e701aef26735fc9113d285707a13106339b599a092ae28f",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "8bbfa689d8cc54b30a95d942b8fb54f49c4654943adf60e424307f9866e66898",
+            "boundary_kinds": [
+                "neumann",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "96cdb3408a7a388ebc6c0cb3d04dbd04b1f0a0e2db71f72b59977b95bc461e0c",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0,
+                1,
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "9a9f2dfd3aaf853c5b8841f7cdc12fd438894b761d85cb52d839c8bd4ef9ccab",
+            "boundary_kinds": [
+                "neumann",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "9d1f35b39f0f4b38932e0354b9fca025c85a2e4f31d09350336f67d8ccee7340",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                1,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "9f72619601773820ff93a8d0cab1b8eae2dcfaa0f38f320a1705ecc3aec22d7f",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                1,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "a2c279b8674bb33d034c5590bd788495f19fa3025929b2127d85f34b3f05fc65",
+            "boundary_kinds": [
+                "neumann",
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "aab80e5fd20a805621d9745e12fb8552ae8004b54112dc265c70c9dba7578ed6",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "acbb471ec13ed028606fb7a9957d0dd6976be6cebd100dcca744ed186cf8edb1",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "bc89347cc4394bc09d85ff2ad064891da2b4ba86712d642ab8ae2af2c751f117",
+            "boundary_kinds": [
+                "neumann"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0,
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "bf8978e6f08581764981f18d4e5af82bc3bbf43e9f7663b003106d7f99f12944",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "bfe002fe9bade55d0bcbef17ae2372c389ba79fc2989b2b8b92bf12ec1d66886",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                2
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "c6ded14538b0a620b35b5f01a8698455ed11519308595de95f1d0d0070bc3090",
+            "boundary_kinds": [
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "cd5b56cbf5e6806ca81fd2d072dede5c1954509fc3c9b224e1e35bf6d5dd3e2c",
+            "boundary_kinds": [
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                1,
+                2
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "cf4c650e88ce953bfc7ed9bfbafc37ca3ecbac39c7058bb18675cfe05b09e1f6",
+            "boundary_kinds": [
+                "neumann",
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "d36c7609f86b1d0a94030c4213f0c0b1de40f94339bba31e71dc3cd3795b5c41",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0,
+                2,
+                3
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "da7d51492f39703d708048c966396dd29fcaec3aee8dd28fc864ec80271f42b1",
+            "boundary_kinds": [
+                "neumann",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "daffdfba453adec4854e4894288da83d72c3776baa617c18e60da2469c6dd4ff",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "e834ba15d057180ebd0bfb1e5f85e32919ff46d82fcb049233767fe5f87fe416",
+            "boundary_kinds": [
+                "neumann",
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "e946b1ff5faa717665512148ba71cdc49feb09d8c8b4f2323288e6004c1bb777",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                0,
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "ec0ccc90aca5ed916c68225c776940f530d2f4c0dd295b3614800fdb8f03d69a",
+            "boundary_kinds": [
+                "neumann",
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode",
+                "steady"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1,
+                3
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "f44d365cdfd8701d028afcab50cc03daec42f872fe2281886262e0527f87b156",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "not_applicable",
+                "sampled_ideal_mhd_stability": "available_candidate_bound_desc",
+                "finite_pressure_equilibrium": "available_candidate_bound_desc",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "available_candidate_bound"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": true,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": true,
+            "exclusion_reasons": [
+            ],
+            "budget_stratum_hash": "288c7f5d0e3f6a14f86c7c2354c435ad9013b3e1cb574bee4dc731957eedf75e",
+            "spatial_dimensions": [
+                0
+            ],
+            "comparison_scope_hash": "f448871252a21f4a63477c6ed9c9ca79cffb08b16f1cbf884957c42d0ca59d9e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "poincare_32",
+                "poincare_64",
+                "poincare_128",
+                "finite_pressure_equilibrium",
+                "sampled_ideal_mhd_stability"
+            ],
+            "geometry_class": "toroidal_volume_v1",
+            "capability_cell_hash": "f8a95d4bd05eb96beea9e48b6cc386dc793c551e7fb558bdd87c6d37da7c5a9a",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "f93e0ff0f91bffd996391215846393a624fe640669836b7341615702a1e32174",
+            "boundary_kinds": [
+                "open"
+            ]
+        },
+        {
+            "time_semantics": [
+                "index1_dae",
+                "ode"
+            ],
+            "request_count": 2,
+            "executor_coverage": {
+                "open_field_end_loss": "available_candidate_bound",
+                "sampled_ideal_mhd_stability": "unsupported",
+                "finite_pressure_equilibrium": "unsupported",
+                "finite_filament_field": "available_candidate_bound",
+                "poincare_nested_surfaces": "not_applicable"
+            },
+            "port_kinds": [
+                "actuator",
+                "boundary",
+                "control",
+                "energy_source",
+                "field_source",
+                "flux",
+                "heat_rejection",
+                "sensor"
+            ],
+            "state_kinds": [
+                "algebraic",
+                "energy",
+                "field",
+                "inventory"
+            ],
+            "minimality_eligible": false,
+            "unique_structure_count": 1,
+            "capability_ids": [
+                "actuator_port_v2",
+                "control_port_v2",
+                "declared_boundary_flux_v1",
+                "energy_source_port_v2",
+                "field_source_port_v2",
+                "heat_rejection_port_v2",
+                "sensor_port_v2"
+            ],
+            "coverage_complete_for_declared_minimality": false,
+            "exclusion_reasons": [
+                "missing_candidate_bound_open_field_finite_pressure_capability"
+            ],
+            "budget_stratum_hash": "66f5757b33e29aed6f5231a8a8779f23c2644e56e2748185f0e2b2fb2fbb7698",
+            "spatial_dimensions": [
+                1,
+                2
+            ],
+            "comparison_scope_hash": "30e06bd35945b58443315201f40efa0dd7b68c2b446e60138122c529f7d25e2e",
+            "required_hard_gate_chain": [
+                "finite_filament_field",
+                "open_field_end_loss",
+                "open_field_finite_pressure_capability"
+            ],
+            "geometry_class": "linear_volume_v1",
+            "capability_cell_hash": "fbd6494f34c6e3185a750beaf5f3f73028b9cbd8307af3819cd555dbfd444f80",
+            "boundary_kinds": [
+                "open",
+                "robin"
+            ]
+        }
+    ],
+    "routing_inputs": [
+        "spatial_dimensions",
+        "time_semantics",
+        "boundary_kinds",
+        "state_kinds",
+        "port_kinds",
+        "capability_ids",
+        "geometry_class",
+        "solver_validity_domain"
+    ],
+    "comparison_scope_count": 2,
+    "coverage_manifest_hash": "8e41acedb3dd9ad7ab07d5190f3e0b210bb6a88fbc068d468aca30f3962fa15e",
+    "capability_cell_count": 46,
+    "minimality_excluded_request_count": 66,
+    "claim_boundary": "v86 provides label-free multi-topology scheduling, content-addressed solver-input reuse, resumable shards, progressive Poincare admission, and an actual finite-filament open-field end-loss executor. Acquisition and basis promotion never grant retroactive feasibility credit. Open-field candidates remain outside minimality until a candidate-bound finite-pressure capability is supplied; no kinetic, nonlinear-stability, full-engineering, VVUQ, net-power, originality, or build-ready claim is made.",
+    "minimality_eligible_request_count": 28,
+    "cross_capability_pareto_dominance_allowed": false,
+    "schema_version": "1.0.0",
+    "campaign_hash": "17c0fc148601b8a2e31a82de0660e07e0d265d91166bf5746ba354e3340500f1",
+    "device_family_routing_used": false
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fusionconceptai.local/schemas/stage_frontier_campaign_v86.schema.json",
+  "title": "StageFrontierCampaignV86",
+  "type": "object",
+  "required": ["schema_version", "specification", "requests", "campaign_hash", "claim_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "specification": {
+      "type": "object",
+      "required": ["campaign_kind", "parent_campaign_hash", "scheduled_gate", "request_count", "request_hashes", "scheduled_gate_by_request_hash", "capability_cell_count", "budget_stratum_count", "fair_schedule_request_indices", "fairness_policy", "budget_policy", "budget_decisions", "frontier_metadata", "retroactive_feasibility_credit"],
+      "properties": {
+        "campaign_kind": {"enum": ["initial_field_frontier_v1", "merged_evidence_stage_frontier_v1"]},
+        "parent_campaign_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "scheduled_gate": {"enum": ["finite_filament_field", "poincare_32", "poincare_64", "poincare_128", "open_field_end_loss", "finite_pressure_equilibrium", "sampled_ideal_mhd_stability"]},
+        "request_count": {"type": "integer", "minimum": 0},
+        "budget_policy": {"$ref": "capability_budget_policy_v1.schema.json"},
+        "retroactive_feasibility_credit": {"const": false}
+      }
+    },
+    "requests": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {"$ref": "candidate_solve_request_v86.schema.json"},
+          {"type": "object", "required": ["scheduled_gate"]}
+        ]
+      }
+    },
+    "campaign_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

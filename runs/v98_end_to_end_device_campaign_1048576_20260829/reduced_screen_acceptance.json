@@ -1,0 +1,141 @@
+{
+    "candidate_state_histogram": {
+        "topology_screen_fail": 455444,
+        "provider_system_fail": 0,
+        "physics_screen_fail": 592897,
+        "validation_pass": 0,
+        "numerical_vvuq_fail": 168,
+        "computational_candidate": 67
+    },
+    "request_count": 1048576,
+    "provider_replay_samples": [
+        {
+            "status": "pass",
+            "request_index": 129,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 83845,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 166159,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 240783,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 317913,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 391515,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 473957,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 552369,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 610072,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 651774,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 723894,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 801110,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 865194,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 907976,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 975910,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        },
+        {
+            "status": "pass",
+            "request_index": 1048574,
+            "graph_hash_match": true,
+            "solver_input_hash_match": true
+        }
+    ],
+    "unsupported_candidate_count": 0,
+    "failed_gate_histogram": {
+        "neutron_wall_load": 48055,
+        "minimum_beta": 43546,
+        "peak_conductor_field": 55859,
+        "fusion_gain": 588360,
+        "plasma_current": 32490,
+        "exhaust_heat_flux": 514590,
+        "capability_scoped_stability": 204592,
+        "net_electric_power": 589277
+    },
+    "result_stream_hash": "a8ce2f22c688de7f1bd5b0da55e90fed6890066c0c32746c4400376036cc151a",
+    "computational_candidate_count": 67,
+    "validation_pass_count": 0,
+    "v97_acceptance_hash": "da62c2468a1c49394619b6fc9204c79cb4bbced7f202e6f78455c9424def97da",
+    "acceptance_hash": "3286606eb98e6388b9c00e53473f978eba0c10b6ff77a92438eb8d7c30d68591",
+    "protocol_id": "fusionconceptai-v98-end-to-end-device-pipeline-20260829",
+    "reference_acceptance_hash": "ec992b1d69713380d948569045f95ba5cdc44abc5a04b6f3a29ece7828f9e6eb",
+    "sealed_provider_closed_count": 593132,
+    "claim_boundary": "v98 separates topology rejection, provider-system failure, candidate-bound reduced physics rejection, numerical VVUQ, computational candidacy, and validation. Design coordinates may propose geometry and operating inputs, but no basis coordinate receives direct metric or gate credit. The reduced empirical confinement, Bosch-Hale reaction, zero-dimensional power, and engineering screens are candidate-ranking evidence only; they are not high-fidelity equilibrium, complete stability, materials qualification, experimental validation, or a credible-device claim.",
+    "status": "complete_reduced_screen",
+    "experimental_validation_independent": true,
+    "capability_route_histogram": {
+        "closed_core_open_exhaust": 494372,
+        "three_dimensional_closed": 8864,
+        "open_field": 736,
+        "mixed_open_closed": 78632,
+        "axisymmetric_closed": 10528
+    },
+    "candidate_stream": "computational_candidates.jsonl",
+    "provider_system_failure_count": 0,
+    "high_fidelity_pending_count": 67
+}

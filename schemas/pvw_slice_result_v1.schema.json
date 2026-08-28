@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pvw_slice_result_v1.schema.json",
+  "title": "Plasma-vacuum-wall slice result",
+  "type": "object",
+  "required": ["protocol_id", "declaration_hash", "route", "status", "solver_executed", "primary_equilibrium_status", "numerical_vvuq_status", "validation_vvuq_status", "result_hash"],
+  "properties": {
+    "protocol_id": {"const": "fusionconceptai-v93-pvw-slice1-20260828"},
+    "declaration_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["unsupported_operator_or_backend", "fail_numerical_convergence", "unknown_multiple_equilibrium_branches", "unknown_solver_disagreement", "unknown_validation_domain", "pass"]},
+    "solver_executed": {"type": "boolean"},
+    "primary_equilibrium_status": {"type": "string"},
+    "numerical_vvuq_status": {"type": "string"},
+    "validation_vvuq_status": {"type": "string"},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

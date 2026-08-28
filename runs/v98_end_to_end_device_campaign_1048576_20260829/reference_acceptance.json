@@ -1,0 +1,92 @@
+{
+    "protocol_id": "fusionconceptai-v98-end-to-end-device-pipeline-20260829",
+    "fail_fast_before_campaign": true,
+    "reference_recall": {
+        "passed": 2,
+        "total": 2
+    },
+    "claim_boundary": "v98 separates topology rejection, provider-system failure, candidate-bound reduced physics rejection, numerical VVUQ, computational candidacy, and validation. Design coordinates may propose geometry and operating inputs, but no basis coordinate receives direct metric or gate credit. The reduced empirical confinement, Bosch-Hale reaction, zero-dimensional power, and engineering screens are candidate-ranking evidence only; they are not high-fidelity equilibrium, complete stability, materials qualification, experimental validation, or a credible-device claim.",
+    "status": "pass",
+    "reference_controls": [
+        {
+            "checks": [
+                {
+                    "reference_interval_w": [
+                        450000000,
+                        550000000
+                    ],
+                    "status": "pass",
+                    "prediction_w": 5.61830171509766e8,
+                    "model_interval_w": [
+                        4.7755564578330106e8,
+                        6.461046972362309e8
+                    ],
+                    "validation_credit": false,
+                    "check": "fusion_power_model_interval_overlap"
+                },
+                {
+                    "status": "pass",
+                    "declared_duration_s": 400,
+                    "validation_credit": false,
+                    "reference_interval_s": [
+                        400,
+                        600
+                    ],
+                    "check": "declared_pulse_duration_binding"
+                }
+            ],
+            "capability_hash": "6723ec3df0de13ccb485eade357cb04b6af508e8e0d8fb2a39039e52fa6d17a5",
+            "validation_vvuq": {
+                "status": "unknown_validation_domain",
+                "reason": "reference_values_are_not_an_independent_holdout_for_this_binding"
+            },
+            "validation_credit": false,
+            "anchor_kind": "published_design_baseline_not_experimental_measurement",
+            "claim_boundary": "ITER values are published design/reference-scenario targets. ITER has not supplied an experimental D-T anchor for this fixture; model agreement would be regression to a design point, not experimental validation.",
+            "physics_screen_status": "fail",
+            "numerical_vvuq_status": "pass",
+            "identity_fields_used_for_routing": false,
+            "reference_status": "pass",
+            "solve_hash": "051257b4409a142a3bb87fa306040f1ddcdb244c5dae33fecd7fb60be5ac801f"
+        },
+        {
+            "checks": [
+                {
+                    "status": "pass",
+                    "derived_temperature_ev": 1500.306669118393,
+                    "reference_interval_ev": [
+                        500,
+                        3000
+                    ],
+                    "validation_credit": false,
+                    "check": "state_derived_temperature_interval"
+                },
+                {
+                    "status": "pass",
+                    "declared_duration_s": 0.04,
+                    "validation_credit": false,
+                    "reference_interval_s": [
+                        0.03,
+                        0.04
+                    ],
+                    "check": "declared_pulse_duration_binding"
+                }
+            ],
+            "capability_hash": "7316bd03022e90454609e1c24af6f6866171f12f32724fcfc9136c8763032e8f",
+            "validation_vvuq": {
+                "status": "unknown_validation_domain",
+                "reason": "reference_values_are_not_an_independent_holdout_for_this_binding"
+            },
+            "validation_credit": false,
+            "anchor_kind": "published_experimental_parameter_range",
+            "claim_boundary": "C-2W values are bounded published experimental ranges, but the L1 parallel-streaming operator omits fast-ion trapping, neutral-beam deposition, charge exchange, edge bias, active control and reconstructed FRC equilibrium. Disagreement falsifies this reduced operator for the anchor, not the C-2W experiment or FRC topology.",
+            "physics_screen_status": "fail",
+            "numerical_vvuq_status": "pass",
+            "identity_fields_used_for_routing": false,
+            "reference_status": "pass",
+            "solve_hash": "96d34beec9e210986b2d970b925116f1650e3115fdb4228509ae66754cbd992b"
+        }
+    ],
+    "experimental_validation_pass_count": 0,
+    "acceptance_hash": "ec992b1d69713380d948569045f95ba5cdc44abc5a04b6f3a29ece7828f9e6eb"
+}
