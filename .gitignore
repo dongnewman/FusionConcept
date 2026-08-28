@@ -156,6 +156,14 @@
 !/scripts/run_v98_end_to_end_campaign.jl
 !/scripts/run_v98_freegs_batch.py
 !/scripts/run_v98_freegs_candidate.py
+!/scripts/desc_fourier_runner.py
+!/scripts/desc_stellarator_stability_runner.py
+!/scripts/desc_axisymmetric_stability_v99_runner.py
+!/scripts/run_v99_desc_candidate.py
+!/scripts/run_v99_desc_batch.py
+!/scripts/run_v99_freegs_static_robustness.py
+!/scripts/run_v99_full_device_acceptance.jl
+!/scripts/validate_v99_artifacts.py
 
 # Compact v94-v98 acceptance evidence. Raw v97 shards remain ignored.
 !/runs/v94_generic_capability_acceptance/
@@ -188,6 +196,20 @@
 !/runs/v98_end_to_end_device_campaign_1048576_20260829/freegs_verification_v3/acceptance.json
 !/runs/v98_end_to_end_device_campaign_1048576_20260829/freegs_verification_v3/results/
 !/runs/v98_end_to_end_device_campaign_1048576_20260829/freegs_verification_v3/results/*.json
+!/runs/v99_full_device_qualification_20260829/
+/runs/v99_full_device_qualification_20260829/*
+!/runs/v99_full_device_qualification_20260829/acceptance.json
+!/runs/v99_full_device_qualification_20260829/acceptance_report.md
+!/runs/v99_full_device_qualification_20260829/reference_controls.json
+!/runs/v99_full_device_qualification_20260829/cross_code_batch_v1/
+/runs/v99_full_device_qualification_20260829/cross_code_batch_v1/*
+!/runs/v99_full_device_qualification_20260829/cross_code_batch_v1/acceptance.json
+!/runs/v99_full_device_qualification_20260829/cross_code_batch_v1/results/
+!/runs/v99_full_device_qualification_20260829/cross_code_batch_v1/results/*.json
+!/runs/v99_full_device_qualification_20260829/static_robustness/
+!/runs/v99_full_device_qualification_20260829/static_robustness/*.json
+
+!/reports/full_device_qualification_v99_20260829.md
 
 # Language and editor caches
 __pycache__/

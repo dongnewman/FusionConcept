@@ -1,0 +1,39 @@
+{
+    "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+    "reference_control_count": 2,
+    "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+    "status": "pass",
+    "reference_controls": [
+        {
+            "required_provider_class": "axisymmetric_free_boundary_plus_independent_fixed_boundary",
+            "whole_device_candidate_credit": false,
+            "route_expectation_passed": true,
+            "validation_credit": false,
+            "capability_route": "axisymmetric_closed",
+            "control_id": "iter_inductive_baseline_design_v1",
+            "dag_hash": "8d95048df9a9e1a02bc989d6f43bfaebe8a0784688586fe9013ca4ba35e9c6f8",
+            "claim_boundary": "ITER values are published design/reference-scenario targets. ITER has not supplied an experimental D-T anchor for this fixture; model agreement would be regression to a design point, not experimental validation.",
+            "identity_fields_used_for_routing": false,
+            "reference_status": "pass",
+            "freegs_desc_axisymmetric_bridge_applicable": true
+        },
+        {
+            "required_provider_class": "open_field_extended_mhd_or_kinetic",
+            "whole_device_candidate_credit": false,
+            "route_expectation_passed": true,
+            "validation_credit": false,
+            "capability_route": "open_field",
+            "control_id": "c2w_enhanced_performance_experiment_v1",
+            "dag_hash": "e45deac53d2ff4418e15247023c0ca38e2a20071803bad465aad9098f0a42288",
+            "claim_boundary": "C-2W values are bounded published experimental ranges, but the L1 parallel-streaming operator omits fast-ion trapping, neutral-beam deposition, charge exchange, edge bias, active control and reconstructed FRC equilibrium. Disagreement falsifies this reduced operator for the anchor, not the C-2W experiment or FRC topology.",
+            "identity_fields_used_for_routing": false,
+            "reference_status": "pass",
+            "freegs_desc_axisymmetric_bridge_applicable": false
+        }
+    ],
+    "identity_fields_used_for_routing": false,
+    "schema_version": "1.0.0",
+    "validation_pass_count": 0,
+    "whole_device_credible_count": 0,
+    "acceptance_hash": "e8477eeb4b4bc342f1400c20b0ca7b89d3186c54db7f43d44684122525d13387"
+}

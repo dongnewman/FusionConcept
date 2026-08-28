@@ -1,0 +1,343 @@
+{
+  "acceptance_hash": "2534cb995ac3b1f8fb08f6b8ca40a41e8fba592dec86d01955f583ef26d2b7da",
+  "candidate_count": 31,
+  "candidate_state_histogram": {
+    "cross_code_equilibrium_fail": 4,
+    "sampled_ideal_mhd_candidate": 1,
+    "stability_screen_fail": 24,
+    "transformer_fit_fail": 1,
+    "transformer_profile_fail": 1
+  },
+  "claim_boundary": "A v99 pass covers cross-code fixed-boundary equilibrium and sampled Mercier/infinite-n ballooning only. It is not complete stability, transport, engineering, validation, whole-device feasibility, or credibility.",
+  "failed_gate_histogram": {
+    "desc_candidate_equilibrium": 4,
+    "freegs_to_desc_boundary_fit": 1,
+    "freegs_to_desc_iota_profile": 1,
+    "sampled_mercier": 24
+  },
+  "processed_count": 31,
+  "protocol_id": "fusionconceptai-v99-cross-code-qualification-20260829",
+  "provider_system_failure_count": 0,
+  "rows": [
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 68443,
+      "result_hash": "919918e450791305e5fc4a24fc500853aa18429afafc94feed86c5868bfbba69",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 121839,
+      "result_hash": "c7b0aadc57e03f8e9429ebcc31242b195a89f4f7c0581556941ac8215a9256b1",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 122639,
+      "result_hash": "e3909f7cc21fd5dd8583851ec55e2a06b0eb1c43b9aa9862f0bb383aece719a2",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 124799,
+      "result_hash": "50c27e55379738ca66c4811fb4d22c440607418de7fdf0f7da437e70ec7c2a43",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "transformer_profile_fail",
+      "failed_gates": [
+        "freegs_to_desc_iota_profile"
+      ],
+      "process_exit_code": 0,
+      "request_index": 350999,
+      "result_hash": "878a8a704550baca41b6835af88049675a09054b774f5a977dacec461f51ab1f",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "cross_code_equilibrium_fail",
+      "failed_gates": [
+        "desc_candidate_equilibrium"
+      ],
+      "process_exit_code": 0,
+      "request_index": 364398,
+      "result_hash": "03e47b997512a9525fdc810f0871de0fbf7ab32f928549006f159b33aef84c76",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 368479,
+      "result_hash": "2556b23285e358cfecf75cdde49801abd5e404a39969cc092cf3f8c121b43d65",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 383759,
+      "result_hash": "28ffd3d1cd7f6dd6ddd66042ee2243a1bc0ceb91dcb85b3258cd4296f8a3569a",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 448494,
+      "result_hash": "57dbc39fe288a93d5013464e7edccfd6a4b5196f4d7ea55bab71e605dcae1b6d",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "cross_code_equilibrium_fail",
+      "failed_gates": [
+        "desc_candidate_equilibrium"
+      ],
+      "process_exit_code": 0,
+      "request_index": 593759,
+      "result_hash": "a96625807775b31d8a46e4540f4b90ec4f7db8a5ec2fe5aea86041be231e2893",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 606343,
+      "result_hash": "c1ec94ba7e463313b005421c75e7e96ed533ff8b7cbd4517dae8a11b96243ed2",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 609214,
+      "result_hash": "3e8752809ce2c1efae966456498721fa9447007557f6333c56d555ad00f013d8",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 625659,
+      "result_hash": "58ed569bbfd1fabd694928548e0106ee703a3d6b768ef35c508d79c7f5adaea5",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "transformer_fit_fail",
+      "failed_gates": [
+        "freegs_to_desc_boundary_fit"
+      ],
+      "process_exit_code": 0,
+      "request_index": 629599,
+      "result_hash": "d23ebcb337f1418c317b1ac9b5e3981d5c9e907dd9675bfdefbf21b3003eb1f3",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 641003,
+      "result_hash": "11d0b3c240a325aeb39c4183e3caf4752c4b4e007b64b8e9cafca024a7a4a6b8",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 641598,
+      "result_hash": "72c0357bd564474e6a02439df88648898cc65b72ad956e3dd75b335d76f402b3",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 641819,
+      "result_hash": "e049183f7d6d8a0a2931708bae54c5d433a95db8618bfb3d10609ca2090ba5bb",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 642534,
+      "result_hash": "7e03f7fc46b33987d0f2255cfc9b8f1fc4bb527722d9666e737d0bc30bb1154c",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 674699,
+      "result_hash": "8fefd18026c829a2127cf119bcd93aab6629843cd6856163bd0cbda0830a8f1e",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "cross_code_equilibrium_fail",
+      "failed_gates": [
+        "desc_candidate_equilibrium"
+      ],
+      "process_exit_code": 0,
+      "request_index": 825199,
+      "result_hash": "043a4dbe5ff46602e77be4d1fe920b209a180641e6595d8e0cc2ced87646cadc",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v2"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 854879,
+      "result_hash": "2a4fd7683a9b5cb0d5439cd538d936e63cd09506fd1bbfda189d2426d707f918",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 855033,
+      "result_hash": "07af3d7af896a1a414556339d4532fcd26580caeb66af2211dee67e1c689cceb",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 857022,
+      "result_hash": "58b1262f0fb735eb0f4c43163171aebf07311aa43a0ee6b8425fa874670971c3",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 876469,
+      "result_hash": "30e6f624d8a5bd64874f9e85352bb9f5859e212fa0a5ec9dc544da0f8b28e17f",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 880619,
+      "result_hash": "20b1fbc0a03824c2bd32f14cc58f2a79438280c68d02e3929f83b983c13a3f84",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 890719,
+      "result_hash": "83a287e87bb5e62e96ff2a4a53bc621c4fbc891c1f99d3bc4aa6bcf88cf8ae31",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 895919,
+      "result_hash": "c36bb003b128a30e813cfb61fda900a9e08f3fe69751772007f6badeba441dd4",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 902143,
+      "result_hash": "43da5f2253e57f20e6057bf376e3589b6870b59f186475642451b4015a2d81a5",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 920449,
+      "result_hash": "255050b0651bcd0ae35041a1ae1dd5d2ad3003f78c5264783b752d15f6560687",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "stability_screen_fail",
+      "failed_gates": [
+        "sampled_mercier"
+      ],
+      "process_exit_code": 0,
+      "request_index": 940974,
+      "result_hash": "d5426e201c29554b069dfe4a734f6ffbd8ecbe5ff0f98c188dd108a0c3ec07e5",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "cross_code_equilibrium_fail",
+      "failed_gates": [
+        "desc_candidate_equilibrium"
+      ],
+      "process_exit_code": 0,
+      "request_index": 1023979,
+      "result_hash": "b8d552d095610442d1acf5d4cf3428fc3208567bf85073b3f46dbb20b5d79bca",
+      "runner_version": "v99_axisymmetric_cross_code_qualification_v1"
+    }
+  ],
+  "runner_version_histogram": {
+    "v99_axisymmetric_cross_code_qualification_v1": 24,
+    "v99_axisymmetric_cross_code_qualification_v2": 7
+  },
+  "schema_version": "1.0.0",
+  "source_candidate_stream": "computational_candidates.jsonl",
+  "source_candidate_stream_sha256": "18f1b8a191b81dda27cfd887e16b2c6a245fcbeace8fe8721801d04b1e2afd0d",
+  "source_freegs_acceptance_hash": "b559c7c8cc4d3fc7195dbff7b8f860662ed15df657521ca239e0bf0e5fdb076d",
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}

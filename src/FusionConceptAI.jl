@@ -298,6 +298,7 @@ include("provider_closure_acceptance_v96.jl")
 include("exhaustive_physical_rescreen_v97.jl")
 include("exhaustive_physical_campaign_v97.jl")
 include("end_to_end_device_pipeline_v98.jl")
+include("full_device_qualification_v99.jl")
 
 export Quantity,
        MissionSpec,
@@ -1972,6 +1973,12 @@ export Stage3ExecutionBudgetV1,
        numerical_vvuq_candidate_v98,
        evaluate_indexed_device_v98,
        run_v98_reference_acceptance,
-       run_v98_screening_campaign
+       run_v98_screening_campaign,
+       V99_PROTOCOL_ID,
+       V99_FULL_DEVICE_STAGES,
+       FULL_DEVICE_QUALIFICATION_V99_CLAIM_BOUNDARY,
+       compile_full_device_qualification_dag_v99,
+       evaluate_full_device_qualification_v99,
+       run_v99_reference_controls
 
 end

@@ -1,0 +1,189 @@
+{
+  "boundary_transform": {
+    "R_modes": [
+      {
+        "coefficient_m": 8.811401768012434,
+        "m": 0,
+        "n": 0
+      },
+      {
+        "coefficient_m": 1.9355196652343278,
+        "m": 1,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.01238284505819556,
+        "m": 2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.05378537805056969,
+        "m": 3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.11331664913509862,
+        "m": 4,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.02985743317119549,
+        "m": 5,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.007760769974230454,
+        "m": 6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.026113846787864155,
+        "m": 7,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.003162181336502287,
+        "m": 8,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.005818177641314648,
+        "m": 9,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.005592755040259482,
+        "m": 10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.007080076093075635,
+        "m": 11,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.005149259545864521,
+        "m": 12,
+        "n": 0
+      }
+    ],
+    "Z_modes": [
+      {
+        "coefficient_m": -3.416121418428112,
+        "m": -1,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.48407201068316,
+        "m": -2,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.053170408849984994,
+        "m": -3,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.2523239733178882,
+        "m": -4,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.009055241167195149,
+        "m": -5,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.029097504286182456,
+        "m": -6,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.015957168677821522,
+        "m": -7,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.02061923714370802,
+        "m": -8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.021461291292230622,
+        "m": -9,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.036760426379147275,
+        "m": -10,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0011983615310724742,
+        "m": -11,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.031152297514095977,
+        "m": -12,
+        "n": 0
+      }
+    ],
+    "fit_gate_passed": true,
+    "fit_max_relative_to_minor_radius": 0.05857524047809136,
+    "fit_rms_relative_to_minor_radius": 0.011073405504310707,
+    "fitted_minor_radius_m": 2.047030084324795,
+    "fitted_vertical_minor_radius_m": 3.774689443781477,
+    "shrink_from_separatrix": 0.9
+  },
+  "candidate_result_hash": "4f3318eba62a7f0c44557d5f471aadf023d3397903a41d6e10e879211c4a3d12",
+  "candidate_state": "cross_code_equilibrium_fail",
+  "capability_route": "closed_core_open_exhaust",
+  "claim_boundary": "Candidate-bound FreeGS-to-DESC cross-code equilibrium and sampled Mercier/infinite-n ballooning qualification only. A pass does not establish finite-n, resistive, kinetic, nonlinear, disruption, transport, exhaust, materials, engineering, experimental validation, whole-device feasibility, or credibility.",
+  "cross_code_equilibrium": {
+    "reason": "desc_equilibrium_unavailable",
+    "status": "not_executed"
+  },
+  "desc_result": {
+    "error_type": "RuntimeError",
+    "message": "re-solved equilibrium failed its declared physical gates",
+    "process_exit_code": 0,
+    "runner_version": "desc_stellarator_sampled_ideal_mhd_stability_runner_v1",
+    "status": "error",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\scripts\\desc_stellarator_stability_runner.py\", line 558, in main\n    result = solve(payload)\n  File \"D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\scripts\\desc_stellarator_stability_runner.py\", line 506, in solve\n    equilibrium, equilibrium_record = construct_and_solve(solver_input, np)\n                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\scripts\\desc_stellarator_stability_runner.py\", line 260, in construct_and_solve\n    raise RuntimeError(\"re-solved equilibrium failed its declared physical gates\")\nRuntimeError: re-solved equilibrium failed its declared physical gates\n"
+  },
+  "failed_gates": [
+    "desc_candidate_equilibrium"
+  ],
+  "freegs_full_result_hash": "995413784a69964721f7ad9365802faa848faf5e2f4b45465322e3e970b74880",
+  "freegs_verification_hash": "6961a88d26337f9294b699b1e77eb170bc6fc81fcf956ea786649cc592ba7022",
+  "identity_fields_used_for_routing": false,
+  "numerical_vvuq": {
+    "reason": "cross_code_equilibrium_and_sampled_local_ideal_mhd_only",
+    "status": "fail"
+  },
+  "request_index": 1023979,
+  "result_hash": "b8d552d095610442d1acf5d4cf3428fc3208567bf85073b3f46dbb20b5d79bca",
+  "routing_axes": [
+    "field_semantics",
+    "boundary",
+    "operator",
+    "dimension"
+  ],
+  "runner_version": "v99_axisymmetric_cross_code_qualification_v1",
+  "schema_version": "1.0.0",
+  "stage_order": [
+    "freegs_verified_equilibrium",
+    "freegs_to_desc_transform",
+    "desc_fixed_boundary_equilibrium",
+    "sampled_ideal_mhd",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "unsupported_candidate_classification_used": false,
+  "validation_vvuq": {
+    "reason": "upstream_qualification_failed",
+    "status": "not_executed"
+  },
+  "whole_device_credible": false
+}

@@ -1,0 +1,3213 @@
+{
+    "candidate_state_histogram": {
+        "physical_reject": 29,
+        "transformer_reject": 2
+    },
+    "blocker_histogram": {
+        "sampled_local_ideal_mhd": 24,
+        "incomplete:particle_and_heat_exhaust": 31,
+        "incomplete:sampled_local_ideal_mhd": 6,
+        "cross_code_equilibrium": 4,
+        "incomplete:engineering_qualification": 30,
+        "incomplete:complete_stability": 31,
+        "incomplete:transport_and_confinement": 31,
+        "incomplete:cross_code_equilibrium": 2,
+        "engineering_qualification": 1,
+        "incomplete:numerical_vvuq": 31,
+        "incomplete:validation_vvuq": 31
+    },
+    "candidate_count": 31,
+    "unsupported_candidate_count": 0,
+    "stage_order": [
+        "free_boundary_equilibrium",
+        "cross_code_equilibrium",
+        "sampled_local_ideal_mhd",
+        "complete_stability",
+        "transport_and_confinement",
+        "particle_and_heat_exhaust",
+        "engineering_qualification",
+        "numerical_vvuq",
+        "validation_vvuq"
+    ],
+    "acceptance_hash": "34c5a4ea3acd9beea147e29270554360a59bccc4871129bc323f4405634a755d",
+    "reference_validation_credit_count": 0,
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+    "reference_acceptance_hash": "e8477eeb4b4bc342f1400c20b0ca7b89d3186c54db7f43d44684122525d13387",
+    "reference_control_count": 2,
+    "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+    "status": "complete",
+    "rows": [
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "919918e450791305e5fc4a24fc500853aa18429afafc94feed86c5868bfbba69",
+            "validation_pass": false,
+            "request_index": 68443,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "1c8695c948ea6fc534b652552711c1e636d5768dfed9ce86d72ce8b9e16755db",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "4909b75501dab8dcab3b235812e0d76b35a05023028f836a23346f4c5432cc70",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "4909b75501dab8dcab3b235812e0d76b35a05023028f836a23346f4c5432cc70",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "98ef596d55764768cd6ecb72eb1a3308e726ea7c33f6cd0acfc61ba5d7a64574",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "engineering_qualification",
+                    "reason": "candidate_bound_static_PF_and_engineering_proxy_failed"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "sampled_ideal_mhd_candidate",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "db64cb7c5266420ea9963b62fdfce5d7dd133501468248810770bf9f26991987",
+            "physical_failure_stages": [
+                "engineering_qualification"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "d20eb303bd745f46da30a37a12c7fd6f3e58341b597f91371fefb5cae82244fa",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "4a9b847981b27bb68e211c57a96d2adcf1c7fe89cfa4ff1ff5e7545eee2a176d"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "c7b0aadc57e03f8e9429ebcc31242b195a89f4f7c0581556941ac8215a9256b1",
+            "validation_pass": false,
+            "request_index": 121839,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "0eb66a63bb9b14a30fa965bcb366a59761c26daeb8ea77f9134933583d4cf7aa",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "0287799d63c871b29a329a270bd34fbf495dc6a4b4a2c1a193d358b07047aeea",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "0287799d63c871b29a329a270bd34fbf495dc6a4b4a2c1a193d358b07047aeea",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "7eaf14d658f5ed0f8e274249f66b42943dd474105befea9e3edbdae8713a7c1e",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "5382381c892e6aa72cb90ebcc09b561b1516f27422cd8b05e950f7d6d84b946a",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "cff1b09b51a338c5e169311f81835de3f11a1cbb3876c61915b9ab8ebfa184b9"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "e3909f7cc21fd5dd8583851ec55e2a06b0eb1c43b9aa9862f0bb383aece719a2",
+            "validation_pass": false,
+            "request_index": 122639,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "1ef4e78b4fcddbaaac9b715249c58b3b32ae90579addac12b363741d409ad462",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "07991b8f3059e7619b974a5f2e36b9f83e1c88e22823b166df9720117240e5ca",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "07991b8f3059e7619b974a5f2e36b9f83e1c88e22823b166df9720117240e5ca",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "842d611b152bb6568d537a8e71c9a16f42d5cde8f1a8a59561e39a1cd4c9ba8b",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "07a99a4a068c5244dc1fdf9da60fea21fb2bb93ecc654687e37f2c12d6e0d623",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "41ef7294b109a939fdc502ba6cddb4fdd009ce3f6cd1d113ece0452c1f437f35"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "50c27e55379738ca66c4811fb4d22c440607418de7fdf0f7da437e70ec7c2a43",
+            "validation_pass": false,
+            "request_index": 124799,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "6fdfa816eceeca2f44ba4c3dea8378f6b5366220b1462f191bafb360fd2d8377",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "66af3fb4c758b8c151f96f7408709d956d75bfa01cc37e0e5c80f5c480224ec0",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "66af3fb4c758b8c151f96f7408709d956d75bfa01cc37e0e5c80f5c480224ec0",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "7d91604706aca09419112065a95c9ef913d325e945e8b8e3af80b313550a8329",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "bc69adb14fe657527436949e3a1cac998bea4d1ce1c60a30554a9efbd7b47a67",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "faea85228447cca82b837d7e760081b6d4a66ae37e6e25fcc8bb43fd7cb95504"
+        },
+        {
+            "candidate_state": "transformer_reject",
+            "incomplete_or_noncredit_stages": [
+                "cross_code_equilibrium",
+                "sampled_local_ideal_mhd",
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "878a8a704550baca41b6835af88049675a09054b774f5a977dacec461f51ab1f",
+            "validation_pass": false,
+            "request_index": 350999,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "21a590bf118520418e546e93e6926bbab155701f7f82caff1b1709bf91d9737b",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "transformer_profile_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "9dad3e6b9160a59b3d94403c2bff4a118ee6a1d997c7be4c49700a6b2c998c5b",
+            "physical_failure_stages": [
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "cf60ac5222595b37ff4935e98854176d8f0662cfe54c176e168d2670ddfb1c56",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "763dc2bff3e3eb406e7b0280f964e9d7519cea654dff171983a02781fd126c5d"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "sampled_local_ideal_mhd",
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "03e47b997512a9525fdc810f0871de0fbf7ab32f928549006f159b33aef84c76",
+            "validation_pass": false,
+            "request_index": 364398,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "8a07f79e93b055c0e896636fd49108beba54f92bf6ed8f020f4dab05b1306d37",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "cross_code_equilibrium_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "1dff43944bc9d0e8402ea3ac0cb8d9617885e2957363fc5cb8946050e90c1ba5",
+            "physical_failure_stages": [
+                "cross_code_equilibrium"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "9c1fdad44bd1533bbc5f94765ef4c3541c8410aebcfb19c54b46e78462178308",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "42d1890f23e0ae4192ce5e5f05acd999b90decb169562bdb9732edbe613b6790"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "2556b23285e358cfecf75cdde49801abd5e404a39969cc092cf3f8c121b43d65",
+            "validation_pass": false,
+            "request_index": 368479,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "79395e2e738ad9b5a167afd8b4e145a2808b37352471523bbfbe99419a6af34c",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "143ba0989fb318d56ea2f842c89417430030eb4ae252c32105b6e3afd68518ca",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "143ba0989fb318d56ea2f842c89417430030eb4ae252c32105b6e3afd68518ca",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "9642424beb9cf13067b8d8ba9f32accd3763549c9c1adec2bccfa33a30d2d006",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "c835f5e0814b0b6cefdd4286215dae508ffab6813e6e7d791bff6360fae23024",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "6c64579fabbb4a65d615bf23756850e72d98f0f24afee0af3d4d284e760b87a1"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "28ffd3d1cd7f6dd6ddd66042ee2243a1bc0ceb91dcb85b3258cd4296f8a3569a",
+            "validation_pass": false,
+            "request_index": 383759,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "26d2cb9c856d3cd750111076b8268b5848ccb54f8e4a1777a3f4037716248e98",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "4978db5750f7519e23f41745e3d97818064458e5f13b5451b501dd5093501f41",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "4978db5750f7519e23f41745e3d97818064458e5f13b5451b501dd5093501f41",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "34804db43e05f59cc39edc91b227580032695e6f6379faa38245187b4638ca7b",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "c3462fe2935019b07ba39599bbec2f4cc65f7479b72dacda40e061d8645be577",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "fa00f78341b5170dd00525dfe185d57b6187afac755fbbcca2c688d4f74f4082"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "57dbc39fe288a93d5013464e7edccfd6a4b5196f4d7ea55bab71e605dcae1b6d",
+            "validation_pass": false,
+            "request_index": 448494,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "df84e2ba1afbf83b937e9fedfe8dc9380c70812c8d76381dc0541194805c802f",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "af2e95e9c0d95445094ae1d473c32b51b87b25e144e6bfc999d5edcb616d85af",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "af2e95e9c0d95445094ae1d473c32b51b87b25e144e6bfc999d5edcb616d85af",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "f2220ab2008f994a98dd5c39f4689f44ee0ca28f7d4a888cfd1090b21f91c8b5",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "8d778d91d507b8abaded45fb658bde6b667a01be2b5e3f00d525c5b809b631f7",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "b0a59bceb1a6546c6db3f2703a016667cb95898bc6713559c5d1ff40302ad8fe"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "sampled_local_ideal_mhd",
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "a96625807775b31d8a46e4540f4b90ec4f7db8a5ec2fe5aea86041be231e2893",
+            "validation_pass": false,
+            "request_index": 593759,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "e409ed99764fdccf3e563e8822e9725cd898fa20ac402bcd737ca1a0fb04c088",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "cross_code_equilibrium_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "0b5a8d4d2ea72a536ce5f4524789de237459716a4288a1286c6127f4ceba4c02",
+            "physical_failure_stages": [
+                "cross_code_equilibrium"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "4048b5e25ac72d04171f27da91b6f1854b502288bf00154130a5250e21e69dc3",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "4debe9371485f428ef542ec27af78d58523676d0c4c84431375804222a49d1ea"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "c1ec94ba7e463313b005421c75e7e96ed533ff8b7cbd4517dae8a11b96243ed2",
+            "validation_pass": false,
+            "request_index": 606343,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "1d9b98123db6d28c97c59bf2476e9baeea697edb411be1d5d7197045c9f58f6b",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "b8837e4f08ec5b5cd0faeed91d37088755e32d845f000304283b7afcc84ccafa",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "b8837e4f08ec5b5cd0faeed91d37088755e32d845f000304283b7afcc84ccafa",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "1ab4099db7c435f4fa7bd38bc6a5bd2886af75e22feeb92b0d912529f0b70cc2",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "70e35e6a51b8b7430b58b523f6612fb2e49b529812d806a7bbb96a2328692033",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "c329b62d46312da18f2ea785494a895c2683f634fc23eb897550c40b27860aa7"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "3e8752809ce2c1efae966456498721fa9447007557f6333c56d555ad00f013d8",
+            "validation_pass": false,
+            "request_index": 609214,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "13066e4adf910376c2bb1182facb7e1932dae5e1c9e68f13bf735372300ac315",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "55bd5551c9513bfdfbde272ef58bbdebeba18c50154f353eea84d05748cff080",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "55bd5551c9513bfdfbde272ef58bbdebeba18c50154f353eea84d05748cff080",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "283f86ec76bd5a52fba6a61111d3a7829e935e56fff567014cb261d6f03dc3bb",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "4be039c73db13c02c96c8b8ac958e4f077189ef3e6da2a469c840e87ba84f38d",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "d6d1919c677f0aca0da4a3139836ab9c5e5e2a6a17ba8a709896b5fda696db9c"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "58ed569bbfd1fabd694928548e0106ee703a3d6b768ef35c508d79c7f5adaea5",
+            "validation_pass": false,
+            "request_index": 625659,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "87d8dc222e8f94ae9ea877b4426399e8cb285f1ec9fac3dff922d8f1320c4b0e",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "eecc6614a5af2b4653d287acc1e0b1abc2701a3048996dab0abf26f634e06f26",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "eecc6614a5af2b4653d287acc1e0b1abc2701a3048996dab0abf26f634e06f26",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "95318ef318fff9748eb2e9b6074a4a17fc3b38bcb87088a22610b58395bd2878",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "a9c63ead72f44ea6a8d9718dd97a30d3c7090455d29d840a553d59b816d6c7c6",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "88e7a8e2114b7f4c7a5a35d4ac18630af345d12b3260ff591b4625dc7118d02a"
+        },
+        {
+            "candidate_state": "transformer_reject",
+            "incomplete_or_noncredit_stages": [
+                "cross_code_equilibrium",
+                "sampled_local_ideal_mhd",
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "d23ebcb337f1418c317b1ac9b5e3981d5c9e907dd9675bfdefbf21b3003eb1f3",
+            "validation_pass": false,
+            "request_index": 629599,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "f5942f384bdcec7f6d981d30f82a8e76d0f06497ce6b0b64e5db3278512f6130",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "freegs_to_desc_boundary_transform_failed"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "transformer_fit_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "c13fc41b5da9f96b79e989e30c4c43ea460299b8a7f2c6fcb173e36a0074737c",
+            "physical_failure_stages": [
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "e24252e6ab5e30c142609e98c263fa02ad59d7e408c4894b065d0dcb0c44404a",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "142d32ff38bff6514b836dd5e9a8a812e95756bf3222d69f2059f433d7563acc"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "11d0b3c240a325aeb39c4183e3caf4752c4b4e007b64b8e9cafca024a7a4a6b8",
+            "validation_pass": false,
+            "request_index": 641003,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "0dc6ec3421c719a763d84df5f1edd99e0407e220606449fe5fcfc3d5c4bfd70d",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "581ccab20bc0c0ef075628f12fac78564e93521e736ad88b72f2168fbcc5cc29",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "581ccab20bc0c0ef075628f12fac78564e93521e736ad88b72f2168fbcc5cc29",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "4746eededbe7058a821c80dcda4ab9eb47d5819731befc791070bc4a98ff077b",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "6d0379e121f6a1efdd359d3855cfe49bbd75b4eeb38ac47f3759a4af24ad0a89",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "3f6fe662139dc4d22603241599eec0c6ec18851161bbd053a1cc9de7234bccd3"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "72c0357bd564474e6a02439df88648898cc65b72ad956e3dd75b335d76f402b3",
+            "validation_pass": false,
+            "request_index": 641598,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "4f4067221f8bf650e1e7f8b51d94036d5911a8f955ea7872253b5c4ac368523b",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "2f15c4f752793d0dd9766d3e40af0bb7ea8e27542200fa002fe93071451677a2",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "2f15c4f752793d0dd9766d3e40af0bb7ea8e27542200fa002fe93071451677a2",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "348741b27e7500b4e801b11cf00aa724ecf66f39170fff26dcab40b2e4bc8263",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "6ba58b70ff0671676b43fef41fb6518379e6494c7880eb1e4bafb591d174dc21",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "d1774d7baa8f8649db95dd01f205a0e87ad0b78540b9239710c61cb66ad723f5"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "e049183f7d6d8a0a2931708bae54c5d433a95db8618bfb3d10609ca2090ba5bb",
+            "validation_pass": false,
+            "request_index": 641819,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "000ffd09a6635c3d1abd1ce4fc5bafe9d7926f5a1c5ed12dce7dcf25ba382fb4",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "f6e6ecde55923c43e3d594d5938c7e7f167470161f91835778803d15afdeaeb7",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "f6e6ecde55923c43e3d594d5938c7e7f167470161f91835778803d15afdeaeb7",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "047347cb54d848155a8fb8e9c8aa2214b40d93db9e284d3f4977f695c409f7f8",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "5d59b826b905c7513a44aaf32b665e7e2dfdeccf425aa4eb36dbd18803e1b01a",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "2857dd81183afa1ace56c5464c07841585398ff57fdacbe5d0b4a2af1a79a78f"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "7e03f7fc46b33987d0f2255cfc9b8f1fc4bb527722d9666e737d0bc30bb1154c",
+            "validation_pass": false,
+            "request_index": 642534,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "28a190e8089e78eb2d8adebef793ea9ba7770fdd7e4f90029700daa87c2349e1",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "1dfa75bc30979189d4b295b2f6d73839bc1ead523d7f32a97605b4bbec71759f",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "1dfa75bc30979189d4b295b2f6d73839bc1ead523d7f32a97605b4bbec71759f",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "7e03cf04f8a56b0c5fe09f782945cfd55e087c084f34bc75cd766f34af2e2627",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "654f8a08fba986fd555fad18d026f49175bf10a13c2e8ba8d1ffe329b0502ce2",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "0e18c702961a15b2cb84e3786e80ec09a604e5e880cd7df04aee002372b41d4f"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "8fefd18026c829a2127cf119bcd93aab6629843cd6856163bd0cbda0830a8f1e",
+            "validation_pass": false,
+            "request_index": 674699,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "9af903319f80979f50763d0dc583261dc2d06ca3220ff8f9512d0e3b93cf81cb",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "0820a878fea3d59594e43864b085a7be7a526302f31540bb60ccad5b373d950d",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "0820a878fea3d59594e43864b085a7be7a526302f31540bb60ccad5b373d950d",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "0d0ffba0feec11d5022849763b11cc6a001a847b9d0ddf963c2e715d403ca1c2",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "6b6001b78cf9e6bbd2798a67032e9c6fe755984b53cc705059746d1a15d67dc6",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "e4dee1d73f2df23c50fed68929925be68cc22e90704cdba558e86ab677e940ad"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "sampled_local_ideal_mhd",
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "043a4dbe5ff46602e77be4d1fe920b209a180641e6595d8e0cc2ced87646cadc",
+            "validation_pass": false,
+            "request_index": 825199,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "1a31d5fc3b29a4b7213c1e49ce55cf2ed0dc193a92c1ff2469b1536826499f72",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "cross_code_equilibrium_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "fc1255b88eeecf44b86fb1ddc19dd4a52e65aca36f309df99af69be8007c13dc",
+            "physical_failure_stages": [
+                "cross_code_equilibrium"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "7818791758c44dbd4549b18765fcab6915da0023b1f7a27694b16dfd37b617ab",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "f03f31c188ee6b03efef832ebfb4a3f3c55fe0be204ad2d166ed2258a3b60829"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "2a4fd7683a9b5cb0d5439cd538d936e63cd09506fd1bbfda189d2426d707f918",
+            "validation_pass": false,
+            "request_index": 854879,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "77c40cb2ef243d96133c74999d304d26b4d3df05d5c8f2f0047a2fbce344743d",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "1ce957b0d84a6da1e6a62260fbae064925e4dd3a2f6e5e69f2da8ffe4fa9136b",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "1ce957b0d84a6da1e6a62260fbae064925e4dd3a2f6e5e69f2da8ffe4fa9136b",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "0b5a8d4d2ea72a536ce5f4524789de237459716a4288a1286c6127f4ceba4c02",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "5ac4f8cc2f491df5649fb3cb66fa2203ede7e0d99ca42eefbafa09cc26288cbe",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "6b421340fc0842d3f3fe1eaf2b9a25dc0f9dc09dad20e5fb5e10ac3d9b1ab543"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "07af3d7af896a1a414556339d4532fcd26580caeb66af2211dee67e1c689cceb",
+            "validation_pass": false,
+            "request_index": 855033,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "bda4a6d2c2c67cf34a6d3b2a913e8e1e738c945b79ae74416606e1e8f6f0f755",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "56923e23dd6b865cd5ab77b22c030467902ad0e5cfd494843632d9d0e0d5f8b4",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "56923e23dd6b865cd5ab77b22c030467902ad0e5cfd494843632d9d0e0d5f8b4",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "aa26636c3ab5ef4a305c9e8e1fb8393c297d5fa907750697c39d1d40d7bc17ee",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "5ed5e5c736dfe3422924c690517595a33a28b4a2eacbf9a3f5abe698e0233add",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "b1269aed2f07f8c49177c997d4db4ed6ec95220729a16cc2f34ed0245db62b40"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "58b1262f0fb735eb0f4c43163171aebf07311aa43a0ee6b8425fa874670971c3",
+            "validation_pass": false,
+            "request_index": 857022,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "dfed1e32c8ca53c922247a77325a842275c57aa2c685f1f25c6b8ba3cf0dd570",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "bb3abb06f1f7ae947a6ba52767529a4a62c0ca150b826a4aba628e90cff89474",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "bb3abb06f1f7ae947a6ba52767529a4a62c0ca150b826a4aba628e90cff89474",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "0b33d731e631aa2bd5290feb8b50078fda2c58570b1d62da9af192e32b1b566d",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "543b1867a0ca1bcf9b35af9818c46b7f5661a6cc582e55087b775b88123e2e47",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "6d41e7788a9b64b4944ef1e4edb97af1693853f232cc7cee90c9194ed0262606"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "30e6f624d8a5bd64874f9e85352bb9f5859e212fa0a5ec9dc544da0f8b28e17f",
+            "validation_pass": false,
+            "request_index": 876469,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "94fb9bc0e10c8552f8e466b49485c1515584b98696d7b3b948663f86e5248785",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "baf31ddfead48d7cb4882fb7420a2d4b0ceebb4151ddf12076f00394d04055e7",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "baf31ddfead48d7cb4882fb7420a2d4b0ceebb4151ddf12076f00394d04055e7",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "8b5b03f896c8303767dba36040d7dc6151e57aaae82f0c8d62787727f753a398",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "df178e2d7c13321c19a5c03358f923b8a0b8d438e70b274f1f546d71bfb45de3",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "6739585362391c42c3504fbb9dfcf5d505e0b30999aceb756d80abc9577e03a4"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "20b1fbc0a03824c2bd32f14cc58f2a79438280c68d02e3929f83b983c13a3f84",
+            "validation_pass": false,
+            "request_index": 880619,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "b34d44893c345f9200e0f8f2e3eb937bbbebb964c52301c73f3adf6697a7b68b",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "708b2155f7d93eeb29d8b23738d623a0ea6d301663b73386bdafdec9e7a7d05e",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "708b2155f7d93eeb29d8b23738d623a0ea6d301663b73386bdafdec9e7a7d05e",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "c488549db70fabbda651de72dfbf2a9adea021f742ec99166fef04e4ecb7bfc4",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "391a05401ef91bd1db9767221e2111c7d9af2731dd264b9b7cd4693fd4dbda82",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "7c89e3976b16e4632a8c2cb06713756f9492554946c3f5c7b19a7f7de786b387"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "83a287e87bb5e62e96ff2a4a53bc621c4fbc891c1f99d3bc4aa6bcf88cf8ae31",
+            "validation_pass": false,
+            "request_index": 890719,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "59e72b17e452f755a1241f695e49877a11752bf0076506a021871b4a1ba90714",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "73dc094c113015f37cb9f2e95fbef55762edcde65d9bc8b8dd71bef503dc499a",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "73dc094c113015f37cb9f2e95fbef55762edcde65d9bc8b8dd71bef503dc499a",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "9642424beb9cf13067b8d8ba9f32accd3763549c9c1adec2bccfa33a30d2d006",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "47e202afe6b9b6d0bd806f12490c84e96d50d26326728c9ee5b872f8986f9213",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "2eca87f22471d3c31747dcde6a2828f50742cf01a237f6b4d34a8996e6276df6"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "c36bb003b128a30e813cfb61fda900a9e08f3fe69751772007f6badeba441dd4",
+            "validation_pass": false,
+            "request_index": 895919,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "74fe9c755ba69dca167e91b41f8ecf44351c079e4a37811bbf1f87f7b7206902",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "056d10936c2e122462f8b1fd2c64504bb5dae8272e960266fb9021a8b991ad4d",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "056d10936c2e122462f8b1fd2c64504bb5dae8272e960266fb9021a8b991ad4d",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "bf923ecb75354147ad8dc65b89df5c6ed187ba6a82376c7d017d9ea624476097",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "5224cdd3bcf1bb3614dc8b8db50a7ec541d9a86b50203d59e43c58e888210da7",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "d0c0895d1e60a9801d2b42e544c5e99dfe07b13af9cf1dc3cc50466db851e580"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "43da5f2253e57f20e6057bf376e3589b6870b59f186475642451b4015a2d81a5",
+            "validation_pass": false,
+            "request_index": 902143,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "159635c3ed35384cd9400763f2f28f5bcc056faaa61a8f6ace02f484c6b60fbc",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "ca9429520bf99ba11a4b5654c8751bb39815020eafe8dc13181ce7bf946a2ba8",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "ca9429520bf99ba11a4b5654c8751bb39815020eafe8dc13181ce7bf946a2ba8",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "3b9620768d40c6a97613e805032898d64b64fbdad18f2657912af35268af2f31",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "53c86ae3f335174596b60756a720b203a1bb992918bca586ca71eb0d40929d7a",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "8892124080e007c79b0ae139c29a975c8f9cbb0acb6f429098f71a043016faf4"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "255050b0651bcd0ae35041a1ae1dd5d2ad3003f78c5264783b752d15f6560687",
+            "validation_pass": false,
+            "request_index": 920449,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "28c56aa9a6c2c43ac28334a5626f7ea1146bf0ccef884b8d03c2dfd84db97f3a",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "eb269b78999cc6f31e3b8c9a34370fc8eeff9f9df368a7405bb67ae0a8a08208",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "eb269b78999cc6f31e3b8c9a34370fc8eeff9f9df368a7405bb67ae0a8a08208",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "8d7cf16f326ef7cbe43f1fdbd028f495d511d59b8f90a99f1d3b9351a9ff92ed",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "b815528faed414d6cc98e1f1ba88e291d4bdc3cef713af6fe35425f23c797d4f",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "61cb2e3ae217931b9922beb259bc0557d218eff6a836eaca748891b88bc0ce11"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "d5426e201c29554b069dfe4a734f6ffbd8ecbe5ff0f98c188dd108a0c3ec07e5",
+            "validation_pass": false,
+            "request_index": 940974,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "5273a578fed2640b71a7e0712017ab8bb98d29e945223926864e80b34444a902",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": true,
+                    "result_hash": "81c4331886ea7d0bf2177c815454b46280cda1d3709a34384fb6bebadd4ccc06",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": "81c4331886ea7d0bf2177c815454b46280cda1d3709a34384fb6bebadd4ccc06",
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "stability_screen_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "58b2da6ebf8e33d966245141ef124044410a47dc70e0b28336e67eecd4a8dee9",
+            "physical_failure_stages": [
+                "sampled_local_ideal_mhd"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "7a2a2f563c9bb825bf1f4c506552d81c75d982d6b93977610176dbb5b06d061e",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "d55c9c5d873b5f6c6026954804ad313cc3ef6f0cccad3aa3c67d388fe9e844e8"
+        },
+        {
+            "candidate_state": "physical_reject",
+            "incomplete_or_noncredit_stages": [
+                "sampled_local_ideal_mhd",
+                "complete_stability",
+                "transport_and_confinement",
+                "particle_and_heat_exhaust",
+                "engineering_qualification",
+                "numerical_vvuq",
+                "validation_vvuq"
+            ],
+            "cross_code_result_hash": "b8d552d095610442d1acf5d4cf3428fc3208567bf85073b3f46dbb20b5d79bca",
+            "validation_pass": false,
+            "request_index": 1023979,
+            "evidence_records": [
+                {
+                    "candidate_credit": true,
+                    "result_hash": "995413784a69964721f7ad9365802faa848faf5e2f4b45465322e3e970b74880",
+                    "status": "pass",
+                    "scope": "candidate_bound",
+                    "stage": "free_boundary_equilibrium",
+                    "reason": "v98_FreeGS_candidate_bound_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "fail",
+                    "scope": "candidate_bound",
+                    "stage": "cross_code_equilibrium",
+                    "reason": "independent_DESC_fixed_boundary_equilibrium"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "not_executed",
+                    "scope": "candidate_bound",
+                    "stage": "sampled_local_ideal_mhd",
+                    "reason": "sampled_Mercier_and_infinite_n_ballooning_only"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "complete_stability",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "transport_and_confinement",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "particle_and_heat_exhaust",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "engineering_qualification",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "numerical_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                },
+                {
+                    "candidate_credit": false,
+                    "result_hash": null,
+                    "status": "unknown",
+                    "scope": "missing",
+                    "stage": "validation_vvuq",
+                    "reason": "required_provider_evidence_not_supplied"
+                }
+            ],
+            "cross_code_candidate_state": "cross_code_equilibrium_fail",
+            "protocol_id": "fusionconceptai-v99-full-device-qualification-20260829",
+            "dag_hash": "3c80a3f6ddf6007a4ab2caf0e2e695b0de9642eb24a6d461e8de6277ff823782",
+            "physical_failure_stages": [
+                "cross_code_equilibrium"
+            ],
+            "subgraph_promotion_allowed": false,
+            "claim_boundary": "v99 preserves candidate-bound equilibrium, sampled local ideal-MHD, complete stability, transport and exhaust, engineering, numerical VVUQ, and validation as separate evidence obligations. Missing evidence is qualification_incomplete, not unsupported and not physical rejection. No subgraph result can promote a whole device, and manufactured or reference controls receive no candidate credit.",
+            "result_hash": "6da1cb480dd11db951789bf1d9d7482a4c37204173d904d94027e7d4d65afcf4",
+            "whole_device_credible": false,
+            "unsupported_candidate_classification_used": false,
+            "identity_fields_used_for_routing": false,
+            "schema_version": "1.0.0",
+            "candidate_result_hash": "4f3318eba62a7f0c44557d5f471aadf023d3397903a41d6e10e879211c4a3d12"
+        }
+    ],
+    "source_cross_code_acceptance_hash": "2534cb995ac3b1f8fb08f6b8ca40a41e8fba592dec86d01955f583ef26d2b7da",
+    "schema_version": "1.0.0",
+    "provider_system_failure_count": 0
+}
