@@ -1,0 +1,143 @@
+{
+  "acceptance_hash": "f3fe04d380f2b2007c863e276dcad3c68a98a888f640269485ff8b528c4fa20f",
+  "blocking_external_state": "candidate_bound_independent_physical_measurements_absent",
+  "candidate": {
+    "candidate_result_hash": "58a2f9b4860a147330b07c402bd1785d98bcaec3d5b1399cc855fdedf5e25248",
+    "capability_hash": "c8cbcb5e87723c1a0c18fca738d3ab8415af9a1b86b2330bb47a494b223b3223",
+    "graph_hash": "8a619e98f34c397f8569d30bbf5d317af56b5058a464892429633c519f020341",
+    "input_origin": "candidate_bound_low_discrepancy_operating_and_radial_build_v100",
+    "magnetic_field_t": 5.200122877314069,
+    "major_radius_m": 14.827098598703742,
+    "minor_radius_m": 3.9350260834692987,
+    "request_index": 609214000287,
+    "solver_input_hash": "f5b515d134f05cdaccfd8d10b50d5c90cede8cb21041014db4c9622c2d9234c4"
+  },
+  "claim_boundary": "This audit proves only that the repository has exhausted the declared v100 candidate-bound software chain and contains no independent validation record bound to the surviving generated design. It does not prove physical infeasibility, does not convert proxy evidence into qualification, and cannot replace measurements from a constructed experiment or an independently governed validation campaign.",
+  "completed_candidate_bound_stages": [
+    {
+      "authority": "candidate_bound_FreeGS_three_grid_numerical_VVUQ",
+      "result_hash": "6dea48159fba1d86505597a232dd932568da937f336b370a76b7be40df854d5a",
+      "stage": "free_boundary_equilibrium",
+      "status": "pass"
+    },
+    {
+      "authority": "candidate_bound_FreeGS_to_DESC_fixed_boundary_comparison",
+      "result_hash": "8a73b762be0b8b7a07240f18695b217e0378f54d602433d7267ca33fb96f9590",
+      "stage": "cross_code_equilibrium",
+      "status": "pass"
+    },
+    {
+      "authority": "sampled_Mercier_and_infinite_n_ballooning_only",
+      "result_hash": "080b8bc86360d860ce7c120a88816979bd0633775c621b9a5c635283992c5676",
+      "stage": "sampled_local_ideal_mhd",
+      "status": "pass"
+    },
+    {
+      "authority": "nine_static_FreeGS_perturbations_and_reduced_explicit_build_proxies",
+      "complete_qualification": false,
+      "result_hash": "16631f0ba54783670601243b76ee761fd7ff642ce31ea444bb4ef24ba037deff",
+      "stage": "static_engineering_proxy",
+      "status": "pass"
+    }
+  ],
+  "computational_qualification_gaps": [
+    {
+      "required": [
+        "finite_n_ideal_modes",
+        "resistive_modes",
+        "kinetic_modes",
+        "nonlinear_saturation",
+        "disruption_transients"
+      ],
+      "stage": "complete_stability",
+      "status": "input_or_provider_required",
+      "why_existing_evidence_is_insufficient": "Candidate-bound v100 FreeGS-to-DESC cross-code equilibrium and sampled Mercier/infinite-n ballooning qualification using one shared PF radial build. A pass does not establish finite-n, resistive, kinetic, nonlinear, transport, materials, experimental-validation, or whole-device feasibility."
+    },
+    {
+      "required": [
+        "candidate_bound_profile_evolution",
+        "turbulent_and_neoclassical_fluxes",
+        "independent_transport_code_comparison",
+        "uncertainty_ensemble"
+      ],
+      "stage": "transport_and_confinement",
+      "status": "input_or_provider_required",
+      "why_existing_evidence_is_insufficient": "candidate_bound_reduced_empirical_physics_and_engineering_screen"
+    },
+    {
+      "required": [
+        "explicit_divertor_or_exhaust_geometry",
+        "plasma_neutral_coupling",
+        "target_heat_and_particle_flux",
+        "detachment_and_material_limits"
+      ],
+      "stage": "particle_and_heat_exhaust",
+      "status": "input_or_provider_required"
+    },
+    {
+      "required": [
+        "conductor_and_joint_definition",
+        "versioned_material_property_curves",
+        "mutual_force_structural_solution",
+        "thermal_hydraulics",
+        "quench_protection",
+        "shielding_blanket_TBR_and_maintenance"
+      ],
+      "stage": "complete_engineering_and_materials",
+      "status": "input_or_provider_required"
+    },
+    {
+      "required": [
+        "sensor_actuator_layout",
+        "controller_limits_and_latency",
+        "fault_inventory",
+        "disruption_and_protection_transients"
+      ],
+      "stage": "dynamic_control_and_fault_response",
+      "status": "input_or_provider_required"
+    }
+  ],
+  "identity_fields_used_for_routing": false,
+  "physical_conclusion_expanded": false,
+  "protocol_id": "fusionconceptai-v101-candidate-completion-blocker-20260829",
+  "provider_system_failure_count": 0,
+  "reference_controls": {
+    "candidate_credit": false,
+    "count": 2,
+    "status": "pass",
+    "validation_credit": false
+  },
+  "schema_version": "1.0.0",
+  "software_only_completion_possible": false,
+  "source_acceptance_hash": "175d97b1d423ced583b484768f1c4099cc833c8850f41b6a018aa2d9df55bedc",
+  "static_proxy_extrema": {
+    "case_pass_count": 9,
+    "maximum_additive_peak_field_t": 15.694228800956186,
+    "maximum_current_density_a_m2": 8380729.66829739,
+    "maximum_membrane_support_stress_pa": 619339216.9624687,
+    "scenario_count": 9
+  },
+  "status": "external_evidence_required",
+  "subgraph_promotion_allowed": false,
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "validation_vvuq": {
+    "reason": "the surviving design is generated and has no independent measurement dataset bound to its exact physical realization",
+    "repository_candidate_bound_external_record_count": 0,
+    "required_record_fields": [
+      "candidate_result_hash",
+      "independent_dataset_id",
+      "measurement_file_sha256",
+      "calibration_file_sha256",
+      "uncertainty_model",
+      "holdout_definition",
+      "measured_observables",
+      "applicability_assessment",
+      "independent_owner_attestation"
+    ],
+    "software_rerun_can_close_this_stage": false,
+    "stage": "validation_vvuq",
+    "status": "external_evidence_required"
+  },
+  "whole_device_credible_count": 0
+}
