@@ -301,6 +301,7 @@ include("end_to_end_device_pipeline_v98.jl")
 include("full_device_qualification_v99.jl")
 include("design_refinement_v100.jl")
 include("mission_aware_screening_v103.jl")
+include("whole_device_preflight_v104.jl")
 
 export Quantity,
        MissionSpec,
@@ -1992,6 +1993,12 @@ export Stage3ExecutionBudgetV1,
        compile_reference_mission_v103,
        run_mission_aware_reference_acceptance_v103,
        rescreen_v100_candidates_v103,
-       run_v103_mission_aware_campaign
+       run_v103_mission_aware_campaign,
+       V104_PROTOCOL_ID,
+       WHOLE_DEVICE_PREFLIGHT_V104_CLAIM_BOUNDARY,
+       V104_WHOLE_DEVICE_OBLIGATIONS,
+       default_whole_device_provider_inventory_v104,
+       compile_whole_device_preflight_v104,
+       run_whole_device_preflight_v104
 
 end

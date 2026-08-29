@@ -1,0 +1,415 @@
+{
+    "physical_reject_count_added_by_preflight": 0,
+    "reference_regression_status": "pass",
+    "survivor_rows": [
+        {
+            "candidate_state": "not_adjudicated_provider_gap",
+            "candidate_identity_used_for_routing": false,
+            "row_hash": "86d3d46421454c56ca191f2c30cef0dca1430e79b759b7a73b415337b3bb1a9c",
+            "validation_credit": false,
+            "source_candidate_result_hash": "58a2f9b4860a147330b07c402bd1785d98bcaec3d5b1399cc855fdedf5e25248",
+            "preflight": {
+                "candidate_identity_used_for_routing": false,
+                "fidelity_gap_count": 6,
+                "preflight_hash": "6cf1aa9c4dbf6f991942a7f979c1d3140bd2e49e6b254298f8fcadd3264b9426",
+                "closed_obligation_count": 2,
+                "protocol_id": "fusionconceptai-v104-whole-device-preflight-20260829",
+                "obligation_rows": [
+                    {
+                        "best_available_evidence_level": "complete_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "closed",
+                        "obligation": {
+                            "coordinates": [
+                                "cylindrical_axisymmetric"
+                            ],
+                            "operators": [
+                                "grad_shafranov"
+                            ],
+                            "function_spaces": [
+                                "axisymmetric_finite_volume"
+                            ],
+                            "interfaces": [
+                                "plasma_vacuum",
+                                "vacuum_coil"
+                            ],
+                            "dimensions": [
+                                2
+                            ],
+                            "obligation_id": "free_boundary_equilibrium",
+                            "states": [
+                                "magnetic_flux",
+                                "pressure"
+                            ],
+                            "required_output": "candidate_bound_free_boundary_equilibrium",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                            "freegs_candidate_bound_v100"
+                        ],
+                        "matching_provider_keys": [
+                            "freegs_candidate_bound_v100"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "independent_validation",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "closed",
+                        "obligation": {
+                            "coordinates": [
+                                "flux_coordinates"
+                            ],
+                            "operators": [
+                                "force_balance"
+                            ],
+                            "function_spaces": [
+                                "spectral_fixed_boundary"
+                            ],
+                            "interfaces": [
+                                "fixed_boundary_transform"
+                            ],
+                            "dimensions": [
+                                3
+                            ],
+                            "obligation_id": "cross_code_equilibrium",
+                            "states": [
+                                "magnetic_flux",
+                                "pressure"
+                            ],
+                            "required_output": "independent_equilibrium_comparison",
+                            "required_evidence_level": "independent_validation"
+                        },
+                        "qualified_provider_keys": [
+                            "desc_cross_code_v100"
+                        ],
+                        "matching_provider_keys": [
+                            "desc_cross_code_v100"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "sampled_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "insufficient_evidence_level",
+                        "obligation": {
+                            "coordinates": [
+                                "flux_coordinates"
+                            ],
+                            "operators": [
+                                "ideal_mhd",
+                                "resistive_mhd",
+                                "kinetic",
+                                "nonlinear"
+                            ],
+                            "function_spaces": [
+                                "finite_n_global_modes",
+                                "kinetic_phase_space"
+                            ],
+                            "interfaces": [
+                                "plasma_vacuum",
+                                "plasma_wall"
+                            ],
+                            "dimensions": [
+                                3
+                            ],
+                            "obligation_id": "complete_stability",
+                            "states": [
+                                "equilibrium",
+                                "perturbation"
+                            ],
+                            "required_output": "all_applicable_mode_disposition",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                            "desc_sampled_local_ideal_mhd_v100"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "reduced_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "insufficient_evidence_level",
+                        "obligation": {
+                            "coordinates": [
+                                "flux_coordinates"
+                            ],
+                            "operators": [
+                                "neoclassical_transport",
+                                "turbulent_transport",
+                                "orbit_loss",
+                                "radiation"
+                            ],
+                            "function_spaces": [
+                                "spatial_species_resolved"
+                            ],
+                            "interfaces": [
+                                "core_edge",
+                                "edge_exhaust"
+                            ],
+                            "dimensions": [
+                                3
+                            ],
+                            "obligation_id": "transport_and_confinement",
+                            "states": [
+                                "species_inventory",
+                                "thermal_energy"
+                            ],
+                            "required_output": "closed_particle_energy_balance",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                            "ipb98y2_zero_d_v98"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "reduced_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "insufficient_evidence_level",
+                        "obligation": {
+                            "coordinates": [
+                                "field_aligned_open"
+                            ],
+                            "operators": [
+                                "scrape_off_layer",
+                                "neutral_transport",
+                                "plasma_surface_interaction"
+                            ],
+                            "function_spaces": [
+                                "open_field_edge_volume"
+                            ],
+                            "interfaces": [
+                                "separatrix",
+                                "divertor_target",
+                                "vacuum_pump"
+                            ],
+                            "dimensions": [
+                                3
+                            ],
+                            "obligation_id": "particle_and_heat_exhaust",
+                            "states": [
+                                "particle_flux",
+                                "heat_flux"
+                            ],
+                            "required_output": "target_load_and_particle_throughput",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                            "reduced_exhaust_area_v98"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "sampled_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "insufficient_evidence_level",
+                        "obligation": {
+                            "coordinates": [
+                                "component_geometry"
+                            ],
+                            "operators": [
+                                "finite_conductor",
+                                "thermal_hydraulics",
+                                "structural_mechanics",
+                                "neutron_damage",
+                                "quench_protection"
+                            ],
+                            "function_spaces": [
+                                "finite_component_mesh"
+                            ],
+                            "interfaces": [
+                                "plasma_wall",
+                                "blanket_shield",
+                                "coil_support",
+                                "coolant"
+                            ],
+                            "dimensions": [
+                                3
+                            ],
+                            "obligation_id": "complete_engineering_and_materials",
+                            "states": [
+                                "electromagnetic_load",
+                                "temperature",
+                                "stress",
+                                "damage"
+                            ],
+                            "required_output": "component_margin_inventory",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                            "static_pf_engineering_v100"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "sampled_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "insufficient_evidence_level",
+                        "obligation": {
+                            "coordinates": [
+                                "time_and_component_geometry"
+                            ],
+                            "operators": [
+                                "closed_loop_control",
+                                "fault_transient",
+                                "protection_logic"
+                            ],
+                            "function_spaces": [
+                                "time_dependent_state_space"
+                            ],
+                            "interfaces": [
+                                "sensor_controller",
+                                "controller_actuator",
+                                "fault_protection"
+                            ],
+                            "dimensions": [
+                                0,
+                                1,
+                                2,
+                                3
+                            ],
+                            "obligation_id": "dynamic_control_and_fault_response",
+                            "states": [
+                                "plasma_state",
+                                "coil_current",
+                                "thermal_state",
+                                "protection_state"
+                            ],
+                            "required_output": "fault_envelope_disposition",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                            "static_pf_response_v100"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "sampled_candidate_bound",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "insufficient_evidence_level",
+                        "obligation": {
+                            "coordinates": [
+                                "provider_native"
+                            ],
+                            "operators": [
+                                "mesh_convergence",
+                                "solver_replay",
+                                "uncertainty_propagation"
+                            ],
+                            "function_spaces": [
+                                "provider_native"
+                            ],
+                            "interfaces": [
+                                "all_provider_boundaries"
+                            ],
+                            "dimensions": [
+                                0,
+                                1,
+                                2,
+                                3
+                            ],
+                            "obligation_id": "numerical_vvuq",
+                            "states": [
+                                "all_whole_device_outputs"
+                            ],
+                            "required_output": "whole_device_numerical_vvuq",
+                            "required_evidence_level": "complete_candidate_bound"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                            "v98_mesh_replay_uq"
+                        ]
+                    },
+                    {
+                        "best_available_evidence_level": "none",
+                        "candidate_identity_used_for_routing": false,
+                        "status": "missing_provider",
+                        "obligation": {
+                            "coordinates": [
+                                "validation_native"
+                            ],
+                            "operators": [
+                                "independent_comparison",
+                                "uncertainty_aware_validation"
+                            ],
+                            "function_spaces": [
+                                "declared_validation_domain"
+                            ],
+                            "interfaces": [
+                                "model_to_validation_observable"
+                            ],
+                            "dimensions": [
+                                0,
+                                1,
+                                2,
+                                3
+                            ],
+                            "obligation_id": "validation_vvuq",
+                            "states": [
+                                "validation_observables"
+                            ],
+                            "required_output": "candidate_bound_validation_disposition",
+                            "required_evidence_level": "independent_validation"
+                        },
+                        "qualified_provider_keys": [
+                        ],
+                        "matching_provider_keys": [
+                        ]
+                    }
+                ],
+                "whole_device_search_authorized": false,
+                "claim_boundary": "v104 is a fail-closed campaign preflight. It does not promote, reject, or classify a candidate when a required whole-device provider or candidate-bound input is absent. Such a campaign is not executed; the candidate remains not_adjudicated_provider_gap, never unsupported and never a physical pass or failure. Existing reduced or sampled evidence cannot satisfy a complete whole-device obligation.",
+                "status": "not_ready",
+                "required_obligation_count": 9,
+                "routing_declaration": {
+                    "declared_boundaries": [
+                        "closed",
+                        "mixed",
+                        "open"
+                    ],
+                    "route": "axisymmetric_closed",
+                    "declared_dimensions": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "declared_field_semantics": [
+                        "axisymmetric_closed",
+                        "three_dimensional_closed"
+                    ],
+                    "declared_operators": [
+                        "energy_balance",
+                        "field_balance",
+                        "particle_balance"
+                    ]
+                },
+                "schema_version": "1.0.0",
+                "provider_gap_count": 1
+            },
+            "report_index": 1,
+            "physical_rejection_credit": false,
+            "source_v100_candidate_state": "qualification_incomplete",
+            "unsupported_candidate_classification_used": false,
+            "physical_pass_credit": false
+        }
+    ],
+    "unsupported_candidate_count": 0,
+    "acceptance_hash": "d2ab4d0e3cc4a0ba8ab2744ceaa95a128bf33e842b4b33049ded51b589564ed6",
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "protocol_id": "fusionconceptai-v104-whole-device-preflight-20260829",
+    "whole_device_search_authorized": false,
+    "claim_boundary": "v104 is a fail-closed campaign preflight. It does not promote, reject, or classify a candidate when a required whole-device provider or candidate-bound input is absent. Such a campaign is not executed; the candidate remains not_adjudicated_provider_gap, never unsupported and never a physical pass or failure. Existing reduced or sampled evidence cannot satisfy a complete whole-device obligation.",
+    "status": "not_ready",
+    "reference_regression_pass_count": 2,
+    "reference_bypass_count": 0,
+    "source_v100_acceptance_hash": "175d97b1d423ced583b484768f1c4099cc833c8850f41b6a018aa2d9df55bedc",
+    "survivor_preflight_count": 1,
+    "schema_version": "1.0.0",
+    "physical_pass_count_added_by_preflight": 0
+}
