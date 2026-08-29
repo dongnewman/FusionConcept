@@ -307,6 +307,7 @@ include("whole_device_assembly_screen_v106.jl")
 include("whole_device_provider_dag_v107.jl")
 include("dynamic_fault_provider_v108.jl")
 include("material_engineering_provider_v109.jl")
+include("material_closed_frontier_v110.jl")
 
 export Quantity,
        MissionSpec,
@@ -2035,6 +2036,13 @@ export Stage3ExecutionBudgetV1,
        load_material_property_catalog_v109,
        audit_material_property_catalog_v109,
        execute_material_engineering_provider_v109,
-       run_material_engineering_campaign_v109
+       run_material_engineering_campaign_v109,
+       V110_PROTOCOL_ID,
+       MATERIAL_CLOSED_FRONTIER_V110_CLAIM_BOUNDARY,
+       V110_FRONTIER_LIMITS,
+       material_frontier_inputs_v110,
+       material_frontier_eligible_v110,
+       select_material_closed_frontier_v110,
+       run_material_closed_frontier_acceptance_v110
 
 end

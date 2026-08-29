@@ -1,0 +1,371 @@
+{
+  "candidate_result_hash": "1b314ecd593122fa53e0eecc0a93c09373402fc33f9aeb01a2bece26a2726cb0",
+  "candidate_state": "static_robustness_fail",
+  "case_pass_count": 0,
+  "claim_boundary": "Candidate-bound deterministic v100 FreeGS static perturbation re-solves and explicit winding-pack/additive-field/membrane-stress proxies only. A pass is not dynamic control, complete engineering, superconducting qualification, disruption analysis, transport/exhaust, experimental validation, or whole-device credibility.",
+  "cross_code_result_hash": "687312390de7ccdfad3bca4518dbebdde5e919d6fac90e84d70b1512f897998f",
+  "engineering_proxy_contract": {
+    "current_density_limit_a_m2": 500000000.0,
+    "peak_field_limit_t": 16.0,
+    "radial_build_allocation": "candidate_declared_shared_radial_build_v100",
+    "support_stress_limit_pa": 650000000.0
+  },
+  "engineering_qualification": {
+    "complete": false,
+    "status": "fail"
+  },
+  "failed_gates": [
+    "additive_peak_field_proxy",
+    "membrane_support_stress_proxy"
+  ],
+  "freegs_verification_hash": "27ce4bdb926db11192f09fab0c9f78e21e1b1ad19651c4ffdb8ae807ec6ed81b",
+  "identity_fields_used_for_routing": false,
+  "perturbation_contract": {
+    "axis_pressure_fraction": 0.05,
+    "pf_centerline_offset_m": 0.005,
+    "plasma_current_fraction": 0.03
+  },
+  "records": [
+    {
+      "case_passed": false,
+      "name": "nominal",
+      "response": {
+        "additive_peak_field_proxy_t": 21.265386476188894,
+        "current_density_proxy_a_m2": 17564230.643614102,
+        "maximum_paired_current_imbalance_fraction": 0.00021866840129118346,
+        "maximum_pf_current_a_turn": 41206228.0,
+        "membrane_support_stress_proxy_pa": 631115670.8423786,
+        "minor_radius_relative_change": 0.0,
+        "normalized_axis_displacement": 0.0,
+        "pf_current_amplification": 1.0,
+        "q95_relative_change": 0.0
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "fbb2c30bf436a962579d4021bc9a064e5979963a2f2e52061302818f2957bd79",
+      "solver_passed": true,
+      "solver_result_hash": "cc3e2a306c6d392c7705f3becf52d0bbf555ec5f6cf89aa63f8b97c2ed2b0698",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "all_pf_z_plus",
+      "response": {
+        "additive_peak_field_proxy_t": 21.274875559664633,
+        "current_density_proxy_a_m2": 17579718.717469126,
+        "maximum_paired_current_imbalance_fraction": 0.0035203598349259242,
+        "maximum_pf_current_a_turn": 41242563.5,
+        "membrane_support_stress_proxy_pa": 631679031.9115152,
+        "minor_radius_relative_change": 1.2826090535100754e-05,
+        "normalized_axis_displacement": 0.0007867683392062236,
+        "pf_current_amplification": 1.0008817963148677,
+        "q95_relative_change": 0.00010939213914951118
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "a29dc0151a388057e6aad8d3feab0bc1585786a92831df2d0a961a54cf35e68b",
+      "solver_passed": true,
+      "solver_result_hash": "b106ca35f71e8876c12bab06f082eb24a8a30e7cc879e74ab8df0a82dabc02ee",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "all_pf_z_minus",
+      "response": {
+        "additive_peak_field_proxy_t": 21.270335303970686,
+        "current_density_proxy_a_m2": 17572308.116046097,
+        "maximum_paired_current_imbalance_fraction": 0.002314116205928871,
+        "maximum_pf_current_a_turn": 41225178.0,
+        "membrane_support_stress_proxy_pa": 631409448.3563854,
+        "minor_radius_relative_change": 1.3035520983639692e-05,
+        "normalized_axis_displacement": 0.0007406923219634769,
+        "pf_current_amplification": 1.000459881938235,
+        "q95_relative_change": 0.00011520795802266726
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "15bd1c52eabd42337dc9e529bd589acafb1448984d7a9760367361cebb9d7ff1",
+      "solver_passed": true,
+      "solver_result_hash": "2780cf4d05fdcdc103f4c8a5aef186419b33e338488c55c6bbd752fe78be2965",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "paired_pf_vertical_separation",
+      "response": {
+        "additive_peak_field_proxy_t": 21.293302957339492,
+        "current_density_proxy_a_m2": 17609795.9000415,
+        "maximum_paired_current_imbalance_fraction": 0.00018203558937741158,
+        "maximum_pf_current_a_turn": 41313125.5,
+        "membrane_support_stress_proxy_pa": 632773773.1536998,
+        "minor_radius_relative_change": 4.891880091006939e-07,
+        "normalized_axis_displacement": 7.133308857770708e-05,
+        "pf_current_amplification": 1.0025942073610814,
+        "q95_relative_change": 0.0012318026960829176
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "da58cd9e0c8e96cbb9ced7d836b259de7536573282d22cabad8e5c77cdd49457",
+      "solver_passed": true,
+      "solver_result_hash": "18da7b62ae0f01b10173be54045e10362a49a4a0d7a09683beba622eee214adc",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "alternating_pf_rz_offsets",
+      "response": {
+        "additive_peak_field_proxy_t": 21.32633105103185,
+        "current_density_proxy_a_m2": 17652676.196107462,
+        "maximum_paired_current_imbalance_fraction": 0.005786528191806345,
+        "maximum_pf_current_a_turn": 41413724.0,
+        "membrane_support_stress_proxy_pa": 634330273.67562,
+        "minor_radius_relative_change": 2.439845331370094e-05,
+        "normalized_axis_displacement": 0.00019809788353024273,
+        "pf_current_amplification": 1.00503554948053,
+        "q95_relative_change": 4.102737474886986e-05
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "0824b67733ddf37ca72f8f4f4587de8c3b54e6c6bcc42ac873cf7c4e9c1db326",
+      "solver_passed": true,
+      "solver_result_hash": "1f6503cf6b9ee7b0528509562e700b5110369ca5825cf38654b949bda1fa0326",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "plasma_current_plus",
+      "response": {
+        "additive_peak_field_proxy_t": 21.58211432689388,
+        "current_density_proxy_a_m2": 18081193.568032037,
+        "maximum_paired_current_imbalance_fraction": 0.0012202160314212695,
+        "maximum_pf_current_a_turn": 42419039.0,
+        "membrane_support_stress_proxy_pa": 650055416.9709902,
+        "minor_radius_relative_change": 4.590572595386533e-07,
+        "normalized_axis_displacement": 0.0004467291387732716,
+        "pf_current_amplification": 1.029432710996988,
+        "q95_relative_change": 0.029808043446523214
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": false,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "5a162733901c6d992eef276a57c7c6d147e9484d5838fb42ad0cc29b090291b1",
+      "solver_passed": true,
+      "solver_result_hash": "30469ef1926517169b6d6be722f884b9086e16676058f897880e5987a56ea737",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "plasma_current_minus",
+      "response": {
+        "additive_peak_field_proxy_t": 20.952696555571617,
+        "current_density_proxy_a_m2": 17053858.42519846,
+        "maximum_paired_current_imbalance_fraction": 0.00017406349350879678,
+        "maximum_pf_current_a_turn": 40008879.0,
+        "membrane_support_stress_proxy_pa": 612692058.1145597,
+        "minor_radius_relative_change": 1.4881631571483922e-07,
+        "normalized_axis_displacement": 0.00048495904445715245,
+        "pf_current_amplification": 0.9709425235428004,
+        "q95_relative_change": 0.03172825639183907
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "72bd5bc7a559f21b79d540eeeb89ad810925131be61883e018a134fa5b31a17e",
+      "solver_passed": true,
+      "solver_result_hash": "ac7acee47037f3e4fc2e5ba8089abe3e743e55c52237b102cc75ab6edd3e623e",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "axis_pressure_plus",
+      "response": {
+        "additive_peak_field_proxy_t": 21.2737402019453,
+        "current_density_proxy_a_m2": 17577865.587580048,
+        "maximum_paired_current_imbalance_fraction": 0.0002238981932536994,
+        "maximum_pf_current_a_turn": 41238216.0,
+        "membrane_support_stress_proxy_pa": 631611613.1831279,
+        "minor_radius_relative_change": 8.115912791817337e-07,
+        "normalized_axis_displacement": 0.0003857944589760608,
+        "pf_current_amplification": 1.0007762904190114,
+        "q95_relative_change": 0.0006140822368618792
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "548d24682c623cb3121d7ef45ad5db57cd1abb133a00e9f9ffac487870df964b",
+      "solver_passed": true,
+      "solver_result_hash": "fa236fbe0bb0f73e61904235e662cbd3e439f19c700d0e83d9adbfe94a7cc5a3",
+      "solver_status": "pass"
+    },
+    {
+      "case_passed": false,
+      "name": "axis_pressure_minus",
+      "response": {
+        "additive_peak_field_proxy_t": 21.257753921298953,
+        "current_density_proxy_a_m2": 17551772.794113643,
+        "maximum_paired_current_imbalance_fraction": 0.000410010836226019,
+        "maximum_pf_current_a_turn": 41177001.5,
+        "membrane_support_stress_proxy_pa": 630662713.1175153,
+        "minor_radius_relative_change": 5.778375682385928e-07,
+        "normalized_axis_displacement": 0.00038840241180779494,
+        "pf_current_amplification": 0.9992907261494549,
+        "q95_relative_change": 0.0006166155846207833
+      },
+      "response_gates": {
+        "additive_peak_field_proxy": false,
+        "axis_displacement": true,
+        "current_density_proxy": true,
+        "membrane_support_stress_proxy": true,
+        "minor_radius_response": true,
+        "paired_current_imbalance": true,
+        "pf_current_amplification": true,
+        "q95_response": true
+      },
+      "solver_gates": {
+        "independent_residual": true,
+        "picard_converged": true,
+        "plasma_current": true,
+        "runner_completed": true,
+        "shape_constraints": true
+      },
+      "solver_input_hash": "426e29025f300fcf7edd1ee80a4617bcd66858779b1b8b0d8fb5f37671000257",
+      "solver_passed": true,
+      "solver_result_hash": "7c499f4b30310a4e2587fb077573d82123ade590f639ca22b83bd66b3e37b2aa",
+      "solver_status": "pass"
+    }
+  ],
+  "request_index": 674699000847,
+  "result_hash": "9f701698ec2cd0aa177cc1f8e4ba3e02fb1df8c1dcd105645a9bddfe1b1fd32e",
+  "routing_axes": [
+    "field_semantics",
+    "boundary",
+    "operator",
+    "dimension"
+  ],
+  "runner_version": "v100_shared_radial_build_static_robustness_v1",
+  "scenario_count": 9,
+  "schema_version": "1.0.0",
+  "unsupported_candidate_classification_used": false,
+  "validation_vvuq": {
+    "reason": "candidate_bound_independent_measurements_unavailable",
+    "status": "unknown_validation_domain"
+  },
+  "whole_device_credible": false
+}
