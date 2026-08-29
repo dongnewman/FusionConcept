@@ -1,0 +1,795 @@
+{
+    "retained_count": 40,
+    "identity_fields_used_for_selection_metrics": false,
+    "input_candidate_count": 319,
+    "unsupported_candidate_count": 0,
+    "acceptance_hash": "56b040bb53ee4bd52df4f08bc1ce1f07b153c60bc4be4c6ca45fcf66fe0e7054",
+    "validation_credit": false,
+    "selection_order": [
+        "beta_n_ascending",
+        "net_electric_power_descending",
+        "conservative_peak_field_ascending",
+        "conservative_support_stress_ascending",
+        "nuclear_radial_build_ascending"
+    ],
+    "protocol_id": "fusionconceptai-v110-material-closed-frontier-20260829",
+    "source_candidate_stream_sha256": "72370943fbe8b27d856218a0e8adce1845c043837078b1e9e8a7344b851ba87a",
+    "claim_boundary": "v110 selects previously unexecuted reduced-physics candidates using only declared reactor mission output, radial build, beta_n and conservative material-screen inputs. Candidate hashes are used only to avoid duplicate computation, never as provider or metric inputs. Selection grants no FreeGS, stability, engineering, validation or whole-device credit.",
+    "deduplication_hash_used_for_compute_reuse_only": true,
+    "selection_limits": {
+        "minimum_nuclear_radial_build_m": 1.2,
+        "maximum_conservative_peak_field_t": 16,
+        "maximum_conservative_support_stress_pa": 450000000,
+        "minimum_reduced_net_electric_power_w": 300000000,
+        "maximum_conservative_current_density_a_m2": 20000000
+    },
+    "previously_executed_eligible_count": 12,
+    "status": "complete",
+    "prior_acceptance_sha256": "f09ce3b2980b6cdea07550e36b04019df38bfc1396e166849b931dcf864e678c",
+    "output_candidate_stream_sha256": "6c80e64e7e74628acf173f45bc522871130e17726462edaf78f99d12c1b00f3a",
+    "rows": [
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 1,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 6.719652802287502e8,
+                "beta_n": 1.2302211610877969,
+                "nuclear_radial_build_m": 1.3249277200078038,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.007411077277643e6,
+                "conservative_support_stress_pa": 4.141928202662084e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.903574105678981,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "a7ccb0542eb9bf3f4bee0d87983b5e032fa4d21001f74bb081495db93d458f8d",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 2,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 8.054136256941648e8,
+                "beta_n": 1.3998253299688583,
+                "nuclear_radial_build_m": 1.4179722486321973,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 4.965689570808691e6,
+                "conservative_support_stress_pa": 2.3861063928382948e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.903724055070294,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "2157d41b30833ca6cf3ab2352dc5c8902dbab98e7f33242e15bcf34c21b2fad4",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 3,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 6.8519970734114e8,
+                "beta_n": 1.4148865754083924,
+                "nuclear_radial_build_m": 1.3286022060658245,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.352817953134495e6,
+                "conservative_support_stress_pa": 2.985172650159265e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.811183769784858,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "2900512ce42d5a82ab2ead4b073030cf6ed65a19cfc1a8a0b49ccfee2a565fe5",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 4,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 6.73969408614146e8,
+                "beta_n": 1.4496658077652238,
+                "nuclear_radial_build_m": 1.2256833395071274,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 4.70453530665018e6,
+                "conservative_support_stress_pa": 2.6803180812874448e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.480627484308098,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "b0ec9be7b33232ffaa452b4741bf332cd587d0b6f0a10fbd165e640c2a9301bb",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 5,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 7.239376837610306e8,
+                "beta_n": 1.4833375575640662,
+                "nuclear_radial_build_m": 1.3100656430046058,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 4.410528662020117e6,
+                "conservative_support_stress_pa": 4.0217676035230917e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.34475722884301,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "ef2670d43f299c50bbf20b44ee455ca60d25001baaaa2833e059516d5fe9e95c",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 6,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 5.0699232535290754e8,
+                "beta_n": 1.5241318195676787,
+                "nuclear_radial_build_m": 1.2012404218045805,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.939271504512088e6,
+                "conservative_support_stress_pa": 2.23354377447012e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.227980527058445,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "6ad038eec2e904813dfa5bf0f3df4b5e062b2787a2c2edaa3d5fbd72e2ef2ad1",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 7,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.568120079796896e8,
+                "beta_n": 1.5411492952122035,
+                "nuclear_radial_build_m": 1.481674710627631,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 9.060192933097035e6,
+                "conservative_support_stress_pa": 3.158411838073898e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.886208035538838,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "35cddb72d1211667fdb49059268efcaa5b1dc5509c397ef8df9bcda928d7a05f",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 8,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 8.269208902787995e8,
+                "beta_n": 1.5725723470604447,
+                "nuclear_radial_build_m": 1.2794671848739458,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 8.369311438001292e6,
+                "conservative_support_stress_pa": 3.370399971101139e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.924073325118442,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "1b314ecd593122fa53e0eecc0a93c09373402fc33f9aeb01a2bece26a2726cb0",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 9,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 6.638277658893495e8,
+                "beta_n": 1.6051830671490683,
+                "nuclear_radial_build_m": 1.3150261252403743,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.541722468586383e6,
+                "conservative_support_stress_pa": 2.515254367532324e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.160648382417602,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "84acade5f8c6531e94db2ce109ae2abf8a516e00189e7f3d15d9277400c5397a",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 10,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 4.181628076528437e8,
+                "beta_n": 1.6262871550804021,
+                "nuclear_radial_build_m": 1.3169222765178727,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.514606554940763e6,
+                "conservative_support_stress_pa": 2.6616058134235024e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 13.53069060233977,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "2cd8baf2a2583a1699c9373a685d3f40883b15f418d39ae0f41e5943eb49fa22",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 11,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 5.887458188559487e8,
+                "beta_n": 1.6273845622992542,
+                "nuclear_radial_build_m": 1.4712038610537264,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 3.597675437527426e6,
+                "conservative_support_stress_pa": 3.020595871144046e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.056268710912605,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "69e754600a72932e6b01c83b81901aa6778aab9e2bea9a812b6bef4cf39b5ec4",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 12,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.604095727552085e8,
+                "beta_n": 1.680106286138778,
+                "nuclear_radial_build_m": 1.3362379415134622,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 4.108460287607679e6,
+                "conservative_support_stress_pa": 2.750811043261664e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 13.606700496896915,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "0d9b3b3766a541e0b1c82874c3ec4f2682d37cadd8092c77c63220bca9cb1cb9",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 13,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 7.136890183040257e8,
+                "beta_n": 1.7626627097537952,
+                "nuclear_radial_build_m": 1.2506982329631962,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 3.7841843356877305e6,
+                "conservative_support_stress_pa": 2.3508882864226973e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.186043959073706,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "9708e8c1d3701cff2d166e49183b8cc9515f222a3bb975167b46059bd3624b32",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 14,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 7.406015976468544e8,
+                "beta_n": 1.8086224858829905,
+                "nuclear_radial_build_m": 1.3168536477359154,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.329487019427042e6,
+                "conservative_support_stress_pa": 2.7983730254573077e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.924053210806521,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "2de0a2308632dec0625fb9d5d53b980258e9850c7d31544838af329dca9c80bd",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 15,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 4.740724311902206e8,
+                "beta_n": 1.8978778035072636,
+                "nuclear_radial_build_m": 1.4374993713759272,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 9.326737643954199e6,
+                "conservative_support_stress_pa": 2.4134688081721956e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.992723321696834,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "6c872bee2fef608c5bfbc032ca65a566d5cf2ffb01c6f49a6471da7ca31b5f1b",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 16,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.906117784897859e8,
+                "beta_n": 1.913349165278919,
+                "nuclear_radial_build_m": 1.2194189962118875,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.694955134075502e6,
+                "conservative_support_stress_pa": 1.9933314900760603e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.016353841003962,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "460df259106ae5443049a8f8914bb92decb54aa5c4d7c1af217894324a2aad86",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 17,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 5.0742287976575804e8,
+                "beta_n": 1.9156742745067519,
+                "nuclear_radial_build_m": 1.461280584217782,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 4.444774179143761e6,
+                "conservative_support_stress_pa": 1.9686265065394843e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 13.75965047994004,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "e73ba1078bdc4708eed9afbdcbc799c60fdc82c211f1848853c77f25a6a03a87",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 18,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 4.9816911628315496e8,
+                "beta_n": 2.0614154223420504,
+                "nuclear_radial_build_m": 1.2723120013938414,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 1.1840258043496186e7,
+                "conservative_support_stress_pa": 3.330261377411895e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.405134105776428,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "2de4dbd8ec4889a0b7fea90b1a7dcc2a111a31f6b2ac37675ca980b81c5ced40",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 19,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 4.04631538256969e8,
+                "beta_n": 2.0656158063646526,
+                "nuclear_radial_build_m": 1.3102415784690482,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 3.9397975946745425e6,
+                "conservative_support_stress_pa": 4.3193303473099464e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.56658159171035,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "1a938bbc52b3294b4142dca96e005b98f42ca4b5f99eb71049d668b0e2d8aaa2",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 20,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.3996100246979718e9,
+                "beta_n": 2.070300477649386,
+                "nuclear_radial_build_m": 1.2390945823390136,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.180350587384366e6,
+                "conservative_support_stress_pa": 3.658855223947419e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.81746963274102,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "2913b42021fee4cc6abe124c769a6e5421fee47140b090733921332bed9b1022",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 21,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 4.832552453819752e8,
+                "beta_n": 2.0703194411159394,
+                "nuclear_radial_build_m": 1.2729068502968823,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 3.5783363868461335e6,
+                "conservative_support_stress_pa": 2.975627797904973e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.439726385391058,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "e85f85c0d4f8383449cfdeeb43eba8dc26a3cf5cc2af1a0c141ab39f186d3532",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 22,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.9926811035573704e9,
+                "beta_n": 2.0946190466483894,
+                "nuclear_radial_build_m": 1.257172945477032,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 4.639316926575394e6,
+                "conservative_support_stress_pa": 4.1872105875112706e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.505195702600911,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "3addd3c9363a70a74722f763818808bfe541edb53d0e059baa472cc701d09166",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 23,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.2007139267581415e8,
+                "beta_n": 2.1118566060849164,
+                "nuclear_radial_build_m": 1.417720934482325,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 8.018351268682084e6,
+                "conservative_support_stress_pa": 3.045053655957605e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.510805450393967,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "070a4dd00647dfe214582c26995c7da2679c0d14c50160df7e0deeb6fa37f36b",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 24,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.4633446721936715e9,
+                "beta_n": 2.3184507705389352,
+                "nuclear_radial_build_m": 1.3579243676245192,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.700788986127153e6,
+                "conservative_support_stress_pa": 2.1553536468809825e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.160714981589065,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "864ab800bae6a0de79ef6f6ede3acc26157308d073f109f80cd8367598af70a1",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 25,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.0667920787830162e9,
+                "beta_n": 2.5650194362669385,
+                "nuclear_radial_build_m": 1.2006913839546651,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.684115715451814e6,
+                "conservative_support_stress_pa": 3.199381908558922e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.283832885354292,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "55e5dbbb3c80c43f07a1985cd4ca3076cd41db34cd638a8784bae3fa8d3df267",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 26,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.4691326865299609e9,
+                "beta_n": 2.6850309533660908,
+                "nuclear_radial_build_m": 1.2969989403244016,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.185195221837071e6,
+                "conservative_support_stress_pa": 2.038326649886657e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.821970752851755,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "79786dbc54c30755abb50cb412ad8f20b144d9111e87ab504d94416e5008e389",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 27,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.4288293197742062e9,
+                "beta_n": 2.6927513865788777,
+                "nuclear_radial_build_m": 1.4128953259672907,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.301491360262306e6,
+                "conservative_support_stress_pa": 4.012325903374655e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.99318120678698,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "8dfb7911a7b6ea1b0574e734fbe743182db607430c744306287d24f0c018d9b4",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 28,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.120241589899095e9,
+                "beta_n": 2.80827219550061,
+                "nuclear_radial_build_m": 1.2086256988186268,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 9.744963900051214e6,
+                "conservative_support_stress_pa": 3.650542140649854e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.185187052419016,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "6b34c9d62d16bcbe3d203011b51bfa1759df0d14c4c84daa8df81356b2582e8f",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 29,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 8.629487238099833e8,
+                "beta_n": 2.81357986241683,
+                "nuclear_radial_build_m": 1.4720950088929707,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.646480340847927e6,
+                "conservative_support_stress_pa": 3.8561602273032165e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.919862272894948,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "e25dcb25c9ca0fa89b0c9339a9313d609d1adcb6305149e052a0c32234319f00",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 30,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 4.7236670126123524e8,
+                "beta_n": 2.8228683184990757,
+                "nuclear_radial_build_m": 1.2155558230037857,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.936662225325817e6,
+                "conservative_support_stress_pa": 2.3579836987559924e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.055408807394393,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "d8a391e694159ce2c60b0b69186a3611bc98d3343dd75c77bd1eda8ee4509b99",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 31,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.444675141539449e9,
+                "beta_n": 2.8980583813062446,
+                "nuclear_radial_build_m": 1.4517680990810402,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 7.564751288694288e6,
+                "conservative_support_stress_pa": 3.229511862922489e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.282970648893421,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "c4619c72f4459015640325fe627fa5a15b64a72b9300c76d9071927cac8cc199",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 32,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.479210114223809e8,
+                "beta_n": 2.972137384714396,
+                "nuclear_radial_build_m": 1.2256553017988367,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 8.941885395544467e6,
+                "conservative_support_stress_pa": 1.6979523993942916e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 13.544273185414408,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "963ccf67475867e7bdbbeab1693fbaefccf060ef9d131dfa8a93f8669789beea",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 33,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 2.148165666147831e9,
+                "beta_n": 3.0401459608054187,
+                "nuclear_radial_build_m": 1.3469675250005877,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.292760837179072e6,
+                "conservative_support_stress_pa": 2.501980934911032e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.78177139619804,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "24f02ea0ccea0470c202daefd37eef4e28bf340cc7e16ff7f4785009fa08b0e1",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 34,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 7.559963774031563e8,
+                "beta_n": 3.0574463645438743,
+                "nuclear_radial_build_m": 1.2850896981176723,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 8.064242034755549e6,
+                "conservative_support_stress_pa": 3.2733145247432643e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.973460822944702,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "601b62155c55c0cf5f3d941823525aa28ae5280832fb1f4d36da729a32ee8c2f",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 35,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 2.1163455193071375e9,
+                "beta_n": 3.077728840678386,
+                "nuclear_radial_build_m": 1.290438605747338,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 2.996279186281044e6,
+                "conservative_support_stress_pa": 2.0624612497628066e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.264344385666039,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "8c0f504a83e03fcd07121cf0dcbb4f39ceb23b66604a9b2d609c9fe231c7a725",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 36,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.2960617769033117e9,
+                "beta_n": 3.0999600131256217,
+                "nuclear_radial_build_m": 1.2409289968260027,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.153785919205193e6,
+                "conservative_support_stress_pa": 4.3383627267166835e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.64656978725187,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "15360b0f0fd83a422123e1a90cbe30957499f366379598c7aade567843b565e1",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 37,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.482359192492568e9,
+                "beta_n": 3.251283376352475,
+                "nuclear_radial_build_m": 1.2706555128783212,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 6.513774314924738e6,
+                "conservative_support_stress_pa": 3.9306163485183036e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.963479514116317,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "3e061ee2479aa6c84dc34fc1979a20fce75a3e1d89d0186d058c728550fbee4e",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 38,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 7.439423659021239e8,
+                "beta_n": 3.4364783070604297,
+                "nuclear_radial_build_m": 1.3802331852708938,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 3.3586753584048636e6,
+                "conservative_support_stress_pa": 3.3377046293899876e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 14.272029987040376,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "e5844dba37a630d94f4eae3146e4eda463c81b036f71db765493019d29f278fc",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 39,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 1.1115123195350628e9,
+                "beta_n": 3.4661663150806614,
+                "nuclear_radial_build_m": 1.289046886608606,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 1.3502755576947954e7,
+                "conservative_support_stress_pa": 2.9570592411696917e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.754814880267787,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "88f78b2460a0cf643673e321884d3c11558b65f17667ef0d06c11df4542b6d7c",
+            "physical_pass_credit": false
+        },
+        {
+            "identity_fields_used_for_selection_metrics": false,
+            "selection_rank": 40,
+            "material_frontier_inputs": {
+                "net_electric_power_w": 3.066751535898287e9,
+                "beta_n": 3.494282897891084,
+                "nuclear_radial_build_m": 1.3183833960962694,
+                "engineering_status": "pass",
+                "closed_core_route": "axisymmetric_closed",
+                "conservative_current_density_a_m2": 5.632861754038899e6,
+                "conservative_support_stress_pa": 3.908723827177639e8,
+                "physics_status": "pass",
+                "conservative_peak_field_t": 15.82366302549418,
+                "identity_fields_used": false
+            },
+            "validation_credit": false,
+            "candidate_result_hash": "32ea56c3c91d9b8ab99fc78a32649adb28d78b9017fc9409e904b87784d6abb2",
+            "physical_pass_credit": false
+        }
+    ],
+    "schema_version": "1.0.0",
+    "material_gate_eligible_count": 52,
+    "physical_pass_credit": false
+}

@@ -15,22 +15,23 @@ function _v115_read_json(path)
     Dict{String,Any}(_v93_plain(JSON3.read(read(path, String))))
 end
 
-function load_v114_provider_frontier_v115(project_root::AbstractString)
-    root = abspath(project_root)
-    directory = joinpath(root, "runs", "v114_similarity_scaled_field_repair_20260830")
+function load_v114_provider_frontier_v115(candidate_path::AbstractString,
+        freegs_results_directory::AbstractString,
+        desc_results_directory::AbstractString,
+        static_results_directory::AbstractString)
     candidates = [Dict{String,Any}(_v93_plain(JSON3.read(line))) for line in
-        readlines(joinpath(directory, "candidates.jsonl")) if !isempty(strip(line))]
+        readlines(abspath(candidate_path)) if !isempty(strip(line))]
     rows = Dict{String,Any}[]
     for candidate in candidates
         index = Int(candidate["request_index"])
         artifacts = Dict{String,Any}(
-            "freegs" => _v115_read_json(joinpath(directory, "freegs", "results",
+            "freegs" => _v115_read_json(joinpath(abspath(freegs_results_directory),
                 "freegs_$(index).json")),
-            "desc" => _v115_read_json(joinpath(directory, "desc", "results",
+            "desc" => _v115_read_json(joinpath(abspath(desc_results_directory),
                 "v99_$(index).json")),
-            "static" => _v115_read_json(joinpath(directory, "static", "results",
+            "static" => _v115_read_json(joinpath(abspath(static_results_directory),
                 "static_$(index).json")),
-            "artifact_directory" => basename(directory))
+            "artifact_directory" => basename(dirname(abspath(candidate_path))))
         for artifact in values(artifacts)
             artifact isa AbstractDict || continue
             haskey(artifact, "candidate_result_hash") || continue
@@ -40,6 +41,15 @@ function load_v114_provider_frontier_v115(project_root::AbstractString)
         push!(rows, Dict("candidate" => candidate, "artifacts" => artifacts))
     end
     rows
+end
+
+function load_v114_provider_frontier_v115(project_root::AbstractString)
+    root = abspath(project_root)
+    directory = joinpath(root, "runs", "v114_similarity_scaled_field_repair_20260830")
+    load_v114_provider_frontier_v115(joinpath(directory, "candidates.jsonl"),
+        joinpath(directory, "freegs", "results"),
+        joinpath(directory, "desc", "results"),
+        joinpath(directory, "static", "results"))
 end
 
 function _v115_rehash_assembly!(assembly)
@@ -263,7 +273,8 @@ function execute_corrected_provider_dag_v115(assembly, screen, candidate, artifa
     row
 end
 
-function run_corrected_whole_device_rescreen_v115(project_root::AbstractString)
+function run_corrected_whole_device_rescreen_v115(project_root::AbstractString;
+        frontier_raw = nothing, source_acceptance_hashes_raw = nothing)
     root = abspath(project_root)
     reference = run_mission_aware_reference_acceptance_v103(root)
     reference["status"] == "pass" &&
@@ -274,17 +285,19 @@ function run_corrected_whole_device_rescreen_v115(project_root::AbstractString)
     audit = audit_material_property_catalog_v109(catalog)
     audit["status"] == "closed_for_rejection_screen" || throw(ArgumentError(
         "v115 source-pinned material catalog preflight failed"))
-    frontier = load_v114_provider_frontier_v115(root)
-    v114_directory = joinpath(root, "runs",
-        "v114_similarity_scaled_field_repair_20260830")
-    source_acceptance_hashes = Dict{String,Any}()
-    for (stage, relative_path) in (
-            ("generation", joinpath("generation_acceptance.json")),
-            ("freegs", joinpath("freegs", "acceptance.json")),
-            ("desc", joinpath("desc", "acceptance.json")),
-            ("static", joinpath("static", "acceptance.json")))
-        source_acceptance_hashes[stage] = _v115_read_json(joinpath(
-            v114_directory, relative_path))["acceptance_hash"]
+    frontier = frontier_raw === nothing ? load_v114_provider_frontier_v115(root) :
+        Dict{String,Any}.(_v93_plain(frontier_raw))
+    source_acceptance_hashes = if source_acceptance_hashes_raw === nothing
+        v114_directory = joinpath(root, "runs",
+            "v114_similarity_scaled_field_repair_20260830")
+        Dict{String,Any}(stage => _v115_read_json(joinpath(v114_directory,
+            relative_path))["acceptance_hash"] for (stage, relative_path) in (
+                ("generation", joinpath("generation_acceptance.json")),
+                ("freegs", joinpath("freegs", "acceptance.json")),
+                ("desc", joinpath("desc", "acceptance.json")),
+                ("static", joinpath("static", "acceptance.json"))))
+    else
+        Dict{String,Any}(_v93_plain(source_acceptance_hashes_raw))
     end
     assemblies = Dict{String,Any}[]; screens = Dict{String,Any}[]
     dags = Dict{String,Any}[]; dynamics = Dict{String,Any}[]

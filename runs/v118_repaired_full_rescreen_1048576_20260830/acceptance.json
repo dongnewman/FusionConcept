@@ -1,0 +1,81 @@
+{
+  "acceptance_hash": "732ebaf5e8cb14124dabbb645f182e9e8f81cb29630924172868093557f3ec3c",
+  "basis_direct_metric_credit": false,
+  "candidate_bound_freegs": {
+    "fail": 36,
+    "pass": 31
+  },
+  "claim_boundary": "The full 20-bit grammar was rerun through reduced physics and numerical VVUQ, then freshly selected fronts were rerun through candidate-bound equilibrium, sampled stability, assembly, dynamic, material, conservation and thermal-hydraulic providers. The 101 final rows are sampled numerical survivors only. Complete stability/transport/engineering and independent candidate-bound validation remain unestablished, so no credible physical device is claimed.",
+  "design_refinement": {
+    "evaluated": 31744,
+    "prefilter_pass": 461,
+    "retained": 319
+  },
+  "full_topology_funnel": {
+    "computational_candidate": 67,
+    "numerical_vvuq_fail": 168,
+    "physics_screen_fail": 592897,
+    "provider_system_fail": 0,
+    "topology_screen_fail": 455444,
+    "validation_pass": 0
+  },
+  "grammar_cardinality": 1048576,
+  "identity_fields_used_for_routing": false,
+  "material_frontier_count": 40,
+  "operational_retry_audit": {
+    "desc_oom_rows_reexecuted_at_lower_concurrency": 2,
+    "physical_failure_credit_from_operational_errors": 0,
+    "unresolved_operational_failure_count": 0,
+    "wrong_python_environment_runner_errors": 67
+  },
+  "partial_subgraph_promotion_allowed": false,
+  "protocol_id": "fusionconceptai-v118-repaired-full-rescreen-acceptance-20260830",
+  "provider_system_failure_count": 0,
+  "reduced_candidate_count": 67,
+  "reference_controls": {
+    "acceptance_hash": "15a898d9510193b414c361f5e44ea26c35c9a3414efe9e28d4d2570e078f8ecf",
+    "bypass_count": 0,
+    "passed": 2,
+    "total": 2
+  },
+  "sampled_numerical_vvuq_pass_count": 101,
+  "schema_version": "1.0.0",
+  "source_acceptance_hashes": {
+    "freegs": "b559c7c8cc4d3fc7195dbff7b8f860662ed15df657521ca239e0bf0e5fdb076d",
+    "material_frontier": "56b040bb53ee4bd52df4f08bc1ce1f07b153c60bc4be4c6ca45fcf66fe0e7054",
+    "reduced": "3286606eb98e6388b9c00e53473f978eba0c10b6ff77a92438eb8d7c30d68591",
+    "refinement": "4a15b517496774fbddfe7c9660e49ea6d0a7e3b0ad14d6a7e82c44e1b816e8b6",
+    "whole_device": "5e4d8cd5c7f1e05fc14f5983dea3f4bf03136c45b51cf8c2299f9e5ee5ee7ca3"
+  },
+  "stage_order": [
+    "ITER_C2W_reference_regression",
+    "whole_device_assembly",
+    "available_provider_DAG",
+    "dynamic_fault",
+    "materials",
+    "multiregion_transport",
+    "SOL_exhaust",
+    "channel_thermal_hydraulics",
+    "sampled_numerical_VVUQ",
+    "validation_VVUQ"
+  ],
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "v114_repaired_frontier": {
+    "freegs_pass": 9,
+    "generated": 9,
+    "nine_case_static_pass": 9,
+    "sampled_ideal_mhd_pass": 9
+  },
+  "validation_pass_count": 0,
+  "validation_vvuq_status": "external_evidence_required",
+  "whole_device_credible_count": 0,
+  "whole_device_funnel": {
+    "channel_thermal_hydraulics_survivor_rows": 101,
+    "conservation_provider_survivors": 5,
+    "material_survivor_rows": 384,
+    "unique_channel_survivor_assemblies": 12,
+    "unique_channel_survivor_sources": 6,
+    "unique_material_survivor_assemblies": 128
+  }
+}

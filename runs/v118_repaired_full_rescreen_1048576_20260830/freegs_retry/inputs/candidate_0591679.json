@@ -1,0 +1,329 @@
+{
+  "basis_direct_metric_credit": false,
+  "candidate_state": "computational_candidate",
+  "capability_profile": {
+    "axisymmetric_fraction": 0.6,
+    "capability_hash": "1ed510fc7ddcfa4e96fb68c81facf1d78fdd0bbfd2f1ca3461c2fe5187ae93e4",
+    "closed_core_route": "axisymmetric_closed",
+    "closed_plasma_region_count": 4,
+    "declared_boundaries": [
+      "closed",
+      "mixed",
+      "open",
+      "periodic"
+    ],
+    "declared_dimensions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "declared_field_semantics": [
+      "axisymmetric_closed",
+      "three_dimensional_closed"
+    ],
+    "declared_operators": [
+      "actuator_feedback",
+      "energy_balance",
+      "fault_transition",
+      "field_balance",
+      "parallel_transport"
+    ],
+    "field_operator_fraction": 0.2,
+    "field_quality_parameter": 0.6640000000000001,
+    "hybrid_fraction": 0.0,
+    "identity_fields_used": false,
+    "open_fraction": 0.0,
+    "route": "axisymmetric_closed",
+    "routing_axes": [
+      "field_semantics",
+      "boundary",
+      "operator",
+      "dimension"
+    ],
+    "spatial_fraction": 0.4,
+    "three_dimensional_fraction": 0.4
+  },
+  "claim_boundary": "v98 separates topology rejection, provider-system failure, candidate-bound reduced physics rejection, numerical VVUQ, computational candidacy, and validation. Design coordinates may propose geometry and operating inputs, but no basis coordinate receives direct metric or gate credit. The reduced empirical confinement, Bosch-Hale reaction, zero-dimensional power, and engineering screens are candidate-ranking evidence only; they are not high-fidelity equilibrium, complete stability, materials qualification, experimental validation, or a credible-device claim.",
+  "graph_hash": "98cd9af79939ed806a11841b0cbfdcd49acf030ab1042f6d80483480a231c1d4",
+  "numerical_vvuq": {
+    "claim_boundary": "v98 separates topology rejection, provider-system failure, candidate-bound reduced physics rejection, numerical VVUQ, computational candidacy, and validation. Design coordinates may propose geometry and operating inputs, but no basis coordinate receives direct metric or gate credit. The reduced empirical confinement, Bosch-Hale reaction, zero-dimensional power, and engineering screens are candidate-ranking evidence only; they are not high-fidelity equilibrium, complete stability, materials qualification, experimental validation, or a credible-device claim.",
+    "deterministic_replay_match": true,
+    "experimental_validation_credit": false,
+    "independent_loss_power_w": 70038578.93712263,
+    "independent_root_method": "closed_form_power_law_v98",
+    "loss_power_relative_difference": 6.382694260783856e-16,
+    "parametric_uq": {
+      "sample_count": 8,
+      "samples": [
+        {
+          "density_factor": 0.95,
+          "failed_gates": [],
+          "field_factor": 0.95,
+          "fusion_gain": 8.070670355284442,
+          "net_electric_power_w": 20971532.02077332,
+          "solve_hash": "c314d44e91bda8071d4585e8b2fc23a18d61aea584a7002470ef08e424fdbd8f",
+          "status": "pass",
+          "temperature_factor": 0.95
+        },
+        {
+          "density_factor": 0.95,
+          "failed_gates": [],
+          "field_factor": 1.05,
+          "fusion_gain": 22.865669203009602,
+          "net_electric_power_w": 58870445.74486306,
+          "solve_hash": "874584dbb0e8258561c27cd6f0da09402491f43ab15b45b4c2b2bf340bc8021f",
+          "status": "pass",
+          "temperature_factor": 0.95
+        },
+        {
+          "density_factor": 0.95,
+          "failed_gates": [],
+          "field_factor": 0.95,
+          "fusion_gain": 8.53381225275784,
+          "net_electric_power_w": 38116520.934236765,
+          "solve_hash": "596a066c83a818713e33d2e633f4d2752f4700b685bd47c67a3b236ef783f9ed",
+          "status": "pass",
+          "temperature_factor": 1.05
+        },
+        {
+          "density_factor": 0.95,
+          "failed_gates": [],
+          "field_factor": 1.05,
+          "fusion_gain": 28.112264223492986,
+          "net_electric_power_w": 90457118.62145388,
+          "solve_hash": "efd32f23da11c8f4fe0f52966f7c921446bb084c735bcedb53236f2b0f055312",
+          "status": "pass",
+          "temperature_factor": 1.05
+        },
+        {
+          "density_factor": 1.05,
+          "failed_gates": [],
+          "field_factor": 0.95,
+          "fusion_gain": 8.245354313176142,
+          "net_electric_power_w": 30458963.63359317,
+          "solve_hash": "cf371c73a86756597a553fc21381480a488669367246e4a6b89d7d325b525050",
+          "status": "pass",
+          "temperature_factor": 0.95
+        },
+        {
+          "density_factor": 1.05,
+          "failed_gates": [],
+          "field_factor": 1.05,
+          "fusion_gain": 23.876940830211247,
+          "net_electric_power_w": 76310278.28501645,
+          "solve_hash": "d6af309f48113daf5cf9bae5d5edb9023871510c59b16e0f025b17e0f90a0261",
+          "status": "pass",
+          "temperature_factor": 0.95
+        },
+        {
+          "density_factor": 1.05,
+          "failed_gates": [],
+          "field_factor": 0.95,
+          "fusion_gain": 8.732951214930473,
+          "net_electric_power_w": 51981042.25372046,
+          "solve_hash": "3a2313d1fbc51f7c3bb72f6e08933ac56923ffa073bb506ed2037d8bd861a7a3",
+          "status": "pass",
+          "temperature_factor": 1.05
+        },
+        {
+          "density_factor": 1.05,
+          "failed_gates": [],
+          "field_factor": 1.05,
+          "fusion_gain": 29.685766386397987,
+          "net_electric_power_w": 115304366.79731312,
+          "solve_hash": "edc04854328643b5a52a0c9cbe04d70568bda5436f80c2660870fe94fcd1baee",
+          "status": "pass",
+          "temperature_factor": 1.05
+        }
+      ],
+      "status": "pass",
+      "uncertainty_model": "full_factorial_density_temperature_field_plus_minus_5_percent"
+    },
+    "primary_root_method": "log_bisection_v98",
+    "robust_physics_pass": true,
+    "status": "pass",
+    "vvuq_hash": "6c68adfa3746e897196fc2b3ce40bcbd23d8206d0b31ab096a3df4521c7daf8e"
+  },
+  "operating_point": {
+    "basis_direct_metric_credit": false,
+    "coil_minor_radius_m": 5.139527932308982,
+    "density_m3": 5.553499121541965e+19,
+    "design_sequence": "halton_bases_2_3_5_7_11_13_17_19_23",
+    "elongation": 1.9678294016,
+    "field_periods": 6,
+    "fuel": "D-T",
+    "historical_v91_basis_consumed": false,
+    "input_origin": "candidate_bound_halton_low_discrepancy_physical_design_v98",
+    "magnetic_field_t": 9.713856090017236,
+    "major_radius_m": 9.914610862731934,
+    "minor_radius_m": 2.855293295727212,
+    "open_branch_length_m": 27.59692693145263,
+    "temperature_kev": 7.167989135005794,
+    "triangularity": -0.39935414537140884,
+    "wall_minor_radius_m": 3.8546459492317364
+  },
+  "physics_solve": {
+    "basis_direct_metric_credit": false,
+    "capability_route": "axisymmetric_closed",
+    "claim_boundary": "v98 separates topology rejection, provider-system failure, candidate-bound reduced physics rejection, numerical VVUQ, computational candidacy, and validation. Design coordinates may propose geometry and operating inputs, but no basis coordinate receives direct metric or gate credit. The reduced empirical confinement, Bosch-Hale reaction, zero-dimensional power, and engineering screens are candidate-ranking evidence only; they are not high-fidelity equilibrium, complete stability, materials qualification, experimental validation, or a credible-device claim.",
+    "confinement_model": {
+      "coefficient": 160.92941554258894,
+      "model": "IPB98y2_capability_scoped_v98",
+      "plasma_current_ma": 20.879026258475704,
+      "power_exponent": 0.69,
+      "q95": 4.659999999999999
+    },
+    "evidence_ceiling": "candidate_bound_reduced_empirical_physics_and_engineering_screen",
+    "failed_gates": [],
+    "gates": [
+      {
+        "gate_id": "temperature_fit_domain",
+        "status": "pass",
+        "threshold": [
+          5.0,
+          30.0
+        ],
+        "units": "keV",
+        "value": 7.167989135005794
+      },
+      {
+        "gate_id": "geometry_aspect_ratio",
+        "status": "pass",
+        "threshold": 1.8,
+        "units": "1",
+        "value": 3.4723616230839047
+      },
+      {
+        "gate_id": "radial_build",
+        "status": "pass",
+        "threshold": 0.0,
+        "units": "m",
+        "value": 0.9993526535045243
+      },
+      {
+        "gate_id": "minimum_beta",
+        "status": "pass",
+        "threshold": 0.002,
+        "units": "1",
+        "value": 0.0033975117287631078
+      },
+      {
+        "gate_id": "capability_scoped_stability",
+        "status": "pass",
+        "threshold": 3.5,
+        "units": "1",
+        "value": 0.45132887016447454
+      },
+      {
+        "gate_id": "confinement_power_balance",
+        "status": "pass",
+        "threshold": "finite_converged",
+        "units": "W",
+        "value": 70038578.93712267
+      },
+      {
+        "gate_id": "fusion_gain",
+        "status": "pass",
+        "threshold": 5.0,
+        "units": "1",
+        "value": 13.614635662562922
+      },
+      {
+        "gate_id": "net_electric_power",
+        "status": "pass",
+        "threshold": 0.0,
+        "units": "W",
+        "value": 62650128.16058993
+      },
+      {
+        "gate_id": "neutron_wall_load",
+        "status": "pass",
+        "threshold": 5000000.0,
+        "units": "W/m^2",
+        "value": 156553.01051138155
+      },
+      {
+        "gate_id": "exhaust_heat_flux",
+        "status": "pass",
+        "threshold": 10000000.0,
+        "units": "W/m^2",
+        "value": 297828.4686891103
+      },
+      {
+        "gate_id": "peak_conductor_field",
+        "status": "pass",
+        "threshold": 16.0,
+        "units": "T",
+        "value": 14.297690832056162
+      },
+      {
+        "gate_id": "support_stress",
+        "status": "pass",
+        "threshold": 650000000.0,
+        "units": "Pa",
+        "value": 180750467.88014278
+      },
+      {
+        "gate_id": "plasma_current",
+        "status": "pass",
+        "threshold": 25.0,
+        "units": "MA",
+        "value": 20.879026258475704
+      }
+    ],
+    "geometry": {
+      "aspect_ratio": 3.4723616230839047,
+      "first_wall_area_m2": 1567.76100564187,
+      "geometry_model": "elliptic_toroidal_control_volume_v98",
+      "plasma_to_wall_clearance_m": 0.9993526535045243,
+      "volume_m3": 3139.7445170426736,
+      "wall_to_coil_clearance_m": 1.2848819830772458
+    },
+    "loss_root_iterations": 100,
+    "metrics": {
+      "beta": 0.0033975117287631078,
+      "beta_n": 0.45132887016447454,
+      "bremsstrahlung_power_w": 13855209.580375247,
+      "energy_confinement_time_s": 8.57734106012239,
+      "exhaust_heat_flux_w_m2": 297828.4686891103,
+      "fusion_gain": 13.614635662562922,
+      "fusion_power_w": 306797131.4944822,
+      "net_electric_power_w": 62650128.16058993,
+      "neutron_wall_load_w_m2": 156553.01051138155,
+      "peak_conductor_field_t": 14.297690832056162,
+      "pressure_pa": 127557.04073991496,
+      "reactivity_m3_s": 4.494283856767104e-23,
+      "required_auxiliary_power_w": 22534362.21860148,
+      "self_heated_power_balance": false,
+      "stored_energy_j": 600744778.9100053,
+      "support_stress_pa": 180750467.88014278,
+      "transport_loss_power_w": 70038578.93712267
+    },
+    "solve_hash": "3dd2507e1d3c967bf1ac34088d2184157167c2beaa14ce7cc2cd35f25185e91b",
+    "status": "pass"
+  },
+  "provider_closure": {
+    "multiplicity": 1,
+    "source": "sealed_v97_provider_rerun",
+    "status": "pass"
+  },
+  "request_index": 591679,
+  "result_hash": "3986c86af94bc2e1ddabae8da4ed4982fb98b3731dfc274ff9537be2a913cbc1",
+  "solver_input_hash": "3b5e2906fe916bfac71e8f8da5749e1e64a5903b17812ab64b89b087f6b435c4",
+  "stage_order": [
+    "topology_screen",
+    "provider_closure",
+    "physics_solve",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "topology_hash": "6d22a9419ff5af63949f24003109086b8411d11b4f4da96fac11a9239d561195",
+  "unsupported_candidate_classification_used": false,
+  "v97_closure_row_hash": "7f6797372bee2f4153dd14c7c42ebcc1ecdfda47fccbe44e49f2ea893c98faac",
+  "validation_vvuq": {
+    "actual_measurement_dataset_count": 0,
+    "reason": "candidate_bound_validation_measurements_unavailable",
+    "status": "unknown_validation_domain"
+  }
+}

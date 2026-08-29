@@ -1,0 +1,248 @@
+{
+  "basis_direct_metric_credit": false,
+  "candidate_state": "computational_candidate",
+  "capability_profile": {
+    "axisymmetric_fraction": 0.6,
+    "capability_hash": "256f76b75b59a1a6a93b3ceaa6e8833e713325cccd1f70281996a95caeb0aa70",
+    "closed_core_route": "axisymmetric_closed",
+    "closed_plasma_region_count": 4,
+    "declared_boundaries": [
+      "closed",
+      "mixed",
+      "open",
+      "periodic"
+    ],
+    "declared_dimensions": [
+      2,
+      3
+    ],
+    "declared_field_semantics": [
+      "axisymmetric_closed",
+      "three_dimensional_closed"
+    ],
+    "declared_operators": [
+      "cross_field_transport",
+      "field_balance",
+      "parallel_transport",
+      "reaction_radiation"
+    ],
+    "field_operator_fraction": 0.4,
+    "field_quality_parameter": 0.796,
+    "hybrid_fraction": 0,
+    "identity_fields_used": false,
+    "open_fraction": 0,
+    "route": "axisymmetric_closed",
+    "routing_axes": [
+      "field_semantics",
+      "boundary",
+      "operator",
+      "dimension"
+    ],
+    "spatial_fraction": 1,
+    "three_dimensional_fraction": 0.4
+  },
+  "claim_boundary": "v100 uses a deterministic low-discrepancy sequence only to propose candidate-bound operating and finite radial-build inputs. All metric and gate credit comes from the physics solve and explicit engineering prefilter. A prefilter pass is not FreeGS, DESC, complete engineering, transport, validation, or whole-device credibility.",
+  "engineering_prefilter": {
+    "claim_boundary": "v100 uses a deterministic low-discrepancy sequence only to propose candidate-bound operating and finite radial-build inputs. All metric and gate credit comes from the physics solve and explicit engineering prefilter. A prefilter pass is not FreeGS, DESC, complete engineering, transport, validation, or whole-device credibility.",
+    "evidence_ceiling": "candidate_bound_reduced_static_engineering_prefilter",
+    "failed_gates": [],
+    "gates": {
+      "additive_peak_field": "pass",
+      "central_bore": "pass",
+      "finite_radial_build": "pass",
+      "maintenance_gap": "pass",
+      "membrane_support_stress": "pass",
+      "pf_current_density": "pass",
+      "shield_thickness": "pass"
+    },
+    "metrics": {
+      "additive_peak_field_t": 12.950439670154875,
+      "central_bore_m": 6.864197557179319,
+      "inner_pf_center_major_radius_m": 7.502760057238927,
+      "local_toroidal_field_t": 8.308042479789279,
+      "maximum_pf_current_a_turn": 14822303.780747775,
+      "membrane_support_stress_pa": 180350655.25470087,
+      "pf_current_density_a_m2": 9087593.598771153,
+      "pf_self_field_t": 4.642397190365597
+    },
+    "model": "explicit_shared_radial_build_pf_proxy_v100",
+    "result_hash": "55c86376e8ce11a9ccc50fc789deb54c5b38334543860cba734e9b78781fb4c0",
+    "status": "pass"
+  },
+  "graph_hash": "5515eb93118bdffa1aa7a9c7da8f7b5b6f81325f4b061f2fd3980da8d70b4280",
+  "identity_fields_used_for_routing": false,
+  "magnet_layout": {
+    "layout_model": "shared_radial_build_v100",
+    "maintenance_gap_m": 0.7101637657320319,
+    "pf_current_fraction_upper_bound": 0.75,
+    "shield_thickness_m": 1.2865807290989544,
+    "support_thickness_m": 2.7760833383782577,
+    "winding_pack_thickness_m": 1.2771250001192158
+  },
+  "operating_point": {
+    "basis_direct_metric_credit": false,
+    "coil_minor_radius_m": 7.168268994109643,
+    "density_m3": 1.000495776910842e+20,
+    "design_sequence": "halton_physical_input_proposal_v100",
+    "elongation": 1.9723919047884797,
+    "field_periods": 1,
+    "fuel": "D-T",
+    "input_origin": "candidate_bound_low_discrepancy_operating_and_radial_build_v100",
+    "magnetic_field_t": 4.442073604335909,
+    "major_radius_m": 14.032466551288962,
+    "minor_radius_m": 3.8943994991594404,
+    "open_branch_length_m": 60.29988382163118,
+    "temperature_kev": 9.597904126703547,
+    "triangularity": -0.1263467781477763,
+    "wall_minor_radius_m": 5.180980228258395
+  },
+  "parent_candidate_result_hash": "88e7a8e2114b7f4c7a5a35d4ac18630af345d12b3260ff591b4625dc7118d02a",
+  "parent_request_index": 625659,
+  "physics_solve": {
+    "basis_direct_metric_credit": false,
+    "capability_route": "axisymmetric_closed",
+    "claim_boundary": "v98 separates topology rejection, provider-system failure, candidate-bound reduced physics rejection, numerical VVUQ, computational candidacy, and validation. Design coordinates may propose geometry and operating inputs, but no basis coordinate receives direct metric or gate credit. The reduced empirical confinement, Bosch-Hale reaction, zero-dimensional power, and engineering screens are candidate-ranking evidence only; they are not high-fidelity equilibrium, complete stability, materials qualification, experimental validation, or a credible-device claim.",
+    "confinement_model": {
+      "coefficient": 403.362217899486,
+      "model": "IPB98y2_capability_scoped_v98",
+      "plasma_current_ma": 19.7630717076637,
+      "power_exponent": 0.69,
+      "q95": 2.97
+    },
+    "evidence_ceiling": "candidate_bound_reduced_empirical_physics_and_engineering_screen",
+    "failed_gates": [],
+    "gates": [
+      {
+        "gate_id": "temperature_fit_domain",
+        "status": "pass",
+        "threshold": [
+          5.0,
+          30.0
+        ],
+        "units": "keV",
+        "value": 9.597904126703547
+      },
+      {
+        "gate_id": "geometry_aspect_ratio",
+        "status": "pass",
+        "threshold": 1.8,
+        "units": "1",
+        "value": 3.6032426961634787
+      },
+      {
+        "gate_id": "radial_build",
+        "status": "pass",
+        "threshold": 0.0,
+        "units": "m",
+        "value": 1.2865807290989548
+      },
+      {
+        "gate_id": "minimum_beta",
+        "status": "pass",
+        "threshold": 0.002,
+        "units": "1",
+        "value": 0.03919226973819754
+      },
+      {
+        "gate_id": "capability_scoped_stability",
+        "status": "pass",
+        "threshold": 3.5,
+        "units": "1",
+        "value": 3.430616879981685
+      },
+      {
+        "gate_id": "confinement_power_balance",
+        "status": "pass",
+        "threshold": "finite_converged",
+        "units": "W",
+        "value": 1416383528.4154944
+      },
+      {
+        "gate_id": "fusion_gain",
+        "status": "pass",
+        "threshold": 5.0,
+        "units": "1",
+        "value": 16.757059934575135
+      },
+      {
+        "gate_id": "net_electric_power",
+        "status": "pass",
+        "threshold": 0.0,
+        "units": "W",
+        "value": 1664181034.3408132
+      },
+      {
+        "gate_id": "neutron_wall_load",
+        "status": "pass",
+        "threshold": 5000000.0,
+        "units": "W/m^2",
+        "value": 1579776.8600340316
+      },
+      {
+        "gate_id": "exhaust_heat_flux",
+        "status": "pass",
+        "threshold": 10000000.0,
+        "units": "W/m^2",
+        "value": 3116439.8547675298
+      },
+      {
+        "gate_id": "peak_conductor_field",
+        "status": "pass",
+        "threshold": 16.0,
+        "units": "T",
+        "value": 6.443560187590542
+      },
+      {
+        "gate_id": "support_stress",
+        "status": "pass",
+        "threshold": 650000000.0,
+        "units": "Pa",
+        "value": 32373633.25788028
+      },
+      {
+        "gate_id": "plasma_current",
+        "status": "pass",
+        "threshold": 25.0,
+        "units": "MA",
+        "value": 19.7630717076637
+      }
+    ],
+    "geometry": {
+      "aspect_ratio": 3.6032426961634787,
+      "first_wall_area_m2": 3029.9178858395335,
+      "geometry_model": "elliptic_toroidal_control_volume_v98",
+      "plasma_to_wall_clearance_m": 1.2865807290989548,
+      "volume_m3": 8285.867220558688,
+      "wall_to_coil_clearance_m": 1.9872887658512477
+    },
+    "loss_root_iterations": 100,
+    "metrics": {
+      "beta": 0.03919226973819754,
+      "beta_n": 3.430616879981685,
+      "bremsstrahlung_power_w": 137323036.34036365,
+      "energy_confinement_time_s": 2.7001035367213873,
+      "exhaust_heat_flux_w_m2": 3116439.8547675298,
+      "fusion_gain": 16.757059934575135,
+      "fusion_power_w": 5983242704.815661,
+      "net_electric_power_w": 1664181034.3408132,
+      "neutron_wall_load_w_m2": 1579776.8600340316,
+      "peak_conductor_field_t": 6.443560187590542,
+      "pressure_pa": 307703.23110654665,
+      "reactivity_m3_s": 1.0233049161553862e-22,
+      "required_auxiliary_power_w": 357058023.7927258,
+      "self_heated_power_balance": false,
+      "stored_energy_j": 3824382174.4285936,
+      "support_stress_pa": 32373633.25788028,
+      "transport_loss_power_w": 1416383528.4154944
+    },
+    "solve_hash": "162eea414a32030ba773d8f6f784f9b285ee774d60c3f1a419481299b0f0729f",
+    "status": "pass"
+  },
+  "protocol_id": "fusionconceptai-v100-candidate-bound-design-refinement-20260829",
+  "request_index": 625659000363,
+  "result_hash": "90b523058ef64598e5f6b77c2a453ddbd61f34b8c3b7ba3caa8c239954fb0085",
+  "schema_version": "1.0.0",
+  "selection_score": 0.5614819769072084,
+  "solver_input_hash": "e77d653f94a0bddad21c7196e291e3e71257ed8d703ee05bf78843a426cb87e6",
+  "unsupported_candidate_classification_used": false
+}

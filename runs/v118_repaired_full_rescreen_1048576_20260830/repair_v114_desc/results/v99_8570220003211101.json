@@ -1,0 +1,425 @@
+{
+  "boundary_transform": {
+    "R_modes": [
+      {
+        "coefficient_m": 15.011775299395845,
+        "m": 0,
+        "n": 0
+      },
+      {
+        "coefficient_m": 2.9076153548697796,
+        "m": 1,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.08375472994711543,
+        "m": 2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.06823257458358668,
+        "m": 3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.05517158290971429,
+        "m": 4,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.09433983724079602,
+        "m": 5,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.008243461567662931,
+        "m": 6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.00512846093731146,
+        "m": 7,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.002506473923383059,
+        "m": 8,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.009622316968494202,
+        "m": 9,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.006003244236639217,
+        "m": 10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0020555652983130423,
+        "m": 11,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.004389058917722984,
+        "m": 12,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0030784208996228347,
+        "m": 13,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.003968665356580525,
+        "m": 14,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0008594379882367267,
+        "m": 15,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0020793757031258514,
+        "m": 16,
+        "n": 0
+      }
+    ],
+    "Z_modes": [
+      {
+        "coefficient_m": -6.193385102831327,
+        "m": -1,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.37053123032039675,
+        "m": -2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.2727329528572033,
+        "m": -3,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.08084349303657272,
+        "m": -4,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.218294353787523,
+        "m": -5,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.05138891396133797,
+        "m": -6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.03227169753258209,
+        "m": -7,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0738045703212414,
+        "m": -8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.022901154554924637,
+        "m": -9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0665131403608716,
+        "m": -10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0014494470019207804,
+        "m": -11,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.044843215318972285,
+        "m": -12,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.012154782905130428,
+        "m": -13,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.02741577350410384,
+        "m": -14,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.01460013655691459,
+        "m": -15,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.012080395447786978,
+        "m": -16,
+        "n": 0
+      }
+    ],
+    "adaptive_mode_fit_audit": [
+      {
+        "fit_max_relative_to_minor_radius": 0.08792879150160879,
+        "fit_rms_relative_to_minor_radius": 0.01035116179909221,
+        "maximum_mode": 12
+      },
+      {
+        "fit_max_relative_to_minor_radius": 0.07203216748010365,
+        "fit_rms_relative_to_minor_radius": 0.007910701123280022,
+        "maximum_mode": 16
+      }
+    ],
+    "fit_gate_passed": true,
+    "fit_max_relative_to_minor_radius": 0.07203216748010365,
+    "fit_rms_relative_to_minor_radius": 0.007910701123280022,
+    "fitted_minor_radius_m": 3.0853530304381125,
+    "fitted_vertical_minor_radius_m": 6.777171317263123,
+    "selected_maximum_mode": 16,
+    "shrink_from_separatrix": 0.9
+  },
+  "candidate_result_hash": "e029686d52cb4ccd5354505e1ffdde23431cfbfe1421d0fd87d9e2b6682c8e0d",
+  "candidate_state": "sampled_ideal_mhd_candidate",
+  "capability_route": "axisymmetric_closed",
+  "claim_boundary": "Candidate-bound v100 FreeGS-to-DESC cross-code equilibrium and sampled Mercier/infinite-n ballooning qualification using one shared PF radial build. A pass does not establish finite-n, resistive, kinetic, nonlinear, transport, materials, experimental-validation, or whole-device feasibility.",
+  "cross_code_equilibrium": {
+    "desc": {
+      "force_normalized_to_magnetic_gradient": 0.008416769978499505,
+      "iota_095": 0.34476012299416525,
+      "major_radius_m": 14.89297140013872,
+      "minor_radius_m": 4.259038220424299,
+      "plasma_volume_m3": 5332.540608929178,
+      "volume_average_beta": 0.005331859707933599
+    },
+    "expected_inner_volume_m3": 5322.8520324325655,
+    "failed_gates": [],
+    "freegs": {
+      "magnetic_axis_r_m": 15.142500984476714,
+      "minor_radius_m": 3.428170033820125,
+      "plasma_volume_m3": 6571.422262262426,
+      "q_95": 2.9005674766420846,
+      "toroidal_beta": 0.0024217204793289585
+    },
+    "gates": {
+      "axis_pressure_binding": "pass",
+      "desc_force_residual": "pass",
+      "edge_iota_binding": "pass",
+      "inner_volume_binding": "pass",
+      "major_radius_binding": "pass"
+    },
+    "relative_errors": {
+      "axis_pressure_relative": 0.0,
+      "inner_volume_relative": 0.0018201852010124445,
+      "iota_095_relative": 6.440553594093866e-16,
+      "major_radius_relative": 0.016478756355624367
+    },
+    "status": "pass"
+  },
+  "desc_result": {
+    "ballooning": {
+      "alpha_count": 8,
+      "extraction_shift": -1.0,
+      "field_line_point_count": 384,
+      "maximum_lambda": -0.0005919862191126057,
+      "maximum_lambda_by_rho": [
+        -0.006418300077333461,
+        -0.005568527945258084,
+        -0.0013797312583559984,
+        -0.0005919862191126057
+      ],
+      "nturns": 3,
+      "nzetaperturn": 128,
+      "required_maximum_lambda": -1e-05,
+      "rho": [
+        0.25,
+        0.5,
+        0.75,
+        0.9
+      ],
+      "sampled_favorable": true,
+      "scan_count": 480,
+      "shift_extraction_max_abs_difference": 1.1102230246251565e-16,
+      "worst_rho": 0.9,
+      "zeta0_count": 15
+    },
+    "claim_boundary": "Sampled Mercier and infinite-n ideal-ballooning criteria on a re-solved fixed-boundary equilibrium only; not finite-n, resistive, kinetic, nonlinear, disruption, transport, engineering, all-mode stability, or device superiority.",
+    "environment": {
+      "desc_opt": "0.17.3",
+      "device": "TFRT_CPU_0",
+      "jax": "0.9.2",
+      "jax_finufft_available": false,
+      "jaxlib": "0.9.2",
+      "numpy": "2.4.2",
+      "python": "3.13.5"
+    },
+    "equilibrium": {
+      "accepted": true,
+      "after": {
+        "aspect_ratio": 3.496792146339329,
+        "force_normalized_to_magnetic_gradient": 0.008416769978499505,
+        "force_normalized_to_pressure_gradient": 0.27162500749343504,
+        "force_volume_average_n_m3": 15582.615509739227,
+        "iota_095": 0.34476012299416525,
+        "iota_axis": 2.527854752250366,
+        "iota_mid": 1.4045330332522452,
+        "magnetic_pressure_gradient_scale_n_m3": 1851377.1374939263,
+        "major_radius_m": 14.89297140013872,
+        "minor_radius_m": 4.259038220424299,
+        "plasma_volume_m3": 5332.540608929178,
+        "pressure_095_pa": 2072.073768285998,
+        "pressure_axis_pa": 217969.62717012587,
+        "pressure_gradient_scale_n_m3": 57368.118103469715,
+        "pressure_mid_pa": 122607.9152831958,
+        "volume_average_beta": 0.005331859707933599
+      },
+      "continuation_states": 7,
+      "fixed_constraint_residuals": {
+        "boundary_r_max_abs_m": 0.0,
+        "boundary_z_max_abs_m": 0.0,
+        "iota_coeff_max_abs": 0.0,
+        "pressure_coeff_max_abs_pa": 0.0,
+        "toroidal_flux_abs_wb": 0.0
+      },
+      "minimum_sampled_sqrt_g": 24.94817061809622,
+      "solved_volume_state_hash": "e316ceda623e53b96896f45b007ff22e61d70ecf5b1deccf13e42f5b54c10705"
+    },
+    "equilibrium_reference": {
+      "matched": null,
+      "maximum_relative_difference": null,
+      "provided": false
+    },
+    "input_hash": "2edaf7caf2e7f8f95928454d2c1fe53f319707b8ef8516775cf78552a7342dc4",
+    "local_ideal_mhd": {
+      "all_mode_plasma_stability_established": false,
+      "infinite_n_ballooning_sampled_favorable": true,
+      "mercier_sampled_favorable": true,
+      "sampled_favorable": true
+    },
+    "mercier": {
+      "D_Mercier_normalized": [
+        1.3981873689146762,
+        5.06871341867573,
+        4.245519891382817,
+        2.5938601533481713,
+        1.5465092918376577,
+        0.09708709268216277,
+        0.05642584501258774
+      ],
+      "D_Mercier_wb_minus2": [
+        1.2639425434649947e-05,
+        4.5820486387809076e-05,
+        3.837892781144906e-05,
+        2.344814631074998e-05,
+        1.3980235634190037e-05,
+        8.776542371253746e-07,
+        5.100820365566036e-07
+      ],
+      "D_current_wb_minus2": [
+        6.390477089346812e-06,
+        2.72856760453401e-06,
+        -1.8486012086873845e-06,
+        -2.0718848051020957e-06,
+        3.6806484940744914e-06,
+        -5.3541850772261824e-08,
+        3.7497582147368013e-06
+      ],
+      "D_geodesic_wb_minus2": [
+        -2.654501465588996e-05,
+        -3.6005877917353997e-06,
+        -9.308094483942615e-08,
+        -4.157952502653287e-07,
+        -6.769441660358113e-07,
+        -1.466846509932804e-07,
+        -3.667524263468991e-06
+      ],
+      "D_shear_wb_minus2": [
+        5.9823553796807816e-05,
+        5.405537374767793e-05,
+        4.1220249632180787e-05,
+        2.558578447283834e-05,
+        1.0667110962986566e-05,
+        1.089403699120185e-06,
+        4.579939352868678e-07
+      ],
+      "D_well_wb_minus2": [
+        -2.7029590795614716e-05,
+        -7.362867172667465e-06,
+        -8.996396672049151e-07,
+        3.500418932790666e-07,
+        3.094203431647895e-07,
+        -1.1522960229268273e-08,
+        -3.014584999807425e-08
+      ],
+      "angular_m": 18,
+      "angular_n": 4,
+      "minimum_D_Mercier_normalized": 0.05642584501258774,
+      "minimum_D_Mercier_wb_minus2": 5.100820365566036e-07,
+      "positive_fraction": 1.0,
+      "required_normalized_positive_margin": 1e-05,
+      "rho": [
+        0.15,
+        0.25,
+        0.4,
+        0.55,
+        0.7,
+        0.85,
+        0.95
+      ],
+      "sampled_favorable": true,
+      "term_closure_max_abs_wb_minus2": 0.0,
+      "worst_rho": 0.95
+    },
+    "physics_hash": "e029686d52cb4ccd5354505e1ffdde23431cfbfe1421d0fd87d9e2b6682c8e0d",
+    "process_exit_code": 0,
+    "result_hash": "337aada1263ebcf9d5a6930e70159ba677b66bd235a0fdb7f80e829314de444b",
+    "runner_version": "desc_stellarator_sampled_ideal_mhd_stability_runner_v1",
+    "status": "pass",
+    "warnings": [
+      "jax_finufft is not installed. NUFFT functions will not be available.",
+      "linear_util.wrap_init is missing a DebugInfo object. This behavior is deprecated, use api_util.debug_info() to construct a proper DebugInfo object and propagate it to this function. See https://github.com/jax-ml/jax/issues/26480 for more details."
+    ]
+  },
+  "failed_gates": [],
+  "freegs_full_result_hash": "572bfaefe900fcafc3d754f953d024b0e901548e3d4a614108f4e5c308b63016",
+  "freegs_verification_hash": "f354063bc7181bc559b6284acbc31a013124980f8b08947168b0eca5dc827a4e",
+  "identity_fields_used_for_routing": false,
+  "numerical_vvuq": {
+    "reason": "cross_code_equilibrium_and_sampled_local_ideal_mhd_only",
+    "status": "partial_pass"
+  },
+  "request_index": 8570220003211101,
+  "result_hash": "85e53757e425707a69ade932fe34dd99052d9ca250d364be8b63c9cf3b101521",
+  "routing_axes": [
+    "field_semantics",
+    "boundary",
+    "operator",
+    "dimension"
+  ],
+  "runner_version": "v100_shared_radial_build_cross_code_qualification_v1",
+  "schema_version": "1.0.0",
+  "stage_order": [
+    "freegs_verified_equilibrium",
+    "freegs_to_desc_transform",
+    "desc_fixed_boundary_equilibrium",
+    "sampled_ideal_mhd",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "unsupported_candidate_classification_used": false,
+  "validation_vvuq": {
+    "reason": "candidate_bound_independent_measurements_unavailable",
+    "status": "unknown_validation_domain"
+  },
+  "whole_device_credible": false
+}

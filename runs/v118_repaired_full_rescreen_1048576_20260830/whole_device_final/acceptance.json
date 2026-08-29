@@ -1,0 +1,73 @@
+{
+    "source_reference_acceptance_hash": "9249d551367d055f99dcb75ed9bb710ea8b3806049c7b8a724662c65d7d2a6ee",
+    "conservation_provider_survivor_count": 5,
+    "stage_order": [
+        "ITER_C2W_reference_regression",
+        "whole_device_assembly",
+        "available_provider_DAG",
+        "dynamic_fault",
+        "materials",
+        "multiregion_transport",
+        "SOL_exhaust",
+        "channel_thermal_hydraulics",
+        "sampled_numerical_VVUQ",
+        "validation_VVUQ"
+    ],
+    "sampled_whole_graph_numerical_vvuq_pass_count": 101,
+    "acceptance_hash": "5e4d8cd5c7f1e05fc14f5983dea3f4bf03136c45b51cf8c2299f9e5ee5ee7ca3",
+    "protocol_id": "fusionconceptai-v118-repaired-full-device-chain-20260830",
+    "claim_boundary": "v118 binds a freshly executed topology candidate stream to freshly executed FreeGS, DESC and static artifacts, then executes assembly, dynamic-fault, source-pinned materials, multi-region conservation and channel thermal-hydraulics in order. Sampled provider survivors remain validation-pending and receive no complete stability, complete transport, whole-device credibility or experimental-validation credit.",
+    "status": "complete",
+    "reference_regression_pass_count": 2,
+    "validation_vvuq_status": "external_evidence_required",
+    "stream_inventory": {
+        "v115_assemblies": {
+            "sha256": "a0729bddcffaefd40671930fea5d352e0ad005253b04069e6fe44280e44b8c34",
+            "row_count": 216
+        },
+        "v116_provider_results": {
+            "sha256": "a6c66ab84c2ed9f7ef379f27e24af76e37e9c22b7dacddd0c0f1f432d12086dc",
+            "row_count": 6
+        },
+        "v117_channel_results": {
+            "sha256": "285352ad20f156b54d16a97b1454e2074b29ea95ba40b4406609305d7e7b1008",
+            "row_count": 540
+        },
+        "v115_dynamics": {
+            "sha256": "6d7421b5c4e920ea832016045dfc41b0d77bd791452450d10f441354abfe0a2f",
+            "row_count": 800
+        },
+        "v115_materials": {
+            "sha256": "308d6866289c59519c568946895587e3d9ad1abe1d9f424d62cee86735721714",
+            "row_count": 600
+        },
+        "v115_dags": {
+            "sha256": "27c312f4bdd021ca1fb922b0e4a5847bef6ec039c8a626e73cc71954c96550cc",
+            "row_count": 200
+        },
+        "v115_screens": {
+            "sha256": "17672ac113d55daea68d71da38d1edf818046285cc6f170132726c5afd2803a8",
+            "row_count": 216
+        }
+    },
+    "partial_subgraph_promotion_allowed": false,
+    "provider_system_failure_count": 0,
+    "source_candidate_count": 9,
+    "unsupported_candidate_count": 0,
+    "v115_acceptance_hash": "d95492faf035b82e34a66fcbc7feeb61f91106a8af8febff6e54b9a516390a7c",
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "material_survivor_count": 384,
+    "basis_direct_metric_credit": false,
+    "reference_bypass_count": 0,
+    "source_provider_acceptance_hashes": {
+        "generation": "533b8d8c3c30973291f8c6d755390f6af802c39c14610fef2bdded997c8dbefa",
+        "static": "d98cd28125679eade3ca7cbb817679ae0a489d75a5db7b020ee7e643700b53cf",
+        "desc": "62c14dd8ba0f4acbf1aac80aa7ede507920b32d208f14cac4762b8d3eef8aeb3",
+        "freegs": "cd26ae8b4fd4586d1100ae0885483b9db00b5db9369004663544f4a32690d581"
+    },
+    "identity_fields_used_for_routing": false,
+    "schema_version": "1.0.0",
+    "v116_acceptance_hash": "ef15f19140e63383ad922e5a18db2cac91ffcb7e6d18f9432022fcc16476be24",
+    "v117_acceptance_hash": "10d533fc7b985daf59e48fd60109f43e0b78225604b2073f6bebd9818895b06e"
+}

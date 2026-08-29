@@ -315,6 +315,7 @@ include("similarity_scaled_field_repair_v114.jl")
 include("corrected_whole_device_rescreen_v115.jl")
 include("multiregion_conservation_providers_v116.jl")
 include("channel_thermal_hydraulics_provider_v117.jl")
+include("repaired_full_device_chain_v118.jl")
 
 export Quantity,
        MissionSpec,
@@ -2099,5 +2100,8 @@ export Stage3ExecutionBudgetV1,
        execute_channel_thermal_hydraulics_v117,
        select_v116_survivor_assemblies_v117,
        run_channel_thermal_hydraulics_campaign_v117
+export V118_PROTOCOL_ID,
+       REPAIRED_FULL_DEVICE_CHAIN_V118_CLAIM_BOUNDARY,
+       run_repaired_full_device_chain_v118
 
 end

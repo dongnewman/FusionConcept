@@ -1,0 +1,403 @@
+{
+  "candidate_binding_verified": true,
+  "candidate_graph_hash": "f54576ffb22c1c68d5f7424602e82651a0c3537a12ff31ea38f3fe3fe751da39",
+  "candidate_result_hash": "16af530eed0ff7e984aefaa95e3964e581cc4d1ad02749ad13efa53e3a1547de",
+  "candidate_solver_input_hash": "5b961715c14dda36f0bb9120c601f6a5700725094afa7d0b19bd4a5b5a064649",
+  "capability_hash": "1fc69f0e2192e10bda5608fd518f1d613fa0432f50ef79ba1a3f2d2a5b2f20ef",
+  "claim_boundary": "Three-grid candidate-bound FreeGS 0.8.2 free-boundary equilibrium verification using the same finite PF radial build as the v100 engineering prefilter. Passing supports this scalar-pressure equilibrium realization only; it does not establish complete stability, transport, engineering qualification, validation, or device feasibility.",
+  "coarse_geometry_errors": {
+    "elongation_relative": 0.25147157302741735,
+    "magnetic_axis_r_relative": 0.01206729416354896,
+    "minor_radius_relative": 3.7918984829723406e-05,
+    "plasma_current_relative": 0.0
+  },
+  "failed_gates": [
+    "coarse_elongation_binding",
+    "coarse_q95_safety"
+  ],
+  "gates": {
+    "coarse_elongation_binding": "fail",
+    "coarse_independent_gs_residual": "pass",
+    "coarse_isoflux_constraint": "pass",
+    "coarse_magnetic_axis_binding": "pass",
+    "coarse_minor_radius_binding": "pass",
+    "coarse_plasma_current_binding": "pass",
+    "coarse_q95_safety": "fail",
+    "coarse_xpoint_constraint": "pass"
+  },
+  "grid_records": [
+    {
+      "beta_n": 0.4543026922011951,
+      "elongation": 1.557204843363589,
+      "final_relative_change": 1.3118830274446593e-06,
+      "input_hash": "444418df85e65284a65cb60612a0f5a191f1ebb54c448ca204adc1cbd6dbfb28",
+      "iterations": 17,
+      "magnetic_axis_r_m": 14.890087531251023,
+      "maximum_isoflux_residual_relative": 7.379536278140482e-07,
+      "maximum_xpoint_field_residual_t": 6.951583330634955e-06,
+      "minor_radius_m": 3.644286545207726,
+      "plasma_current_a": 21752521.500445306,
+      "plasma_gs_residual_l2_relative": 0.021734920861263024,
+      "plasma_gs_residual_linf_relative": 0.02689550356746214,
+      "plasma_volume_m3": 5681.677806676086,
+      "q_95": 1.6645513080548027,
+      "result_hash": "175d4e9305f9b833e622b1c1f4065d0b0dd28b8f493c15531fe019e7f45b86f5",
+      "status": "pass",
+      "toroidal_beta": 0.004577355804853252
+    }
+  ],
+  "identity_fields_used_for_routing": false,
+  "numerical_vvuq": {
+    "reason": "coarse_candidate_physics_gate_failed",
+    "status": "not_executed"
+  },
+  "realization_search": [
+    {
+      "boundary_vertical_multiplier": 0.65,
+      "coil_vertical_multiplier": 0.75,
+      "objective": 0.3808584543519713,
+      "result": {
+        "beta_n": 0.5089439050493363,
+        "elongation": 1.3440960125938242,
+        "final_relative_change": 3.9133212396184437e-07,
+        "input_hash": "432c7028b220690a31315e511c52baeb0ca0ec580342889f334736013812090d",
+        "iterations": 20,
+        "magnetic_axis_r_m": 15.107068735325424,
+        "maximum_isoflux_residual_relative": 2.03107974080897e-07,
+        "maximum_xpoint_field_residual_t": 3.0310293514272677e-06,
+        "minor_radius_m": 3.643940528851462,
+        "plasma_current_a": 21752521.500445303,
+        "plasma_gs_residual_l2_relative": 0.028152440813718135,
+        "plasma_gs_residual_linf_relative": 0.034083616569850865,
+        "plasma_volume_m3": 4366.385541005332,
+        "q_95": 1.220035653126469,
+        "result_hash": "ee62d03493c78a72d5d77fb381f5ca2d2af070d124641ce45740b08ca8178f94",
+        "status": "pass",
+        "toroidal_beta": 0.005009709008846187
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.75,
+      "coil_vertical_multiplier": 0.75,
+      "objective": 0.26357678617579605,
+      "result": {
+        "beta_n": 0.4543026922011951,
+        "elongation": 1.557204843363589,
+        "final_relative_change": 1.3118830274446593e-06,
+        "input_hash": "444418df85e65284a65cb60612a0f5a191f1ebb54c448ca204adc1cbd6dbfb28",
+        "iterations": 17,
+        "magnetic_axis_r_m": 14.890087531251023,
+        "maximum_isoflux_residual_relative": 7.379536278140482e-07,
+        "maximum_xpoint_field_residual_t": 6.951583330634955e-06,
+        "minor_radius_m": 3.644286545207726,
+        "plasma_current_a": 21752521.500445306,
+        "plasma_gs_residual_l2_relative": 0.021734920861263024,
+        "plasma_gs_residual_linf_relative": 0.02689550356746214,
+        "plasma_volume_m3": 5681.677806676086,
+        "q_95": 1.6645513080548027,
+        "result_hash": "175d4e9305f9b833e622b1c1f4065d0b0dd28b8f493c15531fe019e7f45b86f5",
+        "status": "pass",
+        "toroidal_beta": 0.004577355804853252
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.85,
+      "coil_vertical_multiplier": 0.75,
+      "objective": 0.29360689292069564,
+      "result": {
+        "beta_n": 0.43020972219035875,
+        "elongation": 1.5865063471383196,
+        "final_relative_change": 2.4859662351371194e-06,
+        "input_hash": "f639bd4a807670ed7a27d4a665f70491b9e127a4345e2470c377cf846c544add",
+        "iterations": 24,
+        "magnetic_axis_r_m": 14.798780967811512,
+        "maximum_isoflux_residual_relative": 5.782229261263733e-07,
+        "maximum_xpoint_field_residual_t": 3.5851045224246133e-06,
+        "minor_radius_m": 3.4608954545692656,
+        "plasma_current_a": 21752521.500445303,
+        "plasma_gs_residual_l2_relative": 0.020503118942955804,
+        "plasma_gs_residual_linf_relative": 0.026005841801612258,
+        "plasma_volume_m3": 5448.771103276405,
+        "q_95": 2.1015766547781967,
+        "result_hash": "58045bcc46d06b6cf132eb9db8f08708b04246c19f0bc4dc46c7713fe4c83039",
+        "status": "pass",
+        "toroidal_beta": 0.004587417638037359
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.95,
+      "coil_vertical_multiplier": 0.75,
+      "objective": 0.37060521340253594,
+      "result": {
+        "beta_n": 0.36166524509558967,
+        "elongation": 1.6212625940039673,
+        "final_relative_change": 3.6363562709184137e-06,
+        "input_hash": "5475f2cc7ec33991fd023dcfab082a4dd4eb710ce822444adf34767edbcd09e0",
+        "iterations": 20,
+        "magnetic_axis_r_m": 14.77729943774819,
+        "maximum_isoflux_residual_relative": 4.1529595602697055e-07,
+        "maximum_xpoint_field_residual_t": 1.608167652050259e-05,
+        "minor_radius_m": 3.114072733448486,
+        "plasma_current_a": 21752521.500445295,
+        "plasma_gs_residual_l2_relative": 0.026409499158910044,
+        "plasma_gs_residual_linf_relative": 0.03157048831018315,
+        "plasma_volume_m3": 4592.132187677944,
+        "q_95": 1.754327506806834,
+        "result_hash": "fa92cd4a86eb442618dfb8bd7d31b8fa9e723fddc06b475af68d9e5d71079105",
+        "status": "pass",
+        "toroidal_beta": 0.004209949518615247
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 1.05,
+      "coil_vertical_multiplier": 0.75,
+      "objective": 0.31038116612881406,
+      "result": {
+        "beta_n": 0.3642036581767107,
+        "elongation": 1.7365642833595072,
+        "final_relative_change": 5.9603600969402225e-06,
+        "input_hash": "a33c69aad4c901d2a43dde1a51b54be45e2649189933504d18709ee7bd27152b",
+        "iterations": 20,
+        "magnetic_axis_r_m": 14.792296930574429,
+        "maximum_isoflux_residual_relative": 1.77288252659223e-06,
+        "maximum_xpoint_field_residual_t": 3.6172947923515736e-06,
+        "minor_radius_m": 3.135280986794852,
+        "plasma_current_a": 21752521.500445314,
+        "plasma_gs_residual_l2_relative": 0.024890786382696872,
+        "plasma_gs_residual_linf_relative": 0.031407335281665096,
+        "plasma_volume_m3": 4814.888825285146,
+        "q_95": 1.7569318610107219,
+        "result_hash": "99bf1c799c3afd17135ad353df3d3768c38e703798287c50ab6d71cbbe54b329",
+        "status": "pass",
+        "toroidal_beta": 0.004186926944356916
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.65,
+      "coil_vertical_multiplier": 0.9,
+      "error": "Picard iteration failed to converge (too many iterations)",
+      "objective": null
+    },
+    {
+      "boundary_vertical_multiplier": 0.75,
+      "coil_vertical_multiplier": 0.9,
+      "objective": 0.7605493447204446,
+      "result": {
+        "beta_n": 0.25570701308471383,
+        "elongation": 1.4469676642409652,
+        "final_relative_change": 7.595455031111849e-07,
+        "input_hash": "54951ff25c4bc256a0b05ec267b83bd07af6d267ccba34495aaaa4da67592260",
+        "iterations": 26,
+        "magnetic_axis_r_m": 14.402417493809267,
+        "maximum_isoflux_residual_relative": 2.003300705254781e-07,
+        "maximum_xpoint_field_residual_t": 1.2737846262999073e-05,
+        "minor_radius_m": 2.0590674518655145,
+        "plasma_current_a": 21752521.50044531,
+        "plasma_gs_residual_l2_relative": 0.0550460209741419,
+        "plasma_gs_residual_linf_relative": 0.06521050950770488,
+        "plasma_volume_m3": 1878.5082426406136,
+        "q_95": 0.5955204116673886,
+        "result_hash": "af774e074cfcce6f51c6a7637a2b0eac794df0da263e9ffcc07dbf946564fc4e",
+        "status": "pass",
+        "toroidal_beta": 0.0037660849540832905
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.85,
+      "coil_vertical_multiplier": 0.9,
+      "objective": 0.6856022975857505,
+      "result": {
+        "beta_n": 0.25570872064174743,
+        "elongation": 1.522994324835416,
+        "final_relative_change": 2.0753253555445368e-06,
+        "input_hash": "f3c10c51b11fa2776bd929f4c351ad72de8c0f393d5d84ea71abbd0076f4fa40",
+        "iterations": 26,
+        "magnetic_axis_r_m": 14.528682942107357,
+        "maximum_isoflux_residual_relative": 6.181774768255696e-07,
+        "maximum_xpoint_field_residual_t": 1.3886562752806886e-05,
+        "minor_radius_m": 2.167743628393003,
+        "plasma_current_a": 21752521.500445306,
+        "plasma_gs_residual_l2_relative": 0.04918831939655891,
+        "plasma_gs_residual_linf_relative": 0.059750433952831236,
+        "plasma_volume_m3": 2200.1661611870045,
+        "q_95": 0.6895532755882302,
+        "result_hash": "1460a55217e10a39ea13a18ec96daf3eb6687894c920c6b252186b5bb268e4c6",
+        "status": "pass",
+        "toroidal_beta": 0.003710202439779198
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.95,
+      "coil_vertical_multiplier": 0.9,
+      "objective": 0.6410980019744577,
+      "result": {
+        "beta_n": 0.2587551697562621,
+        "elongation": 1.5801081076999888,
+        "final_relative_change": 4.118779235909099e-06,
+        "input_hash": "06f763ae3579149eb4931a0eaf1e30154fad44ad152a3eeddd5e54cfc1109d59",
+        "iterations": 26,
+        "magnetic_axis_r_m": 14.591465112176634,
+        "maximum_isoflux_residual_relative": 1.328800805889518e-06,
+        "maximum_xpoint_field_residual_t": 1.4637280211559074e-05,
+        "minor_radius_m": 2.2143309581039494,
+        "plasma_current_a": 21752521.500445306,
+        "plasma_gs_residual_l2_relative": 0.046631281473415866,
+        "plasma_gs_residual_linf_relative": 0.05744103156091834,
+        "plasma_volume_m3": 2377.418715704834,
+        "q_95": 0.7359835490189816,
+        "result_hash": "de83a479c68319ab47621098a4974134e21f1a5cb6441301d46a43447ab44f81",
+        "status": "pass",
+        "toroidal_beta": 0.003725542422046963
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 1.05,
+      "coil_vertical_multiplier": 0.9,
+      "objective": 0.6066616277945396,
+      "result": {
+        "beta_n": 0.2760028266333631,
+        "elongation": 1.605961780368471,
+        "final_relative_change": 8.919769815955589e-06,
+        "input_hash": "5d18a49d0a4f3f349903e577180719b4bbb4d6ecec093db927cc1e1f96378cab",
+        "iterations": 28,
+        "magnetic_axis_r_m": 14.638359056045969,
+        "maximum_isoflux_residual_relative": 4.044435636629191e-06,
+        "maximum_xpoint_field_residual_t": 2.3792505597293485e-05,
+        "minor_radius_m": 2.2829245022895037,
+        "plasma_current_a": 21752521.500445314,
+        "plasma_gs_residual_l2_relative": 0.0443761089838441,
+        "plasma_gs_residual_linf_relative": 0.05466849215582271,
+        "plasma_volume_m3": 2500.801326796,
+        "q_95": 0.7886295739869424,
+        "result_hash": "a9269dbec2f7e7e960ec56f3e4dbd2cfd142b461f11d0d51b546bdf7c6f871e4",
+        "status": "pass",
+        "toroidal_beta": 0.003908918511195952
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.65,
+      "coil_vertical_multiplier": 1.05,
+      "objective": 0.4130605226809315,
+      "result": {
+        "beta_n": 0.4828191646553524,
+        "elongation": 1.3677626209368485,
+        "final_relative_change": 6.752208011123775e-07,
+        "input_hash": "999436871e5221f18925d10f88f61023e1b1f4ed829c26efd63d19318be83c4a",
+        "iterations": 25,
+        "magnetic_axis_r_m": 15.553519887829165,
+        "maximum_isoflux_residual_relative": 4.3589050878117726e-07,
+        "maximum_xpoint_field_residual_t": 3.339430120066877e-05,
+        "minor_radius_m": 3.5957124804767178,
+        "plasma_current_a": 21752521.500445303,
+        "plasma_gs_residual_l2_relative": 0.030883235554475,
+        "plasma_gs_residual_linf_relative": 0.03766549925427276,
+        "plasma_volume_m3": 4171.004168211886,
+        "q_95": 1.1228971936345118,
+        "result_hash": "fdd8afdf312da18d8f1889b9a7bc94290e650c8bac07b077c9c61ab237cac9c4",
+        "status": "pass",
+        "toroidal_beta": 0.004878335557109688
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.75,
+      "coil_vertical_multiplier": 1.05,
+      "objective": 0.6093761556569606,
+      "result": {
+        "beta_n": 0.387149227009244,
+        "elongation": 1.540215142166763,
+        "final_relative_change": 4.1196548392977465e-07,
+        "input_hash": "31b491f6d3a83499ea2ff7ebb2013d59cf193b3206fe5559476fdb3768ebcc52",
+        "iterations": 36,
+        "magnetic_axis_r_m": 15.784684777033931,
+        "maximum_isoflux_residual_relative": 2.224883327184791e-07,
+        "maximum_xpoint_field_residual_t": 1.7046777526785983e-05,
+        "minor_radius_m": 2.6354092602281334,
+        "plasma_current_a": 21752521.5004453,
+        "plasma_gs_residual_l2_relative": 0.03953729221484299,
+        "plasma_gs_residual_linf_relative": 0.04856845045639525,
+        "plasma_volume_m3": 2960.153688351788,
+        "q_95": 0.7627830419113597,
+        "result_hash": "81a09fe4e95ec028a98266f31d0ba49d170f6e665d0ff231f6ba4af337ca44ce",
+        "status": "pass",
+        "toroidal_beta": 0.005112656402953043
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.85,
+      "coil_vertical_multiplier": 1.05,
+      "objective": 0.9684062697285682,
+      "result": {
+        "beta_n": 0.15948713944725731,
+        "elongation": 1.7160709439880741,
+        "final_relative_change": 3.5023981782216805e-07,
+        "input_hash": "e7d2eb78feea79794ccec641d5e760f98f1440bdf43107fa226dae77f4d64075",
+        "iterations": 48,
+        "magnetic_axis_r_m": 16.82637592455315,
+        "maximum_isoflux_residual_relative": 1.6530273879049245e-07,
+        "maximum_xpoint_field_residual_t": 1.1437396033778043e-05,
+        "minor_radius_m": 1.2769177401804122,
+        "plasma_current_a": 21752521.500445303,
+        "plasma_gs_residual_l2_relative": 0.1134515694525824,
+        "plasma_gs_residual_linf_relative": 0.11508091870712557,
+        "plasma_volume_m3": 1075.5555815813339,
+        "q_95": 0.14323979468356932,
+        "result_hash": "83333575d2dd3fcced8e378f4fb20804f65f6a8ee91b2353ac6087bf9ba42cf9",
+        "status": "pass",
+        "toroidal_beta": 0.0024858200015071795
+      }
+    },
+    {
+      "boundary_vertical_multiplier": 0.95,
+      "coil_vertical_multiplier": 1.05,
+      "error": "Picard iteration failed to converge (too many iterations)",
+      "objective": null
+    },
+    {
+      "boundary_vertical_multiplier": 1.05,
+      "coil_vertical_multiplier": 1.05,
+      "objective": 1.2755984689045619,
+      "result": {
+        "beta_n": 0.014381825590227569,
+        "elongation": 0.7342175506386489,
+        "final_relative_change": 4.366665903086961e-11,
+        "input_hash": "b3f8c6628278c0ae6fade52b291950c01473edd4ae38f137951b5e74ff50e727",
+        "iterations": 12,
+        "magnetic_axis_r_m": 8.41494022229526,
+        "maximum_isoflux_residual_relative": 9.896410237561462e-12,
+        "maximum_xpoint_field_residual_t": 3.4538672099039866e-09,
+        "minor_radius_m": 4.375074220577252,
+        "plasma_current_a": 21752521.5004453,
+        "plasma_gs_residual_l2_relative": 0.15800496016402618,
+        "plasma_gs_residual_linf_relative": 0.12986558672070245,
+        "plasma_volume_m3": 3513.316785164503,
+        "q_95": 0.016598121135118073,
+        "result_hash": "54990ccd470e769268b2d1e33091565e9d3acbe8c74cf3ab8bbbac2edb68a427",
+        "status": "pass",
+        "toroidal_beta": 0.0001025438745163611
+      }
+    }
+  ],
+  "request_index": 122639000463,
+  "result_hash": "8ed242e89f55e4ae93b702bebf46b74fc0c9a117b86f580e0cc9e2b91cfdbcd5",
+  "runner_version": "v100_shared_radial_build_freegs_verification_v1",
+  "schema_version": "1.0.0",
+  "selected_boundary_vertical_multiplier": 0.75,
+  "selected_coil_vertical_multiplier": 0.75,
+  "stage_order": [
+    "free_boundary_equilibrium_solve",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "status": "fail",
+  "target_values": {
+    "elongation": 2.0803549835263997,
+    "major_radius_m": 14.712546899914742,
+    "minor_radius_m": 3.644424738094083,
+    "plasma_current_a": 21752521.500445306
+  },
+  "validation_credit": false,
+  "validation_vvuq": {
+    "reason": "coarse_candidate_physics_gate_failed",
+    "status": "not_executed"
+  }
+}

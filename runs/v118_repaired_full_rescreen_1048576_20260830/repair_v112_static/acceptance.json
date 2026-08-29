@@ -1,0 +1,32 @@
+{
+  "acceptance_hash": "4dfd88177de8dcdbbabc9c473307c6075c4d5ae0d3310f81dadc68bbe491962f",
+  "candidate_count": 1,
+  "candidate_state_histogram": {
+    "static_robustness_fail": 1
+  },
+  "claim_boundary": "Static PF perturbation and explicit radial-build engineering proxies only; no complete engineering or validation credit.",
+  "failed_gate_histogram": {
+    "additive_peak_field_proxy": 1
+  },
+  "processed_count": 1,
+  "protocol_id": "fusionconceptai-v100-static-robustness-batch-20260829",
+  "provider_system_failure_count": 0,
+  "rows": [
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 85702200032111,
+      "result_hash": "f4363cd9e051f3845d5bddf077347be460ae9e8c9f0d426d7f44dc5737c04c98"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source_candidate_stream_sha256": "43061afee3dd6c1071d63530c69ca812452df0146b03e970b3ab18344c5560dd",
+  "source_cross_code_acceptance_hash": "cab3437ec7192ceb98ff89a2c6ff1cb7d4c8cf34a5f64b2e276c54547bab81f2",
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}
