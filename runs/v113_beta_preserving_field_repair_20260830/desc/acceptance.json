@@ -1,0 +1,49 @@
+{
+  "acceptance_hash": "bc5ca1ca4d69a5f3fd7ed4803e08ca0fe0a8254a4b8c8d27849e68f50cb919e4",
+  "candidate_count": 3,
+  "candidate_state_histogram": {
+    "sampled_ideal_mhd_candidate": 3
+  },
+  "claim_boundary": "A v99 pass covers cross-code fixed-boundary equilibrium and sampled Mercier/infinite-n ballooning only. It is not complete stability, transport, engineering, validation, whole-device feasibility, or credibility.",
+  "failed_gate_histogram": {},
+  "processed_count": 3,
+  "protocol_id": "fusionconceptai-v113-cross-code-qualification-20260830",
+  "provider_system_failure_count": 0,
+  "rows": [
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 857022000321112,
+      "result_hash": "afb0ec732f72d676a81a6aa73416b200dea015923792c06f588290c5e6612e89",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 857022000321113,
+      "result_hash": "1f8d1a30d99d42efc1fa18702a84b777baee64ba68e0a3012efccf61c8a7d05a",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v1"
+    },
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 857022000321114,
+      "result_hash": "7f61315603e509a7a63e911f3701359ccf6672dd94e31b7776d9460b99e317e8",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v1"
+    }
+  ],
+  "runner_version_histogram": {
+    "v100_shared_radial_build_cross_code_qualification_v1": 3
+  },
+  "schema_version": "1.0.0",
+  "source_candidate_stream": "candidates.jsonl",
+  "source_candidate_stream_sha256": "222631d1e290619a910f31106d3d27c14d8c6bb7c6bf82a0e2264a33239150cd",
+  "source_freegs_acceptance_hash": "a8576d6101229ad2efcee0b33a3252edb28e426e7864492a9c535d83bc8c2ffe",
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}

@@ -1,0 +1,197 @@
+{
+  "boundary_transform": {
+    "R_modes": [
+      {
+        "coefficient_m": 12.972699948355835,
+        "m": 0,
+        "n": 0
+      },
+      {
+        "coefficient_m": 2.6741053205455874,
+        "m": 1,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.09447071210846766,
+        "m": 2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.006326419740602756,
+        "m": 3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.1495818489210499,
+        "m": 4,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.02545957343333895,
+        "m": 5,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0552030752898685,
+        "m": 6,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0029487120320203495,
+        "m": 7,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.025011345273727306,
+        "m": 8,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.036264206854996726,
+        "m": 9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.013175783813012435,
+        "m": 10,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0014597550359637616,
+        "m": 11,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.00511151083617801,
+        "m": 12,
+        "n": 0
+      }
+    ],
+    "Z_modes": [
+      {
+        "coefficient_m": -5.115641411500193,
+        "m": -1,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.45829703398985605,
+        "m": -2,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.01348597186265154,
+        "m": -3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.010923512502442924,
+        "m": -4,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.04762644189347197,
+        "m": -5,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.19237811209232708,
+        "m": -6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.09090629375891662,
+        "m": -7,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.03815619327844286,
+        "m": -8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.015514717648804325,
+        "m": -9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.015400895840820912,
+        "m": -10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.03974136654625839,
+        "m": -11,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.036071051856648245,
+        "m": -12,
+        "n": 0
+      }
+    ],
+    "adaptive_mode_fit_audit": [
+      {
+        "fit_max_relative_to_minor_radius": 0.06392406962311625,
+        "fit_rms_relative_to_minor_radius": 0.01149489648635392,
+        "maximum_mode": 12
+      }
+    ],
+    "fit_gate_passed": true,
+    "fit_max_relative_to_minor_radius": 0.06392406962311625,
+    "fit_rms_relative_to_minor_radius": 0.01149489648635392,
+    "fitted_minor_radius_m": 2.6829029102156867,
+    "fitted_vertical_minor_radius_m": 5.275839224625972,
+    "selected_maximum_mode": 12,
+    "shrink_from_separatrix": 0.9
+  },
+  "candidate_result_hash": "49a6f2b9001c9c162b0a6e78ebebb3becf618dfe272d21af3e45fb89bceb5859",
+  "candidate_state": "cross_code_equilibrium_fail",
+  "capability_route": "axisymmetric_closed",
+  "claim_boundary": "Candidate-bound v100 FreeGS-to-DESC cross-code equilibrium and sampled Mercier/infinite-n ballooning qualification using one shared PF radial build. A pass does not establish finite-n, resistive, kinetic, nonlinear, transport, materials, experimental-validation, or whole-device feasibility.",
+  "cross_code_equilibrium": {
+    "reason": "desc_equilibrium_unavailable",
+    "status": "not_executed"
+  },
+  "desc_result": {
+    "error_type": "RuntimeError",
+    "message": "re-solved equilibrium failed its declared physical gates",
+    "process_exit_code": 0,
+    "runner_version": "desc_stellarator_sampled_ideal_mhd_stability_runner_v1",
+    "status": "error",
+    "traceback": "Traceback (most recent call last):\n  File \"desc_axisymmetric_stability_v99_runtime\", line 560, in main\n  File \"desc_axisymmetric_stability_v99_runtime\", line 508, in solve\n  File \"desc_axisymmetric_stability_v99_runtime\", line 262, in construct_and_solve\nRuntimeError: re-solved equilibrium failed its declared physical gates\n"
+  },
+  "failed_gates": [
+    "desc_candidate_equilibrium"
+  ],
+  "freegs_full_result_hash": "fbf76a138883a7ac74d14453b179c573597171aac8b690d9de750a0f685b9866",
+  "freegs_verification_hash": "825aa333e8dc1af6265b39e062563fc43edf912f0ef7b4ebe7005fe110d3136c",
+  "identity_fields_used_for_routing": false,
+  "numerical_vvuq": {
+    "reason": "cross_code_equilibrium_and_sampled_local_ideal_mhd_only",
+    "status": "fail"
+  },
+  "request_index": 85702200032112,
+  "result_hash": "a5c7f8818a374229faf738da7b6c9614a63816259de0a726122b505a6f9dfebb",
+  "routing_axes": [
+    "field_semantics",
+    "boundary",
+    "operator",
+    "dimension"
+  ],
+  "runner_version": "v100_shared_radial_build_cross_code_qualification_v1",
+  "schema_version": "1.0.0",
+  "stage_order": [
+    "freegs_verified_equilibrium",
+    "freegs_to_desc_transform",
+    "desc_fixed_boundary_equilibrium",
+    "sampled_ideal_mhd",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "unsupported_candidate_classification_used": false,
+  "validation_vvuq": {
+    "reason": "upstream_qualification_failed",
+    "status": "not_executed"
+  },
+  "whole_device_credible": false
+}

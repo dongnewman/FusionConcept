@@ -308,6 +308,11 @@ include("whole_device_provider_dag_v107.jl")
 include("dynamic_fault_provider_v108.jl")
 include("material_engineering_provider_v109.jl")
 include("material_closed_frontier_v110.jl")
+include("static_margin_repair_v111.jl")
+include("fine_static_margin_bracket_v112.jl")
+include("beta_preserving_field_repair_v113.jl")
+include("similarity_scaled_field_repair_v114.jl")
+include("corrected_whole_device_rescreen_v115.jl")
 
 export Quantity,
        MissionSpec,
@@ -2043,6 +2048,38 @@ export Stage3ExecutionBudgetV1,
        material_frontier_inputs_v110,
        material_frontier_eligible_v110,
        select_material_closed_frontier_v110,
-       run_material_closed_frontier_acceptance_v110
+       run_material_closed_frontier_acceptance_v110,
+       V111_PROTOCOL_ID,
+       STATIC_MARGIN_REPAIR_V111_CLAIM_BOUNDARY,
+       V111_TARGET_STATIC_PEAK_FIELD_T,
+       V111_PACK_MARGIN_MULTIPLIERS,
+       generate_static_margin_repairs_v111,
+       run_static_margin_repair_generation_v111,
+       V112_PROTOCOL_ID,
+       FINE_STATIC_MARGIN_BRACKET_V112_CLAIM_BOUNDARY,
+       V112_PACK_MULTIPLIERS,
+       generate_fine_static_margin_bracket_v112,
+       run_fine_static_margin_bracket_generation_v112,
+       V113_PROTOCOL_ID,
+       BETA_PRESERVING_FIELD_REPAIR_V113_CLAIM_BOUNDARY,
+       V113_FIELD_MULTIPLIERS,
+       generate_beta_preserving_field_repairs_v113,
+       run_beta_preserving_field_repair_generation_v113,
+       V114_PROTOCOL_ID,
+       SIMILARITY_SCALED_FIELD_REPAIR_V114_CLAIM_BOUNDARY,
+       V114_FIELD_MULTIPLIERS,
+       V114_SIZE_MULTIPLIERS,
+       generate_similarity_scaled_field_repairs_v114,
+       run_similarity_scaled_field_repair_generation_v114,
+       V115_PROTOCOL_ID,
+       CORRECTED_WHOLE_DEVICE_RESCREEN_V115_CLAIM_BOUNDARY,
+       V115_COOLANT_DELTA_T_K,
+       load_v114_provider_frontier_v115,
+       generate_corrected_whole_device_assemblies_v115,
+       actual_static_extrema_v115,
+       screen_corrected_whole_device_assembly_v115,
+       execute_corrected_provider_dag_v115,
+       execute_corrected_dynamic_fault_provider_v115,
+       run_corrected_whole_device_rescreen_v115
 
 end

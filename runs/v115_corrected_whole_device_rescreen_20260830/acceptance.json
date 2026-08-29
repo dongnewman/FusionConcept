@@ -1,0 +1,61 @@
+{
+    "source_reference_acceptance_hash": "9249d551367d055f99dcb75ed9bb710ea8b3806049c7b8a724662c65d7d2a6ee",
+    "available_provider_dag_pass_count": 200,
+    "material_screen_survivor_count": 384,
+    "unique_material_survivor_candidate_count": 6,
+    "acceptance_hash": "531abeb2d136c4fa1ade0496fb48996af8a3b2987d81f1d768c92dcbf742f526",
+    "stream_row_counts": {
+        "dags": 200,
+        "dynamics": 800,
+        "materials": 600,
+        "screens": 216,
+        "assemblies": 216
+    },
+    "dynamic_fault_screen_survivor_count": 600,
+    "protocol_id": "fusionconceptai-v115-corrected-whole-device-rescreen-20260830",
+    "claim_boundary": "v115 reruns the ITER/C-2W regression, binds v114 FreeGS, DESC and nine-case static artifacts, sizes coolant flow from declared 90/110/120 K temperature rises, and executes the reduced assembly, provider-DAG, dynamic-fault and source-pinned material screens. Actual worst-case static field, current density and support stress replace the earlier nominal engineering proxies. A survivor remains high-fidelity pending: missing complete transport, exhaust, 3D neutronics/damage, nonlinear control, full numerical VVUQ and candidate-bound validation remain independent obligations.",
+    "material_catalog_hash": "9b55f575cee7a333e041ead5f390bfd8ca3b03afd998117c886078ec520f8456",
+    "status": "complete",
+    "reference_regression_pass_count": 2,
+    "unique_material_survivor_assembly_count": 128,
+    "material_blocker_histogram": {
+        "rebco_peak_field": 216
+    },
+    "source_v114_acceptance_hashes": {
+        "generation": "d445ded995bda5d1ddf2e42b89fd1d7f016d93e472dddc1c9956d8fc293a5eb0",
+        "static": "bbb4f61b5dc1d5cf09d6bf1c27f672af2095d8a3162258bdc6d17ff6a134ae71",
+        "desc": "27f3da3bd35cff6247d7266452490845f1ec470d962c0706677cbe7a29b2c4ad",
+        "freegs": "cd26ae8b4fd4586d1100ae0885483b9db00b5db9369004663544f4a32690d581"
+    },
+    "partial_subgraph_promotion_allowed": false,
+    "provider_system_failure_count": 0,
+    "reference_regression_status": "pass",
+    "unsupported_candidate_count": 0,
+    "whole_device_pass_count": 0,
+    "actual_static_screen_survivor_count": 200,
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "source_v114_candidate_count": 9,
+    "reference_bypass_count": 0,
+    "assembly_count": 216,
+    "material_screen_reject_count": 216,
+    "dynamic_fault_blocker_histogram": {
+        "vertical_displacement_event": 200,
+        "single_pf_coil_trip": 200
+    },
+    "basis_direct_metric_credit": false,
+    "stream_hashes": {
+        "assemblies_sha256": "a0729bddcffaefd40671930fea5d352e0ad005253b04069e6fe44280e44b8c34",
+        "dynamics_sha256": "6d7421b5c4e920ea832016045dfc41b0d77bd791452450d10f441354abfe0a2f",
+        "materials_sha256": "308d6866289c59519c568946895587e3d9ad1abe1d9f424d62cee86735721714",
+        "dags_sha256": "27c312f4bdd021ca1fb922b0e4a5847bef6ec039c8a626e73cc71954c96550cc",
+        "screens_sha256": "17672ac113d55daea68d71da38d1edf818046285cc6f170132726c5afd2803a8"
+    },
+    "actual_static_screen_blocker_histogram": {
+        "net_electric_power": 16
+    },
+    "schema_version": "1.0.0",
+    "identity_fields_used_for_routing": false,
+    "high_fidelity_pending_count": 200,
+    "complete_provider_preflight_count": 0
+}
