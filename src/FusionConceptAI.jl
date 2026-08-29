@@ -313,6 +313,7 @@ include("fine_static_margin_bracket_v112.jl")
 include("beta_preserving_field_repair_v113.jl")
 include("similarity_scaled_field_repair_v114.jl")
 include("corrected_whole_device_rescreen_v115.jl")
+include("multiregion_conservation_providers_v116.jl")
 
 export Quantity,
        MissionSpec,
@@ -2080,6 +2081,15 @@ export Stage3ExecutionBudgetV1,
        screen_corrected_whole_device_assembly_v115,
        execute_corrected_provider_dag_v115,
        execute_corrected_dynamic_fault_provider_v115,
-       run_corrected_whole_device_rescreen_v115
+       run_corrected_whole_device_rescreen_v115,
+       V116_PROTOCOL_ID,
+       MULTIREGION_CONSERVATION_PROVIDERS_V116_CLAIM_BOUNDARY,
+       V116_MESH_LEVELS,
+       compile_core_edge_transport_graph_v116,
+       execute_core_edge_transport_provider_v116,
+       compile_sol_conduction_graph_v116,
+       execute_sol_exhaust_provider_v116,
+       select_v115_source_assemblies_v116,
+       run_multiregion_conservation_campaign_v116
 
 end

@@ -20,10 +20,13 @@ function solve_graph_system_v94(assembly::GraphAssemblyV94)
     residual = graph_residual_v94(assembly, state)
     normalized = norm(residual) / max(norm(rhs), 1.0)
     jacobian = graph_jacobian_v94(assembly, state)
-    epsilon = 1e-7; fd = similar(jacobian); base = graph_residual_v94(assembly, state)
+    fd = similar(jacobian)
     for column in axes(jacobian, 2)
-        perturbed = copy(state); perturbed[column] += epsilon
-        fd[:, column] .= (graph_residual_v94(assembly, perturbed) - base) / epsilon
+        step = cbrt(eps(Float64)) * max(abs(state[column]), 1.0)
+        plus = copy(state); minus = copy(state)
+        plus[column] += step; minus[column] -= step
+        fd[:, column] .= (graph_residual_v94(assembly, plus) -
+            graph_residual_v94(assembly, minus)) / (2step)
     end
     jacobian_error = norm(fd - jacobian) / max(norm(jacobian), eps())
     passed = all(isfinite, state) && normalized <= 1e-10 && jacobian_error <= 1e-7
@@ -34,6 +37,8 @@ function solve_graph_system_v94(assembly::GraphAssemblyV94)
         "partial_subgraph_credit" => false, "state" => state,
         "state_map" => state_map, "normalized_residual" => normalized,
         "jacobian_relative_error" => jacobian_error,
+        "finite_difference_step_rule" => "cbrt_eps_times_max_abs_state_or_one",
+        "finite_difference_scheme" => "central",
         "exact_jacobian_used" => true, "assembly_hash" => assembly.assembly_hash)
     body["solve_hash"] = canonical_hash(body)
     body
