@@ -82,6 +82,7 @@ include("exhaustive_physical_rescreen_v97.jl")
 include("end_to_end_device_pipeline_v98.jl")
 include("full_device_qualification_v99.jl")
 include("design_refinement_v100.jl")
+include("mission_aware_screening_v103.jl")
 
 include("stability_mode_compiler_v1.jl")
 include("conservation_problem_compiler_v2.jl")

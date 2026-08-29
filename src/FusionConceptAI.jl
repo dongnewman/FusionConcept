@@ -300,6 +300,7 @@ include("exhaustive_physical_campaign_v97.jl")
 include("end_to_end_device_pipeline_v98.jl")
 include("full_device_qualification_v99.jl")
 include("design_refinement_v100.jl")
+include("mission_aware_screening_v103.jl")
 
 export Quantity,
        MissionSpec,
@@ -1985,6 +1986,12 @@ export Stage3ExecutionBudgetV1,
        V100_ENGINEERING_LIMITS,
        DESIGN_REFINEMENT_V100_CLAIM_BOUNDARY,
        engineering_prefilter_v100,
-       refine_candidate_operating_points_v100
+       refine_candidate_operating_points_v100,
+       V103_PROTOCOL_ID,
+       MISSION_AWARE_SCREENING_V103_CLAIM_BOUNDARY,
+       compile_reference_mission_v103,
+       run_mission_aware_reference_acceptance_v103,
+       rescreen_v100_candidates_v103,
+       run_v103_mission_aware_campaign
 
 end
