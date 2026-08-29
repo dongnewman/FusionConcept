@@ -26,6 +26,21 @@ end
     @test c2w["required_provider_class"] == "open_field_extended_mhd_or_kinetic"
     @test all(row -> row["validation_credit"] === false,
         controls["reference_controls"])
+    anchors = load_candidate_solver_reference_anchors_v1(joinpath(normpath(
+        joinpath(@__DIR__, "..")), "fixtures", "candidate_solver_reference_anchors_v1.json"))
+    for anchor_raw in anchors
+        anchor = Dict{String,Any}(FusionConceptAI._v93_plain(anchor_raw))
+        route = FusionConceptAI._v98_reference_capability_profile(anchor)["route"]
+        desc_applicable = route == "axisymmetric_closed"
+        expected = FusionConceptAI._v99_reference_route_expectation(anchor, desc_applicable)
+        erased = deepcopy(anchor)
+        erased["anchor_id"] = "erased"
+        erased["candidate_id"] = "erased"
+        reverse!(erased["capabilities"])
+        @test expected
+        @test FusionConceptAI._v99_reference_route_expectation(erased,
+            desc_applicable) == expected
+    end
 end
 
 const V99_CAPABILITY_FIXTURE = Dict{String,Any}(

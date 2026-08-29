@@ -304,6 +304,7 @@ include("mission_aware_screening_v103.jl")
 include("whole_device_preflight_v104.jl")
 include("whole_device_assembly_generator_v105.jl")
 include("whole_device_assembly_screen_v106.jl")
+include("whole_device_provider_dag_v107.jl")
 
 export Quantity,
        MissionSpec,
@@ -2012,6 +2013,11 @@ export Stage3ExecutionBudgetV1,
        WHOLE_DEVICE_ASSEMBLY_SCREEN_V106_CLAIM_BOUNDARY,
        V106_SCREEN_LIMITS,
        screen_whole_device_assembly_v106,
-       run_whole_device_assembly_screen_v106
+       run_whole_device_assembly_screen_v106,
+       V107_PROTOCOL_ID,
+       WHOLE_DEVICE_PROVIDER_DAG_V107_CLAIM_BOUNDARY,
+       V107_STAGE_ORDER,
+       execute_whole_device_provider_dag_v107,
+       run_whole_device_provider_dag_v107
 
 end

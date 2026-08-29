@@ -178,10 +178,7 @@ function run_v99_reference_controls(project_root::AbstractString)
         required_class = desc_applicable ?
             "axisymmetric_free_boundary_plus_independent_fixed_boundary" :
             "open_field_extended_mhd_or_kinetic"
-        expected = String(anchor["anchor_id"]) ==
-            "iter_inductive_baseline_design_v1" ? desc_applicable :
-            String(anchor["anchor_id"]) ==
-            "c2w_enhanced_performance_experiment_v1" ? !desc_applicable : false
+        expected = _v99_reference_route_expectation(anchor, desc_applicable)
         push!(rows, Dict{String,Any}(
             "control_id" => anchor["anchor_id"],
             "reference_status" => previous["reference_status"],
@@ -211,4 +208,17 @@ function run_v99_reference_controls(project_root::AbstractString)
     )
     body["acceptance_hash"] = canonical_hash(body)
     body
+end
+
+function _v99_reference_route_expectation(anchor_raw, desc_applicable::Bool)
+    anchor = Dict{String,Any}(_v93_plain(anchor_raw))
+    capabilities = Set(String(item["capability_id"])
+        for item in Dict{String,Any}.(anchor["capabilities"]))
+    has_open_transport = "open_field_kinetic_transport" in capabilities
+    has_closed_fusion = "closed_field_control_volume" in capabilities &&
+        "fusion_reaction_radiation" in capabilities
+    expected_desc_applicability = has_closed_fusion && !has_open_transport ? true :
+        has_open_transport ? false : nothing
+    expected_desc_applicability === nothing ? false :
+        desc_applicable == expected_desc_applicability
 end
