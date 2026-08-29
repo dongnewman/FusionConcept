@@ -1,0 +1,252 @@
+{
+    "inverse_representability_pass_count": 2,
+    "selector_applicability_mismatch_count": 2,
+    "acceptance_hash": "6b9d652f7d7cc8ef070944cdead2e6c121a3103ed0a31e27147d839146445928",
+    "v89_reduced_chain_pass_count": 2,
+    "reference_subject_count": 2,
+    "reference_control_bypass_count": 2,
+    "protocol_id": "fusionconceptai-v102-inverse-reference-candidate-experiment-20260829",
+    "fresh_inverse_acceptance_hash": "4b3446f350ccb46bb31bd0f37ceca4a61e1bd78552789026affd3281cd6587a2",
+    "claim_boundary": "This experiment tests whether family-neutral inverse representations of published ITER and C-2W descriptions survive the current ordinary-candidate chain. A reduced screen rejection with an applicability mismatch is a selector diagnosis, not a physical falsification of either device. Reference data, design targets, and input-derived observables provide no new-candidate or independent-validation credit.",
+    "status": "complete",
+    "v96_inverse_graph_numerical_pass_count": 2,
+    "selector_acceptance": "fail",
+    "provider_system_failure_count": 0,
+    "ordinary_candidate_physical_reject_count": 0,
+    "unsupported_candidate_count": 0,
+    "source_fixture_sha256": "5b213239790ff3a837c26d0d045bbb0719c998a749e1c54ad2ec61c7d0260304",
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "interpretation": "Both inverse references execute the generic reduced graph, but neither passes the current ordinary-candidate v98 reactor screen. The old 2/2 reference-control result bypasses that failed physics status; detected mission and model-domain mismatches prevent treating these rejections as device physics.",
+    "rows": [
+        {
+            "strict_stage_order": [
+                "inverse_compile",
+                "v89_provider_closure",
+                "v89_reduced_solve",
+                "v89_numerical_vvuq",
+                "v96_graph_compile",
+                "v96_provider_closure",
+                "v96_solve",
+                "v96_numerical_vvuq",
+                "v98_ordinary_candidate_physics_screen",
+                "high_fidelity_downstream",
+                "validation_vvuq"
+            ],
+            "rejection_numerical_replay": {
+                "status": "pass",
+                "promotion_credit": false,
+                "reason": "diagnostic_replay_of_rejected_state_only"
+            },
+            "row_hash": "a0329d41d728d67f60b8ee00743314565cae8be69c1ae8f488e5008780bf7a55",
+            "reference_control_bypass_detected": true,
+            "validation_vvuq": {
+                "experimental_validation_credit": false,
+                "status": "not_executed",
+                "reason": "ordinary_candidate_physics_screen_failed"
+            },
+            "inverse_realization_hash": "c1f7729d55a43788eade796be5b51d28bbfee5885a794c07fe4bf42efc2d1dba",
+            "subject_key": "iter_inductive_baseline_design_v1",
+            "report_label": "ITER",
+            "inverse_region_count": 1,
+            "v96_inverse_graph_status": "pass",
+            "v96_whole_graph_closed": true,
+            "ordinary_candidate_failed_gates": [
+                "fusion_gain",
+                "net_electric_power",
+                "exhaust_heat_flux"
+            ],
+            "whole_device_credible": false,
+            "high_fidelity_downstream": {
+                "status": "not_executed",
+                "reason": "ordinary_candidate_reduced_physics_gate_failed"
+            },
+            "ordinary_candidate_solve_hash": "9330441741e4459555dffea12dee1d328ca1450b1beda7ab2db24934ee9279a0",
+            "v89_numerical_vvuq_status": "pass",
+            "selector_applicability": {
+                "failed_gates": [
+                    "fusion_gain",
+                    "net_electric_power",
+                    "exhaust_heat_flux"
+                ],
+                "claim_boundary": "This experiment tests whether family-neutral inverse representations of published ITER and C-2W descriptions survive the current ordinary-candidate chain. A reduced screen rejection with an applicability mismatch is a selector diagnosis, not a physical falsification of either device. Reference data, design targets, and input-derived observables provide no new-candidate or independent-validation credit.",
+                "status": "selector_applicability_mismatch",
+                "applicability_mismatches": [
+                    "net_electric_power_gate_not_declared_by_reference_mission",
+                    "reactor_exhaust_gate_not_declared_by_reference_mission"
+                ],
+                "rejection_is_device_physics_evidence": false
+            },
+            "current_reference_control_status": "pass",
+            "ordinary_candidate_physics_screen_status": "fail",
+            "physical_conclusion_expanded": false,
+            "inverse_topology_hash": "3e22f0d646ca8170cbe6e43ee136c61d91689baa857aa81da03fc33b2a150ab7",
+            "v96_numerical_vvuq_status": "pass",
+            "capability_profile": {
+                "spatial_fraction": 1,
+                "route": "axisymmetric_closed",
+                "reversal_surface": false,
+                "declared_dimensions": [
+                    2
+                ],
+                "routing_axes": [
+                    "inverse_field_semantics",
+                    "boundary",
+                    "operator",
+                    "dimension"
+                ],
+                "closed_core_route": "axisymmetric_closed",
+                "closed_plasma_region_count": 1,
+                "field_quality_parameter": 0.85,
+                "capability_hash": "b85a937c2436286927719195ad73228e9e44eebe8637b0b84aed834e5d9db668",
+                "field_operator_fraction": 0.14285714285714285,
+                "declared_operators": [
+                    "bounded_control_response_v89",
+                    "control_volume_particle_inventory_v1",
+                    "control_volume_thermal_energy_v1",
+                    "fixed_current_flux_inventory_l1_v1",
+                    "integrated_reduced_device_audit_v89",
+                    "state_derived_bohm_transport_l1_v1",
+                    "state_derived_dt_reaction_bremsstrahlung_l1_v1"
+                ],
+                "identity_fields_used": false,
+                "declared_boundaries": [
+                    "closed"
+                ],
+                "axisymmetric_fraction": 1,
+                "open_fraction": 0,
+                "three_dimensional_fraction": 0,
+                "hybrid_fraction": 0,
+                "declared_field_semantics": [
+                    "closed_flux"
+                ]
+            },
+            "ordinary_candidate_final_status": "selector_applicability_reject",
+            "inverse_candidate_hash": "c6f30c6306771588b60ad6e4fb7691d37786c33d1c623fe821099b40db415ece",
+            "inverse_route_status": "pass",
+            "v89_reduced_chain_status": "pass",
+            "identity_fields_used_for_routing": false,
+            "current_reference_control_physics_screen_status": "fail"
+        },
+        {
+            "strict_stage_order": [
+                "inverse_compile",
+                "v89_provider_closure",
+                "v89_reduced_solve",
+                "v89_numerical_vvuq",
+                "v96_graph_compile",
+                "v96_provider_closure",
+                "v96_solve",
+                "v96_numerical_vvuq",
+                "v98_ordinary_candidate_physics_screen",
+                "high_fidelity_downstream",
+                "validation_vvuq"
+            ],
+            "rejection_numerical_replay": {
+                "status": "pass",
+                "promotion_credit": false,
+                "reason": "diagnostic_replay_of_rejected_state_only"
+            },
+            "row_hash": "3bc4cf45a579d0ad93b9acabf0054a1a30df099e9643abe38807cb8ac8332fe9",
+            "reference_control_bypass_detected": true,
+            "validation_vvuq": {
+                "experimental_validation_credit": false,
+                "status": "not_executed",
+                "reason": "ordinary_candidate_physics_screen_failed"
+            },
+            "inverse_realization_hash": "0303e6d03d4e0a794b2337476927af62973dc4a5810f353c14604e5bc8f27887",
+            "subject_key": "c2w_enhanced_performance_experiment_v1",
+            "report_label": "C-2W",
+            "inverse_region_count": 2,
+            "v96_inverse_graph_status": "unknown",
+            "v96_whole_graph_closed": true,
+            "ordinary_candidate_failed_gates": [
+                "temperature_fit_domain",
+                "fusion_gain",
+                "net_electric_power",
+                "neutron_wall_load"
+            ],
+            "whole_device_credible": false,
+            "high_fidelity_downstream": {
+                "status": "not_executed",
+                "reason": "ordinary_candidate_reduced_physics_gate_failed"
+            },
+            "ordinary_candidate_solve_hash": "2ef929af75b08cfcd5ace6ab721d89bc66221bce0c18ecbde499862209c5f06d",
+            "v89_numerical_vvuq_status": "pass",
+            "selector_applicability": {
+                "failed_gates": [
+                    "temperature_fit_domain",
+                    "fusion_gain",
+                    "net_electric_power",
+                    "neutron_wall_load"
+                ],
+                "claim_boundary": "This experiment tests whether family-neutral inverse representations of published ITER and C-2W descriptions survive the current ordinary-candidate chain. A reduced screen rejection with an applicability mismatch is a selector diagnosis, not a physical falsification of either device. Reference data, design targets, and input-derived observables provide no new-candidate or independent-validation credit.",
+                "status": "selector_applicability_mismatch",
+                "applicability_mismatches": [
+                    "net_electric_power_gate_not_declared_by_reference_mission",
+                    "neutron_wall_load_gate_not_declared_by_reference_mission",
+                    "fusion_gain_gate_applied_without_fusion_reaction_capability",
+                    "reduced_reactor_model_outside_declared_temperature_domain"
+                ],
+                "rejection_is_device_physics_evidence": false
+            },
+            "current_reference_control_status": "pass",
+            "ordinary_candidate_physics_screen_status": "fail",
+            "physical_conclusion_expanded": false,
+            "inverse_topology_hash": "bd34f56cd9892ea543629a9afa163babf12ae3bc3f092ff18495a7e5254f6aaf",
+            "v96_numerical_vvuq_status": "pass",
+            "capability_profile": {
+                "spatial_fraction": 0.5,
+                "route": "closed_core_open_exhaust",
+                "reversal_surface": true,
+                "declared_dimensions": [
+                    1,
+                    2
+                ],
+                "routing_axes": [
+                    "inverse_field_semantics",
+                    "boundary",
+                    "operator",
+                    "dimension"
+                ],
+                "closed_core_route": "axisymmetric_closed",
+                "closed_plasma_region_count": 1,
+                "field_quality_parameter": 0.7,
+                "capability_hash": "ae6f960731add4bd0533c19820bf0bea1a5a1f92760e9f249274ec4537b4dbb9",
+                "field_operator_fraction": 0.14285714285714285,
+                "declared_operators": [
+                    "bounded_control_response_v89",
+                    "conservative_multiregion_interface_v89",
+                    "control_volume_particle_inventory_v1",
+                    "control_volume_thermal_energy_v1",
+                    "fixed_current_flux_inventory_l1_v1",
+                    "integrated_reduced_device_audit_v89",
+                    "state_derived_parallel_streaming_l1_v1"
+                ],
+                "identity_fields_used": false,
+                "declared_boundaries": [
+                    "mixed",
+                    "open"
+                ],
+                "axisymmetric_fraction": 0.5,
+                "open_fraction": 0.5,
+                "three_dimensional_fraction": 0,
+                "hybrid_fraction": 1,
+                "declared_field_semantics": [
+                    "closed_flux",
+                    "open_flux"
+                ]
+            },
+            "ordinary_candidate_final_status": "selector_applicability_reject",
+            "inverse_candidate_hash": "b4d3a529a02672fce7126263ce3c3523e17763f185eb12a790dc67ef01aa8b08",
+            "inverse_route_status": "pass",
+            "v89_reduced_chain_status": "pass",
+            "identity_fields_used_for_routing": false,
+            "current_reference_control_physics_screen_status": "fail"
+        }
+    ],
+    "current_reference_control_pass_count": 2,
+    "schema_version": "1.0.0",
+    "ordinary_candidate_current_filter_reject_count": 2,
+    "ordinary_candidate_pass_count": 0
+}
