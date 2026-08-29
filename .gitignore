@@ -164,6 +164,16 @@
 !/scripts/run_v99_freegs_static_robustness.py
 !/scripts/run_v99_full_device_acceptance.jl
 !/scripts/validate_v99_artifacts.py
+!/scripts/run_v100_design_refinement.jl
+!/scripts/run_v100_freegs_candidate.py
+!/scripts/run_v100_freegs_batch.py
+!/scripts/run_v100_desc_candidate.py
+!/scripts/run_v100_freegs_static_robustness.py
+!/scripts/run_v100_reference_controls.jl
+!/scripts/run_v100_static_batch.py
+!/scripts/select_v100_low_beta_frontier.jl
+!/scripts/seal_v100_full_device_acceptance.py
+!/scripts/validate_v100_artifacts.py
 
 # Compact v94-v98 acceptance evidence. Raw v97 shards remain ignored.
 !/runs/v94_generic_capability_acceptance/
@@ -210,6 +220,52 @@
 !/runs/v99_full_device_qualification_20260829/static_robustness/*.json
 
 !/reports/full_device_qualification_v99_20260829.md
+!/reports/full_device_qualification_v100_20260829.md
+
+!/runs/v100_candidate_bound_design_refinement_20260829/
+/runs/v100_candidate_bound_design_refinement_20260829/*
+!/runs/v100_candidate_bound_design_refinement_20260829/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_20260829/computational_candidates.jsonl
+!/runs/v100_candidate_bound_design_refinement_20260829/reference_controls.json
+!/runs/v100_candidate_bound_design_refinement_20260829/freegs_shared_radial_build/
+/runs/v100_candidate_bound_design_refinement_20260829/freegs_shared_radial_build/*
+!/runs/v100_candidate_bound_design_refinement_20260829/freegs_shared_radial_build/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_20260829/freegs_shared_radial_build/results/
+!/runs/v100_candidate_bound_design_refinement_20260829/freegs_shared_radial_build/results/*.json
+!/runs/v100_candidate_bound_design_refinement_20260829/desc_cross_code/
+/runs/v100_candidate_bound_design_refinement_20260829/desc_cross_code/*
+!/runs/v100_candidate_bound_design_refinement_20260829/desc_cross_code/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_20260829/desc_cross_code/results/
+!/runs/v100_candidate_bound_design_refinement_20260829/desc_cross_code/results/*.json
+!/runs/v100_candidate_bound_design_refinement_20260829/static_robustness/
+/runs/v100_candidate_bound_design_refinement_20260829/static_robustness/*
+!/runs/v100_candidate_bound_design_refinement_20260829/static_robustness/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_20260829/static_robustness/results/
+!/runs/v100_candidate_bound_design_refinement_20260829/static_robustness/results/*.json
+
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/
+/runs/v100_candidate_bound_design_refinement_expanded_20260829/*
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/low_beta_frontier_30.jsonl
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/freegs_low_beta_frontier/
+/runs/v100_candidate_bound_design_refinement_expanded_20260829/freegs_low_beta_frontier/*
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/freegs_low_beta_frontier/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/freegs_low_beta_frontier/results/
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/freegs_low_beta_frontier/results/*.json
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/desc_low_beta_frontier/
+/runs/v100_candidate_bound_design_refinement_expanded_20260829/desc_low_beta_frontier/*
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/desc_low_beta_frontier/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/desc_low_beta_frontier/results/
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/desc_low_beta_frontier/results/*.json
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/static_robustness/
+/runs/v100_candidate_bound_design_refinement_expanded_20260829/static_robustness/*
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/static_robustness/acceptance.json
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/static_robustness/results/
+!/runs/v100_candidate_bound_design_refinement_expanded_20260829/static_robustness/results/*.json
+
+!/runs/v100_full_device_qualification_20260829/
+/runs/v100_full_device_qualification_20260829/*
+!/runs/v100_full_device_qualification_20260829/acceptance.json
 
 # Language and editor caches
 __pycache__/

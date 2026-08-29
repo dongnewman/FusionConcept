@@ -1,0 +1,187 @@
+{
+    "upstream_acceptance_sha256": "d421b71dcb93f6d5feac02ce27f9a3e2481217f41d038de685daa5910d233833",
+    "parent_rows": [
+        {
+            "retained_count": 7,
+            "parent_request_index": 629599,
+            "prefilter_pass_count": 7
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 625659,
+            "prefilter_pass_count": 51
+        },
+        {
+            "retained_count": 0,
+            "parent_request_index": 368479,
+            "prefilter_pass_count": 0
+        },
+        {
+            "retained_count": 1,
+            "parent_request_index": 890719,
+            "prefilter_pass_count": 1
+        },
+        {
+            "retained_count": 12,
+            "parent_request_index": 880619,
+            "prefilter_pass_count": 12
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 121839,
+            "prefilter_pass_count": 34
+        },
+        {
+            "retained_count": 8,
+            "parent_request_index": 383759,
+            "prefilter_pass_count": 8
+        },
+        {
+            "retained_count": 6,
+            "parent_request_index": 641598,
+            "prefilter_pass_count": 6
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 940974,
+            "prefilter_pass_count": 48
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 364398,
+            "prefilter_pass_count": 26
+        },
+        {
+            "retained_count": 8,
+            "parent_request_index": 122639,
+            "prefilter_pass_count": 8
+        },
+        {
+            "retained_count": 3,
+            "parent_request_index": 825199,
+            "prefilter_pass_count": 3
+        },
+        {
+            "retained_count": 6,
+            "parent_request_index": 124799,
+            "prefilter_pass_count": 6
+        },
+        {
+            "retained_count": 4,
+            "parent_request_index": 854879,
+            "prefilter_pass_count": 4
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 448494,
+            "prefilter_pass_count": 24
+        },
+        {
+            "retained_count": 0,
+            "parent_request_index": 920449,
+            "prefilter_pass_count": 0
+        },
+        {
+            "retained_count": 4,
+            "parent_request_index": 593759,
+            "prefilter_pass_count": 4
+        },
+        {
+            "retained_count": 8,
+            "parent_request_index": 855033,
+            "prefilter_pass_count": 8
+        },
+        {
+            "retained_count": 7,
+            "parent_request_index": 642534,
+            "prefilter_pass_count": 7
+        },
+        {
+            "retained_count": 13,
+            "parent_request_index": 1023979,
+            "prefilter_pass_count": 13
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 857022,
+            "prefilter_pass_count": 24
+        },
+        {
+            "retained_count": 17,
+            "parent_request_index": 674699,
+            "prefilter_pass_count": 17
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 609214,
+            "prefilter_pass_count": 59
+        },
+        {
+            "retained_count": 2,
+            "parent_request_index": 68443,
+            "prefilter_pass_count": 2
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 641003,
+            "prefilter_pass_count": 36
+        },
+        {
+            "retained_count": 0,
+            "parent_request_index": 876469,
+            "prefilter_pass_count": 0
+        },
+        {
+            "retained_count": 1,
+            "parent_request_index": 350999,
+            "prefilter_pass_count": 1
+        },
+        {
+            "retained_count": 12,
+            "parent_request_index": 641819,
+            "prefilter_pass_count": 12
+        },
+        {
+            "retained_count": 13,
+            "parent_request_index": 895919,
+            "prefilter_pass_count": 13
+        },
+        {
+            "retained_count": 20,
+            "parent_request_index": 902143,
+            "prefilter_pass_count": 20
+        },
+        {
+            "retained_count": 7,
+            "parent_request_index": 606343,
+            "prefilter_pass_count": 7
+        }
+    ],
+    "retained_count": 319,
+    "unsupported_candidate_count": 0,
+    "acceptance_hash": "4a15b517496774fbddfe7c9660e49ea6d0a7e3b0ad14d6a7e82c44e1b816e8b6",
+    "parent_count": 31,
+    "prefilter_pass_count": 461,
+    "protocol_id": "fusionconceptai-v100-candidate-bound-design-refinement-20260829",
+    "source_candidate_stream": "computational_candidates.jsonl",
+    "source_candidate_stream_sha256": "18f1b8a191b81dda27cfd887e16b2c6a245fcbeace8fe8721801d04b1e2afd0d",
+    "variant_count_per_parent": 1024,
+    "evaluated_design_count": 31744,
+    "status": "complete",
+    "parents_with_retained_count": 28,
+    "failure_histogram": {
+        "physics:neutron_wall_load": 3692,
+        "physics:capability_scoped_stability": 16517,
+        "engineering:additive_peak_field": 1374,
+        "physics:fusion_gain": 28728,
+        "physics:exhaust_heat_flux": 22051,
+        "engineering:membrane_support_stress": 290,
+        "physics:plasma_current": 844,
+        "physics:net_electric_power": 28775
+    },
+    "claim_boundary": "v100 uses a deterministic low-discrepancy sequence only to propose candidate-bound operating and finite radial-build inputs. All metric and gate credit comes from the physics solve and explicit engineering prefilter. A prefilter pass is not FreeGS, DESC, complete engineering, transport, validation, or whole-device credibility.",
+    "identity_fields_used_for_routing": false,
+    "schema_version": "1.0.0",
+    "candidate_stream_sha256": "72370943fbe8b27d856218a0e8adce1845c043837078b1e9e8a7344b851ba87a",
+    "provider_system_failure_count": 0
+}

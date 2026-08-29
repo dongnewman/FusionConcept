@@ -174,7 +174,7 @@ def desc_payload(candidate: dict, freegs: dict, boundary: dict) -> dict:
         "stability": {
             "mercier": {
                 "rho": [0.15, 0.25, 0.40, 0.55, 0.70, 0.85, 0.95],
-                "angular_m": 18, "angular_n": 4,
+                "angular_m": max(18, maximum_mode), "angular_n": 4,
                 "minimum_normalized_positive_margin": 1.0e-5,
             },
             "ballooning": {

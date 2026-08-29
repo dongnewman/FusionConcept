@@ -26,6 +26,8 @@ def run_one(job: tuple[dict, str, str, str, str, str, bool]) -> dict:
         artifact = json.loads(output_path.read_text(encoding="utf-8"))
         version = artifact.get("runner_version")
         reusable_version = (
+            (version == "v100_shared_radial_build_cross_code_qualification_v1" and
+             artifact.get("candidate_state") != "provider_system_fail") or
             (version == "v99_axisymmetric_cross_code_qualification_v2" and
              artifact.get("candidate_state") != "provider_system_fail") or
             (version == "v99_axisymmetric_cross_code_qualification_v1" and
@@ -79,6 +81,9 @@ def main() -> int:
     parser.add_argument("--output-directory", required=True)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--reuse-existing", action="store_true")
+    parser.add_argument("--candidate-runner")
+    parser.add_argument("--protocol-id",
+                        default="fusionconceptai-v99-cross-code-qualification-20260829")
     args = parser.parse_args()
     source = Path(args.candidates).resolve()
     freegs_acceptance_path = Path(args.freegs_acceptance).resolve()
@@ -100,7 +105,8 @@ def main() -> int:
                           if row["status"] == "pass")
     if len(survivor_ids) != freegs_acceptance["status_histogram"].get("pass", 0):
         raise ValueError("FreeGS pass census is inconsistent")
-    runner = Path(__file__).with_name("run_v99_desc_candidate.py").resolve()
+    runner = (Path(args.candidate_runner).resolve() if args.candidate_runner else
+              Path(__file__).with_name("run_v99_desc_candidate.py").resolve())
     desc_python = str(Path(args.desc_python).resolve())
     jobs = []
     for request_index in survivor_ids:
@@ -125,7 +131,7 @@ def main() -> int:
     system_failures = states.get("provider_system_fail", 0)
     artifact = {
         "schema_version": "1.0.0",
-        "protocol_id": "fusionconceptai-v99-cross-code-qualification-20260829",
+        "protocol_id": args.protocol_id,
         "status": "complete" if system_failures == 0 else "system_fail",
         "source_candidate_stream": source.name,
         "source_candidate_stream_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),

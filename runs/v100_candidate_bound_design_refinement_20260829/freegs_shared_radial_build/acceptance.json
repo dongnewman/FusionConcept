@@ -1,0 +1,470 @@
+{
+  "acceptance_hash": "0a651ee0b6ff80a3821bb9eedcf5f84ff89a70992bfa5433abf9039b1d8c2ef6",
+  "candidate_count": 54,
+  "claim_boundary": "Candidate-bound FreeGS equilibrium and numerical VVUQ only. Subset passes cannot be promoted to whole-device, stability, engineering, or validation pass.",
+  "failed_gate_histogram": {
+    "coarse_elongation_binding": 2,
+    "coarse_q95_safety": 2,
+    "elongation_binding": 2,
+    "grid_convergence": 1
+  },
+  "identity_fields_used_for_routing": false,
+  "processed_count": 54,
+  "protocol_id": "fusionconceptai-v100-shared-radial-build-freegs-batch-v1-20260829",
+  "rows": [
+    {
+      "failed_gates": [],
+      "parent_request_index": 68443,
+      "process_exit_code": 0,
+      "request_index": 68443000717,
+      "result_hash": "f9d5ebc15b1fc7ff771a9841b7abbd45670832a7778ae47c6335fd109c31c9ec",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 68443,
+      "process_exit_code": 0,
+      "request_index": 68443000967,
+      "result_hash": "28f798c8adc5fe47b87ef5f273be6183eb830b5ec359fe11538e69e081dcce7e",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 121839,
+      "process_exit_code": 0,
+      "request_index": 121839000703,
+      "result_hash": "a9c01c3a6562e5579949ae08ae326e88fe6ddb5e34f16ce86b708d31d38fbcb0",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 121839,
+      "process_exit_code": 0,
+      "request_index": 121839000933,
+      "result_hash": "b0e10e89c7b52270d28bf8aec2f418f2160f71ab3a338f5db683a56152213005",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 122639,
+      "process_exit_code": 0,
+      "request_index": 122639000287,
+      "result_hash": "2cc86fffd2f43f497b78cbfc7f386e369eedb072d54eaa903d57937308d94a06",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "coarse_elongation_binding",
+        "coarse_q95_safety"
+      ],
+      "parent_request_index": 122639,
+      "process_exit_code": 2,
+      "request_index": 122639000463,
+      "result_hash": "8ed242e89f55e4ae93b702bebf46b74fc0c9a117b86f580e0cc9e2b91cfdbcd5",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 124799,
+      "process_exit_code": 0,
+      "request_index": 124799000043,
+      "result_hash": "66c32aa6c2c4e55559204aea2d898897bf73d78dd00474d626f2ff1fa97ee920",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 124799,
+      "process_exit_code": 0,
+      "request_index": 124799000703,
+      "result_hash": "fa6250109a34ab133b149de4ed4be0965b36014455ea631cfd69c72451a487a8",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 350999,
+      "process_exit_code": 0,
+      "request_index": 350999000683,
+      "result_hash": "eea1eaa47d6dfed0f2c653b1968b32a37693808e97cf1c4c1b9fa21f907094cf",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "elongation_binding"
+      ],
+      "parent_request_index": 364398,
+      "process_exit_code": 2,
+      "request_index": 364398000507,
+      "result_hash": "ff441b4d1b1e93d845bb809bba3e41f6a4de3e0aa6d06efad423e03932bdc282",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 364398,
+      "process_exit_code": 0,
+      "request_index": 364398000927,
+      "result_hash": "287ab70714b4362afdd0571eeca2868114656cc511dd6432a6effbee3fa9a2c3",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 383759,
+      "process_exit_code": 0,
+      "request_index": 383759000527,
+      "result_hash": "3ed889c570ddb3834819444cf55ca4fe74249fd32e034da7f81e793df7083a5f",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 383759,
+      "process_exit_code": 0,
+      "request_index": 383759000703,
+      "result_hash": "7b2489f153c29c560d2f779d4e42a6d9b045943224c7d3f527c854d523e69259",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 448494,
+      "process_exit_code": 0,
+      "request_index": 448494000263,
+      "result_hash": "a78477862fa64fc59f7fe64edc872fe3cf238427585fc397ac3432ae1575826a",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 448494,
+      "process_exit_code": 0,
+      "request_index": 448494000703,
+      "result_hash": "e909333198792216c062292960374bfba55d30d814d46081fb2bcc66054eeb9d",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 593759,
+      "process_exit_code": 0,
+      "request_index": 593759000483,
+      "result_hash": "05800962be433d21a151ffe8a8aa4e952d38f087dd22bec08b957b85b987e595",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 593759,
+      "process_exit_code": 0,
+      "request_index": 593759000783,
+      "result_hash": "8bc93b54b0d7ce5702a9f6e875b895f96cf023bab36d255fd83ae2bf88533d3c",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 606343,
+      "process_exit_code": 0,
+      "request_index": 606343000167,
+      "result_hash": "ab7301d0f0ae90e98a233590f90b4f653a0dcddb053aa7f5a605f7c39e53bc44",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 606343,
+      "process_exit_code": 0,
+      "request_index": 606343000947,
+      "result_hash": "5dcd017c7a18eb518443acceeca9f3deba13a87cd76f95bc9f121b8383c01252",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 609214,
+      "process_exit_code": 0,
+      "request_index": 609214000143,
+      "result_hash": "ed6f74607a42fd811ae80aafcbf3d1bb4dcb271036533cc3bcea3a4d39bd1820",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 609214,
+      "process_exit_code": 0,
+      "request_index": 609214000287,
+      "result_hash": "6dea48159fba1d86505597a232dd932568da937f336b370a76b7be40df854d5a",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 625659,
+      "process_exit_code": 0,
+      "request_index": 625659000343,
+      "result_hash": "a7fa3bebed48824c3450c1218344243978c9b249cddd8e31cb95f9ef3d21f0d1",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 625659,
+      "process_exit_code": 0,
+      "request_index": 625659000363,
+      "result_hash": "d520a5c9233f052ff38e3523502231342a2cebafa37e203fe18aaa2ce0416db6",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 629599,
+      "process_exit_code": 0,
+      "request_index": 629599000527,
+      "result_hash": "124ea2ebf7ffc18f00e696c7bb146d6fec91a59560eca7109935955aae5c7e77",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 629599,
+      "process_exit_code": 0,
+      "request_index": 629599001023,
+      "result_hash": "68c3093f65e9f92cecb734f6cd0e930f6d91f6b87eacfe8a3f1cc1aa2454aec1",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "elongation_binding"
+      ],
+      "parent_request_index": 641003,
+      "process_exit_code": 2,
+      "request_index": 641003000247,
+      "result_hash": "8477f7a0c116639806cd699379ff7ff2113337548ee0f6ddb854bb12eaa1a86b",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 641003,
+      "process_exit_code": 0,
+      "request_index": 641003000727,
+      "result_hash": "6aca24f552e4d10a8988a9f8949d27a37c9616a03e35f8eed585d3630accaa13",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 641598,
+      "process_exit_code": 0,
+      "request_index": 641598000167,
+      "result_hash": "7410b92e5e5317702c95ace381f50f84f3361c3f67f1a0ebb60c0d98b6c54465",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 641598,
+      "process_exit_code": 0,
+      "request_index": 641598000747,
+      "result_hash": "ac780d97947f02176f13afa710030f5ca554e3dc17eed702f8a6fe04d3d67538",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 641819,
+      "process_exit_code": 0,
+      "request_index": 641819000383,
+      "result_hash": "3f4a86293c22412ea9c0f9b1e4ef73941bc4e00be0d2c2969714822169458198",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 641819,
+      "process_exit_code": 0,
+      "request_index": 641819000823,
+      "result_hash": "4f2133c6ff86bdf4ddd301076014c3b5f39d8413b5d428d8b84ac9506486afb4",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 642534,
+      "process_exit_code": 0,
+      "request_index": 642534000383,
+      "result_hash": "2c79c1f7a7d9e0981ac4b4bf6258331d5b7af2cb3d4db94eb961cd9517eef154",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 642534,
+      "process_exit_code": 0,
+      "request_index": 642534000603,
+      "result_hash": "43839d33109b52c14a2df70af51a4943d55b72c9dbdbefc7749976a2b7137437",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 674699,
+      "process_exit_code": 0,
+      "request_index": 674699000263,
+      "result_hash": "3303248c253ee3f32da153e62cc2bb64d2edfba4c552a43e159991e477932f36",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 674699,
+      "process_exit_code": 0,
+      "request_index": 674699000703,
+      "result_hash": "b97ac9dc7050068a8081f785de8f47cefc8a87005c40ce2184940ffb8840fbdc",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 825199,
+      "process_exit_code": 0,
+      "request_index": 825199000483,
+      "result_hash": "11ea19448d88f138c80279ac771666712e06638e64d23d300a91dff5c0ea7646",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 825199,
+      "process_exit_code": 0,
+      "request_index": 825199000693,
+      "result_hash": "5f8681c64aee9d8a9e271ee9476cb4c43b414b15fcd3c5f916edc807db7a0539",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 854879,
+      "process_exit_code": 0,
+      "request_index": 854879000173,
+      "result_hash": "90ac62042df784f476dfae17b9f0c9d3ead27b63a8e1f30e088fd3230aa752cc",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 854879,
+      "process_exit_code": 0,
+      "request_index": 854879000613,
+      "result_hash": "cfb150e9dfe32e8363de9c3064afc03c29566b72d768ec23814a842896dc12fc",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 855033,
+      "process_exit_code": 0,
+      "request_index": 855033000087,
+      "result_hash": "4936094982ba58cb48f9e501aa52c749a4a07fb513aa3e82be4de359ced00599",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 855033,
+      "process_exit_code": 0,
+      "request_index": 855033000571,
+      "result_hash": "e6513d23908a8a0ac59b814ed318c82045fa2ae4d6db4074740f14b74c063d4a",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "coarse_elongation_binding",
+        "coarse_q95_safety"
+      ],
+      "parent_request_index": 857022,
+      "process_exit_code": 2,
+      "request_index": 857022000111,
+      "result_hash": "22f3c33cf4c1d171e18cbba8d933312ab2b0b0d4d03f2f7971920101fcced3bd",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 857022,
+      "process_exit_code": 0,
+      "request_index": 857022000661,
+      "result_hash": "252fd72eed147e6e1fbef246c53470c3a90e9155676e84eb11659b40bcde01f2",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 880619,
+      "process_exit_code": 0,
+      "request_index": 880619000263,
+      "result_hash": "b3487b88a29ede2b4b98f2e84e730226793c95d5080c718061cd1e4ce6693d4e",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 880619,
+      "process_exit_code": 0,
+      "request_index": 880619000847,
+      "result_hash": "43520b194940c62f61f84bea83b60dd67e7b68670667031394e85cafa6451a0d",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 890719,
+      "process_exit_code": 0,
+      "request_index": 890719000963,
+      "result_hash": "b4be833db49443dd079e224c54154cdb0ab4a53af6885b7847a49ecaee5f17e1",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 895919,
+      "process_exit_code": 0,
+      "request_index": 895919000143,
+      "result_hash": "fad4da1bf6dccbf577f6bb47df19cfb726719a6b3f6780dc4e9bf6d14c70b090",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 895919,
+      "process_exit_code": 0,
+      "request_index": 895919000637,
+      "result_hash": "a7ee0853d9fc13be43e801c795805f0f3a187dcb0e4585954590c4a51607f9e3",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 902143,
+      "process_exit_code": 0,
+      "request_index": 902143000287,
+      "result_hash": "d678884ecd132078b74665e4ff105cee3675662aa3d68cdcd50142c14904339a",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "grid_convergence"
+      ],
+      "parent_request_index": 902143,
+      "process_exit_code": 2,
+      "request_index": 902143000837,
+      "result_hash": "a957114d6fa575e074cf429e5052b91368c3b807b14903f4c0daef58de36062c",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 940974,
+      "process_exit_code": 0,
+      "request_index": 940974000343,
+      "result_hash": "52d10ddb0212ff4afc46557c5f22120e996639b8ad56ba1fa9b66473acf657c5",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 940974,
+      "process_exit_code": 0,
+      "request_index": 940974000573,
+      "result_hash": "343c80f561f6a7da79cfafd82248e8b7b88c6f50b0e0dd1f97bae0019b548c14",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 1023979,
+      "process_exit_code": 0,
+      "request_index": 1023979000253,
+      "result_hash": "664a0c44444fb0f5211d3da89e231badcd29558cddd098261b821814a42ebcb7",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 1023979,
+      "process_exit_code": 0,
+      "request_index": 1023979000563,
+      "result_hash": "42fc6042e4e87868c2221b5221730ef955a7b28fc6e366b377a00fc96b8afe97",
+      "status": "pass"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source_candidate_stream": "computational_candidates.jsonl",
+  "source_candidate_stream_sha256": "7abe0a6cb2fae5ac46371aa3caa60ebdb288e101e8b8ca791afe238fe6690b90",
+  "status": "complete",
+  "status_histogram": {
+    "fail": 5,
+    "pass": 49
+  },
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0
+}

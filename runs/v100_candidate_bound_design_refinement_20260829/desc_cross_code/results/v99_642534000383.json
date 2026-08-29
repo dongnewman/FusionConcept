@@ -1,0 +1,242 @@
+{
+  "boundary_transform": {
+    "R_modes": [
+      {
+        "coefficient_m": 14.935141780211659,
+        "m": 0,
+        "n": 0
+      },
+      {
+        "coefficient_m": 2.421071308642957,
+        "m": 1,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.03249168072549101,
+        "m": 2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.01084493512299028,
+        "m": 3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.09302789609554439,
+        "m": 4,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.06618355800592685,
+        "m": 5,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.02952416539626174,
+        "m": 6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.02810302458989064,
+        "m": 7,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.007945991089165364,
+        "m": 8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.01312268678671846,
+        "m": 9,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0156319779191809,
+        "m": 10,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0011718520045148964,
+        "m": 11,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.010880786721355687,
+        "m": 12,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.01028853611508081,
+        "m": 13,
+        "n": 0
+      },
+      {
+        "coefficient_m": -3.776858972128226e-05,
+        "m": 14,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.006832311279834379,
+        "m": 15,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.005536354875528096,
+        "m": 16,
+        "n": 0
+      }
+    ],
+    "Z_modes": [
+      {
+        "coefficient_m": -4.858873543471258,
+        "m": -1,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.49819751568158277,
+        "m": -2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.1168644540747547,
+        "m": -3,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.251243544584959,
+        "m": -4,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.007988269004086869,
+        "m": -5,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.01012802286336957,
+        "m": -6,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.06693342199217528,
+        "m": -7,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.06359277970816204,
+        "m": -8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.014176261402092362,
+        "m": -9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.048470955547023895,
+        "m": -10,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.04230010637428504,
+        "m": -11,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0036916845650098707,
+        "m": -12,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.024363451381032283,
+        "m": -13,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.02502482202531062,
+        "m": -14,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.003724343871951644,
+        "m": -15,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0132797152942089,
+        "m": -16,
+        "n": 0
+      }
+    ],
+    "adaptive_mode_fit_audit": [
+      {
+        "fit_max_relative_to_minor_radius": 0.09567635234174722,
+        "fit_rms_relative_to_minor_radius": 0.013840634923234897,
+        "maximum_mode": 12
+      },
+      {
+        "fit_max_relative_to_minor_radius": 0.07278951707199416,
+        "fit_rms_relative_to_minor_radius": 0.009576014752656166,
+        "maximum_mode": 16
+      }
+    ],
+    "fit_gate_passed": true,
+    "fit_max_relative_to_minor_radius": 0.07278951707199416,
+    "fit_rms_relative_to_minor_radius": 0.009576014752656166,
+    "fitted_minor_radius_m": 2.5190982946231073,
+    "fitted_vertical_minor_radius_m": 5.207815475787719,
+    "selected_maximum_mode": 16,
+    "shrink_from_separatrix": 0.9
+  },
+  "candidate_result_hash": "deb541e3e1d26ca22589c73f5919a1b6c3dafb28e0f0b8e83b41d99bd0cf4c3d",
+  "candidate_state": "cross_code_equilibrium_fail",
+  "capability_route": "closed_core_open_exhaust",
+  "claim_boundary": "Candidate-bound v100 FreeGS-to-DESC cross-code equilibrium and sampled Mercier/infinite-n ballooning qualification using one shared PF radial build. A pass does not establish finite-n, resistive, kinetic, nonlinear, transport, materials, experimental-validation, or whole-device feasibility.",
+  "cross_code_equilibrium": {
+    "reason": "desc_equilibrium_unavailable",
+    "status": "not_executed"
+  },
+  "desc_result": {
+    "error_type": "RuntimeError",
+    "message": "re-solved equilibrium failed its declared physical gates",
+    "process_exit_code": 0,
+    "runner_version": "desc_stellarator_sampled_ideal_mhd_stability_runner_v1",
+    "status": "error",
+    "traceback": "Traceback (most recent call last):\n  File \"desc_axisymmetric_stability_v99_runtime\", line 560, in main\n  File \"desc_axisymmetric_stability_v99_runtime\", line 508, in solve\n  File \"desc_axisymmetric_stability_v99_runtime\", line 262, in construct_and_solve\nRuntimeError: re-solved equilibrium failed its declared physical gates\n"
+  },
+  "failed_gates": [
+    "desc_candidate_equilibrium"
+  ],
+  "freegs_full_result_hash": "e39206f94b061479a9ba1bddeea80088524bc0e917a9be029e3bdbc4e5c79942",
+  "freegs_verification_hash": "2c79c1f7a7d9e0981ac4b4bf6258331d5b7af2cb3d4db94eb961cd9517eef154",
+  "identity_fields_used_for_routing": false,
+  "numerical_vvuq": {
+    "reason": "cross_code_equilibrium_and_sampled_local_ideal_mhd_only",
+    "status": "fail"
+  },
+  "request_index": 642534000383,
+  "result_hash": "9bd2aa28901f07b0f001084f7e908c85a9517aae83205142402f4b63ff365d2f",
+  "routing_axes": [
+    "field_semantics",
+    "boundary",
+    "operator",
+    "dimension"
+  ],
+  "runner_version": "v100_shared_radial_build_cross_code_qualification_v1",
+  "schema_version": "1.0.0",
+  "stage_order": [
+    "freegs_verified_equilibrium",
+    "freegs_to_desc_transform",
+    "desc_fixed_boundary_equilibrium",
+    "sampled_ideal_mhd",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "unsupported_candidate_classification_used": false,
+  "validation_vvuq": {
+    "reason": "upstream_qualification_failed",
+    "status": "not_executed"
+  },
+  "whole_device_credible": false
+}

@@ -1,0 +1,1403 @@
+{
+  "acceptance_hash": "175d97b1d423ced583b484768f1c4099cc833c8850f41b6a018aa2d9df55bedc",
+  "blocker_histogram": {
+    "cross_code_equilibrium": 14,
+    "free_boundary_equilibrium_or_numerical_vvuq": 6,
+    "incomplete:complete_engineering_and_materials": 1,
+    "incomplete:complete_stability": 1,
+    "incomplete:dynamic_control_and_fault_response": 1,
+    "incomplete:particle_and_heat_exhaust": 1,
+    "incomplete:transport_and_confinement": 1,
+    "incomplete:validation_vvuq": 1,
+    "sampled_local_ideal_mhd": 55,
+    "static_engineering_proxy": 3
+  },
+  "candidate_state_histogram": {
+    "physical_reject": 78,
+    "qualification_incomplete": 1
+  },
+  "claim_boundary": "v100 separates reduced physics, FreeGS equilibrium and numerical VVUQ, cross-code equilibrium, sampled local ideal-MHD, static engineering proxies, complete qualification, and independent validation. A static-proxy pass remains qualification_incomplete; no subgraph result, reference control, candidate label, ID, or hash grants physical or validation promotion.",
+  "freegs_numerical_vvuq_pass_count": 73,
+  "identity_fields_used_for_routing": false,
+  "protocol_id": "fusionconceptai-v100-full-device-qualification-20260829",
+  "provider_system_failure_count": 0,
+  "reference_control_count": 2,
+  "reference_validation_credit_count": 0,
+  "rows": [
+    {
+      "candidate_result_hash": "8c4da55f473ab265c9821ce902ab02d1f0609dcfbe8da859763f310090eded5f",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 68443000717,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "60aef20c7ae9a283293a963d09ea31fb42195c942a2624a5dd0aa20d0705e3fb",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 68443000967,
+      "selection_fronts": [
+        "engineering_margin_front",
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "72ecbb483b9b088142e1545f6d3f4e5e6f2e06edc9488a3663e02f94b6292e8a",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 121839000703,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "2270d2300e4adcd9d44fc3731a4c044e7a158eb6a941b911a4f33f6bf405acd2",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 121839000933,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "90330e63857939cdf7bb83e99b9b8b45992524c97a192b32f00fa5b6f6cff0b1",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 122639000287,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "16af530eed0ff7e984aefaa95e3964e581cc4d1ad02749ad13efa53e3a1547de",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "not_executed",
+      "freegs_status": "fail",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "free_boundary_equilibrium_or_numerical_vvuq",
+      "request_index": 122639000463,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "32e6b267f1836c0ee343a9e6e0a661bef63a491a981832119d0e51207bd0dffa",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 124799000043,
+      "selection_fronts": [
+        "engineering_margin_front",
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "76401ceb7a515ea00d1658445fdfc9556fa346a0caf88ad92284f3ae12f08e3e",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 124799000227,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "474d1cfa967c7a29ccf5a86b79a662563c10543a8b685c63ee6b79f4a53a71f6",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 124799000703,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "c093c863fc7470df409974d90d0b6280d45cbd4311c8119a9f67b3da43ae2a50",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 124799000967,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "934de2e08244079c6a9b340e78ae5346755ba40e54d51aae9eccad714d5df7b0",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 350999000683,
+      "selection_fronts": [
+        "engineering_margin_front",
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "1f4ab4a55a853caf75d003036f11cc1ccba7cb66f7556cc8da6946599ed2cf7c",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "not_executed",
+      "freegs_status": "fail",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "free_boundary_equilibrium_or_numerical_vvuq",
+      "request_index": 364398000507,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "f19a9eba7b4714a7a639ba7f744102e5adb52eea3c1fb2784c360a0c5116b706",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "sampled_ideal_mhd_candidate",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "static_engineering_proxy",
+      "request_index": 364398000927,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "static_robustness_fail",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "a6a03bd42135cff4ed0b4b1c96bb572c4514d1e845d713dfe42356d8e5eaca35",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 383759000383,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "b453b6da8067a7471a62aa641eea6551b46c5e70d727f8dcab0ca9b3a59aeaae",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 383759000527,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "3079cac6367934f7d0eb9e5620ad9079c4a3dd5bb35673ae8cb0c5c7db7e3afd",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 383759000703,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "ed479f9556dba90a67c20c458968e81e42571a087849fe6f764606bbf7640e2e",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 383759000823,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "39db9db68fcbcf0ce2c5cd64df237775f5ba1f6eb7e944c8528c70d6b2021bc0",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 448494000263,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "b7964e8491cf28fb75596550f365d7d626ea824fa8cf97cae89b8a106c2e8a61",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 448494000573,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "92ec0c8421ba25064378d82c3fbf9ea8e98a91932c19ac433d6ce59d3f380969",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 448494000703,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "aaca8017e47dd01faad690e3dae25bfbea57455fe45fb4c8dd1a62d0e1eb3a95",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 593759000263,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "7b776fcde4b8fe6ab94874d2b43bcb68ad0d32d5c3a0445aa6c22a94a2db9c06",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 593759000483,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "87fed22387725c2bcffa706ee38bb9d96bb450781981bd6d809779f70a8a2d5b",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 593759000783,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "de1cc8d5e9be3c9d08de0a6f49e3306abca64f53f7f6dbed0d0888bbfdb116a8",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 606343000167,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "7e957cc55db3d63ffcd6b2e8bfeab2046cd1298ce056a6336a66917aeabc4de7",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 606343000351,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "59f8d83eb7b11d6cfa9ad6465ec5075161d66e19ee28d585aa5c2f6281a1c5b4",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 606343000947,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "c355d6d7beeed35fcf0bcc610eb5b1612e87a79d8a658e4ff5d2b1715854c2c6",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 609214000143,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "58a2f9b4860a147330b07c402bd1785d98bcaec3d5b1399cc855fdedf5e25248",
+      "candidate_state": "qualification_incomplete",
+      "cross_code_state": "sampled_ideal_mhd_candidate",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [
+        "complete_stability",
+        "transport_and_confinement",
+        "particle_and_heat_exhaust",
+        "complete_engineering_and_materials",
+        "dynamic_control_and_fault_response",
+        "validation_vvuq"
+      ],
+      "physical_failure_stage": null,
+      "request_index": 609214000287,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "static_robustness_proxy_pass",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "unknown_validation_domain",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "79993665c9c63da8d8f13b48e4cf4b494c3ef78accecac8fe69d5eab7205bcaa",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 625659000343,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "90b523058ef64598e5f6b77c2a453ddbd61f34b8c3b7ba3caa8c239954fb0085",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 625659000363,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "e40ee15da61c0a0497d30035f4ba64ef935ab3c60c933f6f1394c798627b2b10",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 629599000527,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "4a4766b7031e72c8f5ae17b1db15c7a37a0f943248d732475734d921cfca18d7",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 629599001023,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "aee432c93fd2109b69e01cb0c1f70ae222a436d4124109d754e18b657c98d443",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "not_executed",
+      "freegs_status": "fail",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "free_boundary_equilibrium_or_numerical_vvuq",
+      "request_index": 641003000247,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "1cb3c8c59e16816d06c8a0649708e19f945883c78ec0e586a5f699121049af12",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 641003000727,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "612695c7842572ffc2e9d99dbf1ffca84c9df8044706b75bea9c53b955c6e761",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 641598000167,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "1b2a37a9c9a52b794649a1a426686a082c5ba0cea25b5e20e7b17525f14c0323",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 641598000177,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "459021e2db23e53e5ecbe0462b285b5de12ef1425bd9581112fef2e35943719b",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 641598000747,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "8b437b0140b33f7073506a0e43b43a83990564af8273af8837482c007bc08adb",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 641819000383,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "c5728cfd13576e0f813c4e600daee8054398afe8e1a27e5aa1d3faebcbe64b15",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 641819000823,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "6d8559f22a606bafc369db44cf8b4564d22789f8a3576b2c71943f345ab6a64e",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "not_executed",
+      "freegs_status": "fail",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "free_boundary_equilibrium_or_numerical_vvuq",
+      "request_index": 641819000933,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "60b3531270b5d922c063c4ebb49473b597063c1ab780c43f7f89faeba5669469",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 641819000967,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "deb541e3e1d26ca22589c73f5919a1b6c3dafb28e0f0b8e83b41d99bd0cf4c3d",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 642534000383,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "de942c6178759b3bad00f2ebcb457430ff8e5ae7bbeeecaf5d42c9fd3b2ea495",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 642534000603,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "c0851a62712524fb77141095ef299a4fbca6df219f0099d072906f9e638a3690",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 674699000118,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "6c4bffa8017812f3778befb81e3068c7d378af18d2a9e51069482977d884639d",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 674699000263,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "7b6ca45c6d7dc8951b7e3e76d2c22e382f587e792cd5d91a6a9e3509a3cac4ee",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 674699000371,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "b0fe1fe13ec7efe61a936312bab0768db2bf829fc607685cc50c8cebcb732e76",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 674699000703,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "08ceda12766a863d7e055e88d43329813b12f38c0bed8b3f4a670312b1a2642c",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 825199000483,
+      "selection_fronts": [
+        "engineering_margin_front",
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "77d1761ce9fe57e02b0e5f875b594242ef57039945b5789633fc515bcc91cbd3",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 825199000573,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "0058495ceaa256d8de58e727cb74237e6d5dcfb20d2aa393187f43cf449cb77f",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 825199000693,
+      "selection_fronts": [
+        "engineering_margin_front",
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "e68f3b4be3002987bd8b7353894ed9f1bdda6ab3d8afeb4766083c28d0423d8b",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 854879000173,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "98d32e0d61f66a337fe76fd9f8b2ed0b57269eb74da318c669db776beb5cfc1f",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "sampled_ideal_mhd_candidate",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "static_engineering_proxy",
+      "request_index": 854879000613,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "static_robustness_fail",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "69e0eea2d4d42a3d5fbaef23d261b50afffa6db61a4ec0d28b0c10bfc8a500eb",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 854879000723,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "27bbcc6c1023af41ebdd0ee487f395e8e234763bcc5d1475090176ff9d3661fc",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 855033000087,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "09b4a88727425e13d5a336c39d77150cad20383c1f75461676ec42c7fb9f9fe1",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 855033000571,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "624ce65819d8478a8c43d3b22ad1d8338a1f848337b04995adf094ce269fd136",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 855033000847,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "8902d56246991645c3ee5cfdfa700e490150d0efe9036a9380f524dbbdadc283",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "not_executed",
+      "freegs_status": "fail",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "free_boundary_equilibrium_or_numerical_vvuq",
+      "request_index": 857022000111,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "d5532995203825e2ccbab2965a954785a92553674c094f18cd9afa17f2593e1f",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "sampled_ideal_mhd_candidate",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "static_engineering_proxy",
+      "request_index": 857022000131,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "static_robustness_fail",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "ba0b310084ea28fa71c3ba44cbf4b06d8a5868a5e10047fc2c763ae821d7c562",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 857022000221,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "c027185a6b112ee614ea0bee44c2c7a807bddd705b04ff1f94e9c5655b5707e5",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 857022000285,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "0857c2195a4480b492357220bfc1bacaebc1fd0daaa15328d9c127ca1f16abe2",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 857022000661,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "a3a0822589ea5933b5f81f950c1d47aec595c95d003feb27116677560a2ab522",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 857022000726,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "9acaeade11c8e74479048bad8c9eae695897cb777a7a58856e2e5c27e9e0053d",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 880619000173,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "695f89f365623a227169740b6bec53d522536703b7e5509777083695eb4f0163",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 880619000263,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "bd7f963e772973b060701c4cd68134e3b58454a867a2776aab3d729cb6cd1446",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 880619000593,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "01c2a8a8bf69d2b18072135349bf37dc74421fe7e23db69f06e26f14cf24ba8c",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 880619000847,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "197f74cf97049bfd748a12dcb0918d28c6ec9c615127e6521a087aac1bcecdc8",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 890719000963,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "85dc83240e0bbfc8c9fb191a3b6a604b46db1c792aec3463ad8d6f4783eb2bbb",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 895919000143,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "a6568dfdc03d5752017d9ef0302a866c0cefc2d2b8a1500d35bc33d3d63aa6b1",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 895919000603,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "aea3175a463dc12b4e4b40b872feaebac020d5864f1a9e58cfba97c81135c3e6",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 895919000637,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "2f5c7c56accd6b6dd6f97830285a4b3dac669c308405a97a66840763dbcf085c",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 895919000911,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "ed194d1c6f9d3963f63a35114ebf1e70b3e6a42907e951ac20754653fb118677",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 902143000022,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "1b6ea5a124fa67378b6eba3aff83ecab03fbb45933b04558b4d97416ff5992d6",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "cross_code_equilibrium_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "cross_code_equilibrium",
+      "request_index": 902143000287,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "b30d67e2d462f0538472bb0fcfa93bf0b6e00b67142b5aa157192f3465d9f90a",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "not_executed",
+      "freegs_status": "fail",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "free_boundary_equilibrium_or_numerical_vvuq",
+      "request_index": 902143000837,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "6a22db117524d4512914fc9d905499f18caab39517a988f9f3e6a9a5dcb7a084",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 940974000343,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "1d784c882c3fd5a044d5e4526ca22ab5288a4105dd57e98a493b07d0cca66bbe",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 940974000573,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "0c218727d949929eefefe1db9493da7cc7560b9ca360bc41113346f476a22405",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 1023979000253,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "4c945038a2f7a6cb3ebf0397e07cd7bed52b96859b7019972c9759ee89c2007c",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 1023979000563,
+      "selection_fronts": [
+        "engineering_margin_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "736d6230eb5456d1b4ddcb558ab5f1d02a3c025721324d73276f2840c1d41f87",
+      "candidate_state": "physical_reject",
+      "cross_code_state": "stability_screen_fail",
+      "freegs_status": "pass",
+      "incomplete_evidence_stages": [],
+      "physical_failure_stage": "sampled_local_ideal_mhd",
+      "request_index": 1023979000957,
+      "selection_fronts": [
+        "low_beta_front"
+      ],
+      "static_engineering_state": "not_executed",
+      "unsupported_candidate_classification_used": false,
+      "validation_pass": false,
+      "validation_vvuq_status": "not_executed",
+      "whole_device_credible": false
+    }
+  ],
+  "sampled_local_ideal_mhd_candidate_count": 4,
+  "schema_version": "1.0.0",
+  "source_hashes": {
+    "frontier_candidate_stream_sha256": "6cfb50db7f563ed7f0881f87ea4363fd2d678f6984a4d5abae593d05dcd7a3d9",
+    "frontier_desc_acceptance_hash": "b4df07fdb183ee81fe41ba3ea8c0757a2ae45ff1569a2dc0190f5bd82d6d4f78",
+    "frontier_freegs_acceptance_hash": "ff0d3399abc1517f91c1a1a1deecaf1d743fb7127007f3e6aa39fdb5f50ff4ea",
+    "frontier_static_acceptance_hash": "885a4b9a605a68b6bcb5807641a414b46b5f4f7b0c88bf6a4da570486205601a",
+    "main_candidate_stream_sha256": "7abe0a6cb2fae5ac46371aa3caa60ebdb288e101e8b8ca791afe238fe6690b90",
+    "main_desc_acceptance_hash": "dbafce193ccc0523d5acc2def89b40e67d5fd031d67ebf600d3ef343f6adb068",
+    "main_freegs_acceptance_hash": "0a651ee0b6ff80a3821bb9eedcf5f84ff89a70992bfa5433abf9039b1d8c2ef6",
+    "main_static_acceptance_hash": "12d01f24d76afd7dd72050779c9d0aff76763034bac63c75b1b32a52e494aaec",
+    "reference_acceptance_hash": "20b7a0b2597f31deb22b6729312b378fe2ece39fd78a5429233aec0d6cb44cca"
+  },
+  "static_engineering_proxy_pass_count": 1,
+  "status": "complete",
+  "subgraph_promotion_allowed": false,
+  "unique_design_candidate_count": 79,
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}

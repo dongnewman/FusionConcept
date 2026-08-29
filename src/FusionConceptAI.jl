@@ -299,6 +299,7 @@ include("exhaustive_physical_rescreen_v97.jl")
 include("exhaustive_physical_campaign_v97.jl")
 include("end_to_end_device_pipeline_v98.jl")
 include("full_device_qualification_v99.jl")
+include("design_refinement_v100.jl")
 
 export Quantity,
        MissionSpec,
@@ -1979,6 +1980,11 @@ export Stage3ExecutionBudgetV1,
        FULL_DEVICE_QUALIFICATION_V99_CLAIM_BOUNDARY,
        compile_full_device_qualification_dag_v99,
        evaluate_full_device_qualification_v99,
-       run_v99_reference_controls
+       run_v99_reference_controls,
+       V100_PROTOCOL_ID,
+       V100_ENGINEERING_LIMITS,
+       DESIGN_REFINEMENT_V100_CLAIM_BOUNDARY,
+       engineering_prefilter_v100,
+       refine_candidate_operating_points_v100
 
 end

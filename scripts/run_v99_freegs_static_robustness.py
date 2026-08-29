@@ -132,6 +132,7 @@ def main() -> int:
             "raw": raw,
             "solver_input": solver_input,
         })
+    radial_build_allocation = "not_evaluated_nominal_equilibrium_failed"
     if nominal_result is None or nominal_currents is None:
         state = "static_robustness_fail"
         failed = ["nominal_static_equilibrium"]
@@ -143,9 +144,19 @@ def main() -> int:
         nominal_q95 = float(nominal_eq["q_95"])
         nominal_max = max(abs(value) for value in nominal_currents.values())
         point = candidate["operating_point"]
-        build = float(point["coil_minor_radius_m"]) - float(point["wall_minor_radius_m"])
-        pack_thickness = 0.5 * build
-        support_thickness = 0.5 * build
+        layout = candidate.get("magnet_layout")
+        if layout is not None:
+            if layout.get("layout_model") != "shared_radial_build_v100":
+                raise ValueError("unsupported explicit magnet layout")
+            pack_thickness = float(layout["winding_pack_thickness_m"])
+            support_thickness = float(layout["support_thickness_m"])
+            radial_build_allocation = "candidate_declared_shared_radial_build_v100"
+        else:
+            build = (float(point["coil_minor_radius_m"])
+                     - float(point["wall_minor_radius_m"]))
+            pack_thickness = 0.5 * build
+            support_thickness = 0.5 * build
+            radial_build_allocation = "equal_split_winding_and_support_v99"
         for record in records:
             raw = record.pop("raw")
             solver_input = record.pop("solver_input")
@@ -210,7 +221,7 @@ def main() -> int:
         "perturbation_contract": {"pf_centerline_offset_m": 0.005,
                                   "plasma_current_fraction": 0.03,
                                   "axis_pressure_fraction": 0.05},
-        "engineering_proxy_contract": {"radial_build_allocation": "equal_split_winding_and_support_v99",
+        "engineering_proxy_contract": {"radial_build_allocation": radial_build_allocation,
                                         "current_density_limit_a_m2": 500.0e6,
                                         "peak_field_limit_t": 16.0,
                                         "support_stress_limit_pa": 650.0e6},
