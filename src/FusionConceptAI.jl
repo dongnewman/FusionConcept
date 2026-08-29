@@ -306,6 +306,7 @@ include("whole_device_assembly_generator_v105.jl")
 include("whole_device_assembly_screen_v106.jl")
 include("whole_device_provider_dag_v107.jl")
 include("dynamic_fault_provider_v108.jl")
+include("material_engineering_provider_v109.jl")
 
 export Quantity,
        MissionSpec,
@@ -2025,6 +2026,15 @@ export Stage3ExecutionBudgetV1,
        V108_CONTROLLER_GAINS,
        generate_controller_overlays_v108,
        execute_dynamic_fault_provider_v108,
-       run_dynamic_fault_campaign_v108
+       run_dynamic_fault_campaign_v108,
+       V109_PROTOCOL_ID,
+       MATERIAL_ENGINEERING_PROVIDER_V109_CLAIM_BOUNDARY,
+       V109_REQUIRED_RECORDS,
+       material_screen_provider_capability_v109,
+       material_screen_requirement_v109,
+       load_material_property_catalog_v109,
+       audit_material_property_catalog_v109,
+       execute_material_engineering_provider_v109,
+       run_material_engineering_campaign_v109
 
 end

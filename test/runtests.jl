@@ -88,6 +88,7 @@ include("whole_device_assembly_generator_v105.jl")
 include("whole_device_assembly_screen_v106.jl")
 include("whole_device_provider_dag_v107.jl")
 include("dynamic_fault_provider_v108.jl")
+include("material_engineering_provider_v109.jl")
 
 include("stability_mode_compiler_v1.jl")
 include("conservation_problem_compiler_v2.jl")

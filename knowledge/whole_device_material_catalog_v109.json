@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_id": "fusionconceptai-whole-device-material-screen-v109-20260829",
+  "records": [
+    {
+      "record_id": "full_nuclear_radial_build_tokamak_scope",
+      "component_role": "blanket_shield_vacuum_build",
+      "quantity": "minimum_full_nuclear_radial_build_m",
+      "value": 1.2,
+      "unit": "m",
+      "gate_sense": "minimum",
+      "source_url": "https://pubs.aip.org/aip/pop/article/22/7/070901/264353/Designing-a-tokamak-fusion-reactor-How-does-plasma",
+      "source_locator": "Eq. 4 and surrounding discussion",
+      "source_scope": "axisymmetric D-T tokamak reactor scoping; described by the source as reasonable and perhaps slightly optimistic",
+      "screening_transform": "use the published full dimension directly as a rejection-only lower bound",
+      "complete_qualification_credit": false
+    },
+    {
+      "record_id": "iter_tungsten_divertor_steady_heat_flux",
+      "component_role": "divertor_tungsten_armour",
+      "quantity": "maximum_steady_surface_heat_flux_w_m2",
+      "value": 10000000.0,
+      "unit": "W/m^2",
+      "gate_sense": "maximum",
+      "source_url": "https://www.iter.org/machine/divertor",
+      "source_locator": "Divertor targets",
+      "source_scope": "ITER qualified tungsten divertor vertical-target steady heat flux",
+      "screening_transform": "apply a 20 percent one-sided load uncertainty to the candidate reduced exhaust estimate",
+      "complete_qualification_credit": false
+    },
+    {
+      "record_id": "eurofer_blanket_structure_temperature",
+      "component_role": "eurofer_blanket_structure",
+      "quantity": "maximum_structure_temperature_k",
+      "value": 823.15,
+      "unit": "K",
+      "gate_sense": "maximum",
+      "source_url": "https://www.mdpi.com/2076-3417/11/24/11592",
+      "source_locator": "WCLL thermal and transient design discussion",
+      "source_scope": "EU-DEMO water-cooled lead-lithium blanket EUROFER structures",
+      "screening_transform": "compare nominal and loss-of-flow coolant outlet temperatures as lower-bound structure-temperature rejection proxies",
+      "complete_qualification_credit": false
+    },
+    {
+      "record_id": "rebco_high_field_screen",
+      "component_role": "rebco_cicc",
+      "quantity": "maximum_screening_peak_field_t",
+      "value": 16.0,
+      "unit": "T",
+      "gate_sense": "maximum",
+      "source_url": "https://cds.cern.ch/record/2955037/files/A_20_T_at_20_K_Model_Coil_for_the_Muon_Collider_Target_Solenoid_and_Fusion_Applications.pdf",
+      "source_locator": "20 T at 20 K feasibility-study target",
+      "source_scope": "large-bore REBCO model-coil feasibility, not a qualified fusion magnet",
+      "screening_transform": "derate the 20 T feasibility target by 20 percent and apply 5 percent one-sided candidate field uncertainty",
+      "complete_qualification_credit": false
+    },
+    {
+      "record_id": "tokamak_overall_winding_current_density_scope",
+      "component_role": "superconducting_winding_pack",
+      "quantity": "maximum_overall_current_density_a_m2",
+      "value": 20000000.0,
+      "unit": "A/m^2",
+      "gate_sense": "maximum",
+      "source_url": "https://pubs.aip.org/aip/pop/article/22/7/070901/264353/Designing-a-tokamak-fusion-reactor-How-does-plasma",
+      "source_locator": "Eq. 15 winding-pack discussion",
+      "source_scope": "reactor scoping value for overall superconducting-coil current density",
+      "screening_transform": "apply 10 percent one-sided candidate current-density uncertainty",
+      "complete_qualification_credit": false
+    },
+    {
+      "record_id": "iter_316ln_support_screen",
+      "component_role": "cryogenic_magnet_support",
+      "quantity": "maximum_screening_stress_pa",
+      "value": 450000000.0,
+      "unit": "Pa",
+      "gate_sense": "maximum",
+      "source_url": "https://www-pub.iaea.org/MTCD/Meetings/PDFplus/2010/cn180/cn180_papers/itr_p1-45.pdf",
+      "source_locator": "Table 1, FM316LNH minimum 4.2 K yield strength",
+      "source_scope": "ITER 316LN magnet-support material; the 450 MPa screen is one half of the reported 900 MPa minimum 4.2 K yield strength",
+      "screening_transform": "apply 5 percent one-sided load uncertainty; 20 K use remains screening-only because the cited table does not qualify that exact temperature",
+      "complete_qualification_credit": false
+    },
+    {
+      "record_id": "eu_demo_coil_neutronics_limits",
+      "component_role": "superconducting_coil_neutron_protection",
+      "quantity": "required_3d_neutronics_outputs",
+      "value": 1.0,
+      "unit": "declared_obligation",
+      "gate_sense": "external_computation_required",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S2352179125000997",
+      "source_locator": "Table 2-1 neutronic design requirements",
+      "source_scope": "EU-DEMO DCLL blanket criteria for coil fluence, copper damage, and winding-pack nuclear heating",
+      "screening_transform": "do not infer these outputs from radial thickness; require a candidate-bound 3D neutronics provider",
+      "complete_qualification_credit": false
+    }
+  ],
+  "claim_boundary": "The catalog pins rejection-screen inputs to cited sources and explicit transforms. It is not a material handbook, design code, irradiation database, component qualification, or experimental validation resource."
+}
