@@ -96,6 +96,7 @@ include("beta_preserving_field_repair_v113.jl")
 include("similarity_scaled_field_repair_v114.jl")
 include("corrected_whole_device_rescreen_v115.jl")
 include("multiregion_conservation_providers_v116.jl")
+include("channel_thermal_hydraulics_provider_v117.jl")
 
 include("stability_mode_compiler_v1.jl")
 include("conservation_problem_compiler_v2.jl")

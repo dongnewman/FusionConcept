@@ -314,6 +314,7 @@ include("beta_preserving_field_repair_v113.jl")
 include("similarity_scaled_field_repair_v114.jl")
 include("corrected_whole_device_rescreen_v115.jl")
 include("multiregion_conservation_providers_v116.jl")
+include("channel_thermal_hydraulics_provider_v117.jl")
 
 export Quantity,
        MissionSpec,
@@ -2090,6 +2091,13 @@ export Stage3ExecutionBudgetV1,
        compile_sol_conduction_graph_v116,
        execute_sol_exhaust_provider_v116,
        select_v115_source_assemblies_v116,
-       run_multiregion_conservation_campaign_v116
+       run_multiregion_conservation_campaign_v116,
+       V117_PROTOCOL_ID,
+       CHANNEL_THERMAL_HYDRAULICS_V117_CLAIM_BOUNDARY,
+       generate_channel_overlays_v117,
+       compile_coolant_channel_graph_v117,
+       execute_channel_thermal_hydraulics_v117,
+       select_v116_survivor_assemblies_v117,
+       run_channel_thermal_hydraulics_campaign_v117
 
 end
