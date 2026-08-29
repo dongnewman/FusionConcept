@@ -305,6 +305,7 @@ include("whole_device_preflight_v104.jl")
 include("whole_device_assembly_generator_v105.jl")
 include("whole_device_assembly_screen_v106.jl")
 include("whole_device_provider_dag_v107.jl")
+include("dynamic_fault_provider_v108.jl")
 
 export Quantity,
        MissionSpec,
@@ -2018,6 +2019,12 @@ export Stage3ExecutionBudgetV1,
        WHOLE_DEVICE_PROVIDER_DAG_V107_CLAIM_BOUNDARY,
        V107_STAGE_ORDER,
        execute_whole_device_provider_dag_v107,
-       run_whole_device_provider_dag_v107
+       run_whole_device_provider_dag_v107,
+       V108_PROTOCOL_ID,
+       DYNAMIC_FAULT_PROVIDER_V108_CLAIM_BOUNDARY,
+       V108_CONTROLLER_GAINS,
+       generate_controller_overlays_v108,
+       execute_dynamic_fault_provider_v108,
+       run_dynamic_fault_campaign_v108
 
 end
