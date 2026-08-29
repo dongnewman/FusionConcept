@@ -302,6 +302,8 @@ include("full_device_qualification_v99.jl")
 include("design_refinement_v100.jl")
 include("mission_aware_screening_v103.jl")
 include("whole_device_preflight_v104.jl")
+include("whole_device_assembly_generator_v105.jl")
+include("whole_device_assembly_screen_v106.jl")
 
 export Quantity,
        MissionSpec,
@@ -1999,6 +2001,17 @@ export Stage3ExecutionBudgetV1,
        V104_WHOLE_DEVICE_OBLIGATIONS,
        default_whole_device_provider_inventory_v104,
        compile_whole_device_preflight_v104,
-       run_whole_device_preflight_v104
+       run_whole_device_preflight_v104,
+       V105_PROTOCOL_ID,
+       WHOLE_DEVICE_ASSEMBLY_V105_CLAIM_BOUNDARY,
+       V105_REQUIRED_ASSEMBLY_SECTIONS,
+       generate_whole_device_assemblies_v105,
+       audit_whole_device_assembly_inputs_v105,
+       run_whole_device_assembly_generation_v105,
+       V106_PROTOCOL_ID,
+       WHOLE_DEVICE_ASSEMBLY_SCREEN_V106_CLAIM_BOUNDARY,
+       V106_SCREEN_LIMITS,
+       screen_whole_device_assembly_v106,
+       run_whole_device_assembly_screen_v106
 
 end
