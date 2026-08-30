@@ -1,0 +1,79 @@
+{
+    "source_reference_acceptance_hash": "9249d551367d055f99dcb75ed9bb710ea8b3806049c7b8a724662c65d7d2a6ee",
+    "conservation_provider_survivor_count": 2,
+    "stage_order": [
+        "ITER_C2W_reference_regression",
+        "whole_device_assembly",
+        "available_provider_DAG",
+        "dynamic_fault",
+        "materials",
+        "multiregion_transport",
+        "SOL_exhaust",
+        "channel_thermal_hydraulics",
+        "sampled_numerical_VVUQ",
+        "validation_VVUQ"
+    ],
+    "sampled_whole_graph_numerical_vvuq_pass_count": 40,
+    "acceptance_hash": "38330c74bc497b26fbf47f13d8bae91ad876e4f2806ca122dccaf8fc43cd5869",
+    "declared_primary_pressure_drop_budget_pa": 80000,
+    "protocol_id": "fusionconceptai-v124-channel-budget-repair-20260830",
+    "claim_boundary": "v124 replaces the fixed 200 kPa assembly pumping proxy with an explicit 80 kPa loop budget and searches 55/60/65 K coolant rises. The detailed channel provider must independently solve an actual pressure drop no greater than that same budget, retain 50-percent-flow EUROFER temperature margin, and retain the 100 MW updated net-electric gate. Passing remains sampled 1D numerical VVUQ, not complete engineering or validation.",
+    "status": "complete",
+    "reference_regression_pass_count": 2,
+    "validation_vvuq_status": "external_evidence_required",
+    "thermal_cycle_proposal_delta_t_k": [
+        55,
+        60,
+        65
+    ],
+    "stream_inventory": {
+        "v124_assemblies": {
+            "sha256": "75adb46ff40efd10c39fe67ab10cf2dd1f7e9e1cd50882a92834e4639c50cdb7",
+            "row_count": 216
+        },
+        "v124_screens": {
+            "sha256": "904043e1d97e02294cf2bbd572b0e24dccfd948168f2fb5b384fb0158b69dd04",
+            "row_count": 216
+        },
+        "v124_conservation": {
+            "sha256": "2d4df7b29f8d0c278a68e184a450f9da5e226575db4fe0bc628f96b8ee8a87dc",
+            "row_count": 4
+        },
+        "v124_channels": {
+            "sha256": "1d928e4f5e8e8a20808e89c38896c00da6450aa044e42d37d30a3b4cc285cfd2",
+            "row_count": 420
+        },
+        "v124_dynamics": {
+            "sha256": "7fa5c04340ad466e95f5548a261dad65a1defff11b3ecd10cff6fa8ed176cf74",
+            "row_count": 496
+        },
+        "v124_dags": {
+            "sha256": "a0e4c0b0222dba0417c65d660ed32d418d26c02bf3bec2a26f7c51dcab9502a4",
+            "row_count": 124
+        },
+        "v124_materials": {
+            "sha256": "0823e6167970200873cf38a191244c1f1cf817309ee32086993f27fc9f4f9834",
+            "row_count": 372
+        }
+    },
+    "partial_subgraph_promotion_allowed": false,
+    "provider_system_failure_count": 0,
+    "source_candidate_count": 9,
+    "unsupported_candidate_count": 0,
+    "v115_acceptance_hash": "a2d813af9f940f114af90246bf1ee621bba97cbb846168f080986fec73d650e5",
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "material_survivor_count": 120,
+    "basis_direct_metric_credit": false,
+    "reference_bypass_count": 0,
+    "source_provider_acceptance_hashes": {
+        "generation": "d417305e5651fe7915a49942f753bb11079a20b4f10a1a7aa3c33f539affe7af",
+        "static": "89b806896ac2bef9064d1c03de52dbf5e2b85e70e8a2f088fa272140b7a11dea",
+        "desc": "5f9511fbec97de5d657409d8beab3a64af402a548f411c9682ac9539e2c37ee7",
+        "freegs": "d90c0b01d663a4217c483235ce02e101ca1146c366aa6a1540459202e579921e"
+    },
+    "identity_fields_used_for_routing": false,
+    "schema_version": "1.0.0",
+    "v116_acceptance_hash": "08761dbba38eeb530f4d4ad8f9f98d0b8df7440db6dd57057c4114f7619bdd57",
+    "v117_acceptance_hash": "f11a17a3cd6e9c42992e6edd975550d6df936c0e8a0f2ba8909490d46f6005ca"
+}

@@ -8,7 +8,7 @@ import math
 import run_v98_freegs_candidate as base
 
 
-base.RUNNER_VERSION = "v100_shared_radial_build_freegs_verification_v1"
+base.RUNNER_VERSION = "v100_shared_radial_build_freegs_verification_v2"
 base.CLAIM_BOUNDARY = (
     "Three-grid candidate-bound FreeGS 0.8.2 free-boundary equilibrium verification "
     "using the same finite PF radial build as the v100 engineering prefilter. Passing "
@@ -19,7 +19,8 @@ base.CLAIM_BOUNDARY = (
 
 
 def transformed_input(candidate: dict, grid: int, coil_vertical_multiplier: float,
-                      boundary_vertical_multiplier: float) -> dict:
+                      boundary_vertical_multiplier: float,
+                      axis_pressure_multiplier: float = 1.0) -> dict:
     capability = candidate["capability_profile"]
     if capability["route"] not in ("axisymmetric_closed", "closed_core_open_exhaust"):
         raise ValueError("FreeGS transformer requires an axisymmetric closed-core route")
@@ -55,6 +56,7 @@ def transformed_input(candidate: dict, grid: int, coil_vertical_multiplier: floa
     current_a = float(candidate["physics_solve"]["confinement_model"][
         "plasma_current_ma"]) * 1.0e6
     field = float(point["magnetic_field_t"])
+    alpha_m, alpha_n = base.declared_profile_parameters(candidate)
     return {
         "runner_version": "freegs_explicit_filament_runner_v2",
         "machine": {
@@ -92,9 +94,11 @@ def transformed_input(candidate: dict, grid: int, coil_vertical_multiplier: floa
             "nx": grid, "ny": grid, "boundary": "freeBoundaryHagenow",
         },
         "profile": {
-            "kind": "ConstrainPaxisIp", "axis_pressure_pa": pressure,
+            "kind": "ConstrainPaxisIp",
+            "axis_pressure_pa": pressure * axis_pressure_multiplier,
             "plasma_current_a": current_a, "vacuum_f_tm": field * target_r,
-            "alpha_m": 1.0, "alpha_n": 2.0, "profile_axis_radius_m": target_r,
+            "alpha_m": float(alpha_m), "alpha_n": float(alpha_n),
+            "profile_axis_radius_m": target_r,
         },
         "constraints": {
             "xpoints_m": [

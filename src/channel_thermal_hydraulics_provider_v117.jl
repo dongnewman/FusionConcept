@@ -216,6 +216,10 @@ function execute_channel_thermal_hydraulics_v117(assembly_raw, overlay_raw,
     updated_net = Float64(outputs["net_electric_power_w"]) +
         Float64(outputs["primary_pump_power_w"]) - new_pump
     design = overlay["channel_design"]
+    declared_loop_pressure_budget = Float64(get(thermal,
+        "primary_pressure_drop_pa", design["maximum_pressure_drop_pa"]))
+    effective_pressure_limit = min(Float64(design["maximum_pressure_drop_pa"]),
+        declared_loop_pressure_budget)
     re_nominal = Float64(nominal_hydraulic["reynolds_number"])
     re_fault = Float64(fault_hydraulic["reynolds_number"])
     pr = Float64(nominal_hydraulic["prandtl_number"])
@@ -228,7 +232,7 @@ function execute_channel_thermal_hydraulics_v117(assembly_raw, overlay_raw,
         "subsonic_velocity" => Float64(nominal_hydraulic["mach_number"]) <=
             Float64(design["maximum_mach_number"]),
         "pressure_drop" => Float64(nominal_hydraulic["pressure_drop_pa"]) <=
-            Float64(design["maximum_pressure_drop_pa"]),
+            effective_pressure_limit,
         "nominal_structure_temperature" => nominal_structure <= temperature_limit,
         "loss_of_flow_structure_temperature" => fault_structure <= temperature_limit,
         "updated_net_electric_power" => updated_net >= 100.0e6)
@@ -249,6 +253,7 @@ function execute_channel_thermal_hydraulics_v117(assembly_raw, overlay_raw,
         "loss_of_flow_structure_temperature_k" => fault_structure,
         "temperature_limit_k" => temperature_limit,
         "updated_primary_pump_power_w" => new_pump,
+        "effective_pressure_drop_limit_pa" => effective_pressure_limit,
         "updated_net_electric_power_w" => updated_net,
         "gates" => gates, "failed_gates" => sort!([key for (key, value) in gates if !value]),
         "model_sources" => [

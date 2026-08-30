@@ -316,6 +316,11 @@ include("corrected_whole_device_rescreen_v115.jl")
 include("multiregion_conservation_providers_v116.jl")
 include("channel_thermal_hydraulics_provider_v117.jl")
 include("repaired_full_device_chain_v118.jl")
+include("equilibrium_profile_repair_v120.jl")
+include("shared_state_static_repair_v121.jl")
+include("thermal_cycle_repair_v122.jl")
+include("material_thermal_window_repair_v123.jl")
+include("channel_budget_repair_v124.jl")
 
 export Quantity,
        MissionSpec,
@@ -2103,5 +2108,32 @@ export Stage3ExecutionBudgetV1,
 export V118_PROTOCOL_ID,
        REPAIRED_FULL_DEVICE_CHAIN_V118_CLAIM_BOUNDARY,
        run_repaired_full_device_chain_v118
+export V120_PROTOCOL_ID,
+       EQUILIBRIUM_PROFILE_REPAIR_V120_CLAIM_BOUNDARY,
+       V120_PROFILE_VARIANTS,
+       generate_equilibrium_profile_repairs_v120,
+       select_equilibrium_profile_parents_v120
+export V121_PROTOCOL_ID,
+       SHARED_STATE_STATIC_REPAIR_V121_CLAIM_BOUNDARY,
+       V121_FIELD_TARGET_FRACTIONS,
+       V121_SIZE_MULTIPLIERS,
+       static_repair_field_multipliers_v121,
+       generate_shared_state_static_repairs_v121
+export V122_PROTOCOL_ID,
+       THERMAL_CYCLE_REPAIR_V122_CLAIM_BOUNDARY,
+       V122_COOLANT_DELTA_T_K,
+       generate_thermal_cycle_repair_assemblies_v122,
+       run_thermal_cycle_repair_full_chain_v122
+export V123_PROTOCOL_ID,
+       MATERIAL_THERMAL_WINDOW_REPAIR_V123_CLAIM_BOUNDARY,
+       V123_COOLANT_DELTA_T_K,
+       generate_material_thermal_window_assemblies_v123,
+       run_material_thermal_window_full_chain_v123
+export V124_PROTOCOL_ID,
+       CHANNEL_BUDGET_REPAIR_V124_CLAIM_BOUNDARY,
+       V124_COOLANT_DELTA_T_K,
+       V124_PRIMARY_PRESSURE_DROP_BUDGET_PA,
+       generate_channel_budget_repair_assemblies_v124,
+       run_channel_budget_repair_full_chain_v124
 
 end

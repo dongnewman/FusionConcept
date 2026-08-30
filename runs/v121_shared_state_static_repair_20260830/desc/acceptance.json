@@ -1,0 +1,72 @@
+{
+  "acceptance_hash": "d3f4249acee685e9d037579dd7d61692686e175ee55a6431b7e05e8ba448ebcb",
+  "candidate_count": 5,
+  "candidate_state_histogram": {
+    "sampled_ideal_mhd_candidate": 3,
+    "transformer_fit_fail": 2
+  },
+  "claim_boundary": "A v99 pass covers cross-code fixed-boundary equilibrium and sampled Mercier/infinite-n ballooning only. It is not complete stability, transport, engineering, validation, whole-device feasibility, or credibility.",
+  "failed_gate_histogram": {
+    "freegs_to_desc_boundary_fit": 2
+  },
+  "processed_count": 5,
+  "protocol_id": "fusionconceptai-v121-shared-state-profile-desc-batch-20260830",
+  "provider_system_failure_count": 0,
+  "rows": [
+    {
+      "candidate_state": "transformer_fit_fail",
+      "failed_gates": [
+        "freegs_to_desc_boundary_fit"
+      ],
+      "process_exit_code": 0,
+      "request_index": 117135861885201703,
+      "result_hash": "0e97effa54c5be74eb1fa14ca70916a8bbaa038cefef8e373efa69eaf7c87ffe",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v3"
+    },
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 117135861885201705,
+      "result_hash": "4ea522d537c45edc6ff0035c2c01de54b128cc8d45be51c10fa1fbbe5bd53ec2",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v3"
+    },
+    {
+      "candidate_state": "transformer_fit_fail",
+      "failed_gates": [
+        "freegs_to_desc_boundary_fit"
+      ],
+      "process_exit_code": 0,
+      "request_index": 117135861885201706,
+      "result_hash": "80519f69690d1da8f5bcb525bfa321da0d97de13f0311e53ce01359a4232881d",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v3"
+    },
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 117135861885201707,
+      "result_hash": "df4bd6885200ca76ecdabbf3e13e1b2b4d3a2faf0a463653c48912dd9ae9d8f2",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v3"
+    },
+    {
+      "candidate_state": "sampled_ideal_mhd_candidate",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 117135861885201708,
+      "result_hash": "641d0867a1cb1dc575b68d4163905a9acd9a18d8211c74f98706eab5a7aa11fa",
+      "runner_version": "v100_shared_radial_build_cross_code_qualification_v3"
+    }
+  ],
+  "runner_version_histogram": {
+    "v100_shared_radial_build_cross_code_qualification_v3": 5
+  },
+  "schema_version": "1.0.0",
+  "source_candidate_stream": "candidates.jsonl",
+  "source_candidate_stream_sha256": "b06d6d158fd8841cf59d86129646ac914c29d0bce73fa795294315a404bc5b19",
+  "source_freegs_acceptance_hash": "617489abb06726bd066b04571fc709ef9b85bb60be818571d45854ebd5cfe17a",
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}

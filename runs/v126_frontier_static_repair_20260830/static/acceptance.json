@@ -1,0 +1,162 @@
+{
+  "acceptance_hash": "89b806896ac2bef9064d1c03de52dbf5e2b85e70e8a2f088fa272140b7a11dea",
+  "candidate_count": 17,
+  "candidate_state_histogram": {
+    "static_robustness_fail": 8,
+    "static_robustness_proxy_pass": 9
+  },
+  "claim_boundary": "Static PF perturbation and explicit radial-build engineering proxies only; no complete engineering or validation credit.",
+  "failed_gate_histogram": {
+    "additive_peak_field_proxy": 8,
+    "membrane_support_stress_proxy": 2
+  },
+  "processed_count": 17,
+  "protocol_id": "fusionconceptai-v100-static-robustness-batch-20260829",
+  "provider_system_failure_count": 0,
+  "rows": [
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 48237419310472505,
+      "result_hash": "97f876babb3b39f75e2de5514de3565e98846dabbee6e8660e40a1bda64e4779"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 48237419310472508,
+      "result_hash": "b44a542cd9759f2ebd3516af81f353f8db38c8528292cfddf99f7689649e5e5b"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 49716341631074504,
+      "result_hash": "a30c66e174239936e9d937c8b1dcde6bfa450c33472c34da1e02b0a040223970"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 117135861885201705,
+      "result_hash": "8a486d62026ebb23f2741c321c632f12309032f86fe81aa0fbefdd972208a565"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 117135861885201707,
+      "result_hash": "83efed3e031726efd9bef7fe79f7c3f41b6a8ea0bc127afd56077a878c0f7d3d"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 117135861885201708,
+      "result_hash": "27728722b713a9e09d63c93cedc70ec0e556f0017879d626e6b6a8375acb11f4"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 121360550877718404,
+      "result_hash": "fa2a8d39d257ef78ee80eff49336717a3a36c912121eeb11e17a1943ad8024d4"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 216774618548247202,
+      "result_hash": "a7abd2e7b6528be42c4bef5cbfb307e1e2b7a973883f52103ac11aefceb1cce3"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 216774618548247207,
+      "result_hash": "e9a9c29fd2c8b34aaebcd251e6c1d16ca5e64af5cf5701f10d761e3e7e7cbdc1"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 237281346429006604,
+      "result_hash": "b667c8656d076a7dce80232481f30d848c7d19b8d90755f8d8471ecd0fad223b"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 237281346429006607,
+      "result_hash": "2a285045d091b65d437c48afb5e38714ec189adc7e01f5c7feccf1b8dbd166fb"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 381661974746383702,
+      "result_hash": "41a03fb436171a31fb3e179f9c7d3a4d2cb2d061e3eb95eb02a96c36975d8500"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 381661974746383704,
+      "result_hash": "7dab50b1eaa1e332c9e963c991720c35ade06148851550aeef1f7c5f057b9733"
+    },
+    {
+      "candidate_state": "static_robustness_proxy_pass",
+      "failed_gates": [],
+      "process_exit_code": 0,
+      "request_index": 381661974746383705,
+      "result_hash": "0c19b289644dcbbc45ff7b8d13e6316dd430a4130f8a0235593bb207cfe5e9ce"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy",
+        "membrane_support_stress_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 381661974746383707,
+      "result_hash": "f87089a311281a68a480e0d27de4a1c6ad0833def8128a217ec40295e95c1329"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy",
+        "membrane_support_stress_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 381661974746383708,
+      "result_hash": "5532c6dafd823214b31754f68896b6694757a6b5d6495206f86cd5137e746862"
+    },
+    {
+      "candidate_state": "static_robustness_fail",
+      "failed_gates": [
+        "additive_peak_field_proxy"
+      ],
+      "process_exit_code": 0,
+      "request_index": 439410233284536507,
+      "result_hash": "a82d962c61de94ace707572287832042828caf0143355d2c28ae82c6e054337b"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source_candidate_stream_sha256": "1ac1e3427af0135f080d40891601c0a39a4d15b5453780d64a57fcf6b344da8b",
+  "source_cross_code_acceptance_hash": "5f9511fbec97de5d657409d8beab3a64af402a548f411c9682ac9539e2c37ee7",
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}

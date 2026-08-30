@@ -1,0 +1,33 @@
+{
+  "acceptance_hash": "9ec8705bbc9b1d02ed7a389d30d00c4b35886c2b2ccdc8a27702dab057ea685f",
+  "claim_boundary": "v119 corrects cross-code state identity and withdraws current survivor credit from underbound v118 rows. It does not reinterpret those rows as physical failures, erase sealed history, or grant validation credit.",
+  "current_shared_state_survivor_count": 0,
+  "low_beta_desc_equilibrium_fail_count": 3,
+  "low_beta_desc_mercier_fail_count": 20,
+  "low_beta_freegs_pass_count": 23,
+  "low_beta_freegs_reject_count": 7,
+  "low_beta_source_count": 30,
+  "partial_subgraph_promotion_allowed": false,
+  "protocol_id": "fusionconceptai-v119-shared-state-binding-20260830",
+  "provider_system_failure_count": 0,
+  "reference_bypass_count": 0,
+  "reference_regression_pass_count": 2,
+  "repaired_v114_desc_equilibrium_fail_count": 9,
+  "repaired_v114_freegs_pass_count": 9,
+  "schema_version": "1.0.0",
+  "source_acceptance_hashes": {
+    "low_beta_desc": "1b0fdd307a5c2e7a46eef76e3141e5bcfa24f16931caa1249657a8ccb27a62f2",
+    "low_beta_freegs": "df09484c8981d3e54d3c82027fd316c13ddba260945e34143e7006d57563ab31",
+    "reference": "15a898d9510193b414c361f5e44ea26c35c9a3414efe9e28d4d2570e078f8ecf",
+    "repaired_desc": "e2b959c8a25c22c28964656e92b0c592ba3bccd542b00f99f710dcd71fd299c4",
+    "repaired_freegs": "ebed675ac3a277820b0cb93fb1e77990c8209d9f1dd4a6008b9df2a511fe9fb3"
+  },
+  "status": "complete",
+  "unsupported_candidate_count": 0,
+  "v118_history_modified": false,
+  "validation_pass_count": 0,
+  "validation_vvuq_status": "not_executed_upstream_no_survivor",
+  "whole_device_credible_count": 0,
+  "withdrawal_reason": "v118 FreeGS and DESC artifacts did not bind the same volume-average pressure, beta and integrated toroidal-flux state",
+  "withdrawn_v118_sampled_survivor_count": 101
+}

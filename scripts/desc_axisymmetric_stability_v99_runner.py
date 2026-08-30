@@ -30,6 +30,26 @@ def load_pinned(path: Path, expected: str) -> str:
 def patched_fourier(path: Path) -> str:
     source = load_pinned(path, FOURIER_SHA256)
     source = replace_once(source,
+        '        "V",\n'
+        '        "<beta>_vol",',
+        '        "V",\n'
+        '        "<|B|>_rms",\n'
+        '        "<beta>_vol",',
+        "volume-average magnetic-field request")
+    source = replace_once(source,
+        '        "plasma_volume_m3": scalar(data["V"], "V", np),\n'
+        '        "volume_average_beta": scalar(data["<beta>_vol"], "<beta>_vol", np),',
+        '        "plasma_volume_m3": scalar(data["V"], "V", np),\n'
+        '        "toroidal_field_rms_t": scalar(\n'
+        '            data["<|B|>_rms"], "<|B|>_rms", np),\n'
+        '        "pressure_volume_average_pa": (\n'
+        '            scalar(data["<beta>_vol"], "<beta>_vol", np)\n'
+        '            * scalar(data["<|B|>_rms"], "<|B|>_rms", np) ** 2\n'
+        '            / (2.0 * 1.25663706212e-6)\n'
+        '        ),\n'
+        '        "volume_average_beta": scalar(data["<beta>_vol"], "<beta>_vol", np),',
+        "volume-average pressure output")
+    source = replace_once(source,
         'MODEL_ID = "stellarator_symmetric_fourier_fixed_boundary_v1"',
         'MODEL_ID = "stellarator_symmetric_fourier_fixed_boundary_v1"\n'
         'AXISYMMETRIC_MODEL_ID = "axisymmetric_fourier_fixed_boundary_v99"',
@@ -77,7 +97,7 @@ def patched_fourier(path: Path) -> str:
     source = replace_once(source,
         '    if not (1.0e-4 <= toroidal_flux <= 100.0):\n'
         '        raise ValueError("toroidal_flux_wb is outside 1e-4..100 Wb")',
-        '    maximum_flux = 500.0 if model_id == AXISYMMETRIC_MODEL_ID else 100.0\n'
+        '    maximum_flux = 1000.0 if model_id == AXISYMMETRIC_MODEL_ID else 100.0\n'
         '    if not (1.0e-4 <= toroidal_flux <= maximum_flux):\n'
         '        raise ValueError(\n'
         '            f"toroidal_flux_wb is outside 1e-4..{maximum_flux:g} Wb"\n'
@@ -140,7 +160,7 @@ def patched_stability(path: Path) -> str:
     source = replace_once(source,
         '    if not (1.0e-4 <= toroidal_flux <= 100.0):\n'
         '        raise ValueError("toroidal flux is outside the audited range")',
-        '    maximum_flux = 500.0 if model_id == AXISYMMETRIC_MODEL_ID else 100.0\n'
+        '    maximum_flux = 1000.0 if model_id == AXISYMMETRIC_MODEL_ID else 100.0\n'
         '    if not (1.0e-4 <= toroidal_flux <= maximum_flux):\n'
         '        raise ValueError("toroidal flux is outside the audited range")',
         "flux bound")
@@ -155,6 +175,19 @@ def patched_stability(path: Path) -> str:
     source = replace_once(source,
         '        and spectral_m <= grid_m <= 24\n',
         '        and spectral_m <= grid_m <= maximum_grid_m\n', "grid bound")
+    source = replace_once(source,
+        '        mercier = mercier_scan(equilibrium, require(stability, "mercier"), np)\n'
+        '        ballooning = ballooning_scan(\n'
+        '            equilibrium, require(stability, "ballooning"), np\n'
+        '        )',
+        '        mercier = mercier_scan(equilibrium, require(stability, "mercier"), np)\n'
+        '        ballooning = (\n'
+        '            ballooning_scan(equilibrium, require(stability, "ballooning"), np)\n'
+        '            if mercier["sampled_favorable"]\n'
+        '            else {"status": "not_executed_upstream_mercier_fail",\n'
+        '                  "sampled_favorable": None}\n'
+        '        )',
+        "fail-fast stability ordering")
     return source
 
 

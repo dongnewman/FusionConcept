@@ -190,7 +190,8 @@ function _v118_run_channel(frontier, v115_streams, v116_rows, catalog, reference
     body, rows
 end
 
-function run_repaired_full_device_chain_v118(project_root::AbstractString, bundle_raw)
+function run_repaired_full_device_chain_v118(project_root::AbstractString, bundle_raw;
+        assembly_generator = generate_corrected_whole_device_assemblies_v115)
     root = abspath(project_root); bundle = Dict{String,Any}(_v93_plain(bundle_raw))
     reference = run_mission_aware_reference_acceptance_v103(root)
     reference["status"] == "pass" && reference["reference_regression_pass_count"] == 2 &&
@@ -201,7 +202,8 @@ function run_repaired_full_device_chain_v118(project_root::AbstractString, bundl
         bundle["static_results_directory"])
     source_hashes = _v118_source_hashes(bundle)
     v115, v115_streams = run_corrected_whole_device_rescreen_v115(root;
-        frontier_raw = frontier, source_acceptance_hashes_raw = source_hashes)
+        frontier_raw = frontier, source_acceptance_hashes_raw = source_hashes,
+        assembly_generator = assembly_generator)
     v116, v116_rows = _v118_run_conservation(frontier, v115_streams, reference)
     catalog = load_material_property_catalog_v109(root)
     v117, v117_rows = _v118_run_channel(frontier, v115_streams, v116_rows,

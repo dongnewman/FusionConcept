@@ -1,0 +1,194 @@
+{
+  "boundary_transform": {
+    "R_modes": [
+      {
+        "coefficient_m": 13.028256865238314,
+        "m": 0,
+        "n": 0
+      },
+      {
+        "coefficient_m": 2.3268255437396066,
+        "m": 1,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0713868552717091,
+        "m": 2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.04540345201616644,
+        "m": 3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.11927354733412385,
+        "m": 4,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.018786778825277756,
+        "m": 5,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.007395630078550944,
+        "m": 6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.014246048462981083,
+        "m": 7,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.005787089133267756,
+        "m": 8,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.014439549218300162,
+        "m": 9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.001174941898557071,
+        "m": 10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.004928225407144723,
+        "m": 11,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.005589909164990905,
+        "m": 12,
+        "n": 0
+      }
+    ],
+    "Z_modes": [
+      {
+        "coefficient_m": -4.245477698985217,
+        "m": -1,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.562482256752116,
+        "m": -2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.018153596088395424,
+        "m": -3,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.20920115268656286,
+        "m": -4,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.06747252945323201,
+        "m": -5,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0018987784735004908,
+        "m": -6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.0590588566940675,
+        "m": -7,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.026325484460084078,
+        "m": -8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.05870031260446197,
+        "m": -9,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.034871487955949985,
+        "m": -10,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.01966422185534864,
+        "m": -11,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.019579623143808223,
+        "m": -12,
+        "n": 0
+      }
+    ],
+    "adaptive_mode_fit_audit": [
+      {
+        "fit_max_relative_to_minor_radius": 0.07272574586051855,
+        "fit_rms_relative_to_minor_radius": 0.009023686930851933,
+        "maximum_mode": 12
+      }
+    ],
+    "fit_gate_passed": true,
+    "fit_max_relative_to_minor_radius": 0.07272574586051855,
+    "fit_rms_relative_to_minor_radius": 0.009023686930851933,
+    "fitted_minor_radius_m": 2.4154315696998774,
+    "fitted_vertical_minor_radius_m": 4.667568285779642,
+    "selected_maximum_mode": 12,
+    "shrink_from_separatrix": 0.9
+  },
+  "candidate_result_hash": "0202369345daf32b8a0c1278d82337fdbbe213ff12e54ea343c5995cb9d321d6",
+  "candidate_state": "transformer_profile_fail",
+  "capability_route": "closed_core_open_exhaust",
+  "claim_boundary": "Candidate-bound v100 FreeGS-to-DESC cross-code equilibrium and sampled Mercier/infinite-n ballooning qualification using one shared PF radial build. A pass does not establish finite-n, resistive, kinetic, nonlinear, transport, materials, experimental-validation, or whole-device feasibility.",
+  "cross_code_equilibrium": {
+    "reason": "desc_equilibrium_unavailable",
+    "status": "not_executed"
+  },
+  "desc_result": {
+    "message": "FreeGS-derived iota interpolant leaves the audited domain",
+    "reason": "freegs_to_desc_profile_transform_failed",
+    "status": "not_executed"
+  },
+  "failed_gates": [
+    "freegs_to_desc_iota_profile"
+  ],
+  "freegs_full_result_hash": "0da8642b96eaa6c663f30509b2c1d70625d72fffa46c36b5c4e833ffb0ed4fb6",
+  "freegs_verification_hash": "06e77ea12f33ccb96a6b6b586f6e7eece833dc74871b0c5af7f97ff88d8d4ca0",
+  "identity_fields_used_for_routing": false,
+  "numerical_vvuq": {
+    "reason": "cross_code_equilibrium_and_sampled_local_ideal_mhd_only",
+    "status": "fail"
+  },
+  "request_index": 60670071711092,
+  "result_hash": "1ea09b71f6347a485592e43ef747728bed8f19aabb50ffe6f56df68e76b30eff",
+  "routing_axes": [
+    "field_semantics",
+    "boundary",
+    "operator",
+    "dimension"
+  ],
+  "runner_version": "v100_shared_radial_build_cross_code_qualification_v3",
+  "schema_version": "1.0.0",
+  "stage_order": [
+    "freegs_verified_equilibrium",
+    "freegs_to_desc_transform",
+    "desc_fixed_boundary_equilibrium",
+    "sampled_ideal_mhd",
+    "numerical_vvuq",
+    "validation_vvuq"
+  ],
+  "unsupported_candidate_classification_used": false,
+  "validation_vvuq": {
+    "reason": "upstream_qualification_failed",
+    "status": "not_executed"
+  },
+  "whole_device_credible": false
+}

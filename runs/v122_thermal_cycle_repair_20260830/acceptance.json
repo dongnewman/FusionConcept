@@ -1,0 +1,78 @@
+{
+    "source_reference_acceptance_hash": "9249d551367d055f99dcb75ed9bb710ea8b3806049c7b8a724662c65d7d2a6ee",
+    "conservation_provider_survivor_count": 0,
+    "stage_order": [
+        "ITER_C2W_reference_regression",
+        "whole_device_assembly",
+        "available_provider_DAG",
+        "dynamic_fault",
+        "materials",
+        "multiregion_transport",
+        "SOL_exhaust",
+        "channel_thermal_hydraulics",
+        "sampled_numerical_VVUQ",
+        "validation_VVUQ"
+    ],
+    "sampled_whole_graph_numerical_vvuq_pass_count": 0,
+    "acceptance_hash": "92259d26425c01d7a7617555d1e2bb159ae1a95646acf71545b6c694c7179a13",
+    "protocol_id": "fusionconceptai-v122-thermal-cycle-repair-20260830",
+    "claim_boundary": "v122 extends the explicitly declared helium coolant temperature-rise proposal grid to 130/140/150 K after a 90/110/120 K assembly front missed the 100 MW net-electric mission gate. Pumping, outlet temperature, dynamic faults, source-pinned materials, multi-region conservation and three-level channel thermal hydraulics are recomputed. A numerical survivor remains incomplete stability/transport and validation pending.",
+    "status": "complete",
+    "reference_regression_pass_count": 2,
+    "validation_vvuq_status": "external_evidence_required",
+    "thermal_cycle_proposal_delta_t_k": [
+        130,
+        140,
+        150
+    ],
+    "stream_inventory": {
+        "v122_materials": {
+            "sha256": "59af3bbea7965bc716ef8d9601a9a500cf7a354269f5cc5cbd81104dae9aa2cb",
+            "row_count": 36
+        },
+        "v122_assemblies": {
+            "sha256": "0338539e903471c56ed7e5c596f265b22796fab238cb9ed191db30b92f0903bd",
+            "row_count": 24
+        },
+        "v122_screens": {
+            "sha256": "59a8f2caa51ebe9d6e37bb61c0283769a03870dcbc2670ef4366e55083b17b70",
+            "row_count": 24
+        },
+        "v122_conservation": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "row_count": 0
+        },
+        "v122_dynamics": {
+            "sha256": "dbc06d394ed00c117b2dcd051ca3835c281fe30e1f68d9a069992a5adc15f835",
+            "row_count": 48
+        },
+        "v122_dags": {
+            "sha256": "393f9abf9c1145fccbf6a9679752fe78ea43c3f1c41fe1b908d6d455ab7b84ab",
+            "row_count": 12
+        },
+        "v122_channels": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "row_count": 0
+        }
+    },
+    "partial_subgraph_promotion_allowed": false,
+    "provider_system_failure_count": 0,
+    "source_candidate_count": 1,
+    "unsupported_candidate_count": 0,
+    "v115_acceptance_hash": "7b39d6fe55fea9c66cae68cda609f16badb125af706227ef2fb37a4212a91a4a",
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "material_survivor_count": 0,
+    "basis_direct_metric_credit": false,
+    "reference_bypass_count": 0,
+    "source_provider_acceptance_hashes": {
+        "generation": "9070e2252af51371393222f253099c6f33900a6247e1c7aaeb4af2defe5095a2",
+        "static": "d9ecddfdb841d0fb39f78e3e8d90a933f5670ad045f92f8f332d5c714cddec35",
+        "desc": "d3f4249acee685e9d037579dd7d61692686e175ee55a6431b7e05e8ba448ebcb",
+        "freegs": "617489abb06726bd066b04571fc709ef9b85bb60be818571d45854ebd5cfe17a"
+    },
+    "identity_fields_used_for_routing": false,
+    "schema_version": "1.0.0",
+    "v116_acceptance_hash": "1f78d3ddc6bc61387fb2631ad7b06a254235f383b7889c32613877bee22e5630",
+    "v117_acceptance_hash": "1474eac67aa1f96deb94f18e88deb15d575e6462960fe5dd41b4d977b889c4a5"
+}

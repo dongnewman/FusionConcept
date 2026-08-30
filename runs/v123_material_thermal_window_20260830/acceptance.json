@@ -1,0 +1,78 @@
+{
+    "source_reference_acceptance_hash": "9249d551367d055f99dcb75ed9bb710ea8b3806049c7b8a724662c65d7d2a6ee",
+    "conservation_provider_survivor_count": 1,
+    "stage_order": [
+        "ITER_C2W_reference_regression",
+        "whole_device_assembly",
+        "available_provider_DAG",
+        "dynamic_fault",
+        "materials",
+        "multiregion_transport",
+        "SOL_exhaust",
+        "channel_thermal_hydraulics",
+        "sampled_numerical_VVUQ",
+        "validation_VVUQ"
+    ],
+    "sampled_whole_graph_numerical_vvuq_pass_count": 0,
+    "acceptance_hash": "8c49a82f6066d3b7552e733e9a33302c81d31a0fdc1a685bebc2ef3c73033b99",
+    "protocol_id": "fusionconceptai-v123-material-thermal-window-repair-20260830",
+    "claim_boundary": "v123 searches the narrow 122/124/125 K coolant temperature-rise interval implied jointly by the 100 MW net-electric lower bound and the source-pinned 823.15 K EUROFER loss-of-flow upper bound. All assembly, fault, material, conservation and channel providers rerun. A survivor remains complete-physics and external-validation pending.",
+    "status": "complete",
+    "reference_regression_pass_count": 2,
+    "validation_vvuq_status": "external_evidence_required",
+    "thermal_cycle_proposal_delta_t_k": [
+        122,
+        124,
+        125
+    ],
+    "stream_inventory": {
+        "v123_dynamics": {
+            "sha256": "e73001b6a6c91de30d7c3264aac5c9e27dbc92f7274c1100be3285997a61cbd0",
+            "row_count": 32
+        },
+        "v123_screens": {
+            "sha256": "7b364c2402a0ade1b2cb794d8f73a1db1d72ce25861dc10877981606cc425b39",
+            "row_count": 24
+        },
+        "v123_conservation": {
+            "sha256": "c2985a4caa7bf17acf0d4218b1557e938e96c852e29f7bb0a120f78087112d0a",
+            "row_count": 1
+        },
+        "v123_materials": {
+            "sha256": "fbcdd321a1106916170328179d2071a86aafeaed9619b5fc0527ddeaa6e5533a",
+            "row_count": 24
+        },
+        "v123_assemblies": {
+            "sha256": "780408227cf6fe37afa208cfc903bd95956266867d2996512c7dc20e9a3c86af",
+            "row_count": 24
+        },
+        "v123_dags": {
+            "sha256": "cfbf60b9158b390f8b56b3f025833134998b3a74bdf609e95066bf23d3fbe83b",
+            "row_count": 8
+        },
+        "v123_channels": {
+            "sha256": "6f59c5fdd5af50d44569afd28cbbaadb25a81284682ca7fb2eebb775e3653a2b",
+            "row_count": 120
+        }
+    },
+    "partial_subgraph_promotion_allowed": false,
+    "provider_system_failure_count": 0,
+    "source_candidate_count": 1,
+    "unsupported_candidate_count": 0,
+    "v115_acceptance_hash": "7a208aabf6734e4c924e0ba470cb4d05528d48ff7c6e9fcda30a8d4a4736fa91",
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "material_survivor_count": 24,
+    "basis_direct_metric_credit": false,
+    "reference_bypass_count": 0,
+    "source_provider_acceptance_hashes": {
+        "generation": "9070e2252af51371393222f253099c6f33900a6247e1c7aaeb4af2defe5095a2",
+        "static": "d9ecddfdb841d0fb39f78e3e8d90a933f5670ad045f92f8f332d5c714cddec35",
+        "desc": "d3f4249acee685e9d037579dd7d61692686e175ee55a6431b7e05e8ba448ebcb",
+        "freegs": "617489abb06726bd066b04571fc709ef9b85bb60be818571d45854ebd5cfe17a"
+    },
+    "identity_fields_used_for_routing": false,
+    "schema_version": "1.0.0",
+    "v116_acceptance_hash": "7ac06006724fffac00fbf1a5991e54dfd74c5a37ccb9d7b47296587fd359a632",
+    "v117_acceptance_hash": "7cf3fea2bcb9200f75257c5db840f3d09fbc19bd2f86f77958af580720cf8154"
+}

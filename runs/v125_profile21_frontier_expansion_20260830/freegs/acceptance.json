@@ -1,0 +1,225 @@
+{
+  "acceptance_hash": "f38e613a60640037981e5b43324b751331f104bf4cb252e55671ba9b1d0dc1e8",
+  "candidate_count": 23,
+  "claim_boundary": "Candidate-bound FreeGS equilibrium and numerical VVUQ only. Subset passes cannot be promoted to whole-device, stability, engineering, or validation pass.",
+  "failed_gate_histogram": {
+    "coarse_minor_radius_binding": 2,
+    "coarse_volume_average_pressure_binding": 1,
+    "fine_grid_solver_convergence": 1,
+    "volume_average_pressure_binding": 4
+  },
+  "identity_fields_used_for_routing": false,
+  "processed_count": 23,
+  "protocol_id": "fusionconceptai-v100-shared-radial-build-freegs-batch-v1-20260829",
+  "rows": [
+    {
+      "failed_gates": [],
+      "parent_request_index": 825199000693,
+      "process_exit_code": 0,
+      "request_index": 60670071711093,
+      "result_hash": "686d71ec8c5fa679dcaffffd15abb8d5c4d522278cba9fdfdd7e6209c94d2e8c",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 825199000483,
+      "process_exit_code": 0,
+      "request_index": 1549522388517523,
+      "result_hash": "2a7959374eb54479e737f9f33ea873c463d4a51c23578f06a6b3afa898bef3e9",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "volume_average_pressure_binding"
+      ],
+      "parent_request_index": 641598000177,
+      "process_exit_code": 2,
+      "request_index": 4778901832075063,
+      "result_hash": "bfb9e1e3f11242df35edfc92b18da70534d577700638fb8246dd0cfd08dc0c1f",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 895919000911,
+      "process_exit_code": 0,
+      "request_index": 8331883128291423,
+      "result_hash": "a9ff4c0f05ee65b31b08b15bbe4ed42fac55e6b0fe3f331ed6a8e7450a2bc470",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 124799000043,
+      "process_exit_code": 0,
+      "request_index": 8954626723738143,
+      "result_hash": "bef0f9a43ac972d9b9e05ba1387ce30aface11ead3455ba4d9408b301a546d33",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "coarse_minor_radius_binding",
+        "coarse_volume_average_pressure_binding"
+      ],
+      "parent_request_index": 68443000967,
+      "process_exit_code": 2,
+      "request_index": 17008720236827143,
+      "result_hash": "434311b44172953a08a97fa55f01eff4cca4e5167eb4c359ef9195e365ffe7b1",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [
+        "volume_average_pressure_binding"
+      ],
+      "parent_request_index": 641819000967,
+      "process_exit_code": 2,
+      "request_index": 17011729460785573,
+      "result_hash": "86ac036fe267ee7b494da9596243d94a4c7160b5fa8ec1fc9a75767061aee612",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 855033000847,
+      "process_exit_code": 0,
+      "request_index": 17293187451201323,
+      "result_hash": "225bde5668aa04549c1c92ac60dd09bc894d6870fa97f4c76b13bcee8b7b35c4",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 1023979000957,
+      "process_exit_code": 0,
+      "request_index": 20306181760423093,
+      "result_hash": "1931b00c61f52eacb2e606f1a2f3bee8c489fe0bad30c73bfeb0bacdf7b53131",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "fine_grid_solver_convergence"
+      ],
+      "parent_request_index": 124799000227,
+      "process_exit_code": 2,
+      "request_index": 20802837628613333,
+      "result_hash": "f1dea10c2799965251b2b007c1c350202375807155779367d88b2b6d8c039f52",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 825199000573,
+      "process_exit_code": 0,
+      "request_index": 21078642156257013,
+      "result_hash": "71c7e82a38ce39a8144fe6e527e997a66e6f3742de13d8e9d9ac6f176481d35e",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 674699000371,
+      "process_exit_code": 0,
+      "request_index": 21713047072829083,
+      "result_hash": "47bbcb1b320ec5928c50765ff485fc10f75dabcd6c077eaf2f32f034e0e7d152",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 606343000351,
+      "process_exit_code": 0,
+      "request_index": 22268881365799013,
+      "result_hash": "d46d2ea6f91422a42da789db92e4fb43692d868f6b918ab8d739b04f9cb32bf0",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 350999000683,
+      "process_exit_code": 0,
+      "request_index": 25914036500654723,
+      "result_hash": "676533bc2be92be6a7c49143d492ff2b42327d6c9f2ca9f986b44a654c728ef8",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 880619000173,
+      "process_exit_code": 0,
+      "request_index": 27231410318941583,
+      "result_hash": "6b59137aa1ff22fe4de0f1cb9d0a707b2e54fe224cfc6cc501b5d5ed9318bf9e",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 857022000726,
+      "process_exit_code": 0,
+      "request_index": 28785563774890613,
+      "result_hash": "ea7cee9adfed8068799b461602b7047bace2910df2690f70d3871342e92cca10",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "volume_average_pressure_binding"
+      ],
+      "parent_request_index": 895919000603,
+      "process_exit_code": 2,
+      "request_index": 29262508738487893,
+      "result_hash": "ac728beebde1c96ce40a4f2bb9adfa66b3e243aa7aa96e0189e5799515f14cf5",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 593759000263,
+      "process_exit_code": 0,
+      "request_index": 30045873466429093,
+      "result_hash": "f3048b91e9cd7385b7a3a0c60396e0040b15068cc3cb471b2924ce39eca61f2c",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 448494000573,
+      "process_exit_code": 0,
+      "request_index": 32296990446133623,
+      "result_hash": "1ac2b21559975be460bd55419d03f219801540d40b556978094e7b3d27bf9ebb",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 857022000285,
+      "process_exit_code": 0,
+      "request_index": 33803863173819063,
+      "result_hash": "8d102a6214568ed4f0d16be1678a4a4dfef2a0d32efbeaceee1eabdd58f615ce",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "coarse_minor_radius_binding"
+      ],
+      "parent_request_index": 674699000118,
+      "process_exit_code": 2,
+      "request_index": 33868464934795063,
+      "result_hash": "9cc71ad3e95baafc7b9fd7744f8efd275ed156e3d0c163b0ed8f6cc6a0442acb",
+      "status": "fail"
+    },
+    {
+      "failed_gates": [],
+      "parent_request_index": 124799000967,
+      "process_exit_code": 0,
+      "request_index": 33878552755423433,
+      "result_hash": "18d41f072822c7acf05b7449d715c87c217e14a6d0db8ed8e12787c954879d01",
+      "status": "pass"
+    },
+    {
+      "failed_gates": [
+        "volume_average_pressure_binding"
+      ],
+      "parent_request_index": 902143000022,
+      "process_exit_code": 2,
+      "request_index": 41710867787924033,
+      "result_hash": "4e9da20431b3dff6aeca6931b524f6c02151136d09c08b3ed1ae1e40fa7af7db",
+      "status": "fail"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source_candidate_stream": "candidates.jsonl",
+  "source_candidate_stream_sha256": "b67d5308dd62ff273eb061d7932e58cca145d4fa7830c21b1b2f38cd52231ad3",
+  "status": "complete",
+  "status_histogram": {
+    "fail": 7,
+    "pass": 16
+  },
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0
+}

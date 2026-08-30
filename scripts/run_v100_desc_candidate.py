@@ -7,7 +7,7 @@ import run_v99_desc_candidate as base
 from run_v100_freegs_candidate import transformed_input
 
 
-base.RUNNER_VERSION = "v100_shared_radial_build_cross_code_qualification_v1"
+base.RUNNER_VERSION = "v100_shared_radial_build_cross_code_qualification_v4"
 base.CLAIM_BOUNDARY = (
     "Candidate-bound v100 FreeGS-to-DESC cross-code equilibrium and sampled Mercier/"
     "infinite-n ballooning qualification using one shared PF radial build. A pass does "

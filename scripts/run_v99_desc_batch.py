@@ -26,7 +26,15 @@ def run_one(job: tuple[dict, str, str, str, str, str, bool]) -> dict:
         artifact = json.loads(output_path.read_text(encoding="utf-8"))
         version = artifact.get("runner_version")
         reusable_version = (
+            (version == "v100_shared_radial_build_cross_code_qualification_v4" and
+             artifact.get("candidate_state") != "provider_system_fail") or
+            (version == "v100_shared_radial_build_cross_code_qualification_v3" and
+             artifact.get("candidate_state") != "provider_system_fail") or
             (version == "v100_shared_radial_build_cross_code_qualification_v1" and
+             artifact.get("candidate_state") != "provider_system_fail") or
+            (version == "v99_axisymmetric_cross_code_qualification_v5" and
+             artifact.get("candidate_state") != "provider_system_fail") or
+            (version == "v99_axisymmetric_cross_code_qualification_v4" and
              artifact.get("candidate_state") != "provider_system_fail") or
             (version == "v99_axisymmetric_cross_code_qualification_v2" and
              artifact.get("candidate_state") != "provider_system_fail") or

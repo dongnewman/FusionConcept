@@ -15,11 +15,11 @@ from pathlib import Path
 import numpy as np
 
 from desc_stellarator_stability_runner import CLAIM_BOUNDARY as DESC_CLAIM_BOUNDARY
-from freegs_runner import solve as solve_freegs
-from run_v98_freegs_candidate import transformed_input
+from freegs_shared_state_runner_v119 import solve as solve_freegs
+from run_v98_freegs_candidate import declared_profile_parameters, transformed_input
 
 
-RUNNER_VERSION = "v99_axisymmetric_cross_code_qualification_v2"
+RUNNER_VERSION = "v99_axisymmetric_cross_code_qualification_v5"
 CLAIM_BOUNDARY = (
     "Candidate-bound FreeGS-to-DESC cross-code equilibrium and sampled Mercier/"
     "infinite-n ballooning qualification only. A pass does not establish finite-n, "
@@ -123,15 +123,49 @@ def fit_iota_profile(equilibrium: dict) -> list[float]:
     return coefficients
 
 
+def pressure_profile_coefficients(axis_pressure_pa: float, alpha_m: int,
+                                  alpha_n: int) -> tuple[list[float], float]:
+    """Map FreeGS p'(psi) exactly into DESC's rho power basis (psi=rho^2)."""
+    terms = [((-1) ** k) * math.comb(alpha_n, k) for k in range(alpha_n + 1)]
+    normalization = sum(coefficient / (alpha_m * k + 1)
+                        for k, coefficient in enumerate(terms))
+    if normalization <= 0.0:
+        raise ValueError("invalid pressure profile normalization")
+    average_factor = (
+        sum(coefficient / (alpha_m * k + 2)
+            for k, coefficient in enumerate(terms)) / normalization
+    )
+    maximum_power = 2 * (alpha_m * alpha_n + 1)
+    coefficients = [0.0] * (maximum_power + 1)
+    coefficients[0] = axis_pressure_pa
+    for k, coefficient in enumerate(terms):
+        rho_power = 2 * (alpha_m * k + 1)
+        coefficients[rho_power] += (
+            -axis_pressure_pa * coefficient /
+            ((alpha_m * k + 1) * normalization)
+        )
+    return coefficients, average_factor
+
+
 def desc_payload(candidate: dict, freegs: dict, boundary: dict) -> dict:
     point = require(candidate, "operating_point")
-    pressure = float(require(require(candidate, "physics_solve"), "metrics")
-                     ["pressure_pa"])
     equilibrium = require(freegs, "equilibrium")
+    # Generate DESC pressure from the same candidate-declared p'(psi) shape used by
+    # FreeGS, then normalize its axis value to the shared volume-average state.
+    alpha_m, alpha_n = declared_profile_parameters(candidate)
+    unit_coefficients, average_factor = pressure_profile_coefficients(
+        1.0, alpha_m, alpha_n)
+    pressure = float(require(equilibrium, "pressure_volume_average_pa")) / average_factor
+    pressure_coefficients = [pressure * coefficient for coefficient in unit_coefficients]
     radial_minor = float(boundary["fitted_minor_radius_m"])
     vertical_minor = float(boundary["fitted_vertical_minor_radius_m"])
-    magnetic_field = float(require(point, "magnetic_field_t"))
-    toroidal_flux = magnetic_field * math.pi * radial_minor * vertical_minor
+    # Bind DESC to the FreeGS-integrated toroidal flux instead of reconstructing it
+    # from the candidate's nominal on-axis field.  The old scalar reconstruction
+    # could represent a different magnetic-energy state while still passing the
+    # boundary/iota gates.
+    toroidal_flux = float(require(equilibrium, "toroidal_flux_wb")) * float(
+        boundary["shrink_from_separatrix"]
+    ) ** 2
     maximum_mode = int(boundary["selected_maximum_mode"])
     solver_input = {
         "runner_version": "desc_explicit_fourier_fixed_boundary_runner_v1",
@@ -144,10 +178,13 @@ def desc_payload(candidate: dict, freegs: dict, boundary: dict) -> dict:
             "Z_modes": boundary["Z_modes"],
         },
         "profiles": {
-            "pressure_power_series_pa": [pressure, 0.0, -2.0 * pressure,
-                                           0.0, pressure],
+            "pressure_power_series_pa": pressure_coefficients,
             "iota_power_series": fit_iota_profile(equilibrium),
             "toroidal_flux_wb": toroidal_flux,
+        },
+        "shared_profile_declaration": {
+            "alpha_m": alpha_m, "alpha_n": alpha_n,
+            "desc_volume_average_factor": average_factor,
         },
         "resolution": {"L": 8, "M": maximum_mode, "N": 1,
                        "L_grid": 16, "M_grid": max(18, int(math.ceil(1.5 * maximum_mode))),
@@ -195,7 +232,7 @@ def classify_desc_result(result: dict) -> tuple[str, list[str]]:
         failed = []
         if not local["mercier_sampled_favorable"]:
             failed.append("sampled_mercier")
-        if not local["infinite_n_ballooning_sampled_favorable"]:
+        if local["infinite_n_ballooning_sampled_favorable"] is False:
             failed.append("sampled_infinite_n_ballooning")
         return "stability_screen_fail", failed
     message = str(result.get("message", "unknown DESC error"))
@@ -228,16 +265,21 @@ def cross_code_equilibrium_audit(freegs: dict, desc: dict,
             float(other["plasma_volume_m3"]), expected_inner_volume),
         "iota_095_relative": relative(
             float(other["iota_095"]), 1.0 / float(free["q_95"])),
-        "axis_pressure_relative": relative(
-            float(other["pressure_axis_pa"]),
-            float(require(require(freegs, "input_echo"), "axis_pressure_pa"))
-            if "input_echo" in freegs else float(other["pressure_axis_pa"])),
+        "volume_average_pressure_relative": relative(
+            float(other["pressure_volume_average_pa"]),
+            float(free["pressure_volume_average_pa"])),
+        "volume_average_beta_relative": relative(
+            float(other["volume_average_beta"]),
+            float(free["toroidal_beta"])),
     }
     gates = {
         "major_radius_binding": errors["major_radius_relative"] <= 0.05,
         "inner_volume_binding": errors["inner_volume_relative"] <= 0.20,
         "edge_iota_binding": errors["iota_095_relative"] <= 0.05,
-        "axis_pressure_binding": errors["axis_pressure_relative"] <= 1.0e-8,
+        "volume_average_pressure_binding":
+            errors["volume_average_pressure_relative"] <= 0.20,
+        "volume_average_beta_binding":
+            errors["volume_average_beta_relative"] <= 0.20,
         "desc_force_residual":
             float(other["force_normalized_to_magnetic_gradient"]) <= 0.02,
     }
@@ -249,6 +291,11 @@ def cross_code_equilibrium_audit(freegs: dict, desc: dict,
             "plasma_volume_m3": free["plasma_volume_m3"],
             "q_95": free["q_95"],
             "toroidal_beta": free["toroidal_beta"],
+            "pressure_volume_average_pa": free["pressure_volume_average_pa"],
+            "axis_pressure_pa": require(require(freegs, "input_echo"),
+                                         "axis_pressure_pa"),
+            "toroidal_field_rms_t": free["toroidal_field_rms_t"],
+            "toroidal_flux_wb": free["toroidal_flux_wb"],
         },
         "desc": {
             "major_radius_m": other["major_radius_m"],
@@ -256,6 +303,8 @@ def cross_code_equilibrium_audit(freegs: dict, desc: dict,
             "plasma_volume_m3": other["plasma_volume_m3"],
             "iota_095": other["iota_095"],
             "volume_average_beta": other["volume_average_beta"],
+            "pressure_volume_average_pa": other["pressure_volume_average_pa"],
+            "axis_pressure_pa": other["pressure_axis_pa"],
             "force_normalized_to_magnetic_gradient":
                 other["force_normalized_to_magnetic_gradient"],
         },
@@ -288,6 +337,7 @@ def main() -> int:
         candidate, 129,
         float(verification["selected_coil_vertical_multiplier"]),
         float(verification["selected_boundary_vertical_multiplier"]),
+        float(verification.get("selected_axis_pressure_multiplier", 1.0)),
     )
     freegs = solve_freegs(freegs_input)
     freegs["input_echo"] = {

@@ -63,12 +63,13 @@ function _v115_rehash_assembly!(assembly)
     assembly
 end
 
-function generate_corrected_whole_device_assemblies_v115(candidate_raw)
+function generate_corrected_whole_device_assemblies_v115(candidate_raw;
+        coolant_delta_t_values = V115_COOLANT_DELTA_T_K)
     candidate = Dict{String,Any}(_v93_plain(candidate_raw))
     base = generate_whole_device_assemblies_v105(candidate; variants = 8)
     assemblies = Dict{String,Any}[]
     sequence = 0
-    for proposal in base, delta_t in V115_COOLANT_DELTA_T_K
+    for proposal in base, delta_t in coolant_delta_t_values
         sequence += 1
         assembly = deepcopy(proposal)
         design = Dict{String,Any}(assembly["physical_design"])
@@ -274,7 +275,8 @@ function execute_corrected_provider_dag_v115(assembly, screen, candidate, artifa
 end
 
 function run_corrected_whole_device_rescreen_v115(project_root::AbstractString;
-        frontier_raw = nothing, source_acceptance_hashes_raw = nothing)
+        frontier_raw = nothing, source_acceptance_hashes_raw = nothing,
+        assembly_generator = generate_corrected_whole_device_assemblies_v115)
     root = abspath(project_root)
     reference = run_mission_aware_reference_acceptance_v103(root)
     reference["status"] == "pass" &&
@@ -304,7 +306,7 @@ function run_corrected_whole_device_rescreen_v115(project_root::AbstractString;
     materials = Dict{String,Any}[]
     for item in frontier
         candidate = item["candidate"]; artifacts = item["artifacts"]
-        for assembly in generate_corrected_whole_device_assemblies_v115(candidate)
+        for assembly in assembly_generator(candidate)
             push!(assemblies, assembly)
             screen = screen_corrected_whole_device_assembly_v115(
                 assembly, candidate, artifacts["static"])
