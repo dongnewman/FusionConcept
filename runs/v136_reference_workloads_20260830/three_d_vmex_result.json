@@ -1,0 +1,111 @@
+{
+  "after": {
+    "aspect_ratio": 5.388888888888884,
+    "iota_095": 0.5581261312217195,
+    "iota_axis": 0.5076923076923077,
+    "iota_mid": 0.5216628959276017,
+    "major_radius_m": 2.5504877287140553,
+    "minor_radius_m": 0.47328638264796946,
+    "plasma_volume_m3": 11.277192600683817,
+    "pressure_095_pa": 56.76481827445655,
+    "pressure_axis_pa": 5756.650178328805,
+    "pressure_mid_pa": 3241.8955927309776,
+    "volume_average_beta": 0.0017839016056404081
+  },
+  "claim_boundary": "Candidate-bound VMEX fixed-boundary ideal-MHD equilibrium and explicitly listed observables only; no experimental validation, all-mode stability, transport, engineering, net-power or build-ready claim.",
+  "environment": {
+    "device": "cpu:0",
+    "jax": "0.11.1",
+    "jaxlib": "0.11.1",
+    "numpy": "2.5.2",
+    "python": "3.12.13",
+    "vmex": "0.7.0"
+  },
+  "input_hash": "2bf724a08660266a376401b1d98f0d2416f48c4b3741eab718d3fe8950aa2747",
+  "mesh_manifest": {
+    "maximum_iterations_per_grid": 10000,
+    "mesh_generation": "independently_generated_from_shared_physics_manifest",
+    "mpol": 2,
+    "ntor": 1,
+    "radial_grids": [
+      17,
+      33
+    ],
+    "requested_ftol": 1e-08
+  },
+  "mesh_manifest_hash": "a639b003492211d9d1e5f247526e609350986470343a88b937bae6ff89f0e3db",
+  "model_id": "vmex_vmec_fixed_boundary_ideal_mhd_v1",
+  "residuals": {
+    "fsql": 6.368377607856624e-11,
+    "fsqr": 7.083381726301869e-09,
+    "fsqz": 9.2434982605423e-09
+  },
+  "result_hash": "e689ce2d98385c08ef4dbd5764acf8a56f2be42b7c69ee051d90cac3c7736bc5",
+  "runner_version": "vmex_candidate_fixed_boundary_runner_v1",
+  "shared_physics_manifest": {
+    "boundary": {
+      "R_modes": [
+        {
+          "coefficient_m": 2.550487728714057,
+          "m": 0,
+          "n": 0
+        },
+        {
+          "coefficient_m": 0.5,
+          "m": 1,
+          "n": 0
+        },
+        {
+          "coefficient_m": 0.24428571428571427,
+          "m": 0,
+          "n": 1
+        }
+      ],
+      "Z_modes": [
+        {
+          "coefficient_m": -0.448,
+          "m": -1,
+          "n": 0
+        },
+        {
+          "coefficient_m": -0.1588363636363636,
+          "m": 0,
+          "n": -1
+        }
+      ],
+      "field_periods": 3,
+      "stellarator_symmetric": true
+    },
+    "coordinate_semantics": {
+      "desc_radial_coordinate": "rho=sqrt(normalized_toroidal_flux)",
+      "fourier_phase": "m*theta-n*NFP*zeta",
+      "vmec_radial_coordinate": "s=normalized_toroidal_flux"
+    },
+    "model_id": "stellarator_symmetric_fixed_boundary_ideal_mhd_v1",
+    "profiles": {
+      "iota_power_series": [
+        0.5076923076923077,
+        0.0,
+        0.055882352941176494
+      ],
+      "pressure_power_series_pa": [
+        5760.869565217391,
+        0.0,
+        -11521.739130434782,
+        0.0,
+        5760.869565217391
+      ],
+      "toroidal_flux_wb": 1.133354351829783
+    },
+    "schema_version": "1.0.0"
+  },
+  "shared_physics_manifest_hash": "952e2bb21ed29f89b945bd62c91e7585993282fae082726684e514ad57dbd217",
+  "solver": {
+    "converged": true,
+    "equilibrium_accepted": true,
+    "iterations": 108
+  },
+  "state_projection_hash": "1ee8d29b6aec97eb18da99bc040f384ec48609fc2437fa3907f22c560050f740",
+  "status": "pass",
+  "wout_path": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\runs\\v136_reference_workloads_20260830\\three_d_vmex_wout.nc"
+}

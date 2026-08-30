@@ -304,6 +304,7 @@ include("mission_aware_screening_v103.jl")
 include("whole_device_preflight_v104.jl")
 include("whole_device_assembly_generator_v105.jl")
 include("whole_device_assembly_screen_v106.jl")
+include("region_realization_runtime_v136.jl")
 include("whole_device_provider_dag_v107.jl")
 include("dynamic_fault_provider_v108.jl")
 include("material_engineering_provider_v109.jl")
@@ -2002,6 +2003,16 @@ export Stage3ExecutionBudgetV1,
        compile_full_device_qualification_dag_v99,
        evaluate_full_device_qualification_v99,
        run_v99_reference_controls,
+       V136_PROTOCOL_ID,
+       V136_CAPABILITY_CLASSES,
+       REGION_REALIZATION_RUNTIME_V136_CLAIM_BOUNDARY,
+       default_region_realization_registry_v136,
+       compile_region_realization_plan_v136,
+       audit_proxy_gate_separation_v136,
+       materialize_periodic_boundary_coils_v136,
+       audit_field_period_sensitivity_v136,
+       capability_quota_frontier_v136,
+       couple_region_interfaces_v136,
        V100_PROTOCOL_ID,
        V100_ENGINEERING_LIMITS,
        DESIGN_REFINEMENT_V100_CLAIM_BOUNDARY,

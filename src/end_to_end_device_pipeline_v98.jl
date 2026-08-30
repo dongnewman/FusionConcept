@@ -215,7 +215,7 @@ function _v98_confinement_coefficients(point, capability, geometry)
     route = String(capability["route"]); density = Float64(point["density_m3"])
     field = Float64(point["magnetic_field_t"]); major = Float64(point["major_radius_m"])
     minor = Float64(point["minor_radius_m"]); elongation = Float64(point["elongation"])
-    quality = Float64(capability["field_quality_parameter"])
+    # v136: field-quality heuristics are scheduler features only.
     q95 = 2.5 + 0.35Int(point["field_periods"]) +
         0.30Float64(capability["field_operator_fraction"])
     shape = (1 + elongation^2) / 2
@@ -230,13 +230,13 @@ function _v98_confinement_coefficients(point, capability, geometry)
     if effective_closed_route == "axisymmetric_closed"
         coefficient = 0.0562 * max(current_ma, 0.05)^0.93 * field^0.15 *
             n19^0.41 * major^1.97 * epsilon^0.58 * max(elongation, 0.2)^0.78 *
-            2.5^0.19 * quality * exhaust_penalty
+            2.5^0.19 * exhaust_penalty
         return Dict("model" => "IPB98y2_capability_scoped_v98", "coefficient" =>
             coefficient, "power_exponent" => 0.69, "q95" => q95,
             "plasma_current_ma" => current_ma)
     elseif effective_closed_route == "three_dimensional_closed"
         iota = 1 / q95
-        coefficient = 0.134 * quality * minor^2.28 * major^0.64 * n19^0.54 *
+        coefficient = 0.134 * minor^2.28 * major^0.64 * n19^0.54 *
             field^0.84 * iota^0.41 * exhaust_penalty
         return Dict("model" => "ISS04_capability_scoped_v98", "coefficient" =>
             coefficient, "power_exponent" => 0.61, "q95" => q95,
@@ -246,10 +246,10 @@ function _v98_confinement_coefficients(point, capability, geometry)
     temperature_j = Float64(point["temperature_kev"]) * 1e3 * 1.602176634e-19
     thermal_speed = sqrt(2temperature_j / ion_mass)
     transit = Float64(point["open_branch_length_m"]) / max(thermal_speed, eps())
-    trapping_multiplier = 1 + 8quality * Int(point["field_periods"])
+    trapping_multiplier = 1.0
     open_tau = transit * trapping_multiplier
     if route == "mixed_open_closed"
-        closed_coefficient = 0.134 * quality * minor^2.28 * major^0.64 * n19^0.54 *
+        closed_coefficient = 0.134 * minor^2.28 * major^0.64 * n19^0.54 *
             field^0.84 * (1 / q95)^0.41
         closed_tau_at_one_mw = closed_coefficient
         open_fraction = Float64(capability["open_fraction"])
@@ -329,17 +329,15 @@ function solve_candidate_physics_v98(point_raw, capability_raw)
     minor = Float64(point["minor_radius_m"]); major = Float64(point["major_radius_m"])
     coil_thickness = max(Float64(point["coil_minor_radius_m"]) -
         Float64(point["wall_minor_radius_m"]), 0.05)
-    peak_field = field * (1 + minor / max(major - minor, 0.2minor)) *
-        (1 + 0.12Float64(capability["three_dimensional_fraction"]))
+    peak_field = field * (1 + minor / max(major - minor, 0.2minor))
     support_stress = peak_field^2 / (2mu0) * min(minor / coil_thickness, 4.0)
     route = String(capability["route"])
     beta_n = 100beta * minor * field / max(Float64(confinement["plasma_current_ma"]), 0.05)
     stability_route = route == "closed_core_open_exhaust" ?
         String(capability["closed_core_route"]) : route
     stability_cap = stability_route == "axisymmetric_closed" ? nothing :
-        stability_route == "three_dimensional_closed" ? 0.05Float64(capability["field_quality_parameter"]) :
-        route == "open_field" ? 0.30Float64(capability["field_quality_parameter"]) :
-        0.08Float64(capability["field_quality_parameter"])
+        stability_route == "three_dimensional_closed" ? 0.05 :
+        route == "open_field" ? 0.30 : 0.08
     stability_pass = stability_route == "axisymmetric_closed" ?
         beta_n <= V98_SCREEN_THRESHOLDS["maximum_axisymmetric_beta_n"] :
         beta <= stability_cap
@@ -411,6 +409,9 @@ function solve_candidate_physics_v98(point_raw, capability_raw)
         "failed_gates" => String[gate["gate_id"] for gate in gates if gate["status"] == "fail"],
         "loss_root_iterations" => loss.iterations,
         "basis_direct_metric_credit" => false,
+        "field_quality_physical_gate_credit" => false,
+        "fixed_3d_peak_field_penalty_used" => false,
+        "reduced_gate_whole_device_physical_credit" => false,
         "evidence_ceiling" => "candidate_bound_reduced_empirical_physics_and_engineering_screen",
         "claim_boundary" => END_TO_END_DEVICE_PIPELINE_V98_CLAIM_BOUNDARY,
     )

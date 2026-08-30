@@ -1,0 +1,112 @@
+{
+    "claim_boundary": "Sampled Mercier and infinite-n ideal-ballooning criteria on a re-solved fixed-boundary equilibrium only; not finite-n, resistive, kinetic, nonlinear, disruption, transport, engineering, all-mode stability, or device superiority.",
+    "source_binding": "DESC-0.17.3",
+    "physics_hash": "03815244cc1f16cb777dc417eec68cf4a51af7d038e8341c694b016e8b832828",
+    "runner_version": "desc_stellarator_sampled_ideal_mhd_stability_runner_v1",
+    "stability": {
+        "ballooning": {
+            "nturns": 2,
+            "nzetaperturn": 64,
+            "zeta0_count": 7,
+            "extraction_shift": -1,
+            "alpha_count": 4,
+            "maximum_lambda": -1.0e-5,
+            "rho": [
+                0.25,
+                0.5,
+                0.75,
+                0.9
+            ]
+        },
+        "mercier": {
+            "minimum_normalized_positive_margin": 1.0e-5,
+            "angular_n": 6,
+            "angular_m": 8,
+            "rho": [
+                0.15,
+                0.25,
+                0.4,
+                0.55,
+                0.7,
+                0.85,
+                0.95
+            ]
+        }
+    },
+    "equilibrium_solver_input": {
+        "audit": {
+            "min_sqrt_g": 0.0001,
+            "max_fixed_constraint_error": 1.0e-12,
+            "max_force_normalized_magnetic": 0.01
+        },
+        "resolution": {
+            "M": 4,
+            "M_grid": 8,
+            "N": 3,
+            "N_grid": 6,
+            "L": 4,
+            "L_grid": 8
+        },
+        "source_binding": "DESC-0.17.3",
+        "runner_version": "desc_explicit_fourier_fixed_boundary_runner_v1",
+        "solver": {
+            "max_iterations": 30,
+            "gtol": 1.0e-6,
+            "optimizer": "lsq-exact",
+            "shaping_first": false,
+            "ftol": 1.0e-8,
+            "xtol": 1.0e-8,
+            "pressure_step": 0.5,
+            "boundary_step": 0.5
+        },
+        "model_id": "stellarator_symmetric_fourier_fixed_boundary_v1",
+        "profiles": {
+            "toroidal_flux_wb": 1.133354351829783,
+            "iota_power_series": [
+                0.5076923076923077,
+                0.0,
+                0.055882352941176494
+            ],
+            "pressure_power_series_pa": [
+                5760.869565217391,
+                0.0,
+                -11521.739130434782,
+                0.0,
+                5760.869565217391
+            ]
+        },
+        "boundary": {
+            "R_modes": [
+                {
+                    "m": 0,
+                    "coefficient_m": 2.550487728714057,
+                    "n": 0
+                },
+                {
+                    "m": 1,
+                    "coefficient_m": 0.5,
+                    "n": 0
+                },
+                {
+                    "m": 0,
+                    "coefficient_m": 0.24428571428571427,
+                    "n": 1
+                }
+            ],
+            "Z_modes": [
+                {
+                    "m": -1,
+                    "coefficient_m": -0.448,
+                    "n": 0
+                },
+                {
+                    "m": 0,
+                    "coefficient_m": -0.1588363636363636,
+                    "n": -1
+                }
+            ],
+            "field_periods": 3,
+            "stellarator_symmetric": true
+        }
+    }
+}

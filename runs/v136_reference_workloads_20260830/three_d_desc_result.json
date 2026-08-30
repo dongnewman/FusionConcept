@@ -1,0 +1,163 @@
+{
+  "ballooning": {
+    "alpha_count": 4,
+    "extraction_shift": -1.0,
+    "field_line_point_count": 128,
+    "maximum_lambda": -0.0010725020028897747,
+    "maximum_lambda_by_rho": [
+      -0.0015274348591429732,
+      -0.0010725020028897747,
+      -0.001199848680731197,
+      -0.0016089610657408215
+    ],
+    "nturns": 2,
+    "nzetaperturn": 64,
+    "required_maximum_lambda": -1e-05,
+    "rho": [
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "sampled_favorable": true,
+    "scan_count": 112,
+    "shift_extraction_max_abs_difference": 1.1102230246251565e-16,
+    "worst_rho": 0.5,
+    "zeta0_count": 7
+  },
+  "claim_boundary": "Sampled Mercier and infinite-n ideal-ballooning criteria on a re-solved fixed-boundary equilibrium only; not finite-n, resistive, kinetic, nonlinear, disruption, transport, engineering, all-mode stability, or device superiority.",
+  "environment": {
+    "desc_opt": "0.17.3",
+    "device": "TFRT_CPU_0",
+    "jax": "0.9.2",
+    "jax_finufft_available": false,
+    "jaxlib": "0.9.2",
+    "numpy": "2.4.2",
+    "python": "3.13.5"
+  },
+  "equilibrium": {
+    "accepted": true,
+    "after": {
+      "aspect_ratio": 5.3888888888905,
+      "force_normalized_to_magnetic_gradient": 0.0056190446743637455,
+      "force_normalized_to_pressure_gradient": 0.3998519619880082,
+      "force_volume_average_n_m3": 5216.36196318904,
+      "iota_095": 0.5581261312217194,
+      "iota_axis": 0.5076923076923077,
+      "iota_mid": 0.5216628959276017,
+      "magnetic_pressure_gradient_scale_n_m3": 928336.0901165459,
+      "major_radius_m": 2.550487728714818,
+      "minor_radius_m": 0.4732863826479691,
+      "plasma_volume_m3": 11.277192600687172,
+      "pressure_095_pa": 54.76426630434834,
+      "pressure_axis_pa": 5760.869565217391,
+      "pressure_gradient_scale_n_m3": 13045.733068943855,
+      "pressure_mid_pa": 3240.4891304347825,
+      "volume_average_beta": 0.0017487381437652004
+    },
+    "continuation_states": 5,
+    "fixed_constraint_residuals": {
+      "boundary_r_max_abs_m": 0.0,
+      "boundary_z_max_abs_m": 0.0,
+      "iota_coeff_max_abs": 0.0,
+      "pressure_coeff_max_abs_pa": 0.0,
+      "toroidal_flux_abs_wb": 0.0
+    },
+    "minimum_sampled_sqrt_g": 0.05012186369261721,
+    "solved_volume_state_hash": "ecae919ff6df0e4d900198ab09fd7d77a0c42083d029bc3861cfdd60d31134a5"
+  },
+  "equilibrium_reference": {
+    "matched": null,
+    "maximum_relative_difference": null,
+    "provided": false
+  },
+  "input_hash": "88904e888fbf7bd98c1fb6cf2ee35f4c7dc3b77530c2ebd0ca189a176182abe9",
+  "local_ideal_mhd": {
+    "all_mode_plasma_stability_established": false,
+    "infinite_n_ballooning_sampled_favorable": true,
+    "mercier_sampled_favorable": false,
+    "sampled_favorable": false
+  },
+  "mercier": {
+    "D_Mercier_normalized": [
+      -1.1967705807919498,
+      -0.3766971390520985,
+      -0.12756442488229466,
+      -0.057514272829278304,
+      -0.03033337172968175,
+      -0.0191180026949785,
+      -0.016207066062267784
+    ],
+    "D_Mercier_wb_minus2": [
+      -0.9317072429482155,
+      -0.29326544158568785,
+      -0.09931118003143763,
+      -0.04477588723185199,
+      -0.023615070922685263,
+      -0.01488370608995738,
+      -0.012617490001435938
+    ],
+    "D_current_wb_minus2": [
+      0.0014411244361681446,
+      0.0011144066972053662,
+      0.0009842316420011102,
+      0.0009193131379070738,
+      0.000861159286711575,
+      0.0007965004390515639,
+      0.0007471117210738284
+    ],
+    "D_geodesic_wb_minus2": [
+      -0.6293873963128234,
+      -0.19043752545517886,
+      -0.06478203808590008,
+      -0.03075409659086409,
+      -0.018262899639880044,
+      -0.013867011051316078,
+      -0.013313562026083896
+    ],
+    "D_shear_wb_minus2": [
+      0.000607796148046741,
+      0.000607796148046741,
+      0.000607796148046741,
+      0.000607796148046741,
+      0.0006077961480467407,
+      0.0006077961480467412,
+      0.0006077961480467407
+    ],
+    "D_well_wb_minus2": [
+      -0.30436876721960704,
+      -0.10455011897576108,
+      -0.03612116973558541,
+      -0.015548899926941714,
+      -0.006821126717563536,
+      -0.0024209916257396068,
+      -0.0006588358444726112
+    ],
+    "angular_m": 8,
+    "angular_n": 6,
+    "minimum_D_Mercier_normalized": -1.1967705807919498,
+    "minimum_D_Mercier_wb_minus2": -0.9317072429482155,
+    "positive_fraction": 0.0,
+    "required_normalized_positive_margin": 1e-05,
+    "rho": [
+      0.15,
+      0.25,
+      0.4,
+      0.55,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "sampled_favorable": false,
+    "term_closure_max_abs_wb_minus2": 0.0,
+    "worst_rho": 0.15
+  },
+  "physics_hash": "03815244cc1f16cb777dc417eec68cf4a51af7d038e8341c694b016e8b832828",
+  "result_hash": "a3fd6fd137276fd09031bf37b1761fae56f98afa41d21003f66a3ca15830fdcc",
+  "runner_version": "desc_stellarator_sampled_ideal_mhd_stability_runner_v1",
+  "status": "pass",
+  "warnings": [
+    "jax_finufft is not installed. NUFFT functions will not be available.",
+    "linear_util.wrap_init is missing a DebugInfo object. This behavior is deprecated, use api_util.debug_info() to construct a proper DebugInfo object and propagate it to this function. See https://github.com/jax-ml/jax/issues/26480 for more details."
+  ]
+}

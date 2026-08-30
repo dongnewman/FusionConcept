@@ -214,11 +214,13 @@ function compile_open_field_linear_mode_convergence_v1(
 end
 
 function open_field_linear_mode_observation_to_dict_v1(o::OpenFieldLinearModeObservationV1)
-    return Dict{String,Any}(name => getfield(o, name) for name in fieldnames(typeof(o)))
+    return Dict{String,Any}(String(name) => getfield(o, name)
+        for name in fieldnames(typeof(o)))
 end
 
 function open_field_linear_mode_convergence_to_dict_v1(o::OpenFieldLinearModeConvergenceV1)
-    result = Dict{String,Any}(name => getfield(o, name) for name in fieldnames(typeof(o))
+    result = Dict{String,Any}(String(name) => getfield(o, name)
+        for name in fieldnames(typeof(o))
         if name != :observations)
     result["observations"] = open_field_linear_mode_observation_to_dict_v1.(o.observations)
     return result

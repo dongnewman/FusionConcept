@@ -1,0 +1,763 @@
+{
+    "acceptance_hash": "6be5073cce70611c40830cbc86aa7f5e80e9523592a8df6fe084981482b5d6b8",
+    "protocol_id": "fusionconceptai-v136-region-realization-runtime-20260830",
+    "claim_boundary": "Reference workloads test capability-routed provider reachability and candidate binding. They do not grant validation, whole-device feasibility, or new-candidate physical credit.",
+    "status": "pass",
+    "fresh_v102_acceptance_hash": "6b9d652f7d7cc8ef070944cdead2e6c121a3103ed0a31e27147d839146445928",
+    "workloads": [
+        {
+            "provider_status": "fail",
+            "provider_executed": true,
+            "equilibrium_stage_reached": true,
+            "validation_vvuq": {
+                "status": "not_executed",
+                "reason": "numerical_vvuq_failed"
+            },
+            "validation_credit": false,
+            "numerical_vvuq": {
+                "method": "three_grid_33_65_129_independent_residual_and_constraint_audit",
+                "status": "fail"
+            },
+            "result_hash": "9bd20643f5083a3bfa60cf183e9081a01fdfa5ad8aaca5cb6c883cbbba797cf8",
+            "capability_class": "axisymmetric_closed",
+            "process_exit_code": 0,
+            "stability_stage_reached": true,
+            "workload": "ITER",
+            "provider_key": "freegs_grad_shafranov_region_v136"
+        },
+        {
+            "provider_status": "pass",
+            "realization_plan_hash": "a19228b7c1559b9898f39c96b3faca3a6dfeed25de26c80258be66784d11e5b5",
+            "provider_executed": true,
+            "equilibrium_stage_reached": true,
+            "validation_vvuq": {
+                "status": "unknown_validation_domain"
+            },
+            "validation_credit": false,
+            "closed_region_stability_stage_reached": true,
+            "open_region": {
+                "mirror_ratio": 3.4351845863108896,
+                "provider_status": "pass",
+                "field_line_count": 5,
+                "field_line_traces": [
+                    {
+                        "forward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.013324699551695325,
+                                9.585096462373316e-18,
+                                1.559944167382296
+                            ],
+                            "boundary_id": "right_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 5.644617941997973e-14,
+                            "step_count": 156,
+                            "minimum_field_t": 0.4692643976980894,
+                            "maximum_field_t": 1.612998024917017
+                        },
+                        "backward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.01332469955169532,
+                                9.63779343798801e-18,
+                                -1.559944167382296
+                            ],
+                            "boundary_id": "left_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 5.644617942018961e-14,
+                            "step_count": 156,
+                            "minimum_field_t": 0.4692643976980894,
+                            "maximum_field_t": 1.6129980249170186
+                        },
+                        "fate": "open",
+                        "seed": {
+                            "region_id": "open_region",
+                            "point_m": [
+                                0.02,
+                                0.0,
+                                0.0
+                            ],
+                            "id": "seed_1"
+                        },
+                        "connection_length_m": 3.1200000000000023
+                    },
+                    {
+                        "forward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.03328654035370009,
+                                -4.7795757098812355e-18,
+                                1.5596506137014468
+                            ],
+                            "boundary_id": "right_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 1.4187546026530362e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.46822436520846433,
+                            "maximum_field_t": 1.6143624102169436
+                        },
+                        "backward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.03328654035370011,
+                                -4.083494833867766e-18,
+                                -1.5596506137014468
+                            ],
+                            "boundary_id": "left_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 1.418719916511741e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.46822436520846433,
+                            "maximum_field_t": 1.614362410216943
+                        },
+                        "fate": "open",
+                        "seed": {
+                            "region_id": "open_region",
+                            "point_m": [
+                                0.05,
+                                0.0,
+                                0.0
+                            ],
+                            "id": "seed_2"
+                        },
+                        "connection_length_m": 3.1200000000000023
+                    },
+                    {
+                        "forward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.05318351092215954,
+                                -3.8505105067279554e-19,
+                                1.5591035218558231
+                            ],
+                            "boundary_id": "right_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 2.2928452223963483e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.46629694424785034,
+                            "maximum_field_t": 1.6169179427158067
+                        },
+                        "backward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.05318351092215953,
+                                -1.8590893984440874e-19,
+                                -1.559103521855823
+                            ],
+                            "boundary_id": "left_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 2.2928452223954526e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.46629694424785034,
+                            "maximum_field_t": 1.6169179427158036
+                        },
+                        "fate": "open",
+                        "seed": {
+                            "region_id": "open_region",
+                            "point_m": [
+                                0.08,
+                                0.0,
+                                0.0
+                            ],
+                            "id": "seed_3"
+                        },
+                        "connection_length_m": 3.1200000000000023
+                    },
+                    {
+                        "forward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.07297654598346832,
+                                1.2920954559456469e-18,
+                                1.5582994632471199
+                            ],
+                            "boundary_id": "right_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 3.1986376763661496e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.46348948531191647,
+                            "maximum_field_t": 1.6206691015687305
+                        },
+                        "backward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.07297654598346832,
+                                1.6008697250696949e-18,
+                                -1.5582994632471199
+                            ],
+                            "boundary_id": "left_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 3.1986376763659896e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.46348948531191647,
+                            "maximum_field_t": 1.620669101568735
+                        },
+                        "fate": "open",
+                        "seed": {
+                            "region_id": "open_region",
+                            "point_m": [
+                                0.11,
+                                0.0,
+                                0.0
+                            ],
+                            "id": "seed_4"
+                        },
+                        "connection_length_m": 3.1200000000000023
+                    },
+                    {
+                        "forward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.09262638799245412,
+                                -9.368339682051976e-18,
+                                1.5572334930943652
+                            ],
+                            "boundary_id": "right_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 4.1489444063417275e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.45981279420317345,
+                            "maximum_field_t": 1.625584909963351
+                        },
+                        "backward": {
+                            "arclength_m": 1.5600000000000012,
+                            "minimum_return_distance_m": null,
+                            "final_point_m": [
+                                0.0926263879924541,
+                                -7.985909673696889e-18,
+                                -1.5572334930943652
+                            ],
+                            "boundary_id": "left_end",
+                            "termination": "boundary",
+                            "maximum_local_error_m": 4.148944406341736e-13,
+                            "step_count": 156,
+                            "minimum_field_t": 0.45981279420317345,
+                            "maximum_field_t": 1.625584909963353
+                        },
+                        "fate": "open",
+                        "seed": {
+                            "region_id": "open_region",
+                            "point_m": [
+                                0.14,
+                                0.0,
+                                0.0
+                            ],
+                            "id": "seed_5"
+                        },
+                        "connection_length_m": 3.1200000000000023
+                    }
+                ],
+                "end_loss": {
+                    "design_id": "capability_bound_open_reference",
+                    "parallel_particle_loss_rate_s": 2.6086956521739136e24,
+                    "represented_particle_inventory": 1.2e19,
+                    "c2_physical_end_loss_authorized": false,
+                    "species_id": "deuterium",
+                    "loss_bin_count": 3,
+                    "evidence_tasks": [
+                        "include_candidate_sources_charge_exchange_and_radial_sinks",
+                        "solve_candidate_ambipolar_potential_profile"
+                    ],
+                    "parallel_boundary_kinetic_power_w": 1.6695652173913045e9,
+                    "status": "pass",
+                    "problem_hash": "381fc659eb1d4280c131a3034bcda4d7fd4f617d50ee6830674f43d8bebad1ab",
+                    "inventory_depletion_time_s": 4.599999999999999e-6,
+                    "domain_id": "open_region",
+                    "solver_version": "bounce_averaged_end_loss_solver_v1.0.0",
+                    "warnings": [
+                        "The sink uses the published bounce-averaged form 2*abs(v_parallel)/L only on bins already classified as lost by the supplied candidate boundary.",
+                        "The represented kinetic-energy flux is not an end-plate heat load unless end-region fields, sheaths, radiation and material interception are also solved.",
+                        "End loss alone does not establish steady state, stability, gain, or feasibility."
+                    ],
+                    "observation_hash": "d3957eb8ef3f74379b3458daf018d22bda9c070732503d73a5d5564402bd5d76",
+                    "genome_physics_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a"
+                },
+                "balance": {
+                    "jacobian": 1,
+                    "correction_s_inv": 6.086956521739136e23,
+                    "particle_source_s_inv": 2.0e24,
+                    "initial_residual_s_inv": -6.086956521739136e23,
+                    "final_residual_s_inv": 0,
+                    "particle_end_loss_s_inv": 2.6086956521739136e24
+                },
+                "provider_executed": true,
+                "equilibrium_stage_reached": true,
+                "validation_vvuq": {
+                    "status": "unknown_validation_domain"
+                },
+                "validation_credit": false,
+                "capability_class": "open_field",
+                "center_field_t": 0.46946267268140507,
+                "stability_stage_reached": true,
+                "workload": "C-2W_open_region",
+                "stability": {
+                    "convergence_hash": "ece0c230294efd75c152f63713082940a0f0978b3fe4feb1163ec86f6f39c2bf",
+                    "observations": [
+                        {
+                            "missing_input_ids": [
+                            ],
+                            "state_result_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                            "maximum_eigenpair_relative_residual": 9.87599298148137e-26,
+                            "status": "pass",
+                            "maximum_growth_rate_s_inv": -4999.999999963053,
+                            "problem_hash": "7c36c59861660c9bc8cbd5dda91284a850b57830a3ce6f50f38c37ed9b23e151",
+                            "operator_id": "interchange_flute_v2",
+                            "resolution_id": "n33",
+                            "observation_hash": "b6555f7a76021bb179045e545e0d2302429ac47b7faf67e82829fcac8512f447",
+                            "candidate_binding_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                            "dominant_frequency_rad_s": 1.7894819118745103e7,
+                            "favorable": true
+                        },
+                        {
+                            "missing_input_ids": [
+                            ],
+                            "state_result_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                            "maximum_eigenpair_relative_residual": 1.938666917111778e-25,
+                            "status": "pass",
+                            "maximum_growth_rate_s_inv": -4999.999999836087,
+                            "problem_hash": "035a6ffcbb2664cb953166fe438fe8cfaa62bc1f3c7eb942cf53d5e3e5ef167c",
+                            "operator_id": "interchange_flute_v2",
+                            "resolution_id": "n65",
+                            "observation_hash": "45f3573471c5b85b4809143f6b0a92aeb0a081ebe820b278776ea5a5e04f30d2",
+                            "candidate_binding_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                            "dominant_frequency_rad_s": 3.129077308999554e7,
+                            "favorable": true
+                        },
+                        {
+                            "missing_input_ids": [
+                            ],
+                            "state_result_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                            "maximum_eigenpair_relative_residual": 2.359024966405573e-25,
+                            "status": "pass",
+                            "maximum_growth_rate_s_inv": -4999.9999997641535,
+                            "problem_hash": "642714d21fddb55978e9dd06fd959a2f04f5269cedac3d0e15272825dec876d8",
+                            "operator_id": "interchange_flute_v2",
+                            "resolution_id": "n129",
+                            "observation_hash": "86e83ea9c391731c3dec1ee6cad5ea7537731a643ffa0fffb5ffeca0b47bd7a0",
+                            "candidate_binding_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                            "dominant_frequency_rad_s": 4.0690611385464475e7,
+                            "favorable": true
+                        }
+                    ],
+                    "maximum_growth_change_s_inv": 1.2696546036750078e-7,
+                    "resolution_verified": true,
+                    "signed_normalized_margin": 1,
+                    "evidence_tasks": [
+                    ],
+                    "state_result_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                    "status": "pass",
+                    "operator_id": "interchange_flute_v2",
+                    "candidate_binding_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                    "favorable": true
+                },
+                "binding_hash": "01c7d23415fc2c049f4d9e0ebd494a24f3ff7fe49df4119b7893c9111d3c3a8a",
+                "field_line_endpoint_count": 5,
+                "provider_key": "open_field_line_end_loss_balance_region_v136"
+            },
+            "interface_coupling": {
+                "jacobian": [
+                    [
+                        1,
+                        -1
+                    ]
+                ],
+                "region_correction_keys": [
+                    "closed_core",
+                    "open_exhaust"
+                ],
+                "final_residual": [
+                    1.3877787807814457e-17
+                ],
+                "row_keys": [
+                    "core_exhaust::particle_flux"
+                ],
+                "correction": [
+                    -0.049999999999999975,
+                    0.04999999999999999
+                ],
+                "exact_declared_jacobian_used": true,
+                "initial_residual": [
+                    0.09999999999999998
+                ],
+                "interface_coupling_credit": true,
+                "whole_graph_closed": true,
+                "status": "pass",
+                "partial_subgraph_credit": false,
+                "whole_device_physical_credit": false,
+                "coupling_hash": "1d9eca3fd10bb2399c696041286f182873c52acc4932aae71b290174a1ad0409"
+            },
+            "closed_region_stability_status": "unknown",
+            "closed_region_equilibrium_stage_reached": true,
+            "capability_class": "mixed_multiregion",
+            "stability_stage_reached": true,
+            "workload": "C-2W",
+            "provider_key": "per_region_plus_interface_coupling_v136"
+        },
+        {
+            "vmex_status": "pass",
+            "provider_status": "pass",
+            "provider_key": "desc_vmex_fourier_coil_region_v136",
+            "provider_executed": true,
+            "equilibrium_stage_reached": true,
+            "validation_vvuq": {
+                "status": "unknown_validation_domain"
+            },
+            "vmex_result_hash": "e689ce2d98385c08ef4dbd5764acf8a56f2be42b7c69ee051d90cac3c7736bc5",
+            "validation_credit": false,
+            "result_hash": "a3fd6fd137276fd09031bf37b1761fae56f98afa41d21003f66a3ca15830fdcc",
+            "coil_geometry_hash": "303a1b9fa737472d9301a28aa346cdf379a618dc78fde47c6b8cf330c64ffb12",
+            "desc_status": "pass",
+            "sampled_local_stability_favorable": false,
+            "capability_class": "three_dimensional_closed",
+            "process_exit_code": 0,
+            "stability_stage_reached": true,
+            "vmex_process_exit_code": 0,
+            "workload": "explicit_Fourier_3D_reference",
+            "field_periods": 3,
+            "wout_sha256": "847ca07be53424d9c70c1fb3f7cbe48ee0c3c18e4793f625b45ba493445e0f5b",
+            "boundary_geometry_hash": "7b1e73dde1e7be8067aefbc0d3964b45665ec37e972e95cefae0978c6c64ac59"
+        },
+        {
+            "mirror_ratio": 3.4351845863108896,
+            "provider_status": "pass",
+            "field_line_count": 5,
+            "field_line_traces": [
+                {
+                    "forward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.013324699551695325,
+                            9.585096462373316e-18,
+                            1.559944167382296
+                        ],
+                        "boundary_id": "right_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 5.644617941997973e-14,
+                        "step_count": 156,
+                        "minimum_field_t": 0.4692643976980894,
+                        "maximum_field_t": 1.612998024917017
+                    },
+                    "backward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.01332469955169532,
+                            9.63779343798801e-18,
+                            -1.559944167382296
+                        ],
+                        "boundary_id": "left_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 5.644617942018961e-14,
+                        "step_count": 156,
+                        "minimum_field_t": 0.4692643976980894,
+                        "maximum_field_t": 1.6129980249170186
+                    },
+                    "fate": "open",
+                    "seed": {
+                        "region_id": "open_region",
+                        "point_m": [
+                            0.02,
+                            0.0,
+                            0.0
+                        ],
+                        "id": "seed_1"
+                    },
+                    "connection_length_m": 3.1200000000000023
+                },
+                {
+                    "forward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.03328654035370009,
+                            -4.7795757098812355e-18,
+                            1.5596506137014468
+                        ],
+                        "boundary_id": "right_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 1.4187546026530362e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.46822436520846433,
+                        "maximum_field_t": 1.6143624102169436
+                    },
+                    "backward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.03328654035370011,
+                            -4.083494833867766e-18,
+                            -1.5596506137014468
+                        ],
+                        "boundary_id": "left_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 1.418719916511741e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.46822436520846433,
+                        "maximum_field_t": 1.614362410216943
+                    },
+                    "fate": "open",
+                    "seed": {
+                        "region_id": "open_region",
+                        "point_m": [
+                            0.05,
+                            0.0,
+                            0.0
+                        ],
+                        "id": "seed_2"
+                    },
+                    "connection_length_m": 3.1200000000000023
+                },
+                {
+                    "forward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.05318351092215954,
+                            -3.8505105067279554e-19,
+                            1.5591035218558231
+                        ],
+                        "boundary_id": "right_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 2.2928452223963483e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.46629694424785034,
+                        "maximum_field_t": 1.6169179427158067
+                    },
+                    "backward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.05318351092215953,
+                            -1.8590893984440874e-19,
+                            -1.559103521855823
+                        ],
+                        "boundary_id": "left_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 2.2928452223954526e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.46629694424785034,
+                        "maximum_field_t": 1.6169179427158036
+                    },
+                    "fate": "open",
+                    "seed": {
+                        "region_id": "open_region",
+                        "point_m": [
+                            0.08,
+                            0.0,
+                            0.0
+                        ],
+                        "id": "seed_3"
+                    },
+                    "connection_length_m": 3.1200000000000023
+                },
+                {
+                    "forward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.07297654598346832,
+                            1.2920954559456469e-18,
+                            1.5582994632471199
+                        ],
+                        "boundary_id": "right_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 3.1986376763661496e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.46348948531191647,
+                        "maximum_field_t": 1.6206691015687305
+                    },
+                    "backward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.07297654598346832,
+                            1.6008697250696949e-18,
+                            -1.5582994632471199
+                        ],
+                        "boundary_id": "left_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 3.1986376763659896e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.46348948531191647,
+                        "maximum_field_t": 1.620669101568735
+                    },
+                    "fate": "open",
+                    "seed": {
+                        "region_id": "open_region",
+                        "point_m": [
+                            0.11,
+                            0.0,
+                            0.0
+                        ],
+                        "id": "seed_4"
+                    },
+                    "connection_length_m": 3.1200000000000023
+                },
+                {
+                    "forward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.09262638799245412,
+                            -9.368339682051976e-18,
+                            1.5572334930943652
+                        ],
+                        "boundary_id": "right_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 4.1489444063417275e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.45981279420317345,
+                        "maximum_field_t": 1.625584909963351
+                    },
+                    "backward": {
+                        "arclength_m": 1.5600000000000012,
+                        "minimum_return_distance_m": null,
+                        "final_point_m": [
+                            0.0926263879924541,
+                            -7.985909673696889e-18,
+                            -1.5572334930943652
+                        ],
+                        "boundary_id": "left_end",
+                        "termination": "boundary",
+                        "maximum_local_error_m": 4.148944406341736e-13,
+                        "step_count": 156,
+                        "minimum_field_t": 0.45981279420317345,
+                        "maximum_field_t": 1.625584909963353
+                    },
+                    "fate": "open",
+                    "seed": {
+                        "region_id": "open_region",
+                        "point_m": [
+                            0.14,
+                            0.0,
+                            0.0
+                        ],
+                        "id": "seed_5"
+                    },
+                    "connection_length_m": 3.1200000000000023
+                }
+            ],
+            "end_loss": {
+                "design_id": "capability_bound_open_reference",
+                "parallel_particle_loss_rate_s": 2.6086956521739136e24,
+                "represented_particle_inventory": 1.2e19,
+                "c2_physical_end_loss_authorized": false,
+                "species_id": "deuterium",
+                "loss_bin_count": 3,
+                "evidence_tasks": [
+                    "include_candidate_sources_charge_exchange_and_radial_sinks",
+                    "solve_candidate_ambipolar_potential_profile"
+                ],
+                "parallel_boundary_kinetic_power_w": 1.6695652173913045e9,
+                "status": "pass",
+                "problem_hash": "b8f2c42b8d9b08e7c77a4fda2da346dbb43db106ad69f69c1e663f1bbba91b4d",
+                "inventory_depletion_time_s": 4.599999999999999e-6,
+                "domain_id": "open_region",
+                "solver_version": "bounce_averaged_end_loss_solver_v1.0.0",
+                "warnings": [
+                    "The sink uses the published bounce-averaged form 2*abs(v_parallel)/L only on bins already classified as lost by the supplied candidate boundary.",
+                    "The represented kinetic-energy flux is not an end-plate heat load unless end-region fields, sheaths, radiation and material interception are also solved.",
+                    "End loss alone does not establish steady state, stability, gain, or feasibility."
+                ],
+                "observation_hash": "65d1d38220eb9978b8d9646c955baf516006ee8e1d1a0453345ea8eec164d18c",
+                "genome_physics_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519"
+            },
+            "balance": {
+                "jacobian": 1,
+                "correction_s_inv": 6.086956521739136e23,
+                "particle_source_s_inv": 2.0e24,
+                "initial_residual_s_inv": -6.086956521739136e23,
+                "final_residual_s_inv": 0,
+                "particle_end_loss_s_inv": 2.6086956521739136e24
+            },
+            "provider_executed": true,
+            "equilibrium_stage_reached": true,
+            "validation_vvuq": {
+                "status": "unknown_validation_domain"
+            },
+            "validation_credit": false,
+            "capability_class": "open_field",
+            "center_field_t": 0.46946267268140507,
+            "stability_stage_reached": true,
+            "workload": "open_field_reference",
+            "stability": {
+                "convergence_hash": "241606c090add3f7b7f6eedb5be34d3b141754fa4b300fd607d56f7ad72ee1c7",
+                "observations": [
+                    {
+                        "missing_input_ids": [
+                        ],
+                        "state_result_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                        "maximum_eigenpair_relative_residual": 9.87599298148137e-26,
+                        "status": "pass",
+                        "maximum_growth_rate_s_inv": -4999.999999963053,
+                        "problem_hash": "eb586765e16afa7e8225e8a8672bc1fde3972b359d7511dc4981d2cd6afd9a38",
+                        "operator_id": "interchange_flute_v2",
+                        "resolution_id": "n33",
+                        "observation_hash": "8ff3f626a45b8974d0405cf93437e53fc7707851112be230e2aac21df17981c3",
+                        "candidate_binding_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                        "dominant_frequency_rad_s": 1.7894819118745103e7,
+                        "favorable": true
+                    },
+                    {
+                        "missing_input_ids": [
+                        ],
+                        "state_result_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                        "maximum_eigenpair_relative_residual": 1.938666917111778e-25,
+                        "status": "pass",
+                        "maximum_growth_rate_s_inv": -4999.999999836087,
+                        "problem_hash": "be60c23db4ac117b1bed3c4c2dd5752c86fd9d7e6eca7fef6f7800545bf9a2a6",
+                        "operator_id": "interchange_flute_v2",
+                        "resolution_id": "n65",
+                        "observation_hash": "f240cfb310926776bd35be3ec69bb6aa6a2cc9d8e904b02591d967bad3142315",
+                        "candidate_binding_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                        "dominant_frequency_rad_s": 3.129077308999554e7,
+                        "favorable": true
+                    },
+                    {
+                        "missing_input_ids": [
+                        ],
+                        "state_result_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                        "maximum_eigenpair_relative_residual": 2.359024966405573e-25,
+                        "status": "pass",
+                        "maximum_growth_rate_s_inv": -4999.9999997641535,
+                        "problem_hash": "6235d0765a1cd816ee879489f68c0fa54bd4299753a8da9288dd66903fd555e9",
+                        "operator_id": "interchange_flute_v2",
+                        "resolution_id": "n129",
+                        "observation_hash": "6c593a470ab1d0adb07aba493a7504bbb25f07124c145ac818f4d5d67e92c756",
+                        "candidate_binding_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                        "dominant_frequency_rad_s": 4.0690611385464475e7,
+                        "favorable": true
+                    }
+                ],
+                "maximum_growth_change_s_inv": 1.2696546036750078e-7,
+                "resolution_verified": true,
+                "signed_normalized_margin": 1,
+                "evidence_tasks": [
+                ],
+                "state_result_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                "status": "pass",
+                "operator_id": "interchange_flute_v2",
+                "candidate_binding_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+                "favorable": true
+            },
+            "binding_hash": "874519fa5f0160ef3ed6d667d189dedbeadb4f5638d04b8ec58f1c3dd92b1519",
+            "field_line_endpoint_count": 5,
+            "provider_key": "open_field_line_end_loss_balance_region_v136"
+        }
+    ],
+    "all_four_capability_classes_reached_equilibrium_and_stability": true,
+    "whole_device_credible_count": 0,
+    "validation_pass_count": 0,
+    "rescreen_authorized": true,
+    "schema_version": "1.0.0"
+}

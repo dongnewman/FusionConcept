@@ -646,6 +646,8 @@ struct SchedulerFixtureEvaluator <: AbstractEvaluator
     families::Set{String}
 end
 
+include("region_realization_runtime_v136.jl")
+
 include("physics_compiler_v1.jl")
 include("executable_physics_ir_v1.jl")
 include("runtime_equilibrium_evidence_v1.jl")

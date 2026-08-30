@@ -1,0 +1,223 @@
+{
+    "strict_stage_order": [
+        "per_region_provider_closure",
+        "solve",
+        "numerical_vvuq",
+        "validation_vvuq"
+    ],
+    "experimental_validation_credit": false,
+    "physical_conclusion_expanded": false,
+    "reference_workloads": {
+        "sha256": "36b25e5df304156f2ec42d140057a6a969072a88b62d1be572499c9531f201d8",
+        "status": "pass",
+        "whole_device_credible_count": 0,
+        "validation_pass_count": 0,
+        "artifact": "runs/v136_reference_workloads_20260830/acceptance.json"
+    },
+    "gates": {
+        "all_reference_classes_reached_equilibrium_and_stability": true,
+        "unchanged_1_to_5_geometry_fails": true,
+        "quota_scheduling_only": true,
+        "full_saved_grammar_rescreened": true,
+        "per_region_routing_only": true,
+        "unknown_validation_independent": true,
+        "provider_manifest_identity_free": true,
+        "proxy_physical_gate_separation": true,
+        "field_period_changes_geometry": true,
+        "four_equal_provider_manifests": true,
+        "no_partial_subgraph_promotion": true
+    },
+    "acceptance_hash": "34861a7933aa248f6d115f9d890072472ffddc1ac7dbacf8e4cd97e3d065bab0",
+    "whole_device_credible_count": 0,
+    "proxy_separation_audit": {
+        "status": "pass",
+        "proxy_physical_credit": false,
+        "audit_hash": "faf104fd182256e6210f1d23dce1f30bcde25d54855878fe36a7e3e4761ed9e6",
+        "scheduling_proxy_keys": [
+            "field_quality",
+            "fixed_3d_peak_field_penalty"
+        ],
+        "violations": [
+        ]
+    },
+    "protocol_id": "fusionconceptai-v136-region-realization-runtime-20260830",
+    "provider_registry": {
+        "protocol_id": "fusionconceptai-v94-generic-capability-multiregion-20260828",
+        "claim_boundary": "Provider routing establishes declared capability coverage only. It is not a physical solve, numerical verification, validation, or experimental evidence.",
+        "registry_hash": "c9e1489b70c82e6c5dad1d3415ef272889088c4f497af659f4bd156c8cb9537f",
+        "providers": [
+            {
+                "lifecycle_status": "available",
+                "state_capabilities": [
+                    "fourier_boundary",
+                    "magnetic_field",
+                    "pressure_profile",
+                    "three_dimensional_coils"
+                ],
+                "output_capabilities": [
+                    "candidate_bound_equilibrium_and_stability"
+                ],
+                "interface_capabilities": [
+                    "magnetic_flux_trace"
+                ],
+                "coordinate_capabilities": [
+                    "periodic_fourier"
+                ],
+                "routing_unit": "single_declared_obligation",
+                "operator_capabilities": [
+                    "three_dimensional_mhd_equilibrium"
+                ],
+                "claim_boundary": "Provider routing establishes declared capability coverage only. It is not a physical solve, numerical verification, validation, or experimental evidence.",
+                "implementation_revision": "v136.0",
+                "dimension_capabilities": [
+                    3
+                ],
+                "function_space_capabilities": [
+                    "Fourier_Zernike",
+                    "filament_curve"
+                ],
+                "provider_key": "desc_vmex_fourier_coil_region_v136"
+            },
+            {
+                "lifecycle_status": "available",
+                "state_capabilities": [
+                    "magnetic_field",
+                    "poloidal_flux",
+                    "pressure_profile"
+                ],
+                "output_capabilities": [
+                    "candidate_bound_equilibrium_and_stability"
+                ],
+                "interface_capabilities": [
+                    "magnetic_flux_trace"
+                ],
+                "coordinate_capabilities": [
+                    "radial_axisymmetric"
+                ],
+                "routing_unit": "single_declared_obligation",
+                "operator_capabilities": [
+                    "grad_shafranov_equilibrium"
+                ],
+                "claim_boundary": "Provider routing establishes declared capability coverage only. It is not a physical solve, numerical verification, validation, or experimental evidence.",
+                "implementation_revision": "v136.0",
+                "dimension_capabilities": [
+                    2,
+                    3
+                ],
+                "function_space_capabilities": [
+                    "H1_axisymmetric",
+                    "L2_axisymmetric"
+                ],
+                "provider_key": "freegs_grad_shafranov_region_v136"
+            },
+            {
+                "lifecycle_status": "available",
+                "state_capabilities": [
+                    "conserved_interface_fluxes"
+                ],
+                "output_capabilities": [
+                    "coupled_interface_residual_jacobian"
+                ],
+                "interface_capabilities": [
+                    "coupled_flux_force_energy_continuity"
+                ],
+                "coordinate_capabilities": [
+                    "multiregion_interface"
+                ],
+                "routing_unit": "single_declared_obligation",
+                "operator_capabilities": [
+                ],
+                "claim_boundary": "Provider routing establishes declared capability coverage only. It is not a physical solve, numerical verification, validation, or experimental evidence.",
+                "implementation_revision": "v136.0",
+                "dimension_capabilities": [
+                    1,
+                    2,
+                    3
+                ],
+                "function_space_capabilities": [
+                    "mortar_dual"
+                ],
+                "provider_key": "interface_residual_jacobian_coupler_v136"
+            },
+            {
+                "lifecycle_status": "available",
+                "state_capabilities": [
+                    "endpoint_flux",
+                    "magnetic_field",
+                    "particle_inventory",
+                    "thermal_energy"
+                ],
+                "output_capabilities": [
+                    "candidate_bound_equilibrium_and_stability"
+                ],
+                "interface_capabilities": [
+                    "particle_energy_flux_trace"
+                ],
+                "coordinate_capabilities": [
+                    "open_field_line"
+                ],
+                "routing_unit": "single_declared_obligation",
+                "operator_capabilities": [
+                    "open_field_equilibrium_end_loss"
+                ],
+                "claim_boundary": "Provider routing establishes declared capability coverage only. It is not a physical solve, numerical verification, validation, or experimental evidence.",
+                "implementation_revision": "v136.0",
+                "dimension_capabilities": [
+                    1,
+                    2,
+                    3
+                ],
+                "function_space_capabilities": [
+                    "field_line",
+                    "finite_volume_1d"
+                ],
+                "provider_key": "open_field_line_end_loss_balance_region_v136"
+            }
+        ],
+        "routing_unit": "single_declared_obligation",
+        "provider_count": 4
+    },
+    "unchanged_1_to_5_negative_control": {
+        "checks": {
+            "coil_geometry_changed": false,
+            "field_periods_changed": true,
+            "field_geometry_changed": false,
+            "boundary_geometry_changed": false
+        },
+        "status": "fail",
+        "physical_credit": false,
+        "audit_hash": "b78da26f522871f5854c6517508a081d488757946f1c178b86e9724630299463"
+    },
+    "source_hashes": {
+        "src/region_realization_runtime_v136.jl": "41f53d26aa1fa5c10f9ea49d9aa0801271946889253e0c0f57acaadbdc0da124",
+        "src/end_to_end_device_pipeline_v98.jl": "d073e1f4a3fdd6729806d35d12c418d2adbd7fa7bc3cee1ee4ed540f6bc6f91f",
+        "scripts/run_v136_full_topology_rescreen.jl": "9b394de2e61fddb9af72122bbdcb0928de8130fefebf254c4c93dce76bdc510f",
+        "src/operator_provider_registry_v94.jl": "78a68e444e05f81b11f2bb4390d23c5183acd2e26aef9fb29780d0917e29ffc3",
+        "scripts/run_v136_reference_workloads.jl": "0de8dc0a7302e37f883411c7c88611751a949a74c0b9fa86739efa0249030efc"
+    },
+    "basis_direct_metric_credit": false,
+    "status": "pass",
+    "full_topology_rescreen": {
+        "selected": 161,
+        "unsupported": 1040800,
+        "sha256": "7375b5dc8fae4fc42d639879b552fcb10305c2fb1378584bba1ea1edc8fe0f1c",
+        "closed": 7776,
+        "processed": 1048576,
+        "artifact": "runs/v136_full_topology_rescreen_1048576_20260830/acceptance.json"
+    },
+    "claim_boundary": "v136 routes every declared region independently by state, operator, interface, function space, dimension and coordinate capability. Resource quotas and proxy scores grant no physical credit. Whole-device execution requires every region solve and every declared interface residual/Jacobian coupling to close.",
+    "schema_version": "1.0.0",
+    "forbidden_manifest_fields": [
+    ],
+    "field_period_sensitivity": {
+        "checks": {
+            "coil_geometry_changed": true,
+            "field_periods_changed": true,
+            "field_geometry_changed": true,
+            "boundary_geometry_changed": true
+        },
+        "status": "pass",
+        "physical_credit": false,
+        "audit_hash": "3075d9fcb7fd0a73acb97b1eaa09abc690b493fa2cb775b38b8bcf8c6da0aa2c"
+    }
+}
