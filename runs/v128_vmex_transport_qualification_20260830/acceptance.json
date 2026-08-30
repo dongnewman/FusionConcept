@@ -1,0 +1,192 @@
+{
+  "acceptance_hash": "e71dc305df2ebb941940adb8486d23ea54c6c7408fb96e479b9bffe0aa95f24f",
+  "advanced_numerical_survivor_count": 0,
+  "basis_direct_metric_credit": false,
+  "candidate_rows": [
+    {
+      "candidate_result_hash": "739c02a8e7fb280dff33e33addaf7eb27c2e0a2d50b25a12290bf9fabd7dfd66",
+      "candidate_state": "physical_reject",
+      "freegs_failed_gates": [],
+      "freegs_recheck_status": "pass",
+      "numerical_failures": [],
+      "physical_failures": [
+        "local_stability"
+      ],
+      "provider_failures": [],
+      "rejection_reasons": [
+        "local_stability"
+      ],
+      "row_hash": "34519d0b79e7ec251e6bd4e2c25bb6a1b7e827e1b3ff02fe4e91420b28c7b95f",
+      "unsupported": false,
+      "validation_credit": false,
+      "vmex_qualification_executed": true,
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "9bca9c61455627c1c33995b02d22396e5955ffffb593a584a57e419910b379ae",
+      "candidate_state": "physical_reject",
+      "freegs_failed_gates": [
+        "coarse_minor_radius_binding",
+        "coarse_volume_average_pressure_binding"
+      ],
+      "freegs_recheck_status": "fail",
+      "numerical_failures": [],
+      "physical_failures": [],
+      "provider_failures": [],
+      "rejection_reasons": [
+        "coarse_minor_radius_binding",
+        "coarse_volume_average_pressure_binding"
+      ],
+      "row_hash": "ed6274eeaf2b46e5bf07ec91271bbbdbb3562c71963c9f76beb1e90477099a9e",
+      "unsupported": false,
+      "validation_credit": false,
+      "vmex_qualification_executed": false,
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "cb54fdc043803b5032c2e7d5818346a129779fede1d12041203c48a5808ba719",
+      "candidate_state": "physical_reject",
+      "freegs_failed_gates": [
+        "volume_average_pressure_binding"
+      ],
+      "freegs_recheck_status": "fail",
+      "numerical_failures": [],
+      "physical_failures": [],
+      "provider_failures": [],
+      "rejection_reasons": [
+        "volume_average_pressure_binding"
+      ],
+      "row_hash": "f7ffb21dd5237c6e91eb7cc05d60953139bf3b6c34243264947931b3134722a1",
+      "unsupported": false,
+      "validation_credit": false,
+      "vmex_qualification_executed": false,
+      "whole_device_credible": false
+    },
+    {
+      "candidate_result_hash": "ef9c4bf89a3b6f65ce064dfbf6a32d3c852da71d373b587b52a8d528044228d0",
+      "candidate_state": "numerical_vvuq_reject",
+      "freegs_failed_gates": [],
+      "freegs_recheck_status": "pass",
+      "numerical_failures": [
+        "local_stability"
+      ],
+      "physical_failures": [
+        "local_stability"
+      ],
+      "provider_failures": [],
+      "rejection_reasons": [
+        "local_stability"
+      ],
+      "row_hash": "97365185ef04f1aa83ed55fd0feb13872c7642bbcbef9aadab4d319dfc3d7a19",
+      "unsupported": false,
+      "validation_credit": false,
+      "vmex_qualification_executed": true,
+      "whole_device_credible": false
+    }
+  ],
+  "candidate_state_histogram": {
+    "numerical_vvuq_reject": 1,
+    "physical_reject": 3
+  },
+  "claim_boundary": "v128 eliminates unsupported outcomes in the four-candidate frontier by rerunning the bound equilibrium and declaring explicit physical, numerical, or provider-system outcomes. ITER/C-2W pass scoped regressions only. NEO, GKX and short alpha tracing add candidate-bound diagnostics but do not grant complete transport, complete stability, validation, or credible-device credit.",
+  "complete_engineering_credit": false,
+  "complete_stability_credit": false,
+  "complete_transport_credit": false,
+  "credible_new_device_count": 0,
+  "evidence_file_hashes": {
+    "export_117135861885201705": "c790d28c0e181779926d9e8c3d189d8d398fe373c2a5da684e8472aaa4cd9541",
+    "export_48237419310472505": "47398157a3ce5f8f95e8f42f66d15215e43581e003759d8834520554963d104b",
+    "freegs_recheck_117135861885201705": "9df5328fd596373bf09dc5c7ed0fae6f99e72c4c1033b24f42d848297810d1be",
+    "freegs_recheck_216774618548247202": "3ed5c406ec929525d5808afc0299726d42cc1760e7076c431c2d41a156764d56",
+    "freegs_recheck_237281346429006604": "b0e65ab1d106c3a656a2aa91ed67037c457b1595dd7e210fbb02cbe3c30d9d50",
+    "freegs_recheck_48237419310472505": "996a93adc94926f2affe39b9732a733496eb85f98a3890b27caf5922ffa73df6",
+    "qualification_117135861885201705": "5fa838e7ba216ec244cf0a76836827080e907814f92d54f5ebc6bf2e3b803879",
+    "qualification_48237419310472505": "0d54ec8fe09ca867d9801ec1b16b9cfbb1188523f3d09efca7f4eca74eeee570",
+    "wout_117135861885201705": "187a23e339eb1f5aa2ce73c7d689b1c8b72020abaa477b6b5dcc74dbd27ada8f",
+    "wout_48237419310472505": "2eb77f84f0ef7ff7570190a01118e5c21e82e655a4e29fec22932f8ce973a287"
+  },
+  "identity_fields_used_for_routing": false,
+  "input_computational_survivor_count": 4,
+  "negative_controls": {
+    "id_and_order_permutation": {
+      "classification_multiset_unchanged": true,
+      "status": "pass"
+    },
+    "label_erasure": {
+      "route_declaration_hashes": [
+        "7e79ef7e8fd5f65762d6eeccf1748e93c5556464d1e8542a758b1ab99e67fc8f",
+        "7e79ef7e8fd5f65762d6eeccf1748e93c5556464d1e8542a758b1ab99e67fc8f"
+      ],
+      "status": "pass"
+    },
+    "missing_provider": {
+      "classification": "provider_system_failure",
+      "missing": [
+        "turbulence"
+      ],
+      "solver_or_promotion_allowed": false,
+      "status": "pass"
+    },
+    "partial_closure": {
+      "available": [
+        "alpha_orbits",
+        "neoclassical",
+        "turbulence"
+      ],
+      "required": [
+        "alpha_orbits",
+        "local_stability",
+        "neoclassical",
+        "turbulence"
+      ],
+      "status": "pass",
+      "whole_device_promotion_allowed": false
+    },
+    "tampered_wout_hash": {
+      "provider_execution_allowed": false,
+      "reason": "manifest_wout_sha256_mismatch",
+      "status": "pass"
+    },
+    "unseen_topology": {
+      "source_acceptance_hash": "ca508946cffbcad1baf54199fc21b763d23bca14812b41bee9d56eddef5b8b8b",
+      "status": "pass"
+    }
+  },
+  "numerical_vvuq_reject_count": 1,
+  "partial_subgraph_promotion_allowed": false,
+  "physical_reject_count": 3,
+  "protocol_id": "fusionconceptai-v128-vmex-transport-rescreen-20260830",
+  "provider_source_hashes": {
+    "desc_exporter": "51feb4563c688cb1f6622a229b54c363e63c14bc391081259895045c46487a02",
+    "freegs_candidate_runner": "bb75f5b6761d2564f2c0f3e3b35f2734b30f63843cbe047571a76f2c7276c54f",
+    "freegs_materializer": "1944411d5f2a3a5f0b8f2fb67b1e9fbf7eb140cbd25f9b6d38bcc55d264bd569",
+    "sealed_freegs_runner": "2d2aa2f5941fce6eda7681ce0daa9011b1fba65bb560e23143f132af9889fec8",
+    "shared_state_freegs_wrapper": "d2eaf573e24264f06368d099d48125341f96b0de7f07dd9e6bea16696de22a3d",
+    "vmex_qualification_provider": "4d1dad6d642ee9526aa2d1a9551263e3b7d27462250e5a5497161f3d196e6fa4"
+  },
+  "provider_system_failure_count": 0,
+  "reference_bypass_count": 0,
+  "reference_full_qualification_pass_count": 0,
+  "reference_regression_pass_count": 2,
+  "reference_validation_pass_count": 0,
+  "schema_version": "1.0.0",
+  "source_acceptance_hashes": {
+    "v127_frontier": "7b2b8e1bb0f629cad3c93a55329c8b5c96e8c099930f42a85421915da7c646a3",
+    "v128_reference_regression": "15a898d9510193b414c361f5e44ea26c35c9a3414efe9e28d4d2570e078f8ecf",
+    "v94_generic_capability": "ca508946cffbcad1baf54199fc21b763d23bca14812b41bee9d56eddef5b8b8b"
+  },
+  "stage_order": [
+    "ITER_C2W_scoped_reference_regression",
+    "candidate_bound_FreeGS_reproducibility_solve",
+    "DESC_wout_export",
+    "VMEX_NEO_GKX_ESSOS_numerical_VVUQ",
+    "physical_gate_classification",
+    "validation_VVUQ"
+  ],
+  "status": "complete",
+  "unknown_physical_status_count": 0,
+  "unsupported_candidate_classification_used": false,
+  "unsupported_candidate_count": 0,
+  "validation_pass_count": 0,
+  "validation_vvuq_status": "not_reached_no_numerical_survivor"
+}

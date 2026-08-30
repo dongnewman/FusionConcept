@@ -1,0 +1,40 @@
+{
+  "ballooning_maximum": null,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "bbbd8c034e03ea0dccd53fab7e44782c44890e84421d47b8be42c3f3e0975855",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 1.45,
+  "current_alpha_n": 1.025,
+  "current_edge_power": null,
+  "current_edge_tilt": null,
+  "elongation": 2.2,
+  "freegs_failed_gates": [
+    "physics:plasma_current"
+  ],
+  "freegs_status": "not_run_after_prefilter_reject",
+  "glasser_maximum": null,
+  "identity_fields_used_for_provider_routing": false,
+  "is_parent_shape_control": false,
+  "local_stability_executed": false,
+  "mercier_minimum": null,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "physics:plasma_current"
+  ],
+  "protocol_id": "fusionconceptai-v132-boundary-shape-stability-campaign-20260830",
+  "reasons": [
+    "physics:plasma_current"
+  ],
+  "row_hash": "b028e9ae5cb9ea2ec75b6b4709dcfcd9dc63ab40e566f40db5ba9a52f92a84d6",
+  "schema_version": "1.0.0",
+  "stages": {
+    "recomputed_reduced_physics_and_engineering": {
+      "status": "physical_reject"
+    }
+  },
+  "triangularity": -0.3,
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

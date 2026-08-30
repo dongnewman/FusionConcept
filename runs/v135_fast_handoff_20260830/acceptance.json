@@ -1,0 +1,117 @@
+{
+  "acceptance_hash": "bee9c8664bea7e885bf3da3f8762b8bdf2ff25524b34976874b23e5872cea039",
+  "candidate_rescreen": {
+    "completed_repairs": {
+      "v129": {
+        "acceptance_hash": "9897d669762d28f43954beb1cbff020f23f983585642ce8c21cc472b3741b40f",
+        "best_glasser_maximum": null,
+        "candidate_state_histogram": {
+          "numerical_vvuq_reject": 5,
+          "physical_reject": 12
+        },
+        "local_stability_survivor_count": 0,
+        "processed_count": null,
+        "provider_system_failure_count": 0,
+        "status": "complete",
+        "unsupported_candidate_count": 0
+      },
+      "v130": {
+        "acceptance_hash": "a48a0b19e9ff0f3c2e802f633c2ad37f0587ba38d12f86cedd4c29d861afca4d",
+        "best_glasser_maximum": 7.726335480006084e-08,
+        "candidate_state_histogram": {
+          "numerical_vvuq_reject": 2,
+          "physical_reject": 35
+        },
+        "local_stability_survivor_count": 0,
+        "processed_count": 37,
+        "provider_system_failure_count": 0,
+        "status": "complete",
+        "unsupported_candidate_count": 0
+      },
+      "v131": {
+        "acceptance_hash": "e665ae4bcb811b9add3f4707f396aff4e405fa1ddd1d096c5a081ea49cd73d95",
+        "best_glasser_maximum": 7.726335480006084e-08,
+        "candidate_state_histogram": {
+          "physical_reject": 14
+        },
+        "local_stability_survivor_count": 0,
+        "processed_count": 14,
+        "provider_system_failure_count": 0,
+        "status": "complete",
+        "unsupported_candidate_count": 0
+      },
+      "v132": {
+        "acceptance_hash": "c0e7123af60ec907723e7dee9f18fffb06637d9cdbb50018e0d81fc3c8e80644",
+        "best_glasser_maximum": 7.726335480006084e-08,
+        "candidate_state_histogram": {
+          "numerical_vvuq_reject": 6,
+          "physical_reject": 29
+        },
+        "local_stability_survivor_count": 0,
+        "processed_count": 35,
+        "provider_system_failure_count": 0,
+        "status": "complete",
+        "unsupported_candidate_count": 0
+      },
+      "v133": {
+        "acceptance_hash": "4163c2689109ede64d7438b8f9f706e5874c50807e4fbf8af175fd1452b02681",
+        "best_glasser_maximum": 6.882267113699549e-08,
+        "candidate_state_histogram": {
+          "physical_reject": 15
+        },
+        "local_stability_survivor_count": 0,
+        "processed_count": 15,
+        "provider_system_failure_count": 0,
+        "status": "complete",
+        "unsupported_candidate_count": 0
+      }
+    },
+    "full_grammar_size": 1048576,
+    "full_rescreen_authorized": false,
+    "full_rescreen_started": false,
+    "reason": "no candidate passed the prerequisite local stability gate",
+    "repaired_frontier_input_count": 4,
+    "v128_advanced_numerical_survivor_count": 0,
+    "v128_credible_new_device_count": 0,
+    "v128_state_histogram": {
+      "numerical_vvuq_reject": 1,
+      "physical_reject": 3
+    },
+    "v128_validation_pass_count": 0,
+    "v134_partial": {
+      "best_glasser_maximum": 7.726335480006084e-08,
+      "candidate_state_histogram": {
+        "physical_reject": 3
+      },
+      "generated_count": 13,
+      "local_stability_survivor_count": 0,
+      "partial_subgraph_promotion_allowed": false,
+      "processed_count": 3,
+      "provider_system_failure_count": 0,
+      "status": "stopped_partial_no_promotion",
+      "unsupported_candidate_count": 0
+    }
+  },
+  "candidate_unsupported_count": 0,
+  "numerical_rejects_are_not_physical_rejects": true,
+  "physical_conclusion": "No new fusion device passed the complete candidate-bound chain. The best completed local result remained Glasser D_R > 0; therefore whole-graph solve, numerical VVUQ, validation VVUQ and full-grammar rescreen were not promoted or started.",
+  "protocol_id": "fusionconceptai-v135-fast-handoff-20260830",
+  "provider_system_failure_count": 0,
+  "reference_qualification_gaps_are_not_candidate_rejects": true,
+  "reference_regression": {
+    "acceptance_hash": "15a898d9510193b414c361f5e44ea26c35c9a3414efe9e28d4d2570e078f8ecf",
+    "full_qualification_pass_count": 0,
+    "identity_fields_used_for_routing": false,
+    "new_reference_bypass_count": 0,
+    "qualification_incomplete_preserved": true,
+    "reference_count": 2,
+    "scoped_regression_pass_count": 2,
+    "validation_pass_count": 0
+  },
+  "schema_version": "1.0.0",
+  "status": "stopped_without_credible_device",
+  "stop_reason": "user_requested_fast_end",
+  "unknown_unsupported_numerical_validation_independent": true,
+  "validation_pass_count": 0,
+  "whole_device_credible_count": 0
+}

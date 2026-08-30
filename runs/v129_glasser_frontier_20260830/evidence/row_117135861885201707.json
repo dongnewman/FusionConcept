@@ -1,0 +1,53 @@
+{
+  "candidate_graph_hash": "586b5d72fc25fd627254aed8dffb0911951d728f8f1597e40c541a7ebff29837",
+  "candidate_result_hash": "3e2b276107704ae16440d5bb5e88c8e4c69434ee2c96997561fb9c499a942794",
+  "candidate_solver_input_hash": "c57691d33fb567d6b446859982d1f7db37e4833410d4347e159566d95d81d9ae",
+  "candidate_state": "numerical_vvuq_reject",
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": true,
+  "numerical_failures": [
+    "local_stability"
+  ],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v129-glasser-frontier-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "9d0fd6b1b4f67014d1d8bd5474b53ce6c1aecc361f5409f2f710cfeb785fd11d",
+  "schema_version": "1.0.0",
+  "selection_source": "v126_sampled_ideal_mhd_frontier",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"3e2b276107704ae16440d5bb5e88c8e4c69434ee2c96997561fb9c499a942794\", \"result_hash\": \"818f435631a233c48ddfa825dbdcf282f0066b019485220f35f0e03e09b636c2\", \"status\": \"pass\", \"wout_sha256\": \"55f0ca41c362e086e5201c28231215a7d06ab9bd55129f0849357a6ea1e50e9a\"}\n",
+      "wall_time_s": 117.26969750004355
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Warning: No O points found\n{\"candidate_result_hash\": \"3e2b276107704ae16440d5bb5e88c8e4c69434ee2c96997561fb9c499a942794\", \"result_hash\": \"90d197e674859f2ee906f41de259f1cfe0eaa641115f6a51278fa17200816f0b\", \"status\": \"pass\", \"v128_materialization_hash\": \"c790e747aab401a5866f5aae18b0d2ed5bf0abccf4ab6c0fb900610255b58ad8\"}\n",
+      "wall_time_s": 16.773406799999066
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "Warning: No O points found\n{\"failed_gates\": [], \"result_hash\": \"3b5dac13ae13be60863695434dee23db21122322989fd61235935d0ebeebeeec\", \"status\": \"pass\"}\n",
+      "wall_time_s": 57.762170400004834
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"3e2b276107704ae16440d5bb5e88c8e4c69434ee2c96997561fb9c499a942794\", \"numerical_failures\": [\"local_stability\"], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"bb7bdfcfbfe6fbf74742ba8780c5c92f59cad3f94aad291094097a70c03a4d8a\", \"status\": \"numerical_vvuq_fail\"}\n",
+      "wall_time_s": 27.409869199967943
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

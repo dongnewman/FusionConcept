@@ -1,0 +1,61 @@
+{
+  "ballooning_maximum": -0.0002998904244636054,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "5d984f5509230f5743ed7be028281f8602ff15e5ef098cfc391816e04b366f7c",
+  "candidate_state": "numerical_vvuq_reject",
+  "current_alpha_m": 1.45,
+  "current_alpha_n": 1.025,
+  "current_edge_power": null,
+  "current_edge_tilt": null,
+  "elongation": 1.8,
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "glasser_maximum": 2.376761204605476e-07,
+  "identity_fields_used_for_provider_routing": false,
+  "is_parent_shape_control": false,
+  "local_stability_executed": true,
+  "mercier_minimum": -2.1354271449778124e-07,
+  "numerical_failures": [
+    "local_stability"
+  ],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v132-boundary-shape-stability-campaign-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "0422ba1dd647c841fe9eaafcdaff9c863980fc8d2df39a7aa73c40724cc03f0a",
+  "schema_version": "1.0.0",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"5d984f5509230f5743ed7be028281f8602ff15e5ef098cfc391816e04b366f7c\", \"result_hash\": \"62e7c1aa347bcbb40bab70c1e94b8e08b397d29a869a2893e0091a4682f345f2\", \"status\": \"pass\", \"wout_sha256\": \"781482e05ec94897ef3fd70fd6f19bba35ba25993144c9eb55e2eaac423c99e0\"}\n",
+      "wall_time_s": 124.33624209999107
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Warning: No O points found\n{\"candidate_result_hash\": \"5d984f5509230f5743ed7be028281f8602ff15e5ef098cfc391816e04b366f7c\", \"result_hash\": \"a4dfa9563f91cb44029d28cd3a92ea4382e88dc95e7a08119fdcb45a391fe39b\", \"status\": \"pass\", \"v128_materialization_hash\": \"08aa82f371efa7e18f45d617e89ba4840087a3f5597ea1f3036b9529b4ef2c83\"}\n",
+      "wall_time_s": 24.116027200012468
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "Warning: No O points found\n{\"failed_gates\": [], \"result_hash\": \"17f85eebd6ce5b527e2a6ae126122d74443ce5dc98b5d4f35bc54dbbb441f58b\", \"status\": \"pass\"}\n",
+      "wall_time_s": 92.53210630000103
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"5d984f5509230f5743ed7be028281f8602ff15e5ef098cfc391816e04b366f7c\", \"numerical_failures\": [\"local_stability\"], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"614234f73b39ddd313810e8764c46a3f0fcebabd310803529ca25044305db457\", \"status\": \"numerical_vvuq_fail\"}\n",
+      "wall_time_s": 28.22749419999309
+    }
+  },
+  "triangularity": -0.15,
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

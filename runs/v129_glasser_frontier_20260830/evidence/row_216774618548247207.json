@@ -1,0 +1,37 @@
+{
+  "candidate_graph_hash": "9974fc5ec17d3365119184b12ab01f39adf07dd1145ee0f267c8a8e57b28b213",
+  "candidate_result_hash": "1a09de03a1917fc582106072124183517c971a331f292ec8011620f7c75597f3",
+  "candidate_solver_input_hash": "5643031931c4fa422e65494db946fadc709755bd074a520a2129da44a5e9b63c",
+  "candidate_state": "physical_reject",
+  "freegs_failed_gates": [
+    "coarse_minor_radius_binding",
+    "coarse_volume_average_pressure_binding",
+    "coarse_toroidal_beta_binding"
+  ],
+  "freegs_status": "fail",
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v129-glasser-frontier-20260830",
+  "reasons": [
+    "coarse_minor_radius_binding",
+    "coarse_volume_average_pressure_binding",
+    "coarse_toroidal_beta_binding"
+  ],
+  "row_hash": "b29895d646c3349d047b92d70460c38d0d0d720c57b27f77e3b6df8d547c4374",
+  "schema_version": "1.0.0",
+  "selection_source": "v126_sampled_ideal_mhd_frontier",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [\"coarse_minor_radius_binding\", \"coarse_volume_average_pressure_binding\", \"coarse_toroidal_beta_binding\"], \"result_hash\": \"27ec868c668442a3b740c2629a8c0278feb7a927140661617a99d931fd6309bb\", \"status\": \"fail\"}\n",
+      "wall_time_s": 79.01683249999769
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

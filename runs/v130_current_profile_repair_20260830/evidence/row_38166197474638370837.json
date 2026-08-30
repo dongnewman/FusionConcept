@@ -1,0 +1,54 @@
+{
+  "ballooning_maximum": -0.000388277530565294,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "ca0672b2d187750b5508eb4f1606cd616bacbef47a6c0ec11d1b6ec80a225427",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 1.55,
+  "current_alpha_n": 1.025,
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "glasser_maximum": 1.0031888303788642e-07,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": true,
+  "mercier_minimum": 5.657853149037285e-08,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v130-current-profile-stability-campaign-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "e777edf52e2eddf723b4328fe216307d3b526d9c4863ecaf53d1636b1a0ef066",
+  "schema_version": "1.0.0",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"ca0672b2d187750b5508eb4f1606cd616bacbef47a6c0ec11d1b6ec80a225427\", \"result_hash\": \"33edbc07060dbf19050cba4097537b8af510f4537ad7eecaca9c9d9028da7e5a\", \"status\": \"pass\", \"wout_sha256\": \"b86fa595e051d88977432311abdc5ea912197127d09d3e8ecd3be753d3ee3cf4\"}\n",
+      "wall_time_s": 119.45240329997614
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"ca0672b2d187750b5508eb4f1606cd616bacbef47a6c0ec11d1b6ec80a225427\", \"result_hash\": \"295477efca5a7893385554350f348dee68dde912adadebbcb68011e255b89f53\", \"status\": \"pass\", \"v128_materialization_hash\": \"5a1362ee214d0713f25d540680aca1e39f4c3657b95c594f9508142b5c780e48\"}\n",
+      "wall_time_s": 30.668422400020063
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [], \"result_hash\": \"78f11a1da0e7e1577ab480b641ef9b1c661539484a3663e8e63742158b0cbe5a\", \"status\": \"pass\"}\n",
+      "wall_time_s": 115.09398779994808
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"ca0672b2d187750b5508eb4f1606cd616bacbef47a6c0ec11d1b6ec80a225427\", \"numerical_failures\": [], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"869af97abbb2c8e3a7b1ed987694a38596e0dc9e502ebafa368034d1da0b3dba\", \"status\": \"pass\"}\n",
+      "wall_time_s": 27.132433000020683
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

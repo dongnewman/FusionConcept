@@ -1,0 +1,42 @@
+{
+  "ballooning_maximum": -0.00041593592908600917,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "dbed9302c74eccfc973a2e6f13724c72a3e899e716a0576e635c5a1d3b46cb14",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 2.0,
+  "current_alpha_n": 1.0,
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "glasser_maximum": 2.1963093309923913e-07,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": true,
+  "mercier_minimum": 6.290770954570815e-08,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v130-current-profile-stability-campaign-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "ec5344fc0bd980849962404ace0fd57a2fc1454630e24641dd34d01b91649e44",
+  "schema_version": "1.0.0",
+  "stages": {
+    "desc_wout_export": {
+      "reused_checkpoint": true
+    },
+    "freegs_materialization": {
+      "reused_checkpoint": true
+    },
+    "freegs_recheck": {
+      "reused_checkpoint": true
+    },
+    "vmex_local_stability": {
+      "reused_checkpoint": true
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

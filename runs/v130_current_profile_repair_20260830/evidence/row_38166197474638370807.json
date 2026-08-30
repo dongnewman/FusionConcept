@@ -1,0 +1,48 @@
+{
+  "ballooning_maximum": null,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "97989b8a10635ba610c713342d3088495b269e16019197a2de5f5b0ebfe2bd74",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 1.0,
+  "current_alpha_n": 2.0,
+  "freegs_failed_gates": [
+    "coarse_magnetic_axis_binding",
+    "coarse_minor_radius_binding",
+    "coarse_elongation_binding",
+    "coarse_volume_average_pressure_binding",
+    "coarse_toroidal_beta_binding",
+    "coarse_q95_safety",
+    "coarse_independent_gs_residual"
+  ],
+  "freegs_status": "fail",
+  "glasser_maximum": null,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "mercier_minimum": null,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v130-current-profile-stability-campaign-20260830",
+  "reasons": [
+    "coarse_magnetic_axis_binding",
+    "coarse_minor_radius_binding",
+    "coarse_elongation_binding",
+    "coarse_volume_average_pressure_binding",
+    "coarse_toroidal_beta_binding",
+    "coarse_q95_safety",
+    "coarse_independent_gs_residual"
+  ],
+  "row_hash": "5d40951fdaf78413f9206d2928fc42140bc157736f560566cbf13a26b82af9a3",
+  "schema_version": "1.0.0",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "Warning: No O points found\nWarning: No O points found\n{\"failed_gates\": [\"coarse_magnetic_axis_binding\", \"coarse_minor_radius_binding\", \"coarse_elongation_binding\", \"coarse_volume_average_pressure_binding\", \"coarse_toroidal_beta_binding\", \"coarse_q95_safety\", \"coarse_independent_gs_residual\"], \"result_hash\": \"c81c79d2baa2de2ed34d705cf2f87e12fab9a9b32795ca961da0e3150b210f2c\", \"status\": \"fail\"}\n",
+      "wall_time_s": 77.08520009997301
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

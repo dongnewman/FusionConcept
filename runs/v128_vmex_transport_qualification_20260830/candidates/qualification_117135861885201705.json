@@ -1,0 +1,691 @@
+{
+  "advanced_numerical_survivor": false,
+  "candidate_graph_hash": "586b5d72fc25fd627254aed8dffb0911951d728f8f1597e40c541a7ebff29837",
+  "candidate_result_hash": "ef9c4bf89a3b6f65ce064dfbf6a32d3c852da71d373b587b52a8d528044228d0",
+  "candidate_solver_input_hash": "44ed3c386985fe11dceecbe54ea057cff96ec61a0255d6c5f57f9a5bbed1ceb3",
+  "claim_boundary": "Provider execution and numerical VVUQ are distinct from physical gate results and from validation VVUQ. No local or proxy diagnostic is promoted to complete device credibility.",
+  "complete_stability_credit": false,
+  "complete_transport_credit": false,
+  "environment": {
+    "essos": "0.16",
+    "gkx": "1.8.2",
+    "jax": "0.11.1",
+    "jaxlib": "0.11.1",
+    "neo-jax": "1.0.2",
+    "numpy": "2.5.2",
+    "virtual-casing-jax": "0.0.5",
+    "vmex": "0.7.0"
+  },
+  "numerical_failures": [
+    "local_stability"
+  ],
+  "numerical_vvuq_stage": "fail",
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v128-vmex-qualification-20260830",
+  "provider_failures": [],
+  "providers": {
+    "alpha_orbits": {
+      "claim_boundary": "A deterministic short 64-particle orbit sample checks execution and time-step sensitivity only; it is not reactor-lifetime alpha confinement or wall-load qualification.",
+      "coarse": {
+        "loss_fraction": 0.0,
+        "loss_fraction_history": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "nparticles": 64,
+        "particles_failed": 0,
+        "particles_lost": 0,
+        "particles_unresolved": 0,
+        "wall_time_s": 3.060908199986443
+      },
+      "complete_alpha_confinement_credit": false,
+      "numerical_vvuq": "pass",
+      "physical_gate_pass": null,
+      "provider": "essos_alpha_orbit_sample",
+      "refined": {
+        "loss_fraction": 0.0,
+        "loss_fraction_history": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "nparticles": 64,
+        "particles_failed": 0,
+        "particles_lost": 0,
+        "particles_unresolved": 0,
+        "wall_time_s": 2.977542100008577
+      },
+      "status": "pass",
+      "wall_time_s": 9.394191000028513
+    },
+    "local_stability": {
+      "complete_stability_credit": false,
+      "declared_scope": [
+        "mercier_local_ideal_interchange",
+        "glasser_resistive_interchange_necessary_condition",
+        "infinite_n_ideal_ballooning"
+      ],
+      "glasser": {
+        "interior_summary": {
+          "maximum": 2.11124621817159e-06,
+          "median": -9.971799691619724e-08,
+          "minimum": -9.417193636117009e-07
+        },
+        "necessary_condition_satisfied": false,
+        "nonzero_shear_prerequisite": true,
+        "profile": [
+          0.0,
+          -1.987300436026303e-06,
+          -9.417193636117009e-07,
+          -6.229141266614473e-07,
+          -4.7130505332375934e-07,
+          -3.845386391758838e-07,
+          -3.296136603851867e-07,
+          -2.924954023145513e-07,
+          -2.6616260115914855e-07,
+          -2.4670969309752654e-07,
+          -2.317998319939943e-07,
+          -2.199608341907229e-07,
+          -2.10230285913732e-07,
+          -2.01961876447025e-07,
+          -1.947128665353229e-07,
+          -1.8817538381154202e-07,
+          -1.821328520639392e-07,
+          -1.7643158824933742e-07,
+          -1.7096195441664453e-07,
+          -1.6564573888889448e-07,
+          -1.6042770007249044e-07,
+          -1.5526992843587176e-07,
+          -1.5014811414089656e-07,
+          -1.4504907752916142e-07,
+          -1.3996909578264929e-07,
+          -1.3491268046997678e-07,
+          -1.2989154821703256e-07,
+          -1.2492359330729656e-07,
+          -1.200317233993288e-07,
+          -1.1524246147980287e-07,
+          -1.1058425123253377e-07,
+          -1.0608542939836029e-07,
+          -1.0177184846995788e-07,
+          -9.76641453624366e-08,
+          -9.37746566174133e-08,
+          -9.010397742208522e-08,
+          -8.663714993648812e-08,
+          -8.333944515925924e-08,
+          -8.015167185368492e-08,
+          -7.698490489869682e-08,
+          -7.371447402285869e-08,
+          -7.017299214875254e-08,
+          -6.614213145335235e-08,
+          -6.134277639604577e-08,
+          -5.542310018861531e-08,
+          -4.7944030563200676e-08,
+          -3.836150219919153e-08,
+          -2.60048527331028e-08,
+          -1.0050728748571516e-08,
+          1.0508039769159583e-08,
+          3.689892180704444e-08,
+          7.061145423863624e-08,
+          1.1344359034081079e-07,
+          1.6755096855442182e-07,
+          2.3549611194950401e-07,
+          3.20292806868572e-07,
+          4.254387124323864e-07,
+          5.549266879037694e-07,
+          7.132225723932075e-07,
+          9.051945475577568e-07,
+          1.135977271504725e-06,
+          1.4107534007775564e-06,
+          1.734436763805773e-06,
+          2.11124621817159e-06,
+          0.0
+        ]
+      },
+      "infinite_n_ballooning": {
+        "coarse_lambda": [
+          [
+            [
+              -0.004151734533247156
+            ],
+            [
+              -0.003599467896912805
+            ],
+            [
+              -0.0033070183939595066
+            ]
+          ],
+          [
+            [
+              -0.003990083105115222
+            ],
+            [
+              -0.0021658578246807722
+            ],
+            [
+              -0.0017464707740621308
+            ]
+          ],
+          [
+            [
+              -0.0021708112335440642
+            ],
+            [
+              -0.0007773492498366023
+            ],
+            [
+              -0.000526255637581683
+            ]
+          ]
+        ],
+        "coarse_maximum": -0.000526255637581683,
+        "max_absolute_resolution_drift": 0.0031729283506454933,
+        "refined_lambda": [
+          [
+            [
+              -0.0014810510580350812
+            ],
+            [
+              -0.0013954347166264675
+            ],
+            [
+              -0.0014485640192324286
+            ]
+          ],
+          [
+            [
+              -0.0008171547544697288
+            ],
+            [
+              -0.0007702287024460044
+            ],
+            [
+              -0.0008011599975894346
+            ]
+          ],
+          [
+            [
+              -0.0002726514171286543
+            ],
+            [
+              -0.00026634734403489286
+            ],
+            [
+              -0.00027344273964831974
+            ]
+          ]
+        ],
+        "refined_maximum": -0.00026634734403489286,
+        "stable": true,
+        "surface_indices": [
+          22,
+          38,
+          54
+        ]
+      },
+      "mercier": {
+        "interior_summary": {
+          "maximum": 1.1769964987987103e-06,
+          "median": 4.484035931994693e-07,
+          "minimum": 3.550442571286278e-07
+        },
+        "stable": true,
+        "state_profile": [
+          0.0,
+          2.237472244847813e-06,
+          1.1769964987987103e-06,
+          8.599364767483339e-07,
+          7.105316237384241e-07,
+          6.2627677775652e-07,
+          5.740805643768775e-07,
+          5.398312632789982e-07,
+          5.16436179664537e-07,
+          4.999229647846201e-07,
+          4.878931052811877e-07,
+          4.788185890062494e-07,
+          4.7168767335858096e-07,
+          4.6581172910802586e-07,
+          4.607130478492328e-07,
+          4.5605630979389473e-07,
+          4.516050360321052e-07,
+          4.47193083473788e-07,
+          4.4270559806851924e-07,
+          4.380661311763897e-07,
+          4.3322788335010325e-07,
+          4.2816776088797887e-07,
+          4.2288236024720844e-07,
+          4.173852621519176e-07,
+          4.11705190027583e-07,
+          4.058847055484247e-07,
+          3.999791988819372e-07,
+          3.940559959543536e-07,
+          3.8819345688710854e-07,
+          3.8247998272637624e-07,
+          3.770128845834241e-07,
+          3.7189710078064404e-07,
+          3.6724377483792335e-07,
+          3.631687294957173e-07,
+          3.5979088973474244e-07,
+          3.572307202687451e-07,
+          3.556087500578094e-07,
+          3.550442571286278e-07,
+          3.5565418136948674e-07,
+          3.575523198177723e-07,
+          3.608488379818772e-07,
+          3.6565010097891724e-07,
+          3.7205878910166355e-07,
+          3.8017421296603327e-07,
+          3.9009268343412144e-07,
+          4.0190772111910413e-07,
+          4.1570981048550987e-07,
+          4.3158531761319576e-07,
+          4.496141029251506e-07,
+          4.6986527968436565e-07,
+          4.923905073277557e-07,
+          5.172141837349487e-07,
+          5.44319931746746e-07,
+          5.736328930523061e-07,
+          6.049975704066148e-07,
+          6.381513305264877e-07,
+          6.72694214129488e-07,
+          7.080564070363297e-07,
+          7.434655970684049e-07,
+          7.779174311356663e-07,
+          8.101533209836542e-07,
+          8.386508004473871e-07,
+          8.616323604726037e-07,
+          8.770989883262781e-07,
+          0.0
+        ],
+        "state_wout_max_absolute_difference": 7.732568509159453e-08,
+        "state_wout_max_relative_difference": 0.08101811200530361,
+        "wout_profile": [
+          0.0,
+          2.0754968810644464e-06,
+          1.155166670721812e-06,
+          8.536892964167275e-07,
+          7.080669010352546e-07,
+          6.251263168783337e-07,
+          5.734792117169602e-07,
+          5.394834106037464e-07,
+          5.162116445122188e-07,
+          4.997600340021944e-07,
+          4.877616591439017e-07,
+          4.787041437276097e-07,
+          4.7158377169643887e-07,
+          4.657160375411419e-07,
+          4.606252468037685e-07,
+          4.5597691413486137e-07,
+          4.5153472653143706e-07,
+          4.4713233261522374e-07,
+          4.426544718888737e-07,
+          4.3802419982468884e-07,
+          4.331942003472248e-07,
+          4.2814088649697504e-07,
+          4.228604133168617e-07,
+          4.1736599003632246e-07,
+          4.1168604953077606e-07,
+          4.0586294981437153e-07,
+          3.9995196662117396e-07,
+          3.9402040047714223e-07,
+          3.881466733431581e-07,
+          3.8241933309224657e-07,
+          3.769359211038824e-07,
+          3.7180169030366234e-07,
+          3.6712818854758845e-07,
+          3.6303174542047035e-07,
+          3.596319191056386e-07,
+          3.5704997364985394e-07,
+          3.554074652548812e-07,
+          3.5482501865518585e-07,
+          3.554213705976773e-07,
+          3.573127462293379e-07,
+          3.6061261503977546e-07,
+          3.6543184501648255e-07,
+          3.718792359440443e-07,
+          3.800623644823508e-07,
+          3.900886142425713e-07,
+          4.0206619354765054e-07,
+          4.161048628420941e-07,
+          4.3231600505949285e-07,
+          4.50811579652456e-07,
+          4.717014104714486e-07,
+          4.950881774429852e-07,
+          5.210594222226274e-07,
+          5.496758502775313e-07,
+          5.809552282101553e-07,
+          6.148512466697641e-07,
+          6.512268545373298e-07,
+          6.898217738413829e-07,
+          7.302141764913064e-07,
+          7.717768368576507e-07,
+          8.136284555036842e-07,
+          8.545812585980323e-07,
+          8.930863838911549e-07,
+          9.271789185728462e-07,
+          9.544246734178726e-07,
+          9.71870714750596e-07
+        ]
+      },
+      "numerical_vvuq": "fail",
+      "physical_gate_pass": false,
+      "provider": "vmex_local_stability",
+      "status": "pass",
+      "uncovered_obligations": [
+        "finite_n_global_ideal_modes",
+        "tearing_and_resistive_modes",
+        "kinetic_modes",
+        "nonlinear_saturation",
+        "disruption_dynamics"
+      ],
+      "wall_time_s": 20.474755500094034
+    },
+    "neoclassical": {
+      "coarse_epsilon_eff_3_over_2": [
+        [
+          0.1953125,
+          0.4921875,
+          0.8046875
+        ],
+        [
+          3.7817693026384605e-05,
+          5.484296923477568e-05,
+          5.438682890719454e-05
+        ]
+      ],
+      "complete_transport_credit": false,
+      "max_absolute_resolution_drift": 1.3887290716346895e-06,
+      "max_relative_resolution_drift": 0.024898524048146867,
+      "numerical_vvuq": "pass",
+      "physical_gate_pass": null,
+      "provider": "neo_jax_effective_ripple",
+      "refined_epsilon_eff_3_over_2": [
+        [
+          0.1953125,
+          0.4921875,
+          0.8046875
+        ],
+        [
+          3.7757266255102944e-05,
+          5.576392768233035e-05,
+          5.577555797882923e-05
+        ]
+      ],
+      "status": "pass",
+      "surfaces": [
+        0.1953125,
+        0.4921875,
+        0.8046875
+      ],
+      "wall_time_s": 37.11968780006282
+    },
+    "turbulence": {
+      "claim_boundary": "Linear and quasilinear GKX observables plus its nonlinear-window surrogate are diagnostic proxies, not a production nonlinear gyrokinetic transport validation.",
+      "complete_transport_credit": false,
+      "gradient_split_ensemble": [
+        {
+          "coarse": {
+            "gamma": 1.7762849143089097e-14,
+            "kperp_eff2": 1.2033880711744398,
+            "linear_heat_flux_weight": 6.965220181650482e-16,
+            "linear_particle_flux_weight": 0.0,
+            "mixing_length_heat_flux_proxy": 1.028115188264341e-29,
+            "omega": 13.162977595310279
+          },
+          "max_absolute_geometry_resolution_drift": 6.491644398608637,
+          "nonlinear_window_heat_flux_proxy": 0.0,
+          "r_over_ln": 22.153485628678176,
+          "r_over_lt": 7.384495209559392,
+          "refined": {
+            "gamma": 5.4969980898945986e-14,
+            "kperp_eff2": 0.2812507507324915,
+            "linear_heat_flux_weight": -1.2870909011615751e-14,
+            "linear_particle_flux_weight": 0.0,
+            "mixing_length_heat_flux_proxy": -2.5155972763732574e-27,
+            "omega": 19.654621993918916
+          },
+          "temperature_gradient_fraction_of_pressure_gradient": 0.25
+        },
+        {
+          "coarse": {
+            "gamma": 0.03794759670734032,
+            "kperp_eff2": 0.19581956741649806,
+            "linear_heat_flux_weight": 0.22896165560428558,
+            "linear_particle_flux_weight": 0.0,
+            "mixing_length_heat_flux_proxy": 0.04437015505113589,
+            "omega": -0.3165575739280272
+          },
+          "max_absolute_geometry_resolution_drift": 0.04774200901962772,
+          "nonlinear_window_heat_flux_proxy": 0.01391623326380863,
+          "r_over_ln": 14.768990419118785,
+          "r_over_lt": 14.768990419118785,
+          "refined": {
+            "gamma": 0.033978664273399954,
+            "kperp_eff2": 0.14807755839687034,
+            "linear_heat_flux_weight": 0.1881652269893142,
+            "linear_particle_flux_weight": 0.0,
+            "mixing_length_heat_flux_proxy": 0.043177393961765474,
+            "omega": -0.3088441247830711
+          },
+          "temperature_gradient_fraction_of_pressure_gradient": 0.5
+        },
+        {
+          "coarse": {
+            "gamma": 0.34946171934919107,
+            "kperp_eff2": 0.19920878299372055,
+            "linear_heat_flux_weight": 1.8139596417206871,
+            "linear_particle_flux_weight": 0.0,
+            "mixing_length_heat_flux_proxy": 3.182136077030981,
+            "omega": -0.49733918705974045
+          },
+          "max_absolute_geometry_resolution_drift": 0.08401731707662652,
+          "nonlinear_window_heat_flux_proxy": 0.7320288735888176,
+          "r_over_ln": 7.384495209559392,
+          "r_over_lt": 22.153485628678176,
+          "refined": {
+            "gamma": 0.353749136178487,
+            "kperp_eff2": 0.19548217154676684,
+            "linear_heat_flux_weight": 1.8048800485631447,
+            "linear_particle_flux_weight": 0.0,
+            "mixing_length_heat_flux_proxy": 3.2661533941076075,
+            "omega": -0.49871430019936497
+          },
+          "temperature_gradient_fraction_of_pressure_gradient": 0.75
+        }
+      ],
+      "numerical_vvuq": "pass",
+      "physical_gate_pass": null,
+      "pressure_constraint": "R/Lp is computed from the candidate-bound wout pressure profile; R/Lp=R/LT+R/Ln is scanned over three declared splits because the equilibrium does not identify density and temperature profiles separately.",
+      "provider": "gkx_gradient_split_sensitivity",
+      "status": "pass",
+      "surface_index": 38,
+      "wall_time_s": 62.77894650003873
+    }
+  },
+  "remaining_external_obligations": [
+    "complete_finite_n_resistive_kinetic_nonlinear_disruption_stability",
+    "production_nonlinear_transport_and_profile_evolution",
+    "plasma_neutral_detachment_and_material_exhaust_limits",
+    "complete_materials_thermal_hydraulics_quench_blanket_maintenance",
+    "candidate_bound_dynamic_control_and_fault_response",
+    "independent_measurement_dataset_bound_to_exact_generated_design"
+  ],
+  "result_hash": "b2560b06964a9ebedb49bcaf6dabcf433935248bdd8cfa6b161fef4a6122568e",
+  "routing_declaration": {
+    "coordinates": [
+      "s",
+      "theta",
+      "zeta"
+    ],
+    "dimension": 3,
+    "function_space": "vmec_fourier_flux_surfaces",
+    "identity_fields_used_for_routing": false,
+    "interfaces": [
+      "vmec_wout"
+    ],
+    "operators": [
+      "local_stability",
+      "neoclassical_transport",
+      "gyrokinetic_transport_proxy",
+      "alpha_orbit_tracing"
+    ],
+    "state": "candidate_bound_converged_equilibrium"
+  },
+  "schema_version": "1.0.0",
+  "solve_stage": "pass",
+  "source_export_result_hash": "accf39c695a941917eff8be02a8f5ddcfcd0b6c225f380c7631543a26f59a8c9",
+  "status": "numerical_vvuq_fail",
+  "unsupported_candidate_classification_used": false,
+  "validation_credit": false,
+  "validation_vvuq_stage": "external_evidence_required",
+  "whole_device_credible": false,
+  "wout_sha256": "187a23e339eb1f5aa2ce73c7d689b1c8b72020abaa477b6b5dcc74dbd27ada8f"
+}

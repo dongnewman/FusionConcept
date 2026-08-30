@@ -1,0 +1,38 @@
+{
+  "ballooning_maximum": null,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "b81034230e4faa043ae60ea132ff42ad69d11aecc3af13e0ce2acf74767f03db",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 1.45,
+  "current_alpha_n": 1.025,
+  "current_edge_power": 2.0,
+  "current_edge_tilt": -0.1,
+  "freegs_failed_gates": [
+    "coarse_minor_radius_binding"
+  ],
+  "freegs_status": "fail",
+  "glasser_maximum": null,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "mercier_minimum": null,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v131-edge-current-stability-campaign-20260830",
+  "reasons": [
+    "coarse_minor_radius_binding"
+  ],
+  "row_hash": "2230a0e71912448ef988bce20769845334a66b8a41267bd7f8f9d628f6572830",
+  "schema_version": "1.0.0",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [\"coarse_minor_radius_binding\"], \"result_hash\": \"97671bb12237a992bc2b91720d3cbf317432329b523835fdcce13b18d957541d\", \"status\": \"fail\"}\n",
+      "wall_time_s": 92.26358390005771
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

@@ -1,0 +1,33 @@
+{
+  "candidate_graph_hash": "79c061ff990c19bd94e051d8d2f6d789aea887267e698b3763e3944e057c1027",
+  "candidate_result_hash": "cb54fdc043803b5032c2e7d5818346a129779fede1d12041203c48a5808ba719",
+  "candidate_solver_input_hash": "ea71fd24b173a0ec31ad6be386e3a8e70173956fc5e105814d70e67381505a21",
+  "candidate_state": "physical_reject",
+  "freegs_failed_gates": [
+    "volume_average_pressure_binding"
+  ],
+  "freegs_status": "fail",
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v129-glasser-frontier-20260830",
+  "reasons": [
+    "volume_average_pressure_binding"
+  ],
+  "row_hash": "d2f1f7854f035b0db23e943c674c24e2f10bbd1efd2087ea9be8afd473d1a863",
+  "schema_version": "1.0.0",
+  "selection_source": "v126_sampled_ideal_mhd_frontier",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "Warning: No O points found\n{\"failed_gates\": [\"volume_average_pressure_binding\"], \"result_hash\": \"8f67c9a808339578b7156e3e6402341205e0fc684806a17c158020f6d69ab74a\", \"status\": \"fail\"}\n",
+      "wall_time_s": 76.55140420002863
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

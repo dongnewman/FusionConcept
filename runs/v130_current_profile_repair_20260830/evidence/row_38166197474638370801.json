@@ -1,0 +1,36 @@
+{
+  "ballooning_maximum": null,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "98c8d56b0e70edb2652c7db2e4db845d9af6a4e05c9353145f4e86bfb78cc940",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 0.5,
+  "current_alpha_n": 0.5,
+  "freegs_failed_gates": [
+    "coarse_volume_average_pressure_binding"
+  ],
+  "freegs_status": "fail",
+  "glasser_maximum": null,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "mercier_minimum": null,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v130-current-profile-stability-campaign-20260830",
+  "reasons": [
+    "coarse_volume_average_pressure_binding"
+  ],
+  "row_hash": "573a27dcadf449b32ccad42acb43cad616fbc2168baefb3b5991c6f4b92a6c45",
+  "schema_version": "1.0.0",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [\"coarse_volume_average_pressure_binding\"], \"result_hash\": \"f51862a24301eb0965ab545f6f24452b36aa3d07ecd58f7a9b4c4988d900eeef\", \"status\": \"fail\"}\n",
+      "wall_time_s": 84.70848430006299
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

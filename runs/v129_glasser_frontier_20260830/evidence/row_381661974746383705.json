@@ -1,0 +1,51 @@
+{
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "651991a84d38cc6034aa3cda922c74162a0b9403b631b50298e17e899d2acca3",
+  "candidate_solver_input_hash": "02d1876f24a854386c74cd48448822c9e6404fd2bc2d93f6ba1e6ade46a07213",
+  "candidate_state": "physical_reject",
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": true,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v129-glasser-frontier-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "1bc5bbeb9b25a8ee6413edb36983ad8558a040ab0fc9307c163644dea5f05391",
+  "schema_version": "1.0.0",
+  "selection_source": "v126_sampled_ideal_mhd_frontier",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"651991a84d38cc6034aa3cda922c74162a0b9403b631b50298e17e899d2acca3\", \"result_hash\": \"8d870422f3652bb734ab78d0fa6b3b0e736e31a71289cd53836b3b281085d1e9\", \"status\": \"pass\", \"wout_sha256\": \"e6f4c57a6e47485bc86e71708517d240ff2a829ea7e1936638ac87c4fc95178b\"}\n",
+      "wall_time_s": 118.92038110003341
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"candidate_result_hash\": \"651991a84d38cc6034aa3cda922c74162a0b9403b631b50298e17e899d2acca3\", \"result_hash\": \"93459160ac72a8f23c4ac51347c891238a3c7860e7c865cf976acd2779238b57\", \"status\": \"pass\", \"v128_materialization_hash\": \"5fb270703f92ed9cd2486858ef98f74a2dcadeded5e821f121b85e0b89bb45b0\"}\n",
+      "wall_time_s": 17.627004000009038
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [], \"result_hash\": \"37b13e49cea0b9969026f5fb99ae14099c885a5bc674c9745c44769495545ab9\", \"status\": \"pass\"}\n",
+      "wall_time_s": 73.57354860007763
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"651991a84d38cc6034aa3cda922c74162a0b9403b631b50298e17e899d2acca3\", \"numerical_failures\": [], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"6a1d95c01ba3d9a1eb433d35b9b2738ab9b6e2ff5b33c88fcb90cd97e75fa06c\", \"status\": \"pass\"}\n",
+      "wall_time_s": 27.998416000045836
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

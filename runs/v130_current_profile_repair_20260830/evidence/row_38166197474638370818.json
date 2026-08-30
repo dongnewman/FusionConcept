@@ -1,0 +1,36 @@
+{
+  "ballooning_maximum": null,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "b5fd352980a749b48646757beb1772934e4d8269cebec2a5a2e39cbf235620d7",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 1.2,
+  "current_alpha_n": 1.0,
+  "freegs_failed_gates": [
+    "coarse_volume_average_pressure_binding"
+  ],
+  "freegs_status": "fail",
+  "glasser_maximum": null,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "mercier_minimum": null,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v130-current-profile-stability-campaign-20260830",
+  "reasons": [
+    "coarse_volume_average_pressure_binding"
+  ],
+  "row_hash": "d4f46f2503293e2d4926baa0bfddc2ae0388a2189d77b0a186e8f116ca9b8c98",
+  "schema_version": "1.0.0",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [\"coarse_volume_average_pressure_binding\"], \"result_hash\": \"84681a2a6fb8a767cc71bff7449b81e236471466b99caf225e270c49cb3be3d4\", \"status\": \"fail\"}\n",
+      "wall_time_s": 67.61699129990302
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

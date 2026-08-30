@@ -1,0 +1,59 @@
+{
+  "ballooning_maximum": -0.00038063432036293543,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "5ef08421a746b8820eb001a059247e3ac169f6fb82110060379b1ba280e13fef",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 1.45,
+  "current_alpha_n": 1.025,
+  "current_edge_power": 8.0,
+  "current_edge_tilt": -0.075,
+  "elongation": 2.01878182223872,
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "glasser_maximum": 7.519983104733737e-08,
+  "identity_fields_used_for_provider_routing": false,
+  "is_parent_shape_control": false,
+  "local_stability_executed": true,
+  "mercier_minimum": 4.0588202307913586e-08,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v133-localized-edge-current-stability-campaign-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "c5be4254bb97db096896fa27958a96263246f907a153297e279a5478e332a934",
+  "schema_version": "1.0.0",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"5ef08421a746b8820eb001a059247e3ac169f6fb82110060379b1ba280e13fef\", \"result_hash\": \"8f8dbda90ca60340337d3223394dd3cd2713addbac2aeca164c6c885d56c7e2c\", \"status\": \"pass\", \"wout_sha256\": \"53eeff641aed64398b19d45a990d87418d8f47a52e183153514a53645abe0c33\"}\n",
+      "wall_time_s": 128.14036850002594
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"5ef08421a746b8820eb001a059247e3ac169f6fb82110060379b1ba280e13fef\", \"result_hash\": \"322fe73002c1b1d7760b8ece9de1b8d4776cbd54331925b3f264aa222d516590\", \"status\": \"pass\", \"v128_materialization_hash\": \"8d494672eb56605830b2c12b421e3aea3166863ddf4ba589829b1ebda26ea147\"}\n",
+      "wall_time_s": 39.1652643000707
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [], \"result_hash\": \"53b8061bda0f54433703fd75f7f73c8a6bc45986d1a060bdc8fdee1eef65a2d9\", \"status\": \"pass\"}\n",
+      "wall_time_s": 139.539637900074
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"5ef08421a746b8820eb001a059247e3ac169f6fb82110060379b1ba280e13fef\", \"numerical_failures\": [], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"0000ef909fb5200afa85ab555a5fe5b426edb5709e9101440c26e6528a9aa5d5\", \"status\": \"pass\"}\n",
+      "wall_time_s": 28.72705370001495
+    }
+  },
+  "triangularity": -0.2326910687798353,
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

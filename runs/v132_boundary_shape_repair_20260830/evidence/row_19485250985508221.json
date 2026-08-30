@@ -1,0 +1,61 @@
+{
+  "ballooning_maximum": -0.00021484812624304536,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "97b3165a3688194ff57a109d4faa8819cf0b3e6bdbd37030d6a24bd94afa7d6e",
+  "candidate_state": "numerical_vvuq_reject",
+  "current_alpha_m": 1.45,
+  "current_alpha_n": 1.025,
+  "current_edge_power": null,
+  "current_edge_tilt": null,
+  "elongation": 2.01878182223872,
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "glasser_maximum": 3.9135292261025514e-07,
+  "identity_fields_used_for_provider_routing": false,
+  "is_parent_shape_control": false,
+  "local_stability_executed": true,
+  "mercier_minimum": 1.777995028838144e-07,
+  "numerical_failures": [
+    "local_stability"
+  ],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v132-boundary-shape-stability-campaign-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "647e82713ee1dc0b189ab743ddb6bc3978ae579a105b1a9fd1bc74a3c586140f",
+  "schema_version": "1.0.0",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\continuation.py:168: UserWarning: WARNING: Automatic continuation failed with mres_step=6, retrying with mres_step=3\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"97b3165a3688194ff57a109d4faa8819cf0b3e6bdbd37030d6a24bd94afa7d6e\", \"result_hash\": \"5b1cb34bba9d2780c5ac149a4a9abcd4b85a6cbfc1cba93f8faf5bdbc2c0858d\", \"status\": \"pass\", \"wout_sha256\": \"d5d32cc3032596084d1c7cba3a7b15b3644a81a779c6e8c6dc402079f9155bc3\"}\n",
+      "wall_time_s": 187.4153352000285
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Warning: No O points found\n{\"candidate_result_hash\": \"97b3165a3688194ff57a109d4faa8819cf0b3e6bdbd37030d6a24bd94afa7d6e\", \"result_hash\": \"830c1b7d11c22301f6cd0080c9196a0edf61391f524131a0abdc759e9845b8d2\", \"status\": \"pass\", \"v128_materialization_hash\": \"dff305090e2351061fa83ef0cccbf4bf3863b8bde2744d5f8fcbd12184122cd2\"}\n",
+      "wall_time_s": 23.415889599942602
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "Warning: No O points found\n{\"failed_gates\": [], \"result_hash\": \"5f19644e1c57f298185519f381e4899a5b22d15337ab15cf671730f538b56782\", \"status\": \"pass\"}\n",
+      "wall_time_s": 88.64100810000673
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"97b3165a3688194ff57a109d4faa8819cf0b3e6bdbd37030d6a24bd94afa7d6e\", \"numerical_failures\": [\"local_stability\"], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"325777b25d1a76db0198cb717817b46d905ba5ae37e07c74201b41cd602106c2\", \"status\": \"numerical_vvuq_fail\"}\n",
+      "wall_time_s": 27.71654920000583
+    }
+  },
+  "triangularity": 0.45,
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

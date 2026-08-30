@@ -1,0 +1,192 @@
+{
+  "boundary_transform": {
+    "R_modes": [
+      {
+        "coefficient_m": 21.937961716548724,
+        "m": 0,
+        "n": 0
+      },
+      {
+        "coefficient_m": 3.858056356693379,
+        "m": 1,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.13099659170085243,
+        "m": 2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.04712649711832892,
+        "m": 3,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.20143844167888392,
+        "m": 4,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.02050374562717774,
+        "m": 5,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.05552192402402312,
+        "m": 6,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.005626806943306201,
+        "m": 7,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.00970044545172781,
+        "m": 8,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.03113729899978536,
+        "m": 9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.002976460591336775,
+        "m": 10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0005839817286162358,
+        "m": 11,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.00014923475417848164,
+        "m": 12,
+        "n": 0
+      }
+    ],
+    "Z_modes": [
+      {
+        "coefficient_m": -7.154435233412299,
+        "m": -1,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.6977340109247374,
+        "m": -2,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.10378539838480949,
+        "m": -3,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.0826917247574739,
+        "m": -4,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.15304048974720602,
+        "m": -5,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.1872702816400188,
+        "m": -6,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.10469602187217215,
+        "m": -7,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.06660154578575135,
+        "m": -8,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.03667828156889739,
+        "m": -9,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.05416141581917412,
+        "m": -10,
+        "n": 0
+      },
+      {
+        "coefficient_m": -0.01670480195412436,
+        "m": -11,
+        "n": 0
+      },
+      {
+        "coefficient_m": 0.04581042584939636,
+        "m": -12,
+        "n": 0
+      }
+    ],
+    "adaptive_mode_fit_audit": [
+      {
+        "fit_max_relative_to_minor_radius": 0.07556173589520593,
+        "fit_rms_relative_to_minor_radius": 0.010426876945078462,
+        "maximum_mode": 12
+      }
+    ],
+    "fit_gate_passed": true,
+    "fit_max_relative_to_minor_radius": 0.07556173589520593,
+    "fit_rms_relative_to_minor_radius": 0.010426876945078462,
+    "fitted_minor_radius_m": 3.9487575530017405,
+    "fitted_vertical_minor_radius_m": 7.558449551735675,
+    "selected_maximum_mode": 12,
+    "shrink_from_separatrix": 0.9
+  },
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_path_sha256": "97e85d49765c1210c3070f0973550df6d920d22197ba92ab851ae135325d66a7",
+  "candidate_result_hash": "73d88ea8bdef44766e2dbd80cd5f937a0ef854c499395efc0246d703b4b0beb8",
+  "candidate_solver_input_hash": "918297d3c12336d0bea7a5d7a5a35d77494f1d36a3396bed1a784c1541121fb7",
+  "claim_boundary": "A candidate-bound DESC equilibrium was re-solved and exported in VMEC wout format. Export is a cross-code input bridge, not stability, transport, engineering, validation, or device-feasibility evidence.",
+  "desc_equilibrium_after": {
+    "aspect_ratio": 4.105080778450045,
+    "force_normalized_to_magnetic_gradient": 0.0030346727509291717,
+    "force_normalized_to_pressure_gradient": 0.05458436932773593,
+    "force_volume_average_n_m3": 4872.133744314049,
+    "iota_095": 0.3477100405173179,
+    "iota_axis": 0.7524477157505275,
+    "iota_mid": 0.621838034532639,
+    "magnetic_pressure_gradient_scale_n_m3": 1605489.0079407324,
+    "major_radius_m": 21.69603368800342,
+    "minor_radius_m": 5.285166080506506,
+    "plasma_volume_m3": 11962.649154235787,
+    "pressure_095_pa": 5276.054783189262,
+    "pressure_axis_pa": 382435.17668983096,
+    "pressure_gradient_scale_n_m3": 89258.77140872953,
+    "pressure_mid_pa": 242009.76024903366,
+    "pressure_volume_average_pa": 146425.33754506704,
+    "toroidal_field_rms_t": 6.603040162190209,
+    "volume_average_beta": 0.008440500814646918
+  },
+  "desc_solved_volume_state_hash": "29e06a76cf76a584dc89799f1019a424471a0e5af47ecf0300a5e377d3f5fd16",
+  "desc_solver_input_hash": "ae0368d02836038733d66593ed65589afe1578577908f3474665756e4d356124",
+  "environment": {
+    "desc_opt": "0.17.3",
+    "jax": "0.9.2",
+    "jaxlib": "0.9.2",
+    "numpy": "2.4.2"
+  },
+  "freegs_path_sha256": "2b1fcf1eac9e654cea558ebaa559ff4d37271eae327e0e3486bf9ded272521b1",
+  "freegs_result_hash": "1f048bcfa8e4302ccca9d7f0b53006c42c10942f44aaac5a655d71427fdaf93c",
+  "protocol_id": "fusionconceptai-v128-desc-wout-export-20260830",
+  "result_hash": "8f7bd8e9a25ab44ce50a6fe89e236e6a525e0f76c8adc174bc1b043f7b7e67f8",
+  "schema_version": "1.0.0",
+  "sealed_source_hashes": {
+    "axisymmetric_wrapper": "701dbc9de9e918321cf44b060d13d44d621fb0963254087bf6338cb6cc426e30",
+    "desc_fourier_runner": "9e0130c1968ba0a99c6a4c0e956b1dd453d3b690787ab4d5b1a71a9a9b79f252",
+    "desc_stability_runner": "274d91f3105244968ccb4700c6ce54ee582b44128f6e6d241dfbb3c0e37add67"
+  },
+  "status": "pass",
+  "wout_sha256": "3efa0b29b32357b9b50bb2e13c65ab323d0bb0848e86a02d2d1a8db02e35c2d4"
+}

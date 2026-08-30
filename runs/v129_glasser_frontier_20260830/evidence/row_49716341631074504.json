@@ -1,0 +1,33 @@
+{
+  "candidate_graph_hash": "cf1427646685e6d73c7bb70f6a4f3e129aef50cff17c4e13ddafb6efd1e27bc2",
+  "candidate_result_hash": "a54cccc4031fc4e6202a9b692867ec746b301da296f781eb85c8fff2fdc001b6",
+  "candidate_solver_input_hash": "c75e75f566d9c1a3ccb4ec6e8c93c6558672d44ce914ab529010ed1a8743d47d",
+  "candidate_state": "physical_reject",
+  "freegs_failed_gates": [
+    "coarse_minor_radius_binding"
+  ],
+  "freegs_status": "fail",
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": false,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [],
+  "protocol_id": "fusionconceptai-v129-glasser-frontier-20260830",
+  "reasons": [
+    "coarse_minor_radius_binding"
+  ],
+  "row_hash": "d9da9cebbe2150d6b24e86aa257bcfc489079c2596952e0c5aff96d3a3b6a279",
+  "schema_version": "1.0.0",
+  "selection_source": "v126_sampled_ideal_mhd_frontier",
+  "stages": {
+    "freegs_recheck": {
+      "exit_code": 2,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [\"coarse_minor_radius_binding\"], \"result_hash\": \"04514ff833bbe0c72ca6cd914eee7173690f5e6fad812f5c0218a8ff232c7492\", \"status\": \"fail\"}\n",
+      "wall_time_s": 65.47841800004244
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}

@@ -1,0 +1,54 @@
+{
+  "ballooning_maximum": -0.0004407625410033485,
+  "candidate_graph_hash": "54202db615a02215593fd2985144222fa5836239beadf3f434ee35daa1059168",
+  "candidate_result_hash": "8178a418904f6d78041a7a2cca3212ee9c0bb001d1153cca0b564cc30f18ea9e",
+  "candidate_state": "physical_reject",
+  "current_alpha_m": 2.0,
+  "current_alpha_n": 0.5,
+  "freegs_failed_gates": [],
+  "freegs_status": "pass",
+  "glasser_maximum": 3.521092058701721e-07,
+  "identity_fields_used_for_provider_routing": false,
+  "local_stability_executed": true,
+  "mercier_minimum": -7.280383056790816e-08,
+  "numerical_failures": [],
+  "partial_subgraph_promotion_allowed": false,
+  "physical_failures": [
+    "local_stability"
+  ],
+  "protocol_id": "fusionconceptai-v130-current-profile-stability-campaign-20260830",
+  "reasons": [
+    "local_stability"
+  ],
+  "row_hash": "239944a06df50e51699c75fd0d981b27729cf5e2ea8b275ae211cd715b867d2e",
+  "schema_version": "1.0.0",
+  "stages": {
+    "desc_wout_export": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-desc\\Lib\\site-packages\\desc\\integrals\\_interp_utils.py:12: UserWarning: jax_finufft is not installed. NUFFT functions will not be available.\n  warnings.warn(\n",
+      "stdout_tail": "{\"candidate_result_hash\": \"8178a418904f6d78041a7a2cca3212ee9c0bb001d1153cca0b564cc30f18ea9e\", \"result_hash\": \"c0738045ac3b33831511106a237acdaa6683abb7ad2d6c816226981d40a36a54\", \"status\": \"pass\", \"wout_sha256\": \"537e1b0d30b1e2aa510f0e429caf9e945fbe624e7e9629c88d79c42cbcd8ad07\"}\n",
+      "wall_time_s": 123.52379989996552
+    },
+    "freegs_materialization": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"candidate_result_hash\": \"8178a418904f6d78041a7a2cca3212ee9c0bb001d1153cca0b564cc30f18ea9e\", \"result_hash\": \"936cd550cbb00ab876400b5e37039c30d4e5aef094f24a97b5d4d3cbfcca43d5\", \"status\": \"pass\", \"v128_materialization_hash\": \"0422fd4535ff8248840b6f1fffb2fa75860b3911e063250198b00848befed027\"}\n",
+      "wall_time_s": 26.558148399926722
+    },
+    "freegs_recheck": {
+      "exit_code": 0,
+      "stderr_tail": "D:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:424: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\nD:\\006-Programing\\LMC\\outputs\\fusion_concept_ai\\.venv-freegs\\Lib\\site-packages\\freegs\\critical.py:491: UserWarning: Theta grid too close to X-point, shifting by half-step\n  warn(\"Theta grid too close to X-point, shifting by half-step\")\n",
+      "stdout_tail": "{\"failed_gates\": [], \"result_hash\": \"d8c0b614d2584cf7aca716a78cb1237b9114016814f5e3dfe40fe8058ec19490\", \"status\": \"pass\"}\n",
+      "wall_time_s": 92.94953860004898
+    },
+    "vmex_local_stability": {
+      "exit_code": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"advanced_numerical_survivor\": false, \"candidate_result_hash\": \"8178a418904f6d78041a7a2cca3212ee9c0bb001d1153cca0b564cc30f18ea9e\", \"numerical_failures\": [], \"physical_failures\": [\"local_stability\"], \"provider_failures\": [], \"result_hash\": \"77424ca591f758ec45184a74580fd4bd7e653ed8ff5e437ac3873975dab6a4e5\", \"status\": \"pass\"}\n",
+      "wall_time_s": 27.621785999974236
+    }
+  },
+  "unsupported": false,
+  "validation_credit": false,
+  "whole_device_credible": false
+}
